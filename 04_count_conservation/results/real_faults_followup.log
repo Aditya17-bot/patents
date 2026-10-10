@@ -1,0 +1,31 @@
+M25 bracket: reports testable 8, confirmed 1; control 1 of 1090
+M25 failed Apr-Jun: reported 3 of 10; control 1 of 40
+M1 bracket: reports testable 5, confirmed 0; control 4 of 513
+M1 failed Apr-Jun: reported 3 of 10; control 2 of 40
+Traceback (most recent call last):
+  File "C:\adi\patent 2\src\real_faults_followup.py", line 154, in <module>
+    main()
+  File "C:\adi\patent 2\src\real_faults_followup.py", line 149, in main
+    json.dump(res, fh, indent=1)
+  File "C:\Users\rober\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "C:\Users\rober\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Users\rober\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\rober\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\rober\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  [Previous line repeated 1 more time]
+  File "C:\Users\rober\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "C:\Users\rober\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\rober\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\rober\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "C:\Users\rober\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bool_ is not JSON serializable

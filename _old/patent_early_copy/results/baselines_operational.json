@@ -1,0 +1,636 @@
+{
+ "corridor": {
+  "sites": 51,
+  "intervals": 2972,
+  "nodes_fitted": 18
+ },
+ "mask": {
+  "fraction": 0.1,
+  "seed": 0,
+  "regime": "operational",
+  "max_run": 96,
+  "cells_hidden": 13297
+ },
+ "methods": {
+  "historical_mean": {
+   "accuracy": {
+    "all": {
+     "n": 13297,
+     "MAE": 47.69,
+     "RMSE": 82.67,
+     "MAPE": 15.89,
+     "bias": 0.4
+    },
+    "gap_1_4": {
+     "n": 5928,
+     "MAE": 44.84,
+     "RMSE": 77.67,
+     "MAPE": 16.21,
+     "bias": 0.16
+    },
+    "gap_5_16": {
+     "n": 1439,
+     "MAE": 52.97,
+     "RMSE": 92.65,
+     "MAPE": 14.97,
+     "bias": -1.0
+    },
+    "gap_17_96": {
+     "n": 5606,
+     "MAE": 48.35,
+     "RMSE": 80.99,
+     "MAPE": 15.68,
+     "bias": 0.41
+    },
+    "gap_over_96": {
+     "n": 324,
+     "MAE": 65.05,
+     "RMSE": 136.03,
+     "MAPE": 17.71,
+     "bias": 11.03
+    }
+   },
+   "consistency": {
+    "nodes": 18,
+    "median_residual_pct_of_flow": 5.456,
+    "p90_residual_pct_of_flow": 8.577,
+    "worst_node_pct": 9.93,
+    "per_node": [
+     {
+      "node_id": "M25_4062A_4068A",
+      "intervals": 385,
+      "median_abs_residual": 60.611111111111086,
+      "pct_of_flow": 7.285508795966837
+     },
+     {
+      "node_id": "M25_4068A_4076A",
+      "intervals": 1073,
+      "median_abs_residual": 25.875,
+      "pct_of_flow": 3.852423126486642
+     },
+     {
+      "node_id": "M25_4091A_4094A",
+      "intervals": 607,
+      "median_abs_residual": 61.55555555555556,
+      "pct_of_flow": 8.576882350604405
+     },
+     {
+      "node_id": "M25_4097A_4101A",
+      "intervals": 507,
+      "median_abs_residual": 40.25,
+      "pct_of_flow": 6.300183616507458
+     },
+     {
+      "node_id": "M25_4101A_4105A",
+      "intervals": 545,
+      "median_abs_residual": 38.5,
+      "pct_of_flow": 5.0296167541617445
+     },
+     {
+      "node_id": "M25_4116A_4120A",
+      "intervals": 1148,
+      "median_abs_residual": 21.833333333333343,
+      "pct_of_flow": 3.793274796286922
+     },
+     {
+      "node_id": "M25_4120A_4124A",
+      "intervals": 1120,
+      "median_abs_residual": 17.0,
+      "pct_of_flow": 2.8331928796248813
+     },
+     {
+      "node_id": "M25_4132A_4134A",
+      "intervals": 439,
+      "median_abs_residual": 34.22222222222217,
+      "pct_of_flow": 5.691017347876814
+     },
+     {
+      "node_id": "M25_4134A_4136A",
+      "intervals": 1048,
+      "median_abs_residual": 27.22222222222223,
+      "pct_of_flow": 5.456084656726378
+     },
+     {
+      "node_id": "M25_4136A_4139A",
+      "intervals": 864,
+      "median_abs_residual": 21.942810457516373,
+      "pct_of_flow": 4.108671683955234
+     },
+     {
+      "node_id": "M25_4139A_4144A",
+      "intervals": 803,
+      "median_abs_residual": 15.0,
+      "pct_of_flow": 3.0234905428052476
+     },
+     {
+      "node_id": "M25_4144A_4164A",
+      "intervals": 729,
+      "median_abs_residual": 23.22222222222223,
+      "pct_of_flow": 3.858156690088267
+     },
+     {
+      "node_id": "M25_4164A_4169A",
+      "intervals": 281,
+      "median_abs_residual": 41.17647058823536,
+      "pct_of_flow": 6.464212772685805
+     },
+     {
+      "node_id": "M25_4169A_4193A",
+      "intervals": 643,
+      "median_abs_residual": 47.55555555555556,
+      "pct_of_flow": 9.929563803257576
+     },
+     {
+      "node_id": "M25_4193A_4199A",
+      "intervals": 1105,
+      "median_abs_residual": 13.529411764705884,
+      "pct_of_flow": 2.77922119368744
+     },
+     {
+      "node_id": "M25_4199A_4224A",
+      "intervals": 754,
+      "median_abs_residual": 25.05263157894737,
+      "pct_of_flow": 4.403279183903528
+     },
+     {
+      "node_id": "M25_4224A_4229A",
+      "intervals": 407,
+      "median_abs_residual": 36.83333333333337,
+      "pct_of_flow": 6.175786240116983
+     },
+     {
+      "node_id": "M25_4296A_4304A",
+      "intervals": 162,
+      "median_abs_residual": 65.44999999999999,
+      "pct_of_flow": 8.430009430772726
+     }
+    ]
+   }
+  },
+  "linear_interpolation": {
+   "accuracy": {
+    "all": {
+     "n": 13297,
+     "MAE": 105.94,
+     "RMSE": 207.12,
+     "MAPE": 48.47,
+     "bias": -5.84
+    },
+    "gap_1_4": {
+     "n": 5928,
+     "MAE": 29.15,
+     "RMSE": 52.27,
+     "MAPE": 11.1,
+     "bias": 0.64
+    },
+    "gap_5_16": {
+     "n": 1439,
+     "MAE": 66.88,
+     "RMSE": 119.37,
+     "MAPE": 23.24,
+     "bias": -0.93
+    },
+    "gap_17_96": {
+     "n": 5606,
+     "MAE": 189.33,
+     "RMSE": 296.86,
+     "MAPE": 86.24,
+     "bias": -22.84
+    },
+    "gap_over_96": {
+     "n": 324,
+     "MAE": 241.27,
+     "RMSE": 350.14,
+     "MAPE": 176.74,
+     "bias": 147.83
+    }
+   },
+   "consistency": {
+    "nodes": 18,
+    "median_residual_pct_of_flow": 9.115,
+    "p90_residual_pct_of_flow": 37.294,
+    "worst_node_pct": 70.776,
+    "per_node": [
+     {
+      "node_id": "M25_4062A_4068A",
+      "intervals": 385,
+      "median_abs_residual": 309.72222222222223,
+      "pct_of_flow": 37.293522763839455
+     },
+     {
+      "node_id": "M25_4068A_4076A",
+      "intervals": 1073,
+      "median_abs_residual": 34.5,
+      "pct_of_flow": 5.375068516024582
+     },
+     {
+      "node_id": "M25_4091A_4094A",
+      "intervals": 607,
+      "median_abs_residual": 75.0,
+      "pct_of_flow": 10.413856291339215
+     },
+     {
+      "node_id": "M25_4097A_4101A",
+      "intervals": 507,
+      "median_abs_residual": 59.0,
+      "pct_of_flow": 9.250430519875042
+     },
+     {
+      "node_id": "M25_4101A_4105A",
+      "intervals": 545,
+      "median_abs_residual": 53.0,
+      "pct_of_flow": 7.560024131356237
+     },
+     {
+      "node_id": "M25_4116A_4120A",
+      "intervals": 1148,
+      "median_abs_residual": 45.10755961440893,
+      "pct_of_flow": 7.274489302335223
+     },
+     {
+      "node_id": "M25_4120A_4124A",
+      "intervals": 1120,
+      "median_abs_residual": 22.833333333333343,
+      "pct_of_flow": 3.822780823910918
+     },
+     {
+      "node_id": "M25_4132A_4134A",
+      "intervals": 439,
+      "median_abs_residual": 39.75,
+      "pct_of_flow": 6.695847866376583
+     },
+     {
+      "node_id": "M25_4134A_4136A",
+      "intervals": 1048,
+      "median_abs_residual": 44.13414634146342,
+      "pct_of_flow": 9.11512391273225
+     },
+     {
+      "node_id": "M25_4136A_4139A",
+      "intervals": 864,
+      "median_abs_residual": 105.0,
+      "pct_of_flow": 17.34047697780258
+     },
+     {
+      "node_id": "M25_4139A_4144A",
+      "intervals": 803,
+      "median_abs_residual": 54.0,
+      "pct_of_flow": 11.676681011060564
+     },
+     {
+      "node_id": "M25_4144A_4164A",
+      "intervals": 729,
+      "median_abs_residual": 41.13698630136986,
+      "pct_of_flow": 7.5573105421923525
+     },
+     {
+      "node_id": "M25_4164A_4169A",
+      "intervals": 281,
+      "median_abs_residual": 587.0,
+      "pct_of_flow": 70.77569339557874
+     },
+     {
+      "node_id": "M25_4169A_4193A",
+      "intervals": 643,
+      "median_abs_residual": 180.5,
+      "pct_of_flow": 34.63467839642855
+     },
+     {
+      "node_id": "M25_4193A_4199A",
+      "intervals": 1105,
+      "median_abs_residual": 18.0,
+      "pct_of_flow": 3.631808728392199
+     },
+     {
+      "node_id": "M25_4199A_4224A",
+      "intervals": 754,
+      "median_abs_residual": 36.583333333333314,
+      "pct_of_flow": 6.503481362460539
+     },
+     {
+      "node_id": "M25_4224A_4229A",
+      "intervals": 407,
+      "median_abs_residual": 33.0,
+      "pct_of_flow": 5.63630297803768
+     },
+     {
+      "node_id": "M25_4296A_4304A",
+      "intervals": 162,
+      "median_abs_residual": 104.36363636363637,
+      "pct_of_flow": 13.572161218674642
+     }
+    ]
+   }
+  },
+  "knn_spatial": {
+   "accuracy": {
+    "all": {
+     "n": 13297,
+     "MAE": 22.03,
+     "RMSE": 46.32,
+     "MAPE": 8.95,
+     "bias": 0.35
+    },
+    "gap_1_4": {
+     "n": 5928,
+     "MAE": 21.07,
+     "RMSE": 43.03,
+     "MAPE": 9.41,
+     "bias": 0.5
+    },
+    "gap_5_16": {
+     "n": 1439,
+     "MAE": 20.55,
+     "RMSE": 42.79,
+     "MAPE": 7.7,
+     "bias": 0.32
+    },
+    "gap_17_96": {
+     "n": 5606,
+     "MAE": 23.94,
+     "RMSE": 51.36,
+     "MAPE": 9.08,
+     "bias": 0.15
+    },
+    "gap_over_96": {
+     "n": 324,
+     "MAE": 12.96,
+     "RMSE": 20.24,
+     "MAPE": 4.09,
+     "bias": 1.16
+    }
+   },
+   "consistency": {
+    "nodes": 18,
+    "median_residual_pct_of_flow": 1.488,
+    "p90_residual_pct_of_flow": 6.375,
+    "worst_node_pct": 9.099,
+    "per_node": [
+     {
+      "node_id": "M25_4062A_4068A",
+      "intervals": 385,
+      "median_abs_residual": 12.254911315893423,
+      "pct_of_flow": 1.488357247216633
+     },
+     {
+      "node_id": "M25_4068A_4076A",
+      "intervals": 1073,
+      "median_abs_residual": 16.503074813307478,
+      "pct_of_flow": 2.4430288990567317
+     },
+     {
+      "node_id": "M25_4091A_4094A",
+      "intervals": 607,
+      "median_abs_residual": 67.06669672350569,
+      "pct_of_flow": 9.099389877730395
+     },
+     {
+      "node_id": "M25_4097A_4101A",
+      "intervals": 507,
+      "median_abs_residual": 6.600734069706959,
+      "pct_of_flow": 1.0127613617686775
+     },
+     {
+      "node_id": "M25_4101A_4105A",
+      "intervals": 545,
+      "median_abs_residual": 5.242210954991606,
+      "pct_of_flow": 0.685771118792886
+     },
+     {
+      "node_id": "M25_4116A_4120A",
+      "intervals": 1148,
+      "median_abs_residual": 7.72795792559088,
+      "pct_of_flow": 1.3404380593551848
+     },
+     {
+      "node_id": "M25_4120A_4124A",
+      "intervals": 1120,
+      "median_abs_residual": 7.004542252764793,
+      "pct_of_flow": 1.1679574257870646
+     },
+     {
+      "node_id": "M25_4132A_4134A",
+      "intervals": 439,
+      "median_abs_residual": 12.111321531636577,
+      "pct_of_flow": 1.993657050612361
+     },
+     {
+      "node_id": "M25_4134A_4136A",
+      "intervals": 1048,
+      "median_abs_residual": 22.69324139365836,
+      "pct_of_flow": 4.590257674912694
+     },
+     {
+      "node_id": "M25_4136A_4139A",
+      "intervals": 864,
+      "median_abs_residual": 2.0,
+      "pct_of_flow": 0.38199188671867085
+     },
+     {
+      "node_id": "M25_4139A_4144A",
+      "intervals": 803,
+      "median_abs_residual": 3.0756843178519375,
+      "pct_of_flow": 0.6196824638468784
+     },
+     {
+      "node_id": "M25_4144A_4164A",
+      "intervals": 729,
+      "median_abs_residual": 13.925028032902446,
+      "pct_of_flow": 2.3353498007879256
+     },
+     {
+      "node_id": "M25_4164A_4169A",
+      "intervals": 281,
+      "median_abs_residual": 1.1255980870180338,
+      "pct_of_flow": 0.19218449990120962
+     },
+     {
+      "node_id": "M25_4169A_4193A",
+      "intervals": 643,
+      "median_abs_residual": 22.699813410297793,
+      "pct_of_flow": 4.71616569867049
+     },
+     {
+      "node_id": "M25_4193A_4199A",
+      "intervals": 1105,
+      "median_abs_residual": 5.6350754099782705,
+      "pct_of_flow": 1.1642652198241399
+     },
+     {
+      "node_id": "M25_4199A_4224A",
+      "intervals": 754,
+      "median_abs_residual": 9.922901017044182,
+      "pct_of_flow": 1.74010049137529
+     },
+     {
+      "node_id": "M25_4224A_4229A",
+      "intervals": 407,
+      "median_abs_residual": 8.619163633966316,
+      "pct_of_flow": 1.4589041643794016
+     },
+     {
+      "node_id": "M25_4296A_4304A",
+      "intervals": 162,
+      "median_abs_residual": 51.34135784495879,
+      "pct_of_flow": 6.374604206693283
+     }
+    ]
+   }
+  },
+  "soft_impute": {
+   "accuracy": {
+    "all": {
+     "n": 13297,
+     "MAE": 26.44,
+     "RMSE": 49.3,
+     "MAPE": 10.49,
+     "bias": 0.2
+    },
+    "gap_1_4": {
+     "n": 5928,
+     "MAE": 24.58,
+     "RMSE": 43.89,
+     "MAPE": 10.88,
+     "bias": 0.75
+    },
+    "gap_5_16": {
+     "n": 1439,
+     "MAE": 24.48,
+     "RMSE": 37.92,
+     "MAPE": 8.91,
+     "bias": -0.23
+    },
+    "gap_17_96": {
+     "n": 5606,
+     "MAE": 28.33,
+     "RMSE": 56.31,
+     "MAPE": 10.42,
+     "bias": 0.3
+    },
+    "gap_over_96": {
+     "n": 324,
+     "MAE": 36.62,
+     "RMSE": 56.89,
+     "MAPE": 11.72,
+     "bias": -9.79
+    }
+   },
+   "consistency": {
+    "nodes": 18,
+    "median_residual_pct_of_flow": 2.768,
+    "p90_residual_pct_of_flow": 8.703,
+    "worst_node_pct": 15.892,
+    "per_node": [
+     {
+      "node_id": "M25_4062A_4068A",
+      "intervals": 385,
+      "median_abs_residual": 64.39232798624846,
+      "pct_of_flow": 7.755608629959984
+     },
+     {
+      "node_id": "M25_4068A_4076A",
+      "intervals": 1073,
+      "median_abs_residual": 16.78362709348376,
+      "pct_of_flow": 2.4826751197416814
+     },
+     {
+      "node_id": "M25_4091A_4094A",
+      "intervals": 607,
+      "median_abs_residual": 62.70592105244668,
+      "pct_of_flow": 8.540590316325737
+     },
+     {
+      "node_id": "M25_4097A_4101A",
+      "intervals": 507,
+      "median_abs_residual": 16.580928935420275,
+      "pct_of_flow": 2.5501106317717253
+     },
+     {
+      "node_id": "M25_4101A_4105A",
+      "intervals": 545,
+      "median_abs_residual": 15.741846782393395,
+      "pct_of_flow": 2.0634323030181383
+     },
+     {
+      "node_id": "M25_4116A_4120A",
+      "intervals": 1148,
+      "median_abs_residual": 14.639551536334125,
+      "pct_of_flow": 2.538777693100571
+     },
+     {
+      "node_id": "M25_4120A_4124A",
+      "intervals": 1120,
+      "median_abs_residual": 12.605511405612589,
+      "pct_of_flow": 2.103154939881192
+     },
+     {
+      "node_id": "M25_4132A_4134A",
+      "intervals": 439,
+      "median_abs_residual": 16.725448901598384,
+      "pct_of_flow": 2.767597297643584
+     },
+     {
+      "node_id": "M25_4134A_4136A",
+      "intervals": 1048,
+      "median_abs_residual": 23.2483410559297,
+      "pct_of_flow": 4.697201765406461
+     },
+     {
+      "node_id": "M25_4136A_4139A",
+      "intervals": 864,
+      "median_abs_residual": 9.371230278042475,
+      "pct_of_flow": 1.7813735201832634
+     },
+     {
+      "node_id": "M25_4139A_4144A",
+      "intervals": 803,
+      "median_abs_residual": 9.012944693079817,
+      "pct_of_flow": 1.824829640524962
+     },
+     {
+      "node_id": "M25_4144A_4164A",
+      "intervals": 729,
+      "median_abs_residual": 14.388990634850416,
+      "pct_of_flow": 2.4107023131293137
+     },
+     {
+      "node_id": "M25_4164A_4169A",
+      "intervals": 281,
+      "median_abs_residual": 54.598961028674125,
+      "pct_of_flow": 8.70270767497971
+     },
+     {
+      "node_id": "M25_4169A_4193A",
+      "intervals": 643,
+      "median_abs_residual": 76.55636518985625,
+      "pct_of_flow": 15.891958304501639
+     },
+     {
+      "node_id": "M25_4193A_4199A",
+      "intervals": 1105,
+      "median_abs_residual": 8.165038104461132,
+      "pct_of_flow": 1.6881582412117062
+     },
+     {
+      "node_id": "M25_4199A_4224A",
+      "intervals": 754,
+      "median_abs_residual": 16.424492759905718,
+      "pct_of_flow": 2.884137029591153
+     },
+     {
+      "node_id": "M25_4224A_4229A",
+      "intervals": 407,
+      "median_abs_residual": 17.06774161134649,
+      "pct_of_flow": 2.880161720721823
+     },
+     {
+      "node_id": "M25_4296A_4304A",
+      "intervals": 162,
+      "median_abs_residual": 41.68471619213051,
+      "pct_of_flow": 5.1564012698029
+     }
+    ]
+   }
+  }
+ }
+}

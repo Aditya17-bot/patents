@@ -1,0 +1,199 @@
+{
+ "corridor": {
+  "sites": 51,
+  "intervals": 2972,
+  "nodes_fitted": 18
+ },
+ "prior": "knn_spatial",
+ "seed": 0,
+ "max_run": 96,
+ "class_sum_check": {
+  "records_checked": 132979,
+  "exact": 131201,
+  "exact_pct": 98.66,
+  "max_abs_discrepancy": 2.0,
+  "mean_abs_discrepancy": 0.0137
+ },
+ "composition_spread": {
+  "median": 0.0722,
+  "p90": 0.2407,
+  "max": 0.2581,
+  "nodes": 18
+ },
+ "sign_agreement": {
+  "node_class_pairs_compared": 72,
+  "sign_agreement_pct": 62.5,
+  "slip_node_pairs_compared": 44,
+  "slip_node_agreement_pct": 38.64
+ },
+ "mean_band_vehicles": {
+  "len_0_520": 60.06,
+  "len_521_660": 46.97,
+  "len_661_1160": 13.73,
+  "len_1160_plus": 10.42,
+  "total": 46.54
+ },
+ "missingness": {
+  "0.05": {
+   "cells_hidden": 6649,
+   "A_prior_total_MAE": 21.67,
+   "B_class_prior_sum_MAE": 23.53,
+   "C_constrained_total_MAE": 19.94,
+   "D_class_constrained_sum_MAE": 22.67,
+   "gain_C_over_A_pct": 7.98,
+   "gain_D_over_A_pct": -4.61,
+   "gain_D_over_B_pct": 3.65,
+   "gain_D_over_C_pct": -13.69,
+   "outside_band_pct": {
+    "A": 14.21,
+    "C": 1.78,
+    "D": 19.58
+   },
+   "intervals_unreconciled_total": 225,
+   "intervals_unreconciled_classwise": 467,
+   "per_class": {
+    "len_0_520": {
+     "prior_MAE": 17.57,
+     "constrained_MAE": 16.96,
+     "intervals_unreconciled": 109
+    },
+    "len_521_660": {
+     "prior_MAE": 7.72,
+     "constrained_MAE": 7.63,
+     "intervals_unreconciled": 115
+    },
+    "len_661_1160": {
+     "prior_MAE": 4.55,
+     "constrained_MAE": 4.56,
+     "intervals_unreconciled": 95
+    },
+    "len_1160_plus": {
+     "prior_MAE": 4.4,
+     "constrained_MAE": 4.28,
+     "intervals_unreconciled": 148
+    }
+   }
+  },
+  "0.10": {
+   "cells_hidden": 13297,
+   "A_prior_total_MAE": 22.03,
+   "B_class_prior_sum_MAE": 24.14,
+   "C_constrained_total_MAE": 21.05,
+   "D_class_constrained_sum_MAE": 23.52,
+   "gain_C_over_A_pct": 4.45,
+   "gain_D_over_A_pct": -6.76,
+   "gain_D_over_B_pct": 2.57,
+   "gain_D_over_C_pct": -11.73,
+   "outside_band_pct": {
+    "A": 13.47,
+    "C": 1.17,
+    "D": 18.8
+   },
+   "intervals_unreconciled_total": 233,
+   "intervals_unreconciled_classwise": 563,
+   "per_class": {
+    "len_0_520": {
+     "prior_MAE": 17.71,
+     "constrained_MAE": 17.35,
+     "intervals_unreconciled": 130
+    },
+    "len_521_660": {
+     "prior_MAE": 7.94,
+     "constrained_MAE": 7.89,
+     "intervals_unreconciled": 141
+    },
+    "len_661_1160": {
+     "prior_MAE": 4.61,
+     "constrained_MAE": 4.61,
+     "intervals_unreconciled": 119
+    },
+    "len_1160_plus": {
+     "prior_MAE": 4.79,
+     "constrained_MAE": 4.69,
+     "intervals_unreconciled": 173
+    }
+   }
+  },
+  "0.20": {
+   "cells_hidden": 26595,
+   "A_prior_total_MAE": 21.7,
+   "B_class_prior_sum_MAE": 24.27,
+   "C_constrained_total_MAE": 20.96,
+   "D_class_constrained_sum_MAE": 23.57,
+   "gain_C_over_A_pct": 3.41,
+   "gain_D_over_A_pct": -8.62,
+   "gain_D_over_B_pct": 2.88,
+   "gain_D_over_C_pct": -12.45,
+   "outside_band_pct": {
+    "A": 14.28,
+    "C": 1.14,
+    "D": 19.98
+   },
+   "intervals_unreconciled_total": 251,
+   "intervals_unreconciled_classwise": 641,
+   "per_class": {
+    "len_0_520": {
+     "prior_MAE": 17.73,
+     "constrained_MAE": 17.19,
+     "intervals_unreconciled": 159
+    },
+    "len_521_660": {
+     "prior_MAE": 8.02,
+     "constrained_MAE": 7.98,
+     "intervals_unreconciled": 148
+    },
+    "len_661_1160": {
+     "prior_MAE": 4.66,
+     "constrained_MAE": 4.64,
+     "intervals_unreconciled": 135
+    },
+    "len_1160_plus": {
+     "prior_MAE": 4.87,
+     "constrained_MAE": 4.79,
+     "intervals_unreconciled": 199
+    }
+   }
+  },
+  "0.40": {
+   "cells_hidden": 53192,
+   "A_prior_total_MAE": 24.67,
+   "B_class_prior_sum_MAE": 26.69,
+   "C_constrained_total_MAE": 24.62,
+   "D_class_constrained_sum_MAE": 26.24,
+   "gain_C_over_A_pct": 0.2,
+   "gain_D_over_A_pct": -6.36,
+   "gain_D_over_B_pct": 1.69,
+   "gain_D_over_C_pct": -6.58,
+   "outside_band_pct": {
+    "A": 20.85,
+    "C": 0.7,
+    "D": 27.59
+   },
+   "intervals_unreconciled_total": 200,
+   "intervals_unreconciled_classwise": 532,
+   "per_class": {
+    "len_0_520": {
+     "prior_MAE": 19.84,
+     "constrained_MAE": 19.48,
+     "intervals_unreconciled": 144
+    },
+    "len_521_660": {
+     "prior_MAE": 8.6,
+     "constrained_MAE": 8.53,
+     "intervals_unreconciled": 110
+    },
+    "len_661_1160": {
+     "prior_MAE": 5.04,
+     "constrained_MAE": 5.03,
+     "intervals_unreconciled": 116
+    },
+    "len_1160_plus": {
+     "prior_MAE": 4.98,
+     "constrained_MAE": 5.0,
+     "intervals_unreconciled": 162
+    }
+   }
+  }
+ },
+ "seconds": 346.0
+}

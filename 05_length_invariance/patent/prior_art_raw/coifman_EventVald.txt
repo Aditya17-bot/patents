@@ -1,0 +1,960 @@
+Event Data Based Traffic Detector Validation Tests
+Benjamin Coifman
+Assistant Professor,
+-Department of Civil and Environmental Engineering and Geodetic Science
+-Department of Electrical Engineering
+Ohio State University
+470 Hitchcock Hall
+2070 Neil Ave
+Columbus, OH 43210-1275
+Coifman.1@OSU.edu
+http://www-ceg.eng.ohio-state.edu/~coifman
+614 292-4282
+Sudha Dhoorjaty
+Graduate Research Assistant
+Ohio State University
+Department of Electrical Engineering
+Columbus, OH 43210
+Submitted for publication in the ASCE Journal of Transportation Engineering
+Coifman, B. and Dhoorjaty, S.
+1
+ABSTRACT
+The accuracy of detector data is paramount for traffic surveillance, control and information
+systems, yet little has been published on identifying or correcting errors in the data.  This paper
+presents eight detector validation tests for freeway surveillance using individual vehicle data
+collected from loop detectors.  Five of these tests can be applied to single loop detectors, while
+all of them can be applied to dual loop detectors.  The tests are used to contrast the performance
+between different sensor models and most of the tests are presented using 24 hr blocks of data.
+In practice, they can also be used to identify permanent and transient hardware problems in other
+components of the detection system, e.g., cross talk between loops or a short in the lead wires.
+For operational implementation, the tests could be modified so that they are applied hourly or
+after a fixed number of vehicles pass.  Some of the tests can even be used to "clean up" erroneous
+measurements.
+Keywords: traffic surveillance, loop detectors, freeway traffic, error detection
+Coifman, B. and Dhoorjaty, S.
+2
+INTRODUCTION
+All traffic control systems depend on the quality of detector data, yet little research has
+been conducted to assure the performance of the detection and communication system.  Traffic
+surveillance systems will have occasional transient errors, such as when a vehicle changes lanes
+over a detector.  Although their presence is expected, if these errors go undetected they will
+degrade the performance of traffic controls and driver information systems.  If the errors are
+chronic, such as when a component consistently fails to provide accurate measurements, the
+impacts can be more severe.  The conventional solution to these problems appears to be the
+allowance of large error margins in aggregate parameter measurements.  Of course this strategy
+will degrade the fidelity of any control that depends on the data.
+Inductive loop detectors are the preeminent vehicle detection technology.  Many
+operating agencies use specialized loop testers to assess the quality of the wiring (Kell et al,
+1990, Ingram, 1976), but these tools bypass the controller and loop sensor units; thus, they do
+not analyze the entire detector circuit, nor do they analyze the circuit in operation.  To this end,
+most operating agencies employ simple heuristics such as, "Do the loop sensor indicator lights
+come on as a vehicle passes?" or simply, "Do the time series 30 second average flow and
+occupancy seem reasonable to the eye?"  Such tests are typically employed when the loops are
+installed or when the quality of data coming from the detector station is questionable.  These
+heuristics will catch severe errors and help diagnose them, but other problems can easily go
+unnoticed.
+Coifman, B. and Dhoorjaty, S.
+3
+Many practitioners and some researchers have worked to automate the latter heuristic by
+rephrasing the question, "Are the time series 30 second average flow and occupancy within
+statistical tolerance?" (Jacobson et al, 1990, Cleghorn et al, 1991, Nihan, 1997)  These systems
+often go undocumented in the literature because they are either designed in-house by an operating
+agency
+1 or were developed by a consulting firm using proprietary information.  Because these
+automated systems only use aggregated data, they must accept a large sample variance and
+potentially miss problems altogether.  For example, the systems have to tolerate a variable
+percentage of long vehicles in the sample population.  As the percentage of long vehicles
+increases, the occupancy/flow ratio should increase simply because a long vehicle occupies the
+detector for more time compared to a shorter vehicle traveling at the same velocity, see Coifman
+(2001) for examples.
+Chen and May (1987) developed a new approach for verifying detector data using event
+data, i.e., individual vehicle actuations.  Their methodology examines the distribution of vehicles’
+on-time, i.e., the time the detector is occupied by a vehicle.  Unlike conventional aggregate
+measures, their approach is sensitive to errors such as "pulse breakups", where a single vehicle
+registers multiple actuations because the sensor output flickers off and back on.
+Coifman (1999) went a step further and compared the measured on-times from each loop
+in a dual loop detector on a vehicle by vehicle basis.  At free flow velocities the on-times from the
+two loops should be virtually identical regardless of vehicle length, even allowing for hard
+decelerations.  Many hardware and software errors will cause the two on-times to differ.  At
+                                                
+1
+ See Chen and May (1987) for examples.
+Coifman, B. and Dhoorjaty, S.
+4
+lower velocities, vehicle acceleration can cause the two on-times to differ even though both loops
+are functioning properly and thus, congested periods were excluded from the earlier analysis.
+This paper presents several new detector validation tests that employ event data to
+identify detector errors both at single loops and dual loop detectors.  The tests are presented in
+terms of evaluating loop sensor units and detector validation, e.g., "if the data pass the test then
+the sensor can be trusted."  The data are analyzed off-line, but the tests are simple enough that
+they could be implemented in real-time to identify detector errors in real time and many of them
+could be used to actively clean incoming data from a traffic surveillance system.
+After presenting the basic data collection and measurement, this paper presents eight
+different detector validation tests.  Five of these tests can be applied to single loop detectors or
+non-invasive sensors that aggregate data using similar techniques, while all of the tests can be
+applied to dual loop detectors.
+THE DATA
+This work uses event data collected from dual loop detector stations in the Berkeley
+Highway Laboratory along Interstate-80, north of Oakland, CA (Coifman et al, 2000) to
+demonstrate the tests.  This site was chosen to control for as many factors as possible that may
+cause detection errors.  The one factor that was varied was the sensor unit used to collect data.
+The following five sensor units are evaluated in this study,
+Peek GP5 revision E (GP5-E),
+Coifman, B. and Dhoorjaty, S.
+5
+Peek GP5 revision G (GP5-G),
+Peek GP6 revision C (GP6),
+Eberle Design Inc. LM222 (EDI),
+Intersection Development Corporation Model 222 (IDC).
+Except where noted, the study uses 24 hours of data from one dual loop detector for each
+sensor unit.  The date and detector were chosen at random, but all of the loop detector stations
+were evaluated thoroughly to identify and exclude any preexisting hardware problems.  Table 1
+summarizes the number of vehicles observed in each of these data sets, aggregated into three
+velocity ranges.  The performances of these different sensor units have been studied previously
+(Coifman, 1999) and this knowledge will be used to verify that that the tests are performing as
+expected.  The earlier research found that two of the models are problematic, in the first case, for
+random vehicles the GP5-G sensor frequently stays on an extra fraction of a second after the
+vehicle passes.  In the second case, the EDI sensor is prone to flicker, turning on and off multiple
+times as a vehicle passes.  The remaining three sensor units did not exhibit any systematic errors
+in the earlier study.  Although all of the sensor units are suppose to meet the same design
+specifications, they exhibited a large variability from one model to the next.  In the case of the
+GP5 sensor, there is even a significant change in performance between two revisions of the same
+unit.
+It is envisioned that in practice these tests would be deployed over a large number of
+detector stations, without accounting for sensor model a priori.  The results could be used to
+Coifman, B. and Dhoorjaty, S.
+6
+identify the most problematic detectors, allowing an operating agency to focus resources on these
+locations, identify trends, and improve the performance of the surveillance system in a cost
+effective manner.
+Vehicle measurements
+This research used conventional model 170 controllers to collect the bivalent event data at
+60 Hz (Coifman et al, 2000).  Obviously the sampling frequency will limit the resolution of the
+tests.  To place this study in context, the authors are familiar with deployed systems that have
+sampling frequencies between 30 Hz and 240 Hz.  There are several emerging loop detector units
+that actually sample a vehicle’s inductive signature,
+2 but these systems have not entered standard
+practice and they are beyond the scope of this study.
+The process of measuring bivalent data is illustrated in Figure 1.  Figure 1A shows a time-
+space diagram of a vehicle passing over a dual loop detector.  The controller normally records
+four transitions, i.e., the turn-on and turn-off times at each of the loops, as shown in Figure 1B.
+Integral to these measurements is the process of matching pulses between the paired loops.  For
+this study, each pulse at the second loop is matched to the most recent pulse at the first loop
+that preceded it.  When the dual loop detector is operating properly, two successive pulses rarely
+come from one loop without an intervening pulse on the other loop (the loops are typically
+spaced close enough to ensure that one vehicle will actuate both loops before the next vehicle
+                                                
+2
+ IST, PEEK and 3M are just a few of the manufacturers producing sensors that can provide inductive vehicle
+signatures.
+Coifman, B. and Dhoorjaty, S.
+7
+actuates the upstream loop).  The error detection strategies presented below for dual loops are
+sensitive to unmatched pulses and they will respond when this assumption breaks down.
+After matching pulses between loops, as indicated in Figure 1, the following parameters
+are calculated for each vehicle: dual loop traversal time via the rising edges, TTr, dual loop
+traversal time via the falling edges, TTf, total on-time at the first loop, OT1, and total on-time at
+the second loop, OT2.  These data yield two measurements of individual vehicle velocity:
+Vr = (loop separation) / TTr (1)
+Vf = (loop separation) / TTf (2)
+and these measurements are used calculate two measurements of effective vehicle length,
+L1 = OT1 * Vr (3)
+L2 = OT2 * Vf (4)
+In the case of single loop detector tests, this paper uses the second loop in the dual loop detector
+and estimates velocity.  Conventional velocity estimation from single loops uses the equation,
+Vest_conventional = LA * flow / occupancy (5)
+where LA is the assumed average effective vehicle length at the detector.  This equation is
+inversely proportional to average on-time.  Coifman et al (in press) demonstrated that,
+Vest = LA / median(OT2) (6)
+Coifman, B. and Dhoorjaty, S.
+8
+is less sensitive to outlying OT2 measurements.  Provided the sample size is large enough, the
+accuracy of Equation 6 approaches that of the average velocity measured from a dual loop
+detector.  The present work uses a median of 11 OT
+2 measurements centered on the given vehicle,
+based on the fact that Coifman (in press) found that for the subject data, a sample size of 10
+yields an average absolute error under 4 km/h.  These estimated velocities can be used to estimate
+individual vehicles’ effective vehicle length,
+L
+est = OT2 * Vest (7)
+Finally, whether using both loops or a single loop, the vehicle headway, H, is measured from the
+difference between on2, as defined in Figure 1B, from two consecutive vehicles.
+TRAFFIC DETECTOR VALIDATION TESTS
+Examination of Figure 1B reveals that there are only seven different errors that may occur
+in bivalent loop detector data.  Two errors will extend the OT measurement: premature rising
+edge and delayed falling edge.  Three errors will shorten the OT measurement: delayed rising
+edge, premature falling edge, and flicker (turning off and back on in the middle of a vehicle).  A
+missed vehicle will result in no OT measurement when one should have occurred and a detection
+in the absence of a vehicle will lead to the opposite problem.  Of course the true OT depends
+both on L, which varies from vehicle to vehicle, and V which is a function of traffic conditions.
+The redundancy of measuring twice every vehicle that passes a dual loop detector can be
+used to identify the presence of any of these errors, provided the occurrence of an error at one of
+the loops is independent of an error at the other.  Even in the absence of this independence or in
+Coifman, B. and Dhoorjaty, S.
+9
+the case of single loop detectors, the time series data can also be used to identify most of the
+errors.  Any analysis either has to control for L and V, or allow sufficient tolerance for a
+reasonable range of L and V.  Using these basic principles, the following eight tests are developed
+to identify the seven different errors in bivalent loop detector data.
+Individual vehicle velocity versus moving median velocity test
+As the title suggests, this test compares individual vehicle velocity against the median of
+11 velocity measurements centered on the given vehicle.  If the velocity of the vehicle deviates
+from the median by more than a preset threshold, (set to 32 km/h in this analysis), the individual
+velocity measurement is considered erroneous.  Based on the aforementioned results in Coifman
+(in press), the range of 11 vehicles was selected to be large enough so that transient errors should
+rarely impact the median but small enough so that traffic conditions usually will not change
+significantly during the sample.  This test will identify errors due to either the rising or falling
+edge being premature or delayed.  It will also identify situations in which one detector is actuated
+and the other is not, either due to an omitted detection or an actuation in the absence of a vehicle.
+When these errors are encountered, it could result in the vehicle being classified in an
+incorrect velocity range.  So the moving median of V
+r is used to select the velocity range in all of
+the tables.  To illustrate the power of this filter, Figure 2 compares the measured velocities and
+the moving median velocities from the GP5-G sensor, the worst case observed in our data sets.
+As can be seen from the figure, the median velocities filter out much of the noise from the raw
+data.  In real-time analysis, one may not be able to afford the lag time necessary to observe all of
+Coifman, B. and Dhoorjaty, S.
+10
+the following vehicles, so the research also considered a moving median restricted to observations
+that preceded the current vehicle.  As expected, performance was not as good as the results
+presented here, but it still proved beneficial.
+Tables 2-3 present the statistics after applying this test to each day of data from the
+different sensor units using velocity from the rising and falling edge, respectively.  The falling
+edge from the GP5-G sensor unit stands out as clearly being poorer than the other sensors.
+These results are consistent with the fact that the GP5-G randomly stays on a fraction of a
+second too long.  As noted in Coifman et al (in press), Equation 6 is an estimate of median
+velocity, so the comparison can be repeated using the measured velocity across loops and the
+estimated velocity from a single loop, i.e., the test checks whether the on-times are consistent
+with the measured velocities.  These results are presented in Tables 4-5, for the subject data sets
+and they are similar to Tables 2-3. One notable difference is that the EDI sensor shows slightly
+diminished performance when using the estimates and this result is consistent with the flicker
+observed with these sensors.  Finally, although not shown here, the test can be repeated using
+estimated data from the other detector.
+Headway versus on-time test
+There are certain combinations of H and OT that can only be observed during free flow
+conditions if the detector is working properly, likewise, there are other combinations that can
+only be observed during congested conditions.  When these measurements conflict with measured
+or estimated velocity, it would be indicative of a detection error.
+Coifman, B. and Dhoorjaty, S.
+11
+To illustrate, Figure 3A-B shows the measured H versus OT2 from the day of GP6 data.
+These data were grouped into free flow and congested groups based on Vr > 72 km/h (45 mph).
+Relatively short on-times and occasional long headways characterize the free flow data, while
+occasional long on-times characterize the congested data.  We defined two regions of the headway
+on-time plane that should contain strictly free flow observations or strictly congested
+observations, as shown in Figure 3C.  The free flow region is bounded by OT
+2 < 0.3 sec and H >
+8 sec.  The former constraint was chosen because a car traveling at free flow speeds should have
+an OT
+2 on the order of 0.2 sec.  Any valid OT2 measurement over this value must either be due to
+a long vehicle or low velocity.  Using several weeks of data from GP5-E and GP6 sensor units,
+the headway constraint ensured that fewer than 0.01 percent of the congested vehicle
+measurements would fall in this region. While the congested region is bounded by a single
+constraint, OT
+2 > 1.3 sec.  This bound ensures that any long vehicle at free flow speeds should
+not fall in the range if measured correctly.  The same data set was used to ensure that fewer than
+0.01 percent of the free flow vehicle measurements fell in this region.  Of course most
+observations under either condition will fall somewhere between these two regions.  For each
+sensor unit in this study, fewer than 10 percent of the observations fell in the two pre-defined
+regions.
+This traffic flow characterization can be utilized in detecting certain errors at single loop
+detectors, e.g., if a measurement falls in the free flow region but V
+est < 72 km/h or conversely if a
+measurement falls in the congested region but Vest > 72 km/h.  Table 6 summarizes the results of
+this test applied to each of the data sets.  Very few errors were found for these sets, but as noted
+Coifman, B. and Dhoorjaty, S.
+12
+previously, the detector hardware was verified to be in full functioning order before the tests
+were applied.  Perhaps more importantly, one would expect to find some measurements in the
+free flow region after a day and in the congested region if those conditions existed at the detector.
+These expected results were demonstrated by each of the sensor units.  Finally, one could modify
+this test to use measured velocity at dual loop detectors rather than V
+est.
+Feasible range of vehicle lengths test
+There exists some finite range of feasible vehicle lengths and this research assumes feasible
+effective vehicle lengths to range between 3 m and 27 m (10 ft and 90 ft).  If a measured vehicle
+length falls outside of this range, it would indicate a detector error.  Obviously, the range should
+be modified to reflect local restrictions on vehicle sizes and the resulting effective vehicle lengths.
+The test can be applied to estimated or measured lengths, thereby providing a test for both single
+and dual loop detectors.  If the individual length is too short, it may be indicative of pulse break-
+ups, a sensor set to pulse mode rather than presence mode, or similar errors.  On the other hand,
+if the individual length is too long, it may be due to the detector sticking on after the passing of
+the vehicle.
+Tables 7-9 present the results after applying this test to each data set using L
+1, L2, and
+Lest, respectively.  As with the previous test, very few errors were found in these sets, but they
+should be able to identify chronic errors.  As with Tables 4-5, the EDI performance is slightly
+worse than the other sensors.
+Coifman, B. and Dhoorjaty, S.
+13
+Feasible range of headway and on-time tests
+As with vehicle length, there are physical limits on feasible headways and on-times.
+These parameters can be used to detect chronic errors at single and dual loop detectors.  This
+research assumes a minimum feasible headway of 0.75 sec and based on Equations 3-4, a
+minimum on-time of 0.16 sec.  During free flow conditions, one can also apply a maximum
+feasible on-time, a 24 m (80 ft) vehicle (the longest vehicle observed at the test site) traveling at
+72 km/h should have an on-time of approximately 1.2 sec.  Adding an error margin of 0.1 sec, a
+detector observing many free flow vehicles with on-times greater than 1.3 sec would be suspect.
+Tables 10-13 present the statistics after applying these tests to each data set.  Consistent
+with the known flicker problem, the EDI has more short headways and on-times than the other
+sensors.
+Length differences and ratios at dual loop detectors
+Earlier research by our group used the difference between OT
+1 and OT2 to assess the
+performance of a dual loop detector during free flow conditions (Coifman, 1999).  These tests
+were constrained by the fact that at lower velocities, acceleration can cause an on-time difference
+even though the loop detectors are functioning properly.  Unfortunately, this constraint
+precludes the earlier test from identifying errors that only occur during congested conditions.  In
+response to this limitation, this new test uses the difference between L
+1 and L2 to control for
+velocity and extend the test into congested conditions.  Of course some errors may be correlated
+to vehicle length as well, so a second version of the test is used to normalize for length, i.e.,
+Coifman, B. and Dhoorjaty, S.
+14
+(L1 - L2) / (L1 + L2). (8)
+If the sensors are functioning properly, these differences should be close to zero.
+Table 14 summarizes the results for L1 - L2.  To facilitate collection and analysis, the data
+were aggregated into bins by 15 cm (0.5 ft), so the central bin represents a range of +/- 8 cm (3
+in), and the central three bins span +/- 23 cm (9 in).  Similarly, Table 15 summarizes the results
+for (L
+1 - L2) / (L1 + L2) aggregated into bins of size 0.003.  Thus, the central bin represents a range
+of +/- 0.0015 and the central three bins span +/- 0.0045.  In both tables and all velocity ranges,
+the GP5-G performs the worst out of all of the sensors.  These results are consistent with the
+results during free flow found in (Coifman, 1999).  Also note that the EDI sensor performs
+almost as bad as the GP5-G in the second test but not the first, indicating a vehicle length bias in
+the EDI’s errors.
+Cumulative distribution of vehicle lengths
+The cumulative distribution function (CDF) of measured or estimated lengths provides
+information on detector performance.  Of course the CDF will capture site specific phenomena,
+such as the percentage of large trucks, so it is not feasible to specify a universally "good" range
+for this distribution.  But it is possible to compare the CDF measured one day with that
+measured during the same time period on the next day.  Thereby allowing an operating agency to
+detect sudden changes in detector performance.  It is also possible to compare the CDF from one
+detector station to that at the next detector station on the roadway to control for day to day
+variance.  Figure 4A illustrates such a comparison using L
+1.  This plot shows the daily CDF of L1
+Coifman, B. and Dhoorjaty, S.
+15
+in a single lane, over five days at one detector station and seven days in the same lane at a second
+detector station, 550 km away.  All of these data were recorded with a GP5-E sensor unit except
+for one of the days at the second station, which were recorded using an EDI sensor unit.  Aside
+from some variability in the percentage of long vehicles, all of the curves from the GP5-E sensors
+fall on top of each other.  The curve from the EDI sensor is distinct from the other curves and
+indicates that the sensor is recording many more "short vehicles".  As mentioned previously,
+these sensors tend to flicker and the short length measurements are simply due to detector errors.
+This plot shows that one can compare across days and nearby locations reliably.  The process is
+repeated using the corresponding estimated lengths in Figure 4B.  This time, however, the curves
+only show the deciles to reduce the required data storage.  Unfortunately, the problem with the
+EDI sensor units impact both the on-time and the median on-time.  Since the estimate is
+proportional to the former and inversely proportional to the latter, the problem is less
+pronounced in this plot, but it is still evident.
+Loss of a loop in a dual loop detector
+One loop in a dual loop detector may stick on or stick off while the other loop continues
+working.  It is a simple test to count the number of pulses at one loop since the last pulse at the
+other loop and quickly identify when these errors occur.  For example, if the controller sees five
+pulses at the second loop since the last pulse at the first loop, it could respond by resetting the
+sensor card, sending an alarm, and/or treating the remaining loop in the dual loop as a single loop
+detector.
+Coifman, B. and Dhoorjaty, S.
+16
+Counting the number of consecutive congested samples
+A freeway segment usually does not fluctuate rapidly between free flow and congested
+conditions.  If the detector data indicate otherwise, it may be due to a detection error.  This test is
+intended both for single and dual loop detectors and explicitly tracks the frequency of switching
+between the two traffic regimes.  It takes samples of 10 consecutive vehicles and applies
+Equation 6 to estimate the velocity, e.g., Figure 5A.  The test assumes that traffic becomes
+congested whenever this estimate drops below 64 km/h for four consecutive samples, the last of
+which is explicitly marked as being congested.  The four samples are used to exclude occasional
+transient errors due to an unusually large number of long vehicles during free flow conditions and
+to reduce the sensitivity when the true velocity is close to 64 km/h.  The test then assumes that
+traffic remains congested until it sees a single sample of 80 km/h.  The higher threshold is used to
+further prevent frequent transitions when the true velocity is near the threshold velocity.
+Continuing the example, the individual sample results are shown in Figure 5B.  The test keeps
+track of how many congested samples precede each free flow sample.  Based on the criteria, one
+would expect that most free flow samples would be preceded by another free flow sample, i.e.,
+zero congested samples, but some will be preceded by many congested samples.  To quantify
+this test, the distribution is calculated, e.g., Figure 5C.  There should be few free flow samples
+that are preceded by few congested samples, if this is not the case, then it would suggest a
+detector error.
+Coifman, B. and Dhoorjaty, S.
+17
+CONCLUSIONS
+The accuracy of detector data is paramount for traffic control and information systems,
+yet little has been published on identifying or correcting errors in the data.  This paper has
+demonstrated the information available in high resolution detector data (60 Hz) and the potential
+benefits of microscopic data validation.  To identify errors, the paper developed eight detector
+validation tests using event data.  Five of these tests can be applied to single loop detectors.
+Some of the tests are quite simple, such as the loss of a loop in a dual loop detector, while other
+tests are more involved, such as the length differences at dual loops, which extends our earlier
+work with dual loop detectors to non-free flow conditions.  Almost all of the tests are applicable
+to any traffic conditions, ranging from low demand to heavy congestion.  Although most of the
+tests exploit freeway traffic dynamics, three of the tests could also be applied to arterial loop
+detectors: Headway versus on-time test, Feasible range of vehicle lengths test, Feasible range of
+headway and on-time tests.
+In most cases, the tests were presented without explicit criteria to distinguish between
+good and bad sensor units.  This deliberate omission is due both to the fact that such parameters
+depend on the required accuracy from the loop detectors, and because the event data used in this
+study are uncommon.  The authors know of only a few locations where such data have been
+collected, making it difficult to provide universal guidelines for deploying such tests.  The
+research can be deployed with little additional effort to make relative comparisons between
+different locations.  The paper also provides enough guidance to assist a practitioner in assessing
+Coifman, B. and Dhoorjaty, S.
+18
+the usefulness of a given test and the first steps toward implementing it if it appears promising.
+As such, additional calibration may be necessary, but it should not be difficult to conduct.
+The tests were used to contrast the performance of five different sensor models and most
+of the tests have been presented using 24 hr blocks of data.  To control for variability, all of the
+loop detector stations used in this study were evaluated thoroughly to identify and exclude any
+preexisting hardware problems.  Then, the research exploited several known problems in the
+different sensor units to verify the performance of the validation tests.  It is envisioned that in
+practice these tests would be deployed over a large number of detector stations, without
+accounting for sensor model a priori.  The results could be used to identify the most problematic
+detectors, allowing an operating agency to focus resources on these locations, identify trends, and
+improve the performance of the surveillance system in a cost effective manner.  In other words,
+the tests could be used to identify permanent and transient hardware problems in other
+components of the detection system, e.g., cross talk between loops or a short in the lead wires
+that only materializes after a rain storm.
+The analysis presented in this paper was conducted off-line using Matlab, a mathematical
+analysis software package.  The tests could be applied in a similar manner by an operating
+agency, or they could be incorporated into the controller software for continuous monitoring.
+For operational implementation, the tests could be applied hourly or after a fixed number of
+vehicles pass.  Some of the tests can even be used to clean up erroneous measurements, such as
+the individual vehicle velocity versus moving median test, which was used in this study to
+classify properly all measurements in the presence of transient errors.  Other tests, such as the
+Coifman, B. and Dhoorjaty, S.
+19
+feasible length test, could be used to exclude individual vehicle measurement errors from aggregate
+parameter calculations such as flow and occupancy.  Finally, we hope that the paper will
+encourage the collection of more high resolution data for further research.
+ACKNOWLEDGMENTS
+This work was performed as part of the California PATH (Partners for Advanced
+Highways and Transit) Program of the University of California, in cooperation with the State of
+California Business, Transportation and Housing Agency, Department of Transportation.
+The Contents of this report reflect the views of the authors who are responsible for the
+facts and accuracy of the data presented herein.  The contents do not necessarily reflect the
+official views or policies of the State of California.  This report does not constitute a standard,
+specification or regulation.
+REFERENCES
+Chen, L., and May, A. (1987). "Traffic Detector Errors and Diagnostics," Transportation
+Research Record 1132, TRB, Washington, DC, pp 82-93.
+Cleghorn, D., Hall, F., and Garbuio, D. (1991). "Improved Data Screening Techniques for
+Freeway Traffic Management Systems," Transportation Research Record 1320, TRB,
+Washington, DC, pp 17-31.
+Coifman, B. and Dhoorjaty, S.
+20
+Coifman, B. (1999) "Using Dual Loop Speed Traps to Identify Detector Errors," Transportation
+Research Record no. 1683, Transportation Research Board, pp 47-58.
+Coifman, B., Lyddy, D., and Skabardonis, A. (2000). "The Berkeley Highway Laboratory-
+Building on the I-880 Field Experiment," Proc. IEEE ITS Council Annual Meeting, pp 5-10.
+Coifman, B. (2001). "Improved Velocity Estimation Using Single Loop Detectors,"
+Transportation Research: Part A, vol 35, no 10, pp. 863-880.
+Coifman, B., Dhoorjaty, S., Lee, Z. (in press). "Estimating Median Velocity Instead of Mean
+Velocity at Single Loop Detectors," Transportation Research: Part C. (draft available at:
+http://www-ceg.eng.ohio-state.edu/~coifman/documents)
+Ingram, J. (1976). The Inductive Loop Vehicle Detector: Installation Acceptance Criteria and
+Maintenance Techniques, California Department of Transportation, Sacramento, CA.
+Jacobson, L, Nihan, N., and Bender, J. (1990). "Detecting Erroneous Loop Detector Data in a
+Freeway Traffic Management System," Transportation Research Record 1287, TRB,
+Washington, DC, pp 151-166.
+Kell, J., Fullerton, I., and Mills, M. (1990). Traffic Detector Handbook, Second Edition, Federal
+Highway Administration, Washington, DC.
+Nihan, N. (1997). "Aid to Determining Freeway Metering Rates and Detecting Loop Errors,"
+Journal of Transportation Engineering, Vol 123, No 6, ASCE, pp 454-458.
+Coifman, B. and Dhoorjaty, S.
+21
+TABLE CAPTIONS
+Table 1 Number of vehicles in each sample
+Table 2 Percentage of vehicles passing the median velocity test using Vr versus
+moving_median(Vr)
+Table 3 Percentage of vehicles passing the median velocity test using Vf versus
+moving_median(Vf). Italicized entries indicate poor performance on the test.
+Table 4 Percentage of vehicles passing the median velocity test using Vr versus Vest.
+Italicized entries indicate poor performance on the test.
+Table 5 Percentage of vehicles passing the median velocity test using Vf versus Vest.
+Italicized entries indicate poor performance on the test.
+Table 6 Percentage of vehicles passing the headway on-time test
+Table 7 Percentage of vehicles passing the feasible length test using L
+1
+Table 8 Percentage of vehicles passing the feasible length test using L2
+Table 9 Percentage of vehicles passing the feasible length test using Lest
+Table 10 Percentage of vehicles with H > 0.75 sec. Italicized entries indicate poor
+performance on the test.
+Coifman, B. and Dhoorjaty, S.
+22
+Table 11 Percentage of vehicles with OT2 > 0.16 sec. Italicized entries indicate poor
+performance on the test.
+Table 12 Percentage of vehicles with H > 0.75 sec and OT2 > 0.16 sec. Italicized entries
+indicate poor performance on the test.
+Table 13 Percentage of free flow vehicles with OT2 < 1.3 sec.
+Table 14 Percentage of vehicles passing the L1 - L2 test. Italicized entries indicate poor
+performance on the test.
+Table 15 Percentage of vehicles passing the ( L1 - L2) / (L1 + L2) test. Italicized entries
+indicate poor performance on the test.
+Coifman, B. and Dhoorjaty, S.
+23
+FIGURE CAPTIONS
+Figure 1 One vehicle passing over a dual loop detector, (A) the two detection zones and the
+vehicle trajectory as shown in the time space plane. The height of the vehicle’s
+trajectory reflects the non-zero vehicle length. (B) The associated turn-on and
+turn-off transitions at each detector.
+Figure 2 (A) Individual V
+f from the GP5-G, (B) moving median of the data from part A.
+Figure 3 (A) Measured H versus OT2 from the GP6 data using Vr > 72 km/h to identify the
+free flow data from over 24,000 vehicle measurements, (B) repeating the process
+for V
+r < 72 km/h (C) regions of the headway on-time plane in which measurements
+should all be free flow or all congested.
+Figure 4 Five days of data from one detector station and six days of data from another
+station 0.54 km away, both using GP5-E sensor units. Also one day from the
+second station an EDI sensor unit, (A) Cumulative Distribution of L
+1, (B) deciles
+of Lest
+Figure 5 (A) Measured velocity, (B) traffic state from estimated velocity (high = free flow,
+low = congested), (C) distribution showing the number of congested samples
+preceding each free flow sample.
+Coifman, B. and Dhoorjaty, S.
+F-1
+Table 1 Number of vehicles in each sample
+Data File # veh > 72 km/h # veh 32-72 km/h # veh < 32 km/h Total # veh
+GP5-E 18825 5083 2147 26055
+GP5-G 19802 2254 292 22348
+GP6 20362 1320 2636 24318
+EDI 20251 4697 2309 27257
+IDC 20711 3096 2155 25962
+Coifman, B. and Dhoorjaty, S.
+F-2
+Table 2 Percentage of vehicles passing the median velocity test using Vr versus
+moving_median( Vr)
+Data File % acceptable
+(> 72 km/h)
+% acceptable
+(32-72 km/h)
+% acceptable
+(< 32 km/h)
+% acceptable
+all vehs.
+GP5-E 99.9% 100.0% 100.0% 99.9%
+GP5-G 99.8% 99.8% 100.0% 99.8%
+GP6 99.9% 100.0% 100.0% 99.9%
+EDI 99.8% 100.0% 99.9% 99.8%
+IDC 99.9% 100.0% 100.0% 99.9%
+Coifman, B. and Dhoorjaty, S.
+F-3
+Table 3 Percentage of vehicles passing the median velocity test using Vf versus
+moving_median( Vf). Italicized entries indicate poor performance on the test.
+Data File % acceptable
+(> 72 km/h)
+% acceptable
+(32-72 km/h)
+% acceptable
+(< 32 km/h)
+% acceptable
+all vehs.
+GP5-E 99.2% 99.9% 100.0% 99.4%
+GP5-G 78.7% 95.1% 100.0% 80.6%
+GP6 99.9% 100.0% 100.0% 99.9%
+EDI 98.7% 99.7% 99.8% 99.0%
+IDC 99.7% 100.0% 100.0% 99.8%
+Coifman, B. and Dhoorjaty, S.
+F-4
+Table 4 Percentage of vehicles passing the median velocity test using Vr versus Vest. Italicized
+entries indicate poor performance on the test.
+Data File % acceptable
+(> 72 km/h)
+% acceptable
+(32-72 km/h)
+% acceptable
+(< 32 km/h)
+% acceptable
+all vehs.
+GP5-E 99.6% 9 6.8% 99.7% 99.1%
+GP5-G 99.0% 9 8.2% 99.7% 98.9%
+GP6 99.6% 94.6% 100.0% 99.3%
+EDI 92.7% 100.0% 99.8% 94.6%
+IDC 99.7% 98.3% 99.8% 99.5%
+Coifman, B. and Dhoorjaty, S.
+F-5
+Table 5 Percentage of vehicles passing the median velocity test using Vf versus Vest. Italicized
+entries indicate poor performance on the test.
+Data File % acceptable
+(> 72 km/h)
+% acceptable
+(32-72 km/h)
+% acceptable
+(< 32 km/h)
+% acceptable
+all vehs.
+GP5-E 99.4% 9 7.0% 99.7% 99.0%
+GP5-G 78.2% 90.4% 99.7% 79.7%
+GP6 99.6% 94.9% 100.0% 99.4%
+EDI 95.1% 99.7% 99.7% 96.3%
+IDC 99.1% 98.5% 99.8% 99.1%
+Coifman, B. and Dhoorjaty, S.
+F-6
+Table 6 Percentage of vehicles passing the headway on-time test
+Data File % FF
+median_vel &
+FF region in
+h-o plane
+% FF
+median_vel &
+Cong. Region in
+h-o plane
+% Cong.
+Median_vel &
+FF region in
+h-o plane
+% Cong.
+Median_vel &
+Cong region in
+h-o plane
+GP5-E 5.1% 0.0% 0.0% 2.1%
+GP5-G 6.9% 0.0% 0.0% 0.5%
+GP6 5.4% 0.0% 0.0% 2.2%
+EDI 5.1% 0.0% 0.0% 0.9%
+IDC 5.4% 0.0% 0.0% 1.6%
+Coifman, B. and Dhoorjaty, S.
+F-7
+Table 7 Percentage of vehicles passing the feasible length test using L1
+Data File % acceptable
+(> 72 km/h)
+% acceptable
+(32-72 km/h)
+% acceptable
+(< 32 km/h)
+% acceptable
+all vehs.
+GP5-E 99.7% 99.7% 99.8% 99.7%
+GP5-G 99.9% 99.9% 99.3% 99.9%
+GP6 99.7% 99.7% 100.0% 99.7%
+EDI 98.1% 98.7% 98.1% 98.2%
+IDC 99.8% 99.7% 99.9% 99.8%
+Coifman, B. and Dhoorjaty, S.
+F-8
+Table 8 Percentage of vehicles passing the feasible length test using L2
+Data File % acceptable
+(> 72 km/h)
+% acceptable
+(32-72 km/h)
+% acceptable
+(< 32 km/h)
+% acceptable
+all vehs.
+GP5-E 99.6% 99.8% 99.9% 99.7%
+GP5-G 9 8.8% 99.2% 99.7% 98.9%
+GP6 99.7% 99.7% 100.0% 99.7%
+EDI 97.4% 98.2% 98.0% 97.6%
+IDC 99.8% 99.8% 99.9% 99.8%
+Coifman, B. and Dhoorjaty, S.
+F-9
+Table 9 Percentage of vehicles passing the feasible length test using Lest
+Data File % acceptable
+(> 72 km/h)
+% acceptable
+(32-72 km/h)
+% acceptable
+(< 32 km/h)
+% acceptable
+all vehs.
+GP5-E 99.5% 99.5% 99.3% 99.5%
+GP5-G 99.6% 99.6% 99.0% 99.6%
+GP6 99.6% 99.6% 99.5% 99.6%
+EDI 99.1% 99.3% 98.0% 99.0%
+IDC 99.5% 99.7% 98.6% 99.4%
+Coifman, B. and Dhoorjaty, S.
+F-10
+Table 10 Percentage of vehicles with H > 0.75 sec. Italicized entries indicate poor performance
+on the test.
+Data File % acceptable
+(> 72 km/h)
+% acceptable
+(32-72 km/h)
+% acceptable
+(< 32 km/h)
+% acceptable
+all vehs.
+GP5-E 9 6.2% 99.5% 100.0% 97.2%
+GP5-G 9 6.3% 99.0% 100.0% 96.6%
+GP6 96.6% 98.6% 100.0% 97.1%
+EDI 92.1% 99.2% 100.0% 94.0%
+IDC 94.9% 99.6% 100.0% 95.9%
+Coifman, B. and Dhoorjaty, S.
+F-11
+Table 11 Percentage of vehicles with OT2 > 0.16 sec. Italicized entries indicate poor
+performance on the test.
+Data File % acceptable
+(> 72 km/h)
+% acceptable
+(32-72 km/h)
+% acceptable
+(< 32 km/h)
+% acceptable
+all vehs.
+GP5-E 9 3.6% 99.7% 100.0% 95.3%
+GP5-G 9 5.4% 99.9% 100.0% 95.9%
+GP6 97.6% 99.7% 100.0% 98.0%
+EDI 74.8% 99.5% 99.7% 81.2%
+IDC 96.8% 99.9% 100.0% 97.4%
+Coifman, B. and Dhoorjaty, S.
+F-12
+Table 12 Percentage of vehicles with H > 0.75 sec and OT2 > 0.16 sec. Italicized entries
+indicate poor performance on the test.
+Data File % acceptable
+(> 72 km/h)
+% acceptable
+(32-72 km/h)
+% acceptable
+(< 32 km/h)
+% acceptable
+all vehs.
+GP5-E 9 0.2% 99.3% 100.0% 92.8%
+GP5-G 91.9% 98.9% 100.0% 92.7%
+GP6 94.3% 98.4% 100.0% 95.1%
+EDI 68.0% 98.7% 99.7% 76.0%
+IDC 91.9% 99.5% 100.0% 93.5%
+Coifman, B. and Dhoorjaty, S.
+F-13
+Table 13 Percentage of free flow vehicles with OT2 < 1.3 sec.
+Data File % acceptable
+(> 72 km/h)
+GP5-E 100.0%
+GP5-G 99.9%
+GP6 100.0%
+EDI 100.0%
+IDC 100.0%
+Coifman, B. and Dhoorjaty, S.
+F-14
+Table 14 Percentage of vehicles passing the L1 - L2 test. Italicized entries indicate poor
+performance on the test.
+% central bin % central 3 binsData
+File > 72
+km/h
+32-72
+km/h
+< 32
+km/h
+> 72
+km/h
+32-72
+km/h
+< 32
+km/h
+% central
+bin
+all vehs
+% central
+3 bins
+all vehs
+GP5-E 85.4% 90.2% 83.9% 92.1% 94.2% 92.9% 86.2% 92.6%
+GP5-G 62.1% 50.7% 63.5% 72.5% 69.2% 87.2% 61.0% 72.4%
+GP6 89.9% 93.1% 87.8% 94.4% 95.5% 93.2% 89.8% 94.3%
+EDI 70.7% 84.5% 66.9% 92.7% 95.8% 88.4% 72.8% 92.9%
+IDC 88.6% 92.6% 85.4% 94.0% 95.5% 93.1% 88.8% 94.1%
+Coifman, B. and Dhoorjaty, S.
+F-15
+Table 15 Percentage of vehicles passing the ( L1 - L2) / (L1 + L2) test. Italicized entries indicate
+poor performance on the test.
+% central bin % central 3 binsData
+File > 72
+km/h
+32-72
+km/h
+< 32
+km/h
+> 72
+km/h
+32-72
+km/h
+< 32
+km/h
+% central
+bin
+all vehs
+% central
+3 bins
+all vehs
+GP5-E 58.4% 62.5% 51.2% 78.6% 86.6% 78.2% 58.6% 80.1%
+GP5-G 40.3% 27.8% 28.8% 56.1% 45.0% 56.9% 38.9% 55.0%
+GP6 72.7% 77.8% 67.7% 87.9% 92.0% 85.4% 72.4% 87.9%
+EDI 51.9% 36.4% 22.1% 60.2% 67.6% 51.8% 46.7% 60.8%
+IDC 71.1% 75.4% 63.2% 86.2% 91.3% 83.2% 71.0% 86.6%
+Coifman, B. and Dhoorjaty, S.
+F-16
+Figure 1 One vehicle passing over a dual loop detector, (A) the two detection zones and the
+vehicle trajectory as shown in the time space plane. The height of the vehicle’s
+trajectory reflects the non-zero vehicle length. (B) The associated turn-on and turn-
+off transitions at each detector.
+Second Loop's Detection Zone
+First Loop's Detection Zone
+Second Detector's Response
+First Detector's Response distance
+time
+time
+6.1 m
+(A)
+(B)
+on1
+effective vehicle
+length
+off1 on2 off2
+Vehicle Trajectory
+on
+off
+on
+off
+TTr TTf
+OT1
+OT2
+Coifman, B. and Dhoorjaty, S.
+F-17
+Figure 2 (A) Individual Vf from the GP5-G, (B) moving median of the data from part A.
+14 14.2 14.4 14.6 14.8 15 15.2 15.4 15.6 15.8 16
+Time of day (hr)
+14 14.2 14.4 14.6 14.8 15 15.2 15.4 15.6 15.8 16
+Time of day (hr)
+(A)
+(B) Individual Velocity (km/h)Moving Median Velocity (km/h)
+0
+30
+60
+90
+120
+150
+180
+210
+240
+270
+0
+30
+60
+90
+120
+150
+180
+210
+240
+270
+Coifman, B. and Dhoorjaty, S.
+F-18
+Figure 3 (A) Measured H versus OT2 from the GP6 data using Vr > 72 km/h to identify the free
+flow data from over 24,000 vehicle measurements, (B) repeating the process for Vr <
+72 km/h (C) regions of the headway on-time plane in which measurements should all
+be free flow or all congested.
+Only free flow samples
+Only congested samples
+(B)
+(C)
+(A)
+0 50 100 150 200 250 300 350 400 450 500
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+On-time (1/60 sec)
+Headway (sec)
+0 50 100 150 200 250 300 350 400 450 500
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+On-time (1/60 sec)
+Headway (sec)
+0 50 100 150 200 250 300 350 400 450 500
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100Headway (sec)
+On-time (1/60 sec)
+Coifman, B. and Dhoorjaty, S.
+F-19
+Figure 4 Five days of data from one detector station and six days of data from another station
+0.54 km away, both using GP5-E sensor units. Also one day from the second station
+an EDI sensor unit, (A) Cumulative Distribution of L
+1, (B) deciles of Lest
+3 6 9 12
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1
+3 6 9 12
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1
+Length (m)
+CDFCDF
+11 days of GP5-E data
+one day of EDI data
+11 days of GP5-E data
+one day of EDI data
+Length (m)
+(A)
+(B)
+Coifman, B. and Dhoorjaty, S.
+F-20
+Figure 5 (A) Measured velocity, (B) traffic state from estimated velocity (high = free flow,
+low = congested), (C) distribution showing the number of congested samples preceding
+each free flow sample.
+0 5 10 15 20 25
+Time of day (hr)
+Velocity (km/h)Free flow sample
+Congested sample
+0 10 20 30 40 50 60
+0
+1
+2
+3
+4
+5
+Number of preceding samples that are congested
+Count
+2004 samples with zero preceding congested samples
+one sample with greater than 60 preceding congested samples
+(A)
+(C)
+0
+35
+70
+105
+140
+congested
+free flow
+0 5 10 15 20 25
+Time of day (hr)
+individual sample results
+(B)

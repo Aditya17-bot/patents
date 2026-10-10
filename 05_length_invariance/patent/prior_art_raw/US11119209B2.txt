@@ -1,0 +1,1470 @@
+ 
+ US11119209B2 - Robust dual-radar-beam systems and methods for traffic monitoring 
+ - Google Patents 
+ US11119209B2 - Robust dual-radar-beam systems and methods for traffic monitoring 
+ - Google Patents 
+ Robust dual-radar-beam systems and methods for traffic monitoring 
+ Download PDF 
+ Info 
+ Publication number 
+ US11119209B2 
+ US11119209B2 
+ US16/397,949 
+ US201916397949A 
+ US11119209B2 
+ US 11119209 B2 
+ US11119209 B2 
+ US 11119209B2 
+ US 201916397949 A 
+ US201916397949 A 
+ US 201916397949A 
+ US 11119209 B2 
+ US11119209 B2 
+ US 11119209B2 
+ Authority 
+ US 
+ United States 
+ Prior art keywords 
+ time 
+ delay 
+ view 
+ events 
+ target 
+ Prior art date 
+ 2014-03-21 
+ Legal status (The legal status is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the status listed.) 
+ Active , expires 2036-01-01 
+ Application number 
+ US16/397,949 
+ Other versions 
+ US20190257940A1 
+ ( en 
+ Inventor 
+ Sergei Sharonov 
+ Brian Hill 
+ Vipin Malik 
+ Stanley J. Smith 
+ Current Assignee (The listed assignees may be inaccurate. Google has not performed a legal analysis and makes no representation or warranty as to the accuracy of the list.) 
+ Houston Radar LLC
+ Original Assignee 
+ Houston Radar LLC 
+ Priority date (The priority date is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the date listed.) 
+ 2014-03-21 
+ Filing date 
+ 2019-04-29 
+ Publication date 
+ 2021-09-14 
+ 2019-04-29 
+ Application filed by Houston Radar LLC 
+ filed 
+ Critical 
+ Houston Radar LLC 
+ 2019-04-29 
+ Priority to US16/397,949 
+ priority 
+ Critical 
+ patent/US11119209B2/en 
+ 2019-04-29 
+ Assigned to HOUSTON RADAR LLC 
+ reassignment 
+ HOUSTON RADAR LLC 
+ ASSIGNMENT OF ASSIGNORS INTEREST (SEE DOCUMENT FOR DETAILS). 
+ Assignors: MALIK, VIPIN, SHARONOV, SERGEI, HILL, BRIAN, SMITH, STANLEY J. 
+ 2019-08-22 
+ Publication of US20190257940A1 
+ publication 
+ Critical 
+ patent/US20190257940A1/en 
+ 2021-09-14 
+ Application granted 
+ granted 
+ Critical 
+ 2021-09-14 
+ Publication of US11119209B2 
+ publication 
+ Critical 
+ patent/US11119209B2/en 
+ Status 
+ Active 
+ legal-status 
+ Critical 
+ Current 
+ 2036-01-01 
+ Adjusted expiration 
+ legal-status 
+ Critical 
+ Links 
+ USPTO 
+ USPTO PatentCenter 
+ USPTO Assignment 
+ Espacenet 
+ Global Dossier 
+ Discuss 
+ Images 
+ Classifications 
+ G — PHYSICS 
+ G01 — MEASURING; TESTING 
+ G01S — RADIO DIRECTION-FINDING; RADIO NAVIGATION; DETERMINING DISTANCE OR VELOCITY BY USE OF RADIO WAVES; LOCATING OR PRESENCE-DETECTING BY USE OF THE REFLECTION OR RERADIATION OF RADIO WAVES; ANALOGOUS ARRANGEMENTS USING OTHER WAVES 
+ G01S13/00 — Systems using the reflection or reradiation of radio waves, e.g. radar systems; Analogous systems using reflection or reradiation of waves whose nature or wavelength is irrelevant or unspecified 
+ G01S13/88 — Radar or analogous systems specially adapted for specific applications 
+ G01S13/91 — Radar or analogous systems specially adapted for specific applications for traffic control 
+ G01S13/92 — Radar or analogous systems specially adapted for specific applications for traffic control for velocity measurement 
+ G — PHYSICS 
+ G01 — MEASURING; TESTING 
+ G01S — RADIO DIRECTION-FINDING; RADIO NAVIGATION; DETERMINING DISTANCE OR VELOCITY BY USE OF RADIO WAVES; LOCATING OR PRESENCE-DETECTING BY USE OF THE REFLECTION OR RERADIATION OF RADIO WAVES; ANALOGOUS ARRANGEMENTS USING OTHER WAVES 
+ G01S13/00 — Systems using the reflection or reradiation of radio waves, e.g. radar systems; Analogous systems using reflection or reradiation of waves whose nature or wavelength is irrelevant or unspecified 
+ G01S13/02 — Systems using reflection of radio waves, e.g. primary radar systems; Analogous systems 
+ G01S13/50 — Systems of measurement based on relative movement of target 
+ G01S13/58 — Velocity or trajectory determination systems; Sense-of-movement determination systems 
+ G01S13/64 — Velocity measuring systems using range gates 
+ G — PHYSICS 
+ G01 — MEASURING; TESTING 
+ G01S — RADIO DIRECTION-FINDING; RADIO NAVIGATION; DETERMINING DISTANCE OR VELOCITY BY USE OF RADIO WAVES; LOCATING OR PRESENCE-DETECTING BY USE OF THE REFLECTION OR RERADIATION OF RADIO WAVES; ANALOGOUS ARRANGEMENTS USING OTHER WAVES 
+ G01S13/00 — Systems using the reflection or reradiation of radio waves, e.g. radar systems; Analogous systems using reflection or reradiation of waves whose nature or wavelength is irrelevant or unspecified 
+ G01S13/87 — Combinations of radar systems, e.g. primary radar and secondary radar 
+ Definitions 
+ radar-based traffic monitoring 
+ face a number of challenges including beam-spreading, multi-path interference, fading, electromagnetic interference, and generally high levels of attenuations. Consequently, many radar systems (even when frequently re-calibrated) routinely exhibit measurement errors exceeding 5%. For a significant fraction of the measurement attempts, many radar systems fail to register any measurement at all. 
+ FIG. 1 
+ shows an illustrative dual-radar-beam traffic monitoring environment. 
+ FIG. 2 
+ shows an illustrative offset pattern for the use of two continuous wave frequency modulated (CWFM) radar signals. 
+ CWFM 
+ continuous wave frequency modulated 
+ FIG. 3 
+ shows an illustrative dual-radar-beam traffic monitoring device. 
+ FIG. 4 
+ is a flowchart of an illustrative dual-radar-beam traffic monitoring method. 
+ FIG. 5 
+ is a flowchart of a first time-delay estimation method. 
+ FIG. 6A 
+ is a flowchart of another time-delay estimator method. 
+ FIG. 6B 
+ shows a plot that illustrates a summed difference values technique. 
+ FIG. 1 
+ shows an illustrative dual-radar-beam traffic monitoring environment 100 . 
+ radars 102 A and 102 B 
+ (labeled R 1 and R 2 ) are separated by a distance (D), and are positioned at a height (H) above roadway 105 . 
+ the radars 102 A and 102 B 
+ are positioned to the side of roadway 105 are each mounted in a “side-fire” orientation, i.e., directed generally transverse to the roadway and generally parallel to each other. 
+ Each of the radars 102 A and 102 B 
+ has a different field of view of the roadway 105 . More specifically, field of view 104 A corresponds to radar 102 A, while field of view 104 B corresponds to radar 102 B. Although the fields of view 104 A and 104 B are shown to partially overlap in environment 100 , it should be understood that the fields of view 104 A and 104 B for radars 102 A and 102 B need not overlap. Further, the fields of view 104 A and 104 B represented in FIG. 1 assume the radars 102 A and 102 B are angle-aligned and have a similar range. 
+ the offset distance, angle alignment, and range of the radars 102 A and 104 B 
+ may vary intentionally or unintentionally, and that such variance can be accounted for to enable speed detection as described herein. Whether overlapping or not, a known offset distance between the fields of view 104 A and 104 B can be used to determine speed of a target once a time-delay between when the target traverses each of the fields of view 104 A and 104 B is determined. Further, as needed, a predetermined or estimated sampling delay or offset may added to the time-delay to determine the speed of a target. 
+ each radar 102 A and 102 B 
+ may include a transmitter (TX) and a receiver (RX). 
+ TX 
+ transmitter 
+ RX 
+ receiver 
+ dual-radar-beams 
+ may be formed by having one transmitter illuminating the field of view of both receivers. In each case, there are at least two receivers having a field of view with a known separation from each other. 
+ the transmitter and receiver of radar 102 A 
+ are coupled to one or more antennas and associated control circuitry. 
+ the transmitter and receiver of radar 102 B 
+ are coupled to one or more antennas and associated control circuitry. 
+ Such radars 
+ are commercially available as modules or as part of existing traffic monitoring systems. 
+ the targets 106 
+ may be traveling in different lanes 108 (labeled L 1 -L 4 ) and in opposite directions. 
+ the function of the radars 102 A and 104 B and the related control system 110 
+ is to track roadway use parameters (e.g., the number of vehicles per lane, the length of vehicles, and the speed of vehicles) by obtaining and processing radar response signals (reflections) from targets 106 that pass through the fields of view 104 A and 104 B. 
+ roadway use parameters 
+ are stored and/or output from the control system 110 and may be accessed by traffic engineers or other interested parties. Further, the roadway use parameters may be processed to derive other parameters (e.g., lane occupancy) and/or may be displayed in different forms via suitable software applications. 
+ such software 
+ may present speed, vehicle length, and/or number of the number of vehicles per lane (per time unit) on a display or computer monitor. 
+ the displayed data 
+ may be updated over time. 
+ a display or computer monitor 
+ may present a roadway image or corresponding representation to show the movement of vehicles for one or more lanes. 
+ the control system 110 
+ may perform various operations. In at least some embodiments, the control system 110 manages the power level, timing, frequency, and other characteristics of electromagnetic waves emitted by radars 102 A and 102 B. Further, the control system 110 manages the digitization, buffering, and processing of radar response signals reflected from targets. In some embodiments, the control system 110 further determines roadway use parameters based in part on the results from one or more time-delay estimators as described further below. The control system 110 may store the determined roadway use parameters locally on nontransient information storage media such as optical, magnetic, or solid state disk, and/or may transmit the parameters via wired or wireless network to a remote server. 
+ nontransient information storage media 
+ such as optical, magnetic, or solid state disk 
+ a power source 114 
+ couples to the control system 110 and the radars 102 A and 102 B to provide power to perform the disclosed operations. 
+ the power source 114 
+ corresponds to a remote/limited power source such as a battery and/or a solar panel. 
+ the control system 110 
+ may provide different power management options or modes to adjust power consumption as described herein. 
+ FIG. 2 
+ is a chart 120 of an illustrative offset pattern for the coordinated use of two CWFM radar signals. 
+ line 122 
+ shows the signal frequency transmitted by radar R 1 as a function of time 
+ line 124 
+ shows the signal frequency transmitted by radar R 2 as a function of time. 
+ lines 122 and 124 
+ extend between minimum and maximum frequencies following a triangular wave pattern. 
+ the minimum and maximum frequencies 
+ are preset based on various considerations including government regulations. As an example, the minimum frequency may be 24 GHz and the maximum frequency may be 24.25 GHz. 
+ a time interval 130 
+ determines the time and frequency spacing between the lines 122 and 124 . 
+ the time interval 130 
+ may be selected such that the corresponding frequency spacing ( ⁇ f) enables each receiver to filter out unwanted signals (e.g., the receiver for radar R 1 filters out the radar R 2 response signal, and the receiver for radar R 2 filters out the radar R 1 response signal). 
+ the time interval 130 
+ also subtracts from the useful measurement windows 126 where both radar response signals can be simultaneously received. 
+ the radar signals 
+ generally exhibit some nonlinearities near the slope reversals (the peaks and troughs of the triangular wave), and the intersections where the waves cross may cause the two radars to interfere with each other. If time interval 130 is kept sufficiently small, processing can be disabled in regions 128 without significantly impairing system performance. 
+ FIG. 3 
+ shows an illustrative dual-radar-beam device 200 that includes radars 102 A and 102 B and control system 110 within a housing 201 . 
+ the radars 102 A and 102 B 
+ may be separated by e.g., about 2 feet, to provide a known offset distance (D) between their respective fields of view. 
+ the housing 201 
+ may comprise a tube or other similarly shaped chassis that encloses and protects the inner electronics from moisture, and/or other contaminants. Further, the housing 201 may be made from a material that does not unduly interfere with the transmission and reception of electromagnetic waves. 
+ each of the radars 102 A and 102 B 
+ shows each of the radars 102 A and 102 B as having a transmitter (TX) and receiver (RX), it should be understood that other dual-radar-beam device embodiments may have fewer transmitters than receivers (e.g., a single transmitter and two receivers). 
+ the control system 110 
+ includes one or more printed circuit boards (PCBs) 204 with conductive paths and with electronic components mounted thereto. 
+ the electronic components 
+ include power converter(s) 206 that receive power from a power source (e.g., power source 114 ) and that provide controlled voltage and/or current levels for use by the various other components. 
+ the electronic components 
+ also include radar drivers 230 A and 230 B to direct operations of the radars 102 A and 102 B, and to process radar response signals and provide digitized events. 
+ the term “event” 
+ is used herein to refer to a set of measurements associated with a target's traversal of a radar's field of view. 
+ the set of measurements 
+ includes three attributes, each measured as a function of time: range, speed, and magnitude. 
+ range 
+ is the distance associated with the reflection 
+ speed 
+ is the time derivative of the range (optionally derived from Doppler shift of the radar signal) 
+ magnitude 
+ is the absolute amplitude of the reflection. 
+ the radar drivers 230 A, 230 B 
+ may detect events when the reflection magnitude (or a filtered version thereof) exceeds a threshold. 
+ each target 
+ Due to the separation between the radars' fields of view, each target causes each radar to detect an event at different times. 
+ the two events corresponding to a given target 
+ can be readily linked by the processor via any one of various techniques. For example, when the fields of view are substantially overlapping, the events too will overlap, making the linkage readily apparent. When less overlap exists, a range or lane-based event counting technique may be employed, restarting the counts during quiet periods and associating correspondingly numbered events thereafter. 
+ the electronic components 
+ also include a processor 210 coupled to receive and link the event information from the radar drivers 230 A, 230 B, and further coupled to a memory 212 that stores the linked event information and software or firmware for analyzing the linked event information. 
+ the memory 212 
+ may employ known volatile and/or non-volatile memory options for storing information, including magnetic and solid state drives. 
+ the software stored by memory 212 
+ includes one or more time-delay estimator modules 214 A- 214 N. When applied to linked events, each of the time-delay estimator modules 214 A- 214 N is able to determine a distinct time-delay estimate for the associated target's motion between the respective fields of view. 
+ each time-delay estimator module 214 
+ operates on the different attributes from the linked events to yield multiple time-delay estimates, e.g., a magnitude-based time-delay estimate, a range-based time-delay estimate, and a speed-based time-delay estimate. 
+ the software and/or firmware in memory 212 
+ may further include a time-delay combiner module 216 that combines the results from the one or more of the time-delay estimator modules 214 A- 214 N based on rules 218 . Where only one time-delay estimator module is employed to yield a single time-delay estimate, the time-delay combiner module 216 may be omitted. 
+ the rules 218 for combining results 
+ may include static rules or dynamic adjustments applied to the results of each of the time-delay estimator modules 214 A- 214 N. 
+ static rules for time-delay estimator modules 214 A- 214 N 
+ may be established as part of the system and software development process that compares the performance of a number of candidate modules against measurements by a reference system. Once the measurement accuracy, random errors, and/or systematic errors of the various candidate modules has been assessed, a set of time-delay estimator modules 214 A- 214 N providing substantially independent measurements is selected, with weights assigned according to the accuracy of each of the time-delay estimator modules 214 A- 214 N. 
+ the weighting to be applied to each of the time-delay estimator modules 214 A- 214 N 
+ may be a function of the inverse of the variance between estimator results and the trusted measure. 
+ the static rules established for each of the time-delay estimator modules 214 A- 214 N 
+ may be adjusted dynamically during use, e.g., by adapting the associated weights based on the error variance. 
+ the control system 110 
+ may discard one or more estimates if they deviate too far from the weighted average being updated in the system during operation or if such estimates fall outside a predetermined range around an average delay for that lane based on recent history while at least one estimate falls within that predetermined range. 
+ the weights for the remaining estimators 
+ may be re-normalized to account for the weights associated with the omitted estimator(s). 
+ validation thresholds or other quality criteria 220 
+ are applied to individual estimator results or combined results. 
+ the radar drivers 230 A, 230 B 
+ may track signal to noise ratio, tracking accuracy percentage, or some other measure of fading, noise levels, and/or interference, and may flag those targets that are detected during periods having low signal to noise ratio. 
+ the estimator modules 
+ can each measure a residual mismatch error once the estimated delay has been determined. Excessive noise or error levels can be taken as an indication that further validation is desired. 
+ a number of validation tests 
+ are contemplated. For example, the estimator results may be checked against: 1) results for adjacent vehicles in the lane; 2) an average lane value; 3) a range of typical vehicle lengths; 4) a lane direction; and/or 5) a speed threshold. 
+ estimator results 
+ are compared with vehicles preceding and/or following a target in the same lane within a predetermined threshold time window. If the difference between adjacent vehicles within the time window is more than a threshold amount, the estimator results are determined to be invalid. 
+ estimator results or their derivative values 
+ are compared with an average time-delay or speed for a given lane. If the difference between average time-delay/lane speed and estimator results is more than a threshold amount, the estimator results are determined to be invalid. 
+ a vehicle length distribution function 
+ determines a probability value for encountering different vehicle lengths. 
+ any one of the event attributes 
+ indicate an unlikely vehicle length (e.g., less than 6 feet or greater than 80 feet) 
+ the associated estimator results 
+ are determined to be invalid. 
+ For the direction check 
+ a determination is made regarding whether estimator results show a vehicle moving in direction opposite the lane flow. If so, the estimator results are determined to be invalid. 
+ For the speed threshold check 
+ a determination is made regarding whether a vehicle speed is unreasonable (e.g., if speed is greater than 120 mph). If so, estimator results are determined to be invalid. Any results (e.g., time-delay, lane speed, direction, vehicle length) that are determined to be invalid may be omitted from the weighted combination, or replaced with a typical value, or the information associated with the linked events may be discarded. 
+ the roadway use parameters 222 
+ may then be updated based on the results of the estimator module(s) 214 and (if present) the combiner 216 . 
+ the roadway use parameters 222 
+ are stored for later access and may be responsively or periodically conveyed via communication interface 240 to a processing/storage entity external to the device 200 . 
+ the communication interface 240 
+ may correspond to a wired or wireless interface that periodically transmits the roadway use parameters 222 to an external computer in response to a data delivery schedule or asynchronous request. 
+ the memory 212 
+ also stores a synchronizer module 224 . 
+ the synchronizer module 224 
+ directs the timing of operations performed by the drivers 230 A and 230 B for radars 102 A and 102 B. 
+ a synchronization interface 250 
+ may be provided directly between drivers 230 A and 230 B. In such case, a delay between the operations of radars 102 A and 102 B is managed directly by the drivers 230 A and 230 B, rather than by the processor 210 and/or the synchronization module 224 . 
+ the synchronization of radars 102 A and 102 B 
+ enable measurement windows 126 as described in chart 120 of FIG. 2 . 
+ the memory 212 
+ also stores a power modes module 226 . 
+ the power modes module 226 
+ provides control parameters (e.g., sample rate, radar power level, etc.) for different power modes. 
+ the different power modes 
+ may be triggered, for example, by a power/voltage level of a power source (e.g., power source 114 ), roadway use parameters (e.g., an amount of traffic, average speed determination), or a schedule (e.g., time of day/week, etc.). More specifically, if the amount of power remaining for power source 114 drops below a threshold level, a low-power mode may be initiated. In the low-power mode, both radars do not continually operate. 
+ a power/voltage level of a power source 
+ e.g., power source 114 
+ roadway use parameters 
+ e.g., an amount of traffic, average speed determination 
+ a schedule 
+ e.g., time of day/week, etc. 
+ one or both radars 102 A and 102 B 
+ may be directed to periodically transmit an electromagnetic wave until a target is detected. The timing of such transmissions may be selected to save power while ensuring targets are not missed. Once a target is detected, the sampling rate of one or both radars 102 A and 102 B is increased for a period of time to improve accuracy of the calculated roadway use parameters. If no targets are detected for a threshold amount of time, one or both radars 102 A and 102 B may return to a default low-power state. 
+ the low-power modes 
+ may adjust sample rates or other processes of device 200 . In at least some embodiments, the device 200 is intended to have a power consumption of around 1 Watt, where the power consumption is adjustable using low-power modes such as those described herein. 
+ FIG. 4 
+ shows an illustrative flowchart of a first dual-radar-beam speed estimation method 300 . 
+ a response signal for radar 102 A 
+ (referred to hereafter as the “R 1 response signal”) is obtained. 
+ a response signal for radar 102 B 
+ (referred to hereafter as the “R 2 response signal”) is obtained. 
+ the R 1 and R 2 response signals 
+ are digitized and processed to detect targets and capture event information. Depending on the roadway, it may be possible for multiple targets to be simultaneously present in the field of view, in which case multiple events are captured concurrently. 
+ the range attribute 
+ may be used to distinguish different targets and associate events with corresponding roadway lanes. 
+ the processor 
+ links the associated R 1 and R 2 radar events for each target. 
+ the processor 
+ may further identify a sample time offset that (at least roughly) aligns the linked events with each other and may trim or zero-pad the linked events as needed to enforce a predetermined window length (e.g., 512 samples). This alignment step is expected to leave some residual alignment (time-delay) error. 
+ One illustrative alignment strategy 
+ causes each windowed event to begin with the first sample having a magnitude that exceeds a detection threshold. 
+ a related alignment strategy 
+ would be to have each windowed event end with a first sample having a magnitude that falls below a detection threshold. 
+ Yet another alignment strategy 
+ would be to identify the middle of each event by averaging the sample time that first exceeds the threshold and the sample time that first falls below the threshold, and to align the middles by symmetrically trimming or padding the events to reach the window length. 
+ the different sample times of whichever alignment points are used 
+ are subtracted to determine an alignment offset that can be used for later reference. 
+ multiple time-delay estimates between linked events 
+ are determined, preferably using at least two different estimators. 
+ the time-delay estimates determined in block 312 
+ are combined. 
+ the rules for combining the different time-delay estimates 
+ may include averaging and/or weighting the time-delay estimates as described previously. 
+ the speed of a vehicle associated with the linked events 
+ is calculated. 
+ the speed of a vehicle 
+ may be calculated using a time-delay estimate provided by block 314 , a known offset distance between receiver fields of view, and a predetermined or estimated sampling delay or offset for the receivers involved. 
+ the calculated speed 
+ complies with quality criteria (decision block 318 ) 
+ the calculated speed 
+ is added along with other event information to the roadway use parameters at block 320 . Otherwise, the method returns to block 310 . 
+ the operations of blocks 310 , 312 , 314 , 316 , and 318 
+ can be repeated as needed with adjustments made to one or more of blocks 310 , 312 , and 314 , until the calculated speed complies with quality criteria (determination block 318 ). 
+ typical or representative values 
+ may be substituted for invalid results (e.g., an average value or adjacent vehicle value) or the invalid results may be discarded. 
+ FIGS. 5 and 6A 
+ show illustrative flowcharts of other time-delay estimator methods. 
+ the time-delay estimator method 400 
+ (referred to herein as a “phase difference” method) performs a Fourier Transform (e.g., a Fast or Discrete Fourier Transform) of the windowed R 1 event attribute (block 402 ) and the windowed R 2 event attribute (block 404 ). 
+ a Fourier Transform 
+ e.g., a Fast or Discrete Fourier Transform 
+ the attribute 
+ is absolute magnitude, but the described method is also applicable for other attributes such as range and speed. 
+ the phase difference between corresponding harmonics of the frequency-transformed events 
+ is determined, the phase difference being proportional to the residual time-delay and harmonic number. 
+ phase unwrapping operations 
+ may involve searching through a range of feasible slope values to find one that produces a minimum of the weighted sum of the squares of the phase differences for all harmonics. 
+ the value of K that results in the minimum value for E(K) 
+ corresponds to the slope of interest. 
+ the time-delay ( ⁇ t) 
+ is determined using the slope found in block 406 . 
+ the method 
+ may be repeated for the other event attributes to obtain corresponding time-delay estimates. These estimates of the residual time-delay may be combined with the alignment offset (and any other clock offsets being tracked) to obtain a full estimate of the time-delay between linked events. 
+ FIG. 6A 
+ another time-delay estimator method 500 is described. 
+ the method 500 
+ iterates through a range of feasible time-delays, starting with an initial estimated time-delay ( ⁇ t) at block 502 . 
+ the summed difference between the windowed event attribute for radars R 1 and R 2 
+ is determined based on the time-delay set at block 502 . 
+ the result 
+ is stored at block 506 as a corresponding element of a summed difference array. If a ⁇ t search range has been traversed (decision block 508 ), the value of ⁇ t is determined based on the values of the summed difference array at block 510 . Otherwise, the value of ⁇ t is adjusted and the method 500 returns to block 502 . 
+ blocks 502 , 504 , 506 , and 508 
+ can be repeated as needed, until the ⁇ t search range has been traversed. 
+ the operations of block 504 
+ include the following summed difference value e(k) calculations: 
+ centroid 
+ corresponds to an estimate of the residual time-delay between the windowed events. 
+ the centroid calculation 
+ is performed iteratively without precomputing and storing all summed difference values. Instead, running sums are stored and divided one by the other at the end. 
+ curve fitting or interpolation 
+ may be employed to find the residual time-delay between the events. In any event, the residual time-delay is added to the alignment offset to obtain a full estimate of the time-delay between events. The process may be repeated for other event attributes to yield multiple time-delay estimates. 
+ the process of method 500 
+ can be described as a minimum error search that is performed by subtracting windowed attributes of the linked events. Data from one of the radars is shifted for each iteration of the minimum error search. This minimum error search can estimate the time-delay to an accuracy level of approximately one sample period. A more refined result (attempting sub-sample accuracy) is subsequently found by determining the centroid in the array generated by the minimum error search. 
+ FIG. 6B 
+ shows a plot 520 related to method 500 . 
+ the amount of error 
+ (the summed difference between the R 1 and R 2 event attributes) is plotted as a function of time shift or sample shift. 
+ the purpose of method 500 
+ is to determine the time shift or sample shift that corresponds to a point of minimum error 524 . 
+ This point of minimum error 524 
+ can be determined in different ways and is not necessarily a trivial operation as the amount of noise may result in an error curve 522 with multiple minimums. Without limitation, the point of minimum error 524 may be determined using a centroid calculation as described herein. 
+ the time-delay estimation method 500 
+ may be implemented alone or may be combined with at least one other time-delay estimation technique as described herein. 
+ a vehicle's speed 
+ is determined by three sets of inputs: the results of time-delay estimator method 400 , the results of time-delay estimator method 500 , and recent road history. Further, a known offset distance between receiver fields of view, and a predetermined or estimated sampling delay or offset between receivers is used to determine a vehicles' speed. For each of the methods 400 and 500 , a quality assessment value is determined for the results as described previously. One way in which this quality assessment value may be determined, for example, is as a function of the success of each radar in tracking an individual target. 
+ the quality assessment value 
+ may be function of a tracking accuracy percentage that indicates the percentage of time during the span of a given event that tracking was “successful”, i.e., the span during which the reflected signal magnitude was above a detection threshold. 
+ the quality assessment 
+ may also be a function of a least-squared error search performed for methods 400 and 500 . 
+ the quality assessment value 
+ is also a function of the total energy of the event. For example, event energy may be determined as the sum of the squares of the time series of magnitudes for the event. 
+ the quality assessment value 
+ is determined as: 
+ an initial estimate of vehicle speed 
+ may in some embodiments be produced by averaging the results from methods 400 and 500 . 
+ a simple numerical mean 
+ may be used, or a weighted average should the results of one method be found generally more accurate than the other in a given circumstance. 
+ the results of method 400 or 500 with the highest quality assessment value 
+ is chosen if one result is below a threshold. 
+ the filtered and/or combined results of method 400 or 500 
+ is referred to as a “combined result.” 
+ a special handling assessment 
+ may be performed. For example, special handling may be applied if: 1) the results of methods 400 and 500 differ by more than a predetermined amount; 2) the methods 400 and 500 did not agree on direction of travel; 3) the combined result differs from the lane average speed more than a predetermined amount; and the quality assessment value of one of the methods 400 or 500 was below a threshold (e.g., a speed is deemed to be unreasonably high or low). 
+ a threshold 
+ e.g., a speed is deemed to be unreasonably high or low. 
+ the average lane speed 
+ is used for comparison. 
+ the result from the method 400 or 500 that is nearest to the average lane speed 
+ is used (within a speed window). If neither of the results of methods 400 or 500 is close to the average lane speed, the speed of this vehicle is recomputed with a narrower search window around the average lane speed, and with an assigned direction of travel for this lane (e.g., an observed majority of the last several cars). 
+ a traffic monitoring method 
+ that comprises receiving a first reflected radar signal from a target traversing a first field of view; receiving a second reflected radar signal from the target as it traverses a second field of view offset from the first field of view by a predetermined distance; transforming the first and second reflected radar signals to obtain first and second sets of frequency coefficients; obtaining a phase difference between the first and second sets of frequency coefficients; determining a slope representing a dependence of the phase difference on frequency; calculating a time-delay from the slope; and combining the time-delay with the predetermined distance to determine a speed of the target. 
+ a traffic monitoring method 
+ that comprises receiving a first reflected radar signal from a target traversing a first field of view; receiving a second reflected radar signal from the target as it traverses a second field of view offset from the first field of view by a predetermined distance; using the first and second reflected radar signals to obtain summed difference values, wherein each of the summed difference values corresponds to different time shifts between the first and second reflected radar signals; determining a time-delay based on the summed difference values; and combining the time-delay with the predetermined distance to determine a speed of the target. 
+ a traffic monitoring system 
+ that comprises a first radar that receives reflected radar signals from targets traversing a first field of view; a second radar that receives reflected radar signals from targets traversing a second field of view, each traversal of the first and second fields of view producing linked events each having at least one time dependent event attribute; a nontransient information storage medium that stores roadway use parameters including vehicle speed; and a controller in communication with the first and second radars to derive vehicle speeds from the linked events and to responsively update the roadway use parameters. 
+ the controller 
+ determines a time-delay between the linked events by combining results from at least two different types of time-delay estimators. 
+ the controller 
+ calculates a speed of the linked event based on the determined time-delay and a distance between the first and second fields of view. 
+ receiving first and second reflected radar signals 
+ includes: tracking a set of first event attributes as a function of time as the target traverses the first field of view, and tracking a set of second event attributes as a function of time as the target traverses the second field of view; and wherein transforming the first and second reflected radar signals comprises: trimming or padding at least one attribute from each of the first and second events to a predetermined window length, and applying a discrete Fourier transform to the at least one attribute from each of the first and second events. 
+ Element 2 
+ transforming the first and second reflected radar signals comprises: trimming or padding each of multiple attributes from each of the first and second events to a predetermined window length, and applying a discrete Fourier transform to each of the multiple attributes from each of the first and second events; and wherein said obtaining, determining, and calculating are repeated to determine a time-delay from each of the multiple attributes, and wherein said combining the time-delay with the predetermined distance comprises combining a weighted average of the time-delays with the predetermined distance to determine the speed of the target. 
+ determining the slope 
+ comprises performing phase unwrapping on the phase difference. 
+ Element 4 
+ further comprising performing a line slope search using the phase difference, and selecting a line slope yielding a minimum mean square error. 
+ Element 6 
+ further comprising using the speed to update a set of roadway use parameters stored on a nontransient information storage medium. 
+ Element 7 
+ further comprising using the speed to update a set of roadway use parameters stored on a nontransient information storage medium. 
+ receiving first and second reflected radar signals 
+ includes: tracking a set of first event attributes as a function of time as the target traverses the first field of view, and tracking a set of second event attributes as a function of time as the target traverses the second field of view; and wherein said using comprises: trimming or padding at least one attribute from each of the first and second events to a predetermined window length, offsetting windowed attribute values for the first and second events by the time shift for a given entry, differencing the offset windowed attribute values, and summing absolute values of the differences between the offset windowed attribute values for the at least one attribute from each of the first and second events. 
+ Element 9 
+ using the first and second reflected radar signals to obtain summed difference values comprises: trimming or padding each of multiple attributes from each of the first and second events to a predetermined window length; wherein said offsetting, differencing, summing, and determining steps are repeated to determine a time-delay from each of the multiple attributes; and wherein said combining comprises combining a weighted average of the time-delays with the predetermined distance to determine the speed of the target. 
+ Element 10 
+ wherein the summed difference values are each representable as: 
+ N 
+ is a sample number 
+ k 
+ is a sample offset 
+ f 1 i and f 2 i 
+ are values from the at least one attribute for the first and second events. 
+ determining a time-delay based on the summed difference values 
+ comprises fitting a curve to the summed difference values. 
+ determining a time-delay 
+ comprises determining a centroid of the summed 
+ Element 13 
+ wherein the at least two different types of time-delay estimators include: a phase difference slope method and a summed difference values method. 
+ Element 14 
+ wherein the linked events have multiple time dependent event attributes, and wherein each of the at least two different types of time-delay estimators are applied to each of the multiple time dependent event attributes to obtain a corresponding plurality of time-delay estimates that are combined to yield the determined time-delay between the linked events. 
+ Element 15 
+ further comprising a battery or solar panel to power electrical components of the system. 
+ Element 16 
+ the controller operates the first and second radars in a plurality of power modes, and wherein the controller switches between the plurality of power modes in response to one or more events. 
+ Element 17 
+ further comprising a one or more printed circuit boards mounted within a single housing that encloses the first and second radars, wherein the printed circuit boards maintain the first and second radars in a fixed relative position and orientation. 
+ Landscapes 
+ Engineering & Computer Science 
+ ( AREA )
+ Radar, Positioning & Navigation 
+ ( AREA )
+ Remote Sensing 
+ ( AREA )
+ Physics & Mathematics 
+ ( AREA )
+ Computer Networks & Wireless Communication 
+ ( AREA )
+ General Physics & Mathematics 
+ ( AREA )
+ Electromagnetism 
+ ( AREA )
+ Radar Systems Or Details Thereof 
+ ( AREA )
+ Traffic Control Systems 
+ ( AREA )
+ Abstract 
+ A first method includes receiving a first reflected radar signal from a target in a first field of view and receiving a second reflected radar signal from a target in a second field of view offset from the first field of view by a predetermined distance; transforming the first and second reflected radar signals to obtain first and second sets of frequency coefficients, from which a frequency-dependent phase difference is obtained; and calculating a time-delay from the slope of the frequency dependence. A second method includes obtaining summed difference values between the first and second radar responses, where each of the summed difference values corresponds to different time shifts between the first and second radar response, and deriving from the summed difference values a time-delay associated with the target's motion from the first field of view to the second field of view. A third method combines the time-delays or associated speeds obtained from independent estimators. 
+ Description 
+ RELATED APPLICATIONS 
+ This application is a divisional application of U.S. patent application Ser. No. 15/127,776 filed Sep. 20, 2016 which is a U.S. National Stage Application of International Application No. PCT/US15/21605, designating the United States and which claims priority to Provisional U.S. Application Ser. No. 61/968,587, titled “Robust Dual-Radar-Beam Systems and Methods for Traffic Monitoring” and filed Mar. 21, 2014 by Sergei Sharanov, Brian Hill, Vipin Malik and Stanley J. Smith, all of which is incorporated herein by reference in its entirety. 
+ BACKGROUND 
+ Various wired and wireless traffic monitoring techniques have been used to track the number and the speed of vehicles on a roadway. Among the more popular non-intrusive techniques in use is radar-based traffic monitoring. Yet radar-based traffic monitoring systems face a number of challenges including beam-spreading, multi-path interference, fading, electromagnetic interference, and generally high levels of attenuations. Consequently, many radar systems (even when frequently re-calibrated) routinely exhibit measurement errors exceeding 5%. For a significant fraction of the measurement attempts, many radar systems fail to register any measurement at all. 
+ In repeated attempts to improve the reliability and accuracy of radar-based traffic monitoring, a number of system designs have been proposed. See, e.g., U.S. Pat. No. 7,426,450 “Systems and methods for monitoring speed”, which discloses no less than nine radar-based speed monitoring techniques. Nevertheless, such techniques do not appear to adequately address the ever-increasing demands for improved accuracy and reliability. 
+ BRIEF DESCRIPTION OF THE DRAWINGS 
+ Accordingly, there are disclosed herein various dual-radar-beam systems and methods for traffic monitoring offering improved accuracy and reliability. In the drawings: 
+ FIG. 1 shows an illustrative dual-radar-beam traffic monitoring environment. 
+ FIG. 2 shows an illustrative offset pattern for the use of two continuous wave frequency modulated (CWFM) radar signals. 
+ FIG. 3 shows an illustrative dual-radar-beam traffic monitoring device. 
+ FIG. 4 is a flowchart of an illustrative dual-radar-beam traffic monitoring method. 
+ FIG. 5 is a flowchart of a first time-delay estimation method. 
+ FIG. 6A is a flowchart of another time-delay estimator method. 
+ FIG. 6B shows a plot that illustrates a summed difference values technique. 
+ It should be understood, however, that the specific embodiments given in the drawings and detailed description below do not limit the disclosure. On the contrary, they provide the foundation for one of ordinary skill to discern the alternative forms, equivalents, and other modifications that are encompassed in the scope of the appended claims. 
+ DETAILED DESCRIPTION 
+ Disclosed embodiments are directed to dual-radar-beam traffic monitoring systems and methods that apply one or more time-delay estimators or that apply different time-delay estimators together. FIG. 1 shows an illustrative dual-radar-beam traffic monitoring environment 100 . In environment 100 , radars 102 A and 102 B (labeled R 1 and R 2 ) are separated by a distance (D), and are positioned at a height (H) above roadway 105 . The radars 102 A and 102 B are positioned to the side of roadway 105 are each mounted in a “side-fire” orientation, i.e., directed generally transverse to the roadway and generally parallel to each other. Each of the radars 102 A and 102 B has a different field of view of the roadway 105 . More specifically, field of view 104 A corresponds to radar 102 A, while field of view 104 B corresponds to radar 102 B. Although the fields of view 104 A and 104 B are shown to partially overlap in environment 100 , it should be understood that the fields of view 104 A and 104 B for radars 102 A and 102 B need not overlap. Further, the fields of view 104 A and 104 B represented in FIG. 1 assume the radars 102 A and 102 B are angle-aligned and have a similar range. It should be understood that the offset distance, angle alignment, and range of the radars 102 A and 104 B may vary intentionally or unintentionally, and that such variance can be accounted for to enable speed detection as described herein. Whether overlapping or not, a known offset distance between the fields of view 104 A and 104 B can be used to determine speed of a target once a time-delay between when the target traverses each of the fields of view 104 A and 104 B is determined. Further, as needed, a predetermined or estimated sampling delay or offset may added to the time-delay to determine the speed of a target. 
+ To detect targets 106 (e.g., vehicles labeled T 1 -T 4 ) traversing the roadway 105 , the radars 102 A and 102 B transmit high-frequency electromagnetic waves (e.g., 20-40 GHz) and receive reflections from the targets 106 . Accordingly, each radar 102 A and 102 B may include a transmitter (TX) and a receiver (RX). Alternatively, dual-radar-beams may be formed by having one transmitter illuminating the field of view of both receivers. In each case, there are at least two receivers having a field of view with a known separation from each other. The transmitter and receiver of radar 102 A are coupled to one or more antennas and associated control circuitry. Likewise, the transmitter and receiver of radar 102 B are coupled to one or more antennas and associated control circuitry. Such radars are commercially available as modules or as part of existing traffic monitoring systems. 
+ As shown in environment 100 , the targets 106 may be traveling in different lanes 108 (labeled L 1 -L 4 ) and in opposite directions. The function of the radars 102 A and 104 B and the related control system 110 is to track roadway use parameters (e.g., the number of vehicles per lane, the length of vehicles, and the speed of vehicles) by obtaining and processing radar response signals (reflections) from targets 106 that pass through the fields of view 104 A and 104 B. Such roadway use parameters are stored and/or output from the control system 110 and may be accessed by traffic engineers or other interested parties. Further, the roadway use parameters may be processed to derive other parameters (e.g., lane occupancy) and/or may be displayed in different forms via suitable software applications. For example, such software may present speed, vehicle length, and/or number of the number of vehicles per lane (per time unit) on a display or computer monitor. The displayed data may be updated over time. Further, a display or computer monitor may present a roadway image or corresponding representation to show the movement of vehicles for one or more lanes. 
+ The control system 110 may perform various operations. In at least some embodiments, the control system 110 manages the power level, timing, frequency, and other characteristics of electromagnetic waves emitted by radars 102 A and 102 B. Further, the control system 110 manages the digitization, buffering, and processing of radar response signals reflected from targets. In some embodiments, the control system 110 further determines roadway use parameters based in part on the results from one or more time-delay estimators as described further below. The control system 110 may store the determined roadway use parameters locally on nontransient information storage media such as optical, magnetic, or solid state disk, and/or may transmit the parameters via wired or wireless network to a remote server. 
+ In environment 100 , a power source 114 couples to the control system 110 and the radars 102 A and 102 B to provide power to perform the disclosed operations. In at least some embodiments, the power source 114 corresponds to a remote/limited power source such as a battery and/or a solar panel. In such case, the control system 110 may provide different power management options or modes to adjust power consumption as described herein. 
+ As previously mentioned, the two radars may have overlapping fields of view. To prevent interference between the two radars, the system coordinates their operation. FIG. 2 is a chart 120 of an illustrative offset pattern for the coordinated use of two CWFM radar signals. In chart 120 , line 122 shows the signal frequency transmitted by radar R 1 as a function of time, while line 124 shows the signal frequency transmitted by radar R 2 as a function of time. As shown, lines 122 and 124 extend between minimum and maximum frequencies following a triangular wave pattern. The minimum and maximum frequencies are preset based on various considerations including government regulations. As an example, the minimum frequency may be 24 GHz and the maximum frequency may be 24.25 GHz. As shown, a time interval 130 determines the time and frequency spacing between the lines 122 and 124 . The time interval 130 may be selected such that the corresponding frequency spacing (Δf) enables each receiver to filter out unwanted signals (e.g., the receiver for radar R 1 filters out the radar R 2 response signal, and the receiver for radar R 2 filters out the radar R 1 response signal). However, the time interval 130 also subtracts from the useful measurement windows 126 where both radar response signals can be simultaneously received. The radar signals generally exhibit some nonlinearities near the slope reversals (the peaks and troughs of the triangular wave), and the intersections where the waves cross may cause the two radars to interfere with each other. If time interval 130 is kept sufficiently small, processing can be disabled in regions 128 without significantly impairing system performance. 
+ FIG. 3 shows an illustrative dual-radar- beam device 200 that includes radars 102 A and 102 B and control system 110 within a housing 201 . The radars 102 A and 102 B may be separated by e.g., about 2 feet, to provide a known offset distance (D) between their respective fields of view. In some embodiments, the housing 201 may comprise a tube or other similarly shaped chassis that encloses and protects the inner electronics from moisture, and/or other contaminants. Further, the housing 201 may be made from a material that does not unduly interfere with the transmission and reception of electromagnetic waves. While the device 200 shows each of the radars 102 A and 102 B as having a transmitter (TX) and receiver (RX), it should be understood that other dual-radar-beam device embodiments may have fewer transmitters than receivers (e.g., a single transmitter and two receivers). 
+ For device 200 , the control system 110 includes one or more printed circuit boards (PCBs) 204 with conductive paths and with electronic components mounted thereto. In at least some embodiments, the electronic components include power converter(s) 206 that receive power from a power source (e.g., power source 114 ) and that provide controlled voltage and/or current levels for use by the various other components. The electronic components also include radar drivers 230 A and 230 B to direct operations of the radars 102 A and 102 B, and to process radar response signals and provide digitized events. The term “event” is used herein to refer to a set of measurements associated with a target's traversal of a radar's field of view. In at least some embodiments, the set of measurements includes three attributes, each measured as a function of time: range, speed, and magnitude. The range is the distance associated with the reflection, the speed is the time derivative of the range (optionally derived from Doppler shift of the radar signal), and magnitude is the absolute amplitude of the reflection. The radar drivers 230 A, 230 B may detect events when the reflection magnitude (or a filtered version thereof) exceeds a threshold. 
+ Due to the separation between the radars' fields of view, each target causes each radar to detect an event at different times. The two events corresponding to a given target can be readily linked by the processor via any one of various techniques. For example, when the fields of view are substantially overlapping, the events too will overlap, making the linkage readily apparent. When less overlap exists, a range or lane-based event counting technique may be employed, restarting the counts during quiet periods and associating correspondingly numbered events thereafter. 
+ As shown, the electronic components also include a processor 210 coupled to receive and link the event information from the radar drivers 230 A, 230 B, and further coupled to a memory 212 that stores the linked event information and software or firmware for analyzing the linked event information. The memory 212 may employ known volatile and/or non-volatile memory options for storing information, including magnetic and solid state drives. In at least some embodiments, the software stored by memory 212 includes one or more time- delay estimator modules 214 A- 214 N. When applied to linked events, each of the time- delay estimator modules 214 A- 214 N is able to determine a distinct time-delay estimate for the associated target's motion between the respective fields of view. In some embodiments, each time-delay estimator module 214 operates on the different attributes from the linked events to yield multiple time-delay estimates, e.g., a magnitude-based time-delay estimate, a range-based time-delay estimate, and a speed-based time-delay estimate. The software and/or firmware in memory 212 may further include a time-delay combiner module 216 that combines the results from the one or more of the time- delay estimator modules 214 A- 214 N based on rules 218 . Where only one time-delay estimator module is employed to yield a single time-delay estimate, the time-delay combiner module 216 may be omitted. 
+ When the time-delay combiner module 216 is employed, the rules 218 for combining results may include static rules or dynamic adjustments applied to the results of each of the time- delay estimator modules 214 A- 214 N. As an example, static rules for time- delay estimator modules 214 A- 214 N may be established as part of the system and software development process that compares the performance of a number of candidate modules against measurements by a reference system. Once the measurement accuracy, random errors, and/or systematic errors of the various candidate modules has been assessed, a set of time- delay estimator modules 214 A- 214 N providing substantially independent measurements is selected, with weights assigned according to the accuracy of each of the time- delay estimator modules 214 A- 214 N. In some embodiments, the weighting to be applied to each of the time- delay estimator modules 214 A- 214 N may be a function of the inverse of the variance between estimator results and the trusted measure. 
+ Further, in at least some embodiments, the static rules established for each of the time- delay estimator modules 214 A- 214 N may be adjusted dynamically during use, e.g., by adapting the associated weights based on the error variance. As another example, the control system 110 may discard one or more estimates if they deviate too far from the weighted average being updated in the system during operation or if such estimates fall outside a predetermined range around an average delay for that lane based on recent history while at least one estimate falls within that predetermined range. When discarding measurements, the weights for the remaining estimators may be re-normalized to account for the weights associated with the omitted estimator(s). 
+ In at least some embodiments, validation thresholds or other quality criteria 220 are applied to individual estimator results or combined results. For example, the radar drivers 230 A, 230 B may track signal to noise ratio, tracking accuracy percentage, or some other measure of fading, noise levels, and/or interference, and may flag those targets that are detected during periods having low signal to noise ratio. The estimator modules can each measure a residual mismatch error once the estimated delay has been determined. Excessive noise or error levels can be taken as an indication that further validation is desired. A number of validation tests are contemplated. For example, the estimator results may be checked against: 1) results for adjacent vehicles in the lane; 2) an average lane value; 3) a range of typical vehicle lengths; 4) a lane direction; and/or 5) a speed threshold. 
+ For the adjacent vehicle check, estimator results are compared with vehicles preceding and/or following a target in the same lane within a predetermined threshold time window. If the difference between adjacent vehicles within the time window is more than a threshold amount, the estimator results are determined to be invalid. For the average lane value check, estimator results or their derivative values are compared with an average time-delay or speed for a given lane. If the difference between average time-delay/lane speed and estimator results is more than a threshold amount, the estimator results are determined to be invalid. For the vehicle length check, a vehicle length distribution function determines a probability value for encountering different vehicle lengths. If any one of the event attributes indicate an unlikely vehicle length (e.g., less than 6 feet or greater than 80 feet), the associated estimator results are determined to be invalid. For the direction check, a determination is made regarding whether estimator results show a vehicle moving in direction opposite the lane flow. If so, the estimator results are determined to be invalid. For the speed threshold check, a determination is made regarding whether a vehicle speed is unreasonable (e.g., if speed is greater than 120 mph). If so, estimator results are determined to be invalid. Any results (e.g., time-delay, lane speed, direction, vehicle length) that are determined to be invalid may be omitted from the weighted combination, or replaced with a typical value, or the information associated with the linked events may be discarded. The roadway use parameters 222 may then be updated based on the results of the estimator module(s) 214 and (if present) the combiner 216 . 
+ The roadway use parameters 222 are stored for later access and may be responsively or periodically conveyed via communication interface 240 to a processing/storage entity external to the device 200 . For example, the communication interface 240 may correspond to a wired or wireless interface that periodically transmits the roadway use parameters 222 to an external computer in response to a data delivery schedule or asynchronous request. 
+ In at least some embodiments, the memory 212 also stores a synchronizer module 224 . The synchronizer module 224 directs the timing of operations performed by the drivers 230 A and 230 B for radars 102 A and 102 B. In alternative embodiments, a synchronization interface 250 may be provided directly between drivers 230 A and 230 B. In such case, a delay between the operations of radars 102 A and 102 B is managed directly by the drivers 230 A and 230 B, rather than by the processor 210 and/or the synchronization module 224 . The synchronization of radars 102 A and 102 B enable measurement windows 126 as described in chart 120 of FIG. 2 . 
+ In at least some embodiments, the memory 212 also stores a power modes module 226 . The power modes module 226 provides control parameters (e.g., sample rate, radar power level, etc.) for different power modes. The different power modes may be triggered, for example, by a power/voltage level of a power source (e.g., power source 114 ), roadway use parameters (e.g., an amount of traffic, average speed determination), or a schedule (e.g., time of day/week, etc.). More specifically, if the amount of power remaining for power source 114 drops below a threshold level, a low-power mode may be initiated. In the low-power mode, both radars do not continually operate. Rather, one or both radars 102 A and 102 B may be directed to periodically transmit an electromagnetic wave until a target is detected. The timing of such transmissions may be selected to save power while ensuring targets are not missed. Once a target is detected, the sampling rate of one or both radars 102 A and 102 B is increased for a period of time to improve accuracy of the calculated roadway use parameters. If no targets are detected for a threshold amount of time, one or both radars 102 A and 102 B may return to a default low-power state. The low-power modes may adjust sample rates or other processes of device 200 . In at least some embodiments, the device 200 is intended to have a power consumption of around 1 Watt, where the power consumption is adjustable using low-power modes such as those described herein. 
+ FIG. 4 shows an illustrative flowchart of a first dual-radar-beam speed estimation method 300 . At block 302 , a response signal for radar 102 A (referred to hereafter as the “R 1 response signal”) is obtained. Similarly, at block 304 , a response signal for radar 102 B (referred to hereafter as the “R 2 response signal”) is obtained. At blocks 306 and 308 , the R 1 and R 2 response signals are digitized and processed to detect targets and capture event information. Depending on the roadway, it may be possible for multiple targets to be simultaneously present in the field of view, in which case multiple events are captured concurrently. The range attribute may be used to distinguish different targets and associate events with corresponding roadway lanes. 
+ At block 310 , the processor links the associated R 1 and R 2 radar events for each target. The processor may further identify a sample time offset that (at least roughly) aligns the linked events with each other and may trim or zero-pad the linked events as needed to enforce a predetermined window length (e.g., 512 samples). This alignment step is expected to leave some residual alignment (time-delay) error. One illustrative alignment strategy causes each windowed event to begin with the first sample having a magnitude that exceeds a detection threshold. A related alignment strategy would be to have each windowed event end with a first sample having a magnitude that falls below a detection threshold. Yet another alignment strategy would be to identify the middle of each event by averaging the sample time that first exceeds the threshold and the sample time that first falls below the threshold, and to align the middles by symmetrically trimming or padding the events to reach the window length. In some embodiments, the different sample times of whichever alignment points are used (a beginning point, an end point, or a middle point) are subtracted to determine an alignment offset that can be used for later reference. 
+ At block 312 , multiple time-delay estimates between linked events are determined, preferably using at least two different estimators. At block 314 , the time-delay estimates determined in block 312 are combined. For example, the rules for combining the different time-delay estimates may include averaging and/or weighting the time-delay estimates as described previously. At block 316 , the speed of a vehicle associated with the linked events is calculated. For example, the speed of a vehicle may be calculated using a time-delay estimate provided by block 314 , a known offset distance between receiver fields of view, and a predetermined or estimated sampling delay or offset for the receivers involved. 
+ If the calculated speed complies with quality criteria (decision block 318 ), the calculated speed is added along with other event information to the roadway use parameters at block 320 . Otherwise, the method returns to block 310 . The operations of blocks 310 , 312 , 314 , 316 , and 318 can be repeated as needed with adjustments made to one or more of blocks 310 , 312 , and 314 , until the calculated speed complies with quality criteria (determination block 318 ). Alternatively, typical or representative values may be substituted for invalid results (e.g., an average value or adjacent vehicle value) or the invalid results may be discarded. 
+ There are many different ways to estimate the time-delay between linked events in the R 1 and R 2 responses. Generally, determining a time-delay estimate is not a trivial task due to the amount of noise in the R 1 and R 2 responses. Such noise can affect proper target identification (size, position/lane) and the speed calculation. Possible techniques for determining a time-delay include applying a correlation function, measuring a time-delay between radar responses directly, and using the frequency difference obtained by multiplying radar responses together. See e.g., U.S. Pat. No. 7,426,450. In addition, FIGS. 5 and 6A show illustrative flowcharts of other time-delay estimator methods. 
+ In FIG. 5 , the time-delay estimator method 400 (referred to herein as a “phase difference” method) performs a Fourier Transform (e.g., a Fast or Discrete Fourier Transform) of the windowed R 1 event attribute (block 402 ) and the windowed R 2 event attribute (block 404 ). (In the following discussion, it is assumed that the attribute is absolute magnitude, but the described method is also applicable for other attributes such as range and speed.) At block 406 , the phase difference between corresponding harmonics of the frequency-transformed events is determined, the phase difference being proportional to the residual time-delay and harmonic number. In other words, the slope or angle of the phase difference as a function of harmonic number can be used to determine a time-delay estimate, so long as phase wrap-arounds are properly accounted for. (Angular measurements are subject to an inherent ambiguity due to the equivalence of angles that are separated by integer multiples of 360° (2π radians), which is often expressed as a modulo a operation.) Various suitable phase unwrapping methods are known, any one of which may be employed in block 406 as part of determining the linear slope of the phase dependence. For example, the phase unwrapping operations may involve searching through a range of feasible slope values to find one that produces a minimum of the weighted sum of the squares of the phase differences for all harmonics. In at least some embodiments, the operations of block 406 may be represented as:
+ E ( K )=Σ i W i [ f mod(Phase( H 1 i )−Phase( H 2 i )− iK,P i )] 2 ,  Equation (1)
+where H 1 i and H 2 i are the frequency coefficients for linked R 1 and R 2 event attributes, i is the harmonic index, f mod( ) is modular division and W is a suitable weight (e.g., the harmonic power |H 1 i ∥H 2 i |). For Equation 1, the value of K that results in the minimum value for E(K) corresponds to the slope of interest. At block 408 , the time-delay (Δt) is determined using the slope found in block 406 . The method may be repeated for the other event attributes to obtain corresponding time-delay estimates. These estimates of the residual time-delay may be combined with the alignment offset (and any other clock offsets being tracked) to obtain a full estimate of the time-delay between linked events.
+ In FIG. 6A , another time- delay estimator method 500 is described. The method 500 iterates through a range of feasible time-delays, starting with an initial estimated time-delay (Δt) at block 502 . At block 504 , the summed difference between the windowed event attribute for radars R 1 and R 2 is determined based on the time-delay set at block 502 . The result is stored at block 506 as a corresponding element of a summed difference array. If a Δt search range has been traversed (decision block 508 ), the value of Δt is determined based on the values of the summed difference array at block 510 . Otherwise, the value of Δt is adjusted and the method 500 returns to block 502 . The operations of blocks 502 , 504 , 506 , and 508 can be repeated as needed, until the Δt search range has been traversed. In at least some embodiments, the operations of block 504 include the following summed difference value e(k) calculations: 
+ e ⁡ ( k ) = 1 N - k ⁢ ∑ i = 1 N - k ⁢ ⁢  f ⁢ ⁢ 1 i + k - f ⁢ ⁢ 2 i  ⁢ ⁢ for ⁢ ⁢ k ≥ 0 , and Equation ⁢ ⁢ ( 2 ) e ⁡ ( k ) = 1 N + k ⁢ ∑ i = 1 N + k ⁢ ⁢  f ⁢ ⁢ 1 i - f ⁢ ⁢ 2 i - k  ⁢ ⁢ for ⁢ ⁢ k < 0 , Equation ⁢ ⁢ ( 3 ) 
+where N is a sample number, k is a sample offset corresponding to time-delay estimate (Δt/T), f 1 i and f 2 i are linked event attribute values for R 1 and R 2 . The calculations of Equations 2 and 3 may be repeated for multiple shifts within a predetermined range (e.g., k=−50 to k=50) to obtain an array of average absolute error versus time shift. See, e.g., FIG. 6B and the accompanying discussion below. Further, in at least some embodiments, the operations of block 510 may include determining the centroid of the summed difference values, where the centroid is calculated as:
+ k _ = Σ k ⁢ ⁢ k ⁢ { e ⁡ ( k ) - M } Σ k ⁢ { e ⁡ ( k ) - M } Equation ⁢ ⁢ ( 4 ) 
+where M is a maximum or predetermined value that is typically larger than most values of the array. The centroid corresponds to an estimate of the residual time-delay between the windowed events. In at least some embodiments, the centroid calculation is performed iteratively without precomputing and storing all summed difference values. Instead, running sums are stored and divided one by the other at the end. Further, in some embodiments, curve fitting or interpolation may be employed to find the residual time-delay between the events. In any event, the residual time-delay is added to the alignment offset to obtain a full estimate of the time-delay between events. The process may be repeated for other event attributes to yield multiple time-delay estimates.
+ The process of method 500 can be described as a minimum error search that is performed by subtracting windowed attributes of the linked events. Data from one of the radars is shifted for each iteration of the minimum error search. This minimum error search can estimate the time-delay to an accuracy level of approximately one sample period. A more refined result (attempting sub-sample accuracy) is subsequently found by determining the centroid in the array generated by the minimum error search. 
+ FIG. 6B shows a plot 520 related to method 500 . In plot 520 , the amount of error (the summed difference between the R 1 and R 2 event attributes) is plotted as a function of time shift or sample shift. The purpose of method 500 is to determine the time shift or sample shift that corresponds to a point of minimum error 524 . This point of minimum error 524 can be determined in different ways and is not necessarily a trivial operation as the amount of noise may result in an error curve 522 with multiple minimums. Without limitation, the point of minimum error 524 may be determined using a centroid calculation as described herein. The time- delay estimation method 500 may be implemented alone or may be combined with at least one other time-delay estimation technique as described herein. 
+ In at least some embodiments, a vehicle's speed is determined by three sets of inputs: the results of time- delay estimator method 400 , the results of time- delay estimator method 500 , and recent road history. Further, a known offset distance between receiver fields of view, and a predetermined or estimated sampling delay or offset between receivers is used to determine a vehicles' speed. For each of the methods 400 and 500 , a quality assessment value is determined for the results as described previously. One way in which this quality assessment value may be determined, for example, is as a function of the success of each radar in tracking an individual target. As a specific example, the quality assessment value may be function of a tracking accuracy percentage that indicates the percentage of time during the span of a given event that tracking was “successful”, i.e., the span during which the reflected signal magnitude was above a detection threshold. The quality assessment may also be a function of a least-squared error search performed for methods 400 and 500 . In some embodiments, the quality assessment value is also a function of the total energy of the event. For example, event energy may be determined as the sum of the squares of the time series of magnitudes for the event. 
+ In at least some embodiments, the quality assessment value is determined as: 
+ Quality = Km ⁢ tracking ⁢ ⁢ success ⁢ ⁢ % least ⁢ ⁢ squared ⁢ ⁢ error ⁢ ⁢ result ⁢ / ⁢ event ⁢ ⁢ energy . Equation ⁢ ⁢ ( 5 ) 
+If the quality assessment value of the results of methods 400 and 500 exceeds a minimum threshold, an initial estimate of vehicle speed may in some embodiments be produced by averaging the results from methods 400 and 500 . For example, a simple numerical mean may be used, or a weighted average should the results of one method be found generally more accurate than the other in a given circumstance. Alternatively, the results of method 400 or 500 with the highest quality assessment value is chosen if one result is below a threshold. The filtered and/or combined results of method 400 or 500 is referred to as a “combined result.”
+ After the combined result is determined, a special handling assessment may be performed. For example, special handling may be applied if: 1) the results of methods 400 and 500 differ by more than a predetermined amount; 2) the methods 400 and 500 did not agree on direction of travel; 3) the combined result differs from the lane average speed more than a predetermined amount; and the quality assessment value of one of the methods 400 or 500 was below a threshold (e.g., a speed is deemed to be unreasonably high or low). When a vehicle has been selected for special handling, the results from the two methods 400 and 500 are compared to the last vehicle in the same lane. If the previous vehicle was recent, and one of the results from the two methods 400 and 500 is near that vehicle speed, then the result from that method is chosen as the final speed result. If no immediately preceding vehicle is available for comparison, the average lane speed is used for comparison. The result from the method 400 or 500 that is nearest to the average lane speed is used (within a speed window). If neither of the results of methods 400 or 500 is close to the average lane speed, the speed of this vehicle is recomputed with a narrower search window around the average lane speed, and with an assigned direction of travel for this lane (e.g., an observed majority of the last several cars). 
+ Embodiments disclosed herein include: 
+ A: A traffic monitoring method that comprises receiving a first reflected radar signal from a target traversing a first field of view; receiving a second reflected radar signal from the target as it traverses a second field of view offset from the first field of view by a predetermined distance; transforming the first and second reflected radar signals to obtain first and second sets of frequency coefficients; obtaining a phase difference between the first and second sets of frequency coefficients; determining a slope representing a dependence of the phase difference on frequency; calculating a time-delay from the slope; and combining the time-delay with the predetermined distance to determine a speed of the target. 
+ B: A traffic monitoring method that comprises receiving a first reflected radar signal from a target traversing a first field of view; receiving a second reflected radar signal from the target as it traverses a second field of view offset from the first field of view by a predetermined distance; using the first and second reflected radar signals to obtain summed difference values, wherein each of the summed difference values corresponds to different time shifts between the first and second reflected radar signals; determining a time-delay based on the summed difference values; and combining the time-delay with the predetermined distance to determine a speed of the target. 
+ C: A traffic monitoring system that comprises a first radar that receives reflected radar signals from targets traversing a first field of view; a second radar that receives reflected radar signals from targets traversing a second field of view, each traversal of the first and second fields of view producing linked events each having at least one time dependent event attribute; a nontransient information storage medium that stores roadway use parameters including vehicle speed; and a controller in communication with the first and second radars to derive vehicle speeds from the linked events and to responsively update the roadway use parameters. As part of deriving the vehicle speeds, the controller determines a time-delay between the linked events by combining results from at least two different types of time-delay estimators. The controller calculates a speed of the linked event based on the determined time-delay and a distance between the first and second fields of view. 
+ Each of the embodiments, A, B, and C, may have one or more of the following additional elements in any combination. Element 1: receiving first and second reflected radar signals includes: tracking a set of first event attributes as a function of time as the target traverses the first field of view, and tracking a set of second event attributes as a function of time as the target traverses the second field of view; and wherein transforming the first and second reflected radar signals comprises: trimming or padding at least one attribute from each of the first and second events to a predetermined window length, and applying a discrete Fourier transform to the at least one attribute from each of the first and second events. Element 2: transforming the first and second reflected radar signals comprises: trimming or padding each of multiple attributes from each of the first and second events to a predetermined window length, and applying a discrete Fourier transform to each of the multiple attributes from each of the first and second events; and wherein said obtaining, determining, and calculating are repeated to determine a time-delay from each of the multiple attributes, and wherein said combining the time-delay with the predetermined distance comprises combining a weighted average of the time-delays with the predetermined distance to determine the speed of the target. Element 3: determining the slope comprises performing phase unwrapping on the phase difference. Element 4: further comprising performing a line slope search using the phase difference, and selecting a line slope yielding a minimum mean square error. Element 5: determining a time-delay comprises calculating an error as:
+ E ( K )=Σ i W i [ f mod(Phase( H 1 i )−Phase( H 2 i )− iK,Pi )] 2 
+where H 1 i and H 2 i are the frequency coefficients from the first and second sets, i is the harmonic index, K is a slope, and W i is a weight. Element 6: further comprising using the speed to update a set of roadway use parameters stored on a nontransient information storage medium.
+ Element 7: further comprising using the speed to update a set of roadway use parameters stored on a nontransient information storage medium. Element 8: receiving first and second reflected radar signals includes: tracking a set of first event attributes as a function of time as the target traverses the first field of view, and tracking a set of second event attributes as a function of time as the target traverses the second field of view; and wherein said using comprises: trimming or padding at least one attribute from each of the first and second events to a predetermined window length, offsetting windowed attribute values for the first and second events by the time shift for a given entry, differencing the offset windowed attribute values, and summing absolute values of the differences between the offset windowed attribute values for the at least one attribute from each of the first and second events. Element 9: using the first and second reflected radar signals to obtain summed difference values comprises: trimming or padding each of multiple attributes from each of the first and second events to a predetermined window length; wherein said offsetting, differencing, summing, and determining steps are repeated to determine a time-delay from each of the multiple attributes; and wherein said combining comprises combining a weighted average of the time-delays with the predetermined distance to determine the speed of the target. Element 10: wherein the summed difference values are each representable as: 
+ e ⁡ ( k ) = 1 N - k ⁢ ∑ i = 1 N - k ⁢ ⁢  f ⁢ ⁢ 1 i + k - f ⁢ ⁢ 2 i  ⁢ ⁢ for ⁢ ⁢ k ≥ 0 , and e ⁡ ( k ) = 1 N + k ⁢ ∑ i = 1 N + k ⁢ ⁢  f ⁢ ⁢ 1 i - f ⁢ ⁢ 2 i - k  ⁢ ⁢ for ⁢ ⁢ k < 0 , 
+where N is a sample number, k is a sample offset, and f 1 i and f 2 i are values from the at least one attribute for the first and second events. Element 11: determining a time-delay based on the summed difference values comprises fitting a curve to the summed difference values. Element 12: determining a time-delay comprises determining a centroid of the summed difference values.
+ Element 13: wherein the at least two different types of time-delay estimators include: a phase difference slope method and a summed difference values method. Element 14: wherein the linked events have multiple time dependent event attributes, and wherein each of the at least two different types of time-delay estimators are applied to each of the multiple time dependent event attributes to obtain a corresponding plurality of time-delay estimates that are combined to yield the determined time-delay between the linked events. Element 15: further comprising a battery or solar panel to power electrical components of the system. Element 16: the controller operates the first and second radars in a plurality of power modes, and wherein the controller switches between the plurality of power modes in response to one or more events. Element 17: further comprising a one or more printed circuit boards mounted within a single housing that encloses the first and second radars, wherein the printed circuit boards maintain the first and second radars in a fixed relative position and orientation. 
+ Numerous other variations and modifications will become apparent to those skilled in the art once the above disclosure is fully appreciated. It is intended that the following claims be interpreted to embrace all such variations and modifications where applicable. 
+ Claims ( 14 ) 
+ What is claimed is: 
+ 1. A traffic monitoring method, comprising:
+ receiving a first reflected radar signal from a target traversing a first field of view; 
+ receiving a second reflected radar signal from the target as it traverses a second field of view offset from the first field of view by a predetermined distance; 
+ using the first and second reflected radar signals to obtain a summed difference value for each of multiple different time shifts between the first and second reflected radar signals; 
+ determining a time-delay based on the summed difference values; and 
+ calculating a speed of the target based on the determined time-delay and the predetermined distance. 
+ 2. The method of claim 1 , wherein calculating a speed of the target further comprises combining the determined time-delay with a receiver sampling delay. 
+ 3. The method of claim 1 , further comprising using the speed to update a set of roadway use parameters stored on a nontransient information storage medium. 
+ 4. The method of claim 1 , wherein said receiving first and second reflected radar signals includes:
+ tracking a set of first event attributes as a function of time as the target traverses the first field of view; and 
+ tracking a set of second event attributes as a function of time as the target traverses the second field of view; and 
+ wherein said using comprises:
+ trimming or padding at least one attribute from each of the first and second events to a predetermined window length; 
+ offsetting windowed attribute values for the first and second events by the time shift for a given entry; 
+ differencing the offset windowed attribute values; and 
+ summing absolute values of the differences between the offset windowed attribute values for the at least one attribute from each of the first and second events. 
+ 5. The method of claim 4 , wherein said using comprises:
+ trimming or padding each of multiple attributes from each of the first and second events to a predetermined window length; and 
+ wherein said offsetting, differencing, summing, and said determining, are repeated to determine a time-delay from each of the multiple attributes, and wherein said combining comprises combining a weighted average of the time-delays with the predetermined distance to determine the speed of the target. 
+ 6. The method of claim 4 , wherein the summed difference values are each representable as: 
+ e 
+ ⁡ 
+ ( 
+ k 
+ ) 
+ = 
+ 1 
+ N 
+ - 
+ k 
+ ⁢ 
+ ∑ 
+ i 
+ = 
+ 1 
+ N 
+ - 
+ k 
+ ⁢ 
+ ⁢ 
+  
+ f 
+ ⁢ 
+ ⁢ 
+ 1 
+ i 
+ + 
+ k 
+ - 
+ f 
+ ⁢ 
+ ⁢ 
+ 2 
+ i 
+  
+ ⁢ 
+ ⁢ 
+ for 
+ ⁢ 
+ ⁢ 
+ k 
+ ≥ 
+ 0 
+ , 
+ and 
+ e 
+ ⁡ 
+ ( 
+ k 
+ ) 
+ = 
+ 1 
+ N 
+ + 
+ k 
+ ⁢ 
+ ∑ 
+ i 
+ = 
+ 1 
+ N 
+ + 
+ k 
+ ⁢ 
+ ⁢ 
+  
+ f 
+ ⁢ 
+ ⁢ 
+ 1 
+ i 
+ - 
+ f 
+ ⁢ 
+ ⁢ 
+ 2 
+ i 
+ - 
+ k 
+  
+ ⁢ 
+ ⁢ 
+ for 
+ ⁢ 
+ ⁢ 
+ k 
+ < 
+ 0 
+ , 
+ where N is a sample number, k is a sample offset, and f 1 i , and f 2 i are values from the at least one attribute for the first and second events. 
+ 7. The method of claim 1 , wherein determining a time-delay based on the summed difference values comprises fitting a curve to the summed difference values. 
+ 8. The method of claim 1 , wherein determining a time-delay comprises determining a centroid of the summed difference values. 
+ 9. A traffic monitoring system, comprising:
+ a first radar that receives reflected radar signals from targets traversing a first field of view; 
+ a second radar that receives reflected radar signals from targets traversing a second field of view, each traversal of the first and second fields of view producing linked events each having at least one time dependent event attribute; 
+ a nontransient information storage medium that stores roadway use parameters including vehicle speed; and 
+ a controller in communication with the first and second radars to derive vehicle speeds from the linked events and to responsively update the roadway use parameters, 
+ wherein as part of deriving the vehicle speeds, the controller determines a time-delay between the linked events by combining results from at least two different types of time-delay estimators, and 
+ wherein the controller calculates a speed of the linked event based on the determined time-delay and a distance between the first and second fields of view. 
+ 10. The system of claim 9 , wherein the at least two different types of time-delay estimators include: a phase difference slope method and a summed difference values method. 
+ 11. The system of claim 9 , wherein the linked events have multiple time dependent event attributes, and wherein each of the at least two different types of time-delay estimators are applied to each of the multiple time dependent event attributes to obtain a corresponding plurality of time-delay estimates that are combined to yield the determined time-delay between the linked events. 
+ 12. The system of claim 9 , further comprising a solar panel to power electrical components of the system. 
+ 13. The system of claim 9 , wherein the controller operates the first and second radars in a plurality of power modes, and wherein the controller switches between the plurality of power modes in response to one or more events including at least a change in a roadway use parameter. 
+ 14. The system of claim 9 , further comprising one or more printed circuit boards mounted within a single housing that encloses the first and second radars, wherein the printed circuit boards maintain the first and second radars in a fixed relative position and orientation. 
+ US16/397,949 
+ 2014-03-21 
+ 2019-04-29 
+ Robust dual-radar-beam systems and methods for traffic monitoring 
+ Active 
+ 2036-01-01 
+ US11119209B2 
+ ( en )
+ Priority Applications (1) 
+ Application Number 
+ Priority Date 
+ Filing Date 
+ Title 
+ US16/397,949 
+ US11119209B2 
+ ( en )
+ 2014-03-21 
+ 2019-04-29 
+ Robust dual-radar-beam systems and methods for traffic monitoring 
+ Applications Claiming Priority (4) 
+ Application Number 
+ Priority Date 
+ Filing Date 
+ Title 
+ US201461968587P 
+ 2014-03-21 
+ 2014-03-21 
+ PCT/US2015/021605 
+ WO2015143243A1 
+ ( en )
+ 2014-03-21 
+ 2015-03-19 
+ Robust dual-radar-beam systems and methods for traffic monitoring 
+ US201615127776A 
+ 2016-09-20 
+ 2016-09-20 
+ US16/397,949 
+ US11119209B2 
+ ( en )
+ 2014-03-21 
+ 2019-04-29 
+ Robust dual-radar-beam systems and methods for traffic monitoring 
+ Related Parent Applications (2) 
+ Application Number 
+ Title 
+ Priority Date 
+ Filing Date 
+ PCT/US2015/021605 
+ Division 
+ WO2015143243A1 
+ ( en )
+ 2014-03-21 
+ 2015-03-19 
+ Robust dual-radar-beam systems and methods for traffic monitoring 
+ US15/127,776 
+ Division 
+ US10317525B2 
+ ( en )
+ 2014-03-21 
+ 2015-03-19 
+ Robust dual-radar-beam systems and methods for traffic monitoring 
+ Publications (2) 
+ Publication Number 
+ Publication Date 
+ US20190257940A1 
+ US20190257940A1
+ ( en )
+ 2019-08-22 
+ US11119209B2 
+ true 
+ US11119209B2
+ ( en )
+ 2021-09-14 
+ Family 
+ ID=54145355 
+ Family Applications (2) 
+ Application Number 
+ Title 
+ Priority Date 
+ Filing Date 
+ US15/127,776 
+ Active 
+ 2035-10-03 
+ US10317525B2 
+ ( en )
+ 2014-03-21 
+ 2015-03-19 
+ Robust dual-radar-beam systems and methods for traffic monitoring 
+ US16/397,949 
+ Active 
+ 2036-01-01 
+ US11119209B2 
+ ( en )
+ 2014-03-21 
+ 2019-04-29 
+ Robust dual-radar-beam systems and methods for traffic monitoring 
+ Family Applications Before (1) 
+ Application Number 
+ Title 
+ Priority Date 
+ Filing Date 
+ US15/127,776 
+ Active 
+ 2035-10-03 
+ US10317525B2 
+ ( en )
+ 2014-03-21 
+ 2015-03-19 
+ Robust dual-radar-beam systems and methods for traffic monitoring 
+ Country Status (4) 
+ Country 
+ Link 
+ US 
+ ( 2 )
+ US10317525B2 
+ ( en )
+ EP 
+ ( 1 )
+ EP3117235B1 
+ ( en )
+ PT 
+ ( 1 )
+ PT3117235T 
+ ( en )
+ WO 
+ ( 1 )
+ WO2015143243A1 
+ ( en )
+ Cited By (1) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ US12523756B1 
+ ( en )
+ 2021-03-03 
+ 2026-01-13 
+ Telephonics Corporation 
+ Aesa true dual beam full range, full doppler spectrum imaging while scanning radar system 
+ Families Citing this family (24) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ US10029290B2 
+ ( en )
+ 2013-11-04 
+ 2018-07-24 
+ Loci Controls, Inc. 
+ Devices and techniques relating to landfill gas extraction 
+ US10576514B2 
+ ( en )
+ 2013-11-04 
+ 2020-03-03 
+ Loci Controls, Inc. 
+ Devices and techniques relating to landfill gas extraction 
+ JP6363549B2 
+ ( en )
+ * 
+ 2015-03-31 
+ 2018-07-25 
+ 株式会社デンソー 
+ Vehicle control apparatus and vehicle control method
+ JP6659367B2 
+ ( en )
+ * 
+ 2016-01-15 
+ 2020-03-04 
+ パナソニック株式会社 
+ Object detection device and object detection method
+ CA3016023C 
+ ( en )
+ * 
+ 2016-03-01 
+ 2024-09-17 
+ Loci Controls, Inc. 
+ Designs for enhanced reliability and calibration of landfill gas measurement and control devices 
+ US10705063B2 
+ ( en )
+ * 
+ 2016-03-01 
+ 2020-07-07 
+ Loci Controls, Inc. 
+ Designs for enhanced reliability and calibration of landfill gas measurement and control devices 
+ RU2608349C1 
+ ( en )
+ * 
+ 2016-03-22 
+ 2017-01-18 
+ Денис Сергеевич Татаренко 
+ Method of determining projectiles trajectories and device for its implementation 
+ RU2608358C1 
+ ( en )
+ * 
+ 2016-03-24 
+ 2017-01-18 
+ Денис Сергеевич Татаренко 
+ Method of determining external ballistic characteristics of projectiles and device for its implementation 
+ US11055987B2 
+ ( en )
+ 2017-01-26 
+ 2021-07-06 
+ Nortak Software Ltd. 
+ Animated incoming traffic sign 
+ EP3602830B1 
+ ( en )
+ * 
+ 2017-03-28 
+ 2021-06-23 
+ Qualcomm Incorporated 
+ Range-based transmission parameter adjustment 
+ US10946420B2 
+ ( en )
+ 2018-03-06 
+ 2021-03-16 
+ Loci Controls, Inc. 
+ Landfill gas extraction control system 
+ US10305611B1 
+ ( en )
+ 2018-03-28 
+ 2019-05-28 
+ Qualcomm Incorporated 
+ Proximity detection using a hybrid transceiver 
+ JP2019174372A 
+ ( en )
+ * 
+ 2018-03-29 
+ 2019-10-10 
+ 太陽誘電株式会社 
+ Object detection device 
+ US11484919B2 
+ ( en )
+ 2018-10-01 
+ 2022-11-01 
+ Loci Controls, Inc. 
+ Landfill gas extraction systems and methods 
+ RU2715994C1 
+ ( en )
+ * 
+ 2019-08-27 
+ 2020-03-05 
+ Федеральное государственное казенное военное образовательное учреждение высшего образования "Военная академия материально-технического обеспечения имени генерала армии А.В. Хрулёва" 
+ Method for measuring initial speed of projectile 
+ AU2021214758B2 
+ ( en )
+ 2020-01-29 
+ 2024-12-12 
+ Loci Controls, Inc. 
+ Automated compliance measurement and control for landfill gas extraction systems 
+ US11623256B2 
+ ( en )
+ 2020-07-13 
+ 2023-04-11 
+ Loci Controls, Inc. 
+ Devices and techniques relating to landfill gas extraction 
+ US12090532B2 
+ ( en )
+ * 
+ 2020-07-13 
+ 2024-09-17 
+ Loci Controls, Inc. 
+ Devices and techniques relating to landfill gas extraction 
+ US11624803B2 
+ ( en )
+ * 
+ 2020-10-21 
+ 2023-04-11 
+ GM Global Technology Operations LLC 
+ System for detecting direction of a vehicle honk and determining location of honking vehicle 
+ RU2757929C1 
+ ( en )
+ * 
+ 2020-11-25 
+ 2021-10-25 
+ Федеральное государственное казенное военное образовательное учреждение высшего образования "Военная академия материально-технического обеспечения имени генерала армии А.В. Хрулёва" 
+ Method for measuring initial velocity of projectile by laser fiber-optic system 
+ US11865594B2 
+ ( en )
+ 2020-12-03 
+ 2024-01-09 
+ Loci Controls, Inc. 
+ Greenhouse gas emissions control 
+ CN115343700B 
+ ( en )
+ * 
+ 2022-09-01 
+ 2024-07-30 
+ 西安电子科技大学 
+ Method for removing multipath false targets in tunnels based on multi-radar video
+ US20250028035A2 
+ ( en )
+ * 
+ 2023-02-10 
+ 2025-01-23 
+ University Of Notre Dame Du Lac 
+ Apparatus, system, and method for improving resolution of frequency-dependent objects in radar contexts 
+ US12483448B2 
+ ( en )
+ 2023-11-07 
+ 2025-11-25 
+ Credo Technology Group Limited 
+ Serdes with robust parameter initialization 
+ Citations (18) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ US4626856A 
+ ( en )
+ 1983-10-14 
+ 1986-12-02 
+ General Dynamics Corporation 
+ Radar signal correction system 
+ US5159345A 
+ ( en )
+ 1991-02-15 
+ 1992-10-27 
+ Young Wayne K 
+ Traffic speed radar unit 
+ US5442359A 
+ ( en )
+ 1994-06-30 
+ 1995-08-15 
+ Unisys Corporation 
+ Apparatus and method for mitigating range-doppler ambiguities in pulse-doppler radars 
+ US5465094A 
+ ( en )
+ * 
+ 1994-01-14 
+ 1995-11-07 
+ The Regents Of The University Of California 
+ Two terminal micropower radar sensor 
+ US5757307A 
+ ( en )
+ 1995-09-28 
+ 1998-05-26 
+ Nippondenso Co., Ltd. 
+ Radar system for detecting distance, mutual speed and azimuth of a target obstacle 
+ US6215438B1 
+ ( en )
+ 1996-06-28 
+ 2001-04-10 
+ Cambridge Consultants Limited 
+ Vehicle radar system 
+ US6339395B1 
+ ( en )
+ 1999-03-31 
+ 2002-01-15 
+ Denso Corporation 
+ Radar apparatus using digital beam forming techniques 
+ US6462702B1 
+ ( en )
+ 1998-09-16 
+ 2002-10-08 
+ Mph Industries, Inc. 
+ Doppler-based traffic radar system 
+ US20040174294A1 
+ ( en )
+ 2003-01-10 
+ 2004-09-09 
+ Wavetronix 
+ Systems and methods for monitoring speed 
+ US20050046597A1 
+ ( en )
+ 2003-08-18 
+ 2005-03-03 
+ Hutchison Michael C. 
+ Traffic light signal system using radar-based target detection and tracking 
+ US20070008210A1 
+ ( en )
+ 2003-09-11 
+ 2007-01-11 
+ Noriko Kibayashi 
+ Radar device 
+ US20100225764A1 
+ ( en )
+ * 
+ 2009-03-04 
+ 2010-09-09 
+ Nizko Henry J 
+ System and method for occupancy detection 
+ US20100328138A1 
+ ( en )
+ 2009-05-07 
+ 2010-12-30 
+ Guigne Jacques Y 
+ Short baseline helicopter positioning radar for low visibility 
+ US20110158361A1 
+ ( en )
+ 2009-12-30 
+ 2011-06-30 
+ Dent Paul W 
+ Radio channel analyzer to determine doppler shifts across multiple frequencies of a wideband signal 
+ US20150061922A1 
+ ( en )
+ 2013-02-22 
+ 2015-03-05 
+ Panasonic Corporation 
+ Radar apparatus 
+ US20150247924A1 
+ ( en )
+ 2014-02-28 
+ 2015-09-03 
+ Panasonic Corporation 
+ Radar apparatus 
+ US20150369912A1 
+ ( en )
+ 2013-09-12 
+ 2015-12-24 
+ Panasonic Corporation 
+ Radar device, vehicle, and moving object speed detection method 
+ US20170031013A1 
+ ( en )
+ * 
+ 2013-08-28 
+ 2017-02-02 
+ Aveillant Limited 
+ Radar system and associated apparatus and methods 
+ Family Cites Families (1) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ GB0323900D0 
+ ( en )
+ * 
+ 2003-10-11 
+ 2003-11-12 
+ Koninkl Philips Electronics Nv 
+ Method and apparatus for determining delay 
+ 2015 
+ 2015-03-19 
+ EP 
+ EP15764429.5A 
+ patent/EP3117235B1/en 
+ active 
+ Active 
+ 2015-03-19 
+ WO 
+ PCT/US2015/021605 
+ patent/WO2015143243A1/en 
+ not_active 
+ Ceased 
+ 2015-03-19 
+ US 
+ US15/127,776 
+ patent/US10317525B2/en 
+ active 
+ Active 
+ 2015-03-19 
+ PT 
+ PT157644295T 
+ patent/PT3117235T/en 
+ unknown 
+ 2019 
+ 2019-04-29 
+ US 
+ US16/397,949 
+ patent/US11119209B2/en 
+ active 
+ Active 
+ Patent Citations (18) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ US4626856A 
+ ( en )
+ 1983-10-14 
+ 1986-12-02 
+ General Dynamics Corporation 
+ Radar signal correction system 
+ US5159345A 
+ ( en )
+ 1991-02-15 
+ 1992-10-27 
+ Young Wayne K 
+ Traffic speed radar unit 
+ US5465094A 
+ ( en )
+ * 
+ 1994-01-14 
+ 1995-11-07 
+ The Regents Of The University Of California 
+ Two terminal micropower radar sensor 
+ US5442359A 
+ ( en )
+ 1994-06-30 
+ 1995-08-15 
+ Unisys Corporation 
+ Apparatus and method for mitigating range-doppler ambiguities in pulse-doppler radars 
+ US5757307A 
+ ( en )
+ 1995-09-28 
+ 1998-05-26 
+ Nippondenso Co., Ltd. 
+ Radar system for detecting distance, mutual speed and azimuth of a target obstacle 
+ US6215438B1 
+ ( en )
+ 1996-06-28 
+ 2001-04-10 
+ Cambridge Consultants Limited 
+ Vehicle radar system 
+ US6462702B1 
+ ( en )
+ 1998-09-16 
+ 2002-10-08 
+ Mph Industries, Inc. 
+ Doppler-based traffic radar system 
+ US6339395B1 
+ ( en )
+ 1999-03-31 
+ 2002-01-15 
+ Denso Corporation 
+ Radar apparatus using digital beam forming techniques 
+ US20040174294A1 
+ ( en )
+ 2003-01-10 
+ 2004-09-09 
+ Wavetronix 
+ Systems and methods for monitoring speed 
+ US20050046597A1 
+ ( en )
+ 2003-08-18 
+ 2005-03-03 
+ Hutchison Michael C. 
+ Traffic light signal system using radar-based target detection and tracking 
+ US20070008210A1 
+ ( en )
+ 2003-09-11 
+ 2007-01-11 
+ Noriko Kibayashi 
+ Radar device 
+ US20100225764A1 
+ ( en )
+ * 
+ 2009-03-04 
+ 2010-09-09 
+ Nizko Henry J 
+ System and method for occupancy detection 
+ US20100328138A1 
+ ( en )
+ 2009-05-07 
+ 2010-12-30 
+ Guigne Jacques Y 
+ Short baseline helicopter positioning radar for low visibility 
+ US20110158361A1 
+ ( en )
+ 2009-12-30 
+ 2011-06-30 
+ Dent Paul W 
+ Radio channel analyzer to determine doppler shifts across multiple frequencies of a wideband signal 
+ US20150061922A1 
+ ( en )
+ 2013-02-22 
+ 2015-03-05 
+ Panasonic Corporation 
+ Radar apparatus 
+ US20170031013A1 
+ ( en )
+ * 
+ 2013-08-28 
+ 2017-02-02 
+ Aveillant Limited 
+ Radar system and associated apparatus and methods 
+ US20150369912A1 
+ ( en )
+ 2013-09-12 
+ 2015-12-24 
+ Panasonic Corporation 
+ Radar device, vehicle, and moving object speed detection method 
+ US20150247924A1 
+ ( en )
+ 2014-02-28 
+ 2015-09-03 
+ Panasonic Corporation 
+ Radar apparatus 
+ Non-Patent Citations (3) 
+ * Cited by examiner, † Cited by third party 
+ Title 
+ European Examination Report dated Mar. 9, 2020 for European Application No. 15764429.5. 
+ Extended European Search Report dated Oct. 25, 2017, in European Application No. 15764429.5. 
+ PCT International Search Report and Written Opinion, dated Jun. 25, 2015, Appl No. PCT/US2015/021605, " Robust Dual-Radar-Beam Systems and Methods for Traffic Monitoring, " filed Mar. 19, 2015, 15 pgs. 
+ Cited By (1) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ US12523756B1 
+ ( en )
+ 2021-03-03 
+ 2026-01-13 
+ Telephonics Corporation 
+ Aesa true dual beam full range, full doppler spectrum imaging while scanning radar system 
+ Also Published As 
+ Publication number 
+ Publication date 
+ US10317525B2 
+ ( en )
+ 2019-06-11 
+ EP3117235A1 
+ ( en )
+ 2017-01-18 
+ WO2015143243A1 
+ ( en )
+ 2015-09-24 
+ EP3117235B1 
+ ( en )
+ 2020-12-09 
+ PT3117235T 
+ ( en )
+ 2021-03-10 
+ US20170176590A1 
+ ( en )
+ 2017-06-22 
+ EP3117235A4 
+ ( en )
+ 2017-11-22 
+ US20190257940A1 
+ ( en )
+ 2019-08-22 
+ Similar Documents 
+ Publication 
+ Publication Date 
+ Title 
+ US20190257940A1 
+ ( en )
+ 2019-08-22 
+ Robust dual-radar-beam systems and methods for traffic monitoring 
+ US8026843B2 
+ ( en )
+ 2011-09-27 
+ Radar methods and systems using ramp sequences 
+ EP1707984B1 
+ ( en )
+ 2012-08-22 
+ System and method for determining a position of a vehicle 
+ US20140184437A1 
+ ( en )
+ 2014-07-03 
+ Radar device 
+ KR101802533B1 
+ ( en )
+ 2017-11-28 
+ Method, apparatus, system, and computer program product for environment estimation in a wireless communication system 
+ US20050001761A1 
+ ( en )
+ 2005-01-06 
+ Method for the linearization of FMCW radar devices 
+ US20130141283A1 
+ ( en )
+ 2013-06-06 
+ Method for locating a radio center and system for locating a radio center and data processing unit 
+ AU2002325370A1 
+ ( en )
+ 2003-05-29 
+ Passive moving object detection system and method using signals transmitted by a mobile telephone station 
+ US20110026364A1 
+ ( en )
+ 2011-02-03 
+ Apparatus and method for estimating position using ultrasonic signals 
+ EP1412772A1 
+ ( en )
+ 2004-04-28 
+ Passive moving object detection system and method using signals transmitted by a mobile telephone base station 
+ CN114545351B 
+ ( en )
+ 2025-03-14 
+ Coherent detection method and system for maneuvering targets based on range-frequency axis inversion transform and second-order WVD
+ CN110673130B 
+ ( en )
+ 2023-05-26 
+ A Track Tracking Method of Moving Target Based on Track Correlation
+ EP1707986B1 
+ ( en )
+ 2012-08-22 
+ System and method for determining a position of a vehicle 
+ CN121500303B 
+ ( en )
+ 2026-04-03 
+ Target positioning method and system based on distributed networking radar system 
+ EP1707985B1 
+ ( en )
+ 2012-06-13 
+ System and method for determining a position of a vehicle 
+ US9698843B2 
+ ( en )
+ 2017-07-04 
+ Extracting parameters from a communications channel 
+ Hyun et al. 
+ 2022 
+ Joint Estimation of Vehicle's Position and Velocity With Distributed RSUs for OFDM Radar System 
+ KR20140088683A 
+ ( en )
+ 2014-07-11 
+ Apparatus, method and computer readable recording medium for detecting an object using an automotive radar 
+ CN119738806A 
+ ( en )
+ 2025-04-01 
+ Radar device with self-interference based compensation
+ US7439900B2 
+ ( en )
+ 2008-10-21 
+ Radar system with resampling features 
+ US20250231278A1 
+ ( en )
+ 2025-07-17 
+ Detection device and method of operating the same 
+ JPH1039013A 
+ ( en )
+ 1998-02-13 
+ Radar equipment installed above the road
+ Witzgall 
+ 2014 
+ Ground vehicle Doppler geolocation 
+ US12631742B2 
+ ( en )
+ 2026-05-19 
+ Method for estimating ambiguous velocity of target 
+ JP4937782B2 
+ ( en )
+ 2012-05-23 
+ Radar equipment
+ Legal Events 
+ Date 
+ Code 
+ Title 
+ Description 
+ 2019-04-29 
+ AS 
+ Assignment 
+ Owner name :
+ HOUSTON RADAR LLC, TEXAS 
+ Free format text :
+ ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:SHARONOV, SERGEI;HILL, BRIAN;MALIK, VIPIN;AND OTHERS;SIGNING DATES FROM 20170223 TO 20170301;REEL/FRAME:049026/0224 
+ 2019-04-29 
+ FEPP 
+ Fee payment procedure 
+ Free format text :
+ ENTITY STATUS SET TO UNDISCOUNTED (ORIGINAL EVENT CODE: BIG.); ENTITY STATUS OF PATENT OWNER: SMALL ENTITY 
+ 2019-05-10 
+ FEPP 
+ Fee payment procedure 
+ Free format text :
+ ENTITY STATUS SET TO SMALL (ORIGINAL EVENT CODE: SMAL); ENTITY STATUS OF PATENT OWNER: SMALL ENTITY 
+ 2021-04-09 
+ STPP 
+ Information on status: patent application and granting procedure in general 
+ Free format text :
+ NON FINAL ACTION MAILED 
+ 2021-06-15 
+ STPP 
+ Information on status: patent application and granting procedure in general 
+ Free format text :
+ RESPONSE TO NON-FINAL OFFICE ACTION ENTERED AND FORWARDED TO EXAMINER 
+ 2021-08-13 
+ STPP 
+ Information on status: patent application and granting procedure in general 
+ Free format text :
+ PUBLICATIONS -- ISSUE FEE PAYMENT VERIFIED 
+ 2021-08-25 
+ STCF 
+ Information on status: patent grant 
+ Free format text :
+ PATENTED CASE 
+ 2024-10-03 
+ MAFP 
+ Maintenance fee payment 
+ Free format text :
+ PAYMENT OF MAINTENANCE FEE, 4TH YR, SMALL ENTITY (ORIGINAL EVENT CODE: M2551); ENTITY STATUS OF PATENT OWNER: SMALL ENTITY 
+ Year of fee payment :
+ 4 

@@ -1,0 +1,404 @@
+{
+ "M1/4669A": {
+  "detector": "M1/4669A",
+  "partners": [
+   "M1/4680A",
+   "M1/4630A"
+  ],
+  "first_day_absent": "2025-03-25",
+  "apr_jun_absent_share": {
+   "2025-04": 1.0,
+   "2025-05": 1.0,
+   "2025-06": 1.0
+  },
+  "days": [
+   {
+    "date": "2025-03-01",
+    "detector_over_partner_a": 0.9871,
+    "detector_over_partner_b": 0.9956,
+    "partner_a_over_partner_b": 1.0087
+   },
+   {
+    "date": "2025-03-02",
+    "detector_over_partner_a": 0.9875,
+    "detector_over_partner_b": 0.9945,
+    "partner_a_over_partner_b": 1.0071
+   },
+   {
+    "date": "2025-03-03",
+    "detector_over_partner_a": 0.9739,
+    "detector_over_partner_b": 1.03,
+    "partner_a_over_partner_b": 1.0576
+   },
+   {
+    "date": "2025-03-04",
+    "detector_over_partner_a": 0.9705,
+    "detector_over_partner_b": 1.0309,
+    "partner_a_over_partner_b": 1.0623
+   },
+   {
+    "date": "2025-03-05",
+    "detector_over_partner_a": 0.9728,
+    "detector_over_partner_b": 1.0378,
+    "partner_a_over_partner_b": 1.0668
+   },
+   {
+    "date": "2025-03-06",
+    "detector_over_partner_a": 0.98,
+    "detector_over_partner_b": 1.0907,
+    "partner_a_over_partner_b": 1.113
+   },
+   {
+    "date": "2025-03-07",
+    "detector_over_partner_a": 0.9743,
+    "detector_over_partner_b": 1.0946,
+    "partner_a_over_partner_b": 1.1235
+   },
+   {
+    "date": "2025-03-08",
+    "detector_over_partner_a": 0.9868,
+    "detector_over_partner_b": 1.0015,
+    "partner_a_over_partner_b": 1.015
+   },
+   {
+    "date": "2025-03-09",
+    "detector_over_partner_a": 0.9874,
+    "detector_over_partner_b": 0.9935,
+    "partner_a_over_partner_b": 1.0063
+   },
+   {
+    "date": "2025-03-10",
+    "detector_over_partner_a": 0.9715,
+    "detector_over_partner_b": 1.0301,
+    "partner_a_over_partner_b": 1.0603
+   },
+   {
+    "date": "2025-03-11",
+    "detector_over_partner_a": 0.9715,
+    "detector_over_partner_b": 1.0361,
+    "partner_a_over_partner_b": 1.0665
+   },
+   {
+    "date": "2025-03-12",
+    "detector_over_partner_a": 0.9709,
+    "detector_over_partner_b": 1.037,
+    "partner_a_over_partner_b": 1.0681
+   },
+   {
+    "date": "2025-03-13",
+    "detector_over_partner_a": 0.9694,
+    "detector_over_partner_b": 1.0299,
+    "partner_a_over_partner_b": 1.0624
+   },
+   {
+    "date": "2025-03-14",
+    "detector_over_partner_a": 0.9707,
+    "detector_over_partner_b": 1.0246,
+    "partner_a_over_partner_b": 1.0555
+   },
+   {
+    "date": "2025-03-15",
+    "detector_over_partner_a": 0.9864,
+    "detector_over_partner_b": 1.0016,
+    "partner_a_over_partner_b": 1.0154
+   },
+   {
+    "date": "2025-03-16",
+    "detector_over_partner_a": 0.988,
+    "detector_over_partner_b": 0.9886,
+    "partner_a_over_partner_b": 1.0006
+   },
+   {
+    "date": "2025-03-17",
+    "detector_over_partner_a": 0.975,
+    "detector_over_partner_b": 1.0288,
+    "partner_a_over_partner_b": 1.0552
+   },
+   {
+    "date": "2025-03-18",
+    "detector_over_partner_a": 0.9756,
+    "detector_over_partner_b": 1.0213,
+    "partner_a_over_partner_b": 1.0469
+   },
+   {
+    "date": "2025-03-19",
+    "detector_over_partner_a": 1.0302,
+    "detector_over_partner_b": 1.0894,
+    "partner_a_over_partner_b": 1.0575
+   },
+   {
+    "date": "2025-03-20",
+    "detector_over_partner_a": 0.9217,
+    "detector_over_partner_b": 0.9719,
+    "partner_a_over_partner_b": 1.0544
+   },
+   {
+    "date": "2025-03-21",
+    "detector_over_partner_a": 0.8842,
+    "detector_over_partner_b": 0.9369,
+    "partner_a_over_partner_b": 1.0595
+   },
+   {
+    "date": "2025-03-22",
+    "detector_over_partner_a": 0.8762,
+    "detector_over_partner_b": 0.8876,
+    "partner_a_over_partner_b": 1.013
+   },
+   {
+    "date": "2025-03-23",
+    "detector_over_partner_a": 0.8488,
+    "detector_over_partner_b": 0.8463,
+    "partner_a_over_partner_b": 0.9971
+   },
+   {
+    "date": "2025-03-24",
+    "detector_over_partner_a": 0.9832,
+    "detector_over_partner_b": 1.0416,
+    "partner_a_over_partner_b": 1.0594
+   },
+   {
+    "date": "2025-03-25",
+    "detector_over_partner_a": null,
+    "detector_over_partner_b": null,
+    "partner_a_over_partner_b": 1.0646
+   },
+   {
+    "date": "2025-03-26",
+    "detector_over_partner_a": null,
+    "detector_over_partner_b": null,
+    "partner_a_over_partner_b": 1.059
+   },
+   {
+    "date": "2025-03-27",
+    "detector_over_partner_a": null,
+    "detector_over_partner_b": null,
+    "partner_a_over_partner_b": 1.0138
+   },
+   {
+    "date": "2025-03-28",
+    "detector_over_partner_a": null,
+    "detector_over_partner_b": null,
+    "partner_a_over_partner_b": 1.0499
+   },
+   {
+    "date": "2025-03-29",
+    "detector_over_partner_a": null,
+    "detector_over_partner_b": null,
+    "partner_a_over_partner_b": 1.0167
+   },
+   {
+    "date": "2025-03-30",
+    "detector_over_partner_a": null,
+    "detector_over_partner_b": null,
+    "partner_a_over_partner_b": 1.0065
+   },
+   {
+    "date": "2025-03-31",
+    "detector_over_partner_a": null,
+    "detector_over_partner_b": null,
+    "partner_a_over_partner_b": 1.0594
+   }
+  ]
+ },
+ "M25/5814A": {
+  "detector": "M25/5814A",
+  "partners": [
+   "M25/5811A",
+   "M25/5818A"
+  ],
+  "first_day_absent": null,
+  "apr_jun_absent_share": {
+   "2025-04": 0.0049,
+   "2025-05": 0.0497,
+   "2025-06": 0.1135
+  },
+  "days": [
+   {
+    "date": "2025-03-01",
+    "detector_over_partner_a": 1.0011,
+    "detector_over_partner_b": 1.0033,
+    "partner_a_over_partner_b": 1.0023
+   },
+   {
+    "date": "2025-03-02",
+    "detector_over_partner_a": 1.0016,
+    "detector_over_partner_b": 1.0043,
+    "partner_a_over_partner_b": 1.0027
+   },
+   {
+    "date": "2025-03-03",
+    "detector_over_partner_a": 1.0051,
+    "detector_over_partner_b": 1.0074,
+    "partner_a_over_partner_b": 1.0023
+   },
+   {
+    "date": "2025-03-04",
+    "detector_over_partner_a": 1.0017,
+    "detector_over_partner_b": 1.0036,
+    "partner_a_over_partner_b": 1.0019
+   },
+   {
+    "date": "2025-03-05",
+    "detector_over_partner_a": 1.0014,
+    "detector_over_partner_b": 1.0022,
+    "partner_a_over_partner_b": 1.0008
+   },
+   {
+    "date": "2025-03-06",
+    "detector_over_partner_a": 1.0011,
+    "detector_over_partner_b": 1.0036,
+    "partner_a_over_partner_b": 1.0025
+   },
+   {
+    "date": "2025-03-07",
+    "detector_over_partner_a": 1.0025,
+    "detector_over_partner_b": 1.0032,
+    "partner_a_over_partner_b": 1.0007
+   },
+   {
+    "date": "2025-03-08",
+    "detector_over_partner_a": 1.0007,
+    "detector_over_partner_b": 1.0026,
+    "partner_a_over_partner_b": 1.0019
+   },
+   {
+    "date": "2025-03-09",
+    "detector_over_partner_a": 1.0001,
+    "detector_over_partner_b": 1.0027,
+    "partner_a_over_partner_b": 1.0027
+   },
+   {
+    "date": "2025-03-10",
+    "detector_over_partner_a": 1.0026,
+    "detector_over_partner_b": 1.0032,
+    "partner_a_over_partner_b": 1.0006
+   },
+   {
+    "date": "2025-03-11",
+    "detector_over_partner_a": 1.0015,
+    "detector_over_partner_b": 1.0029,
+    "partner_a_over_partner_b": 1.0013
+   },
+   {
+    "date": "2025-03-12",
+    "detector_over_partner_a": 1.0014,
+    "detector_over_partner_b": 1.0038,
+    "partner_a_over_partner_b": 1.0025
+   },
+   {
+    "date": "2025-03-13",
+    "detector_over_partner_a": 1.003,
+    "detector_over_partner_b": 1.0068,
+    "partner_a_over_partner_b": 1.0037
+   },
+   {
+    "date": "2025-03-14",
+    "detector_over_partner_a": 1.0017,
+    "detector_over_partner_b": 1.0038,
+    "partner_a_over_partner_b": 1.0021
+   },
+   {
+    "date": "2025-03-15",
+    "detector_over_partner_a": 1.0014,
+    "detector_over_partner_b": 1.0028,
+    "partner_a_over_partner_b": 1.0014
+   },
+   {
+    "date": "2025-03-16",
+    "detector_over_partner_a": 1.0,
+    "detector_over_partner_b": 1.0011,
+    "partner_a_over_partner_b": 1.0011
+   },
+   {
+    "date": "2025-03-17",
+    "detector_over_partner_a": 0.9198,
+    "detector_over_partner_b": 0.9013,
+    "partner_a_over_partner_b": 0.9799
+   },
+   {
+    "date": "2025-03-18",
+    "detector_over_partner_a": 1.0017,
+    "detector_over_partner_b": 1.0043,
+    "partner_a_over_partner_b": 1.0026
+   },
+   {
+    "date": "2025-03-19",
+    "detector_over_partner_a": 1.0028,
+    "detector_over_partner_b": 1.0041,
+    "partner_a_over_partner_b": 1.0012
+   },
+   {
+    "date": "2025-03-20",
+    "detector_over_partner_a": 0.9926,
+    "detector_over_partner_b": 0.9931,
+    "partner_a_over_partner_b": 1.0006
+   },
+   {
+    "date": "2025-03-21",
+    "detector_over_partner_a": 1.0012,
+    "detector_over_partner_b": 1.0038,
+    "partner_a_over_partner_b": 1.0026
+   },
+   {
+    "date": "2025-03-22",
+    "detector_over_partner_a": 1.0011,
+    "detector_over_partner_b": 1.0027,
+    "partner_a_over_partner_b": 1.0016
+   },
+   {
+    "date": "2025-03-23",
+    "detector_over_partner_a": 1.0021,
+    "detector_over_partner_b": 1.0029,
+    "partner_a_over_partner_b": 1.0008
+   },
+   {
+    "date": "2025-03-24",
+    "detector_over_partner_a": 0.9752,
+    "detector_over_partner_b": 0.9722,
+    "partner_a_over_partner_b": 0.9969
+   },
+   {
+    "date": "2025-03-25",
+    "detector_over_partner_a": 1.0008,
+    "detector_over_partner_b": 1.0027,
+    "partner_a_over_partner_b": 1.0019
+   },
+   {
+    "date": "2025-03-26",
+    "detector_over_partner_a": 0.9819,
+    "detector_over_partner_b": 0.9827,
+    "partner_a_over_partner_b": 1.0008
+   },
+   {
+    "date": "2025-03-27",
+    "detector_over_partner_a": 0.9881,
+    "detector_over_partner_b": 0.9912,
+    "partner_a_over_partner_b": 1.0032
+   },
+   {
+    "date": "2025-03-28",
+    "detector_over_partner_a": 1.0022,
+    "detector_over_partner_b": 1.0043,
+    "partner_a_over_partner_b": 1.0022
+   },
+   {
+    "date": "2025-03-29",
+    "detector_over_partner_a": 1.0025,
+    "detector_over_partner_b": 1.0031,
+    "partner_a_over_partner_b": 1.0006
+   },
+   {
+    "date": "2025-03-30",
+    "detector_over_partner_a": 0.9992,
+    "detector_over_partner_b": 1.0014,
+    "partner_a_over_partner_b": 1.0021
+   },
+   {
+    "date": "2025-03-31",
+    "detector_over_partner_a": 0.9944,
+    "detector_over_partner_b": 0.9958,
+    "partner_a_over_partner_b": 1.0014
+   }
+  ]
+ }
+}

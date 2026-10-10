@@ -1,0 +1,8 @@
+{
+ "directions": 10,
+ "seconds_per_direction_median": 0.11,
+ "seconds_per_direction_max": 0.183,
+ "years_per_direction": 6.0,
+ "ms_per_station_day": 0.05,
+ "note": "full re-computation of all windows, lags and visit estimates of one target-reference direction over water years 2021-2026 on one CPU core (Python, cached inputs)"
+}

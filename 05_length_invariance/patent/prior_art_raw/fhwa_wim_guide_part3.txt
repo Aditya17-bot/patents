@@ -1,0 +1,2213 @@
+ 
+WEIGH-IN-MOTION 
+POCKET GUIDE 
+PART 3 
+WIM CALIBRATION AND 
+MAINTENANCE GUIDE 
+Publication No. 
+FHWA-PL-18-015 
+Office of Highway Policy Information        June 2018 
+
+ii 
+NOTICE 
+The United States Government does not endorse products or 
+manufacturers. Trade and manufacturers’ names appear in this 
+report only because they are considered essential to the 
+objectives of the document. 
+QUALITY ASSURANCE STATEMENT 
+The Federal Highway Administration (FHWA) provides high-
+quality information to serve Government, industry, and the 
+public in a manner that promotes public understanding. 
+Standards and policies are used to ensure and maximize the 
+quality, objectivity, utility, and integrity of its information. 
+FHWA periodically reviews quality issues and adjusts its 
+programs and processes to ensure continuous quality 
+improvement. 
+iii 
+TABLE OF CONTENTS 
+INTRODUCTION TO PART 3 .......................................1 
+WIM Standards and Performance Requirements .................... 2 
+WIM CALIBRATION ....................................................4 
+What is WIM Calibration? ........................................................ 4 
+Purpose of Calibration ............................................................. 5 
+Types of Calibration ................................................................. 5 
+Initial Installation Calibration............................................... 5 
+Routine Calibration .............................................................. 7 
+Types of Calibration Methods ................................................ 10 
+ASTM E1318-09 Criteria ..................................................... 10 
+LTPP Criteria ....................................................................... 11 
+Tools and Equipment ............................................................. 12 
+Calibration Procedure ............................................................ 12 
+Step 1 – Perform Pre-Visit WIM Data Analysis .................. 12 
+Step 2 – Perform Pavement Profile Data Analysis ............. 14 
+Step 3 – Select Test Trucks and Determine Test Speeds..... 15 
+Step 4 – Assess WIM Site Condition ................................... 18 
+Step 5 – Inspect WIM Equipment ....................................... 19 
+Step 6 – Inspect and Measure Test Trucks ......................... 20 
+Step 7 – Verify Communications with Test Truck Driver .... 21 
+Step 8 – Perform Test Truck Runs....................................... 22 
+Step 9 – Evaluate WIM Performance Using Data 
+from Test Truck Runs .......................................................... 24 
+Step 10 – Calibrate WIM System Parameters .................... 28 
+Step 11 – Perform Post-Calibration Test Runs 
+and Evaluate Results .......................................................... 28 
+iv 
+ 
+Step 12 – Check Accuracy of Vehicle Classification ............ 29 
+Step 13 – Conduct Post-Visit Data Analysis  
+and Develop Calibration Report ......................................... 32 
+Step 14 – Develop and Submit Calibration  
+Summary Report ................................................................ 34 
+Step 15 – Develop Comparison Data Set ............................ 35 
+Step 16 – Conduct Office Data Quality Checks  
+and Analysis to Aid Future Calibrations ............................. 36 
+WIM Systems with Quartz Piezo Sensors  
+or Strain Gauge Strip Sensors ............................................. 40 
+WIM Systems with Polymer Piezo Sensors ......................... 40 
+WIM Systems with Bending Plates or Load Cells ............... 41 
+WIM SYSTEM MAINTENANCE ................................. 42 
+Types and Frequency of Maintenance ................................... 42 
+Tools, Materials, and Supporting Documentation ................. 43 
+Materials ............................................................................ 43 
+Hand Tools ......................................................................... 43 
+Test Equipment .................................................................. 44 
+Computer Software ............................................................ 44 
+Supporting Forms and Documentation .............................. 44 
+Safety ..................................................................................... 45 
+Preventive (Scheduled) Maintenance .................................... 46 
+Pavement Inspection .......................................................... 46 
+Visual Equipment Inspection .............................................. 47 
+Equipment and Site Cleaning ............................................. 49 
+Electronic and Electrical Checks ......................................... 49 
+Firmware Upgrades ............................................................ 50 
+Operational Testing and Verification ................................. 51 
+v 
+ 
+Communications Checks .................................................... 52 
+Corrective Maintenance and Repair ...................................... 52 
+Scheduled Corrective WIM Maintenance ........................... 52 
+Unscheduled Corrective WIM Maintenance ...................... 53 
+WIM Equipment Troubleshooting ......................................... 53 
+Troubleshooting Approach ................................................. 54 
+Logical Progression of Troubleshooting ............................. 55 
+Maintenance Documentation and Reporting ........................ 60 
+REFERENCES.............................................................62 
+APPENDICES ............................................................63 
+ 
+The APPENDICES section at the end of this document describes 
+the appendices for the FHWA WIM Pocket Guide, which are 
+available on the FHWA website: 
+https://www.fhwa.dot.gov/policyinformation/knowledgecenter
+ 
+• Appendix A – Technical Report Documentation Page 
+Form DOT F 1700.7  
+• Appendix B – Acknowledgements 
+• Appendix C – WIM Procurement Resources 
+• Appendix D – WIM Site Design Resources 
+• Appendix E – Maintenance and Calibration Resources 
+• Appendix F – WIM Program Operation and 
+Management Checklists 
+vi 
+ 
+LIST OF TABLES 
+Table 1 – ASTM 1318E-09 Functional Performance 
+Requirements for WIM Systems .......................................... 3 
+Table 2 - Example of Test Truck Run Statistical Results ............... 7 
+Table 3 - Example of Compensation Factors .............................. 10 
+Table 4 - LTPP Performance Requirements for WIM Systems ... 11 
+Table 5 - WIM Roughness Index Thresholds* ............................ 15 
+Table 6 – Example of Selected Test Truck Run Data .................. 24 
+Table 7 – ASTM 1318E-09 Functional Performance 
+Requirements for WIM Systems* ...................................... 25 
+Table 8 - LTPP Performance Requirements for WIM Systems ... 27 
+Table 9 – Example of Test Truck Run Results Based on LTPP 
+Method .............................................................................. 27 
+Table 10 - Example of Comparison Data Set Computation 
+Results ................................................................................ 36 
+Table 11 – Example of WIM Data Analysis Results for Typical 
+(3S2) Class 9 Vehicles ......................................................... 38 
+ 
+  
+vii 
+ 
+LIST OF FIGURES 
+Figure 1 – Calibration Test Truck Approaching WIM Scale .......... 4 
+Figure 2 – Measuring Test Truck Axle Spacing ............................. 6 
+Figure 3 – Weighing Truck at Certified Truck Scale ..................... 8 
+Figure 4 – Gross Vehicle Weight by Speed .................................. 9 
+Figure 5 – Example of Data Comparison for GVW Distribution . 13 
+Figure 6 - Calibration Test Truck ................................................ 16 
+Figure 7 – Truck Speed Distribution Plot ................................... 17 
+Figure 8 – Pavement Inspection................................................. 18 
+Figure 9 – WIM Sensor Inspection ............................................. 19 
+Figure 10 – Test Truck Inspection .............................................. 20 
+Figure 11 – Test Truck Trailer Load ............................................ 21 
+Figure 12 – Collecting Test Truck Speed .................................... 22 
+Figure 13 – Collecting Pavement Temperature ......................... 23 
+Figure 14 – Example of Post Visit Analysis of Class 9 Steering 
+Axle Weight Distribution .................................................... 33 
+Figure 15 – Daily Average GVW Decreasing Over Time ............. 39 
+Figure 16 – Protected Work Vehicle Location ........................... 45 
+Figure 17 – Field Technician with PPE ........................................ 45 
+Figure 18 – Pavement Distress Identified During Inspection ..... 46 
+Figure 19 – WIM Sensor Observed During Inspection ............... 47 
+Figure 20 – Pull Box Interior ....................................................... 48 
+Figure 21 – Traffic Cabinet Location after Vegetation Control .. 49 
+Figure 22 – Sensor Testing ......................................................... 50 
+ 
+  
+viii 
+ 
+LIST OF ACRONYMS 
+A/C  Alternating current 
+AASHTO American Association of State Highway and 
+Transportation Officials  
+AC  Asphalt concrete  
+ACF  Axle Correction Factor 
+ALDF  Axle Load Distribution Factors 
+APT  Axles per Truck 
+B-WIM  Bridge WIM 
+BP  Bending plate 
+CDS  Comparison data set 
+CPU  Central Processing Unit 
+DC  Direct Current 
+DOT  Department of Transportation 
+DOW  Day of the week 
+ESAL  Equivalent single axle loadings 
+FHWA  Federal Highways Administration 
+GFCI  Ground-Fault Circuit Interrupter  
+GPS  Global Positioning System  
+GVW  Gross Vehicle Weight 
+HDF  Hourly Distribution Factor 
+HOD  Hour of the day 
+IRI  International Roughness Index 
+LC  Load cell 
+LPR  License plate reader 
+LTPP  Long-Term Pavement Performance 
+MAF  Monthly Adjustment Factors 
+MEPDG  Mechanistic-Empirical Pavement Design Guide 
+MOT  Maintenance of traffic 
+MOY  Month of the year  
+MUTCD  Manual for Uniform Traffic Control Devices 
+NCR  Non-Compliance Report  
+NEMA  National Electrical Manufacturers Association 
+OWL  Optimal WIM Locator  
+PCC  Portland cement concrete  
+PPE  Personal protection equipment 
+ix 
+ 
+PV  Photovoltaic 
+PVC  Polyvinyl Chloride 
+PVF  Per Vehicle Format 
+QA  Quality assurance 
+QC  Quality control 
+RMC  Rigid metal conduit  
+SIM  Subscriber identity module 
+SPS  Special Pavement Studies 
+TMG  Traffic Monitoring Guide 
+TMAS  Travel Monitoring Analysis System 
+TPF  Transportation Pooled Fund 
+U.S.  United States 
+UL  Underwriters Laboratories 
+VCD  Vehicle Class Distribution 
+VWS  Virtual Weigh Station 
+WIM  Weigh-in-Motion 
+
+1 
+ 
+INTRODUCTION TO PART 3  
+The Federal Highway Administration (FHWA) Weigh-In-Motion 
+(WIM) Pocket Guide consists of three main text documents, 
+four instructional video supplements, and six appendices. The 
+video supplements and appendices are only available on the 
+FHWA website: 
+https://www.fhwa.dot.gov/policyinformation/knowledgecenter
+. 
+Part 1 includes a description of each element of the FHWA WIM 
+Pocket Guide (referred as Guide through the rest of the 
+document). This Part 3 was developed to assist WIM technicians 
+in the proper maintenance and calibration of WIM sites. It 
+includes step-by-step instructions for calibrating a WIM system; 
+suggestions for tools, forms, and reporting processes that can 
+be used for calibration and system maintenance; and a 
+recommended process for troubleshooting system faults.   
+The WIM Calibration section of the Guide includes valuable 
+information for conducting a successful WIM calibration that is 
+based on best practices, including a pre-visit traffic and profile 
+data analysis to develop WIM system accuracy expectations for 
+the validation, on-site activities to ensure the proper operation 
+and calibration of the WIM system, and a post-visit analysis to 
+assess the effectiveness of the calibration. Properly conducting 
+these activities will ensure high-quality WIM data collection. 
+The WIM System Maintenance section of the Guide includes a 
+scope of recommended maintenance activities, recommended 
+schedules, description of field checks, and recommendations for 
+field logs, acceptance testing, and maintenance reports. This 
+section also includes a comprehensive WIM troubleshooting 
+procedure. 
+Throughout this document, action items are identified using 
+numerical sequencing or the checkmark () icon. Please also 
+refer to manufacturers’ documentation for additional guidance 
+2 
+ 
+on recommended maintenance schedules and specific 
+calibration requirements.  
+WIM Standards and Performance 
+Requirements  
+ The ASTM International E1318-09 Standard Specification for 
+Highway Weigh-In-Motion (WIM) Systems with User 
+Requirements and Test Methods is a primary WIM standard 
+accepted in the U.S. (1). Other countries have their own 
+standards (2, 3). The ASTM E1318-09 standard classifies WIM 
+systems according to four distinct types, depending on the 
+application and functional performance requirements.  
+ 
+Table 1 summarizes the ASTM E1318-09 WIM system 
+performance requirements. The 95 percent compliance defined 
+in ASTM E1318-09 specifies the minimum percentage of 
+ASTM E1318-09 WIM Types 
+• Type I and Type II systems: Suitable for 
+traffic data collection purposes, with Type 
+I systems having slightly more stringent 
+performance requirements. Vehicle speed 
+range to meet functional performance 
+requirements is 10 to 80 mph.  
+• Type III systems: Suitable for screening vehicles 
+suspected of weight limit or load limit violations 
+and have stricter functional performance 
+requirements than Type I and Type II systems. 
+Vehicle speed range to meet functional 
+performance requirements is 10 to 80 mph.  
+• Type IV systems: Not approved for use in the United 
+States but intended for use at weight enforcement 
+stations. Vehicle speed range to meet functional 
+performance requirements is 2 to 10 mph. 
+
+3 
+measurements (i.e., no less than 95 percent) that should be 
+within the specified tolerances to satisfy the performance 
+requirements. Since Type IV WIM systems have not yet been 
+approved for use in the United States, specifications for these 
+systems are not provided. 
+Table 1 – ASTM 1318E-09 Functional 
+Performance Requirements for WIM Systems 
+Function 
+Tolerance for 95% Compliance 
+Type I Type II Type III 
+Wheel Load (single or 
+dual tires) ±25% ±20% 
+Axle Load ±20% ±30% ±15% 
+Axle-Group Load ±15% ±20% ±10% 
+Gross Vehicle Weight ±10% ±15% ±6% 
+Speed ±1 mph 
+Axle-Spacing and 
+Wheelbase ±0.5 ft 
+Enhanced WIM performance requirements were developed 
+under the FHWA Long-Term Pavement Performance (LTPP) 
+Program in an effort to collect research-quality WIM data (4). 
+LTPP tolerances are the same as in ASTM E1318-09, but instead 
+of 95 percent compliance (i.e. percentage of measurements 
+within the specified tolerances), LTPP uses a statistically 
+computed 95 percent confidence interval plus mean error to 
+characterize the spread of measurement error and compares it 
+with the tolerances listed in Table 1. The LTPP performance 
+requirements include provisions for performance testing at 
+three temperature and three speed ranges, requirements for 
+road smoothness, and requirements for the accuracy of the 
+vehicle length measurements.   
+±0%
+4 
+ 
+WIM CALIBRATION 
+What is WIM Calibration?  
+WIM calibration is the process of 
+evaluating the measured weight, axle 
+spacing, overall vehicle length, and 
+speed values reported by the WIM 
+system against known static weights 
+and manually measured axle spacing, 
+vehicle lengths, and speed and making 
+necessary adjustments to the WIM 
+system operating parameters to compensate for those errors. 
+The initial calibration is performed to ensure that the WIM 
+system accuracy meets contract specifications after the site has 
+been installed. Periodic routine WIM calibrations are performed 
+to ensure that the data accuracy remains consistent and within 
+the selected performance specification. 
+ 
+Figure 1 – Calibration Test Truck Approaching WIM Scale 
+As a result of the calibration, the mean error in WIM 
+measurements (i.e., measurement bias) should be reduced to as 
+close to zero as practically possible for all measured 
+parameters. The WIM system calibration is typically performed 
+by a qualified WIM technician in accordance with the 
+
+5 
+ 
+manufacturer’s specifications and guidelines set forth in ASTM 
+E1318-09 or in FHWA’s LTPP Field Operations Guide for SPS 
+WIM Sites (1, 4). 
+Purpose of Calibration 
+Per ASTM E1318-09, the function of calibration is to define 
+factors that will be subsequently applied within WIM system 
+calculations to correlate the observed vehicle speed and tire-
+force signals with the corresponding tire load, axle spacing, and 
+wheelbase values for the static vehicle (1). Calibration reduces 
+the influence of speed, temperature, truck type (if multiple test 
+trucks are used), and environmental changes in the supporting 
+pavement structure on the WIM system’s measurement 
+accuracy for each lane measured.   
+The influence of temperature changes on measurement error 
+beyond those observed during calibration cannot be addressed 
+without vendor assistance in setting site-specific temperature 
+compensation factors. Also, unless multiple test trucks are used, 
+the WIM systems accuracy as a function of type of truck cannot 
+be effectively determined. 
+Types of Calibration 
+Initial Installation Calibration 
+Purpose 
+The purpose of the initial calibration is to verify that, upon initial 
+installation or major repair, the WIM system is providing the 
+level of weight and spacing measurement and classification 
+accuracy stipulated in the WIM procurement contract. 
+Scope 
+For the initial calibration, the WIM vendor or their certified 
+representative (WIM contractor) typically calibrates the site 
+according to the manufacturer’s procedures and any additional 
+standards listed in the WIM system procurement contract. The 
+6 
+ 
+contracting highway agency may use the results of the 
+calibration to determine the acceptability of the system. 
+To perform the initial calibration, a qualified WIM technician 
+may do the following: 
+1. Statically weigh and measure each axle and record each 
+axle spacing and total bumper to bumper length of each 
+of the calibration test trucks (see Figure 2).   
+ 
+Figure 2 – Measuring Test Truck Axle Spacing 
+2. Perform a sufficient number of test truck runs (at least 
+10 are recommended) to develop a reasonable 
+confidence in the accuracy of the WIM system, 
+especially with regard to speed, temperature, and truck 
+type. 
+3. Calculate and install the system error compensation 
+factors to compensate for the measured system bias. 
+4. Conduct additional test truck runs to confirm that the 
+changes had the desired effect on the WIM system 
+measurement bias for the desired degree of confidence 
+(more runs means higher confidence). 
+5. Recalibrate, if necessary to meet contract specifications. 
+6. Document the compensation factors installed in the 
+WIM controller, the number of test truck runs resulting 
+in pass or fail of the WIM performance requirements, 
+and WIM performance parameters, such as mean error 
+
+7 
+ 
+and range of errors, for future reference. Table 2 shows 
+an example of such documentation. 
+Table 2 - Example of Test Truck Run Statistical Results 
+ Parameter Mean 2SD P/F 
+Steering Axle -0.3% 5.0% Pass 
+Tandem Axles 1.7% 5.0% Pass 
+GVW 1.4% 3.1% Pass 
+Vehicle Length (ft) -0.2 1.4 Pass 
+Vehicle Speed (mph) 0.0 0.6 Pass 
+Axle Spacing (ft) -0.3 0.2 Pass 
+7. Develop a record of whether the WIM system passed or 
+failed WIM performance requirements based on ASTM 
+or agency-specific performance requirements. 
+A representative from the contracting agency reviews the initial 
+calibration results to ensure that the WIM system is providing 
+data with acceptable measurement error tolerances. WIM 
+installation or sensor replacement is accepted only after the 
+contracting agency has approved the initial calibration. 
+Additional details are provided later in this chapter, in the 
+section titled Calibration Procedure. 
+Routine Calibration 
+Purpose 
+The purpose of the routine calibration is to maintain the WIM 
+equipment at the maximum level of accuracy possible for the 
+service life of the system. An annual calibration is 
+recommended.  
+Scope 
+Typically, the routine calibration is conducted by agency’s in-
+house staff or a WIM maintenance contractor staff using 
+procedures described in the ASTM E1318-09 standard. The 
+guidelines provided in the FHWA Field Operations Guide for 
+8 
+ 
+LTPP SPS WIM Sites could also be used for calibration of ASTM 
+E1318-09 Type I WIM systems (4). No matter which 
+specification is used, the person performing the calibration 
+needs to conduct a sufficient number of test truck runs (10 to 
+40, depending on the site, sensor array, and sensor 
+characteristics) to quantify the weight, axle spacing, overall 
+vehicle length, and speed measurement error of the WIM 
+system with a 95 percent level of confidence.  
+To perform the routine calibration, a qualified WIM technician 
+may do the following: 
+1. Statically weigh each axle, axle group, and gross vehicle 
+weight (GVW) and measure each axle spacing for the 
+calibration test trucks. The length of vehicle and 
+overhang also might be needed if this is being verified 
+with the calibration runs. Figure 3 shows a truck being 
+weighed at a certified truck scale. 
+ 
+Figure 3 – Weighing Truck at Certified Truck Scale 
+2. Perform a sufficient number of test truck runs per ASTM 
+E1318-09 or agency specification to develop a 
+reasonable confidence level in the accuracy of the WIM 
+system, especially with regard to speed.  Figure 4 shows 
+GVW measured at low, medium, and high speed ranges. 
+Sometimes, only two different speed ranges can be 
+used. 
+
+9 
+ 
+ 
+Figure 4 – Gross Vehicle Weight by Speed 
+3. Make changes to the system error compensation 
+factors to compensate for the measured system bias. 
+4. Conduct additional test truck runs per ASTM E1318-09, 
+LTPP, or agency specification requirement to confirm 
+that the changes had the desired effect on the WIM 
+system measurement bias (1, 4). 
+5. Recalibrate, if necessary to meet ASTM, LTPP, or 
+agency-specific accuracy requirements. 
+6. Document the changes to compensation factors 
+installed in the WIM controller, the number of test truck 
+runs resulting in pass or fail of the WIM performance 
+requirements, and WIM performance parameters, such 
+as mean error and range of errors, for future reference. 
+Table 3 shows an example of such documentation.  
+10 
+ 
+Table 3 - Example of Compensation Factors 
+Calibration Factors 
+Overall Factor 103 
+Wheel Path Left Right 
+Sensor 1 3 2 4 
+Speed Factor 1 3312 3300 3312 3300 
+Speed Factor 2 3255 3364 3255 3364 
+Speed Factor 3 3220 3343 3220 3343 
+Speed Factor 4 3120 3280 3120 3280 
+Speed Factor 5 3120 3280 3120 3280 
+ 
+7. Develop a record of whether the WIM system passed or 
+failed the WIM performance requirements. 
+8. Store the calibration settings both in the field and in the 
+office for possible later use. 
+Types of Calibration Methods 
+The recommended calibration methods are ASTM E1318-09 
+method and LTPP method described in LTPP Field Operations 
+Guide for SPS WIM Sites (1, 4). Both The ASTM E1318-09 and 
+LTPP calibration methods use similar procedures but apply 
+slightly different evaluation criteria to interpret calibration 
+results. Other methods based on the reduced requirements for 
+the number of test truck runs could be used, if test data show 
+consistency over time. 
+ASTM E1318-09 Criteria 
+ASTM E1318-09 specifies acceptable WIM accuracy tolerances 
+for four types of WIM systems (see Table 1 above) (1). Based on 
+the ASTM E1318-09 test method, the WIM system has failed to 
+satisfy performance parameters for a given WIM Type if more 
+than 5 percent of the measurements for the test truck runs 
+11 
+ 
+exceed the error tolerances specified in Table 1 for any 
+measurement type.  
+Additionally, if mean errors (like GVW mean or average error) 
+calculated based on all test truck passes significantly deviate 
+from zero (user specified value, 2% or more is recommended in 
+this Guide), then the WIM system measures with a systematic 
+bias and calibration has failed.  
+LTPP Criteria 
+Based on the LTPP Transportation Pooled Fund (TPF) Study 
+5(004) test method, the WIM system has failed to satisfy 
+performance parameters if the overall error exceeds the 
+tolerance limits specified in Table 2 (4). The overall error is 
+computed as mean error +/- 95 percent confidence interval of 
+measurement errors. The allowable mean error value for GVW 
+is typically limited to 2 percent. LTPP also provides a vehicle 
+length measurement requirement of ±1.5 feet or 3 percent of 
+the vehicle’s overall length, whichever is longer. Table 4 
+summarizes the LTPP performance requirements. 
+Table 4 - LTPP Performance Requirements for WIM Systems 
+Measurement Type 95 Percent Confidence 
+Limit of Error 
+Steering Axle ±20% 
+Axle-Group Load ±15% 
+Gross Vehicle Weight ±10% 
+Speed ±1 mph (2 km/h) 
+Axle-Spacing ±0.5 ft (0.15 m) 
+Vehicle Length ±1.5 ft or 3.0%* 
+*Whichever measurement is longer. 
+The basic statistic is the error expressed as a percentage of the 
+known value (i.e., percentile difference between the WIM-
+measured weight and the static weight of the test truck). The 
+percentage of error values calculated for each run are then 
+combined in one pool and used to compute the mean error, the 
+12 
+ 
+95 percent confidence interval for the error, and the overall 
+error.  
+Tools and Equipment   
+The calibration technician may need the following tools to 
+conduct the calibration: 
+• WIM manufacturer’s operations manual 
+• Communication equipment for 
+connecting to the WIM system 
+• Walkie-talkies or cell phones for each 
+driver and one for the WIM calibration crew that works 
+over a suitable long distance 
+• Laptop 
+• Calculator 
+• Multimeter – resistance, inductance, and maybe 
+capacitance  
+• Megger – ground/insulation resistance meter 
+• Jeweler’s screwdriver 
+• 100-foot measuring tape 
+• Flashlight 
+• Tire pressure gauge 
+• Tire depth gauge 
+• Cabinet key 
+• Non-contact temperature gauge 
+• Laser speed gun  
+• Protective safety equipment 
+Calibration Procedure 
+Step 1 – Perform Pre-Visit WIM Data Analysis  
+A pre-visit data analysis provides information on the current 
+operational status of the WIM system. It is used to identify any 
+deviations in weight and length measurements from the values 
+recorded immediately after the most recent calibration and 
+saved in the comparison data set (CDS). It also provides 
+
+13 
+ 
+information needed to establish the requirements for the test 
+truck vehicles, including type, weight, length, and speed. Figure 
+5 shows an example CDS for GVW distribution. 
+ 
+Figure 5 – Example of Data Comparison for GVW Distribution 
+Prior to the site visit, perform the following: 
+1. Collect a recent data sample from the WIM system. Two 
+to 4 weeks’ worth of data is recommended, depending 
+on truck volumes, to obtain a sample of at least 5,000 
+heavy vehicles in classes 4 to 13. Analyze the data to 
+determine the current site characteristics, including: 
+o Most common heavy truck type for the site to be 
+used as a test vehicle (typically FHWA vehicle class 
+9). 
+o 85
+th percentile truck speed and a range of speeds 
+for calibration test truck runs. 
+o GVW distribution for the prevalent heavy truck type 
+(typically FHWA vehicle class 9) and target weight of 
+calibration truck. 
+o Axle spacing for the prevalent heavy truck type 
+(standard tandem versus spread tandem). 
+2. Compare the expected traffic flow characteristics 
+developed based on the data collected immediately 
+after the most recent calibration (the comparison data 
+14 
+ 
+set – CDS) with the traffic characteristics based on the 
+recently collected WIM data. Use the results to assess 
+the likely need for calibration and to establish the likely 
+range of compensation factors to be applied in the field. 
+3. Annotate the following information from the data 
+analysis: 
+o Changes in the GVW of the most common heavy 
+vehicle type, including averages, by: 
+- Hour of the day (HOD) 
+- Day of the week (DOW) 
+- Month of the year (MOY) 
+o Changes in vehicle class distributions by HOD, DOW, 
+and MOY 
+o Changes in average truck speeds 
+Step 2 – Perform Pavement Profile Data Analysis  
+If pavement profile data are available, an analysis of the most 
+recent data from the WIM site location is recommended. The 
+pavement smoothness analysis may be accomplished using the 
+profile data collected with an automated high-speed profiler 
+and standard agency procedures, or using the Optimal WIM 
+Locator (OWL) module of the Pro-Val profile data analysis 
+software, which can be obtained at 
+http://www.roadprofile.com/proval-software
+. 
+1. Process profile data to identify locations of highest 
+International Roughness Index (IRI) values within the 
+600-foot WIM segment (400 feet before and 200 after 
+WIM scale location). 
+2. Compare the values computed using the OWL software 
+in the vicinity of the WIM site with the threshold values 
+provided in Table 5, taken from American Association of 
+State Highway and Transportation Officials (AASHTO) 
+specification M331-13 (5).  
+  
+15 
+ 
+Table 5 - WIM Roughness Index Thresholds* 
+WIM Type Lower Threshold 
+m/km [in./mi] 
+Upper Threshold 
+m/km [in./mi] 
+Type I 1.34 [84.8] 2.70 [171.1] 
+Type II 1.86 [117.9] 3.75 [237.7] 
+*These values do not take into account sensor and array types and may be too 
+conservative for multi-sensor arrays or high accuracy sensors 
+3. Create a record of locations that produced values 
+exceeding the upper threshold value. Values above the 
+upper threshold indicate that road roughness is likely 
+contributing to the measurement error. 
+Step 3 – Select Test Trucks and Determine Test 
+Speeds 
+This step is accomplished prior to the WIM site visit. The 
+following guidance helps to determine the type of test truck to 
+use for WIM site validation and calibration, including vehicle 
+type (class), weight, axle spacing, suspension configuration, and 
+bumper-to-bumper length and speeds for calibration test truck 
+runs. 
+Test Truck Selection 
+Typically, an FHWA class 9 vehicle is used for calibration. Both 
+ASTM and LTPP WIM calibration procedures recommend using 
+this type of truck. Figure 6 shows a photo of a typical calibration 
+test truck. The exceptions are load-restricted or commercial 
+truck-restricted roads; the heaviest truck class that routinely 
+uses the road is recommended for calibration, which could be a 
+class 5 truck. Also, both ASTM and LTPP recommend using two 
+calibration test trucks. 
+16 
+ 
+ 
+Figure 6 - Calibration Test Truck 
+Use the following guidance to select calibration truck(s): 
+1. Whenever possible, use more than one calibration truck 
+to better calibrate the dynamic loading conditions 
+encountered at the site.  
+2. Select calibration test truck(s) that best represent the 
+dominant heavy trucks (i.e., trucks in vehicle classes 6-
+10) for the WIM site. Typically, this is class 9. 
+3. If two calibration trucks are used, one truck should be 
+at or near full load capacity and be configured with 
+typical tandem spacing (4.0 feet to 4.5 feet apart for the 
+truck and trailer) and have air suspension on the truck 
+and trailer.  
+4. Select different loading for the second truck to better 
+represent the most frequently observed loading 
+conditions at the site.  
+5. However the trucks are retained, they should each have 
+the following characteristics: 
+ Working speedometer 
+ Suspension systems must be free of mechanical 
+deficiencies, including cracks, punctures, air leaks, 
+or loose fittings   
+ Capable of meeting the test truck speed 
+requirements  
+
+17 
+ 
+ Loads must be non-shifting, such as crane 
+counterweights, steel plates or beams, or concrete 
+blocks   
+ If loads that allow the collection of rainwater are 
+used, the trailer and load must be completely 
+covered to avoid the collection of water and the 
+associated increase/decrease in load weight as 
+water collects or evaporates 
+6. Locate the nearest certified weigh scale location to the 
+WIM site. 
+Test Truck Speed Determination 
+It is important that the test truck’s speed is as close as possible 
+to the dominant truck speed at the WIM site, without exceeding 
+the speed limit. The range of the test truck speeds should 
+represent a 10 to 20 mph range of typical truck speeds for the 
+site. Figure 7 shows a typical Class 9 speed distribution plot that 
+is used to determine the test truck speeds for the calibration. 
+ 
+Figure 7 – Truck Speed Distribution Plot 
+Testing at multiple speed points (at least 2) is recommended to 
+minimize error dependency on speed, if the WIM system 
+supports this option.  
+Temperature Consideration  
+The LTPP method recommends using two test trucks over the 
+widest ranges of temperatures observed at the site. For WIM 
+sensors sensitive to temperature changes, testing over a 30 oF 
+temperature range is recommended.  
+18 
+ 
+Step 4 – Assess WIM Site Condition 
+Perform the site assessment to determine the possible effects 
+of pavement, equipment, and site conditions on the accuracy of 
+WIM weight and distance measurements. 
+Pavement Inspection   
+1. Conduct visual pavement distress survey from the 
+shoulder to identify surface anomalies that may affect 
+truck motions across the sensors. Figure 8 shows an 
+inspector conducting a visual inspection. 
+ 
+Figure 8 – Pavement Inspection 
+2. Identify such items as potholes, patches, rutting, and 
+the asphalt to concrete transition.  
+3. Use the most recent pavement profile data to 
+determine specific high roughness locations and 
+examine these locations closely during the on-site 
+assessment. 
+4. Annotate observations and photograph any pavement 
+distresses that may affect the accuracy of the WIM scale 
+measurements.  
+  
+
+19 
+ 
+Vehicle-Pavement Interaction 
+1. Observe several trucks while they pass over the site to 
+determine if truck traffic is showing adverse 
+characteristics such as bouncing, swerving, braking, or 
+accelerating within 135 feet of the sensors.  
+2. If feasible, determine whether the truck tires are in full 
+contact with the sensors. 
+3. Document observed truck dynamics, noting any adverse 
+movements that are within the WIM scale approach 
+area and that may affect the measurement accuracy of 
+the WIM system. Include the distance from the WIM 
+scale area. 
+Step 5 – Inspect WIM Equipment  
+1. Perform a visual inspection and static electrical and 
+electronic tests of all WIM site support components, as 
+illustrated in Figure 9.  
+ 
+Figure 9 – WIM Sensor Inspection 
+2. Identify and record deficiencies involving the 
+equipment that will require repair.  
+3. Identify all items whose present or deteriorating 
+condition will eventually adversely affect the operation 
+and/or accuracy of the WIM equipment. 
+
+20 
+ 
+4. If any discrepancies or deficiencies exist that will affect 
+the measurement accuracies and cannot be remedied 
+on-site, postpone the calibration.  
+5. For systems that use an auto-calibration routine, check 
+the WIM manufacturer’s guidelines to determine 
+whether to keep an auto-calibration routine on or off 
+during calibration. 
+Step 6 – Inspect and Measure Test Trucks 
+Once on site, the test trucks must be inspected to ensure that 
+they meet the criteria outlined in step 3. Perform the following: 
+1. Inspect the type of truck body, the load, and its 
+placement and suspension to ensure that they will not 
+induce adverse truck dynamics into the test. The load 
+must be evenly distributed along the trailer, must be 
+firmly secured to prevent sliding or shifting, and must 
+be covered to prevent the introduction of moisture in 
+rainy weather conditions.  
+2. Inspect the suspension to ensure that airbags are not 
+leaking, springs are not cracked or broken. See Figure 
+10. 
+ 
+Figure 10 – Test Truck Inspection 
+3. The load on the test truck should not be one that can 
+move during transport, such as fluids, sand, soil, or 
+
+21 
+ 
+other items that shift during acceleration or 
+deceleration. Figure 11 shows an example of a suitable 
+test load. 
+ 
+Figure 11 – Test Truck Trailer Load 
+4. Inspect the truck tires and suspension for defects.   
+5. Use certified static scales to weigh test trucks. 
+6. Measure the calibration truck steering axle, single axles 
+(if applicable), and tandem weights at a certified truck 
+scale. Measure the axle spacing and the overall length. 
+7. Record the static weights, axle spacing, and overall 
+length of test trucks. 
+Step 7 – Verify Communications with Test Truck 
+Driver  
+1. Review the calibration procedures with the truck driver, 
+including proper speeds and turnaround locations. The 
+truck should not accelerate or decelerate while in the 
+WIM scale area and must travel down the center of the 
+travel lane. 
+2. Review safety procedures with the truck driver.  
+3. Establish communications with the test truck driver. 
+4. Instruct the driver to make test runs over the WIM 
+scales at predetermined speeds. 
+
+22 
+ 
+Step 8 – Perform Test Truck Runs   
+1. Determine the number of test truck runs. This number 
+depends on the data variability observed at a site. Sites 
+that have low variability of errors require fewer test 
+runs than sites that have high error variability to collect 
+a representative sample. Generally, this requires: 
+o At least 10 runs for sites that have a spread of GVW 
+errors for the test truck of 5 percent or less after 10 
+truck runs and show no dependency of weight 
+measurements on temperature. 
+Or 
+o At least 20 test runs for sites that have a spread of 
+GVW errors for the test truck over 5 percent after 
+10 truck runs or demonstrate measurement error 
+dependency on pavement temperature. 
+2. Conduct test runs.  
+3. Run each test truck over the widest range of speeds 
+determined during the pre-visit analysis. Use a laser 
+(best) or radar gun to measure the test vehicle’s speed 
+when it is crossing the sensor for comparison with the 
+WIM system’s output. See Figure 12. 
+ 
+Figure 12 – Collecting Test Truck Speed 
+4. For systems that use temperature compensation, check 
+the manufacturer’s guidelines regarding whether to 
+keep this function turned on or off.   
+
+23 
+ 
+5. Conduct at least four test truck runs at each of the three 
+WIM system speed points. 
+6. For WIM systems that demonstrate temperature 
+influence on measurement error, conduct test runs over 
+a 30 °F temperature range or the widest temperature 
+range possible. 
+7. For each pass of the test truck, take and record a 
+pavement surface temperature reading at a location 
+near, but not on, the WIM sensor. Use a hand-held laser 
+temperature device, positioned approximately 30 
+inches from the pavement surface, to collect pavement 
+surface temperature after each test truck passage over 
+the sensors. Figure 13 illustrates this step. 
+ 
+Figure 13 – Collecting Pavement Temperature 
+8. For each pass of the test truck, obtain the WIM system’s 
+output for the following data. Record all data, as shown 
+in Table 6. 
+a. The sequence number of the test run 
+b. The date of the test run 
+c. The time of the test run 
+d. Axle weights of the test trucks as they pass over the 
+sensors 
+e. Spacing between each axle on the test truck 
+f. Vehicle length 
+g. Speed of test truck 
+
+24 
+ 
+h. Pavement temperature for each test run  
+Table 6 – Example of Selected Test Truck Run Data 
+Time Veh. ID Class GVW Speed Length 
+9:42:09 28912 9 66.4 59 64 
+9:51:19 29037 9 76.7 49 63 
+9:51:28 29040 9 65.3 49 65 
+10:00:15 29150 9 77.4 59 63 
+10:09:36 29272 9 74.7 49 64 
+For WIM sites that utilize the polymer piezo sensor for weight 
+measurement, and any other WIM sites that demonstrate 
+measurement error dependency on temperature, it is 
+recommended that a review of prior calibration be performed 
+to assist in determining the proper calibration of the WIM 
+system based on seasonal temperatures. Data collected over 
+seasons can eventually be used to fine tune the WIM systems 
+temperature compensation curve, typically performed by the 
+WIM manufacturer. 
+Step 9 – Evaluate WIM Performance Using Data 
+from Test Truck Runs 
+Once the data have been collected in the field, statistics must 
+be computed to determine whether the WIM site meets the 
+required accuracy parameters stated in WIM performance 
+specification, which is typically the ASTM E1318-09 specification 
+shown in Table 1 and repeated here in Table 7. 
+  
+25 
+Table 7 – ASTM 1318E-09 Functional Performance Requirements for 
+WIM Systems* 
+Function 
+Tolerance for 95% Compliance 
+Type I Type II Type III 
+Wheel Load** ±25% ±20% 
+Axle Load ±20% ±30% ±15% 
+Axle-Group Load ±15% ±20% ±10% 
+Gross Vehicle Weight ±10% ±15% ±6% 
+Speed ±1 mph (2 km/h) 
+Axle-Spacing and 
+Wheelbase ±0.5 ft (0.15 m) 
+The WIM system performance parameters can be evaluated 
+using one of the two methods described below. 
+ASTM E1318-09 Method 
+1. For each test vehicle pass, calculate the percent
+difference between the WIM-measured value and the
+corresponding reference value (static weight
+measurement) for each parameter listed in Table 7.
+2. For each test vehicle pass, determine if any calculated
+measurement difference exceeds the tolerance value
+specified in Table 7.
+3. Using all passes of the test vehicles over the sensors,
+determine the number of calculated differences that
+exceeded the tolerance values shown in Table 7 for
+each data item and express this number as a percentage
+of the total number of observed values of this item—
+that is, the percentage of all test measurements for a
+given data item (like GVW) that exceeded the tolerance.
+o If more than 5 percent of the calculated differences
+for any applicable data item from Table 7 exceed
+the specified tolerance for that item, the WIM
+system requires adjustment/calibration.
+o If the mean error for any of the weight or load
+functions specified in Table 7 calculated based on all
+±0%
+26 
+ 
+test passes significantly deviates from zero, then 
+the WIM system measures with a systematic bias 
+and requires calibration. A deviation of 2 percent is 
+recommended as the measure of “significant,” but 
+users may select another value that meets their 
+customer needs. 
+4. If calibration has been performed and failed to satisfy 
+the above criteria, repeat the calibration process until it 
+passes or until it fails on three successive attempts. The 
+latter indicates that the system or sensors are 
+malfunctioning and require corrective maintenance. 
+The system could also fail due to deteriorated road 
+conditions or high road roughness. 
+LTPP Method  
+The basic statistic used for this test is the error expressed as a 
+percentage of the known (i.e. certified static weight or length 
+measurement) value. The percentage of error, calculated from 
+the data collected for each run, is used to compute a series of 
+summary statistics. These summary statistics are used to 
+determine whether the scale produces acceptable quality data 
+using the following procedure:  
+1. For each test vehicle pass, calculate the percent 
+difference between the WIM-measured value and the 
+corresponding reference value (static weight 
+measurement) for each parameter listed in Table 1.  
+2. Use all computed percentile errors to compute the 
+mean error, standard deviation (use t-distribution for 
+sample sizes less than 38), and statistical 95
+th percentile 
+confidence interval for the mean error.  
+3. Combine the mean error and confidence interval values 
+(mean error +/- 2 standard deviations of error) to 
+compute the overall range of errors. 
+4. Compare the resulting overall error range with the 
+tolerance levels specified in Table 8 from the Field 
+Operations Guide for LTPP SPS WIM Sites (4).  
+27 
+ 
+Table 8 - LTPP Performance Requirements for WIM Systems 
+Measurement Type 95 Percent Confidence 
+Limit of Error 
+Steering Axle ±20% 
+Axle-Group Load ±15% 
+Gross Vehicle Weight ±10% 
+Speed ±1 mph (2 km/h) 
+Axle Spacing ±0.5 ft (0.15 m) 
+Vehicle Length ±1.5 ft or 3.0%* 
+* Whichever measurement is longer. 
+5. If the overall error range is within the tolerance levels 
+specified in Table 8 and the mean error is close to zero 
+(e.g., less than 2 percent) for GVW, axle group, and 
+front axle weight measurements, then the system does 
+not require calibration. Otherwise, calibration is 
+required. See the example in Table 9. 
+Table 9 – Example of Test Truck Run Results Based on LTPP Method 
+Parameter 95% Confidence 
+Limit of Error Site Values Pass/ 
+Fail 
+Steering Axles +20 percent 0.1 ± 5.1% Pass 
+Tandem Axles +15 percent 1.3 ± 5.2% Pass 
+GVW +10 percent 1.1 ± 3.0% Pass 
+Vehicle 
+Length ±3.0 percent (1.9 ft) -0.2 ± 1.1 ft Pass 
+Axle Length + 0.5 ft [150 mm] 0.0 ± 0.1 ft Pass 
+Vehicle Speed ± 1.0 mph 0.3 ± 0.5 mph Pass 
+ 
+6. If calibration has been performed and failed to satisfy 
+the above criteria, repeat the calibration process until 
+the system passes or until it fails on three successive 
+attempts. The latter indicates that the system or WIM 
+28 
+ 
+sensors are malfunctioning and require corrective 
+maintenance.   
+Step 10 – Calibrate WIM System Parameters 
+1. Based on the WIM system measurement error 
+calculated during pre-calibration runs, calculate the 
+adjustments to the current WIM system weight and 
+distance error compensation factors using the following 
+formulas: 
+o For weight:   
+New Factor = (Old Factor * Static Weight)/WIM 
+Weight 
+o For spacing:  
+New Factor = (Old Factor * WIM Measure)/Static 
+Measure 
+2. Enter the new compensation factors into the WIM 
+system firmware for post-calibration testing. 
+3. Keep a record of all changes to the WIM system 
+compensation factors. 
+Step 11 – Perform Post-Calibration Test Runs and 
+Evaluate Results  
+Determine Number of Post-Calibration Test Truck Runs 
+The minimum of 10 post-validation test truck runs (20 runs is 
+recommended) may be performed if the system does not 
+demonstrate the following: 
+1. A temperature dependency, or the weather conditions 
+on the day of testing do not provide conditions for a 
+wide range of temperature changes. 
+2. The data from the test runs demonstrate that the speed 
+dependency at each speed point has been eliminated or 
+minimized (less than 2 percent average error for the 
+each speed point).  
+3. The overall system bias computed based on the data 
+from the available test runs is as close to zero as 
+possible (less than 2 percent error for the mean error). 
+29 
+ 
+4. None of the individual runs are outside of the ASTM 
+E1318-09 tolerance range for 95 percent compliance (1 
+run outside of the range is allowed for samples of 20 
+test truck runs or larger) or the 95 percent confidence 
+interval computed based on the test data is within the 
+acceptable LTPP WIM performance tolerances. 
+If a particular site demonstrates a dependency on temperature, 
+up to 20 runs per test truck spread over a longer period of time 
+may be required to accurately determine WIM measurements 
+and confirm that calibration worked as expected. 
+Test and Finalize New Compensation Factors 
+1. Conduct post-calibration test runs using the procedure 
+described in step 8 and collect post-calibration test 
+truck weight, axle spacing, and length measurement 
+data.  
+2. Check if WIM system performance parameters are 
+within the tolerances specified in Tables 1 and 2. If all 
+parameters are within the tolerances, skip #3 below. 
+3. Repeat steps 8 through 11 until the WIM system 
+performance parameters are within tolerances (up to 
+three times if needed).  
+4. Install the new/final compensation factors into the WIM 
+system firmware. 
+5. Keep a record of the final values of each WIM system 
+performance parameter from Table 1 and final changes 
+to the WIM system compensation factors. 
+Step 12 – Check Accuracy of Vehicle 
+Classification 
+Vehicle classification testing involves two checks: 
+• Check 1 – Test whether the WIM system is classifying 
+vehicles properly as compared to the agency’s 
+classification scheme or class tree input.   
+30 
+ 
+• Check 2 – Test whether the agency’s classification 
+scheme or the class tree itself classifies vehicles 
+effectively at the WIM site location. 
+For example, if a short two-axle bus is classified as class 5, verify 
+the axle spacing. If the axle spacing is within the class 5 range 
+based on the agency’s classification scheme or class tree input, 
+it passes the first check but fails the second (and it will always 
+fail the second check for that class tree input).   
+To test vehicle classification accuracy for a WIM site, perform 
+the following: 
+1. Aim to perform the vehicle classification testing during 
+peak hours. Peak hours could be identified from the 
+hourly truck volume data sample during pre-visit data 
+analysis.   
+2. Collect a manual sample of at least 100 vehicles in 
+FHWA vehicle classes 4 through 13 (using FHWA 13-bin 
+classification), or as many samples as can be collected in 
+3 hours. In addition, collecting video of the traffic 
+stream during manual study would be helpful for the 
+follow-up analysis of misclassified vehicles. 
+3. During the manual data collection, record the vehicle 
+IDs and time stamps from the WIM records for any 
+vehicle that does not match the classification from the 
+manual observation. 
+4. Evaluate the results using either Method A or Method 
+B, as described below. 
+Method A: 
+a. Determine the total number of vehicle samples and 
+the total number of misclassified vehicles in the 
+manual sample for FHWA vehicle classes 4 through 
+13. 
+b. Calculate the percentage of misclassified vehicles in 
+FHWA vehicle classes 4 through 13 in the manual 
+sample. Compare misclassification percent for the 
+sample with the agency’s acceptable 
+31 
+ 
+misclassification percent. It is recommended that 
+the percentage of misclassified vehicles should be 
+no greater than 2 percent.  
+c. Calculate the number and percentage of vehicles in 
+FHWA vehicle classes 4 through 13 in the manual 
+sample that were not classified by the WIM system. 
+The percentage of unclassified vehicles should be 
+no greater than 2 percent. 
+d. If fewer than 50 vehicles in classes 4 to 13 were 
+observed in 3 hour period, record the number of 
+vehicles that passed and failed classification and 
+report that the minimum sample size to test 
+classification was not met. In this case, one 
+unclassified or misclassified vehicle can be allowed 
+for classification test to pass. 
+Method B: 
+a. Calculate the percentage of misclassified or 
+unclassified vehicles in FHWA vehicle classes 4 
+through 13 in the manual sample. To pass the test, 
+each individual class of vehicles from 4 through 13 
+may have a maximum of 10 percent misclassified 
+vehicles. If the number of vehicles collected during 
+the 3-hour testing period is under 30 for any vehicle 
+class, use the following tolerance criteria for the 
+maximum number of misclassified vehicles: 
+o 20-29 for one class = +/-3 vehicles 
+o 10-19 for one class = +/-2 vehicles 
+o 0-9 for one class = +/-1 vehicle 
+5. Draw conclusions as to whether the WIM system passed 
+or failed the classification test. 
+Once the samples have been collected, review each 
+misclassification instance to determine the cause and whether 
+the WIM system failed the classification checks described 
+above. Analyzing video images of moving trucks collected during 
+manual study would be very helpful for this task. The 
+information collected for the classification verification tests will 
+32 
+ 
+provide information on possible changes that need to be made 
+to the WIM system’s classification table or issues with the 
+agency vehicle classification tree inputs. This is very important 
+for sites that have dominant types of vehicles with atypical axle 
+configurations. 
+Step 13 – Conduct Post-Visit Data Analysis and 
+Develop Calibration Report 
+The post-visit data analysis allow technicians to evaluate the 
+effectiveness of the calibration. It includes a comparison 
+between the data samples collected just prior to and 
+immediately following the calibration.  
+For this analysis, a traffic data sample from the 14 days (30 days 
+for low truck volume roads with less than 100 class 9 trucks per 
+WIM lane per day) immediately following the calibration is 
+collected and compared with the Comparison Data Set (CDS) 
+(see CDS discussion in Step 15) from the previous calibration 
+event and the pre-visit data sample. To conduct post-visit 
+analyses, follow these steps: 
+1. Download a WIM data sample for the period of 2 to 4 
+weeks immediately after the calibration visit for each 
+lane instrumented with WIM sensors. 
+2. Compare the following parameters between the CDS 
+data, pre-visit data sample, and the post-visit data 
+sample for each WIM lane. See Figure 14 for an 
+example. 
+a. Class 9 average GVW and GVW distribution by load 
+bins (tabular or plot) 
+b. Class 9 average front axle weight and front axle 
+weight distribution by load bins (tabular or plot)  
+c. Class 9 tandem axle group axle load distribution by 
+load bins(tabular or plot) 
+d. Load bins corresponding to maximum percentage of 
+GVW, steering axle loads, unloaded and loaded 
+tandem axle loads (i.e. peak loads in the axle load or 
+GVW distribution) 
+e. Class 9 tractor average tandem axle spacing 
+33 
+ 
+f. Class 9 total length of vehicle 
+g. 85th percentile speed for heavy trucks 
+h. Vehicle class distribution (FHWA classes 4 through 
+13)  
+ 
+Figure 14 – Example of Post Visit Analysis of Class 9 Steering Axle 
+Weight Distribution 
+3. Note whether differences from the previous CDS 
+observed in pre-visit data set have been resolved or 
+reduced as a result of calibration.  
+4. Determine if the calibration had the desired effect on 
+the data values by comparing the change in the 
+computed parameters with the changes made to the 
+WIM system calibration factors. 
+5. Document findings in a WIM calibration summary 
+report (see step 14 below). 
+  
+34 
+ 
+Step 14 – Develop and Submit Calibration 
+Summary Report 
+To assist in proper recordkeeping and 
+future planning, it is recommended that 
+the field technician develop and submit 
+to the program manager a WIM 
+calibration summary report that 
+provides the following information: 
+1. WIM site inventory information 
+and equipment status 
+2. Date of calibration and calibration protocol used (ASTM, 
+LTPP, or agency-specific)  
+3. Test truck inspection results, including static weights, 
+axle spacing, and length measurements 
+4. Pavement condition assessment 
+5. Temperature during testing and weather conditions  
+6. Equipment visual inspection 
+7. Results of electrical WIM sensor testing 
+8. Initial pre-calibration test truck runs results (records of 
+individual measurements for each test truck run)  
+9. Total number of test truck runs and the number of 
+individual test truck runs that passed or failed any of 
+the performance criteria specified in Table 1 before 
+calibration 
+10. Computed error statistics, if LTPP method is used 
+11. Calibrate/do not calibrate decision and reasoning 
+12. Changes to system calibration factors 
+13. Post-calibration test truck runs results (records of 
+individual measurements for each test truck run) 
+14. Total number of test truck runs and the number of 
+individual test truck runs that passed or failed any of 
+the performance criteria specified in Table 1 after 
+calibration 
+15. Results of classification verification test (if conducted) 
+16. Conclusions whether WIM system met accuracy 
+requirements after calibration 
+
+35 
+ 
+17. Any corrective actions and recommendations 
+18. Pre-visit and post-visit data analyses and findings 
+(optional) 
+19. Supplemental documentation, including photographs 
+Step 15 – Develop Comparison Data Set 
+If the post-visit data analysis confirms that the calibration was 
+successful, the data used for the post-visit analysis and the 
+statistics computed based on these data are considered the 
+Comparison Data Set (CDS). The following parameters are 
+recommended for CDS computation: 
+1. Class 9 average GVW and GVW distribution by load bins 
+(tabular or plot) 
+2. Class 9 average front axle weight and front axle weight 
+distribution by load bins (tabular or plot) 
+3. Class 9 tandem axle group axle load distribution by load 
+bins (tabular or plot) 
+4. Load bins corresponding to the maximum percentage of 
+GVW, steering axle loads, unloaded and loaded tandem 
+axle loads (i.e. peak loads in the axle load and GVW 
+distributions) 
+5. Class 9 tractor average tandem axle spacing 
+6. Class 9 total length of vehicle 
+7. 85
+th percentile speed for heavy trucks 
+8. Vehicle class distribution (FHWA classes 4 through 13)  
+These data and statistics could be used to compare periodically 
+(biweekly or once a month) with the statistics based on the 
+current data and/or data sample collected prior to scheduling 
+calibration visits. See Table 10 for an example of CDS 
+computation results.  
+  
+36 
+ 
+Table 10 - Example of Comparison Data Set Computation Results 
+Parameter CDS 
+Average Steering Axle Weight (kips) 11.0 
+Average Axle 4 Weight of Split Tandems (kips) 11.9 
+Average Axle 5 Weight of Split Tandems (kips) 11.9 
+Average Tandem Axle Weight (kips) 20.5 
+Average Loaded Tandem Axle Weight (kips) 32.4 
+Average Standard (3S2) Class 9 GVW (kips) 52.8 
+Percent of Overweight Vehicles 9.5% 
+Peak Steering Axle load (kips) 12.0 
+Peak loaded tandem (kips) 34.0 
+Peak GVW empty (kips) 36.0 
+Peak GVW empty (kips) 80.0 
+Average Tractor Tandem Axle Spacing (feet) 4.3 
+Total Vehicle Length (feet) 48.6 
+ 
+Depending on the analysis results, the site calibration schedule 
+may be accelerated or postponed. For example, an accelerated 
+schedule may be warranted if there are changes in the average 
+weight and length measurements or shifts in the weight 
+distribution greater than 5 percent. 
+Step 16 – Conduct Office Data Quality Checks 
+and Analysis to Aid Future Calibrations 
+1. Sample WIM data every 1, 2, or 4 weeks, depending on 
+site truck volumes. A minimum sample of 200 class 9 
+trucks per lane is needed; a sample of 500 or more class 
+9 trucks is recommended to identify and analyze GVW 
+and axle load distribution characteristics. 
+2. Use the data sample to develop the following statistics 
+for each lane with WIM sensors: 
+a. Class 9 average GVW and GVW distribution by load 
+bins (tabular or plot) 
+b. Class 9 average front axle weight and front axle 
+weight distribution by load bins (tabular or plot) 
+37 
+ 
+c. Class 9 tandem axle group axle load distribution by 
+load bins(tabular or plot) 
+d. Load bins corresponding to the maximum 
+percentage of GVW, steering axle loads, unloaded 
+and loaded tandem axle loads (i.e., peak loads in 
+the axle load and GVW distributions) for class 9 
+vehicles 
+e. Class 9 tractor average tandem axle spacing 
+f. 85
+th percentile speed for heavy trucks 
+g. Vehicle class distribution (FHWA classes 4 through 
+13)
+  
+3. Use the above statistics to compute differences with 
+the same parameters based on CDS. 
+4. Flag and report data samples that show differences of 
+more than 5 percent (or other agency-selected value) 
+between the current data set and CDS. These data 
+require close monitoring and trend analysis. An example 
+of a comparison is shown in Table 11. 
+  
+38 
+ 
+Table 11 – Example of WIM Data Analysis Results for Typical (3S2) 
+Class 9 Vehicles 
+Parameter CDS Current %Change 
+Average Steering Axle 
+Weight (kips) 11.0 10.6  -3.6 
+Average Axle 4 Weight of 
+Split Tandems (kips) 11.9 11.3  -5.0 
+Average Axle 5 Weight of 
+Split Tandems (kips) 11.9 11.2  -5.9 
+Average Tandem Axle 
+Weight (kips) 20.5 19.3  -6.0 
+Average Loaded Tandem 
+Axle Weight (kips) 32.4 31.5  -2.8 
+Average Class 9 GVW (kips) 52.8 49.7  -5.8 
+Peak Steering Axle load 
+(kips) 12.0 11.0  -8.3 
+Peak loaded tandem (kips) 34.0 33.0  -2.9 
+Peak GVW empty (kips) 36.0 36.0  0.0 
+Peak GVW loaded (kips) 80.0 76.0  -5.0 
+Percent of Overweight 
+Vehicles 9.5% 3.9%  -6.0 
+Average Tractor Tandem 
+Axle Spacing (feet) 4.3 4.3  0.0 
+Total Vehicle Length (feet) 48.6 48.2  0.8 
+ 
+5. Subject data that deviate from CDS to monthly trend 
+analysis. Compare data from the current month with 
+the data for the same month from the previous year(s) 
+or to the data from the previous month of the current 
+or past year(s).  
+6. In areas of harvest or other seasonal production, like 
+timber, analysis of monthly or seasonal average for 
+several values like GVW distribution, peak load values, 
+39 
+ 
+and percentage of overweight of class 9 trucks with 
+standard configuration is recommended. 
+7. If deviation over 5 percent from CDS and seasonal 
+trends persists or increases, an out-of-cycle calibration 
+may be needed. 
+8. If calibration drift is frequently observed at the site, 
+daily data quality monitoring and daily trend analysis is 
+recommended. For the daily trend analysis, use time 
+series plots to monitor the daily changes in the WIM 
+statistics described in #2 of this list.  
+An example of a daily average GVW plot is shown in Figure 15. 
+As shown in the figure, from the end of July to the beginning of 
+October, the average daily GVW has been steadily drifting from 
+59 kips to 50 kips (-15.2 percent). 
+ 
+Figure 15 – Daily Average GVW Decreasing Over Time  
+Calibration frequency depends on the available resources, 
+individual site characteristics, sensor arrays, and sensor types. 
+The following are general recommendations provided for 
+different sensor types.  
+  
+40 
+ 
+WIM Systems with Quartz Piezo Sensors or Strain 
+Gauge Strip Sensors 
+Typically, WIM systems with quartz piezo or strain-gauge strip 
+sensors should be calibrated every 12 to 18 months. However, 
+more frequent calibration may be needed if any of the following 
+is observed: 
+• Recent maintenance or hardware change is performed 
+• Demonstrated system dependency on pavement 
+smoothness 
+• Sensors installed in pavements subjected to seasonal 
+changes in pavement stiffness 
+• System shows the repeatable drift from past calibration 
+at a higher rate over time, whatever the reason 
+• Presence of commodity shipment cycles 
+• Changes in truck classification distribution 
+• Changes in average truck speed 
+• If key weight statistics (such as class 9 GVW) drift more 
+than 5 percent from the CDS values 
+WIM Systems with Polymer Piezo Sensors  
+Systems with polymer piezo sensors that are used for collection 
+of axle weight data should be calibrated seasonally or have 
+other means for consistent compensation of temperature effect 
+on weigh measurement accuracy. Temperature compensation 
+based on passenger vehicles or front axle weights is frequently 
+not effective for measurements of heavy axle weights. In 
+addition, temperature compensation that is adjusted based on 
+the number of truck samples is problematic when traffic 
+volumes are low and during periods in the day when pavement 
+temperature changes rapidly. Site-specific adjustments to 
+temperature compensation curves may be needed to address 
+accuracy issue for heavy axles.  
+If seasonal calibrations cannot be scheduled for whatever 
+reason, users should be informed about seasonal deviations in 
+weight measurement accuracy. If seasonal calibrations are not 
+feasible, calibrate every 12 months during the season that has a 
+41 
+ 
+daily temperature as close to the annual average temperature 
+as possible to avoid introduction of extreme bias, as could occur 
+when calibrating during seasons with extreme cold or hot 
+temperatures. 
+Data processing and quality assurance 
+personnel can provide inputs on when a 
+WIM site needs to be calibrated based 
+on the comparison analysis of the 
+loading statistics computed based on the 
+recently downloaded 2 to 4 weeks of 
+WIM data and the CDS statistics. For 
+sites that have other contributing factors 
+that lead to changes in “typical” truck weights observed at the 
+site, such as seasonal crop or other commodity movement, 
+these factors must be accounted for during data checks to 
+determine if the data are “typical” for the site or unexpected 
+deviations have occurred. 
+WIM Systems with Bending Plates or Load Cells  
+For bending plate and load cell WIM systems, calibration 
+frequency could be greatly reduced if the systems are being 
+properly maintained in a timely manner. In some cases, bending 
+plate WIM did not require calibration over 5-year periods; in 
+other cases, calibration every 2 years was sufficient.  
+Data processing and quality assurance personnel can provide 
+inputs on when a WIM site needs to be calibrated based on the 
+comparison of the loading statistics based on the recently 
+downloaded WIM data and the CDS statistics. For sites that 
+have other contributing factors that lead to changes in “typical” 
+truck weights observed at the site, such as seasonal crop or 
+other commodity movement, these factors must be accounted 
+for during data checks to determine if the data are “typical” or 
+unexpected deviations have occurred. In addition, major WIM 
+maintenance events may trigger the need for calibration. 
+ 
+ 
+
+42 
+ 
+WIM SYSTEM MAINTENANCE 
+Implementation of comprehensive 
+maintenance program helps to maximize the 
+life of the WIM system. This section of the 
+Guide includes a scope of recommended 
+maintenance activities, recommended 
+schedules, description of field checks, and 
+recommendations for field logs, acceptance 
+testing, and maintenance reports. In addition to these 
+guidelines, manufacturers’ recommendations for maintenance 
+of the specific WIM equipment should be followed.  
+Types and Frequency of Maintenance 
+Maintenance activities include regularly scheduled preventive 
+maintenance and event-driven corrective maintenance. 
+Preventive maintenance is performed to prevent future 
+equipment failures and to extend longevity of different WIM 
+parts and components. Corrective maintenance is performed 
+after a problem is detected in the system or a scheduled part 
+replacement or upgrade is due. 
+It is important to perform routine preventive maintenance 
+every 6 to 12 months. For corrective maintenance, procedures 
+should be developed to facilitate timely operational checks and 
+repairs of system failures. 
+The maintenance activities described here are not sensor-
+specific. For guidance on performing regular maintenance on 
+specific types of sensors, reference the manufacturer’s 
+maintenance manuals. 
+  
+
+43 
+ 
+Tools, Materials, and Supporting 
+Documentation 
+An effective WIM maintenance program must have the proper 
+tools, materials and spare parts to perform regular preventive 
+maintenance and quickly resolve system problems without 
+significant down time and lost data. Manufacturers’ 
+maintenance guides typically contain a list of required spare 
+service parts, tools, and equipment necessary to properly 
+maintain the specific vendors’ WIM systems.  
+Materials 
+• Clipboard 
+• Shop rags or clothes 
+• Cleaning solvent 
+• Pens and recordkeeping paper/forms 
+• Electrical tape 
+• Splice kits 
+• First aid kit 
+• Spray silicone 
+Hand Tools 
+• Digital camera 
+• Screwdriver sets – slotted and Philips 
+• Jewelers’ screwdrivers – slotted and Philips 
+• Small socket driver set – those that fit the hardware at 
+the site (solar panel, cabinet WIM controller) 
+• Pliers – long nose, round nose, curved.  Both smooth 
+and serrated types are useful 
+• Adjustable wrench, small 
+• Cutters – diagonal and flush 
+• Linesman's pliers 
+• Wire strippers – fixed and adjustable 
+• Wet/dry shop vacuum 
+• Crimping tool 
+• Global positioning system (GPS) receiver 
+44 
+ 
+• Power inverter 
+• Tape measure 
+• Measuring wheel 
+• Small shovel 
+• Pry bar 
+Test Equipment 
+• Digital multimeter with well insulated test probes 
+(capability for resistance, inductance and capacitance) 
+• Megger (loop and ground tester) 
+• Oscilloscope – dual trace, 10 to 20 MHz minimum 
+vertical bandwidth and 10x probes (optional, to check 
+the sensor output waveforms) 
+• Logic probe – for quick checks of digital circuitry for 
+activity 
+• Laser speed detection gun 
+Computer Software 
+• WIM system connectivity and data download software 
+• Modem setup script files and/or setup guide 
+Supporting Forms and Documentation 
+The following forms and documentation are recommended for 
+use by the WIM maintenance personnel: 
+• WIM Site Maintenance and Inspection Form 
+• WIM System Troubleshooting Form 
+• WIM Site Maintenance Log (to be kept in the WIM 
+cabinet) 
+Additionally, maintenance personnel should always have on 
+hand: 
+• Manufacturers’ maintenance guides or service manual 
+• WIM site as-built plans showing locations of WIM 
+components 
+  
+45 
+ 
+Safety  
+When working on-site, several safety procedures must be 
+followed: 
+• Park any vehicles off the road in a safe area away from 
+traffic (see example in Figure 16). 
+• If permitted, leave vehicle running and wear the 
+seatbelt when in the vehicle. 
+• All vehicles must be equipped with safety lights. 
+ 
+Figure 16 – Protected Work Vehicle Location 
+• Always wear personal protection equipment (PPE), 
+including a reflective safety vest, hard hat, and steel-
+toed shoes (see Figure 17). 
+ 
+Figure 17 – Field Technician with PPE 
+
+46 
+ 
+• Always use a safety spotter when working near the 
+roadway to alert the inspector of oncoming traffic. 
+• Carry adequate amounts of drinking water. 
+• Wear weather-appropriate clothing and protection. 
+• Carry sunscreen and bug repellent. 
+Preventive (Scheduled) Maintenance 
+During each preventive maintenance visit, all in-road sensors 
+should be checked for proper electronic values. The entire WIM 
+system should be visually inspected, including the pull boxes, in-
+road sensors, communication and power service equipment, 
+and the roadway leading up to and within the WIM scale area. 
+All deficiencies should be recorded, photographed, and 
+reported for correction. 
+Pavement Inspection 
+A visual inspection of the pavement in the WIM scale approach 
+will provide an indication of whether the pavement condition 
+may be contributing to any inaccuracies of the WIM system. 
+Figure 18 shows an example of distressed pavement that could 
+affect WIM system accuracy.  
+ 
+Figure 18 – Pavement Distress Identified During Inspection 
+
+47 
+ 
+Any pavement distresses that appear to influence truck 
+dynamics at or near the WIM scale area must be documented 
+on the WIM Site Preventive Maintenance and Inspection Form. 
+1. From the shoulder, walk the distance from the WIM 
+sensor installation to a distance 400 feet prior to the 
+WIM sensors and 200 feet after the WIM sensors. 
+2. Photograph and annotate any pavement distresses that 
+may influence truck dynamics. 
+Visual Equipment Inspection 
+A visual inspection of all WIM system components is important. 
+It is recommended that a lane closure be set up at least 
+annually so that a close inspection of the roadway and the in-
+road sensors can be performed. Carefully inspect each WIM 
+system component and annotate any deficiencies on the WIM 
+Site Preventive Maintenance and Inspection Form, including the 
+following: 
+1. Check the pavement condition around the WIM sensors 
+for cracks, broken pavement, or potholes. Figure 19 
+shows a close-up of a WIM sensor and surrounding 
+pavement. 
+ 
+Figure 19 – WIM Sensor Observed During Inspection 
+
+48 
+ 
+2. Check cabinet interior for broken components such as 
+thermostats, lights, shelving, heaters, terminal panels, 
+battery and modem. 
+3. Remove the covers to each pull box and inspect the 
+interior for signs of improper drainage or infestation 
+(see Figure 20). Inspect the exterior for cracks and 
+ensure that all securing hardware is in place. Suspend 
+wiring as needed to keep it out of any water that may 
+be present in the pull box. 
+ 
+Figure 20 – Pull Box Interior 
+4. Inspect the service pole, pedestal, and foundation for 
+cracks and make sure that it is plumb. 
+5. Visually inspect power service equipment for structural 
+deficiencies. DO NOT TOUCH BROKEN WIRES, AND DO 
+NOT OPEN ANY LIVE SERVICE BOXES!  Check earth 
+ground using a megger. 
+6. Inspect communication equipment for damage, cut or 
+damaged wires, or a broken antenna. 
+7. Check exposed conduit for extensive rust, breaks, or 
+cracks.  
+8. Annotate all readings on the WIM Site Preventive 
+Maintenance and Inspection Form. 
+  
+
+49 
+ 
+Equipment and Site Cleaning  
+Clean the interior and exterior of all WIM components, 
+including the following: 
+1. Remove dust or debris with a shop vacuum. 
+2. Wipe down with cleaning solvents. DO NOT SPRAY 
+COMPONENTS WITH SOLVENT. SPRAY THE RAG OR 
+CLOTH AWAY FROM THE EQUIPMENT. 
+3. Replace the cabinet filter, if necessary. 
+4. Clear out clogged drainage pipes. 
+5. Perform vegetation control in the area of the cabinet 
+and pull boxes. Figure 21 shows the cleared area around 
+a traffic cabinet. 
+ 
+Figure 21 – Traffic Cabinet Location after Vegetation Control 
+6. Look for indications of insect or rodent problems. Clean 
+up and seal any openings. Consider installation of 
+mothballs or other items to repel the insects or rodents. 
+Electronic and Electrical Checks 
+1. As shown in Figure 22, perform electronic and electrical 
+checks of all WIM system components to confirm that 
+each component is operating within the manufacturer’s 
+tolerances, including:  
+o WIM sensors – list voltage, resistance, and maybe 
+capacitance ranges 
+o Loop sensors – list values in microhenrys 
+
+50 
+ 
+o Power voltages 
+o Telephone – list on-hook and off-hook voltages 
+o Grounding – list typical distance and ohm range to 
+get 
+2. If any readings are out of tolerance, double-check the 
+proper readings against the previously documented 
+ranges, specification, or manufacturer’s maintenance 
+manuals and begin troubleshooting the system, if 
+necessary, to determine the cause.  
+ 
+Figure 22 – Sensor Testing 
+3. Annotate all readings on the WIM Site Preventive 
+Maintenance and Inspection Form. 
+Firmware Upgrades 
+1. Once the electronic values for the WIM sensors and 
+support equipment have been verified as correct, 
+perform any scheduled software upgrades. Ensure that 
+the instructions provided in the manufacturer’s 
+operations guide are followed to protect the equipment 
+from damage caused by electronic surge or improper 
+installation of the firmware. 
+2. After installing the latest firmware, re-enter all default 
+values and/or system parameters to ensure proper 
+
+51 
+ 
+operation. Verify that the following system settings are 
+correct: 
+a. Date/time 
+b. Site information 
+c. Weight compensation factors (by lane recorded) 
+d. Axle and loop spacings (by lane settings recorded) 
+e. Length of vehicle setting (loop setting) 
+f. Loop sensitivities 
+g. Lane configurations, sensor assignment and sensor 
+spacing 
+h. Violation settings 
+i. Communication settings 
+j. Data logging information 
+k. Password information 
+l. Self-calibration settings (if used) 
+3. Annotate that the firmware was replaced and record 
+the current version on the WIM Site Preventive 
+Maintenance and Inspection Form. 
+Operational Testing and Verification 
+After local, direct communications with the WIM system user 
+interface have been established, perform the following series of 
+operational checks to verify the proper operation of the WIM 
+equipment. 
+1. Verify the proper operation of the WIM sensors and 
+inductive loops by observing the individual vehicle 
+characteristic values provided by the WIM system after 
+a vehicle passes over the WIM scale area. Determine 
+whether the speeds, distance measurements, and 
+vehicle/axle weights are reasonable and that each axle 
+and axle spacing is reported for each vehicle.   
+2. Conduct vehicle classification study by observing several 
+vehicles as they pass over the WIM scales and verify 
+that they are being classified properly, according to the 
+classification method that is installed in the WIM 
+system. 
+52 
+ 
+3. Conduct weight study. Record the front axle weight for 
+the front axle for a sample of at least 50 class 9 trucks 
+(or the number counted over 3 hours if less than 50). 
+Typically, the average front axle weight for the class 9 
+trucks should be between 10,000 and 11,000 pounds. If 
+the front axle weight average is less than 9,000 pounds 
+or greater than 12,000 pounds, a calibration of the 
+system may be necessary. 
+4. Document findings on the WIM Site Preventive 
+Maintenance and Inspection Form. 
+Communications Checks 
+As part of the preventive maintenance function, a 
+communication check is important to prevent a return trip to 
+the site.  
+1. Prior to leaving the site, and once all other preventive 
+maintenance activities have been performed, contact 
+office personnel to verify that the WIM system can 
+communicate remotely with the host computer. 
+2. Annotate findings on the WIM Site Preventive 
+Maintenance and Inspection Form. 
+Corrective Maintenance and Repair 
+Scheduled Corrective WIM Maintenance 
+Corrective maintenance could include changes to systems 
+parameters, adjustment to sensor operating parameters, 
+firmware upgrades, calibration, or replacement of parts. Many 
+factors must be considered when determining the corrective 
+action: cost, loss of data, availability of replacement parts, and 
+degree of difficulty of the repair. The repair must be cost-
+effective—a component should not be repaired if the cost of 
+doing so would be comparable to replacing it with a new one or 
+if the pavement condition would prevent long-term data 
+collection.  
+53 
+ 
+Many circuit board components are not readily available for 
+replacement. The technician should have “ready-service spares” 
+on hand for all components that may have to be ordered from a 
+manufacturer, vendor, or other supplier.  
+All replaced parts must be clearly marked, indicating that they 
+are “bad,” so that they are not reused.   
+After all repairs have been completed, the technician should 
+perform the preventive maintenance procedures described 
+earlier to ensure that the system is fully operational. 
+Unscheduled Corrective WIM Maintenance 
+Unscheduled maintenance is performed after a problem is 
+detected in the system that prompts a visit to the site. Checking 
+WIM system results by lane and sensor helps with 
+troubleshooting WIM data errors.  
+If the source of the problem is not already known, preventive 
+maintenance and WIM equipment troubleshooting routines 
+should be performed to attempt to identify the source of the 
+problem.  
+Once a fault has been found, the problem must be investigated 
+to identify and correct the deficiency. Problems that are 
+detected may be corrected in several ways, including changes to 
+systems/on-site parameters, adjustment to sensor operating 
+parameters, firmware upgrades, calibration, or replacement of 
+parts. 
+WIM Equipment Troubleshooting 
+This section provides a general guide for identifying the system 
+fault, troubleshooting the fault to determine the cause, and 
+repairing WIM systems and components. It is based on the 
+information presented in FHWA’s WIM Field Inspectors’ 
+Troubleshooting Guide and the Traffic Detector Handbook (6, 7). 
+  
+54 
+ 
+Troubleshooting Approach 
+The first requirement in troubleshooting is developing a general 
+troubleshooting approach—a logical, methodical procedure of 
+narrowing down the problem. It is important to recognize the 
+fault correctly, find the cause, determine the proper corrective 
+measure, and repair or replace the faulty system component(s). 
+Additionally, it is important to keep in mind that: 
+1. Intermittent problems are typically 
+due to bad connections and can be 
+fixed by cleaning, removing, 
+inspecting, and replacing connectors 
+or circuit boards.  
+2. Problems that result in a completely 
+non-functional system or affect a 
+number of different functions or components are 
+usually related to power. Sometimes, just turning the 
+system off and back on may fix the problem.   
+3. If a power problem is suspected, use sight and smell to 
+search for evidence of burnt components. 
+4. Intermittent or chattering axle sensors can lead to ghost 
+axles and increases in class 10 and/or class 13 vehicles. 
+5. Many WIM system vehicle capture problems are 
+created by incorrectly set loop frequencies. Always 
+begin the troubleshooting process by checking system 
+settings. 
+6. Misclassified vehicles can mean a detuning loop as a 
+vehicle is passing.  Class 9 vehicles will be improperly 
+classified as classes 1 and 6. Check to ensure the WIM 
+system properly identifies class 9 vehicles.  Did both the 
+class1 and class 6 number jump the same number from 
+the same DOW for a previous week? 
+7. Improper class data can lead to potential WIM issues, 
+and vice versa. 
+8. Seasonal changes in traffic streams (agricultural 
+harvests), changes in local economics, and additional 
+rezoning in the area can change WIM readings due to 
+
+55 
+ 
+changes in vehicle characteristics. Knowing the local 
+vehicle travel patterns can help when checking if a site 
+is working properly. 
+Logical Progression of Troubleshooting 
+Read the troubleshooting procedure in its entirety before 
+beginning work.  Information from one step may directly assist 
+efforts in another. Refer to manufacturer guides for specific 
+troubleshooting techniques and procedures related to WIM 
+system components, including common problems and 
+associated solutions. 
+The LTPP WIM System Troubleshooting Outline (TRAFFIC SHEET 
+23) (4) is a valuable tool that can be used to guide the user 
+through a systematic troubleshooting routine. It provides a 
+visual way of investigating and fixing the problem, rather than 
+trying to remember what has been already found and remedies 
+that have already been tried. 
+Use the LTPP WIM System Troubleshooting Outline or other 
+similar form to take detailed notes and follow the step-by-step 
+troubleshooting procedure described next. 
+Step 1 – Develop a Detailed Description of the Problem  
+The identification of WIM system problems typically begins with 
+the user’s inability to communicate with the system or 
+download system data. The user may also report that the data 
+received are questionable or incorrect. When the problem is 
+reported, it is important to obtain very specific and detailed 
+problem descriptions and symptoms.  
+A lot can be learned from “by lane,” “by sensor,” and “by 
+vehicle” WIM data analysis. This data troubleshooting does not 
+involve a field visit to track down issues.   
+1. Download data from the previous day or within the 
+timeframe in question. Compare data values with the 
+CDS values. This process may narrow down the problem 
+to a particular function, such as weight measurement or 
+distance and speed measurement.  
+56 
+ 
+2. Determine if the travel characteristics of the site 
+changed due to weather, construction, seasonal 
+agriculture, or some other reason.  
+3. Conduct thorough WIM data analysis. Drill down to the 
+“by lane” data and even conduct “by sensor” readings if 
+need be.   
+4. Review “by vehicle” data. The individual by vehicle data 
+will help the user see if the issue is related to heavy or 
+light axles certain vehicle types or maybe some vehicle 
+characteristic, such as time of day when the error 
+occurs. 
+5. Provide this information to the technician before the 
+site visit. It will help the technician to have the correct 
+parts and information to narrow the issue down to 
+more quickly get the site back working properly. 
+A WIM system malfunction may also be detected during any 
+regular maintenance routine, such as periodic preventive 
+maintenance, system upgrade, or equipment replacement or 
+repair. Again, it is important to write down exactly what the 
+problem is and the problem’s characteristics.  
+Before proceeding further, if it is available in the manufacturer’s 
+maintenance or operational manual, refer to the 
+troubleshooting section to see if the reported problem is listed.  
+If it is not, or the recommended corrective action is not 
+successful, proceed with step 2 below. 
+Step 2 – Evaluate System Parameters and Data  
+In order to properly diagnose a system malfunction, accumulate 
+all system operating information, including system data and 
+current operating parameters.  
+1. If remote connection with the site is possible, connect 
+with the site and record all operator interface mode 
+information prior to traveling to the site. If contacting 
+the site remotely is not possible, or the system data 
+already collected do not provide an indication of the 
+57 
+ 
+problem, or the problem discovered through system 
+data cannot be fixed remotely, visit the site. 
+2. While connected to the site, open a log file and record 
+all system characteristics, including: 
+o Weight compensation factors 
+o Lane configurations, sensor assignment and sensor 
+spacing 
+o Violation settings 
+o Communication settings 
+o Data logging information 
+o Real time view (collect several samples of as many 
+types of vehicles as possible) 
+o Vehicle classification and speed data from the past 
+hour 
+o Time and date 
+o Password information 
+o Auto-calibration settings 
+3. Record all system sensor values available in the system 
+diagnostics mode. Compare current system settings 
+with historical records. 
+4. After reviewing the site operating parameters, site data, 
+and sensor analog values, add any additional 
+information to the “Problem Description” portion of the 
+troubleshooting form. 
+5. Double-check all measurements that appear incorrect 
+or out of tolerance. 
+If required, follow the remaining steps on the LTPP WIM System 
+Troubleshooting Outline according to the following guidelines: 
+• The source of many problems may be discovered during 
+the data collection and analysis portion of the 
+troubleshooting process. If it is strongly believed that 
+the problem has been discovered during step 1 or this 
+step, skip to step 4 – Corrective Maintenance.   
+• If any system parameters are found to be incorrect, you 
+may typically fix the problem by entering the correct 
+setting. If the setting is off by a small amount, or if the 
+58 
+ 
+setting appears to have been typed incorrectly, it is 
+likely that the problem was user-related. Type the 
+setting in as it should be, and restore the system 
+parameters to the system firmware according to the 
+manufacturer’s instructions. Correct classification is 
+sensitive to 1/10th-foot increments, so accuracy of the 
+WIM classification settings is paramount with good 
+results. 
+• If a setting is drastically incorrect, chances are the 
+problem was created by a system “glitch,” and if one 
+exists, many exist. The best way to fix these settings is 
+to perform a hard reset of the system that would return 
+all system operational parameters to their default 
+settings. Download all of the data files from the WIM 
+system’s memory. Follow the manufacturer’s 
+instructions for performing a system reset and restoring 
+the default parameters. 
+Step 3 – Finding the Source of the Problem 
+Use the information gathered from the previous steps to 
+determine the probable malfunction. Consider during this 
+process that multiple problems are rare and that all symptoms 
+should be considered to be the result of one problem.   
+There are two steps that are used to determine the system’s 
+faulty component. Each involves the drawing of a conclusion 
+based on the information gathered in steps 1 and 2, as well as 
+the added information gathered during the performance of 
+each level’s procedures.  
+Determine the probable functional failure. There are six primary 
+functions of any WIM system: 
+• Power – Most power problems are the result of loss of 
+alternating current (A/C) power service, dead battery, 
+blown fuse, or tripped circuit breaker. Investigate these 
+possibilities first. Check the voltage for lower than 
+expected power. A/C voltage should be over 105 volts. 
+59 
+ 
+Annual load testing of any system batteries should be 
+performed. 
+• Classification and Weight (including speed and spacing) 
+– Problems related to the measurement of various 
+vehicle characteristics are usually caused by improper 
+system settings. Verify that all settings are correct 
+before performing further troubleshooting.  
+• Loop Settings – The second most common problem 
+associated with misclassification of vehicles is the loop 
+frequency and sensitivity settings. Verify that all loop 
+frequencies and sensitivities have been set in 
+accordance with the manufacturer’s setup routine.  
+• Communications – Communication issues usually are 
+caused by disrupted cellular or landline service, corrupt 
+modem settings, or power problems associated with 
+the modem. 
+• Data Storage – The inability of the WIM system to store 
+collected data is typically associated with an improper 
+system setting or corrupt system memory. 
+• Data Download and Processing – The failure of the WIM 
+system to properly download data is typically a result of 
+a communication error. Investigate deficiencies 
+associated with the communication devices first. 
+Based on the information gathered in this step, make a 
+determination of the probable faulty function. Indicate the 
+faulty function on the WIM System Troubleshooting Outline 
+Form. 
+Once the faulty function has been determined, troubleshooting 
+flow charts and step-by-step guides are typically provided in the 
+manufacturer’s maintenance manual that can assist in the 
+process of determining the faulty component.  
+If the faulty component cannot be determined, contact the 
+manufacturer and provide the information gathered above. 
+Many times the manufacturer can provide additional checks to 
+60 
+ 
+perform or provide the technician with the probable fault 
+component without further troubleshooting. 
+Maintenance Documentation and 
+Reporting 
+Proper recordkeeping is an essential 
+function of a WIM system maintenance 
+program. Data from previous 
+maintenance actions can be invaluable 
+for determining high failure rate 
+components and best practices for 
+correcting common problems. Most 
+importantly, past records can provide 
+the WIM program manager with valuable information on 
+predicting the failure of WIM system components so that they 
+can plan and budget for upcoming maintenance costs and 
+prepare the technician with replacement parts before the 
+system fails. 
+Maintenance records should include preventive and 
+troubleshooting efforts as well as final analysis and repair 
+actions performed. Develop and use standard reporting forms 
+to create historical records of all site maintenance performed, 
+including: 
+• WIM Site Maintenance and Inspection Form – Detailed 
+record of preventive or corrective maintenance 
+activities and repairs/replacements performed at the 
+site and the results of WIM system operational tests 
+performed before and after maintenance activities. 
+• WIM System Troubleshooting Form – Detailed record of 
+investigation activities performed at the site to identify 
+problem with the equipment, including steps taken to 
+identify and resolve system problems. 
+
+61 
+ 
+• WIM Site Maintenance Log – This form is kept in the 
+WIM cabinet and provides a historical record of site 
+visits and work completed. 
+• WIM Site Maintenance Management Tool – A 
+management tool that contains a record of scheduled 
+and completed WIM site maintenance visits and a brief 
+summary of work performed during each visit. This is 
+typically done in the form of a spreadsheet or a 
+maintenance management software application. 
+Examples of WIM system maintenance and inspection forms 
+and reports are provided in Appendix E. Further troubleshooting 
+recommendations can be found in the manufacturer’s 
+operations guides. 
+  
+62 
+ 
+REFERENCES 
+1. ASTM Standard E1318-09, Standard Specification for 
+Highway Weigh-in-Motion (WIM) Systems with User 
+Requirements and Test Methods. West Conshohocken, 
+PA: ASTM International, West Conshohocken, PA, 2009, 
+DOI: 10.1520/E1318-09, www.astm.org. 
+2. European Cooperation in Science and Technology 
+(COST): Action 323. 1998. Weigh-in-Motion of Road 
+Vehicles. Paris: 2002. 
+3. NMi International WIM Standard: Specification and Test 
+Procedures for Weigh-in-Motion Systems, NMi Certin, 
+Dordrecht, Netherlands, 2016. http://www.nmi.nl/nmi-
+wim-standard/ 
+4. Federal Highway Administration (FHWA). 2012. LTPP 
+Field Operations Guide for SPS WIM Sites Version 1.0. 
+Draft. McLean, VA: Federal Highway Administration: 
+2012. 
+5. American Association of State Highway and 
+Transportation Officials (AASHTO). 2016. M331-13. 
+Standard Specification for Smoothness of Pavement in 
+Weigh-in-Motion Systems. Washington, D.C. 2016. 
+6. Quinley, Rich. 2009. WIM Field Inspectors' 
+Troubleshooting Guide. Publication No. FHWA-IF-10-
+003. Washington, D.C.: Federal Highway Administration: 
+2009 
+7. Klein, Lawrence A. 2006. Traffic Detector Handbook: 
+Third Edition – Volume I. Publication FHWA-HRT-09-108. 
+Washington D.C.: Federal Highway Administration 
+(FHWA): 2006. 
+  
+63 
+ 
+APPENDICES 
+The appendices for the FHWA WIM Pocket Guide are available 
+on the FHWA website:  
+https://www.fhwa.dot.gov/policyinformation/knowledgecenter 
+ 
+General Appendices 
+• Appendix A – Technical Report Documentation Page 
+Form DOT F 1700.7 
+• Appendix B – Acknowledgements 
+Part 1 Appendices: 
+• Appendix C – WIM Procurement Resources 
+o Example WIM Contract Language (GDOT) 
+o Example of IRD Standard Warranty Statement 
+o Example of IRD WIM System Installation Standards 
+Part 2 Appendices: 
+• Appendix D – WIM Site Design and Installation 
+Resources 
+o Example Pavement Surfacing Plans (SDDOT) 
+o Example Polymer Piezo Installation Plan 
+o Example SLC Layout (Mettler-Toledo) 
+o Example WIM Installation Standard (NJDOT) 
+o Example WIM Site Design (MT DOT) 
+o Example WIM Cabinet Wiring Diagram 
+o Example Non-compliance Report 
+Part 3 Appendices: 
+• Appendix E – Maintenance and Calibration Resources 
+o Example WIM Calibration Report (AZ DOT)  
+o Example Calibration Test Truck Procurement (LTPP) 
+64 
+ 
+o Example WIM Site Maintenance Forms and Reports 
+(AZ DOT)  
+WIM Program Operation and Management Checklists 
+• Appendix F – WIM Program Operation and 
+Management Checklists 
+o WIM Technology Selection Table 
+o WIM Site Selection Checklist 
+o WIM Site Design Checklist 
+o WIM Site Installation QA Checklist 
+o Initial Calibration Checklist 
+o WIM Site Acceptance Checklist 
+o Test Truck Selection for WIM Calibration 
+o Routine WIM Calibration Checklist 
+o WIM Maintenance Tools, Materials, and Supporting 
+Documentation 
+o WIM Preventive Maintenance Checklist 
+o WIM Troubleshooting Checklist 
+o WIM Data QA/QC Checklist
+U.S. Department of Transportation  
+Federal Highway Administration  
+Office of Highway Policy Information  
+1200 New Jersey Ave., SE  
+Washington, D.C. 20590 
+https://www.fhwa.dot.gov/policyinformation 
+June 2018 
+FHWA-PL-18-015 

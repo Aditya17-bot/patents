@@ -1,0 +1,1832 @@
+Research Report 
+TNW2005 
+Agreement T2695, Task 57 
+Dual-Loop Truck 
+ 
+ 
+ 
+ 
+ 
+ 
+Improving Dual-Loop Truck (and Speed) Data:  
+Quick Detection of Malfunctioning Loops  
+and Calculation of Required Adjustments 
+ 
+ 
+by 
+ 
+Nancy L. Nihan Yinhai Wang Patikhom Cheevarunothai 
+Professor/Director 
+Transportation Northwest 
+Assistant Professor Graduate Research Assistant 
+ 
+Department of Civil and Environmental Engineering 
+University of Washington 
+Seattle, Washington 98195-2700 
+ 
+Washington State Transportation Center (TRAC) 
+University of Washington, Box 354802  
+1107 NE 45th Street, Suite 535 
+Seattle, Washington  98105-4631 
+ 
+ 
+Washington State Department of Transportation 
+Technical Monitor 
+Eldon Jacobson 
+Advanced Technology Engineer, Headquarters Traffic 
+ 
+Sponsored by 
+ 
+Washington State Transportation Commission 
+Washington State Department of Transportation 
+Olympia, Washington 98504-7370 
+ 
+Transportation Northwest (TransNow) 
+University of Washington 
+135 More Hall, Box 352700 
+Seattle, Washington 98195-2700 
+and in cooperation with 
+U.S. Department of Transportation 
+Federal Highway Administration 
+ 
+ 
+ 
+December 2006
+TECHNICAL REPORT STANDARD TITLE PAGE 
+1.  REPORT NO. 2.  GOVERNMENT ACCESSION NO. 3.  RECIPIENT'S CATALOG NO. 
+WA-RD 647.1   
+4.  TITLE AND SUBTITLE 5.  REPORT DATE 
+IMPROVING DUAL-LOOP TRUCK (AND SPEED) DATA:  December 2006 
+QUICK DETECTION OF MALFUNCTIONING LOOPS AND 
+6.  PERFORMING ORGANIZATION CODE 
+CALCULATION OF REQUIRED ADJUSTMENTS  
+7.  AUTHOR(S) 8.  PERFORMING ORGANIZATION REPORT NO. 
+Nancy L. Nihan, Yinhai Wang, Patikhom Cheevarunothai  
+9.  PERFORMING ORGANIZATION NAME AND ADDRESS 10.  WORK UNIT NO. 
+Washington State Transportation Center (TRAC)  
+University of Washington, Box 354802 
+11.  CONTRACT OR GRANT NO. 
+University District Building; 1107 NE 45th Street, Suite 535 Agreement T2695, Task 57 
+Seattle, Washington  98105-4631  
+12.  SPONSORING AGENCY NAME AND ADDRESS 13.  TYPE OF REPORT AND PERIOD COVERED 
+Research Office 
+Washington State Department of Transportation 
+Transportation Building, MS 47372 
+Final Research Report 
+Olympia, Washington 98504-7372 
+14.  SPONSORING AGENCY CODE 
+Doug Brodin, Project Manager, 360-705-7972  
+15.  SUPPLEMENTARY NOTES 
+This study was conducted in cooperation with the U.S. Department of Transportation, Federal Highway 
+Administration. 
+16.  ABSTRACT 
+The capability of measuring vehicle lengths makes dua l-loop detectors a potential real-time truck data 
+source for freight movement studies. However, a previous study found that the dual-loop detection 
+system of the Washington State Department of Transportation (WSDOT) was not consistently reporting 
+accurate truck volumes because of its sensitivity setting problems. Specifically, the sensitivity problems 
+found were: (1) sensitivity discrepa ncies between the two single loops that form a dual-loop detector; 
+and (2) unsuitable sensitivity level settings for bot h single loops even when discrepancies weren’t 
+significant. Both problems can re sult in erroneous vehicle lengt h estimates and, consequently, 
+inaccurate truck counts.  
+As an extension of the previo us study, this research project developed an algorithm for the 
+identification and correction of such loop sensitiv ity problems. The algorithm identifies dual-loop 
+sensitivity problems using individu al vehicle information extracte d from high-resolution loop event 
+data and corrects dual-loop sensitivities through a two-step procedure: 1) remove the sensitivity 
+discrepancy between the two single loops and 2) adjust  their sensitivities to the appropriate level. The 
+algorithm was also implemented in a computer application named the Advanced Loop Event Data 
+Analyzer (ALEDA) system for convenient usage.  
+Elimination of dual-loop sensitivity problems enha nces the reliability of  the dual-loop detection 
+system and improves the quality of  truck volume data. The findings and products from this study will 
+help WSDOT obtain more accurate speed and truck volume data from the existing dual-loop detectors. 
+17.  KEY WORDS 18.  DISTRIBUTION STATEMENT 
+Truck Data, Dual-Loop Detectors, Loop 
+Sensitivity, Speed  
+No restrictions.  This document is available to the 
+public through the National Technical Information 
+Service, Springfield, VA  22616 
+19.  SECURITY CLASSIF.  (of this report) 20.  SECURITY CLASSIF. (of this  page) 21.  NO. OF PAGES 22.  PRICE 
+None None   
+ 
+ 
+iii 
+DISCLAIMER 
+ 
+The contents of this report reflec t the views of the authors, who are responsible for the facts and 
+accuracy of the data presented herein. This document is disseminated through the Transportation 
+Northwest (TransNow) Regional Center under th e sponsorship of the U.S. Department of 
+Transportation UTC Grant Program and thr ough the Washington State Department of 
+Transportation. The U.S. Government assumes no liability for the contents or use thereof. 
+Sponsorship for the local match portion of this re search project was provided by the Washington 
+State Department of Transportation. The contents do not necessarily reflect the views or policies 
+of the U.S. Department of Tr ansportation or Washington State Department of Transportation. 
+This report does not constitute a standard, specification, or regulation. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+iv 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+v 
+TABLE OF CONTENTS 
+ 
+EXECUTIVE SUMMARY ………………………………………………………..…..ix 
+  
+CHAPTER 1 Introduction………..……………………………………………………1 
+1.1 Research Background……………………………………………..........1 
+1.2 Research Objectives…………………………………………………….3 
+  
+CHAPTER 2 State of the Art………………………………………………………….4 
+  
+CHAPTER 3 Principles of Loop Detection……………………………………………8
+3.1 Loop Occupancy………………………………………………………..8 
+3.2 Loop Sensitivity Levels………………………………………….……..9 
+3.3 Speed Measurements…………………………………………………..10
+3.4 Vehicle Length Measurements ……………………………...…….…..11
+   
+CHAPTER 4 Research Approach……………………………………………………12 
+4.1 Identification of Dual-Loop Se nsitivity Discrepancies..………………12 
+4.2 Detection of Dual-Loop Incorrect Sensitivity Levels……...………….15 
+4.3 Development of An Algorithm for Correcting Dual-Loop Sensitivity 
+Problems……………………………………………………………….19
+   
+CHAPTER 5 Development of the Advanced  Loop Event Data Analyzer System ….22 
+5.1 Loop Event Data…...………………………………………………….23 
+5.2 System Design and Components………………………………………24
+5.3 System Implementation………………………………………………..26
+5.4 User Interface………………………………………………………….27 
+5.5 Measurements of Speed and Vehicle Lengths………………………...29 
+CHAPTER 6 System Testing and Discussion………...…………...…………………32
+6.1 Test Data Collection...…………...…………………………………….32
+6.2 Data Extraction………………………………………………………...35
+6.3 System Testing………………………………………………………...35 
+6.4 Evaluating the Effectiveness of the Algorithm in Identifying Dual- 
+Loop Sensitivity Problems…………………………………………….36 
+ 
+6.5 Evaluating the Effectiveness of the Algorithm in Correcting Dual- 
+Loop Sensitivity Problems……………………………………………41 
+ 
+vi 
+ 
+6.6 Truck Data……………………………….……………………………43 
+6.7 Analysis Results Summary……………………………………………45 
+  
+CHAPTER 7 Conclusions and Recommendations…………………………………...47
+7.1 Conclusions……………………………………………………………47 
+7.2 Recommendations for Further Study………………………………….48 
+  
+ACKNOWEDGMENTS………………………………………………………………..50 
+GLOSSARY OF ACRONYMS………………………………………………………...51 
+REFERENCES………………………………………………………………….………52
+  
+ 
+ 
+ 
+ 
+ 
+vii 
+LIST OF FIGURES 
+ 
+Figure Page 
+ 
+ 4-1 The M Loop Is Over-Sensitive and the S Loop Is at the Correct Sensitivity  
+Level .............................................................................................................. 14 
+ 4.2 The M Loop Is at the Right Sensitivity Level and the S Loop Is Over- 
+Sensitive......................................................................................................... 14 
+ 4-3 SV Length Histogram of Too-High Dual-Loop Sensitivity .......................... 18 
+ 4-4 SV Length Histogram of Too-Low Dual-Loop Sensitivity ........................... 18 
+  
+ 5-1 Sample File of Event Data ............................................................................. 24 
+ 5-2 The ALEDA’s Component Connections ....................................................... 26 
+ 5-3 The ALEDA’s Data Flow .............................................................................. 26 
+ 5-4 The ALEDA User Interface for Collecting Traffic Data............................... 28 
+ 5-5 The ALEDA User Interface for Solving the Dual-Loop Sensitivity Problems 29 
+ 5-6 The ALEDA’s Flow Chart for Speed and Length Calculations .................... 30 
+ 
+ 6-1 Dual-Loop On-Time Differences for Lane 1 at ES-172R ............................. 37 
+ 6-2 Dual-Loop On-Time Differences for Lane 2 at ES-172R ............................. 37 
+ 6-3 Dual-Loop On-Time Differences for Lane 3 at ES-172R ............................. 38 
+ 6-4 Estimated SV Median Length at  ES-172R (SB I-5 & Metro Base) .............. 40 
+ 6-5 Variation of DIFF% in Lane 3 at ES-172R (SB I-5 & Metro Base).............. 42 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+viii 
+LIST OF TABLES 
+ 
+Table Page 
+ 
+ 3-1 Threshold Values for Percentage Cha nge of Inductance (Eight-Level System) 10 
+ 3-2 Threshold Values for Percentage Change of Inductance (Sixteen-Level  
+System) .......................................................................................................... 10 
+ 
+ 6-1 TDAD Volume Data at the ES-172R  Station (NB I-5 and Metro Base) on  
+November 28, 2004........................................................................................ 32 
+ 6-2 TDAD Volume Data at the ES -137R Station (NB I-5 and NE 45
+th St.) on  
+November 28, 2005........................................................................................ 33 
+ 6-3 Comparison of Vehicle Count Data at the ES-137R Station (NE I-5 and  
+NE 45th NB) on November 30, 2005 ............................................................. 36 
+ 6-4 The Variation of DIFF% for Lane 3 at the ES-172R Station (NB I-5 and  
+Metro Base).................................................................................................... 42 
+ 6-5 TDAD Volume Data at the ES -137R Station (NB I-5 and NE 45th NB) on  
+December 2, 2005 .......................................................................................... 43 
+ 6-6 Vehicle Count Data for Lane 1 at ES-137R (SB I-5 and NE 45 th St. NB)  
+BEFORE and AFTER the Sensitivity Tune-Up ............................................ 44 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ix 
+EXECUTIVE SUMMARY 
+ 
+A previous study found that th e dual-loop detection system of the Washington State 
+Department of Transportation (WSDOT) was no t consistently reporting accurate vehicle 
+classification information because of dual- loop sensitivity problems. Two common types 
+of sensitivity problems were found: (1) sensi tivity discrepancies between the two single 
+loops that form a dual-loop detector; and (2) unsuitable sensitivity level settings for both 
+single loops. Both problems can result in  erroneous vehicle length estimates and, 
+consequently, inaccurate truck counts.  
+This research project developed, tested, and evaluated an algorithm for identifying 
+and correcting dual-loop sensitivity prob lems. The algorithm identifies dual-loop 
+sensitivity problems by using individual ve hicle information extracted from high-
+resolution loop event data. It corrects dua l-loop sensitivities through a two-step 
+procedure: 1) remove the se nsitivity discrepancy between the two single loops; and 2) 
+adjust their sensitivities to the correct leve l. The algorithm was also implemented in a 
+computer application named the Advanced Loop Event Data Analyzer (ALEDA) system 
+for convenient usage.  
+ The algorithm was tested at  two dual-loop stations on In terstate-5 in the greater 
+Seattle area. The ALEDA system was used to identify and correct dual-loops with 
+sensitivity problems at these two stations. Tests were conducted for approximately 24 
+hours at each loop station to check whether the se nsitivity problems we re affected by 
+traffic conditions. The analysis results show ed that the proposed algorithm was effective 
+ 
+x 
+in identifying and fixing dual-loop sensitivity problems and, therefore, could improve the 
+performance and effectiveness of the WSDOT dual-loop detection systems. 
+ The principal findings of this research are as follows: 
+1) Setting Detector Electronic Units (DEUs) at  the same sensitivity levels cannot assure 
+that the on-times (an on-time is defined as the duration that a loop detector is 
+occupied by a vehicle) measured by th e upstream loop (the M loop) and the 
+downstream loop (the S loop) of a dual-l oop detector are identical. Large on-time 
+differences between the M and S loops can cause erroneous measurements of vehicle 
+speed and hence vehicle length.  
+2) Sensitivity discrepancies between the M and S loops may be eliminated by adjusting 
+the sensitivity level settings at the DEUs . The ALEDA system makes this process 
+easy. 
+3) The on-time difference between the M and S loops is also affected by other factors. 
+For example, it can be intermittently large because of temporary cross-talk impacts. 
+4) The sensitivities of the M and S loops ma y be the same (average on-time difference = 
+0) while both loops are at incorrect sensit ivity levels (i.e., both single loops are over-
+sensitive or under-sensitive). In this cas e, speed measurements are accurate, but 
+measurements of vehicle lengt hs are incorrect because the on-times measured by the 
+M and S loops are either too long or too s hort. Vehicle classifications based on these 
+imprecise lengths will be incorrect. Features of vehicle length distribution can be used 
+to set the two single loop sensitivities to the correct sensitivity level. 
+5) WSDOT’s Loop maintenance st aff can utilize the ALEDA system at loop stations to 
+minimize the dual-loop sensitivity problems. Once a dual-loop sensitivity is correctly 
+ 
+xi 
+tuned, the dual-loop detectors wi ll be a reliable source fo r real-time speed and truck 
+data. 
+6) The proposed algorithm and the ALEDA system  were demonstrated to be effective at 
+tuning dual loop detectors. Further improveme nts to the ALEDA system will make it 
+a handy tool for loop detector maintenance st affs to use in identifying and correcting 
+dual-loop sensitivity problems. Further im provements may include an enhancement 
+of user interface design and hardware selection.   
+ 
+ 
+xii 
+ 
+ 
+ 
+1 
+CHAPTER 1   INTRODUCTION 
+ 
+1.1 RESEARCH BACKGROUND 
+Real-time traffic data collected by loop detect ors are a primary data source for Advanced 
+Traffic Management Systems (ATMS) and Advanced Traveler Information Systems 
+(ATIS) (Al-Deek 1991; Chen and Chang 1993; Chen et al. 2001).  The archived traffic 
+data are used for a variety of transportation applications, including transportation 
+planning, infrastructure management, mode l calibration, and tr affic simulation and 
+operations (Clark et al. 2001; Cleghorn et al 1991; Wang and Nihan 2003, 2004a).  
+ The Washington State Department of Transportation (WSDOT) has made an 
+enormous investment in the installation of loop detectors throughout the freeway network 
+in the Puget Sound region. Almost half of the l oop-detector stations in the central Seattle 
+area freeway network are equipped with dual-loop detectors for the purpose of measuring 
+speed and classified vehicle volume data. Vehi cles are classified on the basis of their 
+lengths, and the WSDOT dual-loop detection sy stem assigns each vehicle to one of the 
+following four bins: (a) Bin 1 – passenger cars (PCs), pickups, and other smaller vehicles 
+(length 26 ft or less); (b) Bin 2 – single-unit trucks and small vehicles pulling trailers. (26 
+ft to 39 ft); (c) Bin 3 - combination trucks and buses (39 ft to 65 ft); and (d) Bin 4 – 
+multi-trailer trucks (length greater than 65 ft).   
+Since the majority of vehicles in bins 2 through 4 represent trucks, correct bin 
+volume counts in those bins should yield reliable truck flow data along the freeway 
+network. However, a preliminary study on Inte rstate-5 (Zhang et al. 2003) found that the 
+WSDOT dual-loop detection system was not consistently reporting accurate truck 
+ 
+2 
+volumes. In that study, the accuracy of dual-l oop collected bin volumes was evaluated by 
+using video-captured ground-truth data, and the major findings included the following: 
+• The dual-loop detectors under-counted vehicle volumes. This was a very common 
+problem in the dual-loop detection system . More than 80 percent of the dual-loop 
+detectors had significant under-count errors. 
+• Dual-loop detectors misclassified vehicles across bins, especially between bins 1 
+and 2, and bins 3 and 4. For off-peak  hours, observed errors in truck 
+misclassifications ranged from 30 to 41 percent and, for peak hours, observed 
+errors in bin assignments for trucks ranged from 33 to 55 percent. 
+The major cause of the poor performance of  dual-loop detectors appears to be the 
+remarkable difference in lane-occupancy betw een the direct measurements of the two 
+single-loop detectors that form a dual l oop (Zhang et al. 2003). When the occupancy 
+difference calculated from the direct meas urements of the two single loops exceeds a 
+certain threshold, the current WSDOT dual-loop  algorithm discards the vehicle from the 
+data set before the length calculation and classification operations are performed. Such 
+occupancy discrepancies can be generated by any of the following factors:  
+• incorrect mode setting for one  or both of the single l oop detectors in a dual loop 
+system  
+• inconsistent sensitivity levels for the two loops 
+• other hardware malfunctions.  
+Since the sensitivity of a single-loop dete ctor is determined by many factors (e.g., 
+maker-specific standards, roadway materi al, construction met hod, and environmental 
+conditions) in addition to operator judgment for the operator-set sensitivity level, it is not 
+ 
+3 
+an easy job to place a single-loop detector’s sensitivity at the appropriate level. The 
+empirical procedures currently  used to adjust loop sensi tivity cannot usually achieve 
+favorable results. Therefore, a new tool  for identifying and correcting dual-loop 
+sensitivity problems is desired. 
+ 
+1.2 RESEARCH OBJECTIVES 
+This study aimed to develop a solution to detect and fix the two major types of 
+sensitivity problems with dual-loop detector s: sensitivity discrepancy between the two 
+single loops that form a dual loop detector and the incorrect sensitivity levels for the two 
+single loops. Specifically, there are two major objectives for this research: 
+• develop an algorithm that can identify a nd correct dual-loop sensitivity problems 
+by using individual vehicle information extracted from high-resolution loop 
+detector event data; and  
+• develop a computer system that can correctly tune dual -loop detectors by 
+incorporating the proposed algorithm as its core component.  
+Once a dual-loop detector’s sensitivity is correctly tuned, it will be a reliable source for 
+real-time speed and truck data. 
+  
+ 
+4 
+CHAPTER 2   STATE OF THE ART 
+ 
+Loop malfunctions are the major causes of errors in loop de tector data. Erroneous loop 
+measurements seriously degr ade the performance of Advanced Traffic Management 
+Systems (ATMS) and Advanced Traveler  Information Systems (ATIS). Several 
+procedures have been proposed for dete cting and correcting loop malfunctions. In 
+general, these procedures can be classified in to two categories based on the type of data 
+used: ( 1) validity tests based on interv al-aggregated loop data and ( 2) high-resolution 
+loop-event-data-based tests. Sample studies of category (1) include Chen and May 
+(1987), Nihan et al. (1990), J acobson et al. (1990), Cleghorn  et al. (1991), and Turner 
+(2000). Data used for these studies were inte rval loop measurements of 20 or 30 seconds. 
+Traffic variables calculated from aggregated volume and occupancy measurements were 
+compared with empirical thresholds for malfunction identification. Since individual 
+vehicle information is not available in inte rval loop data, these ag gregated data-based 
+tests can detect only certain t ypes of loop detector errors. For better error detections, 
+high-resolution loop event data are necessa ry. Loop event data contain important 
+individual vehicle data, including actuation counts, arrival time, and departure time. Such 
+individual vehicle information can be us ed to pinpoint loop de tector malfunctions. 
+Examples of category (2) studies are Coifman and Dhoor jaty (2004) and Cheevarunothai 
+et al. (2005).  
+ Since dual-loop detector data are typical ly aggregated into 20- or 30-second 
+intervals to save data storage space and co mmunication bandwidth, most traffic agencies 
+currently use interval-aggregated loop data for checking whether loop malfunctions exist. 
+The current WSDOT loop detection system aggregates loop measurements into 20-
+ 
+5 
+second intervals for archival and analysis. On the basis of the WSDOT 20-second 
+interval data, a procedure to detect l oop malfunctions was proposed by Nihan et al. 
+(1990). The procedure compares collected tr affic counts and volume-to-occupancy ratios 
+with certain constant threshol ds to determine the reliability  of loop data. Data suspected 
+of errors are marked with flags. The pr ocedure is capable of filtering out serious 
+malfunctions, such as those caused by short pul ses and chattering, but is limited to those 
+visible from the aggregated da ta. Obviously, the loss of indi vidual vehicle information in 
+the aggregated data makes in -depth analysis of loop malf unctions more complicated and 
+at times impossible. 
+ High-resolution loop event data became ava ilable as a result of new developments 
+in computer software and hardware tec hnologies (Chen and Ma y 1987; Coifman 1999; 
+Coifman et al. 2000; Zhang et al. 2003; and Cheevarunothai et al. 2005). Such loop event 
+data preserve information on individual vehi cles and allow in-depth analyses of loop 
+malfunctions. Nonetheless, litt le has been accomplished in using event data to identify 
+and correct loop sensitivity problems. 
+ Loop event data have been employed by the Berkeley Highway Laboratory 
+(BHL) for loop data quality evaluations. Chen and May (1987) developed a procedure for 
+verifying loop detector data by using event data. Coifma n and Dhoorjaty (2004) made 
+another step forward by develo ping detector validation tests that used individual vehicle 
+information extracted from event data (e.g., on-time, speed, length, and headway). The 
+extracted vehicle information was compar ed with corresponding pre-set constant 
+thresholds to identify erroneous loop data. These studies demonstrated the values of using 
+high-resolution event data for loop data error identifications and corrections.   
+ 
+6 
+Since a standard loop detector station employs a Model 170 controller in 
+California, the California Department of Tran sportation (Caltrans) uses the processing 
+capability of the Model 170 controller to coll ect and store event data from the field for 
+the I-880 Field Experiment (Coifman et al. 2000). Because of the limited computing 
+power of a Model 170 controller, outputting 60 Hz event data obstructs the normal 
+operation of the controller. Thus, when a M odel 170 controller is used for event data 
+collection by the BHL, the normal operation of the controller is interrupted.  
+To facilitate the event data collection process, a Detector Event DAta Collection 
+(DEDAC) system was developed at the Univ ersity of Washington (UW) in 2002 (Zhang 
+et al., 2003). The system is capable of collect ing event data from the Input File of a 
+control cabinet.  Because the DEDAC system taps loop events before they flow into the 
+controller and relies on its own computing power for data processing and storing, the 
+controller’s normal operation is  not interrupted. The DEDAC  system makes loop event 
+data collection cheap and easy. Using the ev ent data collected by the DEDAC system, 
+Zhang et al. (2003) found that the major cause of inaccurate dual-loop data is the 
+incorrect sensitivity levels of a dual-loop dete ctor. An extended analysis confirmed this 
+result. A dual-loop sensitivity problem can re sult from either of the following two 
+scenarios: (1) the sensitivit y level discrepancy between the two single loops, and (2) 
+unsuitable loop sensitivity levels on both single loops.  
+The accuracy of a loop detector’s measurem ents is significantly influenced by its 
+sensitivity. For example, the higher the loop sensitivity, the longer a vehicle’s loop on-
+time. Consequently, both type s of validity tests may give erroneous conclusions about 
+loop malfunctions when sensitiv ity-influenced loop da ta are applied. Th erefore, a loop’s 
+ 
+7 
+sensitivity problems must be fixed before  its data are used for loop malfunction 
+detections.  
+ 
+ 
+8 
+CHAPTER 3   PRINCIPLES OF LOOP DETECTION 
+ 
+3.1 LOOP OCCUPANCY 
+Loop occupancy is defined as the percentage of time that a loop is occupied by vehicles 
+over a time period. It can be calculated by dividing the sum of vehicle on-times by the 
+time period length. The measurement of an on- time starts when the front bumper of a 
+vehicle arrives at the leading edge of a single loop and ends when the rear end of the 
+vehicle passes the loop’s lagging edge.  
+ Each loop detector is a tuned electrical  circuit in which th e loop wire is the 
+inductive element. Its inductance is represented by L. When a vehicle drives over the loop 
+wire, eddy currents are induced around the peri pheral metal of the vehicle. Although the 
+iron mass of the vehicle’s engine, transmissi on, or differential will increase the loop 
+inductance as a result of the ferromagnetic effect, the decrease in inductance from the 
+eddy currents more than offsets the increase fr om the ferrous mass, and the net effect of 
+the vehicle’s presence is an overall reduction in loop inductance denoted by 
+ΔL. 
+Therefore, when a vehicle is on  top of a loop detector, it decreases the inductance of the 
+loop. This decrease in inductance then tri ggers the detector el ectronic unit’s (DEU) 
+output relay or solid state circuit, which, in turn, switches the output voltage to the 
+controller to a low level (close to zero volt  direct current (V DC)) signifying that a 
+vehicle’s presence has been detected (ITE 1997). 
+ Traffic controllers located in the roadsi de control cabinets typically scan loop 
+detectors at a rate of 60 times per sec ond (Coifman et al. 2000; Zhang et al. 2003) . Each 
+scan results in a “loop occupi ed” or “loop not occupied” response. A scan counter in the 
+ 
+9 
+controller is incremented once for each “loop occupied” response. A vehicle’s on-time in 
+seconds can be converted from its scan counts (SCs):  
+60
+SCsOntime =                                                      (3-1) 
+ 
+In the current WSDOT loop detection system, loop occupancy is calculated as follows: 
+                                             100*1200
+interval second20 -ainSCsOccupancy =                (3-2) 
+ 
+In this research, we used SCs of individual vehicles to calculate the on-times and then 
+used the calculated on-times for identifying and correcting dual-loop sensitivity 
+problems.  
+3.2 LOOP SENSITIVITY LEVELS 
+A loop detector identifies the presence of a ve hicle by comparing the relative change of 
+loop inductance (ΔL/L) caused by a vehicle traversing ove r a loop with a threshold value 
+that is often referred to as loop sensitivity level. The minimum percentage change of 
+inductance (min ΔL/L) necessary for a DEU to respond is adjustable. A typical DEU used 
+on freeways has eight or sixteen levels of sensitivity settings. The threshold values for 
+these sensitivity levels are shown in tables  3-1 and 3-2. The normal sensitivity level for 
+the eight-level DEU is 4, and that of the sixteen-level DEU is 10. According to tables 3-1 
+and 3-2, the higher the sensitivity level, the easier the detection of a vehicle. However, an 
+over-sensitive loop may have ot her detection problems, such  as detecting vehicles on 
+adjacent lanes. The main consideration for having several sensitivity levels available with 
+a DEU is to allow the optimal sensitivity setting over a variety of loop configurations. 
+ 
+10 
+Table 3-1. Threshold Values for Percentage Change of Inductance (Eight-Level 
+System) 
+Sensitivity Level min ΔL/L
+7 0.01%
+6 0.02%
+5 0.04%
+4 0.08%
+3 0.16%
+2 0.32%
+1 0.64%
+0 1.28%
+ 
+Table 3-2. Threshold Values for Percentage Change of Inductance (Sixteen-Level 
+System) 
+Sensitivity Level min ΔL/L Sensitivity Level min ΔL/L 
+15 0.010% 7 0.160% 
+14 0.014% 6 0.226% 
+13 0.020% 5 0.320% 
+12 0.028% 4 0.453% 
+11 0.040% 3 0.640% 
+10 0.057% 2 0.905% 
+9 0.080% 1 1.280% 
+8 0.113% 0 OFF 
+ 
+3.3 SPEED MEASUREMENTS 
+A dual-loop detector system consists of two single loops  separated by several feet. 
+According to the WSDOT convention, the ups tream single loop is called the M loop, and 
+the downstream single loop is called the S loop. Because the leading edge to leading edge 
+distance between the M loop and the S loop ( DistMS) is predetermined and the traversal 
+time between the two loops can be directly measured, a dual  loop detector  can output 
+vehicle speed. In Washington State, DistMS is normally 16 feet (4.8 meters). If a vehicle 
+arrives at the M loop at tm-on and at the S loop at ts-on, then its speed can be calculated as 
+ 
+11 
+                                                       )( onmons
+MS
+tt
+DistSpeed
+−− −=                                             (3-3) 
+3.4 VEHICLE LENGTH MEASUREMENTS 
+A dual-loop detector classifies vehicles into  bins according to their lengths. A vehicle’s 
+length can be estimated from its speed and on-times measured by the M and S loops. The 
+on-times for the M and S loops (OntimeM and OntimeS, respectively) can be expressed as 
+                                                       onmoffmM ttOntime −− −=                                           (3-4) 
+                                                       onsoffsS ttOntime −− −=                                             (3-5) 
+The WSDOT’s dual loop algorithm uses Equation (3-6) for vehicle length calculation: 
+                             hLoop LengtOntimeOntimeSpeedLength SM −⎥⎦
+⎤
+⎢⎣
+⎡ ⎟
+⎠
+⎞⎜
+⎝
+⎛ += 2 *               (3-6) 
+Since OntimeM and OntimeS may be different because of possible speed variations over 
+DistMS, the mean on-time value is used for calculating vehicle length to minimize the 
+estimation error. The loop length term is in cluded in Equation (3-6) because the on-time 
+of a vehicle is measured from the moment the vehicle’s front bumper reaches the leading 
+edge of a single loop to the time its rear end leaves the lagging edge of the loop. Hence, 
+the loop length is subtracted from the loop dete ctor’s effective vehicle lengths to give the 
+actual vehicle length in Equation (3-6).  
+ 
+ 
+12 
+CHAPTER 4   RESEARCH APPROACH 
+ 
+The two major types of dual-l oop sensitivity problems considered in this study were 1) 
+sensitivity discrepancy between the M and S l oops; and 2) incorrect se nsitivity levels for 
+both the M and S loops, even t hough no discrepancy is observed. These are the two main 
+causes of imprecise speed and vehicle lengt h measurements in the existing dual-loop 
+detection systems. Remedial solutions to the first and second sensitivity problems are 
+described in sections 4.1 and 4.2, respectiv ely. An algorithm developed for identifying 
+and fixing the two sensitivity problems based on the remedial solutions is presented in 
+section 4.3. 
+4.1 IDENTIFICATION OF DUAL-LOOP SENSITIVITY DISCREPANCIES 
+To achieve accurate measurements of vehicle speed, the sensitivity levels of the M and S 
+loops must be approximately the same. Howe ver, the same sensitivity level settings on 
+the DEUs of the M and S loops may not assure  the same sensitivity levels between the 
+two single loops because a l oop’s inductance is also aff ected by its environmental 
+conditions (such as temperature, humidity, ro ad pavement structure and conditions, etc.), 
+which may differ from location to location. Variation in environmental conditions can 
+cause sensitivity inconsiste ncies between the M and S loops and, thus, imprecise 
+calculations of speed. The greater the difference in sensitivity between the M and S loops, 
+the greater the inaccuracy of the speed measurements. 
+ Because DistMS (the leading edge to leading ed ge distance between the M and S 
+loops) is small (about 16 ft or 4.88 meters), speed is consid ered to be constant when a 
+vehicle traverses over the M and S loops. W ith a constant speed, the M and S loops 
+ 
+13 
+should have identical on-time measurements; i.e., their on-time diffe rences should be 
+zero if their sensitivities agr ee. Therefore, an on-time difference can be an indicator of a 
+sensitivity discrepancy between the M and S loops.  
+The percentage of on-time difference can be calculated as 
+                             ( ) 100*    (%) 
+M
+SM
+Ontime
+Ontime-OntimefferenceOn-Time Di =                     (4-1) 
+ 
+In accordance with Equation (4-1 ), if the M loop is more sensitive than the S loop, the 
+on-time difference will be positive, and vice versa. Therefore, we can infer whether a 
+sensitivity discrepancy problem exists and its possible causes from the calculated on-time 
+difference. In this research, if only one of the loops had an incorrect sensitivity level, the 
+sensitivity discrepancy problems were attributed to four main causes: 
+1) Over-Sensitive M Loop 
+If the M loop’s sensitivity is higher than  the appropriate level, a vehicle can be 
+detected before it reaches the leading edge  of the M loop. This  is illustrated in 
+Figure 4-1. In this case, because the tr avel time measurement from the leading 
+edge of the M loop to the leading e dge of the S loop is longer than the 
+measurement that would be made if the M and S loops had the same sensitivity 
+levels, the measured speed will be lower than the actual speed.  
+2) Over-Sensitive S Loop 
+If the S loop’s sensitivity is higher than  the appropriate leve l, a vehicle can be 
+detected before it reaches the leading edge  of the S loop. This  is illustrated in 
+Figure 4-2.  In this case, the travel time measurement from the leading edge of the 
+M loop to the leading edge of  the S loop is shorter than that the measurement that 
+ 
+14 
+would be made if the M and S loops had the same sensitivity levels. Hence, the 
+measured speed will be higher than the actual speed. 
+ 
+ 
+Figure 4-1. The M Loop Is Over-Sensitive and the S Loop Is at the Correct 
+Sensitivity Level 
+ 
+ 
+Figure 4-2. The M Loop Is at the Right Sensitivity Level and the S Loop Is Over-
+Sensitive 
+ 
+ 
+3) Under-Sensitive M Loop 
+Similarly, if the M loop’s sensitivity is below the appropriate level, a vehicle 
+cannot be detected until it passes the lead ing edge of the M l oop. The travel time 
+ 
+15 
+measurement used for the speed calculation will be shorter than  the actual value 
+and, thus, speed will be over-estimated.  
+4) Under-Sensitive S Loop 
+Conversely, speed will be under-estimated if the S loop’s sensitivity is below the 
+appropriate level because the travel time measurement used for the speed 
+calculation will be longer than the actual value in this case. 
+According to the WSDOT dual-loop algorithm, if a vehicle’s on-time difference is 
+beyond ±10 percent, it is not clas sified (assigned to a bin) , although its speed is still 
+recorded. This threshold was originally set to screen out possible measurement errors 
+from vehicles crossing the M loop in one lane  and then the S loop in a different lane. 
+However, Zhang et al (2003) found that the majo rity of the vehicles screened out by this 
+±10 percent criterion at dual-loop stations w ith serious under count problems (where the 
+total bin volume measurements were signifi cantly lower than the volumes counted by 
+either the M loop or the S l oop) were actually not lane-c hanging vehicles. They also 
+found that sensitivity discrepancy was th e main reason for the dual-loop under-count 
+problems at the observed loop stations. Consequently, if the sensitivity discrepancy 
+problem could be solved, dual-loop detector s would provide better speed and bin volume 
+measurements. 
+4.2 DETECTION OF DUAL-LOOP INCORRECT SENSITIVITY LEVELS 
+Measurements of vehicle speed from dual-l oop detectors should be accurate once the 
+sensitivity discrepancy problem has been correc ted. However, even if the sensitivities of 
+the M and S loops are consistent, both may be at an incorrect level, i.e., both  loops may 
+be over-sensitive or under-sensitive. As stated previously, incorrect sensitivity levels for 
+ 
+16 
+a dual loop can result in inaccurate on-time measurements. As shown in Equation (3-5), 
+the calculation of vehicle leng th is based on these on-time measurements. Therefore, 
+imprecise on-times will lead to erroneous ve hicle length estimates. For instance, overly 
+high sensitivity levels on both the M a nd S loops will produce lengthened on-time 
+measurements for both loops. Vehicle lengths calculated from these lengthened on-times 
+will be longer than the actual vehicle lengths. Similarly, if the sensitivity levels of the M 
+and S loops are not high enough, vehicle on-tim e measurements will be shorter than the 
+actual values. These shorter-than-normal on-tim es will result in under-estimated vehicle 
+lengths. Because the WSDOT vehi cle classification algorithm cl assifies vehicles on the 
+basis of vehicle lengths, incorrect sensitivity levels of a dual-loop de tection system will 
+cause misclassification of vehicles, i.e., will  assign vehicles to incorrect vehicle-length 
+bins. 
+ To identify an appropriate sensitivity level for the M or the S loop, information on 
+individual vehicle lengths is needed. However, it is very difficult to obtain ground-truth 
+length data for vehicles traveling on freew ays at a specific time period. Therefore, a 
+statistical approach was applied by using the Short Vehicle (SV) length distribution 
+observed by Wang and Nihan (2004b). 
+ According to Wang and Nihan’s vehicle le ngth distribution, SV (corresponds to 
+Bin-1 vehicles) lengths follow a normal distribution, with a mean of 15.21 ft (4.64 m) and 
+a standard deviation (
+SD) of 2.20 ft (0.67 m). The small standard deviation implies that 
+SV lengths change narrowly around the mean . Because of this at tribute, the length 
+information for SVs can be employed to tr ace a correct sensitivity level without 
+ 
+17 
+significant errors. In this research, the SV -length distribution reported by Wang and 
+Nihan (2004) was used as the ground-truth vehicle length distribution for SVs.  
+ A calculated length from a dual-loop de tector will be precise only when the 
+vehicle speed and the on-times are accurate. Accurate speed and on-time measurements 
+require the sensitivities of the M and S loops  to be consistent a nd at the appropriate 
+sensitivity levels. To identify whether the se nsitivity levels for th e M and S loops were 
+appropriate, the calculated SV lengths were  compared with the ground truth SV-length 
+distribution. The comparison was based on th e histogram of calcula ted SV lengths and 
+the histogram generated from the ground tr uth SV-length distribution. When the 
+histogram of SV lengths measured by dual-loop detectors was significantly different from 
+the ground truth SV-length histogram, we concl uded that the sensitivity levels for the M 
+and S loops were incorrect.  
+ When both loops have consistent but incorrect sensitivity levels, there are two 
+extreme cases for this dual-loop sensitivity problem. In the first case, both the M and S 
+loops have overly high sensitivity levels. The histogram of measured SV lengths shifts to 
+the right side of the ground truth histogram , as shown in Figure 4-3, because of 
+unrealistically large on-times for both the M and S loops. (In figures  4-3 and 4-4, the 
+green bars represent the ground truth SV lengt h histogram, and the blue lines represent 
+the histogram of measured SV lengths.) Conversely, if the sensitivity levels of both the M 
+and S loops are too low, the hist ogram of measured SV lengths shifts to the left side of 
+the ground truth histogram, as shown in Figu re 4-4, because of unrealistically short on-
+times. 
+ 
+ 
+18 
+ 
+ 
+Figure 4-3. SV Length Histogram of Overly-High Dual-Loop Sensitivity 
+(Note: 1 ft = 0.305 m) 
+ 
+ 
+ 
+Figure 4-4. SV Length Histogram of Overly-Low Dual-Loop Sensitivity 
+(Note: 1 ft = 0.305 m) 
+ 
+19 
+4.3 DEVELOPMENT OF AN ALGORITHM FOR CORRECTING DUAL-LOOP 
+SENSITIVITY PROBLEMS 
+ 
+As mentioned earlier, sensitivity discrepanc ies in a dual-loop detection system can be 
+detected by calculating on-time differences be tween the M and S loops. If the on-time 
+differences are close to zero,  we can conclude that a dua l-loop detector does not have 
+sensitivity discrepancy problems. Thus, th e dual-loop sensitivity discrepancy problem 
+can be solved by adjusting the sensitivity leve ls at the DEUs until the on-times measured 
+by both the M and S loops are the same, or their on-time differences are zero. For 
+example, if the on-time differences are positiv e, then the M loop is more sensitive than 
+the S loop. We can remove the sensitivity disc repancy by increasing the sensitivity of the 
+S loop and/or decreasing the sensitivity of the M loop. Similarly, if the on-time 
+differences are negative, then the M loop is less sensitive th an the S loop. To close the 
+sensitivity gap, we can increase the sens itivity of the M loop and/or decrease the 
+sensitivity of the S loop. Thus, adjusting l oop sensitivity settings at the DEUs until the 
+on-time differences of a dual-l oop detector are clos e or equal to zero can eliminate the 
+sensitivity discrepancy problem.  
+  As explained in the previous section, we used a statistical approach based on the 
+SV-length distribution observed by Wang and Nihan (2004) to  check whether consistent 
+sensitivity levels of the M and S loops were  appropriate. The histogram of calculated SV 
+lengths and the histogram generated from the ground truth SV-lengt h distribution were 
+compared to identify whether a dual-loop detector  was at an appropriate sensitivity level. 
+When a dual-loop detector is at an inappropria te sensitivity level, the modes of the two 
+histograms are significantly different. To achieve an appropriate sensitivity level, the 
+sensitivity settings at the DEUs should be adjusted until the hi stogram of SV-length 
+ 
+20 
+measurements extracted from dual-loop event data is similar to the histogram of the 
+ground truth SV-length data. 
+ Statistically, the larger th e SV sample size, the more accurate the comparison with 
+the ground truth SV-length histogr am. However, a large sample size takes a long time to 
+accumulate. Because the sensitivity tuning proc ess can take several iterations, requiring 
+multiple field attempts, correction of sens itivity problems may take too long if large 
+samples of SV lengths are used. Therefore, a tradeoff between accuracy and efficiency is 
+necessary. Efficiency and accuracy can be ba lanced by selecting an  appropriate sample 
+size for comparison with the ground-truth SV length histogram. Our experiments and 
+analyses indicated that a sample of 100 SV-l ength measurements would be adequate for 
+our test locations. Analyses based on this sample size provided acceptable accuracy, but 
+further decreases in the samp le size produced instable resu lts due to the random impacts 
+from vehicle arrivals. Daytime traffic volum es at our test loca tions were above 580 
+veh/hr/ln with approximately 10 percent trucks or buses. With similar traffic streams, it 
+should not take more than 13 minutes to collect 100 SV lengths for any dual-loop 
+detector. The time duration for a sample data collection is still significant but tolerable. 
+ For the current study, the histogram of this sample of SV lengths was then 
+compared to the histogram generated from the ground truth SV-lengt h data. At suitable 
+sensitivity levels, the two histograms shoul d match closely. The goodness of fit between 
+the measured SV length distribution and the ground truth SV le ngth distribution was 
+determined by the calculated sum of squared errors. Because SV lengths range from 9 ft 
+(2.74 m) to 25 ft (7.62 m), the measured SV  lengths could be placed into 17 categories 
+with an increment of 1 ft (0.305m) between consecutive categories. The error for each 
+ 
+21 
+length category was defined as the observed number of vehicles subtracted from the 
+expected number of vehicles. If the sum of squared errors ove r all 17 categories was 
+smaller than a specified threshold, we concluded that a particular dual-loop system was at 
+the correct sensitivity level. (Our experien ce showed that 400 is a reasonable threshold 
+value.) Otherwise, we recommended sensitivity adjustments to the two single loops.  
+The sensitivity setting adjustments for the M and S loops may create a new 
+sensitivity discrepancy problem. Before collecting another 100 SV lengths for a new test, 
+the M and S loop sensitivity discrepancy must be examined and corrected to make sure 
+there is no sensitivity discrepa ncy problem. To ensure that a dual-loop detector is at a 
+correct sensitivity level, the identifica tion and correction steps for sensitivity 
+discrepancies and incorrect sensitivity le vels should be applied alternatively and 
+iteratively until both sensitivity problems are eliminated.  
+ 
+ 
+ 
+22 
+CHAPTER 5   DEVELOPMENT OF THE ADVANCED LOOP 
+EVENT DATA ANALYZER (ALEDA) SYSTEM 
+ 
+ 
+High-resolution loop event data are not wi dely collected by existing freeway data 
+collection systems. One of the reasons for this  is the need to save disk space for data 
+storage and bandwidth for data transmission to traffic management centers. The WSDOT 
+loop detection system has event data availabl e in the controllers but  they are discarded 
+after loop measurements are aggregated into  20-second intervals for archiving at the 
+WSDOT Traffic Systems Management Center (TSMC). Therefore, loop event data are 
+not logged or stored in the current WSDOT lo op detection systems. This meant that to 
+accomplish event data collection, a complement ary system that could be applied at loop 
+detector stations was required. The TransN ow ITS Group at UW developed the Detector 
+Event DAta Collection (DEDAC) system to fulfill the requirement of event data 
+collection (Zhang et al. 2003). The DEDAC system was designed to execute on a desktop 
+computer with a peripheral component inte rconnect (PCI) compliant data acquisition 
+card. However, because of the size of a de sktop computer and the available space in a 
+controller cabinet, it was difficult to apply the DEDAC system in the field. A portable 
+laptop version of DEDAC was developed to circumvent this problem. 
+ A further improvement in event data collection and analysis is the newly 
+developed Advanced Loop Event Data Anal yzer (ALEDA) system. The ALEDA system 
+developed in this study is a user-friendly, portable, and practical tool for event data 
+collection, analysis, and dual-loop detector  tuning (Cheevarunotha i et al. 2005). It 
+implements the algorithm described in Chapter 4 for sensitivity tuning of dual-loop 
+detectors. ALEDA utilizes the latest dig ital input/output (I/O) technologies and is 
+ 
+23 
+executable on a laptop computer running Windows 2000 or XP operating systems. 
+Implementation details of the ALEDA system are presented in the follow sections of this 
+chapter. 
+5.1 LOOP EVENT DATA 
+Loop event data are high-resolution loop meas urements typically collected at 60 Hz or 
+higher (Coifman and Dhoorjaty, 2004).  Unlike the WSDOT 20-second aggregated data, 
+loop event data contain complete informati on on individual vehicl es, such as vehicle 
+arrival and departure times, and vehicle on-times.  Therefore, loop event data are great 
+information sources for in-depth analyses of loop malfunctions.  
+By default, ALEDA collects loop event data at 60 Hz, the frequency typically 
+used by a controller to scan  loop detectors. Loop event da ta are stored in a comma 
+delimited data file, as shown in Figure 5-1. This file contains 16 columns of event data 
+that correspond to the readings of the M a nd S loops of eight dual-loop detectors. For 
+example, the first and second columns from the left hand side of the file are for the M and 
+S loops, respectively, of the dual-loop detector in  the first traffic lane (the rightmost lane 
+on freeways by the WSDOT convention). Follow ing the event data columns are four 
+columns of time data for recording the hour, minute, second, and millisecond of each 
+poll. 
+ 
+ 
+ 
+24 
+ 
+Figure 5-1. Sample File of Event Data 
+ 
+5.2 SYSTEM DESIGN AND COMPONENTS 
+According to the Traffic Detector Ha ndbook (ITE 1997), a controller collects loop 
+detector data by reading the voltage signals fr om the Input File of its control cabinet: a 
+high voltage level (24 V DC) represents the situation when no car is on top of a loop 
+detector (“OFF” condition), and a low voltage level (0 V DC) denotes the situation when 
+a car occupies a loop detector  (“ON” condition).  The status  of a loop detector at a 
+particular moment is regarded as an event.  As a loop detector ev ent data collection and 
+analysis system, ALEDA needs to detect such events and record them at 60 Hz or higher. 
+To realize these functions, the ALEDA system  is designed to have the following three 
+hardware components: 
+• Laptop computer with Universal Serial Bus (USB) ports 
+The recommended configuration of a lapt op computer includes Windows 2000 or 
+Windows XP operating system, a Pentiu m 4 processor, and 512 MB of double 
+data rate synchronous dynamic random access memory (DDR SDRAM). 
+
+ 
+25 
+• Digital input/output (I/O) adapter 
+This adapter is required to connect a la ptop computer with a USB port at one end 
+and to connect the Input File housed in a control cabinet at the other end. In our 
+design, we selected the SeaLINK ISO-16 Isolated Inputs Digital Interface Adapter 
+(refer to http://www.sealevel.com/uploads/manuals/8207.pdf for details). It has 
+two ports with eight input channels for each  port. The turn-on logic voltage is 3.8 
+V DC. 
+• Cable connections 
+Normal 24-guage cables are used to conn ect the laptop computer, the digital I/O 
+adapter, and the Input File in a control cabinet. 
+To detect signal voltages and transform th em into binary values, ALEDA directly 
+connects the digital I/O adapter to the Input  File, as shown in Figure 5-2. By this 
+connection, ALEDA taps loop event data fr om the Input File w ithout disturbing the 
+normal operation of the controller. The digita l I/O adapter uses 3.8 V DC to classify 
+voltage signals into high or low levels. For instance, a 2 V DC signal is assigned to the 
+low level category because it is lower than the 3.8 V DC threshold. ALEDA can poll the 
+data address of the digital I/O adapter at 60 Hz or higher. The collected data are managed 
+in an internal array. These data can serve as inputs for real-time calculations and analyses 
+of individual vehicle on-times, speeds, lengths , and on-time differences, or they can be 
+recorded to a user-specified text file  for archiving . The ALEDA system’s data flow is 
+illustrated in Figure 5-3. 
+ 
+26 
+ 
+  Figure 5-2. ALEDA’s Component Connections 
+ 
+   Figure 5-3. ALEDA’s Data Flow 
+ 
+5.3 SYSTEM IMPLEMENTATION 
+The ALEDA system was developed in the C# programming language with the help of the 
+Microsoft Visual C#.NET technologies and additional Universal Library documents from 
+the manufacturer of the digital I/O adapter. It  is a laptop-based computer application to 
+facilitate loop event data collection, analysis, and dual-loop detector sensitivity tune-ups. 
+Controller 
+Cabinet 
+Data 
+Collection 
+Module 
+Data 
+Analysis 
+Module 
+Internal 
+Array 
+Digital 
+I/O 
+Device 
+Event Data File 
+Vehicle Data File 
+User Interface 
+ 
+27 
+ Because a controller scans a loop detector  at 60 Hz to provide inputs to various 
+control and monitoring algorithms, the ALED A system should have the capability of 
+polling the data at the digital I/O adapter at 60 Hz or higher to meet practical needs. A 
+high-resolution timer that can raise events at  user-defined time intervals is needed to 
+fulfill this requirement. The multimedia timer optimized for use in Windows applications 
+in the Visual C#.NET technology was applied in ALEDA. The multimedia timer provides 
+the greatest degree of timing accuracy, allowing applications to schedule timing events at 
+a high resolution. The timing resolution of the ALEDA system can be as high as 80 Hz.  
+5.4 USER INTERFACE 
+The user interface of ALEDA has two main control windows: 1) Traffic Data Window, 
+and 2) Sensitivity Data Window.  
+5.4.1 TRAFFIC DATA WINDOW 
+The traffic data window (shown in Figure 5-4) displays, in real-time, the status of each 
+single-loop and a set of comm only desired traffic data, such as vehicle count, lane 
+occupancy, speed, and vehicle length. A group of  system controls is available for this 
+window. Users can record loop station name, register data collection date and time, and 
+specify a directory for saving the event data file. 
+ 
+28 
+ 
+Figure 5-4. ALEDA User Interface for Collecting Traffic Data 
+ 
+5.4.2 S
+ENSITIVITY DATA WINDOW 
+The sensitivity data window (Figure 5-5) s hows real-time vehicle information related to 
+loop sensitivity check up and adjustment, su ch as vehicle on-times, percentages of on-
+time differences between the M and S loops, the curve of on-time difference changes, the 
+histogram of calculated SV lengths, and the ground-truth SV le ngth histogram from 
+Wang and Nihan (2004b). Such sensitivity da ta are indispensable for detecting and 
+correcting dual-loop sensitivity problems. 
+
+ 
+29 
+ 
+Figure 5-5. ALEDA User Interface for Solving the Dual-Loop Sensitivity Problems 
+5.5 MEASUREMENTS OF SPEED AND VEHICLE LENGTHS 
+The flow chart of the algorithm for calcula ting speed and vehicle length is shown in 
+Figure 5-6. Speed is calculated from DistMS, and the time differences between the arrival 
+time at the leading edge of the M loop ( tm-on) and the arrival time at the leading edge of 
+the S loop (ts-on), as shown in Equation (3-3). In the WSDOT’s loop detection system, the 
+default value of the distance between the leading edge of the M loop and the leading edge 
+of the S loop is 16 feet (4.8 meters). So Equation (3-3) can be rewritten as Equation (5-1): 
+                                                        )(
+16
+onmons ttSpeed
+−− −=                                             (5-1)  
+ 
+30 
+ 
+ 
+Figure 5-6. ALEDA’s Flow Chart for Speed and Length Calculations 
+ 
+ Because lane-changing vehicles at the dua l loop location may not have the correct 
+arrival time measured by the M and S loops, such vehicles should be discarded from 
+length calculations and length-based classi fications. To screen out lane-changing 
+vehicles, ALEDA will match tm-on with ts-on by using a set of condition checks. There are 
+three possible conditions:  
+Collect tm-on
+Collect ts-on
+Yes
+No
+Have ts-on?
+Calculate Speed
+Calculate Vehicle Length
+START
+END
+ 
+31 
+• Condition one: a vehicle traverses ove r both the M and S loops. ALEDA will 
+match its tm-on with the ts-on detected right after the tm-on is recorded.  
+• Condition two: a vehicle traverses over only the M loop but not the S loop. In this 
+case, no ts-on match can be found for the vehicle’s tm-on within a reasonable time 
+window. The tm-on is then dropped from speed and length calculations.  
+• Condition three: a vehicle runs over onl y the S loop but not the M loop. ALEDA 
+will reject the ts-on because it cannot be used as a match for any tm-on.  
+The above condition checks ensure that only vehicles with paired tm-on and ts-on are used 
+for speed calculations and length-based vehicle classifications.  
+An individual vehicle’s length is estimated  immediately after its speed has been 
+calculated. Equation (5-2) shows how the vehicle length can be calculated for a 6 ft × 6 ft 
+(1.8 m × 1.8 m) loop: 
+                                   62 *  −⎥⎦
+⎤
+⎢⎣
+⎡ ⎟
+⎠
+⎞⎜
+⎝
+⎛ += OntimeSOntimeMSpeedLength                          (5-2) 
+Vehicle length is estimated from speed and averaged on-times for the M and S loops. The 
+on-times for the M loop are calcu lated from the arrival time (tm-on) and the departure time 
+(tm-off). Similarly, the S loop’s on-time is obtained from ts-on and ts-off. Because the length is 
+calculated from the average on-time and the on-time depends largely on the loop’s 
+sensitivity level, the sensitivity setting plays a big role in the accuracy of vehicle length 
+estimation. To accommodate more general s ituations, ALEDA provides a function that 
+allows users to specify the distance betw een the M loop and the S loop, and input the 
+loop length. 
+ 
+ 
+32 
+CHAPTER 6   SYSTEM TESTING AND DISCUSSION  
+6.1 TEST DATA COLLECTION 
+6.1.1 TEST SITE SELECTION  
+Data from dual-loop stations with sensitivity problems we re needed to verify the 
+proposed algorithm. On the basis of a prelimin ary analysis using the archived loop data 
+and consultation with WSDOT technical supe rvisors, two dual-loop stations were 
+selected for this test: (1) ES-172R (located at I-5 nort hbound and Metro Base); and (2) 
+ES-137R (located at I-5 northbound and NE 45 th St.). Traffic counts from 6:00 AM to 
+6:00 PM on November 28, 2004, at these two s ites were obtained fr om the Traffic Data 
+Acquisition and Distribution (T DAD) website. Summary statisti cs of these counts are 
+shown in tables 6-1 to 6-2.  Each station has three gene ral purpose (GP) lanes and one 
+high occupancy vehicle (HOV) lane (the left-most lane). Because of the unique 
+characteristics and low traffic volumes of th e HOV lane, it was not included in this test. 
+The GP lanes were numbered 1 through 3 from right to left. Traffic volumes recorded by 
+the M loop, the S loop, and the dual-loop det ector (ST – Speed Traps) are shown in the 
+second, third, and fourth columns, respectively,  in tables 6-1 and 6-2. The last column of 
+the two tables displays the percentage difference (DIFF% ) between the volume counted 
+by the M loop and that counted by the ST. The DIFF% column indicates the severity of 
+the bin-volume undercount problem. 
+ 
+Table 6-1. TDAD Volume Data at ES-172R Station (NB I-5 and Metro Base) on 
+November 28, 2004 
+Lane M loop S loop ST DIFF% = (M loop – ST) / M loop * 100 
+1 15778 15872 14954 5.22 
+2 14082 14686 12845 8.78 
+3 10025 11186 567 94.34 
+ 
+33 
+Table 6-2. TDAD Volume Data at ES-137R Station (NB I-5 and NE 45th St.) on 
+November 28, 2005 
+Lane M loop S loop ST DIFF% = (M loop – ST) / M loop * 100 
+1 8961 8991 8013 10.58 
+2 14232 14283 13659 4.03 
+3 15738 15613 14999 4.70 
+ 
+ As mentioned earlier, the current WSDO T dual-loop algorithm calculates vehicle 
+length only when the on-time difference between the M and S loops is within ±10 
+percent. The total classified  vehicle volumes from a dual-loop detector with severe 
+sensitivity problems should be significantly lower than those counted by either of its 
+single loops. Hence, traffic lanes with a DIFF%  of 10 percent or higher were considered 
+to have serious sensitivity prob lems in this study. Traffic lanes identified to have serious 
+sensitivity problems were lane 3 at ES- 172R and lane 1 at ES-137R. For comparison 
+purposes, all lanes at these two stations, w ith or without sensi tivity problems, were 
+chosen for this test.  
+The DEUs employed by the test loop sta tions were produced by either Eberle 
+Design Inc. or Peek Traffic Limited. These DE Us had either eight levels of sensitivity 
+(from level zero to seven) or sixteen levels of  sensitivity (from level zero to fifteen). For 
+all eight-level DEUs used by these selected st ations, the sensitivities were set at level 
+two, except for one single loop on lane 3 at  ES-172R where the sensitivity was set at 
+level five. For other single-loop detectors that  used sixteen-level DEUs, the sensitivities 
+were all set at level ten.  
+As shown in Table 6-1, the DIFF% on lane  3 of ES-172R was almost 95 percent. 
+The WSDOT dual-loop algorithm allowed the dual -loop detector on this lane to calculate 
+vehicle lengths for only 5 percent of the total lane traffic. The large sensitivity 
+ 
+34 
+discrepancy between the M and S loops may ha ve been caused by in correct sensitivity 
+level settings on one or both of the two single loops; the se nsitivity settings were level 
+two and level five for the M loop and th e S loop, respectively. Whether the S loop 
+sensitivity was set too high had to  be investigated in this test. Consistent sensitivity level 
+settings on both the M and S loops do not a ssure zero on-time differences between the 
+two single loops because a l oop’s inductance is affected by surrounding temperature, 
+humidity, road structure, and other factors.  This implies that on-time differences may 
+exceed 10 percent even when the M and S loop sensitivities are set at the same level. The 
+ALEDA system can be used to identify and fix the dual-loop sensitivity problems. 
+ 
+6.1.2 DATA COLLECTION 
+Approximately 24 hours of event data were co llected from the ES-172R station to check 
+the impact of different traffic conditions on the sensitivity problems, and over two hours 
+(76 minutes before the sensitivity tune-up and 84 minutes after th e tune-up of the dual-
+loop detector) of event data were record ed at the ES-137R st ation to check the 
+performance and effectiveness of the propos ed dual-loop tune-up algorithm. The data 
+collection at the ES-172R dual-loop stat ion was conducted from 10:25:42 AM on 
+December 8 to 9:41:17 AM on December 9, 2004. At the ES-137R loop station, the 
+before tune-up data were collected from  10:36:56 AM to 11:52:09 AM on November 30, 
+2005, and the after tune-up data were recorded from 12:24:58 PM to 13:48:42 AM on the 
+same day. For verification purposes, the WSDOT TSMC recorded two hours of video 
+data (from 11:00 AM to 1:00 PM on the data collection day) at each selected station. 
+ 
+ 
+35 
+6.2 DATA EXTRACTION 
+All the collected event data were analyzed to extract vehicle movement data, such as 
+volume count, loop occupancy, on-time diffe rence, speed, and vehicle length. The 
+TSMC-recorded video data were manually pr ocessed to extract bin-volume data for 
+verification purposes. The vehicle count data ob tained from the video sets were used as 
+ground truth data for verifying the dual-loop tune-up algorithm. 
+6.3 SYSTEM TESTING 
+6.3.1 CONNECTION TESTS 
+Connection tests are required before the ALEDA system can be used to collect loop event 
+data and aid in tuning the sensitivity levels of  dual loop detectors. As the first step of the 
+ALEDA system testing, connection tests were  performed to ensure that ALEDA could 
+work together with typical traffic control devices, including the Model 332 cabinet and 
+the Type 170 controller. The ALEDA system wa s connected to the Input File of a Model 
+332 cabinet at the Smart Transportation Appl ications and Research Laboratory (STAR 
+Lab) of the University of Washington. This connection followed the design of ALEDA as 
+specified in Figure 5-2. The connections for the 16 input channels of the ALEDA system 
+were tested individually to ensure that they  were reliable. Then random combinations of 
+the input channels were tested to make sure  that channels did not interfere with each 
+other. The test results showed that all 16 i nput channels were successfully connected to 
+the cabinet and were able to work independently. 
+6.3.2 PERFORMANCE TESTS 
+Tests were also conducted to evaluate  the performance of the ALEDA system. 
+Performance refers to whether loop event data can be collected and analyzed at a desired 
+ 
+36 
+frequency without significant delays. ALEDA was used to collect and analyze event data 
+for 24 hours at the ES-172R stat ion. Analyses of the collect ed event data showed that 
+ALEDA had no difficulties collecting and anal yzing loop event data in real-time at a 
+frequency of 60 Hz. The ALEDA system ma y be able to work at an even higher 
+frequency, but this capability was not tested in this study. 
+6.3.3 ACCURACY TEST 
+An accuracy test was designed to check wh ether ALEDA can accurately collect vehicle 
+volumes based on loop event data. Traffic in formation extracted from event data was 
+compared with ground truth vide o data. The 30-minute test resu lts (Table 6-3) indicated 
+that the vehicle volume data collected by ALEDA were very reliable, with an accuracy of 
+more than 99 percent for all lanes at the ES-137R station. 
+ 
+Table 6-3.  Comparison of Vehicle Count Data at the ES-137R Station (NB I-5 and  
+NE 45th NB) on November 30, 2005 
+ 
+Lane Video Event Data Accuracy% 
+1 217 215 99.08 
+2 419 423 99.05 
+3 419 420 99.76 
+ 
+6.4 EVALUATING THE EFFECTIVENESS OF THE ALGORITHM IN 
+IDENTIFYING DUAL-LOOP SENSITIVITY PROBLEMS 
+ 
+As mentioned earlier, dual-loop sensitivit y problems can be divided into (1) the 
+sensitivity discrepancy between the M and S loops, and (2) the incorrect sensitivity levels 
+of both the M and S loops. 
+6.4.1 SENSITIVITY INCONSISTENCIES 
+Dual-loop sensitivity discrepancies are the primary cause of bin-volume undercounts with 
+WSDOT dual-loops. This is due to the fact that when on-time differences of 10 percent or 
+ 
+37 
+more occur between the M and S loops, the vehi cles associated with the discrepancy are 
+dropped from the vehicle classification process. Since on-time measurements depend on a 
+loop’s sensitivity level, the dual-loop on-time  differences identify the sensitivity 
+discrepancies between the M and S loops to a large extent. The on-time differences of all 
+individual vehicles detected by the dual l oops at ES-172R in a 15-minute interval are 
+plotted in figures 6-1 to 6-3 to illustrate the sensitivity discrepancy problems at these dual 
+loops.  
+-50
+-40
+-30
+-20
+-10
+0
+10
+20
+30
+40
+50
+1 13 25 37 49 61 73 85 97 109 121 133 145 157 169 181 193 205 217 229
+Vehicle Counts
+Vehicle Index
+Trendline
+-50
+-40
+-30
+-20
+-10
+0
+10
+20
+30
+40
+50
+1 13 25 37 49 61 73 85 97 109 121 133 145 157 169 181 193 205 217 229
+Vehicle Counts
+Vehicle Index
+TrendlineTrendline
+ 
+Figure 6-1. Dual-Loop On-Time Differences for Lane 1 at ES-172R 
+ 
+-50
+-40
+-30
+-20
+-10
+0
+10
+20
+30
+40
+50
+1 30 59 88 117 146 175 204 233 262 291 320 349 378 407 436 465 494 523 552
+Vehicle Counts
+Vehicle Index
+Trendline
+-50
+-40
+-30
+-20
+-10
+0
+10
+20
+30
+40
+50
+1 30 59 88 117 146 175 204 233 262 291 320 349 378 407 436 465 494 523 552
+Vehicle Counts
+-50
+-40
+-30
+-20
+-10
+0
+10
+20
+30
+40
+50
+1 30 59 88 117 146 175 204 233 262 291 320 349 378 407 436 465 494 523 552
+Vehicle Counts
+Vehicle Index
+TrendlineTrendline
+ 
+Figure 6-2. Dual-Loop On-Time Differences for Lane 2 at ES-172R 
+ 
+38 
+-50
+-40
+-30
+-20
+-10
+0
+10
+20
+30
+40
+50
+1 25 49 73 97 121 145 169 193 217 241 265 289 313 337 361 385 409 433 457
+Vehicle Counts
+Vehicle Index
+Trendline
+-50
+-40
+-30
+-20
+-10
+0
+10
+20
+30
+40
+50
+1 25 49 73 97 121 145 169 193 217 241 265 289 313 337 361 385 409 433 457
+Vehicle Counts
+-50
+-40
+-30
+-20
+-10
+0
+10
+20
+30
+40
+50
+1 25 49 73 97 121 145 169 193 217 241 265 289 313 337 361 385 409 433 457
+Vehicle Counts
+Vehicle Index
+TrendlineTrendline
+ 
+Figure 6-3. Dual-Loop On-Time Differences for Lane 3 at ES-172R 
+ 
+In Figure 6-1, the plotted on-time differences on lane 1 at the ES-172R station are 
+within ±10 percent for most detected vehicles. This conforms to the small value of 
+DIFF% (5.22 percent) in Table 6-1. The DI FF% for lane 2 (8.78 percent), however, is 
+higher than that for lane 1 (5.22 percent). This correspo nds to a higher severity of 
+sensitivity discrepancy problems that can be  perceived in Figure 6-2. However, the 
+average 15-minute on-time diff erence is still within the ±10 percent range according to 
+the trendline, in spite of the increased nu mber of on-time differences that exceed the ±10 
+percent range in comparison to lane 1. The lane with the worst sensitivity discrepancy 
+problems at the ES-172R station is lane 3.  The on-time differences are less than -10 
+percent in most cases, and the average 15- minute on-time difference is outside the ±10 
+percent range (Figure 6-3). This identified sensitivity problem is clearly reflected by the 
+high DIFF% value (94.34 percent) in Table 6-1.  
+ On the basis of the analyses describe d above, we can conclude that the on-time 
+differences calculated by the proposed algori thm serve as a good indi cator of dual-loop 
+ 
+39 
+sensitivity discrepancy problems. The graphica l displays of on-time differences on the 
+user interface of ALEDA provide important information to loop maintenance staffs about 
+whether a dual-loop detection system has sensitivity discrepancies.  
+6.4.2 INCORRECT SENSITIVITY LEVELS  
+In addition to sensitivity di screpancies between the M and S loops, dual loops may have 
+consistent single loop sensitivity levels that are, nevertheless, inco rrect. This situation 
+may also lead to vehicle misclassifications. Incorrect sensitivity le vels of both M and S 
+loops may result in on-time measurements that  are too long or too short. Lengthened on-
+times will result in overestimated vehicle lengths, and shortened on-times will produce 
+underestimated vehicle lengths. 
+ The algorithm developed in this study uses the SV length distribution observed by 
+Wang and Nihan (2004) to check whether the sensitivity level of a consistent dual-loop 
+detector is appropriate. As mentioned earli er, the algorithm will perform the analysis 
+once 100 SV length data have been recorded.  
+To illustrate how the algorithm detects an incorrect sensitivity level for a 
+consistently sensitive dual-loop detector, th e median lengths of every 100 SVs on each 
+lane of the ES-172R station we re plotted in Figure 6-4. Although the sensitivity settings 
+at all eight-level DEUs were at level two (t he sensitivity setting at  the S loop’s DEU of 
+lane 3 was first changed from level five to two to eliminate the sensitivity discrepancy 
+between the M and S loops), it was obvious that the calculated median vehicle lengths for 
+lane 2 (16.2 ft or 4.94 meters) and lane 3 (16.0 ft or 4.88 meters) were longer than that for 
+lane 1 (15.5 ft or 4.73 meters). This illustrates the fact that the same sensitivity level 
+ 
+40 
+settings for different dual -loop detectors cannot guarant ee the same vehicle length 
+measurements.  
+14
+14.5
+15
+15.5
+16
+16.5
+17
+17.5
+18
+1 9 17 25 33 41 49 57 65 73 81 89 97 105 113 121 129 137
+Vehicle Counts (*100)
+Lane1
+Lane2
+Lane3
+Length (ft)
+Vehicle Index (*100)
+14
+14.5
+15
+15.5
+16
+16.5
+17
+17.5
+18
+1 9 17 25 33 41 49 57 65 73 81 89 97 105 113 121 129 137
+Vehicle Counts (*100)
+Lane1
+Lane2
+Lane3
+Length (ft)
+Vehicle Index (*100)
+ 
+Figure 6-4. Estimated SV Median Length at ES-172R (SB I-5 and Metro Base) 
+ 
+Because the median length of SVs for the ground truth data were about 15.5 ft or 4.73 
+meters and the median lengths of SVs for la nes 2 and 3 were about 16.2 ft (4.94 meters) 
+and 16.0 ft (4.88 meters), respectively, measurements of vehicle lengths for lanes 2 and 3 
+appeared to be too long but still within a tolerable range (the sum of squared errors of the 
+100-SV lengths was lower than 400 for both lanes). The measurements of vehicle lengths 
+for lane 1 were also considered accurate b ecause its median lengths were 15.5 ft (4.73 
+meters). Therefore, the sensitivity level sett ings of both the M and S loops in lanes 1, 2 
+and 3 were considered appropr iate. By comparing the median  lengths of every 100 SVs 
+with the ground-truth SV mean (since SV lengths are normally distributed, their 
+population mean and median should be the same) and checking the sum of squared errors 
+of the calculated SV lengths, the algorithm can  detect whether the sensitivity level of a 
+dual-loop detection system is appropriate. 
+ 
+41 
+6.5 EVALUATING THE EFFECTIVENESS OF THE ALGORITHM IN 
+CORRECTING DUAL-LOOP SENSITIVITY PROBLEMS 
+ 
+6.5.1 CASE ONE: THE ES-172R STATION 
+As mentioned earlier, the dual-loop on la ne 3 of ES-172R had serious sensitivity 
+discrepancy problems, as i ndicated by its high DIFF% of  94.34 percent. The ALEDA 
+system was applied to tune this dual-loop detector on De cember 8, 2004. The S loop 
+sensitivity level setting was changed from fi ve to two, and the M loop sensitivity level 
+was left at two. To evaluate the tuning effect , the DIFF% values before and after the tune 
+up of this dual-loop detector were compared. 
+Fourteen days of data co llection, including seven da ys before the tune up 
+(December 1, 2004 – December 7, 2004) and seve n days after the tune up (December 9, 
+2004 – December 15, 2004), were performed fo r the dual loop on lane 3 of station ES-
+172R and downloaded from the TDAD website . Differences between the M loop counts 
+and the total bin volumes reco rded by the speed trap (DIFF% ) were calculated and are 
+presented in Table 6-4 and Figure 6-5. Th e DIFF% values dropped from approximately 
+95 percent before the sensitivity tune up to le ss than 2 percent after the tune up. This 
+indicates that almost all vehicles that drove  over the dual-loop detector were classified 
+after the tune-up. Consequen tly, the performance of the dua l loop on lane 3 of ES-172R 
+improved significantly after the sensitivity problems were solved. 
+At the ES-172R station, the sensitivity le vel settings of the lane 1 and lane 2 dual 
+loops were not changed in the tune up process on December 8, 2004, because neither of 
+them was identified to have noticeable sensit ivity problems. However, after the lane 3 
+dual-loop tune-up, the DIFF% on lane 1 and lane  2 increased slightly, as shown in Table 
+6-4. These DIFF% changes might have been  caused by the changes in environmental 
+ 
+42 
+factors or by the change of sensitivity level of the lane 3 dual loop.  Further research is 
+needed to identify the impact of sensitivity tune-ups on loop detectors in adjacent lanes.  
+ 
+-20.00
+0.00
+20.00
+40.00
+60.00
+80.00
+100.00
+12/1/2004
+12/2/2004
+12/3/2004
+12/4/2004
+12/5/2004
+12/6/2004
+12/7/2004
+12/8/2004
+12/9/2004
+12/10/2004
+12/11/2004
+12/12/2004
+12/13/2004
+12/14/2004
+12/15/2004
+Date
+DIFF%
+-20.00
+0.00
+20.00
+40.00
+60.00
+80.00
+100.00
+12/1/2004
+12/2/2004
+12/3/2004
+12/4/2004
+12/5/2004
+12/6/2004
+12/7/2004
+12/8/2004
+12/9/2004
+12/10/2004
+12/11/2004
+12/12/2004
+12/13/2004
+12/14/2004
+12/15/2004
+Date
+DIFF%
+ 
+ 
+Figure 6-5. Variation of DIFF% in Lane 3 at ES-172R (SB I-5 and Metro Base) 
+ 
+Table 6-4. The Variation of DIFF% for Lane 3 at the ES-172R Station (NB I-5 and 
+Metro Base)  
+ 
+DIFF% Day 
+Lane 1 Lane 2 Lane 3 
+12/1/2004 5.06 7.31 94.90 
+12/2/2004 6.49 9.84 94.66 
+12/3/2004 6.70 8.28 95.15 
+12/4/2004 3.57 7.58 95.66 
+12/5/2004 3.88 7.27 95.02 
+12/6/2004 6.49 9.80 94.73 
+12/7/2004 7.30 10.52 95.12 
+12/9/2004 9.54 15.18 1.08 
+12/10/2004 8.71 17.29 1.22 
+12/11/2004 4.90 14.06 0.65 
+12/12/2004 4.47 13.23 -0.17 
+12/13/2004 7.93 15.72 1.85 
+12/14/2004 6.97 15.43 0.98 
+12/15/2004 6.57 15.84 -0.13 
+ 
+ 
+43 
+6.5.2 CASE TWO: THE ES-137R STATION  
+Similarly, the sensitivity problems on lane 1 at the ES-137R station were alleviated 
+through a sensitivity tune-up using the ALEDA system. The DIFF% of lane 1 on 
+November 28, 2005, was about 10.58 percent (T able 6-2), even t hough the sensitivity 
+level settings for the sixteen-level DEUs of both the M and S loops were at level ten. The 
+sensitivity tune-up conducted on November 30, 2005, resulted in increasing the M loop 
+sensitivity setting to level eleven and keepi ng the S loop sensitivity setting at level ten. 
+The sensitivity tune-up was effective becau se the DIFF% dropped to 6.31 percent (less 
+than 10 percent) according to the dual-loop measurements of December 2, 2005 (Table 6-
+5).  
+ 
+Table 6-5.  TDAD Volume Data at the ES-137R Station (NB I-5 and NE 45th NB) on 
+December 2, 2005 
+Lane M loop S loop ST DIFF% = (M loop – ST) / M loop * 100 
+1 8575 8590 8034 6.31 
+2 13643 13672 12803 6.16 
+3 14678 14527 13987 4.71 
+ 
+The test results in the a bove two cases demonstrated that the proposed algorithm 
+implemented in ALEDA at effectively identifying and correcting sensitivity problems 
+with the WSDOT dual-loop detectors.  
+6.6 TRUCK DATA 
+The comparisons of vehicle counts for SVs (length ≤ 26ft) and trucks (length > 26ft) 
+before and after the sensitivity tune-up of the lane 1 dual loop at the ES-137R station (the 
+only lane with a sensitivity adjustment at  ES-137R) are shown in Table 6-6. Traffic 
+counts extracted from the recorded videotap e were used as the ground truth data for 
+ 
+44 
+comparisons with the TDAD data and the event data. Two data sets were collected for the 
+comparisons: one data set was from 2:00 PM to 3:00 PM on May 16, 2002 (before the 
+sensitivity tune-up), and the other was fr om 12:24 PM to 13:24 PM on November 30, 
+2005 (after the sensitivity tune-up).  
+ 
+Table 6-6.  Vehicle Count Data for Lane 1 at ES-137R (SB I-5 and NE 45th St. NB) 
+BEFORE and AFTER the Sensitivity Tune-Up 
+ Vehicle 
+Types 
+Video 
+(VI) 
+TDAD  
+(TD) 
+Event Data 
+(EV) 
+VI-TD 
+Error (%) 
+  VI-EV  
+Error (%) 
+BEFORE SV 446 447 447 -0.22 -0.22 
+ Truck 18 13 17 27.78 5.56 
+ Total 464 460 464 0.86 0.00 
+AFTER SV 653 651 653 0.31 0.00 
+ Truck 30 24 29 20.00 3.33 
+ Total 683 675 682 1.17 0.15 
+ 
+Note: VI-TD Errors (%) = (Video Data – TDAD Data) / Video Data 
+          VI-EV Errors (%) = (Video Data – Event Data) / Video Data 
+ 
+As shown in Table 6-6, trucks were se riously undercounted in the TDAD data of 
+lane 1 at ES-137R before the sensitivity tune-up. The truck counts on lane 1 from the 
+TDAD and the ALEDA system were smalle r than the actual truck counts (truck  counts 
+from the video data). The TDAD and the A LEDA system recorded 13 and 17 trucks, 
+respectively, instead of 18 trucks extracted fr om the video data. The relative error of the 
+TDAD truck counts was about 28 percent, and that of the ALEDA truck counts was about 
+6 percent.
+ 
+ Comparisons of truck counts after the sensitivity tune-up showed that the 
+accuracy of the TDAD truck data had improved.  The results in Table 6-6 show that the 
+differences between the actual truck counts (from the video data) and the truck counts 
+from the TDAD data or the event data were smaller than those before the sensitivity tune-
+ 
+45 
+up. The relative error of the TDAD truck c ounts dropped from 28 percent to 20 percent. 
+The relative error of the ALEDA system’s colle cted truck counts also slightly decreased 
+from 6 percent (1 missing vehicle out of 18 vehicles) to 3 percent (1 missing vehicle out 
+of 30 vehicles). 
+In Table 6-6, it is obvious that the truc k counts extracted from the event data by 
+ALEDA were much closer to the actual truck counts than those from the TDAD data. We 
+believe that the difference was due to the wa y a vehicle with an on-time difference larger 
+than 10 percent was treated in the ALEDA algorithm. In the WSDOT dual-loop 
+algorithm, such a vehicle was discarded from classification. In the ALEDA application, 
+the vehicle was classified after the on-time difference was corrected. 
+A comparison of the TDAD truck data a nd the ground-truth (v ideo) truck data 
+before and after the tune-up demonstrated the effectiveness of using ALEDA for dual-
+loop sensitivity tune-ups. Once the sensitiv ity problems were corrected, improved truck 
+data were collected from the existing dual-loop detection systems. However, the 20 
+percent truck data error after the tune up was still very significant. During the tune-up 
+process, we were not able to further lower this error by adjusting the sensitivity levels. 
+The fact that the ALEDA extracted truck volume data that were very close to the ground-
+truth truck volume data indicates that truc k data can be further improved by employing a 
+better dual-loop algorithm that treats suspicious observations more effectively. 
+6.7 ANALYSIS SUMMARY 
+The results of the analysis can be summarized as follows: 
+1. The algorithm developed in this study can efficiently detect and correct sensitivity 
+discrepancies between the M and S loops. Consistent sensitivity between the M 
+ 
+46 
+and S loops enhances the performan ce of the WSDOT’s dual-loop detection 
+system in measuring vehicle speed. 
+2. Percentage differences between the volume counts on a single loop (the M or S 
+loop) and a dual-loop syst em (the speed trap) were  much smaller after the 
+proposed algorithm was applied. In comparison to the current WSDOT algorithm, 
+this decreases the number of vehicles that will be discarded from classification 
+based on the 10 percent threshold value of on-time difference. 
+3. Incorrect sensitivity levels of two consistently sensitive single loops that form a 
+dual-loop detector can be identified a nd eliminated by using the ALEDA system. 
+After the sensitivity tune-up of a dual-l oop detector, the reliability and accuracy 
+of the WSDOT dual-loop truck data can be significantly improved. 
+4. The statistical approach that uses th e features of SV-le ngth distribution to 
+determine whether the sensitivity level of a dual loop is appropriate was 
+demonstrated to be effective. The hist ogram of the calculated SV lengths should 
+match closely with the histogram gene rated from the ground-truth SV-length 
+distribution when a dual-loop detector is at the appropriate sensitivity level(s). 
+ 
+ 
+ 
+ 
+47 
+CHAPTER 7   CONCLUSIONS AND RECOMMENDATIONS 
+ 
+7.1 CONCLUSIONS 
+This study investigated dual-loop sensitivity  problems and proposed a new algorithm to 
+detect and fix such sensitivity problems by using loop event data and the statistical 
+features of SV-length distribution. High-re solution event data contain more complete 
+individual vehicle information than interval -aggregated loop measurements and are more 
+useful for in-depth investigation of dual-l oop sensitivity problems. The analysis results 
+showed that dual loops have two major sens itivity problems: sensitivity discrepancies 
+between the two single loops that form a dua l-loop detector, and incorrect levels of 
+sensitivity on both single loops when there are no sensitivity discrepancies. Dual-loop 
+sensitivity inconsistencies result in erroneous  calculation of lane occupancy, speed, and 
+vehicle length. Incorrect sensitivity levels  cause imprecise measurements of vehicle 
+lengths and hence misclassif ications of vehicles. The combination of both dual-loop 
+sensitivity problems can cause severely inaccurate measurements of vehicle speed and 
+classification. 
+ A new algorithm for solving the two major types of dual-loop sensitivity 
+problems was developed that uses loop event data and the characteristics of SV-length 
+distributions. This algorithm was implemented in a computer application named ALEDA. 
+Tests of this system showed that the two dual-loop sensitivity problems mentioned earlier 
+can be effectively corrected with the ALED A system. Sensitivity discrepancies can be 
+eliminated by adjusting sensitivity levels at loop DEUs until the on-time differences 
+ 
+48 
+between the M and S loops are close to zero. Similarly, the appropriate sensitivity level 
+of a dual loop can be identified based on a ground-truth SV-length distribution.  
+ Dual-loop detectors are a major source of tr affic data that are vital for effective 
+ATMS and ATIS. Dual-loop sensitivity problems must be solved to increase the 
+reliability of dual-loop data. In practice, thes e sensitivity problems are typically detected 
+and corrected manually by traffic technician s on the basis of th eir experience. The 
+process is time consuming and the result  is often inaccurate. The proposed methodology 
+with the implemented ALEDA system is exp ected to help solve dual-loop sensitivity 
+problems effectively. 
+7.2 RECOMMENDATIONS FOR FURTHER STUDY 
+The results from this project lead to severa l recommendations. First, further testing of the 
+proposed algorithm embedded in the ALEDA system with DEUs from different 
+manufacturers and under different weat her and road geometric conditions is 
+recommended. So far the algorithm has been te sted at only two dual-loop stations on the 
+I-5 corridor in the Seattle area. The test results may confirm the compatibility of the 
+ALEDA system with traffic hardware from  different manufacturer s and reassure the 
+performance of the ALEDA system under severe weather conditions.  
+ Second, given the analysis results of the event data, an enhanced analysis function 
+for loop error identification and solution recommendation should be developed. For 
+example, intermittent fluctuations of dual-loop on-time differences may arise from the 
+cross chattering of DEUs. Eliminating loop da ta errors and increasing the effectiveness 
+and performance of existing traffic data collection systems will continue to be important 
+ 
+49 
+for regional transportation authorities, such as WSDOT and Puget Sound Regional 
+Council (PSRC). 
+ Third, the ALEDA system needs furthe r improvements in user interface design 
+and hardware selection to make it a standard tool for maintenance staffs to tune-up dual 
+loop detectors with sensitivity problems. 
+Fourth, the effectiveness of ALEDA de pends on the physical conditions of dual-
+loop detectors. For example, the sensitivity discrepancy problem cannot be corrected if 
+the M and S loop sensitivity difference is beyond  an adjustable range.  Also, a tune-up is 
+normally an approximate solution rather than a perfect one because of the discrete values 
+of sensitivity levels available on a DEU. Therefore, a software solution implementing the 
+proposed algorithm is recommended to avoid th e constrained sensitivity adjustments of 
+discrete levels at DEUs. 
+Finally, the current dual-l oop algorithm used by the WSDOT throws away many 
+potentially useful vehicle measurements. A new dual-loop algorithm that is able to 
+correct imperfect vehicle measurements and be less affected by loop detector noises 
+needs to be developed to further improve truck and speed data.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+50 
+ACKNOWLEDGMENTS 
+The authors are grateful for the financial support to this project from Transportation 
+Northwest (TransNow), the USDOT University Transportation Center for Federal Region 
+10, and the Washington State Department of Transportation (WSDOT). The authors also 
+wish to express sincere appreciation to WSDOT’s Traffic System Management Center 
+personnel, specifically, Mr. Mark Morse, Mr. Chitty David, and Ms. Lanping Xu for their 
+valuable suggestions and help with the collection of freeway data. Special thanks also go 
+to TransNow’s staff, Andrea King and Christine Fish, for their compiling and editing of 
+this final report. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+51 
+ 
+GLOSSARY OF ACRONYMS 
+ALEDA Advanced Loop Event Data Analyzer System 
+ATMS Advanced Traffic Management Systems 
+ATIS Advanced Traveler Information Systems 
+BHL Berkeley Highway Laboratory 
+DEDAC Detector Event Data Collection System 
+DEU Detector Electronic Unit 
+GP General Lane 
+HOV High Occupancy Vehicle 
+I/O Input/Output 
+PC Passenger Car 
+PCI Peripheral Component Interconnect 
+SC Scan Count 
+TDAD Traffic Data Acquisition and Distribution 
+TRAC Washington State Transportation Center 
+TSMC WSDOT Traffic Systems Management Center 
+UW University of Washington 
+WSDOT Washington State Depar tment of Transportation 
+ 
+ 
+ 
+ 
+ 
+ 
+52 
+REFERENCES 
+ 
+Al-Deek, H. (1991). “The Role of Advanced Traveler Information Systems in Incident 
+Management”, Dissertation Series Institute of Transportation. Report Number: 1-
+5. 
+Cheevarunothai, P., Y. Wang, and N. L. Ni han (2005). “Development of Advanced Loop 
+Event Analyzer (ALEDA) for Inves tigations of Dual-Loop Detector 
+Malfunctions”, Presented at The 12
+th 
+World Congress on Intelligent 
+Transportation Systems, San Francisco.  
+Chen, C. H., and G. L. Chang (1993). “A Dynamic Real-Time Incident Detection System 
+for Urban Arterials-System Architecture and Preliminary Results”, In Pacific Rim 
+TransTech Conference: Volume I: Advance Technologies, ASCE, 0-87262-916-3, 
+pp. 98-104. 
+Chen, C., K. Petty, A. Skabardonis, P.P.  Varaiya, and Z. Jia (2001). “Freeway 
+Performance Measurement System: Mining Loop Detector Data”, In 
+Transportation Research Record: Journal of the Trans portation Research Board, 
+No. 1748, TRB, National Research Council, Washington, D.C., 2001, pp. 96-102. 
+Chen, L., and A. May (1987). “Traffic detector errors and diagnostics”, In Transportation 
+Research Record: Journal of the Transportation Research Board, No. 1132, TRB, 
+National Research Council, Washington, D.C., pp. 82–93. 
+Clark, D. C., W. T. Scherer, and B. L.  Smith (2001). “Performance-Cost Evaluation 
+Methodology for ITS Equipment Deployment”, Research Project Report for the  
+ 
+53 
+National IIS Implementation Resear ch Center, a USDOT University 
+Transportation Center. Report Number: UVA-CE-ITS-01-2. 
+Cleghorn, D., F. L. Hall, and D. Garbuio (1991). “Improved Data Screening Techniques 
+for Freeway Traffic Management Systems”, In Transportation Research Record: 
+Journal of  the Transportation Research Board, No. 1320 , TRB, National 
+Research Council, Washington, D.C., pp. 17-23. 
+Coifman, B. (1999). “Using Dual Loop Speed Traps to Identify Detector Errors”, In 
+Transportation Research Record: Journal of the Transportation Research Board, 
+No. 1683, TRB, National Research Council, Washington, D.C., pp. 47-58. 
+Coifman, B., D. Lyddy, and A. Sabardonis ( 2000). “The Berkeley Highway Laboratory- 
+Building on the I-880 Field Experiment”, Proc. IEEE ITS Council Annual 
+Meeting, IEEE, pp 5-10. 
+Coifman, B., and S. Dhoorjaty  (2004), “Event Data Based Traffic Detector Validation 
+tests”, Journal of Transportation Engineering, Vol.130, No.3 
+ITE (Institute of Transpor tation Engineers) (1997). Traffic Detector Handbook . 2nd 
+Edition, Washington D.C. 
+Jacobson, L. N., N. L. Nihan, and J. D.  Bender. (1990). “Detect ing Erroneous Loop 
+Detector Data in a Freeway Traffic Management System”, Transportation 
+Research Record: Journal of the Transportation Research Board, No. 1287, TRB, 
+National Research Council, Washington, D.C., pp. 151-166. 
+Model SeaLINK ISO-16 Digital Input Adapter Technical Manual. 
+http://www.sealevel.com/uploads/manuals/8207.pdf. Accessed on January 6, 2005 
+ 
+54 
+Nihan, L.N., Jacobson, L.N., Bender, J.D., and Davis, G.A. (1990). Detector Data 
+Validity. Washington State Transporta tion Center – TRAC/WSDOT, 
+TransNow/WSDOT Joint Final Research Report No. WA-RD 208.1, 80 pages. 
+Traffic Data Acquisition and Distribution (TDAD) database. 
+http://www.its.washington.edu/tdad/, Accessed on December 25, 2004 
+Turner, S., L. Albert, B. Gajewski, and W. Eisele (2000). “A rchived Intelligent 
+Transportation System Data Quality: Preliminary Analysis of San Antonio 
+Transguide Data”, Transportation Research Record: Journal of the 
+Transportation Research Board, No.  1719, TRB, National Research Council, 
+Washington, D.C., pp. 77-84. 
+Wang, Y., and L.N. Nihan. (2003). “Can Si ngle-Loop Detectors Do the Work of Dual-
+Loop Detectors?”, ASCE Journal of Transportation Engineering, 129(2), pp. 169-
+176. 
+Wang, Y. and N. L. Nihan (2004a). “Dyna mic Estimation of Freeway Large-Truck 
+Volumes Based on Single-Loop Measurements”, Journal of Intelligent 
+Transportation Systems, Vol. 8, No. 3, pp. 133-141. 
+Wang, Y., and N. L. Nihan (2004b). “A n Adaptive Algorithm for Freeway Speed 
+Estimation with Single-Loop Measurements.” Proceedings of the 8
+th World Multi-
+Conference on Systemics, Cybernetics and Informatics, Vol. VII, 396-401. 
+Zhang, X., Y. Wang, N. L. Nihan, and M. E. Hallenbeck (2003). “Development of A 
+System to Collect Loop Detector Ev ent (Individual Ve hicle) Data.” 
+Transportation Research Record: Journal of the Trans portation Research Board, 
+No. 1855, TRB, National Research Council, Washington, D.C., pp. 168-175 

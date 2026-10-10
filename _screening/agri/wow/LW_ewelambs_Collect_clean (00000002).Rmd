@@ -1,0 +1,2598 @@
+---
+title: "Results from the experimentation of the WOW project"
+subtitle: "TechCare project - UMR SELMET - Domaine du Merle"
+author: "Estelle LEROUX"
+date: "30/07/2021"
+output: powerpoint_presentation
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+## Import data
+```{r,include=F}
+
+# Access directory
+env<-("D:/Cours/ACO/3eme_annee/Stage fin d'etude/Stage_M2/BDD")
+
+
+## import WOW database
+chemin1<-paste(env,"BDD_WOW.csv",sep="/")
+data_WOW<- read.csv2(chemin1)
+data_WOW$Week <- as.numeric(data_WOW$Week)
+
+## import Gold Standard database
+chemin2<- paste(env, "BDD_Gold_Std.csv", sep="/")
+data_Gold_Std<- read.csv2(chemin2)
+
+##import database about the group ewelambs
+#/!\ Must be in the same order (from 3003 to 4207)
+chemin3<- paste(env, "BDD_Ewelambs.csv", sep="/")
+data_ewelambs<-read.csv2(chemin3)
+
+##import the list of the experimental days
+chemin4<- paste(env,"Weeks.csv", sep="/")
+data_weeks<-read.csv2(chemin4)
+data_weeks$Date<-as.Date(data_weeks$Date)
+
+```
+
+## Import packages
+```{r, context="setup" ,include=F}
+#Packages
+#library(learnr)
+library(dplyr)
+library(ggplot2)
+library(ggpubr)
+library(earth)
+library(car)
+library(DescTools)
+library(rmarkdown)
+library(knitr)
+library(magick)
+library(tidyverse)
+library(BlandAltmanLeh)
+library(rstatix)
+library(car)
+library(cowplot)
+library(lmerTest)
+knitr::opts_chunk$set(echo = FALSE, collapse = TRUE, comment = "#>")
+
+```
+
+## Estimated life Weight according to the gold standard mesures
+
+```{r}
+
+#Change the variable class
+data_Gold_Std$Date<-as.Date(data_Gold_Std$Date)
+data_Gold_Std$Week<-as.numeric(data_Gold_Std$Week)
+
+#Ordered the database by ID
+data_Gold_Std<-data_Gold_Std %>%
+  arrange(ID)
+
+#Delete the rows without LW
+data_Gold_Std<- data_Gold_Std %>%
+  filter(LW!="NA")
+
+
+```
+
+```{r}
+
+##Calculate the daily average gain
+
+
+GMQ<-c()
+ID<-c()
+
+#Work animal by animal
+for (a in 1:nrow(data_ewelambs)){
+  
+  #Create sub-database per animal
+  GS<- data_Gold_Std
+  GS<-GS %>%
+  filter(ID==data_ewelambs$ID[a]) %>%
+    arrange(Date)
+  GMQ_ID<-c(NA)
+  
+  for(i in 2:nrow(GS)){
+    
+        days<-difftime(GS$Date[i],GS$Date[i-1],units="days")
+        days<-as.numeric(days)
+        gain<-(GS$LW[i]-GS$LW[i-1])/days
+        
+        GMQ_ID<-c(GMQ_ID,gain)
+
+  }
+  
+  GMQ<-c(GMQ,GMQ_ID)
+  ID<-c(ID,rep(data_ewelambs$ID[a],length(GMQ_ID)))
+}
+
+GMQ<-data.frame(GMQ)
+
+#Add column "GMQ" (=ADG) to the database
+
+data_Gold_Std<-data_Gold_Std %>%
+  cbind(GMQ)
+
+
+#Delete the ADG without value : it corresponds to the first LW on the 18th January
+data_Gold_Std <- data_Gold_Std %>%
+  filter(GMQ!="NA")
+
+#Add a column with the variable System
+System<- rep("Gold Standard", nrow(data_Gold_Std))
+data_Gold_Std<- data_Gold_Std %>%
+  cbind(System)
+```
+
+```{r}
+
+#Estimate the Life Weight of each individual
+LW_estimated<-c()
+ID<-c()
+Day<-c()
+
+for (a in 1:nrow(data_ewelambs)){
+
+  Gold_Std_ID<-data_Gold_Std %>%
+  filter(ID==data_ewelambs$ID[a])
+  
+  LW_estimated_ID<-c()
+  ID_e<-c()
+  d<-c()
+
+for (i in 2:(nrow(Gold_Std_ID))){
+  BW<-Gold_Std_ID$LW[i-1]
+  LW_estimated_ID<-c(LW_estimated_ID,BW)
+  ID_e<-c(ID_e,data_ewelambs$ID[a])
+  d<-c(d,Gold_Std_ID$Date[i-1])
+  as.Date(d,origin = "1970-01-01")
+      
+  dif_days_GS<- difftime(Gold_Std_ID$Date[i],Gold_Std_ID$Date[i-1],
+                             units="days")
+  dif_days_GS<-as.numeric(dif_days_GS)
+  
+  
+  # We have to deal with the dead ewelambs
+  if(Gold_Std_ID$ID[i]!="3954") { 
+    if(Gold_Std_ID$Date[i]!="2021-04-29"){
+    for (j in 1:(dif_days_GS-1)){
+        BW<-BW+Gold_Std_ID$GMQ[i]
+        LW_estimated_ID<-c(LW_estimated_ID,BW)
+        ID_e<-c(ID_e,data_ewelambs$ID[a])  
+        d<-c(d,Gold_Std_ID$Date[i-1]+j)
+        as.Date(d,origin = "1970-01-01")
+    }
+  }
+    if(Gold_Std_ID$Date[i]=="2021-04-29"){
+    for (j in 1:(dif_days_GS)){
+        BW<-BW+Gold_Std_ID$GMQ[i]
+        LW_estimated_ID<-c(LW_estimated_ID,BW)
+        ID_e<-c(ID_e,data_ewelambs$ID[a])  
+        d<-c(d,Gold_Std_ID$Date[i-1]+j)
+        as.Date(d,origin = "1970-01-01")
+    }
+    }
+  }
+  
+    if(Gold_Std_ID$ID[i]=="3954") { 
+    if(Gold_Std_ID$Date[i]!="2021-03-30"){
+    for (j in 1:(dif_days_GS-1)){
+        BW<-BW+Gold_Std_ID$GMQ[i]
+        LW_estimated_ID<-c(LW_estimated_ID,BW)
+        ID_e<-c(ID_e,data_ewelambs$ID[a])  
+        d<-c(d,Gold_Std_ID$Date[i-1]+j)
+        as.Date(d,origin = "1970-01-01")
+    }
+  }
+    if(Gold_Std_ID$Date[i]=="2021-03-30"){
+    for (j in 1:(dif_days_GS)){
+        BW<-BW+Gold_Std_ID$GMQ[i]
+        LW_estimated_ID<-c(LW_estimated_ID,BW)
+        ID_e<-c(ID_e,data_ewelambs$ID[a])  
+        d<-c(d,Gold_Std_ID$Date[i-1]+j)
+        as.Date(d,origin = "1970-01-01")
+    }
+    }
+  }
+}
+  
+  LW_estimated<-c(LW_estimated,LW_estimated_ID)
+  ID<-c(ID,ID_e)
+  Day<-c(Day,d)
+  
+}
+  data_LW_estimated<-data.frame(ID,Day,LW_estimated)
+  data_LW_estimated$Day <- as.Date(data_LW_estimated$Day, origin = "1970-01-01")
+
+data_LW_estimated <- data_LW_estimated %>%
+  rename(Date=Day)
+data_LW_estimated <- data_LW_estimated %>%
+  group_by(ID)
+
+
+#Standard deviations
+
+
+SD_max<-c()
+SD_min<-c()
+SD_GS<-c()
+
+for (a in 1:nrow(data_ewelambs)){
+  Estimated_ID<-data_LW_estimated %>%
+  filter(ID==data_ewelambs$ID[a])
+  
+  SD_max_ID<-c()
+  SD_min_ID<-c()
+  
+  for (i in 1:nrow(Estimated_ID)){
+    SD_max_ID<-c(SD_max_ID,
+                 (Estimated_ID$LW_estimated[i]+2*sd(Estimated_ID$LW_estimated)))
+    SD_min_ID<-c(SD_min_ID,
+                 (Estimated_ID$LW_estimated[i]-2*sd(Estimated_ID$LW_estimated)))
+    SD_GS<-c(SD_GS,sd(Estimated_ID$LW_estimated))
+  }
+  SD_max<-c(SD_max,SD_max_ID)
+  SD_min<-c(SD_min,SD_min_ID)
+}
+
+
+SD<-data.frame(SD_max,SD_min,SD_GS)
+
+data_LW_estimated<-data_LW_estimated %>%
+  cbind(SD)
+
+data_LW_estimated<-merge(data_LW_estimated,data_weeks, by="Date")
+data_LW_estimated<-data_LW_estimated %>%
+  select(ID,Date,Week,LW_estimated,SD_max,SD_min,SD_GS) %>%
+  arrange(Date)
+
+```
+
+```{r}
+#We only keep the data from the second phase of the experiment
+
+data_LW_estimated <- data_LW_estimated %>%
+  slice(2101:nrow(data_LW_estimated))
+
+```
+
+```{r}
+
+ggplot(data_LW_estimated) +
+  aes(x = Date) +
+  geom_ribbon(aes(ymin=SD_min, ymax=SD_max), fill= "#B4D7EE")+
+  geom_line( aes(y = LW_estimated),size = 1L, colour = "#0c4c8a") +
+  theme(legend.position="right", 
+        axis.text.x = element_text(angle = -90, vjust = 0.5, hjust = 0, size=12),
+        axis.text.y = element_text(size=10),
+        axis.title.x = element_text(size=14, face="bold.italic"),
+        axis.title.y = element_text(size=14, face="bold.italic"),
+        plot.title = element_text(size=16, face="bold.italic"))+
+  ggtitle("Growth progression of each individual")+
+  xlab("Date")+
+  scale_x_date(date_breaks = "10 days",
+             date_labels = "%Y/%m/%d") +
+  ylab("Weight (kg)")+
+  facet_wrap(vars(ID), ncol=20)
+
+
+```
+
+
+# WOW data 
+
+```{r}
+
+#Here, we only keep the data for the merinos (and not the data without ID, for the ewe)
+
+data_WOW_merinos<-data_WOW %>%
+  filter(Type=="M") %>%
+  filter(Week!=1 & Week!=2 & Week!=3)%>%
+  filter(Date!="2021-02-19") %>%
+  filter(Date!="2021-02-23") %>%
+  filter(Date!="2021-03-09") %>%
+  filter(Date!="2021-03-10") %>%
+  filter(Date!="2021-04-02") %>%
+  filter(Date!="2021-04-03") %>%
+  filter(Date!="2021-04-04") %>%
+  filter(Date!="2021-04-05") %>%
+  filter(Date!="2021-04-06")
+
+data_WOW_merinos$Date<-as.Date(data_WOW_merinos$Date)
+
+```
+
+```{r}
+
+# Fusion of the database WOW and Gold Standard to compare them then
+
+data_WOW_merinos<-data_WOW_merinos %>%
+  select(ID,Date,Time,Week,WOW_BW)
+
+#Ordered by ID
+data_WOW_merinos <- data_WOW_merinos %>%
+  arrange(ID)
+
+#Number of line
+N <- c(1:nrow(data_WOW_merinos))
+data_WOW_merinos <- data_WOW_merinos %>%
+  cbind(N)
+
+data_LW_estimated<- data_LW_estimated %>%
+  arrange(ID)
+
+data_WOW_merinos<- full_join(data_LW_estimated,data_WOW_merinos, by=c("ID","Date","Week"))
+
+data_WOW_merinos<-data_WOW_merinos %>%
+  filter(!is.na(WOW_BW))
+
+data_WOW_merinos<-data_WOW_merinos%>%
+  filter(duplicated(data_WOW_merinos$N)==FALSE)
+
+
+data_WOW_merinos<-merge(data_WOW_merinos,data_ewelambs)
+
+data_WOW_merinos <- data_WOW_merinos %>%
+  select(ID,Group,Week,Date,Time,WOW_BW,LW_estimated,SD_min,SD_max)
+
+```
+
+### Analyses raw data
+## Descriptive statistics
+
+```{r}
+
+mean_WOW<- data_WOW_merinos %>%
+  summarize(m=mean(WOW_BW))
+
+sd_WOW<- data_WOW_merinos %>%
+  summarize(sd=sd(WOW_BW))
+
+min_WOW<- data_WOW_merinos %>%
+  summarize(min=min(WOW_BW))
+
+max_WOW<- data_WOW_merinos %>%
+  summarize(max=max(WOW_BW))
+
+```
+
+```{r}
+
+mean_GS<- data_WOW_merinos %>%
+  summarize(m=mean(LW_estimated))
+
+sd_GS<- data_WOW_merinos %>%
+  summarize(sd=sd(LW_estimated))
+
+min_GS<- data_WOW_merinos %>%
+  summarize(min=min(LW_estimated))
+
+max_GS<- data_WOW_merinos %>%
+  summarize(max=max(LW_estimated))
+
+```
+
+## Concordance Correlation Coefficient
+
+```{r}
+#Concordance Correlation Coefficient
+
+r <- cor(x=data_WOW_merinos$LW_estimated, y=data_WOW_merinos$WOW_BW)
+concordance <- CCC(x=data_WOW_merinos$LW_estimated, y=data_WOW_merinos$WOW_BW, ci = "z-transform",conf.level = 0.95, na.rm = FALSE)
+
+concordance 
+
+```
+
+##Precision
+##We need to have a column "System" and merge LW_estimated and WOW_BW in a same column called "LW"
+```{r}
+
+System <- rep("Gold Standard", nrow(data_LW_estimated))
+
+data_LW_estimated <- merge(data_LW_estimated, data_ewelambs)
+
+GS <- data_LW_estimated %>%
+  select(ID, Date, Week, LW_estimated) %>%
+  cbind(System)
+
+GS <- GS %>%
+  rename(LW=LW_estimated)
+
+WOW <- data_WOW_merinos %>%
+  select(ID, Date, Week, WOW_BW)
+
+System <- rep("WOW", nrow(WOW))
+WOW <- WOW %>%
+  cbind(System)
+WOW <- WOW %>%
+  rename(LW=WOW_BW)
+
+data_precision <- GS %>%
+  rbind(WOW)
+
+```
+
+##Repetatibility
+```{r}
+
+#Rep of the WOW
+
+WOW$ID<-as.character(WOW$ID)
+
+Anova(lm(data=WOW,LW~ID+Date), type=3)
+mod1<-lm(data=WOW,LW~ID+Date)
+
+errorRepetWOW_BW<- sd(mod1$residuals)
+
+CV_WOW_BWRepet<-errorRepetWOW_BW/mean(WOW$LW)*100
+CV_WOW_BWRepet
+
+#Rep of the GS
+
+GS$ID<-as.character(GS$ID)
+
+Anova(lm(data=GS,LW~ID+Date), type=3)
+mod1<-lm(data=GS,LW~ID+Date)
+
+errorRepetGS_BW<- sd(mod1$residuals)
+
+CV_GS_BWRepet<-errorRepetGS_BW/mean(GS$LW)*100
+CV_GS_BWRepet
+
+```
+
+##Reproductibility
+```{r, include=F}
+as.factor(as.character(data_precision$LW))
+```
+
+```{r}
+Anova(lm(data=data_precision,LW~ID+Date), type=3)
+mod1<-lm(data=data_precision,LW~ID+Date)
+
+errorReproWOW_BW<- sd(mod1$residuals)
+
+CV_WOW_BWRepro<-errorReproWOW_BW/mean(data_precision$LW)*100
+CV_WOW_BWRepro
+
+```
+
+## Bland and Altman coefficient
+
+```{r}
+
+BA1 <- bland.altman.plot(data_WOW_merinos$LW_estimated, data_WOW_merinos$WOW_BW, two = 1.96, mode = 1, graph.sys = "ggplot2", conf.int = 0, silent = TRUE, sunflower = FALSE, geom_count = FALSE)
+
+bland.altman.stats(data_WOW_merinos$LW_estimated, data_WOW_merinos$WOW_BW, two = 1.96, mode = 1, conf.int = 0.95)
+
+```
+
+## Regression
+
+```{r}
+
+r1<-lm(data_WOW_merinos$WOW_BW~data_WOW_merinos$LW_estimated)
+summary(r1)
+
+R1<-ggplot(data_WOW_merinos)+
+  geom_point(aes(x=LW_estimated,y=WOW_BW))+
+  geom_abline(intercept = 6.96908, slope = 0.99947, colour="blue")+
+  geom_abline(intercept = 0, slope = 1, colour="red")+
+  ylim(0,80)+
+  xlim(0,45)+
+  ylab("WoW")+
+  xlab("Estimated values - Gold Standard")
+
+R1
+
+```
+
+##Clean the data : Step 1
+
+```{r}
+
+#We delete the data with a weight = 0
+
+data_WOW_merinos <- data_WOW_merinos %>%
+  filter(WOW_BW!=0)
+
+```
+
+```{r}
+
+#Delete the misbehaviour data
+
+data_WOW_merinos <- data_WOW_merinos %>%
+  filter(WOW_BW > 10) %>%
+  filter(WOW_BW < 50)
+
+```
+
+```{r}
+
+  # Weekly mean of the LW of the group
+  
+  mean_GS_week <- data_LW_estimated %>%
+    group_by(Week) %>%
+    summarize(m=mean(LW_estimated))
+
+  # mark the WOW values > and < to 2*mean LW Gold Standard
+  
+  validation<-c()
+
+  #validation = TRUE when the LW recorded with the WOW is < to 2*mean LW Gold Standard
+
+  for (i in 1:nrow(data_WOW_merinos)){
+    for (j in 1:nrow(mean_GS_week)){
+      
+      if (data_WOW_merinos$Week[i]==mean_GS_week$Week[j]){
+        if (data_WOW_merinos$WOW_BW[i]<2*mean_GS_week$m[j]){
+          validation<-c(validation,TRUE)
+        }
+        else{
+          validation<-c(validation,FALSE)
+        }
+      }
+    }
+  }
+   
+
+  data_WOW_merinos<-data_WOW_merinos %>%
+   cbind(validation)
+```
+
+
+```{r}
+
+#Delete the values of the WOW > to 2*mean LW Gold Standard
+  data_WOW_merinos<-data_WOW_merinos %>%
+    filter(validation==TRUE)
+  
+  data_WOW_merinos <- data_WOW_merinos[,-10]
+
+```
+
+### Analyses step 1
+## Descriptive statistics
+
+```{r}
+
+mean_WOW<- data_WOW_merinos %>%
+  summarize(m=mean(WOW_BW))
+
+sd_WOW<- data_WOW_merinos %>%
+  summarize(sd=sd(WOW_BW))
+
+min_WOW<- data_WOW_merinos %>%
+  summarize(min=min(WOW_BW))
+
+max_WOW<- data_WOW_merinos %>%
+  summarize(max=max(WOW_BW))
+
+```
+
+```{r}
+
+mean_GS<- data_WOW_merinos %>%
+  summarize(m=mean(LW_estimated))
+
+sd_GS<- data_WOW_merinos %>%
+  summarize(sd=sd(LW_estimated))
+
+min_GS<- data_WOW_merinos %>%
+  summarize(min=min(LW_estimated))
+
+max_GS<- data_WOW_merinos %>%
+  summarize(max=max(LW_estimated))
+
+```
+
+## Concordance Correlation Coefficient
+
+```{r}
+#Concordance Correlation Coefficient
+
+r <- cor(x=data_WOW_merinos$LW_estimated, y=data_WOW_merinos$WOW_BW)
+concordance <- CCC(x=data_WOW_merinos$LW_estimated, y=data_WOW_merinos$WOW_BW, ci = "z-transform",conf.level = 0.95, na.rm = FALSE)
+
+concordance 
+
+```
+
+##Precision
+##We need to have a column "System" and merge LW_estimated and WOW_BW in a same column called "LW"
+```{r}
+
+System <- rep("Gold Standard", nrow(data_LW_estimated))
+
+data_LW_estimated <- merge(data_LW_estimated, data_ewelambs)
+
+GS <- data_LW_estimated %>%
+  select(ID, Date, Week, LW_estimated) %>%
+  cbind(System)
+
+GS <- GS %>%
+  rename(LW=LW_estimated)
+
+WOW <- data_WOW_merinos %>%
+  select(ID, Date, Week, WOW_BW)
+
+System <- rep("WOW", nrow(WOW))
+WOW <- WOW %>%
+  cbind(System)
+WOW <- WOW %>%
+  rename(LW=WOW_BW)
+
+data_precision <- GS %>%
+  rbind(WOW)
+
+```
+
+##Repetatibility
+```{r}
+
+#Rep of the WOW
+
+WOW$ID<-as.character(WOW$ID)
+
+Anova(lm(data=WOW,LW~ID+Date), type=3)
+mod1<-lm(data=WOW,LW~ID+Date)
+
+errorRepetWOW_BW<- sd(mod1$residuals)
+
+CV_WOW_BWRepet<-errorRepetWOW_BW/mean(WOW$LW)*100
+CV_WOW_BWRepet
+
+#Rep of the GS
+
+GS$ID<-as.character(GS$ID)
+
+Anova(lm(data=GS,LW~ID+Date), type=3)
+mod1<-lm(data=GS,LW~ID+Date)
+
+errorRepetGS_BW<- sd(mod1$residuals)
+
+CV_GS_BWRepet<-errorRepetGS_BW/mean(GS$LW)*100
+CV_GS_BWRepet
+
+```
+
+##Reproductibility
+```{r, include=F}
+as.factor(as.character(data_precision$LW))
+```
+
+```{r}
+Anova(lm(data=data_precision,LW~ID+Date), type=3)
+mod1<-lm(data=data_precision,LW~ID+Date)
+
+errorReproWOW_BW<- sd(mod1$residuals)
+
+CV_WOW_BWRepro<-errorReproWOW_BW/mean(data_precision$LW)*100
+CV_WOW_BWRepro
+
+```
+
+## Bland and Altman coefficient
+
+```{r}
+
+BA2<-bland.altman.plot(data_WOW_merinos$LW_estimated, data_WOW_merinos$WOW_BW, two = 1.96, mode = 1, graph.sys = "ggplot2", conf.int = 0, silent = TRUE, sunflower = FALSE, geom_count = FALSE)
+
+bland.altman.stats(data_WOW_merinos$LW_estimated, data_WOW_merinos$WOW_BW, two = 1.96, mode = 1, conf.int = 0.95)
+
+```
+## Regression
+
+```{r}
+
+r2<-lm(data_WOW_merinos$WOW_BW~data_WOW_merinos$LW_estimated)
+summary(r2)
+
+R2<-ggplot(data_WOW_merinos)+
+  geom_point(aes(x=LW_estimated,y=WOW_BW))+
+  geom_abline(intercept = 22.23413, slope = 0.47237, colour="blue")+
+  geom_abline(intercept = 0, slope = 1, colour="red")+
+  ylim(0,80)+
+  xlim(0,45)+
+  ylab("WoW")+
+  xlab("Estimated values - Gold Standard")
+
+```
+
+##Clean the data : Step 2
+##Quality of the WOW measures according to the estimated life Weight per sub-group
+
+```{r}
+
+  # Weekly mean of the LW of each sub-group
+  
+mean_GS_week <- data_WOW_merinos %>%
+    group_by(Group,Week) %>%
+    summarize(min=min(LW_estimated))
+
+max <- data_WOW_merinos %>%
+    group_by(Group,Week) %>%
+    summarize(max=max(LW_estimated))
+
+mean_GS_week <- mean_GS_week %>%
+  cbind(max=max$max)
+  
+  validation<-c()
+
+  #validation = TRUE when the LW recorded with the WOW is >min-5 and <max+5
+
+  for (i in 1:nrow(data_WOW_merinos)){
+    for (j in 1:nrow(mean_GS_week)){
+      
+      if (data_WOW_merinos$Week[i]==mean_GS_week$Week[j]){
+        if (data_WOW_merinos$Group[i]==mean_GS_week$Group[j]){
+          if (data_WOW_merinos$WOW_BW[i]>mean_GS_week$min[j]-2.5
+              & data_WOW_merinos$WOW_BW[i]<mean_GS_week$max[j]+2.5){
+          validation<-c(validation,TRUE)
+        }
+        else{
+          validation<-c(validation,FALSE)
+        }
+      }
+      }
+    }
+  }
+   
+
+  data_WOW_merinos<-data_WOW_merinos %>%
+   cbind(validation)
+```
+
+
+```{r}
+
+
+  data_WOW_merinos<-data_WOW_merinos %>%
+    filter(validation==TRUE)
+  
+  data_WOW_merinos <- data_WOW_merinos[,-10]
+
+```
+
+### Analyses step 2
+## Descriptive statistics
+
+```{r}
+
+mean_WOW<- data_WOW_merinos %>%
+  summarize(m=mean(WOW_BW))
+
+sd_WOW<- data_WOW_merinos %>%
+  summarize(sd=sd(WOW_BW))
+
+min_WOW<- data_WOW_merinos %>%
+  summarize(min=min(WOW_BW))
+
+max_WOW<- data_WOW_merinos %>%
+  summarize(max=max(WOW_BW))
+
+```
+
+```{r}
+
+mean_GS<- data_WOW_merinos %>%
+  summarize(m=mean(LW_estimated))
+
+sd_GS<- data_WOW_merinos %>%
+  summarize(sd=sd(LW_estimated))
+
+min_GS<- data_WOW_merinos %>%
+  summarize(min=min(LW_estimated))
+
+max_GS<- data_WOW_merinos %>%
+  summarize(max=max(LW_estimated))
+
+```
+## Concordance Correlation Coefficient
+
+```{r}
+#Concordance Correlation Coefficient
+
+r <- cor(x=data_WOW_merinos$LW_estimated, y=data_WOW_merinos$WOW_BW)
+concordance <- CCC(x=data_WOW_merinos$LW_estimated, y=data_WOW_merinos$WOW_BW, ci = "z-transform",conf.level = 0.95, na.rm = FALSE)
+
+concordance 
+
+```
+
+##Precision
+##We need to have a column "System" and merge LW_estimated and WOW_BW in a same column called "LW"
+```{r}
+
+System <- rep("Gold Standard", nrow(data_LW_estimated))
+
+data_LW_estimated <- merge(data_LW_estimated, data_ewelambs)
+
+GS <- data_LW_estimated %>%
+  select(ID, Date, Week, LW_estimated) %>%
+  cbind(System)
+
+GS <- GS %>%
+  rename(LW=LW_estimated)
+
+WOW <- data_WOW_merinos %>%
+  select(ID, Date, Week, WOW_BW)
+
+System <- rep("WOW", nrow(WOW))
+WOW <- WOW %>%
+  cbind(System)
+WOW <- WOW %>%
+  rename(LW=WOW_BW)
+
+data_precision <- GS %>%
+  rbind(WOW)
+
+```
+
+##Repetatibility
+```{r}
+
+#Rep of the WOW
+
+WOW$ID<-as.character(WOW$ID)
+
+Anova(lm(data=WOW,LW~ID+Date), type=3)
+mod1<-lm(data=WOW,LW~ID+Date)
+
+errorRepetWOW_BW<- sd(mod1$residuals)
+
+CV_WOW_BWRepet<-errorRepetWOW_BW/mean(WOW$LW)*100
+CV_WOW_BWRepet
+
+#Rep of the GS
+
+GS$ID<-as.character(GS$ID)
+
+Anova(lm(data=GS,LW~ID+Date), type=3)
+mod1<-lm(data=GS,LW~ID+Date)
+
+errorRepetGS_BW<- sd(mod1$residuals)
+
+CV_GS_BWRepet<-errorRepetGS_BW/mean(GS$LW)*100
+CV_GS_BWRepet
+
+```
+
+##Reproductibility
+```{r, include=F}
+as.factor(as.character(data_precision$LW))
+```
+
+```{r}
+Anova(lm(data=data_precision,LW~ID+Date), type=3)
+mod1<-lm(data=data_precision,LW~ID+Date)
+
+errorReproWOW_BW<- sd(mod1$residuals)
+
+CV_WOW_BWRepro<-errorReproWOW_BW/mean(data_precision$LW)*100
+CV_WOW_BWRepro
+
+```
+
+## Bland and Altman coefficient
+
+```{r}
+
+BA3<-bland.altman.plot(data_WOW_merinos$LW_estimated, data_WOW_merinos$WOW_BW, two = 1.96, mode = 1, graph.sys = "ggplot2", conf.int = 0, silent = TRUE, sunflower = FALSE, geom_count = FALSE)
+
+bland.altman.stats(data_WOW_merinos$LW_estimated, data_WOW_merinos$WOW_BW, two = 1.96, mode = 1, conf.int = 0.95)
+
+```
+## Regression
+
+```{r}
+
+r3<-lm(data_WOW_merinos$WOW_BW~data_WOW_merinos$LW_estimated)
+summary(r3)
+
+R3<-ggplot(data_WOW_merinos)+
+  geom_point(aes(x=LW_estimated,y=WOW_BW))+
+  geom_abline(intercept = 1.377448, slope = 0.983531, colour="blue")+
+  geom_abline(intercept = 0, slope = 1, colour="red")+
+  ylim(0,80)+
+  xlim(0,45)+
+  ylab("WoW")+
+  xlab("Estimated values - Gold Standard")
+
+```
+
+##Clean the data : Step 3
+##Quality of the WOW measures according to the estimated life Weight per individuals
+
+```{r}
+
+validation<-c()
+
+#validation = TRUE when the LW recorded with the WOW is correct
+
+for (i in 1:nrow(data_WOW_merinos)){
+  if (data_WOW_merinos$SD_min[i]<data_WOW_merinos$WOW_BW[i] &
+      data_WOW_merinos$WOW_BW[i]<data_WOW_merinos$SD_max[i]){
+    validation<-c(validation,TRUE)
+  }
+  else{
+    validation<-c(validation,FALSE)
+  }
+}
+
+data_WOW_merinos<-data_WOW_merinos %>%
+  cbind(validation)
+
+data_WOW_merinos$ID<- as.character(data_WOW_merinos$ID)
+
+```
+
+```{r}
+
+#Gold Standard graphs with points of the WOW measures
+
+ggplot(data_WOW_merinos) +
+  aes(x = Date, y = WOW_BW) +
+  geom_point(aes(colour=validation), size=0.02)+  
+  scale_colour_manual(values = c("#FE90A0", "#419616"))+
+  geom_ribbon(aes(ymin=SD_min, ymax=SD_max), fill= "#B4D7EE", alpha=0.5)+
+  geom_line( aes(x=Date,y = LW_estimated),size = 0.05, colour = "#0c4c8a") +
+  theme(legend.position="right", 
+        axis.text.x = element_text(angle = -90, vjust = 0.5, hjust = 0, size=12),
+        axis.text.y = element_text(size=10),
+        axis.title.x = element_text(size=14, face="bold.italic"),
+        axis.title.y = element_text(size=14, face="bold.italic"),
+        plot.title = element_text(size=16, face="bold.italic"))+
+  ggtitle("Growth progression of each individual")+
+  xlab("Date")+
+  scale_x_date(date_breaks = "10 days",
+             date_labels = "%Y/%m/%d") +
+  ylab("Weight (kg)")+
+  facet_wrap(vars(ID), ncol=20)
+```
+
+```{r}
+##Example
+
+data_WOW_merinos_ID<- data_WOW_merinos %>%
+  filter(ID=="3640")
+
+ggplot(data_WOW_merinos_ID) +
+  aes(x = Date, y = WOW_BW) +
+  geom_point(aes(colour=validation), size=2)+  
+  scale_colour_manual(values = c("#FE90A0", "#419616"))+
+  geom_ribbon(aes(ymin=SD_min, ymax=SD_max), fill= "#B4D7EE", alpha=0.5)+
+  geom_line( aes(x=Date,y = LW_estimated),size = 0.05, colour = "#0c4c8a") +
+  theme(legend.position="right", 
+        axis.text.x = element_text(angle = -90, vjust = 0.5, hjust = 0, size=12),
+        axis.text.y = element_text(size=10),
+        axis.title.x = element_text(size=14, face="bold.italic"),
+        axis.title.y = element_text(size=14, face="bold.italic"),
+        plot.title = element_text(size=16, face="bold.italic"))+
+  ggtitle("Growth progression of the 3640 ewelamb")+
+  xlab("Date")+
+  scale_x_date(date_breaks = "10 days",
+             date_labels = "%Y/%m/%d") +
+  ylab("Weight (kg)")
+
+```
+
+```{r}
+
+data_WOW_merinos<- data_WOW_merinos %>%
+  filter(validation==TRUE)
+
+data_WOW_merinos<- data_WOW_merinos %>%
+  select(ID,Date,Week, WOW_BW,LW_estimated,SD_min,SD_max)
+
+```
+
+### Analyses clean data
+## Descriptive statistics
+
+```{r}
+
+mean_WOW<- data_WOW_merinos %>%
+  summarize(m=mean(WOW_BW))
+
+sd_WOW<- data_WOW_merinos %>%
+  summarize(sd=sd(WOW_BW))
+
+min_WOW<- data_WOW_merinos %>%
+  summarize(min=min(WOW_BW))
+
+max_WOW<- data_WOW_merinos %>%
+  summarize(max=max(WOW_BW))
+
+```
+
+```{r}
+
+mean_GS<- data_WOW_merinos %>%
+  summarize(m=mean(LW_estimated))
+
+sd_GS<- data_WOW_merinos %>%
+  summarize(sd=sd(LW_estimated))
+
+min_GS<- data_WOW_merinos %>%
+  summarize(min=min(LW_estimated))
+
+max_GS<- data_WOW_merinos %>%
+  summarize(max=max(LW_estimated))
+
+```
+
+## Concordance Correlation Coefficient
+
+```{r}
+#Concordance Correlation Coefficient
+
+r <- cor(x=data_WOW_merinos$LW_estimated, y=data_WOW_merinos$WOW_BW)
+concordance <- CCC(x=data_WOW_merinos$LW_estimated, y=data_WOW_merinos$WOW_BW, ci = "z-transform",conf.level = 0.95, na.rm = FALSE)
+
+concordance 
+
+```
+
+##Precision
+##We need to have a column "System" and merge LW_estimated and WOW_BW in a same column called "LW"
+```{r}
+
+System <- rep("Gold Standard", nrow(data_LW_estimated))
+
+data_LW_estimated <- merge(data_LW_estimated, data_ewelambs)
+
+GS <- data_LW_estimated %>%
+  select(ID, Date, Week, LW_estimated) %>%
+  cbind(System)
+
+GS <- GS %>%
+  rename(LW=LW_estimated)
+
+WOW <- data_WOW_merinos %>%
+  select(ID, Date, Week, WOW_BW)
+
+System <- rep("WOW", nrow(WOW))
+WOW <- WOW %>%
+  cbind(System)
+WOW <- WOW %>%
+  rename(LW=WOW_BW)
+
+data_precision <- GS %>%
+  rbind(WOW)
+
+```
+
+##Repetatibility
+```{r}
+
+#Rep of the WOW
+
+WOW$ID<-as.character(WOW$ID)
+
+Anova(lm(data=WOW,LW~ID+Date), type=3)
+mod1<-lm(data=WOW,LW~ID+Date)
+
+errorRepetWOW_BW<- sd(mod1$residuals)
+
+CV_WOW_BWRepet<-errorRepetWOW_BW/mean(WOW$LW)*100
+CV_WOW_BWRepet
+
+#Rep of the GS
+
+GS$ID<-as.character(GS$ID)
+
+Anova(lm(data=GS,LW~ID+Date), type=3)
+mod1<-lm(data=GS,LW~ID+Date)
+
+errorRepetGS_BW<- sd(mod1$residuals)
+
+CV_GS_BWRepet<-errorRepetGS_BW/mean(GS$LW)*100
+CV_GS_BWRepet
+
+```
+
+##Reproductibility
+```{r, include=F}
+as.factor(as.character(data_precision$LW))
+```
+
+```{r}
+Anova(lm(data=data_precision,LW~ID+Date), type=3)
+mod1<-lm(data=data_precision,LW~ID+Date)
+
+errorReproWOW_BW<- sd(mod1$residuals)
+
+CV_WOW_BWRepro<-errorReproWOW_BW/mean(data_precision$LW)*100
+CV_WOW_BWRepro
+
+```
+
+## Bland and Altman coefficient
+
+```{r}
+
+BA4<-bland.altman.plot(data_WOW_merinos$LW_estimated, data_WOW_merinos$WOW_BW, two = 1.96, mode = 1, graph.sys = "ggplot2", conf.int = 0, silent = TRUE, sunflower = FALSE, geom_count = FALSE)
+
+bland.altman.stats(data_WOW_merinos$LW_estimated, data_WOW_merinos$WOW_BW, two = 1.96, mode = 1, conf.int = 0.95)
+
+```
+## Regression
+
+```{r}
+
+r4<-lm(data_WOW_merinos$WOW_BW~data_WOW_merinos$LW_estimated)
+summary(r4)
+
+R4<-ggplot(data_WOW_merinos)+
+  geom_point(aes(x=LW_estimated,y=WOW_BW))+
+  geom_abline(intercept = 0.711369, slope = 1.004036, colour="blue")+
+  geom_abline(intercept = 0, slope = 1, colour="red")+
+  ylim(0,80)+
+  xlim(0,45)+
+  ylab("WoW")+
+  xlab("Estimated values - Gold Standard")
+
+```
+
+```{r}
+
+plot_grid(BA1,BA2,BA3,BA4,labels=c("A","B","C","D"),label_size = 16,nrow=2, ncol=2, align="hv", axis="tblr")
+
+```
+```{r}
+
+plot_grid(R1,R2,R3,R4,labels=c("A","B","C","D"),label_size = 16,nrow=2, ncol=2, align="hv", axis="tblr")
+
+```
+
+
+
+```{r}
+#Number of correct LW per animal
+
+correct<- data_WOW_merinos %>%
+    filter(ID==data_ewelambs$ID[1]) %>%
+    count(ID)
+
+for (i in 2:nrow(data_ewelambs)){
+  correct_i<-data_WOW_merinos %>%
+    filter(ID==data_ewelambs$ID[i]) %>%
+    count(ID)
+  correct<-correct %>%
+    rbind(correct_i)
+}
+
+mean_correct<-correct %>%
+  summarize(m=mean(n))
+
+sd_correct<-correct %>%
+  summarize(sd=sd(n))
+
+min_correct<-correct %>%
+  summarize(min=min(n))
+
+max_correct<-correct %>%
+  summarize(max=max(n))
+
+```
+
+
+# LW graphs after cleaning
+## Daily mean progression of the LW of the group
+
+```{r, include =FALSE}
+
+mean_data_WOW<- data_WOW_merinos %>%
+  group_by(Date) %>%
+  summarize(m = mean(WOW_BW))
+
+sd_data_WOW<- data_WOW_merinos %>%
+  group_by(Date) %>%
+  summarize(sd = sd(WOW_BW))
+
+mean_data_WOW <- merge(mean_data_WOW,sd_data_WOW) 
+System <- rep("WOW",nrow(mean_data_WOW))
+mean_data_WOW<- mean_data_WOW %>%
+  cbind(System)
+
+
+mean_data_GS<- data_LW_estimated %>%
+  group_by(Date) %>%
+  summarize(m = mean(LW_estimated))
+
+sd_data_GS<- data_LW_estimated %>%
+  group_by(Date) %>%
+  summarize(sd = sd(LW_estimated))
+
+mean_data_GS <- merge(mean_data_GS,sd_data_GS) 
+System <- rep("Gold Standard",nrow(mean_data_GS))
+mean_data_GS<- mean_data_GS %>%
+  cbind(System)
+
+mean_data_compare <- mean_data_GS %>%
+  rbind(mean_data_WOW)
+
+```
+
+```{r}
+
+ggplot(mean_data_compare) +
+ aes(x = Date, y=m, group=System, color=System) +
+ geom_point() +
+ geom_line() +
+ geom_errorbar(aes(ymin=m-sd, ymax=m+sd), width=.2,
+                 position=position_dodge(0.05)) +
+ scale_color_manual(values=c("#0c4c8a","#E97A27")) +
+ ggtitle("Daily group mean Weight")+
+ theme(legend.title = element_blank(),legend.position="right",
+        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 0))+
+ xlab("Date")+
+ scale_x_date(date_breaks = "5 days",
+             date_labels = "%Y/%m/%d")+
+  ylab("Group mean Weight (kg)")
+  
+```
+
+
+##Daily mean progression of the LW of each sub-group (green, blue and red)
+
+```{r, include=FALSE}
+
+data_LW_estimated <- merge(data_LW_estimated,data_ewelambs)
+data_WOW_merinos <- merge(data_WOW_merinos, data_ewelambs)
+
+GS_group<-data_LW_estimated%>%
+  group_by(Group,Date)%>%
+  summarize(m=mean(LW_estimated))
+sd<-data_LW_estimated%>%
+  group_by(Group,Date)%>%
+  summarize(sd=sd(LW_estimated))
+GS_group<-GS_group %>%
+  cbind(sd=sd$sd)
+System <- rep("Gold Standard",nrow(GS_group))
+GS_group<- GS_group %>%
+  cbind(System=System)
+
+WOW_group<-data_WOW_merinos%>%
+  group_by(Group,Date)%>%
+  summarize(m=mean(WOW_BW))
+sd<-data_WOW_merinos%>%
+  group_by(Group,Date)%>%
+  summarize(sd=sd(WOW_BW))
+WOW_group<-WOW_group %>%
+  cbind(sd=sd$sd)
+System <- rep("WOW",nrow(WOW_group))
+WOW_group<- WOW_group %>%
+  cbind(System=System)
+
+data_compare_group<-WOW_group %>%
+  rbind(GS_group)
+
+data_compare_group<-data_compare_group %>%
+  filter(Date!="2021-01-25") %>%
+  filter(Date!="2021-01-26") %>%
+  filter(Date!="2021-01-27") %>%
+  filter(Date!="2021-01-28") %>%
+  filter(Date!="2021-01-29") %>%
+  filter(Date!="2021-01-30") %>%
+  filter(Date!="2021-01-31") %>%
+  filter(Date!="2021-02-01") %>%
+  filter(Date!="2021-02-02") %>%
+  filter(Date!="2021-02-03") %>%
+  filter(Date!="2021-02-04") %>%
+  filter(Date!="2021-02-05") %>%
+  filter(Date!="2021-02-06") %>%
+  filter(Date!="2021-02-07") %>%
+  filter(Date!="2021-02-08") %>%
+  filter(Date!="2021-02-09") %>%
+  filter(Date!="2021-02-10") %>%
+  filter(Date!="2021-02-11") %>%
+  filter(Date!="2021-02-12") %>%
+  filter(Date!="2021-02-13") %>%
+  filter(Date!="2021-02-14")
+
+```
+
+```{r}
+
+ggplot(data_compare_group) +
+ aes(x = Date, y=m, fill=System, color=Group) +
+ geom_point(aes(shape = System)) +
+ geom_line() +
+ geom_errorbar(aes(ymin=m-sd, ymax=m+sd), width=.2,
+                 position=position_dodge(0.05)) +
+ scale_color_manual(values=c("#12AAEE","#53C426", "#D33C13")) +
+ scale_shape_manual(values = c(8,5))+
+ #ggtitle("Daily subgroup mean Weight")+
+ theme(legend.position="right",
+        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 0))+
+ xlab("Date")+
+ scale_x_date(date_breaks = "5 days",
+             date_labels = "%Y-%m-%d")+
+  ylab("Poids vif moyen du groupe (kg)")
+
+```
+
+##Calculate the daily mean LW obtained with the WOW values for each ewelambs
+```{r}
+
+data_WOW<- data_WOW_merinos %>%
+  group_by(ID,Date,Week) %>%
+  filter(ID==data_ewelambs$ID[1])
+  
+mean_data_WOW <- data_WOW %>%
+  group_by(ID,Date,Week) %>%
+  summarize(LW = mean(WOW_BW))
+
+sd_data_WOW<- data_WOW %>%
+  group_by(ID,Date,Week) %>%
+  summarize(sd = sd(WOW_BW))
+
+mean_data_WOW <- merge(mean_data_WOW,sd_data_WOW)
+  
+ID<-rep(data_ewelambs$ID[1],nrow(mean_data_WOW))
+
+
+for (a in 2:nrow(data_ewelambs)){
+  data_ID<- data_WOW_merinos %>%
+    group_by(ID,Date,Week) %>%
+    filter(ID==data_ewelambs$ID[a])
+  
+  mean_ID <- data_ID %>%
+    group_by(ID,Date,Week) %>%
+    summarize(LW = mean(WOW_BW))
+  
+  sd_ID<- data_ID %>%
+  group_by(ID,Date,Week) %>%
+  summarize(sd = sd(WOW_BW))
+  
+  mean_ID <- merge(mean_ID,sd_ID)
+  
+  ID<-rep(data_ewelambs$ID[a],nrow(mean_ID))
+  
+  mean_data_WOW <- mean_data_WOW %>%
+    rbind(mean_ID)
+ 
+}
+
+System<-rep("WOW",nrow(mean_data_WOW))
+mean_data_WOW<- mean_data_WOW %>%
+  cbind(System)
+
+sd <- rep(NA, nrow(data_Gold_Std))
+Gold_Std<- data_Gold_Std %>%
+  cbind(sd)
+
+Gold_Std<-Gold_Std %>%
+  group_by(ID, Date)
+
+Gold_Std <- Gold_Std %>%
+  select(ID,Date,Week,LW,sd,System)
+    
+data_compare <- mean_data_WOW %>%
+  rbind(Gold_Std)
+
+data_compare<-data_compare %>%
+  filter(Date!="2021-01-25") %>%
+  filter(Date!="2021-01-26") %>%
+  filter(Date!="2021-01-27") %>%
+  filter(Date!="2021-01-28") %>%
+  filter(Date!="2021-01-29") %>%
+  filter(Date!="2021-01-30") %>%
+  filter(Date!="2021-01-31") %>%
+  filter(Date!="2021-02-01") %>%
+  filter(Date!="2021-02-02") %>%
+  filter(Date!="2021-02-03") %>%
+  filter(Date!="2021-02-04") %>%
+  filter(Date!="2021-02-05") %>%
+  filter(Date!="2021-02-06") %>%
+  filter(Date!="2021-02-07") %>%
+  filter(Date!="2021-02-08") %>%
+  filter(Date!="2021-02-09") %>%
+  filter(Date!="2021-02-10") %>%
+  filter(Date!="2021-02-11") %>%
+  filter(Date!="2021-02-12") %>%
+  filter(Date!="2021-02-13") %>%
+  filter(Date!="2021-02-14")
+
+```
+
+
+```{r}
+
+ggplot(data_compare) +
+ aes(x = Date, y=LW, group=System, color=System) +
+ geom_point() +
+ geom_line() +
+ #geom_errorbar(aes(ymin=LW-sd, ymax=LW+sd), width=.2,
+ #                position=position_dodge(0.05)) +
+ scale_color_manual(values=c("#0c4c8a","#E97A27")) +
+ ggtitle("Daily group mean Weight")+
+ theme(legend.title = element_blank(),legend.position="right",
+        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 0))+
+ xlab("Date")+
+ scale_x_date(date_breaks = "10 days",
+             date_labels = "%Y/%m/%d")+
+  ylab("Group mean Weight (kg)")+
+  facet_wrap(~ID,ncol=20)
+
+```
+
+```{r}
+data_compare_ID<-data_compare %>%
+  filter(ID %in% c("3954","3537","3601"))
+
+
+ggplot(data_compare_ID) +
+ aes(x = Date, group=System, color=System) +
+ geom_point(aes(y=LW, shape=System), size=3) +
+ geom_line(aes(y=LW), size=0.7) +
+ scale_color_manual(values=c("black", "darkgrey")) +
+ scale_shape_manual(values = c(8,5))+
+ #ggtitle("Daily weight")+
+ theme(legend.position="right",
+        legend.text = element_text(size=10),
+        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 0, size=16),
+        axis.text.y = element_text(size=16))+
+ xlab("Date")+
+ scale_x_date(date_breaks = "5 days",
+             date_labels = "%Y-%m-%d")+
+  ylab("Weight (kg)")+
+  facet_wrap(~ID, ncol=1)
+
+
+```
+
+# Estimate the weight on the Tuesdays with WOW data for the animals without this info
+```{r}
+GMQ<-c()
+ID<-c()
+
+#Work animal by animal
+for (a in 1:nrow(data_ewelambs)){
+  
+  #Create sub-database per animal
+  WOW<- data_compare %>%
+    filter(System=="WOW") %>%
+    select(ID,Date,LW)
+  WOW<-WOW %>%
+  filter(ID==data_ewelambs$ID[a]) %>%
+    arrange(Date)
+  GMQ_ID<-c(NA)
+  
+  for(i in 2:nrow(WOW)){
+    
+        days<-difftime(WOW$Date[i],WOW$Date[i-1],units="days")
+        days<-as.numeric(days)
+        gain<-(WOW$LW[i]-WOW$LW[i-1])/days
+        
+        GMQ_ID<-c(GMQ_ID,gain)
+
+  }
+  
+  GMQ<-c(GMQ,GMQ_ID)
+  ID<-c(ID,rep(data_ewelambs$ID[a],length(GMQ_ID)))
+}
+
+GMQ<-data.frame(GMQ)
+
+#Add column "GMQ" to the database
+
+WOW_ADG<- data_compare %>%
+    filter(System=="WOW") %>%
+  select(ID,Date,LW,System) %>%
+  cbind(GMQ)
+
+WOW_ADG<- WOW_ADG %>%
+  filter(GMQ!="NA")
+
+```
+
+```{r}
+
+#Estimate the Life Weight of each individual
+LW_estimated<-c()
+ID<-c()
+Day<-c()
+
+for (a in 1:nrow(data_ewelambs)){
+
+  WOW_ID<-WOW_ADG %>%
+  filter(ID==data_ewelambs$ID[a])
+  
+  LW_estimated_ID<-c()
+  ID_e<-c()
+  d<-c()
+
+for (i in 2:(nrow(WOW_ID))){
+  BW<-WOW_ID$LW[i-1]
+  LW_estimated_ID<-c(LW_estimated_ID,BW)
+  ID_e<-c(ID_e,data_ewelambs$ID[a])
+  d<-c(d,WOW_ID$Date[i-1])
+  as.Date(d,origin = "1970-01-01")
+      
+  dif_days_WOW<- difftime(WOW_ID$Date[i],WOW_ID$Date[i-1],
+                             units="days")
+  dif_days_WOW<-as.numeric(dif_days_WOW)
+  
+  
+  # We have to deal with the dead ewelambs
+  if(WOW_ID$ID[i]!="3954") { 
+    if(WOW_ID$Date[i]!="2021-04-29" & dif_days_WOW!=1){
+    for (j in 1:(dif_days_WOW-1)){
+        BW<-BW+WOW_ID$GMQ[i]
+        LW_estimated_ID<-c(LW_estimated_ID,BW)
+        ID_e<-c(ID_e,data_ewelambs$ID[a])  
+        d<-c(d,WOW_ID$Date[i-1]+j)
+        as.Date(d,origin = "1970-01-01")
+    }
+  }
+    if(WOW_ID$Date[i]=="2021-04-29"){
+    for (j in 1:(dif_days_WOW-1)){
+        BW<-BW+WOW_ID$GMQ[i]
+        LW_estimated_ID<-c(LW_estimated_ID,BW)
+        ID_e<-c(ID_e,data_ewelambs$ID[a])  
+        d<-c(d,WOW_ID$Date[i-1]+j)
+        as.Date(d,origin = "1970-01-01")
+    }
+    }
+  }
+  
+    if(WOW_ID$ID[i]=="3954") { 
+    if(WOW_ID$Date[i]!="2021-03-30" & dif_days_WOW!=1){
+    for (j in 1:(dif_days_WOW-1)){
+        BW<-BW+WOW_ID$GMQ[i]
+        LW_estimated_ID<-c(LW_estimated_ID,BW)
+        ID_e<-c(ID_e,data_ewelambs$ID[a])  
+        d<-c(d,WOW_ID$Date[i-1]+j)
+        as.Date(d,origin = "1970-01-01")
+    }
+  }
+    if(WOW_ID$Date[i]=="2021-03-30"){
+    for (j in 1:(dif_days_WOW)){
+        BW<-BW+WOW_ID$GMQ[i]
+        LW_estimated_ID<-c(LW_estimated_ID,BW)
+        ID_e<-c(ID_e,data_ewelambs$ID[a])  
+        d<-c(d,WOW_ID$Date[i-1]+j)
+        as.Date(d,origin = "1970-01-01")
+    }
+    }
+  }
+
+}
+  
+  LW_estimated<-c(LW_estimated,LW_estimated_ID)
+  ID<-c(ID,ID_e)
+  Day<-c(Day,d)
+  
+}
+  data_LW_estimated_WOW<-data.frame(ID,Day,LW_estimated)
+  data_LW_estimated_WOW$Day <- as.Date(data_LW_estimated_WOW$Day, 
+                                       origin = "1970-01-01")
+
+data_LW_estimated_WOW <- data_LW_estimated_WOW %>%
+  rename(Date=Day)
+data_LW_estimated_WOW <- data_LW_estimated_WOW%>%
+  arrange(ID,Date)
+
+```
+
+## Calculate the ADG between two Tuesday
+```{r}
+
+data_Gold_Std$Date <-as.character(data_Gold_Std$Date)
+data_Gold_Std <- data_Gold_Std %>%
+  filter(Date!="2021-03-25") %>%
+  filter(Date!="2021-04-29") %>%
+  arrange(Date)
+
+data_Gold_Std <- data_Gold_Std %>%
+  slice(289:nrow(data_Gold_Std))
+
+ADG_Date<-data_Gold_Std %>%
+  count(Date)%>%
+  select(Date)
+
+
+data_LW_estimated_WOW <- data_LW_estimated_WOW %>%
+  filter(Date==ADG_Date$Date[1]|
+           Date==ADG_Date$Date[2] |
+           Date==ADG_Date$Date[3] |
+           Date==ADG_Date$Date[4] |
+           Date==ADG_Date$Date[5] |
+           Date==ADG_Date$Date[6] |
+           Date==ADG_Date$Date[7] |
+           Date==ADG_Date$Date[8] |
+           Date==ADG_Date$Date[9] |
+           Date==ADG_Date$Date[10] |
+           Date==ADG_Date$Date[11])
+
+
+GMQ<-c()
+ID<-c()
+Week<-c()
+
+#Work animal by animal
+for (a in 1:nrow(data_ewelambs)){
+  
+  #Create sub-database per animal
+  WOW<-data_LW_estimated_WOW %>%
+  filter(ID==data_ewelambs$ID[a]) %>%
+    arrange(Date)
+  GMQ_ID<-c(NA)
+  
+  for(i in 2:nrow(WOW)){
+
+        days<-difftime(WOW$Date[i],WOW$Date[i-1],units="days")
+        days<-as.numeric(days)
+        gain<-(WOW$LW_estimated[i]-WOW$LW_estimated[i-1])/days
+        
+        GMQ_ID<-c(GMQ_ID,gain)
+
+  }
+  
+  GMQ<-c(GMQ,GMQ_ID)
+  ID<-c(ID,rep(data_ewelambs$ID[a],length(GMQ_ID)))
+}
+
+GMQ<-data.frame(GMQ)
+
+data_LW_estimated_WOW<-data_LW_estimated_WOW %>%
+  arrange(ID)
+
+data_LW_estimated_WOW<-data_LW_estimated_WOW %>%
+  cbind(GMQ)
+
+```
+
+```{r}
+#Prepare the database
+
+data_LW_estimated_WOW<-merge(data_LW_estimated_WOW,data_weeks)
+data_LW_estimated_WOW<-merge(data_LW_estimated_WOW,data_ewelambs)
+
+data_LW_estimated_WOW<-data_LW_estimated_WOW %>%
+  select(ID,Group,Date,Week,LW_estimated,GMQ) %>%
+  rename(LW=LW_estimated)
+
+System<-rep("WOW",nrow(data_LW_estimated_WOW))
+WOW<-data_LW_estimated_WOW %>%
+  cbind(System)
+
+GS<-merge(data_Gold_Std,data_ewelambs) %>%
+  select(ID,Group,Date,Week,LW,GMQ,System)
+
+data_analysis <- WOW %>%
+  rbind(GS)%>%
+  arrange(System,Week,ID)
+
+```
+
+
+##Statistic analysis on LW
+
+## Model 1: LW explained by System, Group and their interaction
+
+```{r}
+
+#The aim of this model is to validate (or not) the use of the WOW instead of the reference method. That means that we show if a significant difference exists between the two methods. 
+
+data_analysis<-data_analysis%>%
+  group_by(System,Week,Group,ID)
+#group_data(data_analysis)
+
+#xtabs(~Week+Group, data_analysis)
+
+mod1<-lmerTest::lmer(LW ~ Group + System + Group*Week + Group*System +
+             (1|System)+(1|Week)+(1|Group/ID),
+          data=data_analysis)
+
+summary(mod1)
+AIC(mod1)
+car::Anova(mod1, type=3)
+plot(mod1)
+ggqqplot(residuals(mod1))
+
+
+```
+```{r}
+
+data_analysis_red<-data_analysis%>%
+  group_by(System,Week,Group,ID)%>%
+  filter(Group=="R")
+
+modred<-lmerTest::lmer(LW ~ ID + System + ID*Week + ID*System +
+             (1|System)+(1|Week)+(1|ID),
+          data=data_analysis_red)
+
+summary(modred)
+car::Anova(modred, type=3)
+
+```
+```{r}
+
+data_analysis_blue<-data_analysis%>%
+  group_by(System,Week,Group,ID)%>%
+  filter(Group=="B")
+
+modblue<-lmerTest::lmer(LW ~ ID + System + ID*Week + ID*System +
+             (1|System)+(1|Week)+(1|ID),
+          data=data_analysis_blue)
+
+summary(modblue)
+car::Anova(modblue, type=3)
+
+```
+
+```{r}
+
+data_analysis_green<-data_analysis%>%
+  group_by(System,Week,Group,ID)%>%
+  filter(Group=="G")
+
+modgreen<-lmerTest::lmer(LW ~ ID + System + ID*Week + ID*System +
+             (1|System)+(1|Week)+(1|ID),
+          data=data_analysis_green)
+
+summary(modgreen)
+car::Anova(modgreen, type=3)
+
+```
+
+```{r}
+
+data_analysis_3954<-data_analysis %>%
+  filter(ID %in% c("3954"))
+modID1<-lmerTest::lmer(LW ~ System + Week +(1|System)+(1|Week),
+          data=data_analysis_3954)
+summary(modID1)
+car::Anova(modID1, type=3)
+```
+
+```{r}
+
+data_analysis_3537<-data_analysis %>%
+  filter(ID %in% c("3537"))
+modID2<-lmerTest::lmer(LW ~ System + Week +(1|System)+(1|Week),
+          data=data_analysis_3537)
+summary(modID2)
+car::Anova(modID2, type=3)
+
+lsmeans(modID2, "Week")
+
+```
+
+```{r}
+
+data_analysis_3601<-data_analysis %>%
+  filter(ID %in% c("3601"))
+modID3<-lmerTest::lmer(LW ~ System + Week +(1|System)+(1|Week),
+          data=data_analysis_3601)
+summary(modID3)
+car::Anova(modID3, type=3)
+
+```
+
+```{r}
+test<-data_analysis%>%
+  group_by(Group,Date,System)%>%
+  summarize(m=mean(LW))
+sd<-data_analysis%>%
+  group_by(Group,Date,System)%>%
+  summarize(sd=sd(LW))
+test<-test %>%
+  cbind(sd=sd$sd)
+
+ggplot(test) +
+  aes(x = Date, y=m, fill=System, color=Group) +
+  geom_point(aes(shape = System), size=3) +
+  geom_line() +
+  geom_errorbar(aes(ymin=m-sd, ymax=m+sd), width=.2,
+                position=position_dodge(0.05)) +
+  scale_color_manual(values=c("#999999","#333333", "#666666")) +
+  scale_shape_manual(values = c(8,5))+
+  #ggtitle("Daily subgroup mean Weight")+
+  theme(legend.position="right",
+        legend.text = element_text(size=14),
+        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 0, size=16),
+        axis.text.y = element_text(size=16))+
+  xlab("Date")+
+  scale_x_date(date_breaks = "5 days",
+               date_labels = "%Y-%m-%d")+
+  ylab("Poids vif moyen du groupe (kg)")
+```
+
+## Model 2: average LW explained by System, Group and their interaction
+
+```{r}
+#Prepare the database
+
+mWOW <- data_analysis %>%
+  filter(System=="WOW") %>%
+  group_by(ID,Group,System) %>%
+  summarize(mLW=mean(LW))
+
+mGS <- data_analysis %>%
+  filter(System=="Gold Standard") %>%
+  group_by(ID,Group,System) %>%
+  summarize(mLW=mean(LW))
+
+average_LW <- mWOW %>%
+  rbind(mGS)
+
+```
+
+```{r}
+
+#We test the system for the average LW during the experimentation (/!\ here mean of the Tuesdays !!!)
+
+xtabs(~System+Group, average_LW)
+
+mod2<-lmerTest::lmer(mLW ~ Group + System + Group*System +
+             (1|System)+(1|Group/ID),
+          data=average_LW)
+summary(mod2)
+car::Anova(mod2, type=3)
+AIC(mod2)
+
+```
+
+## Model 3: initial LW explained by System, Group and their interaction
+
+```{r}
+#Prepare the database
+
+iWOW <- data_analysis %>%
+  filter(System=="WOW") %>%
+  filter(Date=="2021-02-16")
+
+iGS <- data_analysis %>%
+  filter(System=="Gold Standard") %>%
+  filter(Date=="2021-02-16")
+
+initial_LW <- iWOW %>%
+  rbind(iGS)
+
+```
+
+```{r}
+
+mod3<-lmerTest::lmer(LW ~ Group + System + Group*System +
+             (1|System)+(1|Group/ID),
+          data=initial_LW)
+summary(mod3)
+car::Anova(mod3, type=3)
+
+```
+
+## Model 4: final LW explained by System, Group and their interaction
+
+```{r}
+#Prepare the database
+
+fWOW <- data_analysis %>%
+  filter(System=="WOW") %>%
+  filter(Date=="2021-04-27")
+
+fGS <- data_analysis %>%
+  filter(System=="Gold Standard") %>%
+  filter(Date=="2021-04-27")
+
+final_LW <- fWOW %>%
+  rbind(fGS)
+
+```
+
+```{r}
+
+
+mod4<-lmerTest::lmer(LW ~ Group + System + Group*System +
+             (1|System)+(1|Group/ID),
+          data=final_LW)
+summary(mod4)
+car::Anova(mod4, type=3)
+
+```
+
+## Model 5: LW gain during the collect phase of the experiment explained by System, Group and their interaction
+
+```{r}
+#Prepare the database
+
+delta <- c()
+ID <- c()
+Group <- c()
+System <- c()
+
+for (i in 1:nrow(final_LW)){
+  for (j in 1:nrow(initial_LW)){
+    if (final_LW$ID[i]==initial_LW$ID[j] &
+        final_LW$System[i]==initial_LW$System[j]){
+      delta <- c(delta,final_LW$LW[i]-initial_LW$LW[j])
+      ID <- c(ID,final_LW$ID[i])
+      Group <- c(Group,final_LW$Group[i])
+      System <- c(System,final_LW$System[i])
+        }
+  }
+}
+
+gain_LW <- data.frame(ID,Group,delta,System)
+
+```
+
+```{r}
+
+mod5<-lmerTest::lmer(delta ~ Group + System + Group*System +
+             (1|System)+(1|Group/ID),
+          data=gain_LW)
+summary(mod5)
+car::Anova(mod5, type=3)
+
+```
+
+
+```{r}
+
+#Calculate the mean difference between WOW and GS for each group
+
+mean_delta_group<-data_analysis %>%
+  group_by(Group) %>%
+  summarize(m=mean(delta))
+
+sd_delta_group <- data_analysis %>%
+  group_by(Group) %>%
+  summarize(sd=sd(delta))
+
+#Calculate the mean difference between WOW and GS
+mean_delta<-data_analysis %>%
+  summarize(m=mean(delta))
+
+sd_delta <- data_analysis %>%
+  summarize(sd=sd(delta))
+
+```
+
+##Table of the LW per Group, Sytem and their interaction
+
+```{r}
+
+# LW
+average_Group <- data_analysis %>%
+  group_by(Group) %>%
+  summarize(m=mean(LW))
+sd<- data_analysis %>%
+  group_by(Group) %>%
+  summarize(sd=sd(LW))
+average_Group<-average_Group %>%
+  cbind(sd)
+average_Group<- as.data.frame(t(average_Group))
+
+average_System <- data_analysis %>%
+  group_by(System) %>%
+  summarize(m=mean(LW))
+sd<- data_analysis %>%
+  group_by(System) %>%
+  summarize(sd=sd(LW))
+average_System<-average_System %>%
+  cbind(sd)
+average_System<- as.data.frame(t(average_System))
+
+
+average_Group_WOW <- WOW %>%
+  group_by(Group) %>%
+  summarize(m=mean(LW))
+sd<- WOW %>%
+  group_by(Group) %>%
+  summarize(sd=sd(LW))
+average_Group_WOW<-average_Group_WOW %>%
+  cbind(sd)
+average_Group_WOW<- as.data.frame(t(average_Group_WOW))
+
+average_Group_GS <- GS %>%
+  group_by(Group) %>%
+  summarize(m=mean(LW))
+sd<- GS %>%
+  group_by(Group) %>%
+  summarize(sd=sd(LW))
+average_Group_GS<-average_Group_GS %>%
+  cbind(sd)
+average_Group_GS<- as.data.frame(t(average_Group_GS))
+
+Table <- average_Group %>%
+  cbind(average_System) %>%
+  cbind(average_Group_GS) %>%
+  cbind(average_Group_WOW)
+
+# average LW
+average_Group <- average_LW %>%
+  group_by(Group) %>%
+  summarize(m=mean(mLW))
+sd<- average_LW %>%
+  group_by(Group) %>%
+  summarize(sd=sd(mLW))
+average_Group<-average_Group %>%
+  cbind(sd)
+average_Group<- as.data.frame(t(average_Group))
+
+average_System <- average_LW %>%
+  group_by(System) %>%
+  summarize(m=mean(mLW))
+sd<- average_LW %>%
+  group_by(System) %>%
+  summarize(sd=sd(mLW))
+average_System<-average_System %>%
+  cbind(sd)
+average_System<- as.data.frame(t(average_System))
+
+
+average_Group_WOW <- mWOW %>%
+  group_by(Group) %>%
+  summarize(m=mean(mLW))
+sd<- mWOW %>%
+  group_by(Group) %>%
+  summarize(sd=sd(mLW))
+average_Group_WOW<-average_Group_WOW %>%
+  cbind(sd)
+average_Group_WOW<- as.data.frame(t(average_Group_WOW))
+
+average_Group_GS <- mGS %>%
+  group_by(Group) %>%
+  summarize(m=mean(mLW))
+sd<- mGS %>%
+  group_by(Group) %>%
+  summarize(sd=sd(mLW))
+average_Group_GS<-average_Group_GS %>%
+  cbind(sd)
+average_Group_GS<- as.data.frame(t(average_Group_GS))
+
+Table1 <- average_Group %>%
+  cbind(average_System) %>%
+  cbind(average_Group_GS) %>%
+  cbind(average_Group_WOW)
+
+# initial LW
+average_Group <- initial_LW %>%
+  group_by(Group) %>%
+  summarize(m=mean(LW))
+sd<- initial_LW %>%
+  group_by(Group) %>%
+  summarize(sd=sd(LW))
+average_Group<-average_Group %>%
+  cbind(sd)
+average_Group<- as.data.frame(t(average_Group))
+
+average_System <- initial_LW %>%
+  group_by(System) %>%
+  summarize(m=mean(LW))
+sd<- initial_LW %>%
+  group_by(System) %>%
+  summarize(sd=sd(LW))
+average_System<-average_System %>%
+  cbind(sd)
+average_System<- as.data.frame(t(average_System))
+
+
+average_Group_WOW <- iWOW %>%
+  group_by(Group) %>%
+  summarize(m=mean(LW))
+sd<- iWOW %>%
+  group_by(Group) %>%
+  summarize(sd=sd(LW))
+average_Group_WOW<-average_Group_WOW %>%
+  cbind(sd)
+average_Group_WOW<- as.data.frame(t(average_Group_WOW))
+
+average_Group_GS <- iGS %>%
+  group_by(Group) %>%
+  summarize(m=mean(LW))
+sd<- iGS %>%
+  group_by(Group) %>%
+  summarize(sd=sd(LW))
+average_Group_GS<-average_Group_GS %>%
+  cbind(sd)
+average_Group_GS<- as.data.frame(t(average_Group_GS))
+
+Table2 <- average_Group %>%
+  cbind(average_System) %>%
+  cbind(average_Group_GS) %>%
+  cbind(average_Group_WOW)
+
+# final LW
+average_Group <- final_LW %>%
+  group_by(Group) %>%
+  summarize(m=mean(LW))
+sd<- final_LW %>%
+  group_by(Group) %>%
+  summarize(sd=sd(LW))
+average_Group<-average_Group %>%
+  cbind(sd)
+average_Group<- as.data.frame(t(average_Group))
+
+average_System <- final_LW %>%
+  group_by(System) %>%
+  summarize(m=mean(LW))
+sd<- final_LW %>%
+  group_by(System) %>%
+  summarize(sd=sd(LW))
+average_System<-average_System %>%
+  cbind(sd)
+average_System<- as.data.frame(t(average_System))
+
+
+average_Group_WOW <- fWOW %>%
+  group_by(Group) %>%
+  summarize(m=mean(LW))
+sd<- fWOW %>%
+  group_by(Group) %>%
+  summarize(sd=sd(LW))
+average_Group_WOW<-average_Group_WOW %>%
+  cbind(sd)
+average_Group_WOW<- as.data.frame(t(average_Group_WOW))
+
+average_Group_GS <- fGS %>%
+  group_by(Group) %>%
+  summarize(m=mean(LW))
+sd<- fGS %>%
+  group_by(Group) %>%
+  summarize(sd=sd(LW))
+average_Group_GS<-average_Group_GS %>%
+  cbind(sd)
+average_Group_GS<- as.data.frame(t(average_Group_GS))
+
+Table3 <- average_Group %>%
+  cbind(average_System) %>%
+  cbind(average_Group_GS) %>%
+  cbind(average_Group_WOW)
+
+# delta LW
+average_Group <- gain_LW %>%
+  group_by(Group) %>%
+  summarize(m=mean(delta))
+sd<- gain_LW %>%
+  group_by(Group) %>%
+  summarize(sd=sd(delta))
+average_Group<-average_Group %>%
+  cbind(sd)
+average_Group<- as.data.frame(t(average_Group))
+
+average_System <- gain_LW %>%
+  group_by(System) %>%
+  summarize(m=mean(delta))
+sd<- gain_LW %>%
+  group_by(System) %>%
+  summarize(sd=sd(delta))
+average_System<-average_System %>%
+  cbind(sd)
+average_System<- as.data.frame(t(average_System))
+
+
+average_Group_WOW <- gain_LW %>%
+  filter(System=="WOW") %>%
+  group_by(Group) %>%
+  summarize(m=mean(delta))
+sd<- gain_LW %>%
+  filter(System=="WOW") %>%
+  group_by(Group) %>%
+  summarize(sd=sd(delta))
+average_Group_WOW<-average_Group_WOW %>%
+  cbind(sd)
+average_Group_WOW<- as.data.frame(t(average_Group_WOW))
+
+average_Group_GS <- gain_LW %>%
+  filter(System=="Gold Standard")%>%
+  group_by(Group) %>%
+  summarize(m=mean(delta))
+sd<- gain_LW %>%
+  filter(System=="Gold Standard") %>%
+  group_by(Group) %>%
+  summarize(sd=sd(delta))
+average_Group_GS<-average_Group_GS %>%
+  cbind(sd)
+average_Group_GS<- as.data.frame(t(average_Group_GS))
+
+Table4 <- average_Group %>%
+  cbind(average_System) %>%
+  cbind(average_Group_GS) %>%
+  cbind(average_Group_WOW)
+
+Table <- Table %>%
+  rbind(Table1) %>%
+  rbind(Table2) %>%
+  rbind(Table3) %>%
+  rbind(Table4)
+```
+
+##Statistic analysis on ADG
+
+## Model 1: ADG explained by System, Group and their interaction
+
+```{r}
+
+data_analysis_ADG<-data_analysis%>%
+  filter(!is.na(GMQ))%>%
+  filter(Week!=4)
+
+data_analysis_ind<-data_analysis_ADG%>%
+  filter(ID %in% c("3954","3537","3601"))
+
+ggplot(data_analysis_ind) +
+ aes(x = Week, fill = System, weight = GMQ) +
+ geom_bar(position="dodge") +
+ scale_fill_manual(values=c("#0c4c8a","#E97A27")) +
+ theme(legend.position="right",
+        legend.text = element_text(size=10),
+        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 0, size=16),
+        axis.text.y = element_text(size=16))+
+ xlab("Semaine")+
+  scale_x_continuous(breaks = c(4,5,6,7,8,9,10,11,12,13,14))+
+  ylab("GMQ (kg/j")+
+ facet_wrap(~ID, ncol=1)
+
+
+```
+
+```{r}
+
+data_analysis_ADG_3537<-data_analysis_ADG %>%
+  filter(ID %in% c("3537"))
+modID1<-lmerTest::lmer(GMQ ~ System + Week +(1|System)+(1|Week),
+          data=data_analysis_ADG_3537)
+summary(modID1)
+car::Anova(modID1, type=3)
+
+mean_3537<-data_analysis_ADG_3537%>%
+  group_by(System)%>%
+  summarize(m=mean(GMQ))
+sd_3537<-data_analysis_ADG_3537%>%
+  group_by(System)%>%
+  summarize(sd=sd(GMQ))
+
+```
+
+```{r}
+
+data_analysis_ADG_3954<-data_analysis_ADG %>%
+  filter(ID %in% c("3954"))
+modID2<-lmerTest::lmer(GMQ ~ System + Week +(1|System)+(1|Week),
+          data=data_analysis_ADG_3954)
+summary(modID2)
+car::Anova(modID2, type=3)
+
+lsmeans(modID2, "Week")
+
+```
+
+```{r}
+
+data_analysis_ADG_3601<-data_analysis_ADG %>%
+  filter(ID %in% c("3601"))
+modID3<-lmerTest::lmer(GMQ ~ System + Week +(1|System)+(1|Week),
+          data=data_analysis_ADG_3601)
+summary(modID3)
+car::Anova(modID3, type=3)
+
+```
+
+
+
+```{r}
+
+mean_adg<-data_analysis%>%
+  group_by(Week,Group,System)%>%
+  summarize(m=mean(GMQ))
+
+sd <-data_analysis%>%
+  group_by(Week,Group,System)%>%
+  summarize(sd=sd(GMQ))
+
+mean_adg<-mean_adg %>%
+  cbind(sd=sd$sd)
+
+ggplot(mean_adg) +
+ aes(x = Week, fill = System, weight = m) +
+ geom_bar(position="dodge") +
+ geom_errorbar(aes(ymin=m-sd, ymax=m+sd), width=.2,
+                 position="dodge")+
+ scale_fill_manual(values=c("#0c4c8a","#E97A27")) +
+ theme(legend.title = element_blank(),legend.position="right",
+        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 0))+
+ xlab("Semaine")+
+  scale_x_continuous(breaks = c(4,5,6,7,8,9,10,11,12,13,14))+
+  ylab("GMQ (kg/j")+
+ facet_wrap(~Group, ncol=3)
+
+
+
+```
+
+```{r}
+#Linear mixed-effect model
+
+data_analysis<-data_analysis%>%
+  filter(!is.na(GMQ))
+  
+mod12 <-lmerTest::lmer(GMQ ~ Group + System + Group*Week + Group*System +
+             (1|System)+(1|Week)+(1|Group/ID),
+          data=data_analysis)
+ 
+summary(mod12)
+car::Anova(mod12, type=3)
+
+```
+```{r}
+
+data_analysis_red<-data_analysis%>%
+  group_by(System,Week,Group,ID)%>%
+  filter(Group=="R")
+
+modred<-lmerTest::lmer(GMQ ~ ID + System + ID*Week + ID*System +
+             (1|System)+(1|Week)+(1|ID),
+          data=data_analysis_red)
+
+summary(modred)
+car::Anova(modred, type=3)
+
+```
+
+```{r}
+
+data_analysis_blue<-data_analysis%>%
+  group_by(System,Week,Group,ID)%>%
+  filter(Group=="B")
+
+modblue<-lmerTest::lmer(GMQ ~ ID + System + ID*Week + ID*System +
+             (1|System)+(1|Week)+(1|ID),
+          data=data_analysis_blue)
+
+summary(modblue)
+car::Anova(modblue, type=3)
+
+```
+
+```{r}
+
+data_analysis_green<-data_analysis%>%
+  group_by(System,Week,Group,ID)%>%
+  filter(Group=="G")
+
+modgreen<-lmerTest::lmer(GMQ ~ ID + System + ID*Week + ID*System +
+             (1|System)+(1|Week)+(1|ID),
+          data=data_analysis_green)
+
+summary(modgreen)
+car::Anova(modgreen, type=3)
+
+```
+
+## Model 2: average ADG explained by System, Group and their interaction
+
+```{r}
+#Prepare the database
+
+mWOW <- WOW %>%
+  group_by(ID) %>%
+  filter(!is.na(GMQ))%>%
+  summarize(mADG=mean(GMQ))
+System <- rep("WOW",nrow(mWOW))
+mWOW <- mWOW %>%
+  cbind(System)
+mWOW <- merge(mWOW, data_ewelambs) %>%
+  select(ID, Group, mADG, System)
+
+mGS <- GS %>%
+  group_by(ID) %>%
+  filter(!is.na(GMQ))%>%
+  summarize(mADG=mean(GMQ))
+System <- rep("Gold Standard", nrow(mGS))
+mGS <- mGS %>%
+  cbind(System)
+mGS <- merge(mGS, data_ewelambs) %>%
+  select(ID, Group, mADG, System)
+
+average_ADG <- mWOW %>%
+  rbind(mGS)
+
+```
+
+```{r}
+#Linear model
+
+mod22 <- lmerTest::lmer(mADG ~ Group + System + Group*System +
+             (1|System)+(1|Group/ID),
+          data=average_ADG)
+summary(mod22)
+car::Anova(mod22, type=3)
+
+```
+
+
+##Table of the ADG per Group, Sytem and their interaction
+
+```{r}
+
+WOW<-WOW %>%
+  filter(!is.na(GMQ))
+
+# ADG
+average_Group <- data_analysis %>%
+  group_by(Group) %>%
+  summarize(m=mean(GMQ))
+sd<- data_analysis %>%
+  group_by(Group) %>%
+  summarize(sd=sd(GMQ))
+average_Group<-average_Group %>%
+  cbind(sd=sd$sd)
+average_Group<- as.data.frame(t(average_Group))
+
+average_System <- data_analysis %>%
+  group_by(System) %>%
+  summarize(m=mean(GMQ))
+sd<- data_analysis %>%
+  group_by(System) %>%
+  summarize(sd=sd(GMQ))
+average_System<-average_System %>%
+  cbind(sd=sd$sd)
+average_System<- as.data.frame(t(average_System))
+
+
+average_Group_WOW <- WOW %>%
+  group_by(Group) %>%
+  summarize(m=mean(GMQ))
+sd<- WOW %>%
+  group_by(Group) %>%
+  summarize(sd=sd(GMQ))
+average_Group_WOW<-average_Group_WOW %>%
+  cbind(sd=sd$sd)
+average_Group_WOW<- as.data.frame(t(average_Group_WOW))
+
+average_Group_GS <- GS %>%
+  group_by(Group) %>%
+  summarize(m=mean(GMQ))
+sd<- GS %>%
+  group_by(Group) %>%
+  summarize(sd=sd(GMQ))
+average_Group_GS<-average_Group_GS %>%
+  cbind(sd=sd$sd)
+average_Group_GS<- as.data.frame(t(average_Group_GS))
+
+Table <- average_Group %>%
+  cbind(average_System) %>%
+  cbind(average_Group_GS) %>%
+  cbind(average_Group_WOW)
+
+# average ADG
+average_Group <- average_ADG %>%
+  group_by(Group) %>%
+  summarize(m=mean(mADG))
+sd<- average_ADG %>%
+  group_by(Group) %>%
+  summarize(sd=sd(mADG))
+average_Group<-average_Group %>%
+  cbind(sd=sd$sd)
+average_Group<- as.data.frame(t(average_Group))
+
+average_System <- average_ADG %>%
+  group_by(System) %>%
+  summarize(m=mean(mADG))
+sd<- average_ADG %>%
+  group_by(System) %>%
+  summarize(sd=sd(mADG))
+average_System<-average_System %>%
+  cbind(sd=sd$sd)
+average_System<- as.data.frame(t(average_System))
+
+
+average_Group_WOW <- mWOW %>%
+  group_by(Group) %>%
+  summarize(m=mean(mADG))
+sd<- mWOW %>%
+  group_by(Group) %>%
+  summarize(sd=sd(mADG))
+average_Group_WOW<-average_Group_WOW %>%
+  cbind(sd=sd$sd)
+average_Group_WOW<- as.data.frame(t(average_Group_WOW))
+
+average_Group_GS <- mGS %>%
+  group_by(Group) %>%
+  summarize(m=mean(mADG))
+sd<- mGS %>%
+  group_by(Group) %>%
+  summarize(sd=sd(mADG))
+average_Group_GS<-average_Group_GS %>%
+  cbind(sd=sd$sd)
+average_Group_GS<- as.data.frame(t(average_Group_GS))
+
+Table1 <- average_Group %>%
+  cbind(average_System) %>%
+  cbind(average_Group_GS) %>%
+  cbind(average_Group_WOW)
+
+
+# ADG per week
+
+average_Group <- data_analysis %>%
+  group_by(Week,Group) %>%
+  summarize(m=mean(GMQ))
+sd<- data_analysis %>%
+  group_by(Week,Group) %>%
+  summarize(sd=sd(GMQ))
+average_Group<-average_Group %>%
+  cbind(sd=sd$sd)
+average_Group<- as.data.frame(t(average_Group))
+
+average_System <- data_analysis %>%
+  group_by(Week,System) %>%
+  summarize(m=mean(GMQ))
+sd<- data_analysis %>%
+  group_by(Week,System) %>%
+  summarize(sd=sd(GMQ))
+average_System<-average_System %>%
+  cbind(sd=sd$sd)
+average_System<- as.data.frame(t(average_System))
+
+#Prepare the database
+
+mweekWOW <- WOW %>%
+  group_by(Week,Group) %>%
+  summarize(mADG=mean(GMQ))
+sd<- WOW %>%
+  group_by(Week,Group) %>%
+  summarize(sd=sd(GMQ))
+mweekWOW<-mweekWOW %>%
+  cbind(sd=sd$sd)
+System <- rep("WOW",nrow(mweekWOW))
+mweekWOW <- mweekWOW %>%
+  cbind(System=System)
+mweekWOW <- merge(mweekWOW, data_ewelambs) %>%
+  select(Week, Group, mADG, sd, System)
+
+mweekGS <- GS %>%
+  group_by(Week,Group) %>%
+  summarize(mADG=mean(GMQ))
+sd<- GS %>%
+  group_by(Week,Group) %>%
+  summarize(sd=sd(GMQ))
+mweekGS<-mweekGS %>%
+  cbind(sd=sd$sd)
+System <- rep("Gold Standard", nrow(mweekGS))
+mweekGS <- mweekGS %>%
+  cbind(System=System)
+mweekGS <- merge(mweekGS, data_ewelambs) %>%
+  select(Week, Group, mADG, sd, System)
+
+averageweek_ADG <- mweekWOW %>%
+  rbind(mweekGS)
+averageweek_ADG<-unique(averageweek_ADG)
+
+average_Group_WOW <- averageweek_ADG %>%
+  filter(System=="WOW")%>%
+  arrange(Week)%>%
+  select(Week,Group,mADG,sd)
+average_Group_WOW<- as.data.frame(t(average_Group_WOW))
+
+average_Group_GS <- averageweek_ADG %>%
+  filter(System=="Gold Standard")%>%
+  arrange(Week)%>%
+  select(Week,Group,mADG,sd)
+average_Group_GS<- as.data.frame(t(average_Group_GS))
+
+Table2 <- average_Group %>%
+  cbind(average_System) %>%
+  cbind(average_Group_GS) %>%
+  cbind(average_Group_WOW)
+
+
+Table <- Table %>%
+  rbind(Table1)
+```

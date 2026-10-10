@@ -1,0 +1,4265 @@
+=== page 1
+Techniques of Water-Resources Investigations 
+of the United States Geological Survey 
+Chapter Al3 
+COMPUTATION OF 
+a CONTINUOUS RECORDS OF STREAMFLOW 
+By E. J. Kennedy 
+Book 3 
+APPLICATIONS OF HYDRAULICS 
+=== page 2
+DEPARTMENT OF THE INTERIOR 
+DONALD PAUL HODEL, Secretary 
+U.S. GEOLOGICAL SURVEY 
+Dallas L. Peck, Director 
+First printing 1983 
+Second printing 1989 
+UNITED STATES GOVERNMENT PRINTING OFFICE : 1993 at 
+For sale by the 
+Books and Open-File Reports Section 
+U.S. Geological Survey 
+Federal Center, Box 25425 
+Denver, CO 80225 
+=== page 3
+PREFACE 
+The series of manuals on techniques describes procedures for planning and ex- 
+ecuting specialized work in water-resources investigations. The material is 
+grouped under major subject headings called “Books” and further subdivided 
+into sections and chapters. Section A of Book 3 is on surface water. 
+The unit of publication, the Chapter, is limited to a narrow field of subject 
+matter. This format permits flexibility in revision and publication as the need 
+arises. Chapter Al3 deals with the computation of continuous records of stream- 
+flow. 
+Provisional drafts of chapters are distributed to field offices of the U.S. 
+Geological Survey for their use. These drafts are subject to revision because of 
+experience in use or because of advancement in knowledge, techniques, or equip- 
+, ment. After the tecl-mique described in a chapter is sufficiently developed, the 
+chapter is published and is for sale by the U.S. Geological Survey Books and 
+Open-File Reports Section, Federal Center, Box 25425, Denver, CO 80225 (au- 
+thorized agent of Superintendent of Documents, Government Printing Office). 
+Reference to trade names, commercial products, manufacturers, or 
+distributors in this manual constitutes neither endorsement by the Geological 
+Survey nor recommendation for use. 
+III 
+=== page 4
+TECHNIQUES OF WAPER-RESOURCES INVESTIGATIONS OF THE 
+UNITED STATES GEOLOGICAL SURVEY 
+The U.S. Geological Survey publishes a series of manuals describing procedures for planning and conducting 
+specialized work in water-resources investigations. The manuals published to date are listed below and may be ordered 
+by mail from the U.S. Geological Survey, Books and Open-File Reports, Federal Center, Box 25425, Denver, Colorado 
+80225 (an authorized agent of the Superintendent of Documents, Government Printing Office). 
+Prepayment is required. Remittance should be sent by check or money order payable to U.S. Geological Survey. 
+Prices are not included in the listing below as they are subject to change. Current prices can be obtained by writing 
+to the USGS, Books and Open File Reports. Prices include cost of domestic surface transportation. For transmittal 
+outside the U.S.A. (except to Canada and Mexico) a surcharge of 25 percent of the net bill should be included to cover 
+surface transportation. When ordering any of these publications, please give the title, book number, chapter number, 
+and “U.S. Geological Survey Techniques of Water-Resources Investigations.” 
+TWI I-Dl. 
+TWI l-D2. 
+TWI 2-Dl. 
+TWI 2-D2. 
+TWI 2-El. 
+TWI 3-Al. 
+TWI 3-A2. 
+TWI 3-A3. 
+TWI 3-A4. 
+TWI 3-A5. 
+TWI 3-A6 
+TWI 3-A7. 
+TWI 3-A8. 
+TWI 3-A9. 
+TWI 3-A10. 
+TWI 3-All. 
+TWI 3-A12. 
+TWI 3-A13. 
+TWl3-Al4 
+TWI 3-A15. 
+TWI 3-A16 
+TWI 3-A17. 
+TWI 3-Bl. 
+TWI 3-B2.’ 
+TWI 3-B3. 
+TWI 3-BS. 
+TWI 3-B6. 
+TWI 3X1. 
+TWI 3X2. 
+TWI 3X3. 
+TWI 4-Al. 
+TWI 4-A2. 
+TWI 4-Bl. 
+TWI 4-B2. 
+TWI 4-B3. 
+TWI 4-Dl. 
+TWI S-Al. 
+Water temperature-influential factors, field measurement, and data presentation, by H.H. Stevens, Jr., J.F. Ficke, and G.F. Smoot. 
+1975. 65 pages. 
+Guidelines for collection and field analysis of ground-water samples for selected unstable constituents, by W.W. Wood. 1976. 24 
+pages. 
+Application of surface geophysics to ground water investigations, by A.A.R. Zohdy, G.P. Eaton, and D.R. Mabey. 1974.116 pages. 
+Application of seismic-refraction techniques to hydrologic studies, by F.P. Haeni. 1988. 86 p. 
+Application of borehole geophysics to water- resources investigatiotns, by W.S. Keys and L.M. MacCary. 1971. 126 pages. 
+Genera1 field and office procedures for indirect discharge measurement, by M.A. Benson and Tate Dalrymple. 1967. 30 pages. 
+Measurement of peak discharge by the slope-area method, by Tate Dalrymple and M.A. Benson. 1967. 12 pages. 
+Measurement of peak discharge at culverts by indirect methods, by G.L. Bodhaine. 1968. 60 pages. 
+Measurement of peak discharge at width contractions by indirect methods, by H.F. Matthai. 1967. 44 pages. 
+Measurement of peak discharge at dams by indirect methods, by Harry Hulsing. 1967. 29 pages. 
+Genera1 procedure for gaging streams, by R.W. Carter and Jacob Davidian. 1968. 13 pages. 
+Stage measurements at gaging stations, by T.J. Buchanan and W.P. Somers. 1968. 28 pages. 
+Discharge measurements at gaging stations, by T.J. Buchanan and W.P. Somers. 1969. 65 pages. 
+Measurement of time of travel and dispersion in streams by dye tracing, by E.F. Hubbard, F.A. Kilpatrick, L.A. Martens, and 
+J.F. Wilson, Jr. 1982. 44 pages. 
+Discharge ratings at gaging stations, by E.J. Kennedy. 1984. 59 paf;es. 
+Measurement of discharge by moving-boat method, by G.F. Smoot and CC. Novak. 1969. 22 pages. 
+Fluorometric procedures for dye tracing, Revised, by James F. Wilsjon, Jr., Ernest D. Cobb, and Frederick A. Kilpatrick. 1986. 41 
+pages. 
+Computation of continuous records of streamflow, by Edward J. Kennedy. 1983.53 pages. 
+Use of flumes in measuring discharge, by F.A. Kilpatrick, and V.R. Schneider. 1983. 46 pages. 
+Computation of water-surface profiles in open channels, by Jacob Davidian. 1984. 48 pages. 
+Measurement of discharge using tracers, by F.A. Kilpatrick and E.D. Cobb. 1985. 52 pages. 
+Acoustic velocity meter systems, by Antonius Laenen. 1985. 38 pages. 
+Aquifer-test design, observation, and data analysis, by R.W. Stallman. 197l. 26 pages. 
+Introduction to ground-water hydraulics, a programmed text for self-instruction, by G.D. Bennett. 1976. 172 pages. 
+Type curves for selected problems of flow to wells in confined aquifers, by J.E. Reed. 1980. 106 pages. 
+Definition of boundary and initial conditions in the analysis of saturated ground-water flow systems-an introduction, by 0. Lehn 
+Franke, Thomas E. Reilly, and Gordon D. Bennett. 1987. 15 pages. 
+The principle of superposition and its application in ground-water hydraulics, by Thomas E. Reilly, 0. Lehn Franke, ansd Gordon 
+D. Bennett. 1987. 28 pages. 
+Fluvial sediment concepts, by H.P. Guy. 1970. 55 pages. 
+Field methods of measurement of fluvial sediment, by H.P. Guy and V.W. Norman. 1970. 59 pages. 
+Computation of fluvial-sediment discharge, by George Porterfield. 1972. 66 pages. 
+Some statistical tools in hydrology, by H.C. Riggs. 1968. 39 pages. 
+Frequency curves, by H.C. Riggs, 1968. 15 pages. 
+Low-flow investigations, by H.C. Riggs. 1972. 18 pages. 
+Storage analyses for water supply, by H.C. Riggs and C.H. Hardison. 1973. 20 pages. 
+Regional analyses of streamflow characteristics, by H.C. Riggs. 1973. 15 pages. 
+Computation of rate and volume of stream depletion by wells, by CT. Jenkins. 1970. 17 pages. 
+Methods for determination of inorganic substances in water and fluvial sediments, by M.W. Skougstad and others, editors. 1979.626 
+pages. 
+‘Spanish translation also available. 
+Iv 
+=== page 5
+TWI S-A2. 
+TWI 5-A3. 
+TWI 5-A4. 
+TWI 5-A5. 
+TWI 5-A6. 
+TWI 5x1. 
+TWF 6-4. 
+TWI 7x1. 
+TWI 7X2. 
+TWI 7x3. 
+TWI &Al. 
+TWI 8x2. 
+TWI 8-B2. 
+Determination of minor elements in water by emission spectroscopy, by P.R. Bamett and E.C. Mallory, Jr. 1971. 31 pages. 
+Methods for the determination of organic substances in water and fluvial sediments, edited by R.L. Wemhaw, M.J. Fishman, R.R. 
+Grabbe, and L.E. Lowe. 1987. 80 pages. This manual is a revision of “Methods for Analysis of Organic Substances in Water” 
+by Donald F. Goerlitz and Eugene Brown, Book 5, Chapter A3, published in 1972. 
+Methods for collection and analysis of aquatic biological and microbiological samples, edited by P.E. Greeson, T.A. Ehlke, G.A. 
+Irwin, B.W. Lium, and K.V. Slack. 1977. 332 pages. 
+Methods for determination of radioactive substances in water and fluvial sediments, by L.L. Thatcher, V.J. Janzer, and K.W. 
+Edwards. 1977. 95 pages. 
+Quality assurance practices for the chemical and biological analyses of water and fluvial sediments, by L.C. Friedman and D.E. 
+Erdmann. 1982. 181 pages. 
+Laboratory theory and methods for sediment analysis, by H.P. Guy. 1969. 58 pages. 
+A m,odular three-dimensional finite-difference ground-water flow model, by Michael G. McDonald and Arlen W. Harbaugh. 1988. 
+586 pages. 
+Finite difference model for aquifer simulation in two dimensions with results of numerical experiments, by P.C. Trescott, G.F. 
+Pinder, and S.P. Larson. 1976. 116 pages. 
+Computer model of two-dimensional solute transport and dispersion in ground water, by L.F. Konikow and J.D. Bredehoeft. 1978. 
+90 pages. 
+A model for simulation of flow in singular and interconnected channels, by R.W. Schaffranek, R.A. Baltzer, and D.E. Goldberg. 
+1981. 110 pages. 
+Methods of measuring water levels in deep wells, by MS. Garber and F.C. Koopman. 1968. 23 pages. 
+Installation and service manual for U.S. Geological Survey monometers, by J.D. Craig. 1983. 57 pages. 
+Calibration and maintenance of vertical-axis type current meters, by G.F. Smoot and C.E. Novak. 1968. 15 pages. 
+V 
+=== page 6
+CONTENTS 
+At,&& _--________________________________ 
+Int,&"(..on --__--__-_--------_------------- 
+Field data req&mer& -------- -----_-______ -_ 
+Field &,&on &s&ption -------------- -_-___- 
+Gaging-&,a&n levels ____ - -__-_________ -__-__ 
+Discharge meaupmenb ----- ----__--_______ 
+Gageheight -d ---_--------------__----- 
+Datum and gageheight corrections -------------- 
+List of discharge measurements ----------------- 
+D&charge ratings ___- _______________ - _____ -__ 
+Work curve sheeb _-__- ____________ -__-__-__ 
+\ Rating tables ___________-__-__________ -__-_ 
+Percent differences and shift adjustments ------- 
+M&,,,rcurvesh~~ ________________ -__-__-__ 
+Manual computation of gageheight record -------- 
+Graphic -&xm __-__-- - ----__-______ -__-_ 
+Dating -r&r ch& _------ -----_--__-___ 
+pen cc~-Gons for be ---------- -----_--__ 
+Pen corrections for gage height -------------- 
+Computing mean daily gage heights ---------- 
+Allowable range h stage ------ -------__-___ 
+Subdivideddays-------------------------- 
+Mea htp-vd s&&~sion --- -_--__-_______ 
+Mi&&amaj su~~sion -------- -_--______ 
+Gage-height record ch&g ---------- -_--__ 
+Notes for St&on analysis ----- -----_--_____ - 
+Page 
+1 Manual computation of gageheight record-Continued 
+1 Nomo,.&,g gages --_--__-___--__-_________ 
+2 Computing daily mean gage heights - --------- 
+2 Copying gage heights on form 9-192a --------- 
+6 Computation of discharge record ---------------- 
+6 Distribution of shift adjustments -------------- 
+I 
+8 
+Shift adjustment variation diagrams ---------- 
+Shift adjustments varied with time only ------- 
+12 Shift adjustments varied with stage only ------ 
+14 Shift adjustments varied with time and stage --- 
+14 ADpprocJz&m -----_----_--__-__-______ 
+16 Manual p&m ____________ -__--_-__-_ 
+17 &c&s from digid mo&yq ___- - -_--_____ -_- 
+20 primary mmput&,ion --__-____--_-_____ --_- 
+20 Notes for &&ion analysis ______--________ -__ 
+22 Updating ____-_--_______________________ 
+22 &~L-J& fmm graphic -&rs __----_--_______ 
+22 Records from nonrecording gages -------------- 
+22 Discharge hydrographs ---------------------- 
+23 Periods of no gageheight record --------------- 
+24 p,&& of ice effect ___-__--_-- _______ -__--_- 
+24 St&on analysis -- ----__-_______-_________ -__ 
+25 Progress document&on -_- -__-___ - --_-_____ -__ 
+26 @&ty ~S~~~ ----- ---------- - ------------ 
+28 References cited ------ -_--__-__- - --_--_______ 
+28 Glossary -_____---__-_______________________ 
+FIGURES 
+1. Outlineofafield-stationdescription _-______ -___-___-___-___-__------------ ____ 3 
+2. sample &&&&ion description --__--__--_____________ -___-__-___-__-__-_____ 4 
+3. Gaging-s~~o~~~evel n&s --__--__--__-___-___------------------- -___-___-__ 7 
+4. Gaging-st&,io&vel summary _-___-______-___-__---------------------------- 8 
+5. Digital-recordertape------------------------------------------------------- 9 
+6. P&,ofg@&-~or&rch& _____________________________________ -__--__--_- 9 
+7. Page of nonrecording-gege &~~er’s book __________________________ -___-__--__ 10 
+8. List of gageheight ~rr&,ions ________________________________________ -___-__ 11 
+9. Graph ofgageheightco-tions--------------------------------------------- 12 
+10. &tof&&argeme~~ments _______ - ---_---__-___-__--__------- -__-__--__- 13 
+11. Log&UC work-e s&t ____ -___- ---_---__-_ - _-__--__-______ -___-L_--_- 16 
+12. Automatically prepared rating tables (RATLIST) -------------------------------- 18 
+13. Meskrcurve sheet-------------------------------------------------------- 21 
+14. Interpolation of pen corrections from graph plotted on recorder chart ----------------- 23 
+15. Gageheight and discharge computations on graphic-recorder chart ------------------ 24 
+16. Rating table corresponding to figure 17 ahowablerange table ----------------------- 26 
+VII 
+Page 
+29 
+29 
+30 
+30 
+33 
+33 
+34 
+34 
+36 
+37 
+39 
+40 
+40 
+42 
+42 
+44 
+44 
+45 
+45 
+45 
+45 
+47 
+50 
+51 
+52 
+=== page 7
+VIII 
+17. &.&&jon of m &w&l~~~& table----------------------------------------- 
+18. cOrnput& page of nonrecording-gage ob~wer’s book _____________________I_______ 
+19. TernpI& for shaphg nom&g-gage graphs _______ _________________ - ________ 
+20. (-&mpu~nonrecording-gagegraph _______ - _____ -__- ____ - _______ - _____________ 
+21. Computedf-Q-1Q2a----------------------------------------------------- 
+22. Timesh3t-variation diagram with corresponding hydrogrsph ----------------------- 
+23. Effect of varous stage-shift-variation diagram shapes on shift-curve shape ------------- 
+24. Plotting positions of staged&-variation diagram points on the shift curve ------------ 
+25. Developmentofastageshift-variationdiagram---------------------------------- 
+26. Developmentofatimevariedstageshiftdiagram-------------------------------- 
+27. Use of stag&St-variation diagram coefficient-s lx~ fit shii curves to discharge measure 
+menb _---_----______-____----------~-------------------------------- 
+28. primary compu~tion &&, _-___-______________----------------------------- 
+29. Frnaldischargerecordprintout------ ________________ --___--___- ____ -- ____ --__ 
+3(-j. &.~og&th& hyhgraph __-____--_______________________________-------- 
+31. Rectangular hydrograph and w&her--d plot-------------------------------- 
+32. Stationanalysis----------------------------------------------------------- 
+33. Typicalprogressf----------------------~-------------------------------- 
+34. B~~~mp~sonofmont,hly and-ualrunoff~-------------------------------- 
+Page 
+27 
+29 
+30 
+31 
+32 
+34 
+35 
+36 
+37 
+38 
+41 
+42 
+43 
+46 
+48 
+49 
+50 
+51 
+=== page 8
+COMPUTATION OF CONTINUOUS RECORDS OF STREAMFLOW 
+By E. J. Kennedy 
+Abstract 
+Records of continuous streamflow, published in the U.S. 
+Geological Survey annual Water Data Reports for the 
+States and territories. are computed from field data, mainly 
+discharge measurements and recorder charts or tapes. This 
+manual describes the computation procedures used and 
+some details of related field operations. It was compiled 
+mostly from unpublished Water Resource Division district 
+manuals edited and supplemented to emphasize digital- 
+recorder and associated computer use. Methods used 
+primarily for graphic-recorder gaging stations and non- 
+recording gages are also included. Reference is made to 
+other publications for some of the more specialized or unu- 
+sually complex procedures. 
+Introduction 
+Records of continuous streamflow in the U.S. 
+Geological Survey annual Water Data Reports 
+for the States and territories, which are also 
+stored in various computer formats, are com- 
+puted from field data, mainly discharge- 
+measurement notes and water-stage recorder 
+tapes or charts. This manual, in the Techniques 
+of Water Resources Investigation (TWRI) 
+series, describes the most commonly used com- 
+putation processes. A published continuous- 
+streamflow record consists of two parts: (1) the 
+manuscript station description which contains 
+statements concerning the location of the gag 
+ing station, drainage area, records available, 
+gage details, average discharge, summary of 
+revisions, extremes of stage and discharge, and 
+a description of any abnormal conditions and 
+(2) a table of daily discharges with monthly and 
+annual statistics. Only the procedures used to 
+compute the daily&charge table, minimum 
+flow, and peaks are covered herein. 
+The streamflow-record processing methods 
+described in this manual have evolved under 
+USGS leadership during the last century from a 
+variety of methods described by Follansbee 
+(1938) and used by a few pioneer hydrographers 
+throughout the Western World prior to 1890. A 
+USGS camp was established at Embudo, N. 
+Mex., in 1889 to investigate, modify, and stand- 
+ardize stream-gaging methods. The Embudo 
+work was the foundation for the present sys- 
+tematic stream gaging in the United States. 
+Refinements have been added over the years as 
+high-water measuring equipment and reliable 
+water-stage recorders have become available, 
+and automatic data processing (ADP) has been 
+adapted to hydrography. Standard forms for 
+listing and plotting the data were adapted, and 
+general instructions for record computation 
+were circulated. This material, combined with 
+procedures best suited to local conditions, was 
+described in handbooks prepared and periodi- 
+cally updated by several USGS districts. Se 
+lected portions of the district handbooks and 
+other unpublished material, edited and supple 
+mented for broader application, comprise much 
+of this manual. All of the processes described 
+are typical of the state-of-the-art in 1982 but 
+may require modification to fit local conditions. 
+Reasonable standardization of processes is 
+recommended, but innovation and the devel- 
+opment of improved processes are strongly 
+encouraged. 
+The procedures outlined in this manual apply 
+to field data collected by using the methods de 
+scribed in the other TWRI manuals in Book 3, 
+listed at the front of this manual, and in Water- 
+Supply Paper 2175 (Rantz and others, 1982). 
+Hydrographers must be familiar with at least 
+1 
+=== page 9
+2 TECHNIQUES OF WATER-RESOURCES INVESTIGATIONS 
+the parts of these publications and the National 
+Water Data Storage and Retrieval System 
+(WATSTORE) manuals (WATSTORE User’s 
+Guide volumes 1 and 5) that apply to any 
+streamflow records they are computing. A pro 
+grammable calculator is particularly useful for 
+many of the computations involved. 
+The field data used to compute a station 
+record are (1) an up-to-date field-station descrip- 
+tion giving the site details; (2) a summary of the 
+results of all gage-checking levels that have 
+been run at the site; (3) a list of all discharge 
+measurements that have been made at the site; 
+(4) the field notes describing channel conditions 
+during the current period; and (5) the water- 
+stagerecorder charts, punched-paper tapes, or 
+gage observer’s readings and notes for the cur- 
+rent period. Weather records and records for 
+nearby gaging stations are also used for most 
+discharge records. 
+Record computation is usually done in eight 
+basic steps in sequence: (1) determining the 
+datum and gageheight corrections that apply 
+to gage readings; (2) listing the current dis- 
+charge measurements and plotting them along 
+with relevant past measurements on an appro 
+priate rating curve sheet; (3) developing the dis- 
+charge rating; (4) computing the daily mean 
+gage heights; (5) computing the discharge 
+figures from. the daily mean gage heights by 
+using the discharge rating (in two steps, a pri- 
+mary computation and an update, for digital- 
+recorder stations); (6) estimating the daily dis- 
+charges for periods of inapplicable or missing 
+gageheight record; (7) preparing a narrative 
+description of the computations, (station 
+analysis); and (8) carrying out procedures to 
+assure quality control of the records. The use of 
+this sequence of steps prevents a revision to the 
+work by the checker in any step from affecting 
+the previous work. 
+The quality of a streamflow record at a given 
+site and its ease of computation are closely 
+related to the skill exercised in the fieldwork. 
+This skill is greatly enhanced when the hydrog- 
+rapher has parallel office computation and field 
+experience and by formal training and career 
+development programs. Most record-collection 
+work is done according to a management plan 
+set by each district, by personnel assigned to a 
+datacollection unit. The unit is usually directed 
+by a hydrographer supervisor whose duties may 
+include the scheduling of fieldwork and office 
+work, post-field-trip debriefings for the contin- 
+uous evaluation of field data, the supervision of 
+the computation of records, career development 
+including both on-thejob and formal training of 
+the staff, and an annual inspection of each gag- 
+ing station. Most Geological Survey offices 
+have access to the central computer facility 
+through a local terminal and the WATS’TORE 
+system. A growing number (in 1982) of offices 
+also have minicomputers used to process the 
+digital-recorder tapes, and the details of s’ome of 
+their procedures differ from those described in 
+this m,anual. A data-collection unit’s work often 
+jncludes some collateral datacollection duties 
+involving ground water, sediment, and the 
+chemical and bacteriological quality of the 
+streamflow; and its staff may be augmented 
+during flood periods by personnel from. other 
+organizational units. 
+Field Data Requirements 
+The field station description contains infor- 
+mation needed to help shape the ratings, rank 
+lmajor floods, investigate abnormalities in the 
+record, and write the manuscript station 
+description. Leveling is used to monitor gage- 
+datum changes and to compute corrections to 
+ithe gage readings. Discharge measurements are 
+wed to define the discharge rating and shift ad- 
+justments. The gageheight record, with the dis- 
+charge rating and shift adjustments, is used to 
+compute the daily discharges and peak flows. 
+Field-station description 
+Prepare a description on standard form 9-197 
+<as soon as the gaging station is establishcd. Use 
+the outline and headings given in figure 1. Keep 
+the description up to date with “pen-and-ink” 
+changes until it becomes cluttered and must be 
+rewritizm. File superseded field descriptions for 
+future reference. Figure 2 illustrates the recom- 
+mended format for a typical description of an 
+ordinary gaging station. 
+=== page 10
+COMPUTATION OF CONTINUOUS RECORDS OF STREAMFLOW 3 
+Location.--Lat-long.; land-line location (public-land surveyed states); county; distance from bridges, dams, falls, 
+highways, tributaries, towns, etc.; and river Imile or distance from mouth. 
+logs for normal and high water access. 
+How reached. Give highway routes and road 
+Same information for slope station auxiliary gage. 
+Establishment.--Date of first record published by U.S.G.S. that is equivalent to present record, and the name of 
+the organization tnat installed the gage. 
+Drainage area.--Size of total area, size and type of noncontributing area, source of figures, method of computation, 
+coordination information, and name of coordinating agency 
+*.--0ecription. manufacturer and type of recorder, gage heights of components (intakes, doorsills, maximum 
+recordable stage, shelter roof, etc.), principal gage, reference gage, description and location of outside gage and 
+other supplementary gages, unusual features of equipment, elevation (or altitude) of gage datum above N.G.V. Datum. 
+Same information for a slope-station auxiliary gage. 
+History.--Brief descriptions, in chronological order by date of start of record collection, of all gages with 
+equivalent records operated at or near the site. Include major additions or changes to the equipment. 
+Reference and benchmarks.--Include at least three and no more than five RM's for a base gage, no more than three 
+for a slooe-station auxiliarv qaqe, and one for a suoolementarv site. Describe RM and its location fullv. Show latest 
+elevatlon'above gage datuln at ihe time the description IS prepared and note the most permanent mark. Name and number 
+of I~GS or U.S.G.S. benchmark used for N.G.V.D. tie, its latest published or listed elevation above N.G.V.D., the 
+adjustment or datum date, and its elevation above gage datum. 
+Channel and control.--Character (rock, sand, gravel, clean, vegetation prone, permanent, shifting, etc.) and 
+alignment of channel in the gage vicinity, character of banks and stage when overflow starts on each bank, extent of 
+overflow at a specific high stage for each bank, the character of the flood plain, and number of channels at high and 
+low stage. 
+Character, type, and location of low-water and high-water controls, sensitivity to ice effect, permanency, and any 
+special conditions. 
+Discharge measurements.--Location, maximu: depth (gage height + ft), and velocities at the best wading sections 
+and the high-water Imeasuring sections. Measuring conditions, anticipated accuracy, and special hazards. Location of 
+culverts or bypass sections riot evident during floods. Stage of the start of road overflow irl the measurinq section. 
+Alternate high-water Imeasuring sites, stored boats or equipment, special measurinq oroblems or methods. For cableways; 
+safety precautions, location, type and heigh t of A-frames or towers, size of anchorages, length, diameter and type of 
+cable, type of connectors (sockets, clips, etc.), unloaded sag, sag marks on A-frames, stationing, and initial point. 
+For bridges; safety precautions, bridge occupancy limitations by police or highway officials, location, stationing 
+details, horizontal angle coefficients. For boat ranqes; safety precautions, width, permanent alignment or 
+triangulation targets, availability of boats, etc. 
+Give the locations of any sites that have been used for slope-area, contracted-opening, or other indirect measure- 
+lments or of sites that appear promising for the purpose. 
+Floods.--Narration of historic data search, (date, name of investigator, names of sources of information, nature 
+of information, authority of informant, etc.). Interpretation of information. Include all historic floods, but only 
+the notable ones within the period of station operation. 
+Point of zero flow.--Location, gage height, probable accuracy, permanency. Recommend frequency of observations 
+Winter flow --Ice effect likely to be more severe or less than at other stations in the area. Why? 
+Regulation and diversion.--Location, description, and probable effect of dams, lakes, power plants, reservoirs, 
+swamps, unusual land use, above or just below the station. If the station is one of several on a regulated stream, 
+refer to the next gage upstrealn and describe in detail only those regulations and diversions between the gages. 
+Accuracy.--Anticipated accuracy, with all equipment working, for the different seasons and ranges of flow. 
+Cooperation.--Each agency involved, the proportion of its support (financial and technical), and the dates. 
+Sketch.--Page size sheet with enough detail to enable one unfamiliar with the locality to reach the station, park 
+a vehicle, and locate principal features with minimum effort. Include gage, measuring sections, and any paths or 
+trails used to reach them. An additional large scale sketch may be needed to illustrate an obscure site. 
+Photographs.--File with photographs of principal features (close view of gage and shelter, general view showing 
+control, measuring equipment, etc., and stereo slides of the channel). 
+Observer.--Name, address, phone number, occupation, place where usually contacted during the day, gage duties. -~ 
+and rate of pay. 
+FIGURE l.-Outline of a field-station description. 
+=== page 11
+4 TECHNIQUES OF WATER-RESOURCES INVESTIGATIONS 
+=== page 12
+4 
+E 
+0 
+d 
+COMPUTATION OF CONTINUOUS RECORDS OF STREAMFLOW 5 
+=== page 13
+6 TECHNIQUES OF WATER-RESOURCES INVESTIGATIONS 
+FIGURE P.-Sample field-station description-Continued. 
+Gaging-station levels 
+A gagesupporting structure, such as a well, 
+may settle causing the gage to read too high; or 
+the structure may be lifted by frozen ground 
+making the gage read too low. These and other 
+types of gage errors may accumulate over 
+several years and, if neglected, affect the rat- 
+ings or distort the relative heights of recorded 
+floods. The errors can be measured by running 
+periodic gaging-station levels, with standard 
+surveying methods and equipment, between the 
+gage and reference marks on stable ground. 
+Gages can be reset, or their readings can be ad- 
+justed by applying corrections based on the 
+levels. Levels are also used to measure the 
+elevation of the gage datum above National 
+Geodetic Vertical Datum (NGVD) where a 
+bench mark is within a reasonable distance 
+(usually a few miles). Levels to NGVD are par- 
+ticularly desirable when there is probable need 
+for transfer of data by profile. Examples of pro 
+bable needs include (1) evaluation of risk to 
+property in a flood-prone area; (2) design of near- 
+by highways; and (3) development of basin 
+models. Where levels are impractical, determine 
+the approximate altitude of the gage from a 
+map or with an aneroid barometer. 
+Gaging-station leveling is exacting work 
+thoroughly described in the Manual for Level- 
+ing at, Gaging Stations in North Carolina by 
+Thomas and Jackson (1981), which covers 
+scheduling of levels, precision, accuracy, instru- 
+ment adjustment, adjustment of leveling errors, 
+tabulation of results, and general concepts. Use 
+that manual or a version of it modified to fit 
+local conditions, for all gaging-station levels. 
+Manual for Leveling at Gaging Stat:ions in 
+North Carolina contains several example,s of ac- 
+ceptable level-note format and tabulation of 
+results. Figure 3 illustrates a format where the 
+level notes are on the back side of a special form 
+(fig. 3B) and the adjustments and results are on 
+the front side (fig. 3A). A format similar to this 
+is recommended, but the use of any logical and 
+checkable method of keeping, adjusting, and 
+listing notes is normally acceptable. The gage 
+checking levels are usually run to thousandths 
+of a foot, and those for the NGVD tie are usu- 
+ally run to hundredths of a foot. 
+Tabulate the results of all complete gaging- 
+station-level sets ever run at the site and also 
+any partial gage checks made without, levels 
+and used to reset the principal gage. Use a for- 
+mat siiar to that in figure 4 or the generally 
+similar format illustrated in the Manual for 
+Leveling at Gaging Stations in North Carolina. 
+The tabulation is designed to be a concise his- 
+tory of all levels and changes to gages and will 
+be the basis for computation of datum and gage 
+height corrections as explained in a subsequent 
+section of this manual. The tabulation, once pre 
+pared, is updated each year by the addition of 
+the results of any gage-checking activities. The 
+tabulation should be checked before it is used. 
+Discharge measurements 
+Discharge-measurement notes, ordinarily 
+computed at the gaging-station site, require 
+some checking before the results can be Iisted 
+and used to develop the discharge rating. 
+=== page 14
+COMPUTATION OF CONTINUOUS RECORDS OF STREAMFLOW 7 
+--~ - UNITED STATES RllY1mxS DEPARTMENT OF THE INTERIOR 
+EM- / I 
+2966 lz9.03 1 
+-- /X 2’6 
+‘@,hq- w54 I I 46.30 
+I I 
+WlRE WEIGHT CAGE I~UIiIiI.EIl DIAL or FLOAT 1‘APE 
+1 Found 1 Left 1 Found I--- Len 
+I Corr’n I - DP/ I 0 
+OUTSIDE STAFF SECTIONS 
+SK,,“” Found Left 
+H.P Elev. R P.llend Cor?n R.P Elev. I1 P.Read Corr’n 
+O-C. 7 ~3.996 /3.97.? - 006 - or6 
+4500 4498 t.oat C.‘+IZO r. 
+r--1-- 
+FIGURE 3.-Gaging-station-level notes. 
+Water Resources Division policy prior to 
+1961 called for complete checking of every com- 
+putation in each discharge measurement. The 
+policy was changed as a result of a study that 
+showed selective checking to be adequate and 
+much less time consuming than complete check- 
+ing. The currently approved practice is to check 
+every measurement for (1) agreement between 
+the computed mean gage height and the cor- 
+rected recorded gage height or, for nonrecording 
+stations, the observer’s readings; (2) correct ad- 
+dition of the partial widths and discharges and 
+agreement of the total width with the stationing 
+of the water’s edges; (3) possible error wherever 
+the partial discharge changes substantially 
+without a corresponding change in width, 
+depth, or velocity; and (4) consistent relation of 
+inside mean gage heights to outside gage read- 
+/7.75/ 
+.? -. - 
+J3 914 -__ --~- 
+__- 4.499 ~__- 
+, __- 
+/ZZL --- 
+IL.55 -.__ .----- 
+32 93 ____- 
+4J.33 -~ 
+43L7 -- --. 
+44.42 ---__- 
+46.32 ---- 
+4p.473 ~- 
+4v.87 -. --- 
+40 50 ~___- - 
+3/d/ 
+2283 __- 
+17.29 
+ings. Check every computation in a discharge 
+measurement that (1) varies from the rating de- 
+fined by previous and subsequent measure- 
+ments by more than 10 percent; (2) is the only 
+measurement defining a substantial portion of a 
+rating; (3) was computed by a hydrographer in 
+the early stages of training; (4) was made during 
+a noteworthy flood; or (5) is selected by the 
+hydrographer in charge. Normally, less than 10 
+percent of the measurements for a station are 
+completely checked. 
+Gage-height record 
+Assemble the gageheight record for the 
+water year or other period for which the dis- 
+charge record will be computed. The gage- 
+height record, as brought in from the field, is a 
+=== page 15
+8 TECHNIQUES OF WATER-RESGURCES INVESI’IGATIONS 
+RESULTS OF LEVELS 
+Mud Creek at Crisfleld. IL 
+-I- 
+FToa -- 
+.s. 
+lt?V. 
+?vel!; -- 
+.262 
+.318 
+.214 
+.404 
+- 
+1 
+1 17.256 
+1 17.256 
+1 17.25G 
+1 17.256 
+1 1 
+b 1 
+'1 
+Refel ce Ma 
+,645 
+,647 
+,642 46.30 
+Wir 
+heck 
+ar 
+lev. 
+9.12 
+9.11t 
+9.111 
+9.116 
+.46 
+.28 
+.34 
+.23 
+.41 
+- 
++Gaqe Weight m ren - 
+3 2 
+j 2 
+12 
+1c 
+15 
+1 
+1 
+1 
+Party 
+Chief 
+3-12-76 Keller 
+10-30-76 Stack 
+q-12-78 Krank 
+S-02-78 Krank 
+11-06-80 JOflfZS 
+Gage I -- 
+,und -- 
+,403 
+,216 
+.425 
+Real - 
+LI 
+1 ,262 
+1 ,318 
+1 ,216 
+1 ,404 
+192 
+- 
+19 
+sund 
+9.12 
+9.14 
+9.12 
+9.13 
+- - - - - 
+7.072 
+7.07( 
+7.08i 
+mark - iT ne 27, IL - 
+FIGURE 4.-Gaging-station-level summary. 
+series of 16 channel punched-paper tapes (fig. 5), 
+graphic-recorder charts (fig. 6), or the books con- 
+taining the observer’s original readings of a 
+nonrecording gage (fig. 7). Other important 
+parts of the gageheight record include the notes 
+concerning gage repairs and resetting, and 
+reports of contacts with the observers of non- 
+recording gages that give evaluations of their 
+work. These notes are normally written in the 
+spaces provided on the dischargemeasurement 
+front sheets. The datacollection unit supervisor 
+usually scrutinizes the gage-height records and 
+discusses them with the hydrographer during 
+the post-field trip debriefing. The evaluation in- 
+cludes checking that the recorded peaks agree 
+with high-water marks, that the timer operated 
+continuously, that the outside-inside gage rela- 
+tion was normal, and that any doubtful looking 
+record has been investigated and its appearance 
+was either satisfactorily explained or its cause 
+was corrected. Compare the starting gage 
+height of each tape or chart with the ending 
+gage height of the preceding record and recon- 
+cile any differences before proceeding to the 
+next :3tep. At this stage of the processing, the 
+gageheight record may require the application 
+of certain corrections before it can be ,used to 
+compute the discharge record. 
+Datum and Gage-Height 
+Corrections 
+A correction applied to gage readings to com- 
+pensate for the effect of settlement or uplift of 
+the gage is usually measured by levels and is 
+=== page 16
+COMPUTATION OF CONTINUOUS RECORDS OF STREAMFLOW 9 
+Sprocket 
+drive 
+holes 
+1 Tans 1 Units 1 Tenths 1 Hunfeths 
+lal I tape 
+travel 
+- 00.96 
+- 53.81 
+if 
+Clock 
+time 
+I Translator 
+alinement 
+holes 
+FIGURE 5.-Digital-recorder tape 
+Scale reverses at upper and la 
+:- - 7 ---. 
+. ..( 
+I 
+.i 
+‘-. “i . .l. 
+--- 
+i Timer-driven taper travel j / 
+lb June--l981 il 
+FIGURE B.-Part of graphic-recorder chart. 
+called a “datum correction.” A similar correc- 
+tion applied to compensate for a short-term oc- 
+currence (leaking float, slipped clamp, leakage 
+or evaporation of antifreeze oil’, and similar oc- 
+currences) is called a “gageheight correction.” 
+These short-term corrections can be measured 
+=== page 17
+10 TECHNIQUES OF WATER-RESOIJRCES INVESTIGATIONS 
+GACJZ HEIGHT!3 FOR WEEK ENDING WI'URDAY, --------..-----..------.------------------~~~--~----------------, 19.8!--- 
+= 
+A- 
+-. 
+._ 
+-- 
+Mm. 
+4 7.‘30 9.35 _______-______-_ _______________ P. M. 
+____ _ -- - 7.‘00 10.30 
+A. M. 
+199s. 5 7:30 9.50 -----p-p -_-s-e ____.___m---sm. 
+---__-_- 7% 8.00 
+wd. ;;;3 
+6 4.20 _____ B-p __---- -_---__-------. 
+-----__- s .;bs 4.58 
+lhrr ;:;5 3.&g 7 
+I -_--- _I _____ p-p __---_ ------- ---.:--. i.‘io I 3. /3 
+F& 
+8 
+;.;u 2.77 _ -___ i;‘p ___--- -_---__-------. 
+------- i.*~ 2.50 
+s& 9 so 2.24 ---H‘iir _-_--- ________--___-- . . 
+------I L.‘30 1 2.00 
+l Cr.rtb ----- -- ____________ ___- rd,m 0s. HI. ClNckd by ___-____- -- -___ ---- ma --I----------- 
+FIGURE ‘I.--Page of nonrtxmdi~-~2 observer’s book. 
+by levels or based on comparison of the readings 
+of different gages. All corrections to the gage 
+height record are called datum corrections in 
+automatic data processing usage. 
+Bubble gages and certain wireweight gages 
+have individual calibration errors that vary 
+with stage and in some csses with temperature. 
+Analysis of these errors is complex and rarely 
+worthwhile. If calibration errors are disre 
+garded, the rating will ordinarily compensate 
+for them with no consequential effect on the dis- 
+charge record. However, calibration error cor- 
+rections may be necessary if they apply to a 
+slopestation record or a bubble gage on a’ 
+stream with very high and variable sediment 
+concentration. 
+Inside each gaging-station well, one of the 
+gages, separate from the recorder and least 
+prone to accidental datum changes and atten an 
+electric-tape or insidestaff gage, is desiiated 
+as the “reference gage.” Its main purpose is to 
+furnish occasional independent water-surface 
+elevations to monitor the accuracy of the other 
+inside gages. Another gage, preferably a re 
+corder component such as the digital recorder 
+dial ac the perforated float tape that drives a 
+graphic recorder is designated as the “principal 
+gage.“’ Principal gage readings determine the 
+inside mean gage heights of the discharge 
+measurements and are used to set the graphic- 
+recorder pen. Bubble gage counters and the 
+dials of digital recorders over small&meter (3 
+to 6 in) wells are principal gages usuall~y set to 
+agree with an outside reference gage at low 
+water when drawdown and calibraton errors are 
+smallest. A slope station has a “base gage” 
+=== page 18
+COMPUTATION OF CONTINUOUS RECORDS OF STREAMFLOW 11 
+similar to an ordinary gaging station and gen- 
+erally one “auxiliary gage” some distance away. 
+The sum of the datum and gageheight correc- 
+tions may be applied directly to the principal 
+gage readings, disregarded, or, with extremely 
+unstable ratings, absorbed into the shift ad- 
+justments (gage-height adjustments used to 
+compensate for discharge rating shifts and 
+described in detail later). The option used de 
+pends on the magnitude of the correction, the 
+sensitivity and permanence of the rating, and 
+whether the corresponding gage error occurred 
+suddenly or gradually. Corrections as small as 
+0.01 ft are usually applied where the low-water 
+control is a permanent weir and zero flow oc- 
+curs. If the sum of datum and gageheight cor- 
+rections during the year does not exceed 0.02 ft 
+(and the principal gage was not reset, these cor- 
+rections are usually disregarded. 
+Corrections that are applied to principal gage 
+readings must agree with (1) the correction used 
+for the last day of previously computed record; 
+(2) the corrections printed on the current year’s 
+primary computation sheet; (3) gage checks by 
+levels or by comparison of principal gage. read- 
+ings to other readings; and (4) notes concerning 
+changes made to the principal gage setting. 
+Maintain a chronological list of corrections ap- 
+plicable to the principal gage in the format of 
+figure 8. After the end of the water year, this 
+list will become a paragraph of the station anal- 
+Oct. 1, 1979 (0000 hrs) 
+-.02 ft 
+Nov. 6 (1430 hrs) 
+0 
+Levels-gage reset 
+Dec. 11 (0330 hrs) Surge - ' 
++.05 
+most likely time of tangle 
+Jan. 3, 1980 (1415 hrs) 
+Sept. 30 
+0 
+Surge chain untangled. Ght rose 
+(2400 hrs) 
+.05 ft. 
+ysis, a document described in a later section of 
+this manual. A similar list of corrections for 
+gages other than the principal gage (reference 
+gage, outside gages, and so forth) is optional. If 
+the corrections are complex, plot them in a for- 
+mat similar to that in figure 9 and prepare the 
+list from the graph. The list must be kept in 
+agreement with the last correction used for 
+previously computed record. Primary computa- 
+tions of current records are normally rerun from 
+the original tapes if the datum corrections are 
+revised, so accept the previous corrections 
+unless they are seriously in error. Be certain 
+that the gage-height correction changes by the 
+same amount that the principal gage was 
+changed and that no change in stage caused by 
+cleaning a control or intake is mistaken for a 
+gage resetting. When the list of datum and 
+gageheight corrections is final, apply the ap- 
+propriate correction to every principal gage 
+reading entered on a discharge-measurement 
+front sheet, graphic-recorder chart, or 
+nonrecording-gage observer’s book. The 
+WATSTORE User’s Guide (vol. 5) includes in- 
+structions for making the corrections to digital 
+recorder readings. 
+Pen corrections, to compensate for erroneous 
+settings or lateral movement and expansion of 
+the recorder paper, are computed on the 
+graphic-recorder chart and are not otherwise 
+documented. Graphic and digital recorders are 
+Datum and gage-height corrections 
+attached sheet. 
+.--Results of levels are summarized on an 
+Based on these levels, 
+September 30, 1979, the datum correction used on 
+was straightened, 
+notes made when a surge chain at the recorder float 
+and gage-height record evidence of the most likely 
+time that the surge chain became tangled, the following corrections 
+were applied to digital-recorder readings: 
+I No corrections were applied to other gages. 
+FIGURE S.--List of gageheight cxmectionS- 
+=== page 19
+12 TECHNIQUES OF WATER-RESOURCES INVESTIGATIONS 
+CORRECTIONS TO DIGITAL RECORDER 
+r: 
+0 
+0 N D J F M 
+t 
+Time 
+0000 
+1115 
+0200 
+0920 
+0000 
+0000 
+0000 
+0000 
+0000 
+0000 
+1410 
+2400 
++0.02 
+0 
+- .20 
+0 
++ .Ol 
++ .02 
++ .03 
++ .04 
++ .05 
++ .06 
+0 
+FIGURE O.-Graph of gageheight oblations. 
+reset as necessary to compensate for the effect 
+on the float when oil, used as an antifreeze, is 
+added to or removed from the gage well. Oil- 
+effect variations, caused by evaporation or 
+other loss of oil, are treated as pen corrections 
+with graphic recorders but must be included in 
+the datum corrections that are listed and ap- 
+plied to digital recorder readings. 
+List of Discharge 
+Measurements 
+The tabulation illustrated by figure 10 (form 
+9-207) summarizes, in a convenient form, the 
+data pertinent to the discharge measurements 
+made at a gaging station. The following para- 
+graphs outline the procedure for preparing the 
+discharge measurements for listing. 
+The listing can be continuous from the first 
+measursment made at the site, with each meas- 
+urement listed only once. A space is left after 
+the last measurement in each water year, and 
+preferably each calendar year, to separate these 
+periods. Listing by wateryear sets, stBrting 
+with the last measurement of the previous 
+water year on the top line and including the first 
+measurement of the next year, is also sa,tisfac- 
+tory. Newly available measurements are added 
+to the list every time an additional period of 
+record is computed. 
+Arrange all of the previously unlisted 
+dischargemeasurement notes and the hydrog- 
+raphers observations of no flow for the c.urrent 
+water year in chronological order. Check the 
+gage-height record to make certain that all 
+measurements are on hand and be sure that the 
+indirect measurements are included. Inclusion 
+of the first and last observer’s noflow observa- 
+tion during each continuous period of no flow is 
+optional. 
+Make certain that all necessary checking or 
+rechecking has been done. Indirect mleasun+ 
+.ments ‘must be reviewed by the appropriate 
+;speciahst before the results may be usecL Note 
+in particular whether the mean or weighted- 
+mean gage height has been computed and 
+checked for each measurement. Make sure that 
+the measurement gage heights and the gage 
+height record have been based on the principal 
+gage and that any necessary datum and gage 
+height, corrections have been applied to both. 
+When something was done by the hydrographer 
+which caused the gage height to change, such as 
+removal of debris from the control or cleaning of 
+the intake pipes, list both gage heights and note 
+the reason for the change under “Remarks.” 
+Be certain that measurement gage Iheights 
+and dates have been checked against the gage- 
+height record and any discrepancies reconciled. 
+Also, number the measurements consecutively 
+in chronological order, including all field 
+estimates (flow estimates made where condi- 
+tions preclude standard discharge measurement 
+techniques) and indirect measurements; obser- 
+vations of no flow are not numbered. 
+After completing the above, the measure- 
+menu3 are listed on form 9-207. Listing: not in- 
+tended for typing should be done in black ink in 
+a marmer such that good, clear prints can be ob 
+=== page 20
+COMPUTATION OF CONTINUOUS RECORDS OF STREAMFLOW 13 
+. . . . . . . . . . I........ I.......... f 
+...................... .: .......... 
+i 
+................ z-r. ‘K ....... I .. -05 - 
+J3. / - 6 0 ....................... 7.: ...... .61...??. ........ 
+56 43 /35 26 -o/ ................................ .......................... L 60 ........ ....... .:. ............ ........ 
+1 JB 0 ............... ........ ........ ....... ...... ........ 
+. _._ . . . . . . .__...____.__ __ .._.._ ._ . . . . . .._ __..____.. ~ _....._ 
+Jo 0 653 ‘ 77 /.48 /zo - _ _.._._._.. ___._____ ____ __.__._. .___...___ __.____________ __...... 
+cogad by . . R3J . . . . . . . . . . . . Gmputsd byA?G. . . . . . . checked by ..__ PT3.. 
+FIGURE 10.-I&t of discharge measurements. 
+mined. The following steps are used to complete 
+the form properly. 
+Letter the exact name of the gaging station 
+on the top line of each sheet used. Insert the 
+gaging-station identification number in the 
+space provided on each sheet. 
+List all measurements in chronological order, 
+using one line for each measurement. Available 
+measurements for the following year should be 
+listed if they will be used in defining the current 
+year’s rating curve or shift adjustments. 
+Show the initials and last name of the hydrog- 
+rapher making the measurement the first time 
+it appears on a page and use only the surname 
+or initials wherever it appears again. Dittos 
+may be used where appropriate in the “Made 
+by” colwnn. If more than one hydrographer was 
+present, list the two most appropriate names. 
+List the water temperature in degrees Celsius 
+and above it the “24-h” time. 
+If the measurement was made other than by 
+wading, note the method used and the size of 
+sounding weight (if used) in the “Remarks” col- 
+umn. Use notations such as cable 100 lb, bridge 
+75 lb, boat 30 lb, or optical meter. Any unusual 
+conditions that might have some effect upon 
+the accuracy of the measurement or upon the 
+stage-discharge relation should also be listed 
+under “Remarks.” Use numerical remarks such 
+as “control cross section 40% blocked by grass” 
+rather than the less specific “backwater from 
+grass.” Any changes made to the control or in- 
+take pipes that cause a sudden gage-height 
+change and affect the continuity of the gage 
+height record must be noted. Brief notes on ice 
+conditions should be included here. The gage 
+height of zero flow (GZF), when determined, 
+should be listed. For indirect measurements, 
+show a gage-height determination from the 
+flood profile or high-water marks, if available, in 
+addition to those obtained from inside or out- 
+side gages. Additional cohunns appropriate to - b - 
+=== page 21
+14 TECHNIQUES OF WATER-RESOURCES INVESTIGATIONS 
+the station may be added to the form to show 
+such data as gage height of zero flow, outside 
+gage height, specific conductance, etc., provided 
+that adequate space for the “Remarks” is left. 
+The shift adjustment and percent difference col- 
+umns are left blank until the rating has been 
+completed. 
+The person listing the measurements places 
+his initials and the date near the bottom of each 
+sheet. Each item listed on the form must be 
+checked, and the checker adds his initials and 
+the date to each sheet. 
+For each gaging station, high-water measure 
+ments above a chosen base gage height may be 
+recorded on a separate form 9-207 and carried 
+forward from year to year to prevent any meas- 
+urement from being overlooked in future 
+ratings. Only the date, gage height, discharge, 
+method, and accuracy need to be listed on the 
+supplemental sheet. 
+Discharge Ratings 
+The development of the discharge rating is 
+one of the principal tasks in computing a dis- 
+charge record. The rating is usually the relation 
+between gage height and discharge (simple 
+rating). Ratings for some special sites involve 
+additional factors such as rate of change in 
+stage or fall in a slope reach (complex ratings). 
+A ratings manual (Kennedy, 1982), is devoted 
+entirely to discharge ratings, simple and com- 
+plex. The ratings manual also covers such 
+fundamental rating analysis techniques such as 
+logarithmic plotting; constructing normal and 
+offset logarithmic scales; relating logarithmic 
+curve shape to the gageheight offset and to 
+GZF; using shape curves; approximating loga- 
+rithmic rating curves by straight-line segments, 
+and using digital descriptors of logarithmic 
+rating curves. This manual covers only the 
+development of simple ratings for reasonably 
+stable channels and does not repeat the explana- 
+tions of the fundamentals or special applica- 
+tions explained in the ratings manual by Ken- 
+nedy (1982). 
+A simple rating is developed by (1) plotting 
+the relevant discharge measurements and a 
+shape curve on a logarithmic workcurve sheet; 
+(2) drawing the indicated rating curve; (3) ap 
+proximating the curve with a series of straight 
+lines and dete rmining its digital descriptors (ex- 
+plained in more detail later); (4) preparing a 
+rating table from the descriptors or using the 
+dlescriptors in a programmable calculator to 
+simulate a rating table; (5) computing the varia- 
+tions of the discharge measurements frolm the 
+rating; (6) revising the rating descriptors to ob- 
+tain a better balance of the discharge measure- 
+ment variations; and (7) preparing a drafted 
+master curve sheet. 
+Work-curve sheets 
+The actual development of the rating curve is 
+normally done in pencil on a logarithmic sheet, 
+preferably with enough cycles so that the rating 
+curve can be one continuous line. This work- 
+sheet may be a print of the previous year’s 
+master sheet to eliminate some plotting or a 
+fresh sheet prepared for the purpose with a dif- 
+fferent gageheight scale offset from the lone on 
+the master sheet. The choice depends on the dif- 
+:Eerence between the effective GZF and thte next L 
+higher foot, or possibly half-foot, and the sen- 
+;sitivity of the relation between the scale offset a r 
+<and the curvature of the rating. A plotted loga- 
+rithmic rating whose lower part is curved may 
+require a profusion of descriptors, and if it is 
+even slightly concave upward, it will involve 
+scalloping, The rating curvature of a logarith- 
+mic plot is controlled by varying the sc,ale off- 
+set. The lower end of the rating curve is straight 
+when the scale offset is the effective GZF, con- 
+cave upward when the offset is smaller than 
+GZF, and concave downward when the offset is 
+larger than GZF. This effect is less pronounced 
+as the stage increases, and changing the offset 
+by a foot has a negligible effect on rating cur- 
+vature at stages above about 3 ft over GZF. In 
+general, a print of the previous master curve is a 
+satisfactory worksheet if the current curve can 
+be plotted on it in one continuous line, the scale 
+offset agrees with the previous curve’s offset 
+descriptor value, and the new rating will be 
+straight or slightly concave downward. Other- 
+wise, ‘use a fresh sheet. 
+Figure 11 illustrates a workcurve sheet pre 
+pared from a standard form 9-279M. The dis- 
+charge scale is a “normal” log scale from 
+=== page 22
+COMPUTATION OF CONTINUOUS RECORDS OF STREAMFLOW 15 
+0.001 ft% (two additional cycles taped in place 
+for the discharge range below 0.1 ftYs are not 
+shown on figure 11) to 10,000 ft%. The gage 
+height scale is offset by 1.2 ft, approximately 
+the gage height of zero flow, and is convenient 
+for plotting all gage heights below about 2.2 ft. 
+The offset scale is too awkward for plotting 
+higher values so they are adjusted by subtract- 
+ing the scale offset from each gageheight value 
+and can then be plotted using the “normal” log 
+scale. Gageheight values picked off the normal 
+scale must be increased by the offset value 
+before use, an inconvenient procedure usually 
+used only for worksheets. 
+Plot the last rating that was used for pub 
+lished record or the shape curve described in the 
+rating manual on the worksheet. If a previous 
+rating is used for the shape curve and its scale- 
+offset descriptor is not the same as the work- 
+sheet’s scale offset, consider only the part above 
+about 4 ft on the normal scale for merging with 
+the new curve. Minor scale&set differences in 
+that range have a negligible effect on the dis- 
+charge values interpolated between the rating’s 
+descriptors. 
+Plot all relevant discharge measurements. 
+These include the current measurements not 
+seriously affected by ice or debris, all recent low 
+and medium measurements that apply to the 
+current rating, and, if used, all of those on the 
+special list of high-water currentmeter and in- 
+direct measurements. If the measurement align- 
+ment indicates that more than one rating ap 
+plies at high or medium stages, use colors to 
+distinguish the measurements that apply to 
+each rating. If more than one rating in the near- 
+zeroflow range is needed and shifting-control 
+method is impractical, use a supplemental work- 
+sheet for each rating whose GZF and scale off- 
+set differs from the others. Examine any meas- 
+urements that appear to vary from the general 
+trend for errors in discharge or gageheight com- 
+putation or for gage malfunction. 
+Draw a smooth curve that best averages the 
+applicable measurements. If the station is new 
+and the shape curve is a synthetic rating (slope 
+conveyance, step-backwater, or similar), draw 
+the new curve generally parallel to it. Make all 
+breaks in the slope of the new curve at the same 
+gage heights as the breaks in the shape curve. 
+Draw the curve only as high as the maximum 
+recorded stage. If the shape curve is a previ- 
+ously used rating, merge the new curve with the 
+shape curve at as low a gage height as the data 
+and judgment permit. High-water ratings 
+should include all relevant measurements, and 
+once a high-water rating extension is made, it 
+should be continued in use until strong support- 
+ing data indicates the need for a change. Then, 
+the published records must be revised as neces- 
+sary to reflect the revised extension. Rating 
+extensions based only on a different hydrog- 
+rapher’s opinion, especially extensions con- 
+sidered too weakly based to warrant revision of 
+past records, should be avoided. Minor high- 
+water extension revisions, such as the one illus- 
+trated in figure 11, require no revisions to past 
+records. If the low-water measurements scatter 
+due to varying amounts of aqueous growth or 
+debris on the control, draw the curve to the 
+right of the scatter and close to the measure 
+ments made while the control was clean. If 
+measurement scatter reflects scour and fill at an 
+unstable control, draw the curve near the mid- 
+dle of the scatter and close to measurements 
+whose GZF is close to the scale offset used. If 
+the lower part of the curve is concave upward, 
+use a larger scale offset to straighten the curve 
+or make it concave downward and avoid the 
+scalloping described in the ratings manual. 
+When the curve looks satisfactory, approximate 
+it with a series of straight lines and pick off the 
+digital descriptors (see the ratings manual). 
+Fewer than 15 segments are adequate for most 
+ratings, but as many as 29 can be used. 
+The rating is considered tentative until the 
+percent differences and shift adjustments 
+(discussed in greater detail later) are computed 
+and found to be satisfactory. Graphical rating 
+analysis, especially for high-slope rating parts, 
+is subject to significant drafting errors. The 
+graphically defined rating descriptors may need 
+some adjustment to improve the balance of the 
+percent differences. The percent differences can 
+be computed from a rating table, described in 
+the following section, or more conveniently by 
+entering the descriptors in an appropriately pro- 
+grammed calculator. Then, the descriptors can 
+be modified as necessary to make the rating 
+final. The workcurve sheet is preserved for as 
+long as it has use for future rating analysis, 
+after which it may be discarded. 
+=== page 23
+16 TECHNIQUESOF WATER-RESOIJRCES INVESTIGATIONS 
+FIGURE 1 l.-Logarithmilc work-curve sheet. 
+Rating tables 
+A rating table similar to the one in figure 12A 
+(one-hundredth-foot expansion) or 12B (one 
+tenth-foot expansion) can be prepared automati- 
+cally from the descriptors by using the 
+WATSTORE “RATLIST” (automatically pre 
+pared rating tables) program. The variety of 
+RATLIST output formats and their input re 
+quirements are described in the WATSTORE 
+User’s Guide. (vol. 1). The rating table can also 
+be prepared manually on a standard form 9-230 
+from the worksheet curve. This is a time 
+consuming operation that produces a table with 
+serious shortcomings for ADP use and is not 
+normally recommended. Some programmable 
+calculators can be programmed for logarithmic 
+interpolation to serve as a substitute for a 
+rating table. The necessary programs, on 
+magnetic cards, for some handheld calculators 
+can be obtained from USGS offices. The rating 
+descriptors can be stored in the calculator, so 
+that entering a gage height or discharge causes 
+,the corresponding discharge or gage height to 
+be dit3played. Descriptors in the calculator 
+storage can be changed at wilJ until thiey are 
+satisfactory for the final table. 
+Rating tables are numbered chronolclgically 
+by dates of use. The approximate date of the 
+change from one rating to another is usually ap- 
+parent from the dates of measureme& that 
+define each rating, and the date of the event 
+that most likely caused the change. If the 
+shifting-control method is used, the starting 
+date of a rating is not critical and sometimes it 
+can be moved to a convenient date such as the 
+start of a water year. Enter the appropriate 
+starting and ending dates in the space provided 
+on the rating tables. Use of the blanks on the 
+rating table sheet to indicate the basis for the 
+rating and its degree of definition is recom- 
+mended for stable ratings used for a ;year or 
+longer and is optional for unstable ratings. 
+The final rating table should be checked by 
+=== page 24
+COMPUTATION OF CONTINUOUS RECORDS OF STREAMFLOW 17 
+FIGURE ll.-Logarithmic worksurve sheet-Continued. 
+someone not involved in the original computa- 
+tion. Check to make certain that the correct 
+descriptors, especially the offset, were used to 
+prepare the table, that it covers the entire range 
+of stage, and that the handwritten entries (dates 
+of use, etc.) are correct and have also been 
+entered on the previous rating table. The 
+checker should always assure that older 
+medium- and high-water discharge measure- 
+ments are included in the rating analysis. In- 
+itials of the person doing the original computa- 
+tions and the checker must be shown with the 
+dates of the work. 
+Percent differences and shift 
+adjustments 
+At a stream-gaging station, a certain section 
+below the gage controls the relation of gage 
+height to discharge. This may be a rock riffle, a 
+sand or gravel bar, a natural constricted sec- 
+tion, a dam, weir, or flume, or it may be a 
+stretch of the channel where the channel slope 
+and friction of bed and banks are the controlling 
+hydraulic parameters. When this section, called 
+the control, is permanent or unchanging, there 
+will normally be the same amount of water pass- 
+ing the gage for a given gage height. This 
+seldom happens in nature. The sand bar, gravel 
+bed, or drift pile that comprises the control may 
+change during flood periods, debris may be 
+piled on rock riffles, and aquatic vegetation, silt, 
+and drift may accumulate in channels, on and 
+behind dams, and in flumes. 
+All of these control changes are reflected in 
+the plotting position of the discharge measure 
+ments on the rating curve. Theoretically, a new 
+curve should be drawn following each one of 
+these changes. However, instead of drawing 
+new curves for each change in the stage 
+discharge relation, the shifting-control method 
+is used in which a correction, called a shift 
+=== page 25
+TECHNIQUES OF WATER-RESOURCES; INVESTIGATIONS 
+.OD 
+DISCHARGE I” CUBIC FEET PEA SECOND (STANCARD PRECISION, 
+.a3 .04 .O5 .06 .07 .Ol .02 . 08 
+a.9 
+13 
+9.3 9.1 
+14 14 
+10 
+15 :: 
+12 
+17 
+12 
+18 
+13 
+19 
+20 
+30 
+48 
+72 
+104 
+20 
+31 
+50 
+75 
+107 
+2, 
+:: 
+76 
+11, 
+22 
+34 
+z: 
+114 
+24 
+38 
+5e:: 
+f21 
+27 
+,“: 
+1;: 
+28 
+2; 
+100 
+136 
+140 144 148 152 156 lb, 165 169 174 178 
+183 187 191 195 199 204 ioa 212 217 22, 
+226 230 235 240 244 249 i'54 259 264 269 
+274 279 280 288 293 298 3 0 3 308 313 319 
+324 329 334 339 345 350 :;56 361 367 372 
+z:; :;; 
+491 498 
+554 560 
+620 627 
+389 44u 
+509 
+567 
+6j4 
+394 
+“50 
+510 
+2: 
+71, 
+783 
+;:i 
+,020 
+,110 
+,190 
+,280 
+,370 
+1470 
+:2:: 
+1770 
+:;:: 
+zoao 
+2190 
+399 4c5 II I 0 416 1122 427 
+45b UC82 "67 473 479 485 
+516 522 529 535 541 548 
+580 5687 593 LOO 607 613 
+648 655 662 669 676 683 
+690 697 704 
+761 768 776 
+836 a43 a51 
+914 922 930 
+995 ,000 ,010 
+718 725 
+790 7118 
+866 a54 
+9Ub Y!,” 
+1030 ,DL,O 
+2; 
+890 
+970 
+1050 
+747 
+a20 
+a98 
+978 
+1060 
+754 
+a28 
+;:7” 
+1070 
+loao ,090 11DO 
+1170 1,711 Ilao 
+,250 1260 127" 
+,350 ,360 ,370 
+I”“0 ,450 ,460 
+,110 1 Ii’0 1 I30 
+,200 12’0 ,.!2O 
+1290 13DO 1110 
+I 380 13'10 ,400 
+,480 1490 1500 
+,150 1160 
+,240 ,250 
+,330 1340 
+:420 1430 
+,520 1530 
+1540 1550 
+,640 ,650 
+1740 1750 
+,840 I a50 
+1940 ,950 
+,560 
+,660 
+1760 
+:;2: 
+,580 
+1680 
+1780 
+laao 
+1990 
+2090 
+2200 
+15110 14600 ,610 1620 
+1690 1700 ,710 1720 
+1790 1.300 ,810 ,820 
+lasso 1’900 ,910 1920 
+2000 2OiO 2020 2030 
+x 
+1830 
+1930 
+2040 
+2050 2060 2070 
+2160 2170 2lao 
+2270 2280 2290 
+2100 2110 2130 2140 2150 
+2210 2220 2230 2250 2260 
+01467150 COOPER R AT HADODNFIELD NJ TYPE LOGGCALE OFFSET = 1.00) RITING NO 09 
+BASED ON ___ DISCHARGE HEAS”RE”ENTS, NO. , *ND __, ANo,:;M- NELL mom”‘” BENEEN __ AND __ 
+- - - 
+FROM TO FROH ___- TO -- *CKD. SY __ DATE - 
+CAGE . DIFF IN 0 
+HEIGHT DISCHARGE IN CUBIC FEET PER SECOND (STANDARD PRECISION) PER 
+IN FEET .o . 1 .P .3 .4 .5 .b .7 .a .9 FOOT OH 
+1.00 a.9 48 'O" 2.00 140 I a3 274 3:: 491 5:: 620 
+3.00 690 761 914 995 loao ,170 ,250 1350 ,440 
+4.00 ,540 ,640 ,740 1840 1940 2050 2160 2270 
+THE FOLLOVINC RATING HA.5 STORED ON DISK FOR FUTURE “SE 
+DATE PROCESSED oa-20-a1 
+STATION 01467150 RATING IDENT 09 SCALE OFFSET 1.00 
+POINTS STORED TEST FOR CO”FOaHANCE 
+INPUT 0”TP”T POINT PERCENT DIFF 
+1.30 a, 90 
+1.40 13.00 
+1.50 19.50 
+1.60 29.50 
+1.70 "7.50 
+1.90 104.00 
+2.10 183.00 2.30 274.00 
+2.50 378.00 
+2. a0 554.00 
+3.00 690.00 
+2:;: 1080.00 1540.00 
+9.50 2050.01) 
+4.72 2290.00 
+FIGURE 12.-Automatically prepad rating tables (RATLISI’). 
+=== page 26
+COMPUTATION OF CONTINUOUS RECORDS OF STREAMFLOW 19 
+e adjustment, to the curve or table is computed. 
+Refer to the list of discharge measuremeuts in 
+figure 10. Two columns in the center of the form 
+were left blank when measurements were listed. 
+At the top of these two columns is “Rating 
+-” and the individual column headings are 
+“Shift adj.” and “Percent diff.” Place the 
+number of the rating table used in the space en- 
+titled “Rating -.” If a change in rating oc- 
+curs between two measurements listed in the 
+body of form 9-207, draw a heavy line across 
+these two columns below the last measurement 
+applying to the prior rating table and write the 
+number of the new table just below. Compute, 
+to onehundredth of a foot, the gage height from 
+the rating table which would produce the dis- 
+charge shown on the measurment or as close to 
+the measured discharge as possible. The differ- 
+ence between this computed gage height and 
+the gage height of the measurement is the shift. 
+If the computed gage height is greater than 
+that of the measurement, the shift is plus; if it is 
+less, the shift is minus. This should be checked 
+with the curve according to the following cri- 
+t&on. If the plotted measurement is above or 
+to the left, the shift is minus; if it is below or to 
+the right, the shift is plus. Frequently, errors in 
+shift, plotting of points, and location of rating 
+curves are picked up from this check. 
+Percent difference is not shown on form 9-207 
+for measurements with shift adjustments given 
+full weight (that is, the shift used is the actual 
+shift indicated by the measurement to the near- 
+est 0.01 ft). For those given less than full 
+weight, both the shifts used and the percent dif- 
+ferences from the rating (after application of 
+these shifts) are shown. 
+A discharge measurement is subject to instru- 
+mental and sampling errors that cause a stand- 
+ard deviation of about 4 percent (0.6 method) or 
+2.5 percent (0.2 and 0.8 method) in a 25-section 
+measurement according to a study by Carter 
+and Anderson (1963). Additional errors that are 
+related to the site conditions and the hydrog- 
+rapher’s experience make the total error range 
+of most measurements about 5 percent. For this 
+reason, the shiftingcontrol method is rarely 
+used for series of measurements that plot within 
+5 percent of the rating curve. Therefore, one 
+should compute actual percent differences with- 
+out shifts before computing any shift adjusb 
+ments. If all measurements are within 5 percent 
+and plot on both sides of the rating, computing 
+shifts is unnecessary except in special cases 
+where greater refinement may be warranted. On 
+the other hand, if a series of measurements dur- 
+ing a year plot within about 5 percent and are all 
+on the same side of the curve, one should con- 
+sider shifting to all of them, drawing a new 
+curve, or using the same shift throughout the 
+year and recomputing the percentages. The 
+hydrographer in charge normally decides 
+whether shifts will be applied, the old rating 
+continued in use without shifts, or a new rating 
+drawn. Sometimes a combination of all three 
+procedures will be used for various periods 
+through the year; however, similar periods 
+should be treated the same way. 
+To compute a percent difference, obtain the 
+discharge for the gage height (shifted-gage 
+height if a shift is applied but not given full 
+weight) of the measurement from the rating 
+table, carrying the discharge to the same 
+number of significant figures as is listed in the 
+“discharge” column (measured discharge) on 
+form 9-207. Divide the difference between the 
+measured and the table discharge by the table 
+discharge and multiply the result by 100. Carry 
+the difference to the nearest one-tenth of a 
+percent. 
+For iceaffected measurements, record “ice” 
+in the percent difference column. For a measure 
+ment that was disregarded, write “NOT 
+USED” across the shift and percent difference 
+columns. The reasons for disregarding a meas- 
+urement must be valid and fully explained in 
+the station analysis. They should be limited to 
+such items as equipment malfunction, gross er- 
+rors in width or depth, or possibly the hydrog- 
+rapher’s inexperience. Unexplained variation 
+from the rating is not a valid reason. 
+In computing shifts for measurements with 
+rapidly changing stage (greater than 0.1 ft dur- 
+ing measurement), see that the weighted-mean 
+gage height has been computed correctly. 
+The checker verifies the arithmetic of the 
+computed shifts and percentage differences 
+paying particular attention to the plus and 
+minus signs. It is very easy to err in the sign of 
+a shift, and too often a station record must be 
+revised after computation because shifts have 
+been applied in the wrong direction. One 
+=== page 27
+20 TECHNIQUES OF WATER-RESOURCES INVESTIGATIONS 
+method to check the sign of the shifts is to add 
+the shift adjustment algebraically to the gage 
+height of the measurement and enter the rating 
+table at the adjusted gage height; if the rating 
+discharge at that point equals the measured dis- 
+charge, the shift has been computed correctly. 
+If the percent differences are reasonably well 
+balanced (about as many plus as minus) and the 
+shift adjustments are satisfactory, the rating 
+may be considered final and ready for use in 
+computing the record. The hydrographers re- 
+sponsible for analyzing and checking the rating 
+should initial the table in the space provided. 
+Compare the high-water part of the new rating 
+to the prior rating to check the need for revising 
+past records. 
+Master curve sheets 
+A master curve sheet, usually hand drawn 
+and neatly lettered in ink on a standard form, is 
+used for the permanent record and to make 
+copies for field and office use. A variety of 
+standard forms is available, large and small, 
+logarithmic or rectangular, and combination 
+log-rectangular. Some forms are reverse printed 
+for ease of erasing and for superior diazo copies. 
+Others are front printed for the best electro 
+static reproduction. Figure 13 illustrates one 
+type of master curve sheet, prepared from the 
+figure 11 worksheet and plotted on a combina- 
+tion sheet (standard form 9-279-S or P). Note 
+that the use of a 1.0~ft gageheight scale offset 
+instead of the 1.2~ft offset used in the descriptor 
+makes the plotting simpler. However, this 
+change makes the curve segments between the 
+descriptor coordinate points bend slightly. The 
+curvature is not apparent in the parts of the 
+rating above 10 ft% in figure 13 but would 
+cause scalloping at lower flows if the 1.0~ft scale 
+offset were used on the worksheet. 
+Select an appropriate standard form for the 
+master sheet, no larger than necessary to illus- 
+trate the rating. Logarithmic sheets are best for 
+narrow-range ratings, and combination log 
+rectangular sheets are usually preferable for 
+ratings that extend down to zero flow. With a 
+combination sheet, a log scale different from the 
+one on the worksheet can be used for best place 
+ment of the main curve on the sheet and for 
+scale simplicity. Some hydrographers prefer to 
+use the normal log scales for all curves which, if 
+used, should be prominently titled “Gage 
+height, in feet-(offset) feet.” 
+Choose the scales for the rectangular portion 
+of a combination sheet to provide some overlap 
+with the log curve and to insure that each prin- 
+cipal grid division is a multiple of 1, 2, or 5 and 
+not 2.5 or 4. A scale that permits GZF to be 
+plotted is desirable. 
+Plot all measurements made during the water 
+year, others that were used to define the rating, 
+and ah high-water measurements ever made at 
+the site, Such drafting details as circle size, flag 
+angle and length, and marginal informalion are 
+matters of district or personal preferenoe. Each 
+measurement may be plotted only once when a 
+log-rectangular combination sheet is used, us- 
+ing the log plot for measurements that fit and 
+the rectangular plot for the rest. Additional 
+measurement plotting on the rectangular part 
+of the sheet is optional. 
+The part of the highest rating ever used for a 
+published record at the station, that extends 
+above the current rating, should be plotted as a 
+dashed line to indicate the relation of the cur- 
+rent curve to previous ratings. If a special high- 
+water rating was prepared for flood-forrxasting 
+use by another agency, plot its curve with a dis- 
+tinctive line to indicate any need for updating as 
+additional high-water measurements become 
+available. 
+Identify each curve with its table number, 
+and list the tables and their dates of use for final 
+records (not primary computations). Tabulate 
+the information concerning years, measurement 
+numbers, and extremes in the spaces provided 
+so that the criteria for omitting measurements 
+from the plot is clear. 
+IManual Computation of 
+Gage-Height Recorld 
+The computation of the gageheight record 
+from a digital recorder is incidental to the auto- 
+matic discharge record computation by an ADP 
+program, and its discussion is included under 
+“Computation of Discharge Record.” Gage 
+height record computation is a separate step in 
+=== page 28
+21 
+w Y “7 i 
+=== page 29
+22 TECHNIQUES OF WATER-RESGURCES INVESTIGATIONS 
+the manual processing of graphic-recorder and 
+nonrecording gages and is described in this 
+section. 
+Graphic recorders 
+The strip charts (fig. 6) are removed 
+periodically from the graphic recorder and 
+brought to the office for processing. Examine 
+them for abnormalities. Compare the end of 
+each chart segment with the start of the next 
+segment for agreement with each other and 
+with the discharge measurement notes. Sudden 
+rises or falls, unless caused by local rain, should 
+not ocucur except on a regulated stream. Sud- 
+den vertical jumps may denote clock stoppage, 
+bubblegage orifice movement or blockage, or 
+unplugging of the intakes. Horizontal traces 
+show possible intake blockage, dead batteries, 
+electrical problems, or a bubblegage orifice out 
+of water. Vertical jumps or horizontal traces 
+may also indicate faulty recorder action. If any 
+suspicious periods are apparent, check the field 
+notes to see if field personnel have noted an ab- 
+normal condition. Sometimes it is necessary to 
+compare the chart with one from a nearby sta- 
+tion to judge the reasonability of an odd-looking 
+trace. 
+All notes and computations on the recorder 
+chart must be neat, legible, aligned, and 
+thoughtfully placed in soft black penciI to 
+facilitate their interpretation and checking. No 
+writing should obscure the pen trace or the re 
+versal checks. 
+Dating recorder charts 
+Date the recorder charts by numbering each 
+day prominently below the lower baseline of the 
+chart on the noon line. Show the month and 
+year on the first and last day of each month and 
+on about every fifth day in between. Be sure the 
+dates and gage heights on the discharge meas- 
+urements agree with those on the recorder 
+l%COd. 
+Pen corrections for time 
+Determine and apply time corrections where 
+necessary. Make a note on the chart at each in- 
+spection stating whether the pen-reading‘ was 
+correct or how slow or fast it was at that point. 
+Inspect the record carefulIy where time correc- 
+tions are large or erratic to be sure the clock has 
+not stopped and restarted. Apply the time cor- 
+rections to the nearest hour. Prorate corrections 
+on a straight-line basis between gage inspec- 
+tions. A graphic method of distributing correc- 
+tions is shown in figure 14. Simple mental arith- 
+metic is the most rapid method for distributing 
+small adjustments. Draw a short, heavy ver- 
+tical liie on the chart to indicate each adjusted 
+miti,ght line, making sure to apply the correc- 
+tions in the correct direction-ahead of the 
+printed line if the pen is fast and behind it if the 
+pen is slow. If there has been practically no 
+range of stage during the period, small time cor- 
+rections may be ignored as they would have no 
+effect upon the figures of mean daily gage 
+height computed from the graph. 
+Pen corrections for gage height 
+Determine the gageheight corrections to the 
+recorder trace next. These are derived from any 
+differences between readings of the recorder pen 
+and the principal gage at inspections after any 
+datum or gage height corrections to tihe prin- 
+cipal gage have been applied. The corrections 
+will usually be distributed according to time in 
+essentially the same manner as time corrections 
+and will be applied to figures of gage heightob- 
+tained from the graph, whether instantaneous 
+readings or mean figures for part or alI of a day. 
+An error in setting the pen at the start of a strip 
+of chart will ordinarily be constant throughout 
+the length of the strip: however, the to&al error 
+may be increased or decreased b$ other factors. 
+It is sometimes necessary t43 correct recorder 
+charts for reversal errors; that is, when the pen 
+reverses either past the margin line or short of 
+it. F&versal errors are caused by severi things, 
+such as expansion or contra&on of the chart 
+paper, lateral travel of the chart, incorrect set- 
+ting of the pen, or mechanical error due to wear 
+or maladjustment of the recorder. Most of these 
+causes can be minimized by’ careful main& 
+nance and servicing of the recorder, but paper 
+expansion is a special problem related to humid- 
+ity in the gage shelter. The s&p-chart gradua- 
+=== page 30
+1 : in wide when printed, 9.95 in wide 
+COMPUTATION OF CONTINUOUS RECORDS OF STREAMFLOW 23 
+10n 
+t t t-1-t. t- t t I ’ -t -I t t t--i -’ t i t- t-t tY-4 i i i 
+FIGURE 14.-Interpolation of pen corm&one from graph plotted on recorder chart. 
+in an extremely dry environment, and 10.4 in 
+wide when the paper is completely saturated. 
+The recorder is calibrated for a 10.00-m grid and 
+with a perforated tape or beaded cable and 
+splined-float wheel reverses at stages exactly 
+5 ft apart (10 ft apart for 1:12 ratio recorders). 
+Reversal corrections less than 0.03 ft are nor- 
+mally disregarded. Larger corrections are ap- 
+plied to the pen readings at reversals and are 
+prorated with stage for application to in- 
+termediate pen readings. Reversal errors are 
+usually combined with other errors and without 
+additional information are extremely difficult to 
+correct. A step-reversal check, made in the field 
+when a new strip of chart is started and again 
+when it is removed, leaves steps whose true 
+gage heights are known on the chart’s ends. 
+This information makes it possible to apply 
+reversal corrections rapidly and accurately. Fig- 
+ure 15 illustrates a completed recorder chart af- 
+fected seriously by reversal error and slightly 
+by lateral paper travel. The step-reversal check 
+lines at both ends of the chart strip were used to 
+define the stage-graduated gage-height correc- 
+tions applied to the recorder pen trace. 
+Computing mean daily gage heights 
+After the recorder chart has been dated and 
+corrected, the mean daily gage heights and any 
+other gageheight data required may be com- 
+puted. Most mean daily gage heights are de 
+termined graphically by using a thin, rec- 
+tangular guide made of transparent plastic 
+about 2 by 8 in in size, through the middle of 
+one side of which has been scribed a visible 
+straight line parallel to the long edge. A pencil- 
+point size hole at the center of the line is an 
+added convenience. The plastic guide is placed 
+over a 24-h segment of the recorder chart and 
+moved into a position with the straight line 
+approximately over the pen trace, so that all 
+areas lying above the straight line and below 
+the graph are equal to all areas lying below the 
+straight line and above the graph. When the 
+areas are thus balanced, the point at which the 
+straight line intersects the noon line represents 
+the uncorrected mean daily gage height. An ex- 
+ample of this graphical method of determining 
+mean daily gage height is shown for April 8, 
+1981, in figure 15. 
+List the figure of mean daily gage height thus 
+determined on the noon line for that day, be 
+tween 1 and 2 in above the base line. If a pen 
+correction for gage height is applicable, enter it 
+just below the uncorrected gage height, add or 
+subtract the correction, and writs the corrected 
+gage height immediately below. 
+It is imperative that the recorder chart be ad- 
+justed with reference to the principal gage, the 
+gage used for determining mean gage heights 
+for the discharge measurements. Otherwise, it 
+=== page 31
+24 TECHNIQUES OF WATER-RESOURCES INVESl’IGATIONS 
+Apr 7,/980 6 9 /O Apr/PBo It 3 
+FIGURE 15.-Gageheight and discharge computations on graphic-recorder chart. 
+would be possible for large errors to enter into 
+the computation of discharge. The inside float- 
+type gage that drives the recorder is normshy 
+used as the principal gage for all graphic- 
+recorder gage-height computations. 
+Allowable range in stage 
+The relation of discharge to gage height is 
+nonlinear. The discharge corresponding to the 
+mean gage height for a day of widely ranging 
+stage is more or less than the actual discharge. 
+If the rating curve is concave downward on rec- 
+tangular paper, the mean gage height applied to 
+it will be too low. The reverse is true for any con- 
+cave upward parts of rectangularly plotted 
+ratings. 
+The usual practice is to subdivide the daily 
+gageheight graph wherever the error in the 
+mean daily discharge produced by not subdivid- 
+ing would exceed 4 percent. An allowable range- 
+in-stage table is used to determine the need for 
+subdivision. One method of computing an 
+allowable range-in-stage table from a rating 
+table is first to select a gage height near the 
+lower end of the rating table and obsave the 
+corresponding discharge. Then, by trial and 
+error, determine the distance, in feet, equally in 
+each direction that it is possible to move 
+without the average of the two corresponding 
+discharges differing by more than 4 percent 
+from the discharge at the selected gage height. 
+The difference between the latter bv~o gage 
+heights represents the allowable range of stage 
+before subdivision is necessary. Repeat the 
+process for as many stages as are necessary to 
+develop a suitable table. This method was used 
+to compute the allowablerange table in figure 
+17 from the rating table in figure 16. 
+Where shift adjustments are used, the ad- 
+justed gage heights are applied to the range 
+table. A range table prepared from one rating 
+can be used with a different rating as long as 
+both lnave generally similar shapes and the dis- 
+charges being computed are not extremely low. 
+Subdivided days 
+when a day is subdivided, it becomes neces- 
+sary to determine mean gage heights for periods 
+=== page 32
+COMPUTATION OF CONTINUOUS RECORDS OF STREAMFLOW 25 
+4 5 Mq,/980 6 7 6 May 9, /9Bo 
+FIGURE 15.-Gege-height and discharge computationa on graphic-recorder chart-Continued. 
+of less than 24 hours, and to combine the 
+several figures of gage height and corre- 
+sponding discharge arithmeticahy to obtain 
+mean daily values. Two methods, both de 
+scribed in this section, are used: mean interval 
+subdivision and midinterval or flood subdivi- 
+sion. Where sediment or chemicalquality com- 
+putations are included, the variations in those 
+constituents must be considered, in addition to 
+rating curvature, for the selection of subdivision 
+iIllX?IWilS. 
+In selecting intervals to use when subdividing 
+gageheight graphs, a good method is to start at 
+the lowest point on the graph and move upward 
+as far as the allowablerise table wilI permit. The 
+length of the period can usually be rounded up- 
+ward to the nearest hour lines. The periods 
+should be in multiples of 2.3, or 4-hours insofar 
+as possible to simplify the arithmetic. 
+Computation of daily mean gage heights for 
+subdivided days is optional but does provide 
+a convenient means of checking discharge com- 
+putations for gross errors and adequate 
+subdivision. 
+Mean interval subdivision 
+When the mean gage height for an interval is 
+determined graphically by averaging areas, the 
+subdivision is known as the mean interval 
+method. The mean gage heights for parts of 
+days adjusted for corrections and shifts are 
+applied to the rating table and the daily mean 
+discharge is computed from the timeweighted 
+values of those discharges. The method is illus- 
+trated for April 9, 1981, on the sample gage- 
+height chart (fig. 15). Mean discharges com- 
+puted by this method, using a range table to 
+select the interval, are usually about 2-4 per- 
+cent less than the true discharge unless the 
+rating curve on rectangular paper bends up- 
+ward within the stage range and causes the 
+computed discharge to be greater than the true 
+discharge. 
+With experience, the need for subdivision can 
+sometimes be judged without a range table by 
+considering the shape of the rating curve and 
+the character of the recorder chart. Many rating 
+curves have considerable curvature at the lower 
+=== page 33
+26 TECHNIQUES OF WATER-RESOURCES INVESTIGATIONS 
+UNITED STATES DEPARTMENT OF THE lNTERlOR - GE0L0G,CAL SURVEY - VATER RESO”RCES ol”lS*ON 
+EXPANDED RATING TABLE OAlE PRINTED 09-01-81 
+05447540 TYPE LOG (SCALE OFFSET = I.201 RATING NO. 9 
+BASED ON - DlSCHARGE MEASUREMENTS. NO. AND --3 --. AN0 I! WELL DEFINE0 BETWEEN 
+l cm4m- 
+AN0 
+DATE 
+mm 
+- -- TO -9 FROM TO l cxo. BY __- - DATE 
+CAGE 
+HEIGHT 
+1N FELT 
+I 
+-I- .oo , .01 
+: 
+,124 , ,153 
+.561 I .624 
+1.50 
+1.60 
+1.70 
+1 .a0 
+1.90 
+1.36 I 1.46 
+2.54 I 2.68 
+i!::: I z::: 
+8.60 I 8.87 
+GAGE 
+“EIGHT 
+IN FEET 
+-7 
+I -r -.A- -A-- 
+2 .oo 11.5 
+3 .oo 49.2 
+4 .oo 101 .a 
+f 14.4 
+53.9 
+107.6 
+5 .oo 165.1 
+6 .oo 237.8 
+7 .oo 319.6 
+8.00 410.0 
+9 .oo 495.2 I 
+171.9 
+245.6 
+328.4 
+418.3 
+503.9 
+10.00 584.6 
+11.00 677.9 
+12.00 774.8 
+13.00 875.2 
+14.00 978.9 
+593.7 
+687.4 
+784.7 
+885.5 
+989.4 
+:5.00 
+16.00 
+17.00 
+18.00 
+19.00 
+1098 
+,242 
+1490 
+1800 
+2246 
+,111 
+1263 
+1520 
+1841 
+2295 
+2769 
+3376 
+4077 
+4880 
+5794 
+2825 
+3442 
+4153 
+4966 
+5892 
+26.00 6829 6939 
+26.00 7994 8118 
+-I- -!- 
+DISCHARGE IN CUBIC FEET PER SECOND IEXPANOE[I PRECISION) I OIFF IN Q PER 
+.02 I .03 I .04 I .O!i I .oo I .07 I .o* I .09 I TENT" G" 
+I I I I-T- I I I 
+I 
+:E I 
+,017 I ,027 I ,041 I .057 I ,076 I ,099 I 
+.I84 I ,258 I 
+21; I 
+,345 I ,394 I ,446 I .502 I .43i 
+.691 I .761 I .a35 I .!194 I l.OR I 1.17 I 1.26 I .79 
+I I 1 I I I I I 
+1.56 i 1.67 
+2.83 I 2.97 
+2:;; I I 4.69 6.83 
+9.14 I 9.42 
+1.78 
+3.13 
+4.88 
+7.07 
+9.70 
+1.91, i 2.02 
+3.28 I 3.44 
+9:95, ;a; 1 I 
+5.29 
+1:: ;” 
+2.14 i 2.27 i 2.40 i 1.18 
+3.61 I 3.78 I 3.95 I 1.59 
+5.50 I 5.71 I 5.92 I 2.01 
+7.81 I 8.07 I 8.33 I 2.46 
+10.6 I 10.9 I 11.2 I 2.9 
+t 
+I 
+I 
+I 
+I 
+I 
+I 
+I 
+I 
+1N CUB1 
+.3 
+OISCHAI RGE 
+-.A- 
+-t- 
+17.6 
+58.9 I 
+113.6 
+I 
+178.9 
+253.5 I 
+337.1 I 
+426.7 I 
+512.7 
+20.9 
+64.0 
+119.7 
+185.9 
+261.5 
+346.0 
+435.1 
+521.6 
+602.9 612.2 
+697.0 706.6 
+794.7 804.6 
+895.7 906.0 
+1000 1012 
+1123 1136 
+1284 1306 
+1549 1579 
+,883 1926 
+1344 2394 
+?883 
+3509 
+4229 
+5053 
+5991 I 
+1051 I 
+8244 
+-I- 
+2942 
+3576 
+4307 
+5142 
+6091 
+1164 
+8370 
+FEET PEI 
+_le 
+24.4 
+69.3 
+125.8 
+193.0 
+269.6 
+354.9 
+443.5 
+530.5 
+621.4 
+716.2 
+814.6 
+916.3 
+1024 
+1149 
+1328 
+1609 
+1970 
+2445 
+3001 
+3645 
+4385 
+5232 
+6193 
+7279 
+8499 
+2 s 
+-I- 
+i I 
+I 
+I 
+_L 
+ECONII fEYPi 
+.5 I 
+x--r 
+74.6 I 
+132.1 I 
+200.3 1 
+277.6 I 
+363.9 I 
+452.0 I 
+539.4 I 
+I 
+630.8 I 
+725.9 I 
+824.6 I 
+926.7 I 
+,036 I 
+I 
+1161 I 
+1350 I 
+1640 I 
+2014 I : 
+2497 I ; 
+I 
+3061 I 
+3714 
+4465 I 
+5322 
+6296 I ; 
+I 
+7394 I 
+a625 I I 
+-I- 
+iNOE0 PI IEC 
+.d 
+t 
+-- 
+31.9 
+79.8 
+138.5 
+ISION) 
+.7 
+36.0 
+85.1 
+145.0 
+207.6 215.0 
+285.8 294.3 
+372.9 382.1 
+460.6 469.2 
+548.3 557.3 
+640.1 649.5 
+735.6 745.4 
+834.7 844.8 
+937.1 947.5 
+1049 1061 
+1174 1187 
+1377 1405 
+1671 1703 
+2059 2104 
+2550 2603 
+3122 
+3785 
+1546 
+5414 
+5400 I 
+I 
+,512 I 
+3760 I 
+-L 
+3185 
+3856 
+4628 
+5507 
+6505 
+4 I 
+I 
+I 
+I 
+I 
+I 
+I 
+L 
+--.c 40.2 
+90.5 
+151.6 
+222.5 
+302.6 
+391.3 
+477.8 
+566.4 
+658.9 
+755.2 
+854.9 
+957.9 
+1073 
+1200 
+1433 
+1735 
+2151 
+2658 
+324R 
+3929 
+4711 
+5602 
+6612 
+7750 
+4- 
+I I 
+I I 
+I 
+I 
+I 
+I 
+I 
+I 
+I 
+L 
+.9 
+44.6 
+96.1 
+158.3 
+230.1 
+311.1 
+400.6 
+486.5 
+575.5 
+668.4 
+765.0 
+865.1 
+968.4 
+,086 
+1221 
+1462 
+1767 
+2198 
+2713 
+3311 
+4002 
+4795 
+5697 
+6719 
+7871 
+__. FIGURE 16.-Rating table corresponding to Cgure 17 allowabl~range table. 
+end; when sharp rises occur at times of low flow, 
+even though the range in stage may not be 
+large, the subdivided discharge may be several 
+times the discharge obtained from the daily 
+mean gage height. If a range table is not used, 
+the daily mean gage heights should be com- 
+puted to compare the subdivided and unsubdi- 
+vided discharge to monitor the hydrographer’s 
+judgment. 
+Subdivision is merely manual integration. 
+Mechanical integrators and electronic digitizers 
+have been developed to compute the discharge 
+for stations having large and frequent fluctua- 
+tions in stage such as for those stations below 
+power plants. However, digital recorders are 
+usually more practical than graphic recorders 
+for stations that require unusually frequent 
+subdivision. 
+,lFF I” 0 
+PER 
+FOOT GH 
+37.7 
+52.6 
+63.3 
+72.7 
+81.9 
+90.3 
+85.2 
+89.4 
+93.3 
+96.9 
+100.4 
+103.7 
+119 
+144 
+248 
+310 
+446 
+523 
+607 
+701 
+803 
+914 
+1035 
+1165 
+Midinterval subdivision 
+An alternate way to subdivide a day is to list 
+the time and gage height at the start and end of 
+the day and at enough intermediate times to 
+define the variations in stage adequately. The 
+gageheight change between intervals should be 
+within the allowablerange table limits. The 
+method is called “midinterval subdivision” 
+because of the way daily values are computed. 
+The listed value for each time is considered con- 
+stant during the period starting halfway be 
+tween the listed and previous listed times and 
+ending halfway between the listed and subse 
+quent listed times. This is the same ‘concept 
+used to compute discharge measurement sub 
+section widths. Midinterval subdivision compu- 
+tations are laborious, especially with unequal 
+=== page 34
+COMPUTATION OF CONTINUOUS RECORDS OF STREAMFLOW 27 
+BASIC RELATIONS 
+G - Selected Sage height 
+CL - Gage height at lover limit of allowable range 
+GIJ - Cage height at upper limit of allovable range 
+Q = Discharge at selected gage height 
+QL - Discharge at lover limit of allowable range 
+QD - Discharge at upper limit of allovable range 
+R - Allowable range 
+From graph at right 
+QL + Qu 
+2 = Q + 0.04Q = 1.044 
+k + Qu = 2.084 
+Selected 
+Gage Height 
+G 
+1.3 
+1.5 
+2.0 
+3.0 
+5.0 
+9.0 
+13 
+15 
+18 
+23 
+(from 
+rating) 
+QL + Qu 
+0.12 
+1.35 
+11.5 
+49.2 
+165 
+495 
+875 
+1100 
+1800 
+4880 
+Q II Widest Range with QL + Qu < 2.084 
+2.08Q I 
+GL 4. %I Qu 
+0.25 1.29 0.10 1.31 0.13 
+2.81 1.45 .91 L.55 1.90 
+23.9 1.8 6.1 2.2 17.7 
+102 2.5 28.0 3.5 74.6 
+343 3.8 90.5 6.2 254 
+1 1030 6.0 238 12.0 775 
+1820 10.0 585 16.0 1240 
+13.5 927 16.5 1350 
+17.0 1490 19.0 2250 
+21.0 3380 25.0 6830 - 
+0.23 
+2.81 
+23.8 
+102.6 
+344 
+1013 
+1825 
+2280 
+3740 
+10200 
+If Q) 
+DISCHARGE 
+COMPUTATIONS 
+ALLOWABLE-RANGE TABLE 
+(Listing of GL and Allowable Rise) 
+I Allowable 
+Gage Height Rise I 
+6.0 6.0 
+10.0 6.0 
+13.5 3.0 
+17.0 2.0 
+21.0 4.0 
+FIGURE 17.-Dsrivationofanallowablerangetable. 
+Allowable 
+Rise 
+GU - CL (Feet) 
+0.02 
+.l 
+.4 
+1.0 
+2.4 
+6.0 
+6.0 
+3.0 
+2.0 
+4.0 
+=== page 35
+28 TECHNIQUES OF WATER-RESOURCES INVESTIGATIONS 
+intervals or points between whole hours, but a 
+programmable calculator can simplify the work. 
+The sample chart (fig. 15) illustrates midinter- 
+val subdivision for May 3-7, 1981. Some hy- 
+drographers prefer to list the subdivision com- 
+putations on separate sheets to avoid clutter on 
+the recorder charts. 
+Flood reports and other special studies con- 
+tain flow data in the midinterval-subdivision 
+format. The computed daily figures for the 
+special report, usually prepared after the annual 
+report has been published, should agree exactly 
+with the daily figures in the annual report but 
+rarely do unless the same subdivisions were 
+used for both. Some cooperating agencies 
+specify midinterval subdivision for all periods 
+of substantial flooding to avoid such discrepan- 
+cies in their reports. Some hydrographers prefer 
+the midinterval method for all subdivision 
+despite its shortcomings for small short rises 
+where numerous irregular time increments 
+must be used. One common practice is to use 
+midinterval subdivision for all high-water 
+periods that contain a peak above a chosen base 
+discharge and to use the simpler mean interval 
+method for smaller rises. 
+Gage-height record checking 
+After a recorder chart is computed, each of 
+the steps must be carefully checked. When the 
+mean daily gage heights are computed on 
+recorder charts, one unconsciously tends to con- 
+centrate primarily on the hundredth of a foot 
+and gives somewhat less attention to the larger 
+graduations. This results in fairly frequent 
+mistakes of feet, half feet, and tenths. The 
+primary duty of the checker should be to give 
+particular attention to the large units and 
+somewhat less attention to the hundredths. Ap 
+proximately half of a checker’s time can be 
+saved by concentrating on the large units, 
+because for many days this type of check can be 
+made without using the plastic straight&e 
+device. This procedure is not a lowering of ac- 
+curacy standards but is actually a step toward 
+better accuracy-with an attendant saving in 
+time. 
+Accordingly, except for certain special 
+studies or stations with extremely flat ratings, 
+changes to mean daily gage heights by the a 
+checker are limited to 0.02 fi or more. Changes 
+of 0.01 ft are not generaIly made because they 
+ahnost invariably produce insignificant changes 
+in discharge. There are times when there is 
+justification for making a change of 0.01 ft; for 
+example, if it is obvious that there was no 
+change in discharge from one day to the next, 
+but the computed daily gage height indicates a 
+jog that did not occur. In other words, it is im- 
+portan t to make those small changes if by so do- 
+ing the daily gage heights are made to indicate 
+the day-today trend. 
+Checking is done using a colored pencil to 
+lmake ;a small dot after each checked figure or, 
+after erasing an incorrect one, to replace it with 
+a neat figure in the same space. 
+The following questions pertain to areas 
+where errors of computation most often appear: 
+(1) Were the “end of period” notes recorded 
+Iproperly? (2) Were indicated gage-height, pen, 
+and datum corrections applied? Were they ap- 
+lplied with the right sign? (3) Was the time cor- 
+rection~ applied? Was it applied in the right 
+direction? (If time is slow, the line is in back of 
+the midnight line; if time fast, it is ahead.) (4) 
+.Were corrections for reversal and mechanical er- 
+rors applied properly? (5) Were the periods of 
+reversal checked? (It is easy to compute a gage 
+height as 4.80 (before reversal) when it should 
+he 5.20 (after reversal).) (6) Was the mean gage 
+height recorded to the correct foot, half foot, or 
+tenth? (7) (Check this whenever any period of 
+chart record looks suspicious.) Was a correct ap- 
+praisal of the recorder operation used in the 
+computation? Remember, the checker assumes 
+all responsibility for the accuracy of the record. 
+The checker’s initial and the date are placed 
+near the end of each chart segment. 
+Notes for station analysis 
+No@ to be included later in the “station 
+analysis” should be written at this time. (See 
+“Station Analysis” section.) Any changes in 
+location or equipment should be described in the 
+paragraph headed “Equipment.” All irregulari- 
+ties in the gageheight record, such as clock 
+stoppage or faulty-intake action, should be dis- 
+cussed and listed by dates in the “Gageheight 
+record.” paragraph. 
+(II 
+=== page 36
+COMPUTATION OF CONTINUOUS RECORDS OF STREAMFLOW 29 
+Nonrecording gages Computing daily mean gage heights 
+The observer records the gage readings, 
+generally twice daily, in a quarterly book (one 
+Enter the corrections previously listed for in- 
+elusion in the station analysis in the spaces pro- 
+page is illustrated in figure 18) usually kept at vided in the gage books at the bottom of each 
+the gage. Each week the observer copies the 
+past week’s readings on a special card and sends 
+left page. Compute the average of the morning 
+it to the field office. At the time of each visit, 
+and afternoon readings for days of little change 
+in stage and enter them in the book under 
+the hydrographer determines the stages of high- “Obs.” Add the applicable correction, if any, to 
+water marks left on the streambanks or re the average figure and enter the result in the 
+corded on a crest-stage gage, enters the read- book under “Corr.” 
+ings made for discharge measurements in the Draw a stage hydrograph on a piece of 
+book, and, preferably with the observer’s help, graphic recorder chart for all high-water periods 
+determines the date of peak stages since the last and other days when the mean of the two read- 
+inspection and reconciles any inconsistent 
+readings. Examine the books for any abnor- 
+ings would not be a reasonable approximation 
+of the daily mean. Use the same time and gage 
+malities left unresolved in the field. height scales for all flood period graphs so that 
+GAGE HEIGHTS MIR WEEK RNDING SATURDAY, _________________ ___________________________ !:y---: --------------, N?!.. 
+-- A. M. Mm. 4 ----ry l I 5?35 __------_-- _---_______-_-_ . . 
+------ -- 7:,70 JO.30 ----. 
+El55 /J-24-&/ Dab --____--- - 
+l 0 
+Mu oar* Ht. camp&d by -___----____-- - _-__- 
+c.mdinI------- ------------ - -------------- - ______________________ AJn Maqoa~ If& cbrw by ----__---------_----- J/-17-8/ mta ------- -- ----- - 
+FIGURE 18.~Computed page of n onrecording-gage observer’s book. 
+=== page 37
+30 TECHNIQUES OF WATER-RESOURCES INVESTIGATIONS 
+a flood-stage hydrograph template similar to 
+the one in figure 19 can be used to shape the 
+graph. The template is made on recorder chart 
+paper by tracing the shapes of previous flood- 
+stage hydrographs that were well defined by 
+gage readings. Given the observer’s readings 
+and the peak stage, plotted on chart paper, and 
+with the template under the paper as a shaping 
+guide, the best possible graph of the data can be 
+drawn. Be sure to include the last previous low- 
+water day on the graph. 
+Subdivision of days is identical to that for 
+graphic-recorder stations, using an allowable- 
+range table and midinterval subdivision. Figure 
+20 illustrates a typical graph and subdivisions. 
+All computations and plotting are checked in 
+the same manner as graphic chart work. After 
+checking, the gage-height graphs may be folded 
+and taped into the gagereading books for 
+storage. 
+FIGURE 19.-Template for shaping nonrecording-gage 
+PP~. 
+Copying gage heights on form 9-192a 
+Form 9-,192a (fig. 21) is the basic computa- 
+tion sheet for stations whose discharge records 
+are computed manually. A similar form 9-192b 
+with extra columns for additional rating factors 
+(fall, rate of change, and shift) is sometimes 
+used. The form is often distributed to fill re 
+quests for data so it is carefully aligned and leb 
+tered in India ink for o&d reproduction. The 
+original is kept in the files as the official record, 
+and future revisions to the published record will 
+be noted on the original form 9-192a 
+Fill in the headings in the spaces provided. 
+Copy the daily mean gage heights from the 
+recorder charts or gage books. If the mean gage 
+lheight for a subdivided day was computed, list 
+the figure with a lower case “s” at the left edge 
+of the discharge column. If no mean gage height 
+was computed, show an “s” in the center of the 
+gageheight column. 
+Heavy black lines are used to indicate certain 
+conditions. A line across the gage-height col- 
+mm indicates the date of a change in datum or 
+location. A line across the discharge column 
+shows the date of a rating change. A vertical 
+line between the gageheight and discharge col- 
+umn signifies that the discharge was computed 
+by a method other than the application of a 
+rating to the gage height. 
+Check the above work. The copier’s work and 
+the checker’s work are initialed and dated in the 
+appropriate boxes. The form is then ready for 
+the next step. 
+Computation of 
+Discharge Record 
+Discharge records are computed by applying 
+the gageheight record, with adjustments where 
+the shifting-control method is used, to the ap- 
+plicable discharge rating. This computation is 
+made for each instantaneous gage height from a 
+digital recorder. For a graphic recorder or non- 
+recording gage, only one computation is made 
+for each day or interval of a subdivided day. 
+Form 9-192a is the worksheet for manual com- 
+putations, and a special computer printout, the 
+primary computation sheet, is its equivalent for 
+=== page 38
+COMPUTATION OF CONTINUOUS RECORDS OF STREAMFLOW 31 
+Figure PO.--Computed ncmrecordjng-gage graph. 
+for ADP records. Discharge for periods of ice ef- 
+fect, missing gageheight record, or variable 
+backwater is estimated or computed by using 
+special methods. 
+The discharge computation for ordinary peri- 
+ods of record is a mechanical process except for 
+distributing the shift adjustments. These adjust- 
+ments tend to vary with tune, stage, or both 
+simultaneously, and different methods have been 
+developed to distribute them under nearly all 
+rating situations. After the distribution com- 
+putations described in the next paragraphs have 
+been made, the daily shift adjustments for 
+graphic and nonrecording stations are listed on 
+form 9-192a for nonsubdivided days (fig. 21). 
+and thoee for subdivided day intervals are usu- 
+ally entered on the recorder charts (fig. 15) or 
+gageheight graphs (fig. 20). The WATSTORE 
+User’s Guide contains instructions for entering 
+manually distributed shift adjustments into the 
+ADP system or for providing for various auto 
+matic shift distributions (constant, time varied, 
+stage varied, or simultaneous tune and stage 
+varied) between the measurementdefined shifts. 
+=== page 39
+32 TECHNIQUES OF WATER-RESOURCES INVESTIGATIONS 
+= 
+= 
+! 
+! 
+1 
+I 
+= 
+St 
+4 
+g = 
+=== page 40
+COMPUTATION OF CONTINUOUS RECORDS OF STREAMFLOW 33 
+0 The basic operations for the shiftingcontrol 
+method are essentially the same for ADP or 
+manual computations. 
+charge measurements, the discharge records for 
+that period should be considered as estimated 
+rather than computed and their accuracy rating 
+downgraded accordingly. 
+Distribution of shift adjustments 
+The shift adjustments, if any, that apply at 
+the times of discharge measurements were com- 
+puted previously and listed tentatively on form 
+9-207 (fig. 10). The shift adjustments that 
+apply during the periods between the measure 
+ments must be interpolated by an appropriate 
+method before the discharge records can be 
+computed. The method used will depend on the 
+hydrographer’s judgment considering the 
+nature of the shifting, the frequency of meas- 
+urements, and the type of channel and control. 
+Small shifts that change gradually may be 
+distributed satisfactorily by inspection using 
+mental interpolation. Larger shifts, whose vari- 
+ations are adequately defined by discharge 
+measurements, warrant a more rigorous anal- 
+ysis with some form of graphic shift- 
+adjustment-variation diagram. The accuracy of 
+discharge records computed from a rating with 
+large and erratic shifts depends to a great 
+extent on the frequency of discharge measure 
+merits, and particularly unstable streams may 
+need weekly or even daily measurements to de 
+fine the day-today shift-adjustment variation. 
+The shift-adjustment variation between 
+discharge measurements of unstable channels 
+may be too great for the usual interpolation 
+methods and a special technique may be needed. 
+One procedure involves varying the shifts 
+smoothly between the measurement-defined 
+values until a smooth dailydischarge hydra 
+graph (see “Discharge Hydrographs” section) 
+that follows the trends indicated by the 
+discharge measurements is obtained. A stream- 
+flow record should be computed from the data 
+collected at the site, and, except for estimated 
+portions, be free from the influence of other 
+streamflow records. For this reason the use of 
+records for other stations to distribute shift 
+adjustments is normally avoided. If shift 
+adjustments interpolated to produce a smooth 
+hydrograph are above or below the range of 
+adjustments indicated by the two adjacent dis- 
+Shift-adjustment variation diagrams 
+A shift-adjustment variation diagram (V 
+diagram), a graph of the relation between shift 
+adjustment and either time or stage, is com- 
+monly used to interpolate shift adjustments 
+between measurement-defined values. The 
+Vdiagram shifts can be graduated with time, 
+stage, or time and stage simultaneously either 
+manually or as part of the ADP primary or up 
+date procedures. 
+When a low-water control is scoured or filled 
+or affected by backwater from leaves, debris, or 
+aqueous growth, the corresponding rating shift 
+is greatest at low water and normally tapers to 
+zero at some higher stage. This is called a stage 
+variable shift. If the channel is alluvial and its 
+bed is raised and lowered by sediment being 
+picked up or deposited, the shift variation with 
+stage may be negligible compared to its varia- 
+tion with time, and the shifts are called “time 
+variable.” Most streams have shifts that must 
+be graduated with stage while the stage gradu- 
+ation is changing with time. 
+Timevariable-shift distribution can be made 
+manually by using a V diagram, similar to the 
+one in fQure 22, where measurementdefined 
+shifts are plotted and curvihnear interpolations 
+are made visually. The corresponding ADP 
+process prorates the shift adjustments linearly 
+between measurement-defined points, but ar- 
+bitrary data points may be used to obtain other 
+distributions. 
+Stagevariableshift distribution can be made 
+by using V diagrams similar to those in figure 
+23. Each diagram involves a baserating curve 
+(the numbered rating in effect at the time); a 
+shift-rating curve (a rating curve drawn to fit 
+the measurements that define the shift, usually 
+only on the rating workcurve sheet); and the V 
+diagram (the gageheight differences between 
+the base curve and shift curve, plotted against 
+stage). The shift curve should normally be 
+drawn first with the same consideration given 
+to its shape as would be given to a numbered 
+=== page 41
+34 TECHNIQUES OF WATER-RESOURCES INVESTIGATIONS 
+I oct0b.r I Nowmbmr I A stage-variable V diagram may be expanded, 
+t 
+Plotted by ..___._.___... Checkad by .__. .__. .____ Data... _________ 
+FIGURE 22.-Time-s~variation diagram with correspond- 
+ing bdrograph. 
+rating. The V diagram is best defined by draw- 
+ing its corresponding shift curve first. The V 
+diagrams of the type in figure 23A, for rela- 
+tively small shifts, may be defined directly from 
+measurementdefined shift3 without drawing a 
+shift curve, but this process is not recom- 
+mended with other V-diagram types or for largs 
+shifts where it could lead to grossly misshapen 
+equivalent ratings and dubious discharge 
+rt?COtdS. 
+contrackd, or reversed (mirror image), and the 
+change in shape may be graduated with time. 
+The pracess can be done manually or automati- 
+cally to distribute shift adjustments with 
+respect to time and stage simultaneously. 
+Shift adjustments varied with time only 
+Figure 22 illustrates a timeshift V diagram 
+plotted below the corresponding daily hydra 
+graph. The type of shift illustrated varies only 
+with time, but the variation is faster at high 
+stages than at low stages. The shift-distribution 
+process requires a hydrograph or readable gage 
+height record as a guide for the shift distribu- 
+tion, so its greatest use is for manually com- 
+puting records or updating of ADP records. 
+To use the process (1) plot the measurement- 
+defined shifts on the days of measurements by 
+using a convenient improvised shift scale; (2) 
+conneclt the plotted points with a smooth curve 
+so that no interpolated daily shift is above or 
+below the range of the adjacent measurement- 
+clefinedl shifts; (3) apply the shift8 from the V 
+diagram to the daily mean gage heights (or 
+equivallent gage heights for ADP records) and 
+plot the computed discharges on the hydra 
+graph; (4) look for anomalies in the hydrograph 
+such a3 odd-looking rises or recessions or rising 
+hydrogFaphs dluring falling-stage periods and 
+modify the V diagram to correct them; and, (5) 
+for ADP records, enter the resulting V-&gram 
+:3hift d.ata in the update program described in 
+the WATSTORE User’s Guide (vol. 1). These 
+shifts will be applied to equivalent gage heights 
+stored in the Daily Values File and used with 
+,the appropriate rating to compute the updated 
+mean daily discharges. 
+Shift adjustments varied with stage only 
+The use of a stage-varied-shift adjustment is 
+equivalent t.41 drawing a new numbered rating 
+curve and may be preferable for temporary 
+rating changes. The principal use for stageshift 
+diagrams is as one step in the process used for 
+varying shifts with both stage and time as ex- 
+plained in a subsequent section. 
+=== page 42
+COMPUTATION OF CONTINUOUS RECORDS OF STREAMFLOW 35 
+A 
+Upper Gage ht. 
+Base 
+Gage ht. 
+Lower 
+Gage ht. 
+STAGE-SHIFT-VARIATION DIAGRAM 
+(ADPI (MANUAL) 
+Gage Shift 
+height adjustment 
+- 3.0 -0.10 
+- 2.5 -0.25 
+-1.9 - 0.25 
+I 
+-0.5 
+Shift Adjustment (ft) 
+_ Shift Curve 
+Shitt (ftj Discharge If%) 
+Shift (ft) Discharge (fWs) 
+RATING CURVES 
+Base Curve 
+I 1 I , I I 
+10 20 30 40 50 60 70 60 
+Discharge (h-‘/s) 
+C 
+Shift Ift) Discharge (ft%) 
+E 
+0 + 
+Shift (ft) Discharge (ff/s) 
+FIGURE P3.-Effect of various stagwhifbvariation diagram shapes on shift-mwe shape. 
+Figure 23 illustrates typical stageshift V curved, but the curve must be approximated by 
+diagrams and the relations between their corre- two straight lines for ADP use (in 1982). An 
+spending base curves and shift curves. The V ADP version is defined by six descriptors; three 
+diagrams for manual application are usually [ gage heights called “upper,” “base,” and 
+=== page 43
+36 TECHNIQUES OF WATER-RESOURCES l.NVIISI’IGATIONS 
+“lower”; and a shift adjustment corresponding 
+to each of those three gage heights. The figure 
+23A (manual) V diagram is curved, and the ADP 
+straight-line approximation of it has the follow- 
+ing descriptors: upper, 3.0, -0.10; base, 2.5, 
+-0.25; and lower, 1.9, -0.25. The upper descrip- 
+tors could just as well be 3.33, 0.00, which 
+would describe the same upper line of the 
+diagram. The V diagrams (manual and ADP) 
+describe a shift curve 0.25 ft above the base 
+curve for stages below 2.5 ft that merges with 
+the base curve at 3.33~ft gage height. The 
+manual version can be either a graph or a table. 
+The V diagram in figure 23B describes a shift 
+curve identical to the base curve at low and high 
+stages and above it at medium stages. The 
+V-diagram shapes in figure 23A and 23B, in 
+positive or negative versions, cover all ordinary 
+rating situations. The other three shapes in 
+figure 23 may be needed for unusual rating con- 
+ditions but probably indicate an improper bm 
+rating shape. 
+The gage-height difference between the shift 
+curve and the base curve at a given stage, used 
+for V-diagram definition, must be measured 
+from a point at the given gage height on the 
+shift curve to a point on the base curve directly 
+above or below that point. Figure 24 illustrates 
+the procedure for plotting a point on the shift 
+curve given the gage height and the magnitude 
+of the shift adjustment. Measuring from the 
+point where the base curve intersects the given 
+gage height is a frequent mistake that results in 
+a serious error wherever the shift adjustment is 
+large and the rating is sharply curved. 
+4 
+E 
+E 
+.ra 
+2 3 
+x 
+d 
+2 
+3.55 
+2.42 
+,4>(2.42,+0.34, 
+Discharge (ft’/s) 
+FIGURE Sk-Plotting positions of stage-shiftmwhtim 
+disgram pointa on the shift curve. 
+To prepare a stage-shift diagram (l), on the 
+rating c-e worksheet, mark the measutx+ 
+ments that define the shift curve and draw the 
+trial shift cwve based on them; (2) plot the 
+measurement-defined shift adjustments and the 
+gageheight differences between the base and 
+shift curves at several gage heights (Cg. 25), on 
+a rectangular grid, (3) draw a V diagram con- 
+sidering all of the plotted points, (4), for ADP, 
+approximate the V diagram wit& two interse& 
+ing straight lines and list the three coordinate 
+sets (gage height and shift adjustment as illus- 
+trated in figure 23A); (5) replot the shift curve 
+b-y using the V diagram and, if the shift curve is 
+poorly shaped, modify the V diagram as neces- 
+sary to correct it; and (6) determine from the V 
+diagram the shift adjustment applicable to each 
+discharge measurement and recompute its per 
+cent difference if necessary. 
+The process is illustrated in figure 25. Note 
+that the tentative shift adjustment listed on 
+form g-,207 (list of discharge measurements) for 
+a specific discharge measurement is final only if 
+tlhe shift curve and V diagram are dram 
+through that measurement’s plotted points. 
+The shift curve in figun? 25 averages 42 and 43, 
+so the originally computed shifts (+0.05 and 
+--0.07) must be changed to the values from the 
+1’ diagram (-0.02 and -0.02) that are used to 
+compute the discharge record. The shift curve 
+and V diagrams go through the measurement 44 
+and 45 values, so no revisions to their shift ad- 
+justments are necessary on form 9-207. 
+The coordinates of the finished V diagram are 
+entered1 into the ADP system as described in 
+the W,4T§TORE User’s Guide. For manually 
+computed records, the shift adjustments are 
+taken fi-om the V diagram or table and entered 
+on form 9-192a or the recorder chart. 
+Shift adjustments varied with time and stage 
+One stage-shift V diagram, modified to fit the 
+day-today shifting caused by changes to the 
+control, is used to vary the shift distribution 
+aimulLmeously with time and stage for primary 
+computations by ADP or, with modifications, 
+for manually computed records. This procedure 
+can also be used for updating ADP records if 
+the ba3e and shift curves are roughly parallel. It 
+=== page 44
+COMPUTATION OF CONTINUOUS RECORDS OF STREAMFLOW 37 
+RATING CURVES STAGE-SHIFT-VARIATION DIAGRAM 
+Discharge (ft%) 
+1.4,-0.22 
+-0.5 0 
+Shift adjustment (ft) 
+COMPUTATIONS 
+Shift adjustment 
+No. Date Gage Discharge computed from % 
+height diff. 
+Meas. V-diag. 
+42 May 7 4.09 273 +0.05 -0.02 i4.2 
+43 May 8 4.10 257 - .07 - .02 -3.6 
+44 June 10 2.30 53.2 - .20 - .20 -- 
+45 July 7 1.70 9.7 - .22 - .22 -- 
+FIGURE 25.~Development of a stage-shift-variation diagram. 
+should not be used to correct the effect of an er- 
+roneously shaped base rating used for the pri- 
+mary computation. In that event, manual com- 
+putation of the updated figures or rerunning the 
+primary computations is necessary. 
+ADP procedure 
+The computer program details and the data 
+input format are explained in the WATSTORE 
+User’s Guide. The data requirements, in addi- 
+tion to the usual material for a primary or up 
+date computation, are (1) the descriptors for a 
+basic V diagram; (2) the dates, gage heights, and 
+shift adjustments of most of the discharge 
+measurements with gage heights within the V 
+diagram range (ice measurements, disregarded 
+measurements, and measurements outside the 
+V diagram limits or inside but close to the limits 
+are not used); and (3) the dates, gage heights, 
+and shift adjustments of arbitrary data points 
+(synthetic dischsrgemeasurement data used to 
+control the timwaried distribution). The prw 
+gram expands, contracts, or reverses one basic 
+V diagram to generate a perfectly fitting and 
+=== page 45
+38 TJXHNIQUES OF WATER-RESOURCES INVESTIGATIONS 
+proportionally shaped diagram for each day of a 
+discharge measurement or arbitrary data point. 
+The V diagrams for the other days are inter- 
+polated, linearly with time, between the data 
+point diagrams and are used to compute sn ap 
+propriate shift adjustment for each recorded 
+gage height. 
+The procedure for distributing time and 
+stagevariable shifts requires considerable judg- 
+ment and is relatively simple for some gages 
+and very intricate for others. One procedure for 
+analysis of a typical distribution, suggested for 
+the first few uses by a hydrographer with 
+limited experience in rigorous shift distribution, 
+is illustrati in figure 26 and outlined as 
+follows: 
+l., Develop the base rating by the usual method 
+and compute the measurementdefined 
+shift adjustments. 
+RATING CURVES STAGE-SHIFT-VARIATION DIAGRAM 
+-to.5 
+Shift adjustment (ft) 
+100 200 
+Discharge (ft”/S) 
+COMPUTATlOhlS 
+-----I Shift adiustment Shift adiustment 
+Discharge computed from computed from 
+Meas. Meas. 1 V-diaQ. V-diag. 
+% % diff. diff. 
+-- -- 
++,4.2 
+-3.8 
++,4.2 
+-3.8 
+-- -- 
+Gage Gage 
+height height 
+2.63 2.63 
+4.09 
+4.10 
+2.30 
+2.13 
+1 1.70 1 1.70 
+4.09 
+4.10 
+2.30 
+2.13 
+No. Date 
+90.0 -0.10 -0.10 
+273 -I- .05. -I- .05. - .02 - .02 
+257 -- .07 -- .07 - .oz - .oz 
+53.2 -. .20 - .20 
+29.6 -- .30 - .30 
+30.1 + .lO + .lO I + .I0 + .I0 --- - 
+90.0 
+273 
+257 
+53.2 
+29.6 
+30.1 -- 
+-0.10 I -0.10 
+-. .20 
+I 
+- .20 
+-- .30 - .30 
+41 
+42 
+43 
+44 
+45 
+46 
+May 1 
+May 7 
+May 8 
+June 10 
+July 18 
+Aug. 21 -- -- 
+FIGURE 26.~Development of a time-varied stageshift dhgram. 
+=== page 46
+COMPUTATION OF CONTINUOUS RECORDS OF STREAMFLOW 39 
+0 2. Use the largest practical rectangular graph 
+paper worksheet and plot the shift-prone 
+portion of the baseratiug curve on it. Also, 
+plot the shift adjustments for the measure- 
+ments to a suitable scale near the right 
+margin. 
+3. Select the most appropriate Vdiagram shape 
+and the upper, base, and lower gage heights 
+for the diagram. Base the selections on a 
+scrutiny of the logarithmic work-curve 
+sheet of the base rating and knowledge of 
+the control characteristics of the stream. 
+4. Plot a trial basic Vdiagram on the rectangu 
+lar worksheet so that the diagram is out- 
+side the greatest shift adjustment and its 
+base shift is l.O-, 0.5-, or O.l-ft (-0.5 ft in 
+figure 26). 
+5. Draw an intermediate V diagram, a wid- 
+ened or narrowed version of the basic dia- 
+gram, through the greatest shift (July 18 in 
+figure 26). Plot the corresponding shift 
+curve on the worksheet. If the shiftcurve 
+shape is unsatisfactory, revise the V dia- 
+gram gage heights or shape until a satisfac- 
+a 
+tmy shift curve is obtained. 
+6. Identify any measurements, such as 42 and 
+43 in figure 26, that are so close to a limit 
+of the Vdiagram range that an intermediate 
+diagram drawn through one would be un- 
+reasonable at some stages. Draw the most 
+reasonable intermediate diagram for such a 
+measurement and note the shift from the 
+the diagram at the gage height of the meas- 
+urement (-0.02 ft at 4.10 ft for measure- 
+ment 43 in figure 26) and also the shift at 
+the base gage height (-0.20 ft at 2.1 ft in 
+figure 26). The base gage-height shift will 
+be used as an arbitrary data point (see step 
+7), and the shift (-0.02 ft) for the measure 
+ment gage height will be used on form 
+9-207 (fig. 10) to compute the measure 
+merits percent difference. 
+7. Select arbitrary data points to modify the 
+linear interpolation of intermediate V dia- 
+grams between the times of discharge 
+measurements if desired. If an arbitrary 
+data point with the same gage height and 
+shift as the preceding or following data 
+point is inserted, the V diagram and shift 
+curve will be held constant between the two 
+dates. Assuming that the gageheight 
+record for the example in figure 26 showed 
+rises on May 7, July 1, and August 12, ar- 
+bitrary data points (May 6, 2.63, -0.10; 
+May 8, 2.3, -0.20; June 30, 2.3, -0.20; July 
+2, 2.13, -0.30; August 11, 2.13, -0.30; 
+August 30, 1.70, +O.lO) could be added to 
+the measurementdefined points. The corre- 
+sponding shift distribution would be equiv- 
+alent to using one shift curve for May 1-6, 
+another for May 7 to June 30, another for 
+July 1 to August 11, and stiIl another for 
+August 12-27. This would be the most log 
+ical shift distribution for a stream with a 
+gravel control that changes only during 
+rises. Without the arbitrary points, the 
+time shift between measurements would be 
+the most logical shift distribution for a sand 
+channel. Arbitrary data points can be based 
+on the hydrographer’s judgment, the gage 
+observer’s notes, or the gageheight record 
+appearance. 
+8. Enter the data for the measurementdefined 
+shifts and arbitrary data points (omit meas- 
+urements that were disregarded, ice af- 
+fected, outside the V-diagram range, or too 
+close to the Vdiagram limits) as instructed 
+the WATSTGRE User’s Guide. 
+Shortcuts in the above procedure are practical 
+for experienced hydrographers, and other ap- 
+proaches, more or less detailed, may be superior 
+for use at some stations. The procedure is de 
+signed for primary computations but can also 
+be applied to most updates. 
+Manual procedure 
+The distribution of shifts graduated with time 
+and stage can be made for manually computed 
+records in much the same way as they are with 
+ADP. A V diagram for manual use can be either 
+rxndinear or composed of straight lines and 
+may be either a graph or a table. The widening 
+or narrowing of the manual version of a V 
+diagram is done by applying a coefficient to the 
+Vdiagram shifts. The magnitude of the coeffi- 
+cient at the time of a discharge measurement is 
+the measurement-indicated shift divided by the 
+Vdiagram shift. The coefficients for each day are 
+obtained from a graph somewhat similar to the 
+time-shift V diagram in figure 21 and are applied 
+=== page 47
+40 TECHNIQUES OF WATER-RESOURCES INVESTIGATIONS 
+to the shift adjustments obtained from the 
+basic stageshift V diagram. The resulting shift 
+adjustments are entered on form 9-192a (fig. 
+21) or on the recorder chart (fig. 15) and used to 
+compute the daily discharges. 
+Figure 27 illustrates the use of coefficients to 
+generate intermediate V diagrams to fit the indi- 
+vidual discharge measurements. 
+rating is practically the same as one that would 
+Records from digital recorders 
+Digital recorder tape segments are processed 
+individually by a “primary computation.” This 
+process converts the punched values into a 
+listing similar to figure 28, usually cakd the 
+primary computation sheet, or “PPO.” The dis- 
+charge figures are tentative, and the gage 
+height figures are usually final. The printed 
+figures are scanned manually for evidence of 
+equipment malfunction, edited and corrected 
+where necessary, and used in an “update” com- 
+putation to produce either a corrected record of 
+daily discharges or, at the end of the year, the 
+final recoti (fig. 29) that is used as a page of the 
+published record. 
+Primary computation 
+The punched-tape segment, rating descriptors 
+or table, and information regarding datum cor- 
+rections and shift adjustments are entered into 
+the ADP system by using the formats pre- 
+scribed in the WATSTORE User’s Guide. The 
+program applies each recorded instantaneous 
+gage height, modified by any datum and shift 
+adjustments, to the rating and obtains the in- 
+stantaneous discharge. The average of all the in- 
+stantaneous gage heights (corrected for datum 
+error) and discharges for each day are printed 
+(fig. 28). This procedure subdivides every day 
+into segments onepunch interval long regard- 
+less of the range in stage. The daily mean gage 
+heights are adjusted for the effect of subdivi- 
+sion, and the adjusted values are printed as 
+“equivalent gage heights.” Daily discharges 
+can usually be revised later, without reprocess- 
+ing the recorder tapes, by applying a different 
+rating or revised-shift adjustments to the equiv- 
+alent gage heights. A daily discharge computed 
+from an equivalent gage height and revised 
+be computed by rerunning the primary compu- 
+tation with that rating if the revised and orig- 
+inal rat&g curves (or shift curves, if used) have 
+roughly similar shapes. The few exceptions in- 
+clude all days with periods of zero flow indi- 
+cated by either the primary or update effective 
+ratings and a few days where the primary or up- 
+date effective ratings are practically the same at 
+the equivalent gage height but not at other gage 
+heightis recorded during that day. Discharges 
+for these d.ays may be computed manually or by 
+renmning the recorder tapes. 
+A primary computation is a rapid and simple 
+operation if the equipment functions properly, 
+the datum correction is well defined, and the 
+discharge rating remains stable throughout the 
+period.. Equipment problems such as faulty 
+punctig, or float tape or cable jumping its 
+splines, make the task much more difficult. 
+‘These problems can be minimized by careful 
+field maintenance and the use of surge chains or 
+other Idevices to maintain tension in the float 
+tape while the recorder is locked for punching. 
+,The d.atum correction needs careful considera- 
+tion before each primary computation because 
+the only way that a subsequent change can be 
+reflected in the printed list of gage heights is to 
+rerun ,the primary computation. 
+A primary computation is normally made as 
+soon as possible after the removal of the 
+recorder tape to provide a readable gageheight 
+record for the identification of any recorder 
+malfunctions. The computed discharges-final, 
+approximate, or grossly in error-will normally 
+be stored in the WATSTORE Daily Values File 
+until the update process. Several protection op- 
+tions described in the WATSTORE User’s 
+Guide are available to prevent a user from 
+retrieving erroneous data from the daily records 
+file. 
+Many primary computations can be run in 
+such a way that the discharge figures will he 
+useful or even final. For those few gaging sta- 
+tions where the discharge rating is stable and 
+shift adjustments are not needed, the primary 
+computation will usually generate final 
+discharge records without any special effort. If 
+the high and medium parts of the discharge 
+rating are stable and the low-water part shifts 
+only during substantial rises, use the latest 
+=== page 48
+COMPUTATION OF CONTINUOUS RECORDS OF STREAMFLOW 41 
+STAGE-SHIFT-VARIATION DIAGRAM 
+(ADPI (Manual) 
+RATING CURVES 
+l- I 
+LLLLLoLLu_J I 
+-0.5 +0.5 -0-i Shift adjustment (ft) 
+I I I I I 
+0 10 :0 30 40 50 50 
+Discharge (ft% 
+COMPUTATIONS 
+pi 
+SYMBOLS 
+C=Sm/Sv=Coefficient applicable to basic V-diagram 
+Sm =Shift adjustment defined by discharge measurement 
+Sv =Shift adjustment from V-diagram 
+FIGURE 2’7.-Use of stqpshifbvariation diagram coefficients to fit shift curves to discharge measurements. 
+rating and a time-varied V diagram as illustrated 
+in figure 26. Change the shift pattern only dur- 
+ing the highest rise between discharge 
+measurements, the most logical time for a 
+change in low-water shifts. Some ratings shift 
+erratically at all stages. The shifting is usually 
+more rapid during rises than during low-water 
+periods. Interpolation of shifts with time and 
+stage is practical for the primary computation 
+of some such stations where weekly or more fre- 
+quent measurements are made. Otherwise, the 
+x-ecmds for very unstable channels are most 
+easily processed by using the latest rating 
+without any shift adjusments. Then a hydra 
+graph of the resulting discharge records, undis- 
+torted by incorrect shifts, will be used as a guide 
+when the updating is done with final shift ad- 
+justments based on additional data (gage 
+heights, records for other stations, hydrograph 
+appearance, and so forth) as shown in figure 22. 
+The primary computation sheet, edited as will 
+be described in the section on “updating,” con- 
+tains most of the information for an ADP record 
+that form 9-192a (fig. 21) and recorder charts 
+(fig. 15) show for a graphic-recorder station. It 
+should be treated and preserved accordingly. 
+=== page 49
+42 TECHNIQUES OF WATER-RESOURCES INVESTIGATIONS 
+FIGUFLE 28.-Primary ~compuhttion sheet. 
+Notes for station analysis 
+Notes to be included in the “station 
+analysis,” described in a subsequent section, 
+should be written when each primary computa- 
+tion sheet is received. The datum correction 
+paragraph notes are updated to reflect the cor- 
+rections included in each set of primary com- 
+putation supplementary data. Any changes in 
+location or equipment should be described in the 
+paragraph headed “Equipment.” All irregu 
+larities in the gage-height record, such as timer 
+failure or faulty-intake action, should be 
+discussed and listed by dates in the “Gage 
+height record” paragraph. The ratings used for 
+the primary work should be listed in the 
+“Rating” paragraph and their adequacy de 
+scribed. Shift distribution and V-diagram use 
+should be explained in the “Discharge” para- 
+graph. The notes will be consolidated when the 
+final update is made. 
+Updating 
+The update is a procedure that follows the 
+primary computation and uses one or more 
+subsequent passes of daily data through the 
+computer to correct errors in the primary com- 
+putation caused by faulty gageheight record, 
+ice effect, erroneous shift adjustments, or 
+datum corrections. Updated discharges can be 
+computed manually and substituted for the 
+primary discharges, or, for some periods, com- 
+puted entirely by ADP. Preparation of data for 
+updating is described in the WATSTORE 
+User’s Guide. 
+Before starting to update a period of record, 
+which may be as short as a month or as long as 
+a year, retrieve a hydrograph similar to the one 
+in figure 30 from the WATSTORE Daily Values 
+File (hydrograph details are discussed in a sub 
+sequent section) or plot one from the primary 
+computation sheet discharges. Plot the dis- 
+=== page 50
+14 51 35 30 52 263 lb5 166 13b 40 
+2b 592 25 30 49 233 1?2 l(rll 144 39 
+15 343 28 30 47 203 116 210 134 38 
+I. 201 30 30 47 186 166 240 122 37 
+14 146 35 33 46 1bR 154 265 114 36 
+b 
+7 
+tl 
+1: 
+:: 
+:: 
+11 
+1. 136 3e 35 ‘44 1% 147 273 107 
+13 119 38 36 51 1.b 149 252 104 
+11 101 40 3d 60 138 165 245 98 
+13 92 40 42 62 133 106 237 92 
+14 90 41 39 74 144 199 210 8b 
+:: 
+13 
+:: 
+if 
+11 
+10 
+10 
+15 114 42 
+14 101 43 
+1. 330 41 
+15 52.3 41 
+11 606 42 
+36 
+42 
+38 
+3’: 
+04 159 104 186 (I2 
+84 156 170 I?6 17 
+Bk 151 178 170 I4 
+a2 144 199 163 10 
+82 139 106 151 60 
+lb 10 16 290 40 
+I? 9.9 11 230 39 
+lb 10 9.9 1e4 IT 
+19 9.9 7.0 154 37 
+20 9.9 4.0 133 36 
+3,’ 12 
+33 14T 
+14 lb6 
+36 184 
+144 176 144 76 
+131 174 146 66 
+128 176 151 63 
+I2R 192 156 61 
+128 226 152 59 
+:: 
+23 
+i: 
+9.9 
+10 
+11 
+11 
+12 
+3.0 
+2:: 
+8.0 
+IS 
+122 
+112 
+101 
+93 
+es 
+3b 
+35 
+33 
+:: 
+39 
+43 
+:; 
+59 
+221 122 242 152 
+258 118 235 149 
+295 II4 205 144 
+276 109 184 I42 
+260 112 170 133 
+2 
+51 
+50 
+48 
+26 11 25 IlO 32 se 265 138 161 128 50 
+27 11 33 15 31 57 215 161 151 127 49 
+22. 11 3s 70 31 55 281 lb8 166 127 46 
+29 13 52 65 30 a-- 304 172 lb3 139 44 
+30 14 39 60 30 --e 310 I72 150 13b 43 
+31 12 w-s 55 30 m-w 291 --- 159 -mm 41 
+lOT4L 
+“EAN 
+NAl 
+m 
+MlN 
+CFSN 
+IN. 
+IIC-Fl 
+OCT 
+wov OEC JAN FE6 WAR APO NAY JUN JUL IUG SEP 
+27 
+5: 
+27 
+29 
+36 
+35 
+33 
+:: 
+33 
+20 
+27 
+42 
+39 
+33 
+:: 
+31 
+33 
+31 
+29 
+20 
+27 
+26 
+:: 
+31 
+31 
+31 
+S f 
+2s 
+25 
+25 
+:3 
+:t 
+35 
+5: 
+:: 
+24 
+31 
+30 
+26 
+:x 
+28 
+f : 
+22 
+if 
+e-w 
+340.6 48ti.9 52bQ 
+11.0 16.3 110 
+14 52 592 
+9.9 3.0 54 
+.lb .24 2.47 
+-18 .2b 2.84 
+616 970 10450 
+1101 
+35.5 
+43 
+.z: 
+.59 
+2180 
+1119 4679 45b* 5541 5258 2362 1017 
+40.0 151 152 179 175 76.2 32.8 
+59 318 263 242 273 I44 40 
+30 4. 109 1.7 121 41 28 
+.58 2.19 2.21 2.60 2.54 1.11 ..e 
+.bO 2.53 2.*6 2.99 2.04 1.28 .55 
+2220 9200 9050 10990 10430 6690 2020 
+805 
+26.0 
+:: 
+.39 
+-43 
+1600 
+COMPUTATION OF CONTINUOUS RECORDS OF STREAMFLOW 43 
+DISCNARGE. IN CUL)IC FEET PER SECOND. WATER WAR OCTOBER 1977 TO SEPTEMWR 1978 
+NC&N VALUES 
+CAL 19 1977 TOTAL 10643.3 NEAN 29.2 NAl 592 MIN 3.0 CFSN .42 IN 5.75 K-F7 21110 
+ITR YR 1978 TOTAL 32544.5 MEAN 09.2 NAX 592 YIN 3.0 CFSW 1.30 IN 17.57 AC-F1 6+5SO 
+FIGURE 29.-Final discharge record printout. 
+charge measurements as colored circles on the 
+appropriate days. The hydrograph will indicate 
+any periods that may need attention and pro 
+vide clues about the dates of rating shifts. 
+Assemble the primary computation sheets for 
+the period to be updated. Check the starting 
+and ending days against the prior and subse 
+quent sheets for continuity or agreement with 
+discharge-measurement notes when changes 
+were made to the control. Scrutinize the hourly 
+gage-height lists, especially those for days la- 
+beled “A” or “R,” (fig. 28) for mispunches or in- 
+correctly read punches. Look for sudden 
+changes in stage or long periods of no change 
+that could indicate recorder failure or plugged 
+intakes. Check the discharge hydrograph for 
+odd-looking periods (recession curve lower after 
+a rise than before, recession faster than rise, and 
+sin&x inconsistencies), and if any questionable 
+periods are found, study the corresponding gage 
+heights and shift adjustments to find the 
+reason. Check the datum corrections listed on 
+the primary computation sheet against the sta- 
+tion analysis paragraph. See that each change 
+(resetting) to the principal gage is reflected by a 
+change in continuity of the punched-gage 
+heights and that the applied correction restores 
+the continuity and agrees with the station 
+analysis. Resolve any minor differences by ac- 
+cepting the primary computation to avoid 
+unnecessary rerunning of the tapes for the 
+affected periods. 
+Decide whether the ratings and shift adjust- 
+ments used for the primary computation are 
+adequate or if updating is needed for all or part 
+of the record. Check the shift-adjustment com- 
+putations for all periods whose discharge 
+records are acceptable. Those for other periods 
+will not be used and need not be checked. Fre- 
+pare new ratings and V diagrams (if used) for 
+=== page 51
+44 TECHNIQUES OF WATER-RESOURCE3 INVESTIGATIONS 
+periods that wilI be recomputed and have them 
+checked by another hydrographer. Try the new 
+rating or shift adjustments by making a manual 
+computation every 10th day or so and for about 
+2 days inqediately before and after any periods 
+that will be estimated. 
+Fill in the discharges for periods of ice effect 
+or no gageheight record (more about these 
+special computations later). Treat periods of 
+particularly erratic shift-adjustment distribu- 
+tion as periods of no gageheight record. 
+When the data for the updating process 
+(ratings, shift distributions, and substituted 
+discharges) are ready to prepare for computer 
+input, the final hydrograph position should be 
+sketched in, on the basis of manually computed 
+values for occasional days, so there will be no 
+surprises in the final record. 
+Have all computations for ratings, percent 
+differences, shift adjustments, and substituted 
+values checked before rumGng the update. Ob- 
+tain a new hydrograph from the WATSTORE 
+Daily Values File after the update results have 
+been stored. Plot the discharge measurements 
+on the new hydrograph and scan it for any 
+mistakes that may have survived the previous 
+checking. 
+After the update is complete and all figures 
+are final, update the primary computation sheet 
+neatly in ink as shown in figure 28. The entries 
+should include all of the discharges changed by 
+recomputation or substitution, the revised shift 
+adjustments, and the gage heights from backup 
+recorders or graphs. If any datum corrections 
+were revised after the primary computation, 
+rerunning the tapes is normally more conve 
+nient than manual entry of all the related 
+changes. The edited primary computation sheet 
+should represent the final record as published, 
+and any figures that are formally revised in the 
+future will be shown on this sheet. 
+Records from graphic recorders 
+During previously described operations, the 
+form 9-192a (fig. 21) was partially completed by 
+listing the daily mean gage heights. The 
+subdividedday gage heights were computed 
+and checked on the recorder charts. The shift 
+adjustments, if used, must be distributed and 
+listed on form 9-192a and on the chart’s sub- 
+division tabulations. Discharge for all but the 
+specially computed periods (ice effect, missing 
+record, and so forth) can then be computed from 
+the rating table and entered on form 9-192a. 
+Discharges likely to be changed (winter months 
+and tentative shift adjustments, for instance) 
+may be entered in pencil, and the others may be 
+entered directly in ink. 
+Disdhargemeasurement numbers are usually 
+written on form 9-192a in the space for the day 
+on which they were made, and shift adjust- 
+ments may be written as shown in figure 21. 
+The symbol “v” indicates that the shift varied 
+during the day. Tentative figures previously 
+penciled in are inked after they are checked and 
+accepted as final. 
+Distribution of small shift adjustments, with 
+time and stage, can be made by inspection 
+directly on form 9-192a. Large or complex shift- 
+adjustment distribution is best done with V 
+diagrams and coefficients. If a new rating is 
+started in use on October 1, a smooth transition 
+between discharge records for the end of the 
+previous year and the start of the current year 
+must be maintained. One useful transition 
+method is to treat the previous September 30 
+gage height and discharge as a discharge 
+measurement. Compute the applicable shift ad- 
+justrnent for that day and distribute the adjust- 
+ment between September 30 and the first dis- 
+charge measurement of the current year. 
+AU computations including shift-adjustment 
+distribul;ion, shift curves, and the subdivided 
+days must be checked by a second hydrog- 
+raph5er who initials and dates form 9-192a in the 
+appropriate space. The monthly figures, except 
+daily discharge totals, are left blank. They will 
+be computed by ADP when the final update is 
+made and may be copied onto form 9-192a at 
+that time if the district considers them 
+necessary. 
+Relcords from non recording gages 
+The process used to compute and check the 
+discharge computations for nonrecording gages 
+is identical to that for graphic recorders. 
+=== page 52
+COMPUTATION OF CONTINUOUS RECORDS OF STREAMFLOW 45 
+Discharge hydrographs 
+A semilogarithmic plot of daily discharges, 
+similar to that in figure 30, depicts the day-to- 
+day variations in discharge in an easy-tosee 
+form, revealing some of the errors in basic data, 
+computations, or shift distribution. It is one of 
+the most valuable tools available for quick as- 
+sessment of record consistency and is indispen- 
+sable for estimating discharges for periods of ice 
+effect or missing gageheight record. The 
+records for several stations in an area can be 
+compared by placing their hydrographs on a 
+light table and shifting the individual sheets to 
+obtain the best fit. The discharge hydrograph 
+for a manually computed record can be plotted 
+while the discharge figures are being computed. 
+In this way, the effects of the shift distribution 
+can be studied as the discharge points are 
+plotted. An automatically plotted hydrograph 
+of the discharge figures in the WATSTORE 
+Daily Values File at any time can be retrieved 
+(see WATSTORE User’s Guide). Interim hydra 
+graphs, automatically plotted, of primary com- 
+putation figures are particularly useful in the 
+update process, and an automatically plotted 
+final hydrograph is always preferable to a 
+manually plotted version for use as the perma- 
+nent file copy. Show normally computed records 
+as a black line, estimates in color, and discharge 
+measurements as colored circles on the final 
+hydrograph. 
+National Weather Service records of daily 
+maximum and minimum temperatures and 
+daily precipitation are used in the discharge 
+computations for periods of ice effect. Figure 31 
+illustrates one convenient format for weather 
+records. Prints of the form provide worksheets 
+for stations in the area of the weather station, 
+with space to plot the winter hydrograph on a 
+rectangular grid which is convenient for some 
+applications. 
+Periods of no gage-height recoi-d 
+Discharge for periods of equipment malfunc- 
+tion or unusual stream conditions (backwater 
+from leaves, debris, or tributaries) where the 
+gageheight record cannot be used directly must 
+be estimated, usually by one of the methods de 
+scribed in Water-Supply Paper 2175 (Rantz and 
+others, 1982). These methods involve the use of 
+some combination of interpolation, reconstruc- 
+tion of missing gageheight records, and the use 
+of records for other stations, power plant gen- 
+eration records, reservoir records, and weather 
+records. The estimated figures are entered on 
+form 9-192a or into the ADP update process by 
+substitution. 
+Periods of ice effect 
+The presence of ice at a stream’s control 
+causes the gage height to indicate flow greater 
+than the actual discharge. The computation of 
+discharge for a period when the stream was 
+frozen is a complex and highly subjective proc- 
+ess, different for each section of the country. 
+Water-Supply Paper 2175 describes the freezing 
+phenomenon in detail and explains the dis- 
+charge computation methods that apply under 
+many conditions. The figures so computed are 
+substituted for those previously entered on 
+form 9-192a or are included in the updating of 
+digital recorder records. 
+Stat ion Analysis 
+The station analysis, illustrated in figure 32, 
+is a complete and formal discussion of the data 
+collected for the current year. It details the 
+amount and kind of data, its probable accuracy, 
+and the method used for processing it. Notes for 
+inclusion in each section should be written, by 
+the hydrographers who actually analyzed that 
+part of the record, when the work is done. For 
+example, the gageheight record section notes 
+will generally be prepared by the individuals 
+who made the primary computations or copied 
+the gage heights on form 9-192b, the rating sec- 
+tion by the individuals who analyzed the rating, 
+and so forth. The hydrographer who prepares 
+the final update for the water year reviews these 
+notes and writes the station analysis. The 
+checker should always review the entire anal- 
+ysis carefully. It should be written clearly and 
+concisely. Additional sections may be added to 
+suit local needs, but the analysis must include 
+the following six general headings: 
+=== page 53
+"rrCEINIQUes 0F WATER-HE SOURCES mVESfIGATiora
+F- .Tin ;T.rf A olfr-e- OF -e ~hTe ..o.
+FIGURF 30.-SemilA3ga6thuic hydrograph.
+Egaipmer:t,-Startwith a shortstatement
+tellingthetypeofrecorder,principalgage,and
+shelter-Dietthepermanent structuresoutside
+thegage,suchasoutsidegages,cablewaysand
+concretecontrolsthataffecttherecordquality.
+Mention allchanges in equipment and the
+dates.
+Gage-height record.-Make a generalstate-
+meat abouttheaccuracyand continuityofthe
+gage-heightrecord,listingallperiodsofmissing
+recordandthereasonsforthem.Foraperiodof
+clockstoppage,tellifarangeinstagewas avail-
+ableorifa graphwas drawn basedou theob-
+server'sgagereadings.Listthedatesforwhich
+dailygage readingsam available.Mention any
+periodsforwhichtherecordisdoubtfulorpoor
+because of laggingintakes,plugged orifice,
+insensitivemanometer, or other causes and
+whetherthedoubtfulrecordwas used.Ifthere
+ismorethanonerecorderatastation,tellwhich
+recorderwas used forwhat periodtooompu.te
+thedischargeregard.
+Datum and gage-heightcorrectian4--Insert
+thegag heightcorrectionmaterialpreparedas
+previouslydescribedifnecessary.
+Rating,-Give a briefdescriptionofthe con-
+troland channelastheypertainW the current
+year'srecord.Next give the totalnumber of
+measurements made during the year, their
+serialnumbers,and therangeindischargeof
+themeasurements made duringtheyear.Tell
+whichwereaffectedby iceorotherunusualcon-
+dition4-Explaintherestofthemeasurements,
+eitherindividuallyoringroups,intermsofhow
+they plottedwith respectto the ratingor
+ratingsusedduringtheyearand why . If a new
+ratingisdrawn,statethe basisfordoing so.
+Give thereasonfornot drawing a new rating
+when une seems warranted.Explainanything
+outoftheordinarytohelpsomeone unfarniliar
+withthestationtounderstandthesituation.
+Discharge.-For a digitalrecorderstation,
+useaseparateparagraphforabeef description
+oftheprimarycompuWtions.givingtheratings
+=== page 54
+CY}hiPUTATIONOFCONTINuou RECORD5C7FSTREANIFLOW
+- _p
+	
+~
+	
+rrr
+FIGURE 30_-Su fogadthmic hydrograph-C on inuW_
+and typesof shiftadjustmentsused.Discuss
+theadequacy oftheprimarydischargerecords
+and thereason8Foracceptingorrejectingthem
+asfinalrecords_In theopeningsentenceofthe
+updateparagraph(firstparagraphforgraphic
+recorderand nonrecordingstations)statewhich
+ratingswereused forthefinaldischargefigures
+andtheirperiodsofuse.Givethecoordinatesof
+theV diagramsusedunlessthatinformationis
+shown elsewhere,such as on an ADP printout,
+List the periodsforwhich specialdischarge
+computations(ice,missing record,or back-
+water)were used and give thebasisforthe
+computations.Explainallunusualfeaturesof
+thedischargerecord.
+Remarks--Give thegeneralaccuracyofthe
+record.A ratingofexcellentmeans thatabout
+95 percentof the daily dischargesarecorrect
+within5 percent,good,within10 percent:and
+fair,within15 percent_Poor means thatdaily
+dischargeshave lessthanfairaccuracy,ifsome
+periodisconsiderablybelow therestinoverall
+accuracybecauseofalackofqupportingdataor
+becauseof a specialmethod of computation,
+thatperiodshouldbe notedand ratedlowerin
+accuracy.The accuracyratingassignedinthe
+stationanalysismust agreewiththeaccuracy
+ratinginthestationmanuscript_
+Progress Documentation
+Usesome typeofformtoindicatethemnple-
+don ofeach stepintherecordcomputationby a
+checkmark,initials,orshadingofan areaand
+ttrensurethatthework isbeingdonesystemati-
+callyand completely.The formatofthesheet
+useddependson thetypeofgageand theproce-
+duresadoptedby thefieldofficetocollectthe
+data and compute the record. Figure 33 il-
+lustratesonetypeofprogressformthatcan be
+=== page 55
+TECHNIQUES OF WATER-RESOURCES INVESTIGATIONS 
+=== page 56
+COMPUTATION OF CONTINUOUS RECORDS OF STREAMFLOW 
+49 
+=== page 57
+50 
+Station 
+TECHNIQUES OF WATER-RESOURCES INVESTIGATIONS 
+Sta. No. 
+PROGRESS CHECKLIST 
+COMPUTATION OF DIGITAL RECORDER RECORDS 
+Water Year 
+PRIMARY COMPUTATIONS 
+Review disch. casts. - check ghts with tape 
+Review tape for continuity with previous tape 
+Update datum correction and apply to tape headers and meas. 
+List discharge msts. and remarks on 9-207 
+Plot disch. msts. (worksheet) - if rating is OK, skip a line 
+Prepare discriptors for new rating - obtain RATLIST 
+Compute shift adjustments and percent diff. 
+Prepare or update V-diagram - distribute shifts 
+Update station analysis notes 
+Transmit tapes and supplemental data - obtain hydrograph 
+UPDATE 
+Plot disch. msts. on prim. camp. hydrograph 
+Review levels data. Update datum correct. Rerun P.C. if necess. 
+Review P.C. sheets (continuity and agreement with meas.) 
+Review rating.. If P.C. rating is satisfactory, skip three lines 
+Prepare new work curve sheet 
+Prepare descriptors for new rating - obtain RATLIST 
+Recompute shifts and % for update period msts. 
+Update old or prepare new V-diagram 
+Distribute shift adjustments 
+Rough in final hydrograph position on P.C. hydrograph 
+Compute ice, missing, and other special computation records 
+Update station analysis notes 
+Check the above work 
+Prepare station analysis final copy (typed) 
+Check final station analysis 
+Prepare master curve sheet 
+Transmit update material - request hydrograph 
+Plot meas. on new hydrograph 
+FINAL ASSEMBLY 
+Compute and list peak disch., min. disch., and aver. disch. 
+Prepare manuscript and annual report page copy 
+Check above work 
+QUALITY CONTROL 
+Prepare basin comparison (monthly records) 
+Check comparison 
+Broad review (all records) 
+Intensive review with memorandum (selected records) 
+FIGURE 33.-Typical progress form. 
+used for digital recorder stations whose primary 
+computations are run currently and updated I Quality Assurance 
+monthly, quarterly, or annually. Equivalent 
+forms for graphic-recorder stations are simpler, 
+and more elaborate forms can be designed to in- 
+dicate the percent completion of each record at 
+any time. 
+Thle quality of a station record depends to a 
+large extent on natural conditions at the site 
+and the management practices used to obtain 
+the best records with the available manpower 
+=== page 58
+COMPUTATION OF CONTINUOUS RECORDS OF STREAMFLOW 51 
+and equipment. The adequacy of a record can be 
+gaged to some extent by having an experienced 
+hydrographer review the process used to obtain 
+the data and compute the record. The reviewer 
+ensures that approved methods were used 
+throughout or that locally devised procedures 
+were proper. All records should receive a brief 
+review by a hydrographer not involved in the 
+computations. A few records (5-10 percent of 
+the total) should be thoroughly reviewed, and a 
+memorandum of review prepared by a super- 
+visor each year. An outside (regional, other 
+district, or headquarters) assessment of tech- 
+nical operations is provided about every other 
+year and includes a thorough review of a sam- 
+pling of the gaging-station records. 
+Parts of most discharge computations depend 
+on subjective judgment, especially for rating 
+extensions, shift distribution, and estimates. 
+Substantial errors are usually apparent from 
+hydrographic comparison of each station record 
+with others from the same general area. A basin 
+comparison of monthly and annual discharges 
+may provide a good check for major errors. 
+Figure 34 illustrates the simplest type of basin 
+comparison, one that can be used in a relatively 
+humid area where the runoff from gaged areas is 
+comparable to that from ungaged areas. A table 
+of monthly discharges for all stations in a basin 
+is arranged in downstream order. The monthly 
+discharges must be adjusted for travel time be 
+tween adjacent stations by advancing the 
+downstream station period by an estimated 
+Ohio River Basin 
+1 Wabash River Basin (continued) 
+2 Little Wabash - Effingham 
+number of days. The runoff figures (in cubic feet 
+per second per square mile) for tributary sta- 
+tions are listed and those for ungaged areas are 
+computed, listed, and underlined. If the gaging 
+station records are free from gross errors, the 
+underlined runoff figures will ordinarily be com- 
+parable to the other figures in the column. 
+The discharge of streams in arid areas does 
+not increase uniformly downstream and may 
+decrease in certain reaches. The gains or losses 
+in monthly flow between stations do not indi- 
+cate the reliability of records for this type of 
+stream, and other assessments based on knowl- 
+edge of the hydrology of the region must be 
+made. 
+If the assessment procedure identifies the 
+records for a very poor site as dubious, altema- 
+tives to collecting daily discharge records there 
+should be considered. 
+References Cited 
+Carter, R. W., and Anderson, I. E., 1963, Accuracy of 
+current-meter measurements: American Society of Civil 
+Engineers Journsl, v. 89, no. HY4, p. 105-115. 
+Fokmsbee, R., 1938, A history of the Water Resources 
+Branch of the United States Geological Survey to June 
+30,1919: Washington, D.C., privately printed, 459 p. 
+Hutchinson, N. E., and others, 1975 (v. l), WATSTORE 
+User’s Guide: U.S. Geological Survey Open-File Report 
+75-426, Reston. Va, 523 p. 
+Hutchinson, N. E., and others, 1980 (v. 5J, WATSTGRE 
+User’s Guide: U.S. Geological Survey Open-File Report 
+77-729-I, Reston, Va, 357 p. 
+BASIN COMPARISON 
+(Portion of Ohio River Basin in Illinois - 1977-78 Water Year) 
+3 Ungaged [ 4 - 2 ] 
+4 Little Wabash - Louisville 
+5 Ungaged [ 6 - 4 1 
+6 Little Wabash - Clay City 
+7 
+a Skillet Fk. - Iuka 
+9 Horse Cr. - Keene 
+10 Ungaged [ 11-c 8 + 9 )I 
+11 Skillet Fk. - Wayne City 
+12 Ungaged [ 13 -( 6 + 11) 
+13 Little Wabash - Carrrl 
+14 Little Wabash - Cami 
+15 (continued) 
+c 
+cfs 
+62.4 .26 34.5 
+94.6 L 19 142 
+157 177 
+108 L 28 50 
+265 227 
+28.4 
+a.1 
+20.1 
+56.6 
+391 
+713 
+-ET--- 
+.14 87.3 
+.09 26.5 
+2 56.2 
+170 
+26 L 570 
+I 967 
+.27 584 
+lr Wate 
+cfs 
+237 
+531 
+768 
+277 
+1045 
+181 
+83.9 
+126 
+391 
+1286 
+2722 
+2122 
+FIGURE 34.-Basin comparison of monthly and annual runoff. 
+=== page 59
+TEC14NIQUF9 OF WATFR-REF ¬)URCES INVE$CIGAT]C}N5
+Kennedy, E.J..1982.
+	
+barge r$ting9atg*ng stations;
+U .S.GeologicalSurvey Techniques ofWater Fesourm
+Investigations.book &.Chap .A-10 linpress).
+Rantz, S.E .,end ufhen, 1982.Computation of discharge:
+U .S,Geoiootal Slltvey Wates-Supply Piper 2175 12
+vol-.1631P-
+Thomas, N . O .,end Jackson .N .Ai .Jr-,1981.Manual for
+levelingatgeging stationsinNorth Cwo&& U .S.('*so-
+lo" Survey Qpe.mFile Raepnrt. 91-1104, Raleigh,
+N .C..36 p.
+ADP
+DiiechergthydugsiLph
+Primary computasxiom
+Shape curve
+Shiftadjuetmmt
+Shliting-amtrulmethod
+Static*analyain
+UpdFw .
+WATSTORE a<'em'AGuide
+Autorneticdataprocessingused tocompute thedischargerecordsfordsgitalrecorderstations
+A aemilogarithnucplotof dailymean diLwhargesfora water year.used as a visualcheck of the
+continuityof computed discharges and a means of comparing discharges faw different.
+stations
+The ADP pnxt~ssnormally used forthe firstpass of scmarnflow data through the computer-
+The rmxxder tape,rating,shaft-adlustrnentaiiatrihu6oninsixuctions,and datum corrections
+input-A tentativedailydischargeand hourly pa},~heightprintoutarc output and a diQ-
+chargw hydrograph isoptional.
+An unde9irahle dischergo-radng charaeteristirin which the straight-Likesegments of a
+logwi0amit rating come, when plotted using rectangularoxwdinates, billow upward hr
+Cween ncxieaat the descriptorpoints.The carrwspsmclingraringtablehas erraticdischarge
+differencespertenthfootofgage-heightdifference.
+A pre6cntaratingcurve,or one based on a 9pecialstudy- whose shape issimilarto thfL rating,
+=-e beingdeveloped
+An adXustment .usuallyvarying with time and 4tage,appliedw gage heightsin orderto cnrn-
+penaare forachange intheratingshape orp+xaitinn
+The systematicuse ofshiftardjus[mtantsas a aubstitutpforrF}-i5+drating8
+A narrativedescription,in a standard format.,of the g*ng-stati(at equipment, itsperform-
+ance.and therneth{Anused tocompute thedischargemcrzd
+The ADP process by which dischargesfrom the primary cmnpurauon acrerevisedby using a
+differentdischarge rating.differentshiftadjustments, pr substitura~imanually ccut3putrd
+valuestocompilethefinaldischargerecord,
+Volume 5 lreoorciprc.oegsingland voLurnc1]datafiles]ofa getofinstrurtiaanmanuals regarding
+theformat ofdata inputteathe AD P svsternused fordischarg -recxudcamputadon .

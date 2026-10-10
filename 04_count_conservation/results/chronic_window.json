@@ -1,0 +1,116 @@
+{
+ "manifest": "window.json",
+ "seed": 0,
+ "nodes": 18,
+ "detectors": 51,
+ "detectors_multinode": 16,
+ "detectors_tested": 16,
+ "baseline": {
+  "nonzero_offsets": 18,
+  "median_abs_offset": 0.818,
+  "max_abs_offset": 43.734,
+  "median_abs_residual": 0.0
+ },
+ "cases": [
+  {
+   "mode": "offset",
+   "magnitude": -30.0,
+   "trials": 16,
+   "identified_top1": 0.875,
+   "identified_top3": 1.0,
+   "median_recovered_shift": -28.507,
+   "true_shift": -30.0,
+   "magnitude_within_35pct": 0.75
+  },
+  {
+   "mode": "offset",
+   "magnitude": -15.0,
+   "trials": 16,
+   "identified_top1": 0.875,
+   "identified_top3": 1.0,
+   "median_recovered_shift": -13.7536,
+   "true_shift": -15.0,
+   "magnitude_within_35pct": 0.8125
+  },
+  {
+   "mode": "offset",
+   "magnitude": -8.0,
+   "trials": 16,
+   "identified_top1": 0.875,
+   "identified_top3": 1.0,
+   "median_recovered_shift": -6.8646,
+   "true_shift": -8.0,
+   "magnitude_within_35pct": 0.8125
+  },
+  {
+   "mode": "offset",
+   "magnitude": 8.0,
+   "trials": 16,
+   "identified_top1": 0.875,
+   "identified_top3": 0.9375,
+   "median_recovered_shift": 7.861,
+   "true_shift": 8.0,
+   "magnitude_within_35pct": 0.8125
+  },
+  {
+   "mode": "offset",
+   "magnitude": 15.0,
+   "trials": 16,
+   "identified_top1": 0.9375,
+   "identified_top3": 1.0,
+   "median_recovered_shift": 14.7666,
+   "true_shift": 15.0,
+   "magnitude_within_35pct": 0.875
+  },
+  {
+   "mode": "offset",
+   "magnitude": 30.0,
+   "trials": 16,
+   "identified_top1": 0.9375,
+   "identified_top3": 1.0,
+   "median_recovered_shift": 29.8634,
+   "true_shift": 30.0,
+   "magnitude_within_35pct": 0.875
+  },
+  {
+   "mode": "scale",
+   "magnitude": 0.95,
+   "trials": 16,
+   "identified_top1": 0.9375,
+   "identified_top3": 1.0,
+   "median_recovered_shift": -0.0475,
+   "true_shift": -0.05,
+   "magnitude_within_35pct": 0.75
+  },
+  {
+   "mode": "scale",
+   "magnitude": 0.98,
+   "trials": 16,
+   "identified_top1": 0.625,
+   "identified_top3": 1.0,
+   "median_recovered_shift": -0.0148,
+   "true_shift": -0.02,
+   "magnitude_within_35pct": 0.6875
+  },
+  {
+   "mode": "scale",
+   "magnitude": 1.02,
+   "trials": 16,
+   "identified_top1": 0.625,
+   "identified_top3": 0.9375,
+   "median_recovered_shift": 0.0172,
+   "true_shift": 0.02,
+   "magnitude_within_35pct": 0.5625
+  },
+  {
+   "mode": "scale",
+   "magnitude": 1.05,
+   "trials": 16,
+   "identified_top1": 0.875,
+   "identified_top3": 1.0,
+   "median_recovered_shift": 0.047,
+   "true_shift": 0.05,
+   "magnitude_within_35pct": 0.8125
+  }
+ ]
+}

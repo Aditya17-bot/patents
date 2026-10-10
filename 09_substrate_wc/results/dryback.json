@@ -1,0 +1,61 @@
+{
+ "Reference": {
+  "n_days": 60,
+  "dryback1_median": 7.35,
+  "dryback2_median": 8.8,
+  "share_days_routes_agree": 0.77,
+  "gap_raw": 0.185,
+  "gap_scale_ungated": 0.125,
+  "gap_scale_gated": 0.118
+ },
+ "AICU": {
+  "n_days": 8,
+  "dryback1_median": 4.25,
+  "dryback2_median": 4.4,
+  "share_days_routes_agree": 0.25,
+  "gap_raw": 0.072,
+  "gap_scale_ungated": 0.048,
+  "gap_scale_gated": 0.044
+ },
+ "Automatoes": {
+  "n_days": 70,
+  "dryback1_median": 9.62,
+  "dryback2_median": 10.18,
+  "share_days_routes_agree": 0.3,
+  "gap_raw": 0.168,
+  "gap_scale_ungated": 0.141,
+  "gap_scale_gated": 0.106
+ },
+ "Digilog": {
+  "n_days": 43,
+  "dryback1_median": 6.8,
+  "dryback2_median": 7.3,
+  "share_days_routes_agree": 0.51,
+  "gap_raw": 0.113,
+  "gap_scale_ungated": 0.223,
+  "gap_scale_gated": 0.234
+ },
+ "IUACAAS": {
+  "n_days": 59,
+  "dryback1_median": 7.3,
+  "dryback2_median": 7.7,
+  "share_days_routes_agree": 0.8,
+  "gap_raw": 0.137,
+  "gap_scale_ungated": 0.16,
+  "gap_scale_gated": 0.169
+ },
+ "TheAutomators": {
+  "n_days": 73,
+  "dryback1_median": 8.6,
+  "dryback2_median": 7.5,
+  "share_days_routes_agree": 0.53,
+  "gap_raw": 0.121,
+  "gap_scale_ungated": 0.169,
+  "gap_scale_gated": 0.12
+ },
+ "median_over_compartments": {
+  "gap_raw": 0.129,
+  "gap_scale_ungated": 0.15,
+  "gap_scale_gated": 0.119
+ }
+}

@@ -1,0 +1,59 @@
+{
+ "manifest": "window.json",
+ "seed": 0,
+ "corridor": {
+  "sites": 51,
+  "intervals": 2972,
+  "nodes": 18
+ },
+ "timing": {
+  "seconds": 12.616,
+  "intervals_constrained": 2972,
+  "intervals_corrected": 2210,
+  "intervals_unreconciled": 233,
+  "mean_unreconciled_slack_vehicles": 25.58,
+  "mean_constraints_per_interval": 8.31,
+  "calibration": "scaled",
+  "weighting": "flow",
+  "tol_scale": 1.0,
+  "mean_band_vehicles": 46.54
+ },
+ "saturation_ranking": {
+  "sites": 51,
+  "mean_rank_shift": 7.1,
+  "max_rank_shift": 34,
+  "sites_moving_over_5_places": 20,
+  "top20_overlap": 15,
+  "top20_changed": 5
+ },
+ "rain_sensitivity": {
+  "wet_interval_share": 0.0218,
+  "sites_measured": 51,
+  "mean_effect_unreconciled_pct": -6.551,
+  "mean_effect_reconciled_pct": -6.504,
+  "mean_abs_difference_pct_points": 0.242,
+  "max_abs_difference_pct_points": 3.106
+ },
+ "forecasting": {
+  "unreconciled": {
+   "n_predictions": 55408,
+   "MAE": 36.461
+  },
+  "reconciled": {
+   "n_predictions": 55408,
+   "MAE": 36.835
+  },
+  "MAE_reduction_pct": -1.03
+ },
+ "node_flow_forecasting": {
+  "unreconciled": {
+   "n_predictions": 17711,
+   "MAE": 99.298
+  },
+  "reconciled": {
+   "n_predictions": 17711,
+   "MAE": 99.607
+  },
+  "MAE_reduction_pct": -0.31
+ }
+}

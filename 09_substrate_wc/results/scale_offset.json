@@ -1,0 +1,83 @@
+{
+ "Reference": {
+  "G_first_half": 1.222,
+  "G_decl_first_half": 1.217,
+  "routes_agree": true,
+  "wc_gap_gated": 0.98,
+  "uptake_gap_gated": 0.125,
+  "wc_gap_raw": 3.2,
+  "wc_gap_offset": 1.1,
+  "wc_gap_offset_scale": 0.98,
+  "uptake_gap_offset": 0.105,
+  "uptake_gap_offset_scale": 0.125
+ },
+ "AICU": {
+  "G_first_half": 1.274,
+  "G_decl_first_half": 1.819,
+  "routes_agree": false,
+  "wc_gap_gated": 1.8,
+  "uptake_gap_gated": 0.162,
+  "wc_gap_raw": 15.2,
+  "wc_gap_offset": 1.8,
+  "wc_gap_offset_scale": 1.46,
+  "uptake_gap_offset": 0.162,
+  "uptake_gap_offset_scale": 0.135
+ },
+ "Automatoes": {
+  "G_first_half": 1.38,
+  "G_decl_first_half": 1.395,
+  "routes_agree": true,
+  "wc_gap_gated": 0.89,
+  "uptake_gap_gated": 0.173,
+  "wc_gap_raw": 4.8,
+  "wc_gap_offset": 0.8,
+  "wc_gap_offset_scale": 0.89,
+  "uptake_gap_offset": 0.149,
+  "uptake_gap_offset_scale": 0.173
+ },
+ "Digilog": {
+  "G_first_half": 1.432,
+  "G_decl_first_half": 1.269,
+  "routes_agree": false,
+  "wc_gap_gated": 2.4,
+  "uptake_gap_gated": 0.268,
+  "wc_gap_raw": 9.9,
+  "wc_gap_offset": 2.4,
+  "wc_gap_offset_scale": 2.28,
+  "uptake_gap_offset": 0.268,
+  "uptake_gap_offset_scale": 0.117
+ },
+ "IUACAAS": {
+  "G_first_half": 0.952,
+  "G_decl_first_half": 0.925,
+  "routes_agree": true,
+  "wc_gap_gated": 1.87,
+  "uptake_gap_gated": 0.043,
+  "wc_gap_raw": 10.7,
+  "wc_gap_offset": 1.77,
+  "wc_gap_offset_scale": 1.87,
+  "uptake_gap_offset": 0.052,
+  "uptake_gap_offset_scale": 0.043
+ },
+ "TheAutomators": {
+  "G_first_half": 0.736,
+  "G_decl_first_half": 0.772,
+  "routes_agree": true,
+  "wc_gap_gated": 0.96,
+  "uptake_gap_gated": 0.221,
+  "wc_gap_raw": 0.9,
+  "wc_gap_offset": 0.92,
+  "wc_gap_offset_scale": 0.96,
+  "uptake_gap_offset": 0.084,
+  "uptake_gap_offset_scale": 0.221
+ },
+ "median_over_compartments": {
+  "wc_gap_raw": 7.35,
+  "wc_gap_offset": 1.435,
+  "wc_gap_offset_scale": 1.22,
+  "wc_gap_gated": 1.39,
+  "uptake_gap_offset": 0.127,
+  "uptake_gap_offset_scale": 0.13,
+  "uptake_gap_gated": 0.167
+ }
+}

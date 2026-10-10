@@ -1,0 +1,33 @@
+{
+ "tolerance_cm": 45.72,
+ "roads": {
+  "M25": {
+   "2025-03": {
+    "units": 110,
+    "units_over_tolerance": 22,
+    "big_units": 58,
+    "big_over_tolerance": 22
+   },
+   "2025-06": {
+    "units": 119,
+    "units_over_tolerance": 13,
+    "big_units": 58,
+    "big_over_tolerance": 13
+   }
+  },
+  "M1": {
+   "2025-03": {
+    "units": 220,
+    "units_over_tolerance": 56,
+    "big_units": 128,
+    "big_over_tolerance": 56
+   },
+   "2025-06": {
+    "units": 223,
+    "units_over_tolerance": 46,
+    "big_units": 122,
+    "big_over_tolerance": 46
+   }
+  }
+ }
+}

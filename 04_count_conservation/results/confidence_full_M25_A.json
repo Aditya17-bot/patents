@@ -1,0 +1,31 @@
+{
+ "manifest": "window_full_M25_A.json",
+ "prior": "knn_spatial",
+ "seed": 0,
+ "fraction_hidden": 0.1,
+ "cap_multiple": 3.0,
+ "intervals_examined": 400,
+ "values_checked": 7514,
+ "bounded_by_physics": 7375,
+ "bounded_pct": 98.15,
+ "unbounded": 139,
+ "coverage_pct": 96.71,
+ "point_estimate_inside_pct": 100.0,
+ "median_width_vehicles": 43.4,
+ "p90_width_vehicles": 131.53,
+ "width_by_unknowns_at_node": {
+  "1": {
+   "n": 6627,
+   "median_width": 41.03
+  },
+  "2": {
+   "n": 720,
+   "median_width": 138.73
+  },
+  "3": {
+   "n": 28,
+   "median_width": 237.81
+  }
+ },
+ "seconds": 96.8
+}

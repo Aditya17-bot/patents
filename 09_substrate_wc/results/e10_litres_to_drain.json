@@ -1,0 +1,137 @@
+{
+ "n_sensor_days": 749,
+ "D_min": 3.0,
+ "V_median": 1.4,
+ "V_iqr": [
+  1.1,
+  2.2
+ ],
+ "pooled": {
+  "raw": 0.21,
+  "comm": 0.258,
+  "roll": 0.493
+ },
+ "per_sensor": {
+  "AICU_1": {
+   "days": 78,
+   "spearman": 0.052,
+   "litres_per_wc": 0.1929,
+   "days_D_ge_min": 68
+  },
+  "AICU_2": {
+   "days": 75,
+   "spearman": 0.235,
+   "litres_per_wc": 0.1923,
+   "days_D_ge_min": 75
+  },
+  "Automatoes_1": {
+   "days": 71,
+   "spearman": 0.259,
+   "litres_per_wc": 0.23,
+   "days_D_ge_min": 71
+  },
+  "Automatoes_2": {
+   "days": 71,
+   "spearman": 0.122,
+   "litres_per_wc": 0.1988,
+   "days_D_ge_min": 71
+  },
+  "Digilog_1": {
+   "days": 27,
+   "spearman": 0.393,
+   "litres_per_wc": 0.2806,
+   "days_D_ge_min": 20
+  },
+  "Digilog_2": {
+   "days": 27,
+   "spearman": 0.332,
+   "litres_per_wc": 0.2078,
+   "days_D_ge_min": 24
+  },
+  "IUACAAS_1": {
+   "days": 73,
+   "spearman": 0.2,
+   "litres_per_wc": 0.1951,
+   "days_D_ge_min": 65
+  },
+  "IUACAAS_2": {
+   "days": 73,
+   "spearman": 0.305,
+   "litres_per_wc": 0.1789,
+   "days_D_ge_min": 73
+  },
+  "Reference_1": {
+   "days": 65,
+   "spearman": 0.6,
+   "litres_per_wc": 0.1911,
+   "days_D_ge_min": 45
+  },
+  "Reference_2": {
+   "days": 65,
+   "spearman": 0.626,
+   "litres_per_wc": 0.1488,
+   "days_D_ge_min": 46
+  },
+  "TheAutomators_1": {
+   "days": 62,
+   "spearman": 0.384,
+   "litres_per_wc": 0.1846,
+   "days_D_ge_min": 57
+  },
+  "TheAutomators_2": {
+   "days": 62,
+   "spearman": 0.382,
+   "litres_per_wc": 0.2194,
+   "days_D_ge_min": 56
+  }
+ },
+ "litre_gain": {
+  "Reference": {
+   "G_litre": 1.284,
+   "G_rise": 1.222,
+   "G_decline": 1.217
+  },
+  "AICU": {
+   "G_litre": 1.003,
+   "G_rise": 1.274,
+   "G_decline": 1.819
+  },
+  "Automatoes": {
+   "G_litre": 1.157,
+   "G_rise": 1.38,
+   "G_decline": 1.395
+  },
+  "Digilog": {
+   "G_litre": 1.35,
+   "G_rise": 1.432,
+   "G_decline": 1.269
+  },
+  "IUACAAS": {
+   "G_litre": 1.091,
+   "G_rise": 0.952,
+   "G_decline": 0.925
+  },
+  "TheAutomators": {
+   "G_litre": 0.841,
+   "G_rise": 0.736,
+   "G_decline": 0.772
+  }
+ },
+ "boot_roll_minus_raw_ci95": [
+  0.212,
+  0.356
+ ],
+ "boot_roll_minus_comm_ci95": [
+  0.153,
+  0.309
+ ],
+ "n_days": 80,
+ "litre_gain_same_side_of_1_as_rise": 5,
+ "litre_gain_within_15pct_of_rise": 4,
+ "litre_gain_compartments": 6,
+ "per_sensor_spearman_median": 0.319,
+ "per_sensor_spearman_range": [
+  0.052,
+  0.626
+ ]
+}

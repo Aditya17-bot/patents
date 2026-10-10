@@ -1,0 +1,844 @@
+1 
+ 
+Experimental analysis of cavitation in a centrifugal pump using acoustic 
+emission, vibration measurements and flow visualization 
+ 
+Georgios Mousmoulis1,2,*, Nilla Karlsen-Davies2, George Aggidis2, Ioannis 
+Anagnostopoulos1 and Dimitrios Papantonis1 
+1Laboratory of Hydraulic Turbomachines, School of Mechanical Engineering, National Technical 
+University of Athens, Iroon Polytechniou 9, Zografou, Athens, 15780, Greece 
+2Lancaster University Renewable Energy Group, Department of Engineering, Lancaster 
+University, Bailrigg, Lancaster, LA1 4YW, United Kingdom,  
+*Corresponding author. E-mail address: mousmoulisgeorge@mail.ntua.gr 
+Abstract 
+The continuously increasing industrial productivity has resulted in a great breakthrough in the 
+field of maintenance on centrifugal pumps in order to ensure their optimum operation under 
+different operating conditions. One of the important mechanisms that affect the steady and 
+dynamic operation of a pump is cavitation, which appears in the low static pressure zone formed 
+at the impeller entrance region . This paper investigates the inception and development of 
+cavitation in three different impellers of a laboratory centrifugal pump with a Plexiglas casing, 
+using flow visualization, vibration and acoustic emission measurements. The aim of this study 
+is the development of an experimental tool that detects cavitation in different impellers and the 
+further understanding of the effects of blade geometry in cavitation d evelopment. The results 
+show that the geometrical characteristics  of the impeller  affect cavitation development and 
+behavior, while  an acoustic emission sensor  and an accelerometer can be applied for 
+successfully detecting the onset of this mechanism.  
+Keywords: cavitation in centrifugal pumps; diagnostics and prognostics; flow visualization; 
+noise and vibration measurements;  
+Nomenclature 
+b Blade width [mm] z Vertical distance between discharge and suction [m] 
+cn Mean radial flow velocity [m/s] β Blade angle [deg] 
+f Relative uncertainty [%] βw Relative flow direction [deg] 
+F Absolute uncertainty  λc Acceleration and friction losses coefficient [-] 
+g Acceleration due to gravity [m/s2] λw Geometrical and operating conditions coefficient [-] 
+Htot Total head of the pump [m] ρ Density [kg/m3] 
+HV Vapour Head [m] σ Thoma number [-] 
+n Number of samples [-] Φ Flow coefficient [-] 
+nq Specific speed [rpm] φ Incidence angle [deg] 
+NPSH Net positive suction head [m] Ψ Head coefficient [-] 
+Pst Static pressure [Pa] ω Rotational speed [rpm] 
+Q Total flowrate of the pump [m3/s] Subscripts 
+Qsp Impeller flowrate [m3/s] 1,2 Leading/Trailing edge of the blade 
+QLa Leakage flowrate [m3/s] Dis Discharge pipe 
+R Radius [m] FC Fully developed cavitation operating point 
+s Standard deviation i Visual inception operating point 
+t Student parameter [-] r Random uncertainty 
+T Temperature [°C] Suct Suction pipe 
+u Circumferential velocity [m/s] s Systematic uncertainty 
+v Mean flow velocity [m/s] t Total uncertainty 
+w Relative flow velocity [m/s] Y Measuring variable 
+ 
+2 
+ 
+1. Introduction  
+Cavitation is the hydrodynamic phenomenon of liquid vaporization due to local drop of static 
+pressure, which is frequently created in the suction side of centrifugal pumps and mainly at the 
+flow entrance into the impeller region, where the pressure becomes lower than the liquids 
+vapour pressure. The development of vapour bubbles in such areas can be caused by incorrect 
+pump installation (lower suction head), operation at higher than nominal rotation speeds or flow 
+rates, increased transported fluid temperature, etc., and it is more likely to happen in 
+conventional pumps without a special suction design . However, even without the above 
+conditions, the high flow velocities developed in hydrodynamic machines could locally create 
+favorable conditions for cavitation inception. After their formation, the vapour bubbles move 
+along the flow path and reach higher pressure areas, where they are reliquified. The impulsive 
+pressure waves during bubble implosion, as well as the water hammer pressures generated a s 
+the formed microjets impinge on the inter nal walls, significantly stress the material structure 
+[1, 2 ]. In addition, these pressure waves travel through the fluid and may excite structural 
+vibration. After a certain operation time under  such conditions the stressing can cause 
+significant wear and material removal , which are followed by damage of hydraulic and 
+mechanical components of the machine, such as the impeller blades, rotating shaft and bearings 
+[3, 4]. Furthermore, intense cavitation in the impeller changes the hydrodynamic shape of the 
+blades creating flow recirculation and separation regions , which subsequently decrease the 
+overall efficiency of the pump  [5]. For all thos e reasons, scientists and engineers have 
+developed various experimental methodologies in order to detect and study the  onset and  
+development of cavitation. Th ese methods mainly include sound pressure and vibration 
+measurements at a broad frequency range, and are sometimes followed by flow visualization. 
+It should be noted that there are various noise and vibration sources in centrifugal pumps, which 
+can be  separated in two main categories; hydrodynamic and mechanical sources. 
+Hydrodynamic sources relate t o the flow characteristics such as the frequencies excited by 
+turbulent flow and cavitation. Mechanical sources are linked to the rotating components of the 
+system such as the rotational speed of the shaft (RF), the blade passing frequency (BPF), and 
+the bearing frequencies.  
+Mc Nulty and Pearsall [6] used high frequency hydrophones and placed them at the suction and 
+discharge sides of different pumps. The energy of a 40 kHz signal obtained from the transducer 
+at the inlet of the pump, showed a first peak in pressure well before the pump head starts to 
+drop, which denoted the formation of the first bubbles close to impeller inlet. This phenomena 
+was confirmed with the use of a stroboscope and a camera. In addition, it was observed that a 
+further increase of vapour area decreased the noise level as a result of two mechanisms that 
+acted on the pressure waves. On the one hand, the transition of the pressure waves from the 
+liquid to the gaseous phase resulted in pressure transmission losses due to wave reflection  [7] 
+and at the same time the gaseous phase decreased the speed of sound due to compressibility 
+reasons. Those factors contributed to the drop of the energy of the signal, when the two phase 
+flow area enlarged. However, the total head of the pump was still unaffected at this point . 
+Further reduction of the cavitation coefficient, caused a sharp reduction in head, while the noise 
+continues to increase. Gopalakrishman [8] also used a high frequency Acoustic Emission (AE) 
+sensor and presented noise energ y at different frequency ranges as a function of Net Positive 
+Suction Head (NPSH). Although the noise trend was the same for the different frequency ranges 
+investigated and very similar to [6], the noise value appeared a t a higher peak and cavitation 
+detection was more apparent as the frequency band increased. Neil et al. [9] detected incipient 
+cavitation with the use of  AE sensors by measuring ultrasound energy of the signal at two 
+locations. The position of the sensor relative to the cavitation area affected the noise emitted, 
+although the onset of cavitation was depicted for both positions at the NPSH operating point 
+when an increase in AE was observed. Alfayez et al. [10] measured AE activity with sensors 
+3 
+ 
+placed in different positions in order to determine the best efficiency point (BEP) of the pump 
+and detect cavitation. The sensor placed closer to the impeller eye identified cavitation 
+inception and development as well as the BEP  of the machine. According to their results, the 
+development of large cavities resulted in noise reduction, however further decrease in the NPSH 
+value increased the energy of the signal. The increase in noise at the minimum NPSH value 
+was considered to be a result of the backflow phenomenon discussed thoroughly by Brennen 
+[11]. The backflow phenomenon appears at low flowrates when the leakage flowrate between 
+the tip of the blade and the casing becomes comparable with the impeller flowrate. Under such 
+a condition, the cavities in the suction side are strengthened due to new bubbles that are formed 
+in high speed leakage areas and recirculate in the inlet of the pump. For all the experimental 
+works presented in [6, 8-10], the maximum high frequency noise level appeared far before the 
+3% total head drop.  
+Chudina [12] studied cavitation progress in different flowrates with the use of microphones in 
+the audible frequency range. When the first bubbles appeared, the noise spectrum increase d 
+slightly both at high frequency ranges and at a few discrete frequencies. In parallel  with 
+Cernetic [13], he compared the monitoring of discrete half of BPF energy with the total noise 
+level and showed that low frequency discrete tones are sufficient enough to detect the onset of 
+cavitation regardless of the flowrate tested . Furthermore, Chudina et al.  [14] used one 
+microphone and tested three impellers with different geometrical characteristics. He showed 
+that the frequency tone used for the monitoring of cavitation could be an arbitrary frequency in 
+the audible frequency range. Similarly to [12], three different discrete tones were selected for 
+each impeller and all of them appeared a t a sharper increase than the total noise level curve. 
+Cernetic et al. [15] presented the variation of the total head and relative amplitude of vibrations 
+with the N PSH for two different pumps, one with a metallic closed impeller and one with a 
+plastic semi -open impeller. The vibration results for the two impellers are for different 
+frequencies; the metallic impeller is for a frequency band around 1600 Hz and the plas tic for 
+the discrete frequency of 148 Hz. For both pumps, the vibration relative amplitude increased 
+after the head drop but the vibration trend was different for each pump. In contrast to the semi-
+open impeller, where the vibration amplitude decreased and then rose again, the closed impeller 
+pump did not appear to experience a noise reduction. Nevertheless, in [14] the noise measured 
+for both impellers dropped sharply at the minimum NPSH tested. This indicates that different 
+noise and vibration frequency bands, in the audible range, can detect cavitation inception. This 
+was also validated in [16], where microphones and accelerometers appeared more practical in 
+terms of installation and hence more appropriate in cavitation monitoring than high frequency 
+hydrophones. In these studies, the noise and vibration appeared to have a slightly different 
+behavior with change in material. The same was observed for the frequency band studied in 
+relation to the geometrical characteristic of the impeller. For all the cases presented in [12-16], 
+the maximum noise or vibration level coincided with a 3% total head drop.  
+Zhang et al. [ 17] investigated vibration behavior with uniaxial and triaxial accelerometers in 
+seven positions close to the pump under cavitation and non-cavitation conditions. During non-
+cavitating conditions, the vibration energy was measured in a low frequency range and results 
+showed that particularly at part load conditions the rotating stall increased the amplitude of the 
+vibration energy. Under cavitating conditions, energy was measured in four different frequency 
+ranges. Similarly to [8] the vibration energy trends were similar, however the higher frequency 
+was more sensitive to the detection of the onset of cavitation . Summarizing all the previ ous 
+work, significant progress has been made in the field of detection of cavitation with different 
+techniques. The adequate selection of the frequency band of  sound pressure and vibration 
+measurements provided the information of inception of cavitation fo r a wide range of pumps. 
+However, noise and vibration curves showed a slightly different trend as cavitation became 
+more intense,  mainly due to differences in  impeller geometry  and material, and the water 
+4 
+ 
+quality. Finally different authors used flow visualization methods in order to study and detect 
+cavitation [18, 19 & 20].  High speed video analysis was used for the study of cavitating flows 
+in centrifugal pumps and authors managed to identify the onset and development of two phase 
+flow [18, 20] as well as to measure the basic dimensions of the sheet cavity [19].   
+A novelty of the present work is the simultaneous application of noise and vibration 
+measurements along with flow visualization on the same impellers, in order to compare directly 
+the signals taken from the AE and accelerometer sensors with the photos obtained from the 
+impeller, which, to our knowledge, has not reported in previous publications. This methodology 
+and set up facilitates the investigation of the onset and development of two phase flow in the 
+impeller, and makes possible to examine at which stage of the bubbles development, the sensors 
+are able to identify their appearance. An additional contribution of this work is the testing of 
+semi open impellers, whereas the majority of the exp erimental studies so far concern closed 
+impellers. In this way, the present tests allow to study the backflow cavitation mechanism, 
+together with the effect of the different geometrical characteristics of the blades on cavitation. 
+The final aim of this ongoing research is the development of a reliable and accurate cavitation 
+detection tool applicable to semi-open impellers of various geometric design and size. The three 
+impellers examined here are made from the same material and are tested under similar 
+cavitating conditions in the same test rig, whereas the casing of the pump is made from Plexiglas 
+in order to visualize internal flow conditions. 
+2. Experimental Set Up  
+2.1 Pump Lab Test Rig Description 
+Experiments were carried out in a laboratory pump in the Engineering Department at Lancaster 
+University [21]. The test circuit is sketched in Figure 1 and includes the main components of 
+the pump with all the measuring devices. Water (blue line) is pumped from the tank and passes 
+through the suction valve before it enters the centrifugal pump.  
+13
+P F
+P
+11
+6
+91
+7 8
+12
+2
+10
+3
+5
+4
+14
+ 
+Figure 1 Sketch of the laboratory test set up configuration. 1. pump, 2. accelerometer sensor, 3. DAQ for vibration 
+measurements, 4. AE sensor, 5. DAQ for AE measurements, 6. pressure transducer suction, 7. pressure transducer 
+discharge, 8. flowrate sensor, 9. electric motor and rotational speed transducer, 10. DAQ for pressure, flowrate and 
+rotational speed measurements, 11. suction valve, 12. discharge valve, 13. water tank, 14. camera   
+The casing of the pump is made from Plexiglas and three semi open impellers were used in 
+order to be able to visualize the flow. The 90° bending pipe upstream of the impelle r inlet 
+disturbs the axial symmetry of the flow and creates an additional pressure drop. This results in 
+a non -axisymmetric pressure and velocity field at the impeller inlet, and as a consequence 
+cavitation inception is expected to appear at first on the left side of the impeller eye. A camera 
+is fixed in position at the left side of the impeller in order to take comparable pictures for all 
+examined cases. After the pump, the flow passes through the flowmeter and the discharge valve, 
+which controls the flow rate, and returns to the main tank. Three different data acquisition 
+(DAQ) systems were used as shown in Figure 1; one for rotational speed, flowrate and gauge 
+pressure measurements, one for AE measurements, and one for vibration measurements. 
+5 
+ 
+2.2 Fluid Dynamic Definitions 
+For the cavitation experiments the suction static pressure is progressively reduced in order to 
+study the inception of the initial bubbles and their development. This is done by throttling the 
+suction valve in order to increase the suctio n losses and reduce NPSH value, while properly 
+regulating the discharge valve to retain the flow rate. After half minute from the opening of the 
+discharge valve the flow is stabilized and the conditions are considered to be steady state. From 
+this point and for 120 sec. the different set of data are acquired and after this, the new adjustment 
+of the suction valve follows. During the various tests done for different σ values, at this span of 
+120 sec., the macroscopic depiction of the cavitation area was remained almost unchanged. For 
+that reason, we consider that the phenomenon appeared steady state characteristics in terms of 
+its shape and the area that covers, even though microscopically exhibits transient features. The 
+NPSH value is calculated for every operating point from equation (1): 
+2
+_
+_
+2
+st Suct suct
+tot Suc V V
+P vNPSH H H H gg    
+ (1) 
+where HV is the water vapor pressure as function of temperature, P is the absolute static pressure 
+and v is the mean flow velocity in the suction pipe. For each impeller, four flowrates are tested 
+and presented in results section as a percentage of flowrate ΦBEP.  
+For each NPSH point, temperature, flow rate, gauge pressure, AE and vibration measurements 
+are taken. Furthermore, for each operating point the flow field inside the impeller is captured 
+in a photo with the use of a stroboscope and a DSLR camera.  The rotational speed ω, is kept 
+constant at 1800 rpm for all tests and the fluid temperature Τ, at 23°C. The tests are performed 
+three times in order to ensure repeatability of measurements for the flow quantities , AE, 
+vibration and the cavitation inception and development.  Total relative uncertainty for all the 
+measured and derived quantities is given in Table 1, while the evolution of AE and vibration, 
+and the area of cavitation development  inside the impeller were also repeatable. In this study 
+the NPSH value is expressed in terms of the dimensionless Thoma’s cavitation number:  
+ 
+  
+/ totNPSH H   (2) 
+where Htot is the total head calculated from equation (3): 
+22
+__
+__
+2
+st Dis st Suc Dis Suc
+tot tot Dis tot Suc
+PP vvH H H z gg
+        
+ (3) 
+where z is the vertical distance between the discharge and suction measuring points. In this 
+study, the σ and NPSH values are further specified with the use of a subscript that determines 
+the intens ity of cavitation. As a consequence, σi indicates the point where the first bubble 
+becomes visible in the impeller flow path, and σFC the point where the impeller head is reduced 
+drastically. Finally, i n order to compare the three  impeller geometries, the dimensionless 
+parameters for the flowrate and head are introduced by equations (4) and (5), respectively: 
+ 
+  
+22 /ncu  (4) 
+ 
+2
+22/ totgH u  (5) 
+where c2n is the mean radial flow velocity at the impeller outlet and u2 the circumferential 
+velocity of the impeller.  
+The total relative uncertainty of each measured variable Y, ft,Y and its propagation in the derived 
+quantities was calculated according to [22, 23]. As a consequence, ft of flowrate, suction and 
+discharge static pressure, rotational speed and temperature are calculated through equation (6): 
+6 
+ 
+ 
+22 2 2
+, , , , //t Y s Y r Y s Y Yf f f f t s n Y      
+ (6) 
+where f s is the systematic uncertainty of the measuring device, f r is the random uncertainty 
+associated with the mean value at the 95% confidence level, sY is the standard deviation of the 
+measured quantity Y, n is the number of measurements, Y̅ is Y mean value and t is the Student 
+parameter taken from [22]. Those errors are propagated in the calculations of Φ, Ψ and σ and 
+configure their levels of total uncertainty as it is shown in equations (7), (8) and (10) 
+respectively: 
+22
+, , ,t t Q tf f f   
+ (7) 
+     
+2222
+, , , , , 2 / 2
+tot tott t H t t H tot tf f f F H f       
+ (8) 
+where Ft,Htot is the total absolute uncertainty of total head calculated from equation (9): 
+     __
+22 2
+, , , , 2
+tot st Suct st Dist H t P t P t QF F F F   
+ (9) 
+ 
+22 2 2
+, , , , , /
+tot tott t NPSH t H t NPSH t Hf f f F NPSH f    
+ (10) 
+where Ft,NPSH is the total absolute uncertainty of NPSH calculated from equation (11) 
+     _
+2 2 2
+, , , , 2
+st Suctt NPSH t P t Q t TF F F F   
+ (11) 
+In this study the uncertainties related with the density ρ, gravity acceleration g , the vertical 
+distance z and the suction and discharge pipe diameters are considered insignificant and are 
+ignored. Table 1 summarizes the total relative uncertainty for all the quantities measured and 
+calculated through equations (6) to (11). 
+Table 1 Total relative uncertainty of all the measured and calculated variables 
+ Measured Variables Calculated Variables 
+Y Q Pst_Suct Pst_Dis T ω Φ Ψ σ Htot NPSH 
+fY [%] ±0.6 ±0.3 ±0.3 ±1 ±0.1 ±0.6 ±0.6 ±0.8 ±0.6 ±0.6 
+Finally, vibration value remained at acceptable levels and did not influenced the results 
+presented in this study. More specifically, the velocity RMS at the range of 10 to 1000 Hz is 
+lower than 3.2 mms -1 for all the operating points, which according to [24] equals to newly 
+commissioned general application rotordynamic pumps.  
+2.3 Influence of Impeller Geometry on Cavitation Formation 
+The performed tests include the investigation of the effect on cavitation of the blades in three 
+different geometric designs, one with curved main and splitter blades (impeller 1), one with 
+straight, radial blades (impeller 2), and one with curved , forward  blades (impeller 3), all 
+presented in Figure 2, while their main geometric and performance characteristics are tabulated 
+in Table 2. Three key geometrical characteristics are investigated: the use of splitter blades, the 
+inlet velocity triangle of the blade, and the effect of the blade width, b1, which controls the tip 
+clearance width (see Figure 3b).  
+7 
+ 
+   
+Impeller 1 Impeller 2 Impeller 3 
+Figure 2 The three impellers tested and their rotation direction 
+Table 2 Impellers Characteristics 
+Impeller 
+Specific 
+speed  
+nq [rpm] 
+No of 
+Blades 
+No of 
+Splitter 
+Blades 
+ΦBEP  
+[-] 
+ΨBEP  
+[-] 
+b1 
+[mm] 
+Tip 
+clear. 
+[mm] 
+R1 [m] R2 [m] ω 
+[rpm] 
+No. 1 843 6 6 0.097 0.7 7.46 0.97 
+0.033 0.083 1800 No. 2 738 12 0 0.077 0.98 7.53 0.9 
+No. 3 816 12 0 0.083 0.94 7.69 0.74 
+At this point, the equations that describe the cavitation development as a function of the velocity 
+triangle of the inlet of the blade are given. Gulich [25] and Lobanoff [26] provide equation (12) 
+in order to relate cavitation-free limit with the blade geometry and to estimate its value: 
+ 
+  
+ 
+22
+11 /2c n wNPSH c w g  (12) 
+where, c1n is the absolute and w1 the relative flow velocity at the blade inlet, as shown in the 
+velocity triangle sketched in Fig ure 3a. The coefficient λc accounts for the acceleration and 
+friction losses at the inlet, while λw is depended on geometrical and operating parameters. The 
+λc can vary between 1.1 and 1.35, whereas λw range from 0.1 to 2.5 depending on the cavitation 
+criterion selected (σi, σFC etc.) and the geometrical characteristics of the impeller [25].  
+The absolute inlet flow velocity c1n is calculated from equation (13), where the total flow rate 
+through the impeller, QLa, is the sum of the pump flow rate Q, the leakage flow rate Qsp and the 
+balance flow QE (Figure 3b). The latter is zero in the current study, since the impellers do not 
+have any balance holes.  
+ 
+  
+   1 1 1 1 1 / 2 / 2n La spc Q R b Q Q R b    (13) 
+where R1 and b1 is the impeller inlet radius and blade width, respectively. The relative velocity 
+w1 is calculated from the inlet velocity triangle (Figure 3a), using the peripheral velocity of the 
+impeller, u1, or the angular rotation speed, ω:  
+ 
+22 2 2
+1 1 1 1 1 nnw c u c R     
+ (14) 
+A detailed view of the pump configuration at the impeller inlet is shown in Fig ure 3b, where 
+the small tip clearance is also depicted. Τhe same nozzle and bending pipe at the inlet was used 
+for all three impellers, which have an equal inlet radius and as a result, a similar λc value can be 
+assumed [25] for the analysis. On the other hand, the λw coefficient increases with an increase 
+in incidence angle φ1 [26], (shown in the sketch of Figure 3a), together with the flow relative 
+velocity w1 at the BEP. 
+
+8 
+ 
+  
+(a) (b) 
+Figure 3 Velocity triangle at the inlet of impeller 1 (a), and detailed view of the blade inlet region and the tip 
+clearance (b).  
+The incidence angle is calculated by equation (15), as the difference between the blade angle at 
+the leading edge β1 and the relative flow direction at the inlet, β1w (Figure 3a):  
+ 1 1 1 1 1 1 arctan /wn cu      
+ (15) 
+The values of φ1, cn1 and w1 as function of the flowrate are calculated and shown in Figure  4 
+for the three impellers. The incidence angle value φ1 remains remarkably high, irrespective of 
+the flowrate, because the inlet blade angle β1 was designed to have high value in order to be 
+easier to create and study the cavitation inception. Regarding t he flow relative velocity, w1, 
+Figure 4b shows that it is much larger than cn1 for all the impellers, which highlights the greater 
+effect of the second term of equation (12) in the prediction of critical NPSH, this is also 
+discussed by Lobanoff [26]. 
+  
+Figure 4 Variation range of a) incident angle φ1, and b) flow velocities cn1, and w1 for the three impellers. 
+In addition, w 1 values are similar for the three blades, especially for the partial flowrates that 
+are tested, which desi gnates the importance of incidence angle in any differences observed 
+between the three geometries studied in this paper. Equation ( 12) is used as a qualitative -
+theoretical tool for the justification of the different visual, noise and vibration results between 
+the different impellers tested.   
+2.4 Acoustic Emission, Vibration Measurements and Flow Visualization 
+Vibration and AE measurements were obtained in order to develop an experimental technique 
+able to detect cavitation and study its development. The AE setup uses an integral preamp 
+b1 
+Plexiglas 
+Casing 
+Impeller 
+Tip Clearance 
+Q 
+Qsp 
+R1 
+c1n 
+u1 β1w 
+φ1 w1 
+QLa 
+9 
+ 
+sensor and its signal is filtered in an analog band pass filter that allows the capture of 
+frequencies in the range of 100 -150 kHz with a sampling rate , N, of 306 kHz. After signal 
+digitization, one second is divided in p=90 segments, with q=3400 values at each segment, and 
+the root mean squared (RMS) is calculated. As a result, the average RMS of the segm ents at 
+each second is calculated from equation (16): 
+ 
+  
+22
+1
+_
+1
+( ... ) /
+p
+q
+RMS ave
+i
+i
+VVAE p q
+     
+  (16) 
+where Vi is the AE raw data in Volt. Vibration measurements were carried out using a 
+piezoelectric accelerometer able to measure frequencies up to 10 kHz. Its analog signal was 
+filtered with the aid of an analog low pass filter with 10 kHz cut -off frequency. Finally, the 
+digitization of the vibration signal was done with a sampling frequency of 20 kHz in order to 
+satisfy the Nyquist theorem. Vibration signal processing includes the estimation of power 
+spectral density (PSD)  in [m 2/(s4·Hz)] units,  based on the Welch estimate [ 27], and the 
+calculation of the average power in different frequency ranges  in [m 2/s4]. For the PSD 
+estimation, the time series of the signal is separated in five segments, and a Hanning window 
+function is applied. The functions of Welch estimator for five segments and the band power are 
+given in equations (17) and (18), respectively.  
+ 
+  
+   
+251^
+10
+11() 5
+L
+jn
+Welch
+kn
+P A n w n e LU
+
+
+
+
+   (17) 
+ 
+  
+2
+1
+^
+lim
+1 ()Welchband itedP P d
+
+
+   (18) 
+where L is the length of each segment, A[n] is the digitized acceleration signal in time, w[n] is 
+the window function and U is the window normalization constant.  
+ 
+Figure 5 Positioning of AE and accelerometer sensors and of visualization window 
+The area of interest photographed with the camera as well as the positions of the AE and 
+vibration sensors are depicted in Figure 5. Both sensors are located as close to the impeller eye 
+as possible, as literature suggests [10]. The camera used in this setup is DSLR type with number 
+of recorded pixels 4752 x 3168, CMOS image sensor and max shutter speed of 0.25 msec.  In 
+the present study, flow visualization is used as a tool that confir ms the existence of cavities, 
+their onset as well as their extent and position. Flow visualization results are correlated with the 
+level of the AE and vibration measurements, enabling the development of a cavitation inception 
+criterion for all the impellers tested, associated with their geometrical characteristics. 
+Accelerometer 
+AE sensor 
+Area of Photos 
+10 
+ 
+3. Results and Discussion 
+The results presented here include the variation of the total head (Ψ), the vibration and AERMS 
+signals, and two phase flow pattern, as a function of the cavitation coefficient, σ. Firstly, the 
+changes of total head for all flowrates tested are given and discussed. Afterwards, two flowrates 
+are selected and photos of the cavitated flow in the impeller are included in order to demonstrate 
+the intensity of the phenomenon in the different impeller geometries. The photos are followed 
+by the noise and vibration results which provide useful information of the capabilities of the 
+corresponding detection tools , as well as the effect of impeller geome try on cavitation onset 
+and development.  
+3.1 Total Head as function of σ 
+Figure 6 shows the σ-Ψ curves for the three impellers at four different flowrates, expressed with 
+respect to the nominal flowrate ΦBEP. In all cases the total head is not affected as long as σ 
+values remain above 0.3 -0.35, even after the appearance of the first bubbles at σi which is 
+depicted by the unfilled markers. The bubbles are observed visually. For further reduction of σ 
+down to the σ FC value, the impeller head exhibits in all cases an abrupt and drastic drop.  
+Irrespective of the impeller tested, as the flowrate increases both σ FC and σ i values become 
+higher, due to the corresponding increase of flow velocities and the associated decrease of static 
+pressures at the suction side of the pump. 
+  
+a) Impeller 1 b) Impeller 2 
+ 
+c) Impeller 3 
+Figure 6 Variation of Ψ, with the cavitation parameter, σ, of the three impellers, for various flowrates 
+For every measured point presented in Figure 6, AE RMS, vibration measurements and photos 
+from the flow path have been taken. This makes it possible to compare the behavior of the AE 
+and accelerometer, as well as studying the onset and development of cavitation as a function of 
+impeller characteristics and its influence on the corresponding signals. 
+
+11 
+ 
+3.2 Cavitation Visualization 
+In Figure 7, t wo partial flowrates, approximately at 0.6 and 0 .8·ΦBEP, are selected for every 
+impeller in order to depict the onset and development of two phase flow. For every row (i.e. 
+flowrate) in Figure 7 the photos of the internal flow field of four σ values are presented. The σ 
+values include the σi and σFC, as well as two other operating conditions between them ( σm2, 
+σm3). In this way the development of cavitation from the inception point and first bubble 
+creation, to the pump head drop point, where the two phase flow dominates is vis ualized. For 
+all the cases tested, the first small bubbles always appear at the suction side of the leading edge 
+(LE) of the blades, as it can be observed at σi operating point of Figure 7, the area that is more 
+prone to develop minimum pressures that may allow local evaporation according to the theory 
+[3, 5 & 25]. The two phase flow zone at the onset of the phenomenon is shown with the circles 
+drawn on Figure 7.  
+For both partial flowrates presented, impeller 1 appears to have the lower σi value. The reason 
+for this behavior is the geometrical characteristics of the first impeller, which consists of six 
+blades and six splitter blades, instead of twelve blades in the case of the second and t hird 
+impeller. This results in a larger cross sectional area of flow passage at the inlet region of the 
+first impeller, and subsequently lower flow velocities and higher static pressures. In addition, 
+the first impeller has forward curved blades at the inl et, and hence the lowest flow incidence 
+angle, φ1 (see Figure 4), which, according to equation (12), improves the NPSH value and 
+makes the pump less prone to cavitation.   
+    
+σi=0.4 σm2=0.3 σm3=0.2 σFC=0.11 
+Impeller 1 - 0.6·ΦBEP 
+ 
+    
+σi=0.55  σm2=0.46 σm3=0.37 σFC=0.14 
+Impeller 1 – 0.8·ΦBEP 
+ 
+    
+σi=0. 52  σm2=0.39 σm3=0.26 σFC=0.11 
+Impeller 2 - 0.64·ΦBEP 
+ 
+    
+σi=0.58 σm2=0.43 σm3=0.36 σFC=0.16 
+Impeller 2 – 0.8·ΦBEP 
+ 
+
+12 
+ 
+    
+σi=0.57 σm2=0.43 σm3=0.24 σFC=0.1 
+Impeller 3 - 0.57·ΦBEP 
+ 
+    
+σi=0.66 σm2=0.5 σm3=0.31 σFC=0.14 
+Impeller 3 - 0.85·ΦBEP 
+Figure 7 Flow visualization for each impeller in four σ numbers and two fractions of ΦBEP 
+A reduction in the cavitation coefficient value increases the number of bubbles generated at the 
+suction side of the blade, irrespective of the impeller design,  as shown in the intermediate 
+snapshots of Figure 7, for σm2 and σm3. In the end, further reduction of σ value causes an abrupt 
+and drastic head drop due to the extended size of cavitation area between the blades (Figure 7, 
+σFC). At this operating conditions , the flow becomes very unsteady and exhibits intensive 
+recirculation and separation regions, a behaviour also observed by other researchers (e.g. Nelik 
+[28]). Furthermore, at σFC point, and depending on the flowrate, three cavitation sources may 
+coexist: a) vapour cavities formed at higher σ numbers inside the impeller due to static pressure 
+drop at the suction side of the blade inlet and are already presented at Figure 7 ; b)  vapour 
+cavities generated at the suction valve  and transferred to the elbow and at the inlet of the 
+impeller; and c)  backflow cavitation through the blade leakage area that typically appears at 
+semi-open impellers [11]. Cavitation development at σ FC is violent and extended, and almost 
+blocks the suction of the impeller. In addition, the comparison of the flow inside the impellers 
+at a similar flowrate and σFC values supports the previous discussion on the positive effect of 
+splitter blades in impeller 1. At these operating points the two phase flow area of impeller 1 is 
+less developed (mainly close to leading edge), compared to the other two impellers (unsteady 
+area extends from leading to trailing edge). 
+3.3 AE and vibration measurements 
+3.3.1 Vibration band power investigation  
+The use of band power in the vibration measurements is used as the signal processing tool for 
+the study of the onset and development of cavitation. However, before the analysis of vibration 
+results, it is necessary to justify the choice of the frequency range selected for the calculation 
+of band power. The vibration measuring system used in this study, which was described in 
+detail in section 2.4, makes it possible to measure frequencies up to 10 kHz . In addition, the 
+selection of the frequency range that will be used for the band power calculation is based on 
+the study of the Welch estimator of the PSD [27], described in equation (17). The spectrum of 
+the vibration signal in two flowrates for each impeller is presented in Figure 8. At each subplot 
+three operating points are shown; the normal operation without cavitation (black color), the first 
+bubble visual inception point (green color), and an operating point with cavitation (red color). 
+For all the operating points, it is clear that fully developed cavitation excites most of the 
+frequency spectrum, regardless of t he impeller tested. The trend of the Welch estimator is 
+similar with those presented in other works [12, 14 & 15] at the same frequency range, with the 
+use of microphones. At the range of 0-3 kHz the amplitude differences are indiscernible due to 
+the cavitation interaction with the low frequency mechanical noise caused mainly by the BPF 
+
+13 
+ 
+and its harmonics [ 15]. However, at higher frequencies those harmonics become weaker and 
+the broadband noise increases due to a more pronounced cavitation effect (Figure 8). The 
+increase of amplitude starts at about 3 kHz but becomes systematically sharper in the 5-10 kHz 
+range. As expected, the difference in amplitudes are less distinct between the cavitation onset 
+and no cavitation operating points (green and black curves, respectively), but for the majority 
+of the studied cases they are still recognizable.  This indicates that the calculation of the band 
+power frequency in the range of 5 -10 kHz can detect the inception of cavitation, as it was 
+discussed also in [17]. Similar behaviour is observed for the remaining flowrates tested in this 
+study, though their spectrum is not presented here.  
+   
+  
+  
+  
+  
+  
+Figure 8 Spectrum of vibration measurements for two flow rates of each impeller, at three different σ values: no 
+cavitation (σ > σi, black), visual inception (σi, green), and developed cavitation (σ < σi, red)  
+3.3.2 AE and vibration results 
+Figures 9, 10 and 11 show the AERMS and vibration band power calculations as a function of σ, 
+where the unfilled marker at each flowrate depicts again the σi. Similarly to Figure 6, the critical 
+σ value where both the vibration band power and the AE RMS raise, becomes higher as the 
+flowrate increases. The visual inception point is consistent with the photos in Figure 7, and for 
+
+14 
+ 
+all tests the AERMS value starts to increase at the point of the first bubble appearance. The high 
+frequency range energy captured by the AE sensor shows a remarkable sensitivity and 
+capability to detect the first bubbles implosion, in accordance with Gulich’s findings [25]. In 
+addition, impeller 1 exhibits by far the lowest AE and vibration ranges for similar flowrates due 
+to the effect of the splitter blades discussed in section 3.2.  
+  
+  
+Figure 9 Noise and vibration as function of σ for Impeller 1 and flowrate: a) 0.4·ΦBEP, b) 0.6·ΦBEP, c) 0.8·ΦBEP 
+and d) 1·ΦBEP   
+The incremental trend of AERMS at the point of visual inception is sharper for the first and third 
+impeller (Figures 9 and 11) than in the second (Figure 10). However, in the latter impeller the 
+appearance of the first bubble was difficult to capture with the camera because the vapour area 
+was extremely small and its appearance was not stable. Nevertheless, when σ value decreases 
+further, cavitation appearance is stabilized and the AERMS values increase more sharply (Figure 
+10). Also, for 0.43 and 0.85·ΦBEP at impeller 3, a very slight increase in AERMS was noticed for 
+σ values higher than σi, for two possible reasons. Either bubbles do appear but the 
+camera/stroboscope cannot capture them due to the very high frequency of creation/implosion 
+or cavities are created in the elbow before the pump inlet, as discussed in [6] and [25].The 
+vibration band power drawn in the same Figures 9 to 11, exhibits a very  similar trend to the 
+AERMS values for the majority of the operating conditions tested. However, the increase of the 
+band power starts at slightly lower σ values than σi, especially for the higher flow rates (Figures 
+9c, 10a, b, c, d and 11c, d).  
+This behavior is the result of the lower frequency range used for vibration analysis compare to 
+AE, which includes low frequency mechanical noise. Further  reduction of σ value results in 
+increased number of bubbles, though the cavitation area remains small and res tricted. This 
+could be observed in Figure 7, where photos taken for σ m2 values are presented. The 
+enlargement of the two phase flow area is accompanied with an increase in noise and vibration 
+signals, irrespective of the impeller and the flowrate (Figures 9 to 11). The vibration band power 
+curve follows the trend of the AE curve and in almost all cases both curves reach a local 
+maximum point. The local maximum point as a function of flowrate behaves differently for the 
+
+15 
+ 
+AE and vibration measurements and for the various impellers, and hence, it is difficult to extract 
+specific correlations.  
+  
+  
+Figure 10 Noise and vibration as a function of σ for Impeller 2 and flowrate: a) 0.48·ΦBEP, b) 0.64·ΦBEP, c) 
+0.8·ΦBEP and d) 0.96·ΦBEP  
+  
+  
+Figure 11 Noise and vibration as a function of σ for Impeller 3 and flowrate: a) 0.43·ΦBEP, b) 0.57·ΦBEP, c) 
+0.71·ΦBEP and d) 0.85·ΦBEP  
+
+16 
+ 
+From that point, as σ takes even smaller values, the cavitation area enlarges and becomes more 
+unstable and disintegrating at the edges, where bubbles are detached and collapsed in the flow 
+stream. At these operating points that correspond to σm3 pictures in Figure 7, the AERMS and the 
+majority of the vibration band power measurements start to diminish (Fig ures 9 to 11). 
+According to Gulich [25] the main cause of this decrease is the drop of the pressure differential 
+between the pressure of the surrounding liquid and vapor pressure due to the increase of bubble 
+volume and thus the rise of the compressibility of the medium. This noise and vibrati on 
+behavior has also been observed and discussed by several authors [6, 9, 10, 11, 12 & 15]. As σ 
+reduces towards the σFC value, the flow becomes extremely unsteady with complex cavitation 
+pattern, as discussed in section 3.2. At this operating point impeller 1 behaves differently, in 
+terms of noise and vibration, than the other two impellers , due to its better suction 
+characteristics, discussed also in section 3.2 (cavitation region remains more concentrated and 
+stable even at small σ values). The vibration band power and AERMS continue to decrease after 
+the local maximum point, until the lowe st measured σFC value (Fig ure 9). Hence, the 
+compressibility mechanism discussed previously still prevails in this σ range. On the contrary, 
+the vibration band power and AE signals for impellers 2 and 3 increase inversely proportional 
+to σ value and maximize at the lowest tested value, σFC (Figs. 10 and 11) . This behavior is 
+possibly due to the result of two mechanisms that coexist at part load conditions. On the one 
+hand, vibrations increase due to an increase in the blade incidence angle (Figure 4), and the 
+intensity of the flow turbulence in the pump. According to [25-27 & 29], in low specific speed 
+machines operating at part load conditions the flow becomes three dimensional and strong 
+recirculation regions are created in the impeller flow path. The large eddies formed at those 
+recirculation areas excite pressure pulsations that raise the overall energy of the vibration signal, 
+even for operating conditions with σ value higher than σi.  
+ 
+Figure 12 Vibration RMS in different flowrate fractions for σ>0.75 for the three impellers 
+In order to confirm this argument, the vibration RMS level for the flowrates tested here and at 
+operating points without cavitation ( σ>0.75) was measured and the results are presented in 
+Figure 12. It can be observed that the RMS level increases almost linearly as the flow rate 
+reduces for all three impellers. These results agree with the findings of Alfayez [10] who 
+identified the BEP of a large centrifugal pump using an AE sensor, and with Zhang [17] who 
+measured the low frequency band vibration signals and both RMS values exhibited similar 
+trend to the present study. Moreover, the above mechanism can also explain the higher vibration 
+RMS values measured for impeller 3 compared to impeller 2 (Figs. 11 and 10, respectively), 
+since the forward curved outlet shape of impeller 3 blades (Fig. 2) create more complex and 
+non-uniform flow field in this imp eller. The second instability mechanism at part load 
+conditions, is due to the accelerated and highly cavitating flow that reenters the impeller inlet 
+region after passing through the narrow clearance between the blade s and the pump casing. 
+According to Br ennen [10] the backflow cavitation becomes more intense when the leakage 
+flowrate becomes comparable with the pump flowrate, therefore at part load conditions. Finally, 
+the AERMS level variation with σ exhibits a relatively similar pattern and values for the second 
+
+17 
+ 
+and third impeller, and moreover, the corresponding curves remain comparable for all flowrates 
+tested, as can be seen in Figs. 10 and 11. Therefore, the AE signals do not seem to be affected 
+by the turbulence intensity and the backflow cavitation mechanisms. On the contrary, the results 
+in Figs. 10 and 11 show a small decrease in AERMS values as the flowrate is reduced. A possible 
+explanation for this behavior is that the backflow cavitation disintegrates the main c avity 
+formed at the blade suction side and distributes the bubbles within the entire flow passage (Fig. 
+7, for σFC), thus causing a smoothing effect on the AE signal. This effect becomes stronger as 
+the backflow cavitation becomes more intense compared to the main flow, namely when the 
+pump flowrate reduces. On the other hand, the cavitation region in impeller 1  remains more 
+concentrated for the lowest σFC value tested (Fig. 7), and as a result, the AE RMS levels remain 
+about the same for all flowrates (Fig. 9).  
+4. Conclusions 
+This study discusses the inception and development of cavitation in three different impellers of 
+a centrifugal pump made from Plexiglas with the use of flow visualization, acoustic emissions 
+and vibration monitoring. The total head, AERMS and vibration band power curves are derived 
+as function of the cavitation coefficient, σ, and interesting observations are made by comparing 
+pictures taken from inside the impeller. More specifically, σi values for cavitation inception 
+increase with the flowrate, regardless of the impeller tested, due to the flow acceleration. The 
+first bubbles always appear at the suction side of the leading edge  of the blade , and the 
+maximum values of noise and vibration are obtained much before the drop of pump head. Both 
+the AE sensor and accelerometer were able to identify cavitation far before the total head drop 
+operating point. The AE sensor was able to detect the appearance of the first visible bubble 
+inside the impeller. The vibration trends are very similar to the AE trend, however, the lower 
+frequency range used for the vibration analysis compared to AE, resulted in delays in detection 
+of the first bubble at some operating points.  
+Further decrease of σ value results in an increasing number of bubbles and con sequently 
+intensifies the noise and vibration of the machine. However, after some point a decrease of σ is 
+found to temporarily reduce the noise and vibration emitted, because the vapor phase absorbs 
+part of the sound.  At the fully developed cavitation point the total pump head drops and the 
+flow bec omes very turbulent with large separation and cavitating regions. Comparisons 
+between the three impeller results produce interesting conclusions on the effect of geometrical 
+characteristics and of loading conditions in their cavitation behavior. At first, the lower 
+incidence angle and the use of splitter blades of the first impeller result s in milder noise and 
+vibration characteristics through the entire σ range tested. The increasing turbulence intensity 
+and the backflow cavitation mechanism seem to be responsible for the observed increase in 
+vibration band power at part load conditions, when the flow between the blades becomes less 
+uniform, with strong 3D characteristics and internal recirculation zones. On the other hand, the 
+AERMS levels do not seem to be affected much by the flow turbulence, whereas the backflow 
+cavitation mechanism might smoothen out at some degree at corresponding signals. The 
+understanding of the internal flow characteristics could be significantly benefited from the use 
+of a computational (CFD) model. Thus, the next step of the present work is focused on the 
+development and validation of a CFD tool that could simulate pump operation under cavitating 
+conditions.   
+References 
+[1] S. C. Li, Cavitation of hydraulic machinery (V ol. 1), World Scientific, 2000. 
+[2] Y. Tomita, A. Shima, High-speed photographic observations of laser -induced cavitation 
+bubbles in water, Acustica, Vol. 71(3) (1985) 161-171. 
+[3] C. E. Brennen, Fundamentals of multiphase flow Cambridge University Press, 2005. 
+[4] G. M. Wood, J.S. Murphy, J. Farquhar, An Experimental Study of Cavitation in a Mixed 
+Flow Pump Impeller, J. of Basic Engineering, Vol. 82(4) (1960) 929-940. 
+18 
+ 
+[5] D. Papantonis, Hydrodynamic machines, hydrodynamic transmissions, Symeon, Athens, 
+Greece (in Greek), 2009. 
+[6] P. J. McNulty, I.S. Pearsall, Cavitation Inception in Pumps, J . of Fluids Engineering, V ol. 
+104(1) (1982) 99-104. 
+[7] D. Ross, Mechanics of underwater noise, Elsevier, 2013. 
+[8] S. Gopalakrishman, Modern cavitation criteria for centrifugal pumps, Proc. of the Second 
+Int. Pump Symp., Turbomachinery Laboratory, Texas A&M University, College station , 
+(1985). 
+[9] G. D. Neill, R. L. Reuben,P. M. Sandford, E.R. Brown, J. A. Steel, Detection of incipient 
+cavitation in pumps using acoustic emission, Proceedings of the Institution of Mechanical 
+Engineers, Part E: J. of process mechanical engineering, Vol. 211(4) (1997) 267-277. 
+[10] L. Alfayez, D. Mba, G. Dyson, Detection of incipient cavitation and the best efficiency 
+point of a 2.2 MW centrifugal pump using Acoustic Emission, J . of Acoustic Emission, Vol. 
+22(2004) 77-82. 
+[11] C. E. Brennen, Hydrodynamic of pumps, Cambridge University Press, 2011. 
+[12] M. Chudina, Noise as an indicator of cavitation in a centrifugal pump, Acoustical Physics, 
+Vol. 49(4) (2003) 463-474. 
+[13] J. Černetič, M. Čudina, Cavitation noise phenomena in centrifugal pumps, 5th Congress of 
+Alps-Adria Acoustics Assosiation, Petrcane, Croatia, 12-14 September 2012. 
+[14] M. Chudina, J. Prezelj, Detection of cavitation in operation of kinetic pumps. Use of 
+discrete frequency tone in audible spectra, Applied Acoustics, 70(4) (2009) 540-546. 
+[15] J. Cernetič, J. Prezelj, M. Chudina, Use of noise and vibration signal for detection and 
+monitoring of cavitation in kinetic pumps, The Journal of the Acoustical Society of America, 
+Vol. 123(5) (2008) 3316-3316. 
+[16] M. Chudina, J. Prezelj, Detection of cavitation in situ operation of kinetic pumps: Effect 
+of cavitation on the characteristic discrete frequency component, Applied acoustics, 70(9)  
+(2009) 1175-1182. 
+[17] N. Zhang, M. Yang, B. Gao, Z. Li, Vibration characteristics induced by cavitation in a 
+centrifugal pump with slope volute, Shock and Vibration, Vol. 2015(2015). 
+[18] O. Coutier-Delgosha, R. Fortes-Patella, L. Reboud, M. Hofmann, B. Stoffel, Experimental 
+and numerical studies in a centrifugal pump with two-dimensional curved blades in cavitating 
+condition, Journal of Fluids Engineering, 125.6 (2004) 970-978. 
+[19] H. Liu, D. Liu, Y. Wang, X. Wu, J. Wang, H. Du, Experimental investigation and 
+numerical analysis of unsteady attached sheet cavitating flows in a centrifugal pump, Jo urnal 
+of Hydrodynamics, Ser. B 25.3 (2013) 370-378 
+[20] D. Zhang, W. Shi, D. Pan, M. Dubuisson, Numerical and Experimental Investigation of 
+Tip Leakage Vortex Cavitation Patterns and Mechanisms in an Axial Flow Pump, Journal of 
+Fluids Engineering. Vol. 137, 121103 (2015) 
+[21] G. Aggidis, http://www.lancaster.ac.uk/lureg. 
+[22] IEC 60193, Hydraulic turbines, storage pumps and pump turbines Model acceptance tests, 
+(1999–2011).  
+[23] I. Farrance, R. Frenkel, Uncertainty of measurement: a review of the rules for calculating 
+uncertainty components through functional relationships , The Clinical Biochemist Reviews, 
+33(2), 49 (2012). 
+[24] ISO (2009), 10816 -7, Mechanical vibration - Evaluation of machine vibration b y 
+measurements on non-rotating parts - Part 7: Rotodynamic pumps for industrial applications, 
+including measurements on rotating shafts. 
+[25] J. F. Gülich, Centrifugal pumps, Springer, 2008. 
+[26] V.S. Lobanoff, R. R. Ross, Centrifugal pumps: design and application, Elsevier, 2013. 
+[27] P. Welch, The use of fast Fourier transform for the estimation of power spectra: a method 
+based on time averaging over short, modified periodograms, IEEE Transactions on audio and 
+electroacoustics, 15(2) (1967) 70-73. 
+[28] L. Nelik, Centrifugal & Rotary Pumps: Fundamentals with Applications, CRC Press, 1999. 
+[29] P. Hergt, J. Starke, Flow patterns causing instabilities in the performance curves of 
+centrifugal pumps with vaned diffusers, In Proc. of the 2nd Int. Pump Symp., (1985) 67-75. 

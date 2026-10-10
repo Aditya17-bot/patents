@@ -1,0 +1,26 @@
+manifest window_full_M25_A.json, 6649 values checked over 400 intervals
+bounded by the physics: 99.76%  (the rest are not pinned down by any node)
+true value inside the certified interval: 96.47%
+median certified width: 47.75 vehicles per interval
+width by number of unknowns sharing the node:
+   1 unknown(s): n=6287   median width   44.3
+   2 unknown(s): n=335    median width  139.9
+   3 unknown(s): n=11     median width  165.2
+wrote results/confidence_recovered_M25_A.json in 1024s
+manifest window_M1_A.json, 4211 values checked over 400 intervals
+bounded by the physics: 99.26%  (the rest are not pinned down by any node)
+true value inside the certified interval: 95.18%
+median certified width: 29.65 vehicles per interval
+width by number of unknowns sharing the node:
+   1 unknown(s): n=3957   median width   28.7
+   2 unknown(s): n=223    median width  155.2
+wrote results/confidence_recovered_M1_A.json in 315s
+manifest window_M1_A.json, 4215 values checked over 400 intervals
+bounded by the physics: 98.27%  (the rest are not pinned down by any node)
+true value inside the certified interval: 94.85%
+median certified width: 30.54 vehicles per interval
+width by number of unknowns sharing the node:
+   1 unknown(s): n=3772   median width   28.7
+   2 unknown(s): n=367    median width   99.3
+   3 unknown(s): n=3      median width   73.0
+wrote results/confidence_surveyed_M1_A.json in 124s

@@ -1,0 +1,6 @@
+  pairs 959, adjacent after ordering 229, self floor 0.902%
+  junction candidates 1043
+{'pairs': 959, 'adjacent': 229, 'self_floor_pct': 0.902, 'limit_pct': 1.804} secs 94
+found sizes Counter({3: 217, 2: 196, 4: 26, 5: 14})
+exact hits by size Counter({2: 118, 3: 20, 4: 1}) of Counter({2: 156, 3: 28, 4: 15})
+member-set hits by size Counter({2: 118, 3: 20, 4: 1})

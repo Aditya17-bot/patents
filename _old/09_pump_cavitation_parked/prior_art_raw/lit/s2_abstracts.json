@@ -1,0 +1,92 @@
+{
+ "Novel method for detecting cavitation in centrifugal pump with frequency converter": {
+  "err": "HTTP Error 429: "
+ },
+ "Frequency-converter-based hybrid estimation method for the centrifugal pump operational state": {
+  "err": "HTTP Error 429: "
+ },
+ "Cavitation detection in centrifugal pumps using pressure time-domain features": {
+  "total": 29,
+  "offset": 0,
+  "next": 2,
+  "data": [
+   {
+    "paperId": "7a29ec14e4543b068cbfeb102bf5e6c97ef4a42a",
+    "externalIds": {
+     "DBLP": "journals/elektrik/SamanipourPS17",
+     "MAG": "2762101671",
+     "DOI": "10.3906/ELK-1701-2",
+     "CorpusId": 13806611
+    },
+    "title": "Cavitation detection in centrifugal pumps using pressure time-domain features",
+    "venue": "Turkish J. Electr. Eng. Comput. Sci.",
+    "year": 2017,
+    "openAccessPdf": {
+     "url": "https://doi.org/10.3906/elk-1701-2",
+     "status": "BRONZE",
+     "license": null,
+     "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.3906/ELK-1701-2?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3906/ELK-1701-2, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "72045453",
+      "name": "Pouya Samanipour"
+     },
+     {
+      "authorId": "2275231",
+      "name": "J. Poshtan"
+     },
+     {
+      "authorId": "48939263",
+      "name": "H. Sadeghi"
+     }
+    ],
+    "abstract": null
+   },
+   {
+    "paperId": "e90c04848a63f7444fe31d5bb61d07fe63f54e32",
+    "externalIds": {
+     "MAG": "2075886253",
+     "DOI": "10.1115/DETC2005-84363",
+     "CorpusId": 110415865
+    },
+    "title": "Cavitation Detection of a Centrifugal Pump Using Noise Spectrum",
+    "venue": "",
+    "year": 2005,
+    "openAccessPdf": {
+     "url": "",
+     "status": "CLOSED",
+     "license": null,
+     "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1115/DETC2005-84363?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1115/DETC2005-84363, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+     {
+      "authorId": "5549017",
+      "name": "S. F. Chini"
+     },
+     {
+      "authorId": "6084475",
+      "name": "H. Rahimzadeh"
+     },
+     {
+      "authorId": "1730813",
+      "name": "M. Bahrami"
+     }
+    ],
+    "abstract": null
+   }
+  ]
+ },
+ "Model-based fault detection in a centrifugal pump application": {
+  "err": "HTTP Error 429: "
+ },
+ "Experimental analysis of cavitation in a centrifugal pump using acoustic emission, vibration measurements and flow visualization": {
+  "err": "HTTP Error 429: "
+ },
+ "Cavitation diagnosis method of centrifugal pump based on characteristic frequency and kurtosis": {
+  "err": "HTTP Error 429: "
+ },
+ "Pump cavitation various NPSHR criteria NPSH margins and impeller life expectancy": {
+  "err": "HTTP Error 429: "
+ }
+}

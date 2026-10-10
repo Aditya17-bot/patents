@@ -1,0 +1,21 @@
+C:\adi\patent 2\src\faults.py:148: RuntimeWarning: Mean of empty slice
+  mean = np.nanmean(block, axis=1)
+203 relations, 109 eligible, 40 under test
+C:\adi\patent 2\src\faults.py:259: RuntimeWarning: Mean of empty slice
+  mean = np.nanmean(block, axis=1)
+{'mode': 'none', 'magnitude': 0.0, 'trials': 120, 'detected': 0.0333, 'attributed_correctly': 0.0, 'mae_before': 0.0, 'mae_after': {'parametric': 0.0, 'substitution': 0.0, 'auto': 0.0}, 'innocent_corrections': 4, 'innocent_mae_introduced': 7.88}
+C:\adi\patent 2\src\correction.py:63: RuntimeWarning: All-NaN slice encountered
+  est = np.nanmedian(np.vstack(per), axis=0)
+{'mode': 'scale', 'magnitude': 0.8, 'trials': 120, 'detected': 0.9917, 'attributed_correctly': 0.9167, 'mae_before': 85.81, 'mae_after': {'parametric': 4.62, 'substitution': 9.84, 'auto': 4.62}, 'innocent_corrections': 9, 'innocent_mae_introduced': 53.18, 'error_removed_pct_auto': 94.6}
+{'mode': 'scale', 'magnitude': 0.9, 'trials': 120, 'detected': 1.0, 'attributed_correctly': 0.9, 'mae_before': 43.93, 'mae_after': {'parametric': 2.98, 'substitution': 8.3, 'auto': 2.98}, 'innocent_corrections': 12, 'innocent_mae_introduced': 23.02, 'error_removed_pct_auto': 93.2}
+{'mode': 'scale', 'magnitude': 0.95, 'trials': 120, 'detected': 0.9583, 'attributed_correctly': 0.8583, 'mae_before': 21.6, 'mae_after': {'parametric': 1.64, 'substitution': 6.43, 'auto': 1.64}, 'innocent_corrections': 12, 'innocent_mae_introduced': 21.56, 'error_removed_pct_auto': 92.4}
+{'mode': 'scale', 'magnitude': 1.05, 'trials': 120, 'detected': 0.9333, 'attributed_correctly': 0.9, 'mae_before': 22.14, 'mae_after': {'parametric': 1.22, 'substitution': 6.69, 'auto': 1.22}, 'innocent_corrections': 4, 'innocent_mae_introduced': 17.4, 'error_removed_pct_auto': 94.5}
+{'mode': 'scale', 'magnitude': 1.1, 'trials': 120, 'detected': 0.95, 'attributed_correctly': 0.9167, 'mae_before': 43.08, 'mae_after': {'parametric': 1.87, 'substitution': 7.28, 'auto': 1.87}, 'innocent_corrections': 4, 'innocent_mae_introduced': 47.8, 'error_removed_pct_auto': 95.7}
+{'mode': 'offset', 'magnitude': -30.0, 'trials': 120, 'detected': 1.0, 'attributed_correctly': 0.9417, 'mae_before': 28.57, 'mae_after': {'parametric': 3.46, 'substitution': 8.66, 'auto': 3.46}, 'innocent_corrections': 7, 'innocent_mae_introduced': 29.62, 'error_removed_pct_auto': 87.9}
+{'mode': 'offset', 'magnitude': -15.0, 'trials': 120, 'detected': 1.0, 'attributed_correctly': 0.9167, 'mae_before': 14.57, 'mae_after': {'parametric': 2.19, 'substitution': 7.25, 'auto': 2.19}, 'innocent_corrections': 10, 'innocent_mae_introduced': 14.72, 'error_removed_pct_auto': 85.0}
+{'mode': 'offset', 'magnitude': -8.0, 'trials': 120, 'detected': 0.975, 'attributed_correctly': 0.8417, 'mae_before': 7.91, 'mae_after': {'parametric': 1.78, 'substitution': 6.71, 'auto': 1.78}, 'innocent_corrections': 16, 'innocent_mae_introduced': 5.84, 'error_removed_pct_auto': 77.5}
+{'mode': 'offset', 'magnitude': 8.0, 'trials': 120, 'detected': 0.9583, 'attributed_correctly': 0.8417, 'mae_before': 8.0, 'mae_after': {'parametric': 1.72, 'substitution': 6.61, 'auto': 1.72}, 'innocent_corrections': 14, 'innocent_mae_introduced': 5.36, 'error_removed_pct_auto': 78.5}
+{'mode': 'offset', 'magnitude': 15.0, 'trials': 120, 'detected': 1.0, 'attributed_correctly': 0.9417, 'mae_before': 15.0, 'mae_after': {'parametric': 1.68, 'substitution': 7.54, 'auto': 1.68}, 'innocent_corrections': 7, 'innocent_mae_introduced': 13.29, 'error_removed_pct_auto': 88.8}
+{'mode': 'offset', 'magnitude': 30.0, 'trials': 120, 'detected': 1.0, 'attributed_correctly': 0.9417, 'mae_before': 30.0, 'mae_after': {'parametric': 2.36, 'substitution': 8.41, 'auto': 2.36}, 'innocent_corrections': 7, 'innocent_mae_introduced': 27.41, 'error_removed_pct_auto': 92.1}
+{'mode': 'stuck', 'magnitude': 0.0, 'trials': 120, 'detected': 0.9417, 'attributed_correctly': 0.875, 'mae_before': 265.33, 'mae_after': {'parametric': 17.17, 'substitution': 17.17, 'auto': 17.17}, 'innocent_corrections': 8, 'innocent_mae_introduced': 63.33, 'error_removed_pct_auto': 93.5}
+wrote results/correction_M1_A.json

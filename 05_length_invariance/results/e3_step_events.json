@@ -1,0 +1,78 @@
+{
+ "rule": {
+  "min_step": 0.03,
+  "day_tol": 1,
+  "cancel_tol": 0.3,
+  "min_days_each_side": 5
+ },
+ "roads": {
+  "M25": {
+   "detectors_tested": 90,
+   "events": [
+    {
+     "detector": "1133",
+     "day_index": 107,
+     "step_upstream_pair": -0.0448,
+     "step_downstream_pair": 0.0529
+    },
+    {
+     "detector": "5986",
+     "day_index": 31,
+     "step_upstream_pair": -0.0872,
+     "step_downstream_pair": 0.0874
+    }
+   ],
+   "n_events": 2,
+   "control_events": 0,
+   "control_trials": 1800,
+   "event_rate": 0.0222,
+   "control_rate": 0.0
+  },
+  "M1": {
+   "detectors_tested": 145,
+   "events": [
+    {
+     "detector": "18900",
+     "day_index": 25,
+     "step_upstream_pair": -0.0572,
+     "step_downstream_pair": 0.0583
+    },
+    {
+     "detector": "1932",
+     "day_index": 97,
+     "step_upstream_pair": -0.0868,
+     "step_downstream_pair": 0.0792
+    },
+    {
+     "detector": "2602",
+     "day_index": 74,
+     "step_upstream_pair": -0.4128,
+     "step_downstream_pair": 0.458
+    },
+    {
+     "detector": "2793",
+     "day_index": 33,
+     "step_upstream_pair": 0.1046,
+     "step_downstream_pair": -0.1067
+    },
+    {
+     "detector": "332",
+     "day_index": 95,
+     "step_upstream_pair": -0.3038,
+     "step_downstream_pair": 0.3375
+    },
+    {
+     "detector": "405",
+     "day_index": 35,
+     "step_upstream_pair": 0.0659,
+     "step_downstream_pair": -0.0616
+    }
+   ],
+   "n_events": 6,
+   "control_events": 0,
+   "control_trials": 2900,
+   "event_rate": 0.0414,
+   "control_rate": 0.0
+  }
+ }
+}

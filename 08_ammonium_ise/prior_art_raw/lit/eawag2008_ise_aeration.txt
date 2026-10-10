@@ -1,0 +1,637 @@
+https://www.dora.lib4ri.ch/eawag/dload/eawag:5965/PDF/view
+Potential of in-situ sensors with ion-selective electrodes
+for aeration control at wastewater treatment plants
+D. Kaelin, L. Rieger, J. Eugster, K. Rottermann, C. Ba¨ nninger
+and H. Siegrist
+ABSTRACT
+D. Kaelin
+J. Eugster
+K. Rottermann
+C. Banninger
+H. Siegrist
+Eawag, Swiss Federal Institute of Aquatic Science
+and technology,
+Uberlandstrasse 133,
+PO Box 611, 8600
+Dubendorf,
+Switzerland
+E-mail: david.kaelin@eawag.ch;
+siegrist@eawag.ch
+L. Rieger
+modelEAU, Departement de ge nie civil,
+Universite Laval, Pavillon Adrien-Pouliot,
+1065 av. de la Medecine,
+Quebec, QC G1V 0A6,
+Canada
+E-mail: leiv.rieger@gci.ulaval.ca
+A pilot-scale activated sludge wastewater treatment plant (WWTP) operated with nitriﬁcation and
+pre-denitriﬁcation was monitored with a set of on-line sensors for over 3 years. Wet-chemistry
+ex-situ analyzers, UV and UV-Visible in-situ sensors and in-situ sensors based on ion-selective
+electrodes (ISE) were used. New ISE sensors for ammonium, nitrate and nitrite, adapted to water
+and wastewater matrices, have been released in recent years, With adequate quality control they
+proved to be highly accurate and reliable in WWTP inﬂuents and activated sludge (AS) reactors even
+at the end of the biological treatment zone, working at low ammonium concentrations
+(1–2 mgN/l). The ammonium measurement was used to test several feed-forward and feed-back
+aeration control strategies. The ﬁrst aim was to keep inorganic nitrogen compounds, i.e.
+ammonium, nitrate and particularly nitrite, as low as possible in the efﬂuent, and within Swiss
+national standards (,2.0 mgNH
+4-N/l, ,0.3 mgNO2-N/l, 24 h average). All the strategies were
+successful at keeping ammonium low and subsequently at gaining denitriﬁcation capacity to
+signiﬁcantly reduce the total nitrogen discharge. Some control strategies however generated
+temporary peaks of ammonium or even accumulation of nitrite.
+Key words | activated sludge, aeration control, ammonium, in-situ sensors, ion selective electrode
+INTRODUCTION
+In the past three decades instrumentation, control and
+automation (ICA) for wastewater treatment plants (WWTPs)
+made major progresses in particular with regard to actuators,
+computing power and data storage or control theory (see
+Lynggaard-Jensen 1999; Olsson 2006 for reviews). However,
+despite these advances, the search of appropriate instrumenta-
+tion for real time control (RTC) at WWTPs remains a very
+actual issue. As one of the weak links in ICA, sensors, and in
+particular in-situ sensors for nutrients, have an increasing
+potential (Jeppsson et al. 2002; Bonastre et al. 2005).
+In this work, a difference is made between two
+measurement methods:
+† In-situ sensors measure directly in the process matrix,
+without external pumping and without any sample
+preparation. Together with a short response time, this
+allows total data acquisition times of few seconds. Time
+and costs for operation and maintenance (O þ M) can
+also be signiﬁcantly lower than for ex-situ analyzers
+(Winkler et al. 2004). In-situ sensors however necessitate
+regular external calibration and quality control.
+† Ex-situ analyzers require pumping (often in a closed loop)
+and normally pre-treatment (ﬁltration) of samples. Succes-
+sive samples are processed in a batch mode or Continu-
+ously. Response times depend on analytical methods and
+typically range from 5– 25 min for the whole system
+(sampling, analyzer and pre-treatment). Ex-situ analyzers
+often require time consuming maintenance and costly
+reagents and regular exchange of spare parts.
+In-situ sensors for temperature, pH, conductivity, redox
+potential or suspended solids (SS) for example are common
+doi: 10.2166/wst.2008.433
+629 Q IWA Publishing 2008 Water Science & Technology WST | 58.3 | 2008
+Eawag 05497
+practice and nearly every plant in Europe is equipped with
+in-situ sensors for dissolved oxygen (DO) (see Vanrolle-
+ghem & Lee 2003 for a review). This already enabled
+improved monitoring and control in WWTPs, e.g. RTC of
+aeration (DO setpoint) by varying air ﬂow or pressure or
+RTC of sludge inventory by measuring SS in the AS reactor
+and varying the waste sludge ﬂow.
+The on-line measurements of nutrients with ex-situ
+analyzers can be used for process control; to optimize
+nitriﬁcation, denitriﬁcation or enhanced biological phos-
+phorus removal (EBPR) by adjusting aeration intensity
+(varying DO setpoints or intermittent aeration) or changing
+internal recirculation or return AS ﬂows ( Ingildsen &
+Olsson 2002; Jeppsson et al. 2002; Olsson et al. 2005 for an
+overview). Ingildsen & Wendelboe (2003) for example
+reported successful implementations of RTC for nutrient
+removal in AS systems using miniaturized analyzers which
+were directly submerged into the liquid medium. However
+as mentioned earlier, the use of ex-situ analyzers can still be
+associated with high costs (investment, reagents, mainten-
+ance) and need for intensive skilled maintenance.
+Recent developments of in-situ sensors for nutrients, in
+particular ion-selective electrodes (ISE) and UV-Visible
+sensors further facilitate the monitoring and control of
+WWTPs (Rieger et al. 2002; Van den Broeke et al. 2006). In
+this study ISE ammonium sensors were used for advanced
+aeration control and ISE, UV-Vis and UV probes to
+monitor nitrate and nitrite. ISE offer continuous measure-
+ments with a very short response time ( Thomann et al.
+2002), as well as high accuracy, less maintenance and high
+tolerance to harsh conditions. If a proper quality control
+concept for the in-situ sensors is in place, this offers new
+and very interesting perspectives for process control.
+Aeration makes up for the biggest part of the energy costs
+of a WWTP and optimization strategies can improve the
+overall performance of a plant signiﬁcantly. In addition,
+controlling ammonia to a level below the efﬂuent limits
+allows increasing the denitriﬁcation capacity and sub-
+sequently reducing the overall nitrogen removal. A full scale
+simulation study for a large WWTP, Zu ¨ rich-Werdho ¨ lzli in
+Switzerland ( Siegrist et al. 2004) showed that aeration
+strategies such as the feed-back or feed-forward control of
+DO setpoints based on ammonium ISE signals could lead to
+consequent costs savings combined with increased nitrogen
+removal. The impact of ISE based control was estimated to
+improve total nitrogen removal by 10% and to save up to 30%
+energy costs. When considering an additional tax based on
+nitrogen efﬂuent load the energy savings raised up to 35%.
+The size of the plant is a decisive criteria to judge the
+relevance of ISE based control. A rapid estimate of costs and
+savings can be made considering the following assumptions
+for a middle size WWTP, with two treatment lines, changing
+from constant to intermittent aeration; Investment and
+running costs on a 5 years depreciation period for two
+NH
+4-ISE sensors < 3,800 e·y 1, Maintenance costs (2 h per
+week per sensor, qualiﬁed worker 50 e·h 1) < 10,400 e·y 1
+cost of energy < 0.1 e·kWh 1, Nitrogen efﬂuent load tax
+(based on German law, AbwAG) < 1.44 e·kg-N 1, inﬂuent
+TKN at the WWTP <3.65 kgN y 1 PE 1, inﬂuent
+BOD < 29.2 kgBOD y 1 PE 1 aeration requirements < 45
+kgO2 y 1 PE 1or 45 kWh y 1 PE 1, increase of nitrogen
+removal due to ISE use 10% and aeration energy saving
+10 – 20%. It appears that the critical size for ISE based control
+lies close to 15,000 P.E. Yet this value is dependent of
+numerous factors, such as the speciﬁc control in use in the
+WWTP to be optimized and local constraints e.g. load
+variations or temperature structure and therefore it needs to
+be adapted to a precise context.
+MATERIAL AND METHODS
+A pilot plant with activated sludge was operated at the
+Eawag for over three years with nitriﬁcation and pre-
+denitriﬁcation ( Figure 1 ). About 100 population equivalent
+(120 gCOD PE
+1 d 1 or 0.35 m3PE 1 d 1) of raw wastewater
+from the local sewer network were treated daily on average,
+with a ﬂow proportional to that of the sewer, and hence with
+typical diurnal and seasonal load variations. It followed a
+standard mechanical pre-treatment, including screen, grid
+chamber and primary settler before entering an activated
+sludge cascade of three completely stirred tank reactors
+(CSTR); Bio1 to Bio3, and ﬁnally a secondary clariﬁer. Bio1
+was operated as an anoxic tank for pre-denitriﬁcation, Bio2
+and Bio3 were operated as continuously or intermittently
+aerated tanks for nitriﬁcation and denitriﬁcation. Various
+DO setpoints were used according to the control strategy.
+Excess sludge was withdrawn from Bio3 in order to reach a
+630 D. Kaelin et al. | In situ sensors with ion selective electrodes for WWTP aeration control Water Science & Technology WST | 58.3 | 2008
+631 D. Kaelin et al. I 1n situ sensors with ion selective electrodes for WWTP aeration control Water Science & Technology WST I 58.3 I 2008 
+Excels 
+sludge 
+Cleming nmzb Ref.+ pH Temp. 
+Figure 1 I Layout of the Ea wag pilot plant, with DO and nutrients sensors. Detail of an in situ ISE sensor with N Ht, NO,, K• and reference electrodes (sensor; Endress + Hauser, E + H). 
+total sludge retention time (SRT) of 9 days, in summer, or 12 
+days, in winter. Sludge recirculation was done only from 
+secondary clarifier to Biol. The plant was equipped with a 
+range of analytical instruments, including online analyzers 
+and in-situ sensors for nutrients (fable 1). Laboratory 
+measures were conducted twice a week for influent and 
+e:ffluent on 24 h composite flow proportional samples and 
+weekly on grab samples from all tanks. In-situ sensors for DO, 
+temperature and pH were set up where necessary. All of the 
+equipments of the plant are connected to a central program-
+mable logic controller (PLC) linked to a SCADA system for 
+direct access to and storage of data. 
+on-line measurements 
+Ex-situ analyzers used for that study were Stamolys 
+(Endress + Hauser Conducta, Germany) for NH4 and 
+N02. Ammonium is measured with the indophenol blue 
+method and nitrite with the naphthylamine method. Two 
+in-situ optical sensors were used: a Nitratax (Hach Lange 
+Table 1 I Measurement techniQues for nitrogen compounds and dissolved oxygen (DO) 
+GmbH, Germany) to measure nitrate plus nitrite (NOx) in 
+Bio3, based on direct measurements of UV light absorption 
+at 210nm, while a reference measurement at 350nm 
+provides a correction for turbidity and organic matter. A 
+spectrometer probe (spectro: :lyser, optical path length 
+lOmm, s::can messtechnik GmbH, Austria) was used in 
+the secondary clarifier, measuring nitrate and nitrite, based 
+on measurements of UV light absorption spectra between 
+210 and 400nm (Rieger et al, 2004a ). 
+Ion selective electrodes 
+Research on ISE was conducted at the Swiss Federal 
+Institute of Technology (ETH-Zi.irich) for the past 20 years 
+and recently allowed the development of specific in-situ 
+sensors for WWTP monitoring and control (Rieger et aL 
+2002 ). Sensors are available for ammonium and nitrate and 
+sensors for nitrite are currently in test phase. Several 
+versions of the model MiniCal-NAM/NAS760 (Endress + 
+Hauser Conducta, Germany) were tested during this study. 
+Primary clarifier Bio1 (anoxic) Bio2 (aerobic-intermittent) Biol (aerobic-intermittent) Secondary clarifier 
+NI-Li N ISE (E + H) ISE (E + H) ISE (E + H) Online chemical Laboratory 
+(Stamolys, E + H) (FIA) 
+N02N Laboratory Laboratory Online chemical Online chemical Spectrometric 
+(IC) (IC) (Stamolys, E + H) (Stamolys, E + H) (s::can) 
+NOsN Laboratory ISE ISE (E + H) Spectrometric Spectrometric 
+(IC) (E + H) (Nitratax, Lange) (s::can) 
+DO Luminescence Luminescence Luminescence 
+(Hach Lange) (Hach Lange) (Hach Lange) 
+ISE are based on a potentiometric principle, i.e. the
+measurement of an electric potential difference between a
+reference electrode, showing a constant potential, and a
+measurement electrode. The measurement electrode is
+made of a selective membrane, binding speciﬁc ions
+reversibly, which inﬂuence its potential E. The difference
+between reference and measurement electrodes depends on
+the natural logarithm of the ion activity.
+ISE for ammonium measures only NH
+4-N and not
+NH3-N, therefore the measurement electrode has to be
+coupled to a pH and temperature sensor to calculate total
+ammonia. Ions with binding properties toward the selective
+membrane similar to the measurement ion may create
+perturbations.
+Table 2 gives indications on main disturbance ions for
+ammonium and nitrate ISEs. A cross-sensitivity of 1:100
+indicates that a concentration of 100 mg/l of the disturb-
+ance ion induces a potential difference equal to 1 mg/l of the
+measurement ion ( Winkler et al. 2004). Cross-sensitivity
+depends ﬁrst on the total concentration of the disturbance
+ion, corrected by an offset, and then on the variations of that
+concentration, which requires an additional membrane for
+constant compensation.
+Two conﬁgurations were used in the pilot plant. In the
+primary clariﬁer the sensor was equipped with an ammonium
+ISE, and a pH-temperature probe for NH
+4-NH3 compen-
+sation. In the AS reactors, which have lower pH variations,
+sensors were made of ammonium and nitrate ISEs. For these
+sensors, constant pH compensation was made based on
+average pH values. With reason to already low variations of
+the potassium concentrations in the primary clariﬁer, the
+sensors were not equipped with an additional potassium
+electrode for correction but simply corrected with a constant
+offset. The sensors come in the form of dip-in probes, made of
+a polymer shaft (Ø 70 £ 1,200 mm) and a signal transformer
+box at its top. It requires power and pressurized air for self-
+cleaning (nozzles).
+Three alternative calibration methods are possible
+(Rieger et al. 2002; Thomann et al. 2002) A single-point
+calibration using an underlying default calibration curve. A
+two-point calibration, whereupon a linear curve is calcu-
+lated or the implemented calibration curve is ﬁtted. Or
+ﬁnally a ﬁve-point calibration curve by means of a standard
+addition. For the presented work, a multiple-point cali-
+bration curve was used as a ﬁrst calibration using ﬁltered
+matrix from reactors as the medium for standard addition.
+The sensors were later regularly recalibrated with one point
+using the weekly control measurements from the laboratory.
+Further standard addition experiments were carried out to
+illustrate the quality of the measurements. Figure 2 shows
+results for the ammonia ISE sensors in reactor Bio1
+(measuring range 0 – 15 mg N/l) and Bio3 (0 – 1 mg N/l)
+and nitrate in Bio1 (0 – 10 mg N/l). The sensors were very
+stable along with the time, in particular those in use in
+activated sludge reactors, as an example Figure 3 illustrates
+the stability of the ammonia ISE in reactor Bio1 over a
+period of 275 days.
+The approximate maintenance time for the three pilot
+plant ISE’s, including daily control, quick cleaning, weekly
+lab reference measurements, monthly cleaning, membrane
+and electrolyte replacement and calibration is 5 – 6 hours of
+qualiﬁed staff per week i.e. less than 2 hours per week and
+sensor. The main problem encountered in the routine
+operation is the accumulation of dirt around electrodes.
+Table 2 | Pilot plant ammonium and nitrate ISE technical speciﬁcations and performances
+Ammonium Nitrate
+Working range p 0 50 mgNH 4 N/l 0 15 mgNO 3 N/l
+Resolution† 0.1 mgNH4 N/l 0.1 mgNO3 N/l
+Response time ‡ , 1m i n ,1m i n
+Cross sensitivity † Potassium 1:15 30 Sodium 1:1300 Chloride 1:300 Nitrite 1:100
+Membrane lifetime p 3 12months (in AS membrane to be
+changed every 3 4 months)
+3 12months (in AS membrane to be
+changed every 3 4 months)
+pEAWAG pilot plant observations.
+†Winkler et al. (2004).
+‡Thomann et al. (2002).
+632 D. Kaelin et al. | In situ sensors with ion selective electrodes for WWTP aeration control Water Science & Technology WST | 58.3 | 2008
+633 D. Kaelin et al I 1n situ sensors with ion selective electrodes for WWTP aeration control Water Science & Technology WST I 58 3 I 2008 
+15.0 / 10.0 mg NII 1.00 R2 = 0.9987 / / mg NII R2 = 0.9990 ,. mg Nil 
+" Ji R2 = 0.9963 
+/4 " / 7.5 ,. 
+0.75 ,¢ 
+; 
+~ 10.0 , ... ; 
+1~NH4 -N I 
+; 
+6 ()' 1~NH4•N I " ~ 0.50 5.0 ,. 
+''ii ,. 
+~ 
+" 
+" .5 5.0 " {:f JI" I• N03-N I 
+; 
+,. "5 0.25 /!} 2.5 ; ,. 
+~ mg NII ~ mg NII • mg Nil 
+0.0 0.00 0.0 
+0.0 5.0 10.0 15.0 0.00 0.25 0.50 0.75 1.00 o.o 2.5 5.0 7.5 10.0 
+Reference lab.meas. 
+Figure 2 I Standard addition calibration curves for NH4 and NO., using filtered matr ix Bio3 for NH4 N ISE and filtered matrix Bio1 for NO. N ISE. Results shown for ammonium working 
+ranges equivalent to those of Bio1 (0 15 mg NH4 N/l)and Bio3 (0 2 mg NH4 N/l)and nitrate working range w ithn usual range in Bio2and Bio3 (0 15 mg NO. Nm. Results 
+shown obtained w ith the sensor of Bio2. 
+Despite automated cleaning nozzles, and especially in pre-
+treatment tanks (e.g. primary clarifier), the formation of a 
+chemical films on membranes was often a problem. On the 
+long term, the aging of the membrane is also a major issue as 
+well. Membranes are changed every 3 - 4 months depending 
+on their location in the WWTP. 
+The quality control of all devices in the plant follows a 
+monitoring concept with a 2-step control chart approach 
+developed at Eawag (Figure 3) based on the analysis of 
+comparative measurements between sensors and a reference 
+method. It combines statistical analysis, regression analysis, 
+and graphic control charts with decision support rules. The 
+method allows quick detection of abnormalities such as 
+shifts, drifts, outliers and wrong calibration. Details can be 
+found in Rieger et aL (2004b) and Thomann et aL (2002). 
+control strategies 
+With regard to the big potential of ISE based control for 
+improved nitrogen removal and the verification that stable 
+25 c NH4 Biol 3 
+~ 
+operation of ISE sensors was possible even in activated 
+sludge, several aeration strategies were tested. Improved 
+aeration strategies descri bed here had the purpose to adapt 
+the oxygen load to the incoming ammonium load, while at 
+the same time to control ammonium in the effluent under a 
+defined level. Aeration was typically operated according to 
+DO setpoints, high or low, following one or several NH4 
+signals. The higher setpoint was chosen in order to ensure 
+an optimal nitrification rate, in practice the lower setpoint 
+often corresponds to the minimum air flow that ensure 
+continuous mixing. Alternatively and if possible in the case 
+of aeration being used for mixing, the lower setpoint can be 
+set to zero, i.e. switching aeration off, and allows anoxic 
+denitrification . It is possible to use ammonium signals from 
+sensors at the beginning of the treatment, e.g. in the primary 
+clarifier, for a feed-forward control, from sensors at the end 
+of the treatment, e.g. in the effluent of biological reactors, 
+for a feed-back control, or to use a combination of several 
+signals. Signals were used directly (P-controller) or with an 
+additional differential term calculated to anticipate fast 
+<> ISE NH4 8101 
+~20 
+~ 
+E..15 
+Oi 
+E ~ 
+<L - - - - - - - - - - - .,.-+-- - - -.- - - - - - - -1 • • 
+-. . . . . . . . . .. . .... .... ~ 
+J •• 3o- 60 ... 91 120 15') • 180 '"'210 240 27~~ 
+~ ----- ~ ---------------- ~J -
+c: 
+·~10 
+w 
+SQ 5 
+c 
+0 -3".=============================================: 0 5 10 15 20 25 
+Weekly lab control (mg/I) 
+• Residuals o Alarm points - - Alarm level 1 -- Alarm level 2 
+Figure 3 I Ammonium ISE signal in Bio1 vs. weekly lab. control measurement, timespan; 270 days. 
+changes of ammonium loads (PD-controller). Table 3
+summarizes some of the strategies tested at the Eawag
+pilot plant. The aeration was operated according to
+DO setpoints of 0.5/2 or 0/2 mgO
+2/l or to a constant
+setpoint of 2 mgO 2/l. For all the presented strategies
+the aeration was regulated exactly identically in Bio2 and
+Bio3, except for strategy 2c, with Bio3 constantly aerated.
+The choice of 0.5 mgO
+2/l as a low setpoint was part of
+a parallel project studying the impact of limiting oxygen
+on nitrite production. Ammonium was controlled between
+1/2 mgNH4-N/l and 3/4 mgNH 4-N/l, if measured in Bio3
+or Bio2 respectively. In all case the target was to fulﬁll the
+Swiss efﬂuent limits of 2 mg NH
+4-N/l as a daily mean value.
+For such cases of 24 h average limits a further optimization
+could be the addition of a DO controller based on moving
+average values of ammonium rather than a ﬁx threshold
+(see e.g. Ayesa et al. 2006), this was however not yet
+considered in our case.
+Figure 4 illustrates control strategy 1b with plots for
+the aerated reactors (Bio2 and Bio3). The ammonium signal
+is measured in Bio2 with NH
+4-N setpoints set at 3 and
+4 mgN/l and respective DO setpoints at 0 and 2 mgO 2/l.
+Once NH 4-N reaches the upper limit of 4 mgN/l (upper
+plot) the aeration switches on and remains constant at
+2 mgO
+2/l until NH 4-N decreases again down to 3 mgN/l.
+Aeration stops as soon as the lower limit is reached,
+allowing to reduce nitrate that was produced before. The
+oscillation of ammonium and nitrate between the control
+limits is clearly visible. The plot of Bio2 also shows the lack
+of nitriﬁcation capacity during the massive morning NH
+4-N
+peak. Despite the continuous aeration the upper limit is
+overpassed for a while. The NH 4-N online signal is not
+shown in the Bio3 plot due to a device failure; however
+laboratory measurements indicate that the 24 h ﬂow
+proportional efﬂuent average is at 0.8 mg NH 4-N/l, i.e.
+clearly below the Swiss threshold of 2 mg N/l. Nitrate
+dynamics is inversely proportional to that of ammonium.
+Nitrate ISE however does not measure under 1 mgNO 3-N/l.
+This lower limit of the working range is clearly visible on the
+Bio2 plot. The NO
+3-N curve ﬂattens and stays constant as
+soon as the concentration is less than 1 mgNO 3-N/l. In Bio3
+the use of a UV in-situ sensor (Nitratax) allows measuring
+down to zero. In both reactors the presence of nitrite as
+intermediate product of the nitriﬁcation is observable, as
+well as its accumulation during the long aerated period
+(, 9:00 – 15:00). On this warm day (218 C), nitrite reaches
+peak values around 2.0 mg NO
+2-N/l and a daily average of
+0.8 mg NO 2-N/l, therefore violating the 24 h ﬂow pro-
+portional Swiss guidance value of 0.3 mg NO 2-N/l (water
+protection law of Switzerland due to the high toxicity of
+nitrite to ﬁshes and in particular Salmonidae).
+In Figure 5 each plot shows the same components for
+several reactors for the strategy 2b. Aeration (last plot) is
+regulated in order to control NH
+4-N in Bio3 between 1 and
+2 mgN/l. The same effect of limited nitrifying capacity as in
+strategy 1b appears. On the ﬁrst day the capacity is slightly
+too low during peak load but the 24 h ﬂow proportional
+average does not overpass the authorized value. Nitrate
+production and denitriﬁcation are easy to follow on the
+second plot, showing that an important part of the nitrate
+can already be reduced in the same tank during non aerated
+phases, therefore increasing the denitriﬁcation capacity of
+the plant. Simultaneously, a high production of nitrite
+occurs during nitriﬁcation, which is then only partly
+reduced during anoxic phases, the average nitrite concen-
+tration in Bio3, 0.75 mg NO
+2-N/l is again above the
+indicative limit. Figures 4 and 5 illustrate an inconsistency
+between the Swiss ofﬁcial limit of 2 mgNH 4-N/l and the
+corresponding recommended value of 0.3 mg NO 2-N/l
+since even though the ﬁrst limit was always respected the
+Table 3 | Summary of selected control strategies for aeration
+Strategy SRTaerob [days] Bio2 DO setpoints Bio3 DO setpoints NH4-Control Temp. range [C 8]
+1a 5.5 0.5/2 mgO2/l 0.5/2 mgO2/l Bio2: 3/4 g N m 3 15 22
+1b 5.5 0/2 mgO2/l 0/2 mgO2/l Bio2: 3/4 g N m 3 15 22
+2a 5.5 0.5/2 mgO2/l 0.5/2 mgO2/l Bio3: 1/2 g N m 3 18 22
+2b 5.5 0/2 mgO2/l 0/2 mgO2/l Bio3: 1/2 g N m 3 18 22
+2c 5.5 0/2 mgO2/l 2 mgO2/l Bio3: 1/2 g N m 3 18 22
+634 D. Kaelin et al. | In situ sensors with ion selective electrodes for WWTP aeration control Water Science & Technology WST | 58.3 | 2008
+second was clearly overpassed. Considering the additional
+effect of the oxidation of ammonium released in rivers,
+which is also a source of nitrite, there is a question if
+total nitriﬁcation should not be targeted instead of the
+2 mgNH
+4-N/l ofﬁcial limit. It was observed that average
+nitrite concentrations, for similar control strategies, were
+generally lower during periods with lower temperatures,
+which is probably due to the lower measured temperature
+dependency of the growth rates of nitrite oxidizing bacteria
+(NOB) compared to ammonium oxidizing bacteria (AOB)
+(Kaelin et al. (work in progress) ).
+In a general way, the operation of the plant during periods
+without ammonium control, i.e. Bio2 and Bio3 constantly
+aerated at 1 and 3 mgO
+2/l, kept ammonium and nitrite low in
+the ﬁnal efﬂuent. Strategy 1a, eliminated NH 4 with a good
+response to peaks but generally produced average nitrite
+efﬂuent concentrations of 0.5 mg N/l. Strategy 1b, with
+intermittent aeration and strongly improved denitriﬁcation
+led to temporary exceeding the NH
+4 control value but on the
+other hand, for similar temperatures it produced usually
+lower nitrite concentrations than strategy 1a. Strategies 2a
+and especially 2b led to signiﬁcant short exceedings of the
+Figure 4 | 24 h trendlines for inorg. N compounds and DO setpoints. Bio2, Bio3.Strategy 1b ( Table 3). (Average temperature for the day plotted; 21.5 8C).
+Figure 5 | 48 h trendlines for the strategy 2b (cf. Table 3). NH4 N, NO3 N, NO2 N and aeration control. (Average temperature for the two days plotted; 19.0 8C).
+635 D. Kaelin et al. | In situ sensors with ion selective electrodes for WWTP aeration control Water Science & Technology WST | 58.3 | 2008
+NH4 control value (up to 4 – 5 mgN/l), indicating typical
+temporary overload of the nitriﬁcation capacity during peak
+events. However average 24 h ﬂow proportional ammonium
+values were always below the Swiss threshold value of
+2 mgN/l and higher concentrations would only have to be
+seriously considered in the case of a legislation that deﬁnes
+maximum peak values (e.g. Germany).
+One remarkable effect can be observed in the switch
+from control strategy 2b to 2c ( Figure 6 ). Control of phase
+2c was almost the same as 2b except that aeration was kept
+constant at 2 mgO
+2/l in Bio3 in an attempt to act as a
+polishing step. In fact, due to the constant aeration of
+reactor Bio3 alone ammonium was most of the time kept
+under the upper control limit and as a matter of fact Bio2
+was not aerated for prolonged periods. A clear nitrite
+accumulation resulted, which could be triggered by several
+factors. First of all it is likely that despite the constant
+aeration in Bio3, the total aerobic hydraulic residence time
+was not sufﬁcient anymore to oxidize all of the nitrite
+produced, which therefore started slowly accumulating over
+days. While in this case no temperature shock occurred that
+could explain a change in the activity of AOB and NOB
+another reason could be the modiﬁcation of oxygen mass
+transfer into the activated sludge ﬂoc. Manser et al. (2005)
+described its consequences on nitriﬁers kinetics comparing
+a membrane pilot plant with the Eawag pilot plant
+presented in this study. Depending on the NOB population
+composition (high proportion of Nitrobacter genus) and
+ﬂoc structure (large size and low SVI) and although it was
+not clearly demonstrated, it is not to exclude that the longer
+periods with aeration cut off inhibited NOB sufﬁciently to
+induce their progressive wash-out and to trigger the
+subsequent accumulation of nitrite.
+CONCLUSION
+The experience collected at the Eawag pilot plant with the
+use of in-situ sensors for monitoring and control were
+successful. ISE sensors proved to be reliable and accurate in
+activated sludge reactors, even with working ranges as low as
+1–2m g NH
+4-N/l. Aeration strategies based on NH4 control are
+conﬁrmed to be efﬁcient and a promising optimization tool
+for WWTP. Recent ISE sensors are very costs competitive as
+compared to traditional chemical analyzers and they consti-
+tute therefore a serious option in WWTP’s. A set of basic
+parameters was proposed for the approximation of a WWTP’s
+critical size at which investment and maintenance costs for
+ISE sensors would be recovered by savings on aeration energy.
+Based on our experience and for a typical WWTP design the
+critical size would be around 15,000 P.E., however this ﬁgure
+need to be adapted in case of different speciﬁc constraints.
+Different intermittent aeration strategies based on ISE
+signals allowed an increase of the denitriﬁcation capacity
+while keeping the ammonium below the Swiss legal threshold
+of 2 mgNH
+4-N/l (24 h ﬂow proportional). These strategies also
+showed to have an impact on nitrite concentrations in the
+efﬂuent and some periods clearly overpassed the Swiss
+guidance value of 0.3 mgNO
+2-N/l. It was shown that under
+certain conditions intermittent control could possibly lead to
+the inhibition of NOB and to a possible accumulation of nitrite
+in the efﬂuent. Such side effects should be kept in mind while
+designing control loops.
+Figure 6 | Nitrite accumulation following the switch between control strategies 2b to 2c.
+636 D. Kaelin et al. | In situ sensors with ion selective electrodes for WWTP aeration control Water Science & Technology WST | 58.3 | 2008
+ACKNOWLEDGEMENTS
+Results presented in this paper were collected within the
+project “Dynamics of nitrite in wastewater treatment
+plants”, supported by the Swiss federal ofﬁce for the
+environment (BAFU/FOEN), and environment protection
+agencies of the Swiss cantons Aargau, Baselland, Bern,
+Graubu¨ nden, Luzern, Schwyz, St-Gallen and Zu ¨ rich and
+was also part of the EU Neptune project (Contract No
+036845, SUSTDEV-2005-3.II.3.2), ﬁnancially supported by
+EU Commission grants within the Energy, Global Change
+and Ecosystems Program of the 6th Framework (FP6-2005-
+Global-4).
+REFERENCES
+Ayesa, E., De la Sota, A., Grau, P., Sagarna, J. M., Salterain, A. &
+Suescum, J. 2006 Supervisory control strategies for the new
+WWTP of Galindo Bilbao: The long run from the conceptual
+design to the full scale experimental validation . Water Sci.
+Technol. 53(4 5), 193 201.
+Bonastre, A., Ors, R., Capella, J. V., Fabra, M. J. & Peris, M. 2005
+In line chemical analysis of wastewater: present and future
+trends. TrAC Trends Anal. Chem. 24(2), 128 137.
+Ingildsen, P. & Olsson, G. 2002 Exploiting online in situ
+ammonium, nitrate and phosphate sensors in full scale
+wastewater plant operation. Water Sci. Technol. 46(4 5),
+139 147.
+Ingildsen, P. & Wendelboe, H. 2003 Improved nutrient removal
+using in situ continuous on line sensors with short response
+time. Water Sci. Technol. 48(1), 95 102.
+Jeppsson, U., Alex, J., Pons, M. N., Spanjers, H. & Vanrolleghem,
+P. A. 2002 Status and future trends of ICA in wastewater
+treatment a European perspective. Water Sci. Technol.
+45(4 5), 485 494.
+Kaelin, D., Manser, R., Rieger, L., Eugster, J., Rottermann, K. &
+Siegrist, H. (work in progress) Extension of ASM3 for
+two step nitriﬁcation and denitriﬁcation; Calibration and
+validation at laboratory and pilot scales.
+Lynggaard Jensen, A. 1999 Trends in monitoring of waste water
+systems. Talanta 50(4), 707 716.
+Manser, R., Gujer, W. & Siegrist, H. 2005 Consequences of mass
+transfer effects on the kinetics of nitriﬁers . Water Res. 39,
+4633 4642.
+Olsson, G., Nielsen, M., Yuan, Z., Lynggaard Jensen, A. & Steyer, J.
+P. 2005 Scientiﬁc & Technical report No.15: Instrumentation,
+Control and Automation in Wastewater Systems.I W A
+Publishing.
+Olsson, G. 2006 Instrumentation, control and automation in the
+water industry state of the art and new challenges CD . Water
+Sci. Technol. 53(4 5), 1 16.
+Rieger, L., Siegrist, H., Winkler, S., Saracevic, E., Votava, R. &
+Nadler, J. 2002 In situ measurement of ammonium and nitrate
+in the activated sludge process. Water Sci. Technol. 45(4 5),
+93 100.
+Rieger, L., Langergraber, G., Thomann, M., Fleischmann, N. &
+Siegrist, H. 2004a Spectral in situ analysis of NO
+2,N O 3, COD,
+DOC and TSS in the efﬂuent of a WWTP. Water Sci. Technol.
+50(11), 143 152.
+Rieger, L., Thomann, M., Joss, A., Gujer, W. & Siegrist, H. 2004b
+Computer aided monitoring and operation of continuous
+measuring devices. Water Sci. Technol. 50(11), 31 39.
+Siegrist, H., Rieger, L., Fux, C. & Wehrli, M. 2004 Improvement of
+nitrogen removal at WWTP Zurich Werdhoelzli after
+connection of WWTP Zurich Glatt. Water Sci. Technol. 50(7),
+35 43.
+Thomann, M., Rieger, L., Frommhold, S., Siegrist, H. & Gujer, W.
+2002 An efﬁcient monitoring concept with control charts for
+on line sensors. Water Sci. Technol. 46(4 5), 107 116.
+Van den Broeke, J., Langergraber, G. & Weingartner, A.
+2006 On line and in situ UV/vis spectroscopy for multi
+parameter measurements: a brief review. Spectrosc. Europe
+18(4), 15 18.
+Vanrolleghem, P. A. & Lee, D. S. 2003 On line monitoring
+equipment for wastewater treatment processes: state of the art.
+Water Sci. Technol. 47(2), 1 34.
+Winkler, S., Rieger, L., Saracevic, E., Pressl, A. & Gruber, G. 2004
+Application of ion sensitive sensors in water quality
+monitoring. Water Sci. Technol. 50(11), 105 114.
+637 D. Kaelin et al. | In situ sensors with ion selective electrodes for WWTP aeration control Water Science & Technology WST | 58.3 | 2008

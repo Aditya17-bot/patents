@@ -1,0 +1,72 @@
+[shared] training on groups 1+2 ...
+    shared epoch 1/5 mse 0.001366
+    shared epoch 2/5 mse 0.000526
+    shared epoch 3/5 mse 0.000489
+    shared epoch 4/5 mse 0.000473
+    shared epoch 5/5 mse 0.000462
+[per-station] training one model per held-out station ...
+    fitted machine-3-1
+    fitted machine-3-10
+    fitted machine-3-11
+    fitted machine-3-2
+    fitted machine-3-3
+    fitted machine-3-4
+    fitted machine-3-5
+    fitted machine-3-6
+    fitted machine-3-7
+    fitted machine-3-8
+    fitted machine-3-9
+
+11 held-out stations, 7107 common normal intervals each
+injected pair machine-3-1 <-> machine-3-10 at lag 2 intervals
+
+scenario             model          reference rule            mean r  target r        z     top
+------------------------------------------------------------------------------------------------
+A_baseline           shared         none                      0.0738    0.0129    -0.29      no
+A_baseline           shared         raw_median                0.1381    0.2170     0.32      no
+A_baseline           shared         standardised_median       0.0363    0.1457     0.48      no
+A_baseline           per_station    none                      0.0607    0.0045    -0.62      no
+A_baseline           per_station    raw_median                0.0238   -0.0013    -0.42      no
+A_baseline           per_station    standardised_median       0.0132   -0.0089    -0.29      no
+B_common_mode_only   shared         none                      0.1609    0.2254     0.32      no
+B_common_mode_only   shared         raw_median                0.1321    0.2147     0.34      no
+B_common_mode_only   shared         standardised_median       0.0379    0.1481     0.54      no
+B_common_mode_only   per_station    none                      0.3339    0.4721     0.79      no
+B_common_mode_only   per_station    raw_median                0.0225    0.0045    -0.30      no
+B_common_mode_only   per_station    standardised_median       0.0262   -0.0030    -0.33      no
+C_pair_only          shared         none                      0.0769    0.2287     0.74      no
+C_pair_only          shared         raw_median                0.1311    0.2696     0.58      no
+C_pair_only          shared         standardised_median       0.0339    0.2035     0.77      no
+C_pair_only          per_station    none                      0.0663    0.4774     4.88     yes
+C_pair_only          per_station    raw_median                0.0218    0.3460     5.35     yes
+C_pair_only          per_station    standardised_median       0.0133    0.4081     5.56     yes
+D_both               shared         none                      0.1567    0.3385     0.93      no
+D_both               shared         raw_median                0.1246    0.2655     0.61      no
+D_both               shared         standardised_median       0.0353    0.2074     0.86      no
+D_both               per_station    none                      0.3177    0.6228     1.90      no
+D_both               per_station    raw_median                0.0212    0.3671     5.76     yes
+D_both               per_station    standardised_median       0.0249    0.4179     4.56     yes
+
+[E] station clock-skew sweep (shared model, standardised_median)
+  skew +-0 intervals: target r 0.2074  z 0.86  top-ranked False
+  skew +-1 intervals: target r 0.1753  z 0.70  top-ranked False
+  skew +-2 intervals: target r 0.1521  z 0.55  top-ranked False
+  skew +-3 intervals: target r 0.2747  z 1.13  top-ranked False
+  skew +-5 intervals: target r 0.1782  z 0.64  top-ranked False
+  skew +-8 intervals: target r 0.2086  z 0.83  top-ranked False
+
+=============== E3(ii) COMMON-MODE SUPPRESSION ===============
+  shared|raw_median                suppressed  33.1% of injected excess
+  shared|standardised_median       suppressed 141.3% of injected excess
+  per_station|raw_median           suppressed 114.0% of injected excess
+  per_station|standardised_median  suppressed 112.6% of injected excess
+
+=============== E3(iii) COUPLED PAIR, SCENARIO D ===============
+  shared       none                   target r 0.3385  z 0.93  top-ranked False
+  shared       raw_median             target r 0.2655  z 0.61  top-ranked False
+  shared       standardised_median    target r 0.2074  z 0.86  top-ranked False
+  per_station  none                   target r 0.6228  z 1.90  top-ranked False
+  per_station  raw_median             target r 0.3671  z 5.76  top-ranked True
+  per_station  standardised_median    target r 0.4179  z 4.56  top-ranked True
+
+runtime 181.1 s -> results/e3_coupling.json

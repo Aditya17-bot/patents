@@ -1,0 +1,37 @@
+{
+ "T1_channel_extraction_ms": {
+  "median": 1.3399999999998968,
+  "p95": 3.2936600000001537,
+  "p99": 3.621554000000078,
+  "max": 4.136600000000268,
+  "n": 295
+ },
+ "T2_corroboration_value_ms": {
+  "median": 0.24740000000100792,
+  "p95": 0.4298499999991989,
+  "p99": 0.750534999999992,
+  "max": 1.6534000000003601,
+  "n": 2000
+ },
+ "T3_scheduler_decision_ms": {
+  "median": 0.00029999999995311555,
+  "p95": 0.0005000000005139782,
+  "p99": 0.001102999998643449,
+  "max": 0.005899999999670058,
+  "n": 5000
+ },
+ "software_path_total_ms": {
+  "median": 1.5877000000008579,
+  "p95": 3.7240099999998666
+ },
+ "control_cycle_budget_ms": 2500.0,
+ "budget_used_pct": 0.06350800000003431,
+ "derived_transducer_ms": {
+  "photodiode_edge_to_mcu_ms": 0.005,
+  "display_panel_response_ms": 8.3,
+  "node_frame_to_host_ms": 20.0,
+  "gate_command_to_switch_ms": 0.001,
+  "usb_full_speed_frame_ms": 1.0
+ },
+ "projected_sense_to_gate_ms": 30.89370000000086
+}

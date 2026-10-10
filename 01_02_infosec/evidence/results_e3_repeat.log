@@ -1,0 +1,53 @@
+C:\adi\patent_InfoSec\evidence\e3_repeat.py:51: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  sh.load_state_dict(torch.load(SHARED_CACHE, map_location="cpu"))
+C:\adi\patent_InfoSec\evidence\e3_repeat.py:53: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  sd = torch.load(LOCAL_CACHE, map_location="cpu")
+11 stations, 7107 intervals, 55 pairs, 20 trials
+  trial  1/20  pair machine-3-11-machine-3-4
+  trial  2/20  pair machine-3-5-machine-3-8
+  trial  3/20  pair machine-3-3-machine-3-5
+  trial  4/20  pair machine-3-11-machine-3-9
+  trial  5/20  pair machine-3-1-machine-3-6
+  trial  6/20  pair machine-3-1-machine-3-3
+  trial  7/20  pair machine-3-2-machine-3-4
+  trial  8/20  pair machine-3-1-machine-3-9
+  trial  9/20  pair machine-3-10-machine-3-2
+  trial 10/20  pair machine-3-1-machine-3-6
+  trial 11/20  pair machine-3-10-machine-3-5
+  trial 12/20  pair machine-3-11-machine-3-2
+  trial 13/20  pair machine-3-2-machine-3-6
+  trial 14/20  pair machine-3-10-machine-3-7
+  trial 15/20  pair machine-3-3-machine-3-4
+  trial 16/20  pair machine-3-2-machine-3-4
+  trial 17/20  pair machine-3-11-machine-3-5
+  trial 18/20  pair machine-3-8-machine-3-9
+  trial 19/20  pair machine-3-5-machine-3-7
+  trial 20/20  pair machine-3-11-machine-3-2
+
+[skew] best D_both cell = per_station / raw_median -- sweeping on it
+  skew +-0 intervals: detection 0.75  z 3.93  AUROC 0.992
+  skew +-1 intervals: detection 0.65  z 3.49  AUROC 0.987
+  skew +-2 intervals: detection 0.60  z 3.37  AUROC 0.981
+  skew +-3 intervals: detection 0.35  z 2.69  AUROC 0.954
+  skew +-4 intervals: detection 0.30  z 1.88  AUROC 0.939
+  skew +-6 intervals: detection 0.15  z 1.25  AUROC 0.828
+  skew +-8 intervals: detection 0.15  z 0.80  AUROC 0.726
+
+================= E3 REPEATED, n = 20 TRIALS =================
+model          reference rule             detect      AUROC     z med
+-- C_pair_only
+shared         none                         0.00      0.609      0.29
+shared         raw_median                   0.00      0.510      0.15
+shared         standardised_median          0.00      0.565      0.18
+per_station    none                         0.55      0.919      3.03
+per_station    raw_median                   0.65      0.977      4.13
+per_station    standardised_median          0.55      0.944      3.53
+-- D_both
+shared         none                         0.00      0.532      0.01
+shared         raw_median                   0.00      0.516      0.18
+shared         standardised_median          0.00      0.559      0.19
+per_station    none                         0.10      0.632      0.57
+per_station    raw_median                   0.60      0.983      4.42
+per_station    standardised_median          0.55      0.920      3.28
+
+runtime 249.6 s -> results/e3_repeat.json

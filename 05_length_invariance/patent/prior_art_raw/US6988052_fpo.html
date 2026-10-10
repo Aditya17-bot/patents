@@ -1,0 +1,733 @@
+	
+		<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" media="all" href="/css/fpo_9.css" />
+<script type="text/javascript">
+var plstart = new Date();
+</script>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-174791-1']);
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="title" content="Normalization of inductive vehicle detector outputs - Inductive Signature Technologies, Inc." />
+<meta name="description" content="&lt;div p-id=&quot;p-0001&quot;&gt;Methods for a determining a normalized lane occupancy and for monitoring signal quality for a vehicle detection system. Such methods include, in one embodiment, measuring a speed of" />
+<meta name="robots" content="index, follow" />
+<title>Normalization of inductive vehicle detector outputs - Inductive Signature Technologies, Inc.</title>
+<link rel="canonical" href="https://www.freepatentsonline.com/6988052.html" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<link rel="shortcut icon" href="/images/favicon_1.ico"/>
+    <meta name='DC.identifier' content='US6988052' />
+<meta name='DC.type' content='Patent' />
+<meta name='DC.title' content='Normalization of inductive vehicle detector outputs' />
+<meta name='DC.contributor' scheme='assignee' content='Inductive Signature Technologies, Inc.' />
+<meta name='DC.coverage' content='US' />
+<meta name='DC.date' scheme='issued' content='2006-01-17' />
+<meta name='DC.date' scheme='submitted' content='2005-04-04' />
+<meta name='citation_patent_application_number' content='11/098744' />
+<meta name='DC.relation' scheme='references' content='US6417784' />
+<meta name='DC.relation' scheme='references' content='US6345228' />
+<meta name='DC.relation' scheme='references' content='US6342845' />
+<meta name='DC.relation' scheme='references' content='US6339383' />
+<meta name='DC.relation' scheme='references' content='US5278555' />
+<meta name='DC.relation' scheme='references' content='US5198811' />
+<meta name='DC.relation' scheme='references' content='US5089815' />
+<meta name='DC.relation' scheme='references' content='US5057831' />
+<meta name='DC.relation' scheme='references' content='US4996716' />
+<meta name='DC.relation' scheme='references' content='US4731867' />
+<meta name='DC.relation' scheme='references' content='US4031510' />
+</head>
+<body class="fullWidthContainer">
+
+<div>
+    <a name="top"></a>
+
+    <div class="container-fluid">
+        
+<div class="header">
+    <div class="row-fluid top">
+
+        <div class="pull-left figure">
+            <a href="/" onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'Logo']);"></a>
+        </div>
+
+
+        <div class="pull-right" style="width: 750px;">
+                        <div class="loginForm">
+                <form class="form-inline form-mini pull-right" action="/login.html" method="post">
+                    <input type="hidden" name="src" value="header_login">
+                    <input id="UID-top" name="UID" type="text" class="input-large" placeholder="Email">
+                    <input id="PWD-top" name="PWD" type="password" class="input-small" placeholder="Password">
+                    <button type="submit" class="btn btn-mini btn-primary"
+                            onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'Login']);">Login
+                    </button>
+                    <a class="btn btn-mini btn-info" href="/register.html"
+                            onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'Create']);">Sign up
+                    </a>
+                </form>
+            </div>
+            
+
+            <div class="searchForm well">
+                <form id="quick_result" name="quick_result" class="form-inline" action="/result.html" method="get">
+
+                    <input type="hidden" name="sort" value="relevance">
+                    <input type="hidden" name="srch" value="top">
+
+
+                    <div class="searchBox pull-left">
+                        <input type="text" name="query_txt" placeholder="Enter your search here"
+                               class="search-query" id="topSearchBox">
+
+                        <div class="btn-group">
+                            <button name="submit" class="btn btn-primary" type="submit"
+                                    onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'Search']);">Search
+                            </button>
+                            <button id="searchBox_dropdown" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="/search.html"
+                                       onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'SearchExpert']);document.cookie = 'searchTab=#expert';">
+                                    Expert Search</a>
+                                </li>
+                                <li><a href="/search.html"
+                                       onclick="_gaq.push(['_trackEvent', 'Header', 'Click', 'SearchQuick']);document.cookie = 'searchTab=#quick';">
+                                    Quick Search</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sideCollections pull-right">
+                        <ul id="header_search_top" class="borderBottom ul-mini ">
+                            <li>
+                                <label class="checkbox">
+                                    <input type="checkbox" id="patents_us" name="patents_us"
+                                           value="on" checked="checked">US Patents/Apps
+                                </label>
+                            </li>
+
+                            <li>
+                                <label class="checkbox">
+                                    <input type="checkbox" id="patents_other" name="patents_other"
+                                           value="on">Other
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </form>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <div class="row-fluid">
+        <div class="navbar navbar-inverse center" id="primaryNavBar">
+            <div class="navbar-inner">
+                <ul class="nav">
+                    <li><a href="/"></a></li>
+                    <li><a href="/search.html">SEARCH</a></li>
+                    <li>
+                        <a href="/tools-resources.html"
+                           onclick="_gaq.push(['_trackEvent', 'Navbar', 'Click', 'Resources']);">
+                            TOOLS &amp; RESOURCES
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+<div class="clearfix"></div>        <div class="fixed-width document-details-wrapper">
+
+            <div id="dhtmltooltip"></div>
+            
+    <style type="text/css">
+        #refs {
+            margin-left: 450px;
+            padding-left: 5px;
+            border-left: 1px solid;
+        }
+
+        #fixed_height {
+            clear: both;
+            height: 6em;
+        }
+    </style>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <form name="biblio" action="">
+        <input type="hidden" name="patent" value="6988052"/>
+        <input type="hidden" name="title" value="Normalization of inductive vehicle detector outputs"/>
+        <input type="hidden" name="number" value="6988052"/>
+        <input type="hidden" name="author" value=""/>
+        <input type="hidden" name="author_end" value=""/>
+        <input type="hidden" name="year" value="2006"/>
+        <input type="hidden" name="month" value="January"/>
+        <input type="hidden" name="url" value="https://www.freepatentsonline.com/6988052.html"/>
+        <input type="hidden" name="assignee" value="Inductive Signature Technologies, Inc."/>
+        <input type="hidden" name="country" value="United States"/>
+    </form>
+
+
+
+    <!--	TITLE  -->
+    <div class="disp_doc2">
+        <div class="disp_elm_title">Title:</div>
+        <div class="disp_elm_text">
+            <font size="+1"><b>
+                    Normalization of inductive vehicle detector outputs                </b></font>
+        </div>
+    </div>
+
+    <!--	Document Type   -->
+    <div class="disp_doc2">
+                        <div class="disp_elm_text" style="clear: none;">
+                    United States Patent 6988052                </div>
+            
+                </div>
+    <div style="clear: both"></div>
+
+    <div class="disp_doc2">
+        <div class="disp_elm_text">
+            <br clear="all"/><!-- 728x90 Responsive 1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1586334167197709"
+     data-ad-slot="2270521617"
+     data-ad-format="auto">
+</ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br clear="all"/>        </div>
+    </div>
+
+    <!--	Abstract  -->
+    <div class="disp_doc2">
+        <div class="disp_elm_title">Abstract:</div>
+        <div class="disp_elm_text">
+            <div p-id="p-0001">Methods for a determining a normalized lane occupancy and for monitoring signal quality for a vehicle detection system. Such methods include, in one embodiment, measuring a speed of a vehicle with an inductive vehicle detector, measuring an on-time for the vehicle crossing a wire loop sensor of the inductive vehicle detector, determining an inductive length of the vehicle from the measured speed, and computing a normalized on-time by subtracting a longitudinal length of the wire loop sensor from the inductive length and dividing the difference by the measured speed.</div>        </div>
+    </div>
+
+
+    <div class="disp_doc2">
+        <div class="disp_elm_title"></div>
+
+        <div class="disp_elm_text" style="clear: none;">
+
+            <br clear="all"/><!-- Responsive sidebar -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1586334167197709"
+     data-ad-slot="5590698414"
+     data-ad-format="auto">
+</ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        </div>
+    </div>
+    <div id="fixed_height" class="disp_elm_text"></div><br id="break"/>
+    <div id="fixed_height" class="disp_elm_text"></div><br id="break"/>
+
+    <!-- Representative Image -->
+
+    <!--	Inventors  -->
+
+    <!--	Application Number  -->
+    <div class="disp_doc2">
+        <div class="disp_elm_title">Application Number:</div>
+        <div class="disp_elm_text">
+            11/098744        </div>
+    </div>
+
+    <!--    Publication Date  -->
+    <div class="disp_doc2">
+        <div class="disp_elm_title">Publication Date:</div>
+        <div class="disp_elm_text">
+            01/17/2006        </div>
+    </div>
+
+    <!--	Filing Date  -->
+    <div class="disp_doc2">
+        <div class="disp_elm_title">Filing Date:</div>
+        <div class="disp_elm_text">
+            04/04/2005        </div>
+    </div>
+
+    <!--	Export Citation  -->
+    <div class="disp_doc2">
+        <div class="disp_elm_title">Export Citation:</div>
+        <div class="disp_elm_text">
+            <a href="javascript:openpopup('/bibliography.html')"
+               onClick="_gaq.push(['_trackEvent', 'Body', 'Click', 'Biblio']);"> Click for automatic bibliography
+                generation </a>
+        </div>
+    </div>
+
+    <!--	Assignee  -->
+    <div class="disp_doc2">
+        <div class="disp_elm_title">Assignee:</div>
+        <div class="disp_elm_text">
+                            Inductive Signature Technologies, Inc.                <br/>
+                    </div>
+    </div>
+
+    <!--	Primary Classes  -->
+            <div class="disp_doc2">
+            <div class="disp_elm_title">Primary Class:</div>
+            <div class="disp_elm_text">
+                <a onClick="_gaq.push(['_trackEvent', 'Body', 'Click', 'Class']);" href="/CCL-702-182.html">702/182</a>            </div>
+        </div>
+    
+    <!--	Other Classes  -->
+                    <div class="disp_doc2">
+            <div class="disp_elm_title">Other Classes:</div>
+            <div class="disp_elm_text">
+                                    701/117                            </div>
+        </div>
+    
+
+    <!--	International Classes  -->
+
+    <div class="disp_doc2">
+        <div class="disp_elm_title">International Classes:</div>
+        <div class="disp_elm_text">
+            <i><b>G06F19/00</b></i>; <i><b>G08G1/042</b></i>        </div>
+    </div>
+
+
+    <!--	Ecla Classes  -->
+
+    <!--	Field of Search  -->
+    <div class="disp_doc2">
+        <div class="disp_elm_title">Field of Search:</div>
+        <div class="disp_elm_text">
+            701/29, 324/163, 340/941, 702/185-188, 324/179, 324/162, 702/182, 701/23, 701/36, 701/1, 324/160, 340/933, 701/121        </div>
+    </div>
+
+    <!--    View Patent Images  -->
+    <div class="disp_doc2">
+        <div class="disp_elm_title">View Patent Images:</div>
+        <div class="disp_elm_text">
+            <a href='/6988052.pdf' rel="nofollow"
+               onclick="_gaq.push(['_trackEvent', 'Body', 'Click', 'PDF']);">Download PDF 6988052                &nbsp;<span class="inline-pdf-image"></span></a>
+        </div>
+    </div>
+
+    <!--	US Patent References  -->
+    <div class="disp_doc2">
+        <div class="disp_elm_title">US Patent References:</div>
+                <div class="disp_elm_text">
+                                <table cellpadding="0" cellspacing="0" class="patent_detail__table">
+                <tbody>
+                <tr><td>6417784</td><td><a onClick="_gaq.push(['_trackEvent', 'Reference_Link', 'with_title', '64', 1]);" href="/6417784.html">Automotive vehicle classification and identification by inductive signature</a></td><td>2002-07-09</td><td>Hilliard et al.</td><td></td></tr><tr><td>6345228</td><td><a onClick="_gaq.push(['_trackEvent', 'Reference_Link', 'with_title', '63', 2]);" href="/6345228.html">Road vehicle sensing apparatus and signal processing apparatus therefor</a></td><td>2002-02-05</td><td>Lees</td><td></td></tr><tr><td>6342845</td><td><a onClick="_gaq.push(['_trackEvent', 'Reference_Link', 'with_title', '63', 3]);" href="/6342845.html">Automotive vehicle classification and identification by inductive signature</a></td><td>2002-01-29</td><td>Hilliard et al.</td><td></td></tr><tr><td>6339383</td><td><a onClick="_gaq.push(['_trackEvent', 'Reference_Link', 'with_title', '63', 4]);" href="/6339383.html">Traffic signal control apparatus optimizing signal control parameter by rolling horizon scheme</a></td><td>2002-01-15</td><td>Kobayashi et al.</td><td>340/907</td></tr><tr><td>5278555</td><td><a onClick="_gaq.push(['_trackEvent', 'Reference_Link', 'with_title', '52', 5]);" href="/5278555.html">Single inductive sensor vehicle detection and speed measurement</a></td><td>1994-01-11</td><td>Hoekman</td><td></td></tr><tr><td>5198811</td><td><a onClick="_gaq.push(['_trackEvent', 'Reference_Link', 'with_title', '51', 6]);" href="/5198811.html">Vehicle communication system using existing roadway loops wherein the physical integrity of the loop is kept intact</a></td><td>1993-03-30</td><td>Potter et al.</td><td></td></tr><tr><td>5089815</td><td><a onClick="_gaq.push(['_trackEvent', 'Reference_Link', 'with_title', '50', 7]);" href="/5089815.html">Vehicle communication system using existing roadway loops</a></td><td>1992-02-18</td><td>Potter et al.</td><td></td></tr><tr><td>5057831</td><td><a onClick="_gaq.push(['_trackEvent', 'Reference_Link', 'with_title', '50', 8]);" href="/5057831.html">Vehicle simulation circuit for loop traffic signal control system</a></td><td>1991-10-15</td><td>Strang et al.</td><td></td></tr><tr><td>4996716</td><td><a onClick="_gaq.push(['_trackEvent', 'Reference_Link', 'with_title', '49', 9]);" href="/4996716.html">Vehicle communication system using existing roadway loops</a></td><td>1991-02-26</td><td>Potter et al.</td><td></td></tr><tr><td>4731867</td><td><a onClick="_gaq.push(['_trackEvent', 'Reference_Link', 'with_title', '47', 10]);" href="/4731867.html">Vehicle communication system using existing roadway loops</a></td><td>1988-03-15</td><td>Seabury et al.</td><td></td></tr><tr><td>4031510</td><td><a onClick="_gaq.push(['_trackEvent', 'Reference_Link', 'with_title', '40', 11]);" href="/4031510.html">Speed detection system for automobiles and other motor-driven objects</a></td><td>1977-06-21</td><td>King</td><td></td></tr>                </tbody>
+            </table>
+        </div>
+    </div>
+<br clear='all'><br clear="all"/><!-- 728x90 Responsive 2 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1586334167197709"
+     data-ad-slot="4118051210"
+     data-ad-format="auto">
+</ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br clear="all"/>
+    <!--	Foreign Patent References:  -->
+
+    <!--		Other References  -->
+    <div class="disp_doc2">
+        <div class="disp_elm_title">Other References:</div>
+        <div class="disp_elm_text">
+                            US 4,926,494, 05/1990, Potter (withdrawn)                <br/>
+                    </div>
+    </div>
+
+    <!--	Primary Examiner  -->
+
+    <!--	Assistant Examiner  -->
+
+    <!--	Attorney, Agent or Firm  -->
+    <div class="disp_doc2">
+        <div class="disp_elm_title">Attorney, Agent or Firm:</div>
+        <div class="disp_elm_text">
+                            PITTS & LAKE, P.C.                <br/>
+                    </div>
+    </div>
+
+    <!--		Parent Case Data  -->
+    <div class="disp_doc2">
+        <div class="disp_elm_title">Parent Case Data:</div>
+        <div class="disp_elm_text">
+            <h1>CROSS-REFERENCE TO RELATED
+            APPLICATIONS</h1><p>This application is a divisional
+            application of prior Non-Provisional application Ser. No.
+            10/384,164, filed Mar. 7, 2003 now U.S. Pat. No. 6,876,949,
+            which is non-provisional application of Provisional
+            Application Ser. No. 60/362,692, filed Mar. 8, 2002;
+            Provisional Application Ser. No. 60/382,415, filed on May
+            21, 2002; Provisional Application Ser. No. 60/411,320, filed
+            on Sep. 17, 2002; Provisional Application Ser. No.
+            60/424,916, filed on Nov. 8, 2002; and Provisional
+            Application Ser. No. 60/440,465, filed on Jan. 16, 2003.</p>        </div>
+    </div>
+
+    <!--	Claims  -->
+    <div class="disp_doc2">
+        <div class="disp_elm_title">Claims:</div>
+        <div class="disp_elm_text">
+            Having thus described the aforementioned invention, we claim:<br clear="all"/><br clear="all"/>
+                1. <claim-text>A method for normalizing lane occupancy, said method comprising the steps of:
+<claim-text>a) measure a speed of a vehicle with an inductive vehicle detector;</claim-text>
+<claim-text>b) measure an on-time for said vehicle crossing a wire loop sensor of said inductive vehicle detector</claim-text>
+<claim-text>c) determine an inductive length of said vehicle from said measured speed; and</claim-text>
+<claim-text>d) compute a normalized on-time by subtracting a longitudinal length of said wire loop sensor from said inductive length and dividing the difference by said measured speed.</claim-text>
+</claim-text>                    <br clear="all"/><br clear="all"/>
+                    2. <claim-text>The method of claim 1 further including a step of applying a correction to said inductive vehicle detector whereby said inductive vehicle detector calculates a normalized lane occupancy.</claim-text>                    <br clear="all"/><br clear="all"/>
+                    3. <claim-text>The method of claim 1 further including a step of adjusting a timing and a duration of a plurality of pulses generated by said inductive vehicle detector.</claim-text>                    <br clear="all"/><br clear="all"/>
+                    4. <claim-text>A method for determining a normalized lane occupancy for a vehicle detection system, said method comprising the steps of:
+<claim-text>a) measuring a speed and an inductive length of a vehicle as a function of vehicle speed, and a loop detector on-time whereby said inductive length equals said speed multiplied by said loop detector on-time;</claim-text>
+<claim-text>b) subtracting a longitudinal dimension of a wire loop from said inductive length;</claim-text>
+<claim-text>c) computing a normalized on-time wherein said normalized on-time equals said inductive length minus said longitudinal dimension of said inductive loop, all divided by said speed; and</claim-text>
+<claim-text>d) measuring a total time corresponding to a measurement period;</claim-text>
+<claim-text>whereby said normalized lane occupancy is reported as a percentage of said normalized on-time divided by said total time.</claim-text>
+</claim-text>                    <br clear="all"/><br clear="all"/>
+                            </div>
+    </div>
+
+    <!--	Description  -->
+    <div class="disp_doc2">
+        <div class="disp_elm_title">Description:</div>
+        <div class="disp_elm_text">
+            <h1>CROSS-REFERENCE TO RELATED APPLICATIONS</h1>
+<div p-id="p-0002" num="0001">This application is a divisional application of prior Non-Provisional application Ser. No. 10/384,164, filed Mar. 7, 2003 now U.S. Pat. No. 6,876,949, which is non-provisional application of Provisional Application Ser. No. 60/362,692, filed Mar. 8, 2002; Provisional Application Ser. No. 60/382,415, filed on May 21, 2002; Provisional Application Ser. No. 60/411,320, filed on Sep. 17, 2002; Provisional Application Ser. No. 60/424,916, filed on Nov. 8, 2002; and Provisional Application Ser. No. 60/440,465, filed on Jan. 16, 2003.</div>
+<h1>STATEMENT REGARDING FEDERALLY SPONSORED RESEARCH OR DEVELOPMENT</h1>
+<div p-id="p-0003" num="0002">Not Applicable</div>
+<h1>COMPUTER PROGRAM LISTING APPENDIX</h1>
+<div p-id="p-0004" num="0003">The computer program listing appendix contained on compact disc submitted herewith, in duplicate, containing the files identified below is incorporated by reference. A portion of the disclosure of this patent document contains material which is subject to copyright protection. The copyright owner has no objection to the facsimile reproduction by any one of the patent disclosure, as it appears in the Patent and Trademark Office patent files or records, but otherwise reserves all copyright rights whatsoever.</div>
+<div p-id="p-0005" num="0004">
+<tables>
+<patent-tables>
+<table><colgroup><col style="width:100.0%" /></colgroup>
+<tbody>
+<tr>
+<td colspan="1" />
+</tr>
+<tr>
+<td>LIST OF FILES</td>
+</tr>
+</tbody>
+</table>
+<table><colgroup><col style="width:22.58%" /><col style="width:19.35%" /><col style="width:22.58%" /><col style="width:35.48%" /></colgroup>
+<tbody>
+<tr>
+<td>Name</td>
+<td>Location</td>
+<td>Size (Bytes)</td>
+<td>Creation Date</td>
+</tr>
+<tr>
+<td colspan="4" />
+</tr>
+<tr>
+<td>Bivalent<sub>—</sub>c</td>
+<td>\</td>
+<td>37,403</td>
+<td>04/04/2005 04:14 PM</td>
+</tr>
+<tr>
+<td>Bivalent<sub>—</sub>h</td>
+<td>\</td>
+<td> 2,631</td>
+<td>04/04/2005 04:14 PM</td>
+</tr>
+<tr>
+<td colspan="4" />
+</tr>
+</tbody>
+</table>
+</patent-tables>
+</tables>
+</div>
+<h1>BACKGROUND OF THE INVENTION</h1>
+<div p-id="p-0006" num="0005">1. Field of Invention</div>
+<div p-id="p-0007" num="0006">The present invention relates to the processing of signals produced by inductive vehicle detectors, and more particularly to the normalization of such signals such that the same vehicle is recognized by different detectors or by the same detector at a different times.</div>
+<div p-id="p-0008" num="0007">2. Description of the Related Art</div>
+<div p-id="p-0009" num="0008">In inductive vehicle detectors of the prior art it is common practice to use manual switches to select the “frequency” and “sensitivity” of an inductive vehicle detector. Typical sensitivity settings are implemented as a threshold value that is offset from a baseline value by a fixed amount usually expressed in units of percent change in inductance. A vehicle is considered to have been detected when the inductance measurement output of the detector deviates from the baseline value by an amount greater than or equal to the threshold value. Inductive vehicle detectors generally have signature outputs which are typically digitized representations of an analog waveform corresponding to measured inductance versus time, and they generally have bivalent outputs which indicate the instantaneous presence or absence of a vehicle.</div>
+<div p-id="p-0010" num="0009">Typically, the baseline value is automatically adjusted instantaneously on power-up or reset, and adjusted incrementally in response to environmental drift; while the sensitivity threshold value is only adjusted manually. This leads directly to repeatability errors in presence, speed, length, occupancy and acceleration measurements which are based on the bivalent output of the detector.</div>
+<div p-id="p-0011" num="0010">It is not known in the prior art to calibrate either the signature output or threshold values of an inductive vehicle detector so that variations in the electrical parameters of the wire-loop and lead-line circuits from one detector to another, or time-varying environmental parameters for any particular loop-lead circuit, will cause a reduced repeatability error, from one detector to another, in the detector output.</div>
+<h1>BRIEF SUMMARY OF THE INVENTION</h1>
+<div p-id="p-0012" num="0011">It is desirable to normalize the detector outputs of two or more vehicle detectors so that a measurement made for a given vehicle by a given detector is substantially repeatable using either the same detector from one time to another, or using a different detector.</div>
+<div p-id="p-0013" num="0012">This is accomplished in one embodiment by measuring one or more common probe vehicles and standardizing the outputs of the detector(s) to give a consistent output. In another embodiment, this is accomplished by measuring one or more operating or circuit parameters of the detector circuit(s), and compensating the outputs of the detector(s) for variations in these measured parameters. In one embodiment of the present invention, one or more features of a plurality of vehicles representing the general vehicle population are measured and compared to an expected population distribution of the measured feature(s). An output of the detector is then calibrated based on this comparison.</div>
+<div p-id="p-0014" num="0013">A probe vehicle is a special vehicle driven over the vehicle detector(s) for the special purpose of calibrating the detector(s). In another embodiment, common vehicular traffic is used as passive probes using vehicle re-identification techniques. For example, two un-calibrated vehicle detectors are positioned some distance apart on a roadway, and a random vehicle happens across the two detectors as it journeys on its way. Because the two detectors are un-calibrated, it is likely that there will be significant differences between the outputs of the two detectors even though they have both detected the same vehicle. If a working assumption is made that the two vehicles were in fact the same vehicle, then the variations in the outputs of the two detectors are normalized to produce more similar outputs the next time this vehicle is detected. A first order calibration of the signature outputs of two inductive vehicle detectors takes the form of a simple scaling coefficient for each detector, and each sample from a detector is multiplied by its associated first order scaling coefficient. In one embodiment of the present invention, a second order scaling coefficient is also used in order to achieve acceptable calibration between inductive vehicle detectors. These n-order calibration coefficients for any x-detectors and any y-probe vehicles are derived by using linear algebra to solve multiple simultaneous equations.</div>
+<div p-id="p-0015" num="0014">Another embodiment calibrates x-detectors without the use of probe vehicles (y=0) by measuring a plurality of electrical circuit parameters and operating parameters for the x-detectors, and calibrating the outputs of the detectors based on the values of these measured parameters.</div>
+<div p-id="p-0016" num="0015">These calibration coefficients may be used to adjust a characteristic threshold magnitude of an inductive vehicle detector signature output prior to comparing the output to a target threshold value (bivalent detector). In another embodiment, the threshold value itself is adjusted; typically using only the first-order calibration coefficient. The threshold may also be adjusted as a function of a baseline noise level.</div>
+<div p-id="p-0017" num="0016">In the present invention, threshold calibration is typically associated with improving the repeatability of inductive length measurements. According to the present invention, inductive length is calibrated using a first-order coefficient, and a second order calibration coefficient is used to simultaneously calibrate the maximum magnitude of a signature.</div>
+<div p-id="p-0018" num="0017">It is a first object of the present invention to use one or more vehicles as passive probes to normalize an amplitude of a signature output of an inductive vehicle detector to compensate for variations in wire-loop, lead-line, driving frequency, and any other significant circuit parameter or operating parameter from one detector to another.</div>
+<div p-id="p-0019" num="0018">It is a second object of the present invention to use one or more vehicles as passive probes to normalize an amplitude of a signature output of an inductive vehicle detector to compensate for the effects of environmental drift for a particular detector from one time to another.</div>
+<div p-id="p-0020" num="0019">It is a third object of the present invention to use one or more vehicles as passive probes to normalize a sensitivity threshold of an inductive vehicle detector to compensate for variations in wire-loop, lead-line, driving frequency, and any other significant circuit parameter or operating parameter from one detector to another.</div>
+<div p-id="p-0021" num="0020">It is a fourth object of the present invention to use one or more vehicles as passive probes to normalize a sensitivity threshold of an inductive vehicle detector to compensate for the effects of environmental drift for a particular detector from one time to another.</div>
+<div p-id="p-0022" num="0021">It is a fifth object of the present invention to use one or more measured detector circuit parameters, or operating parameters, to normalize an amplitude of a signature output of and inductive vehicle detector to compensate for variations in wire-loop, lead-line, driving frequency, and any other significant circuit parameter or operating parameter from one detector to another.</div>
+<div p-id="p-0023" num="0022">It is a sixth object of the present invention to use one or more measured detector circuit parameters, or operating parameters, to normalize an amplitude of a signature output of an inductive vehicle detector to compensate for the effects of environmental drift for a particular detector from one time to another.</div>
+<div p-id="p-0024" num="0023">It is a seventh object of the present invention to use one or more measured detector circuit parameters, or operating parameters, to normalize a sensitivity threshold of an inductive vehicle detector to compensate for variations in wire-loop, lead-line, driving frequency, and any other significant circuit parameter or operating parameter from one detector to another.</div>
+<div p-id="p-0025" num="0024">It is a eighth object of the present invention to use one or more measured detector circuit parameters, or operating parameters, to normalize a sensitivity threshold of an inductive vehicle detector to compensate for the effects of environmental drift for a particular detector from one time to another.</div>
+<div p-id="p-0026" num="0025">It is a ninth object of the present invention to measure one or more features of a plurality of vehicles to produce a local population distribution table.</div>
+<div p-id="p-0027" num="0026">It is a tenth object of the present invention to measure one or more features of a plurality of vehicles to produce a standard population distribution table.</div>
+<div p-id="p-0028" num="0027">It is an eleventh object of the present invention to calibrate an output of a vehicle detector based on a characteristic of the local vehicle population.</div>
+<div p-id="p-0029" num="0028">It is a twelfth object of the present invention to measure one of more features of a plurality of vehicles to produce a local population distribution table suitable for comparison with a standard population distribution table.</div>
+<div p-id="p-0030" num="0029">It is a thirteenth object of the present invention to compare a local population distribution table with a standard population distribution table, and to calibrate an output of a vehicle detector based on the result of the comparison.</div>
+<div p-id="p-0031" num="0030">It is a fourteenth object of the present invention to calibrate the output of an inductive vehicle detector to substantially reduce or eliminate the effects of inconsistent loop geometry on detector accuracy.</div>
+<div p-id="p-0032" num="0031">It is a fifteenth object of the present invention to scale an inductive signature using an n-th order equation having a set of coefficients that are substantially similar to a set of coefficients previously used to calibrate the signature.</div>
+<div p-id="p-0033" num="0032">It is a sixteenth object of the present invention to characterize a feature of a local economy based on a measured vehicle population distribution.</div>
+<div p-id="p-0034" num="0033">It is a seventeenth object of the present invention to characterize a feature of a trend of a local economy based on a measured vehicle population distribution.</div>
+<div p-id="p-0035" num="0034">It is an object of the present invention to set a maximum limit for a sensitivity threshold based on a measured baseline noise.</div>
+<div p-id="p-0036" num="0035">It is an object of the present invention to calibrate an out-of-pavement vehicle detector using feedback from a second vehicle detector. It is another object of the present invention to calibrate an out-of-pavement vehicle detector using real-time feedback from a second vehicle detector in-situ where the out-of-pavement detector is to be deployed in the field. It is still another object of the present invention to optimize one or more variable parameters of an out-of-pavement detector system using feedback from a reference detector system.</div>
+<div p-id="p-0037" num="0036">It is an object of the present invention to enable a mobile service vehicle to transmit normalization coefficients to a detector, based on the inductive signature of the mobile service vehicle. It is another object to identify a mobile service vehicle to a detector so that the detector can measure the signature of the service vehicle and compare its known reference signature to then determine normalization coefficients.</div>
+<h1>BRIEF DESCRIPTION OF THE SEVERAL VIEWS OF THE DRAWINGS</h1>
+<div p-id="p-0038" num="0037">The above-mentioned features of the invention will become more clearly understood from the following detailed description of the invention read together with the drawings in which:</div>
+<div p-id="p-0039" num="0038">FIG. 1 is a block diagram showing the steps of using a probe vehicle;</div>
+<div p-id="p-0040" num="0039">FIG. 2 is a block diagram of a loop detector with a first order correction;</div>
+<div p-id="p-0041" num="0040">FIG. 3 is an block diagram of a loop detector with a digital normalization;</div>
+<div p-id="p-0042" num="0041">FIG. 4 depicts a typical Southern California Freeway Vehicle Population Distribution, measured in the Spring of 2002, showing the relative incidence and average inductive signature magnitude for vehicles having calibrated inductive lengths between zero and eighty-five feet; and</div>
+<div p-id="p-0043" num="0042">FIG. 5 depicts an expanded sectional view from FIG. 4 for vehicles having calibrated inductive lengths between thirteen and twenty-five feet.</div>
+<h1>DETAILED DESCRIPTION OF THE INVENTION</h1>
+<div p-id="p-0044" num="0043">It is desirable to normalize the detector outputs of two or more vehicle detectors so that a measurement made for a given vehicle by a given detector is substantially repeatable using either the same detector from one time to another, or using a different detector.</div>
+<div p-id="p-0045" num="0044">FIG. 1 illustrates an embodiment in which a probe vehicle is used to determine the normalization coefficients between detectors. A probe vehicle is driven by a first detector and its inductive signature is measured <b>102</b>. The same probe vehicle is driven by a second detector and its inductive signature is measured <b>104</b>. The two inductive signatures are compared <b>106</b> and the normalization coefficients are determined <b>108</b>. Finally, the normalization coefficients are applied to one or both detectors <b>110</b>.</div>
+<div p-id="p-0046" num="0045">A probe vehicle is a special vehicle driven by the vehicle detector(s) for the special purpose of calibrating the detector(s), or any common vehicular traffic is used as passive probes using vehicle re-identification or population distribution normalization techniques. For example, two un-calibrated vehicle detectors are positioned some distance apart on a roadway, and a random vehicle happens across the two detectors as it journeys on its way. Because the two detectors are un-calibrated, it is likely that there will be significant differences between the outputs of the two detectors even though they have both detected the same vehicle. If a working assumption is made that the two vehicles were in fact the same vehicle, then the variations in the outputs of the two detectors can be normalized to produce more similar outputs the next time this vehicle is detected. A first order calibration of the signature outputs of two inductive vehicle detectors would take the form of a simple scaling coefficient for each detector, and each sample of a detector would be multiplied by its associated first order scaling coefficient. In the preferred embodiment of the present invention, a second order scaling coefficient is also used in order to achieve acceptable calibration between inductive vehicle detectors.</div>
+<div p-id="p-0047" num="0046">In one embodiment these n-order calibration coefficients for any x-detectors and any y-probe vehicles are determined by solving multiple simultaneous equations of the form:</div>
+<div p-id="h-0008">For i=0 to y−1:
+<br />
+<i>Y</i><sub>i0</sub><i>=C</i><b>1</b><sub>0</sub><i>*Y</i><b>0</b><sub>i0</sub>+(<i>C</i><b>2</b><sub>0</sub><i>*Y</i><b>0</b><sub>i0</sub>)<sup>2</sup>+ . . . +(<i>Cn</i><sub>0</sub><i>*Y</i><b>0</b><sub>i0</sub>)<sup>n</sup>
+<br />
+<i>Y</i><sub>i1</sub><i>=C</i><b>1</b><sub>1</sub><i>*Y</i><b>0</b><sub>i1</sub>+(<i>C</i><b>2</b><sub>1</sub><i>*Y</i><b>0</b><sub>i1</sub>)<sup>2</sup>+ . . . +(<i>Cn</i><sub>1</sub><i>*Y</i><b>0</b><sub>i1</sub>) <sup>n</sup>
+<br />
+. . .
+<br />
+<i>Y</i><sub>i(x−1)</sub><i>=C</i><b>1</b><sub>(x−1)</sub><i>*Y</i><b>0</b><sub>i(x−1)</sub>+(<i>C</i><b>2</b><sub>(x−1)</sub><i>*Y</i><b>0</b><sub>i(x−1)</sub>)<sup>2</sup>+ . . . +(<i>Cn</i><sub>(x−1)</sub><i>*Y</i><b>0</b><i>i</i><sub>(x−1)</sub>)<sup>n</sup>
+<br />
+where Y<sub>i0</sub>=Y<sub>i1</sub>= . . . =Y<sub>i(x−1) </sub>is any calibrated characteristic magnitude of x vehicle detector output(s) associated with a given probe vehicle, i, (when i=0, this calibrated characteristic magnitude is arbitrarily chosen to be any practical value which is convenient);
+<br />
+Y<sub>i(x−1)</sub>=an un-calibrated characteristic magnitude, measured by an x'th vehicle detector−x, of a given probe vehicle, i; and
+<br />
+Cn<sub>(x−1)</sub>=nth order calibration coefficient for detector−x.
+</div>
+<div p-id="p-0048" num="0047">The following series identifies the normalized results with the coefficients to be applied to specific signature features.
+<br />
+<i>Y=C</i><sub>0</sub><i>+C</i><sub>1</sub><i>*X+C</i><sub>2</sub><i>*X</i><sup>2</sup><i>+ . . . +C</i><sub>N</sub><i>*X</i><sup>N</sup>
+<br />
+<i>Y</i><sub>1</sub><i>=C</i><sub>0</sub><i>+C</i><sub>1</sub><i>*X</i><sub>1</sub><i>+C</i><sub>2</sub><i>*X</i><sub>1</sub><sup>2</sup><i>+ . . . +C</i><sub>N</sub><i>*X</i><sub>1</sub><sup>N</sup>
+<br />
+<i>Y</i><sub>2</sub><i>=C</i><sub>0</sub><i>+C</i><sub>1</sub><i>*X</i><sub>2</sub><i>+C</i><sub>2</sub><i>*X</i><sub>2</sub><sup>2</sup><i>+ . . . +C</i><sub>N</sub><i>*X</i><sub>2</sub><sup>N</sup>
+<br />
+. . .
+<br />
+<i>Y</i><sub>M</sub><i>=C</i><sub>0</sub><i>+C</i><sub>1</sub><i>*X</i><sub>M</sub><i>+C</i><sub>2</sub><i>*X</i><sub>M</sub><sup>2</sup><i>+ . . . +C</i><sub>N</sub><i>*X</i><sub>M</sub><sup>N</sup>
+<br />
+where X is the measured vehicle signature feature,
+<br />
+Y is the corresponding desired normalized result for a given single detector,
+<br />
+C is the coefficient vector to be found for the given detector,
+<br />
+N is the order of the correction, and
+<br />
+M is the number of feature measurements. The feature measurements can be from the same vehicle or from different vehicles. An example feature would be distinguishable local and global maxima and minima as well as inflection points in the signature. While M should be greater than or equal to N, it is advantageous to measure a plurality of vehicles with signature features that vary over a wide range of amplitudes. This provides an over determined system which can be solved in a least-square-error sense to give a best-fit correction curve.
+</div>
+<div p-id="p-0049" num="0048">A coefficient vector C can be found for each detector. If the baselines resulting from both detectors are at zero, the coefficient C<b>0</b> will equal zero.
+<br />
+0<i>=C</i><sub>n</sub><i>*X</i><sub>kn</sub><i>+C</i><sub>m</sub><i>*X</i><sub>km</sub>
+<br />
+1<i>≦k≦M</i>
+<br />
+1<i>≦n≦N</i>
+<br />
+where C is the coefficient vector of a specific wire loop to be found,
+<br />
+M is the number of feature measurements, and
+<br />
+N is the number of (wire) loops to be normalized. In one embodiment, this equation is used to find the a first order scaling factor for a plurality of loops referenced to one loop. For a given signature created by a single loop, an equation of the form shown is made for each corresponding signature produced by a peer loop. With a number of signature pairs, a homogeneous system results. It is important to have all of the loops represented with enough pairs to connect every loop to each other. The system can be then solved for C with respect to any loop i by setting coefficient C<sub>i </sub>equal to 1. This equation is generalized for higher order corrections.
+</div>
+<div p-id="p-0050" num="0049">To calibrate x vehicle detectors to the nth-order using y probe vehicles (a minimum of nx probe vehicle passes would typically be desirable, with each of n probe vehicles being measured by each of x detectors being optimal, though many more probe vehicle passes could be used to help average away measurement errors), x*y simultaneous equations of the form shown are solved, using linear algebra, or, in another embodiment, they are solved using iterative non-linear techniques. It is advantageous to use a plurality of vehicles as passive probes to calibrate multiple detectors.</div>
+<div p-id="p-0051" num="0050">Another embodiment for calibrating a single detector using one or more probe vehicles is to classify the vehicle(s) using the detector, and then use a standardized characteristic magnitude for vehicles of the same, or similar classification, to proceed with the calibration process.</div>
+<div p-id="p-0052" num="0051">In one embodiment, the normalization coefficients are determined without resort to probe vehicles (y=0) by measuring a plurality of electrical circuit parameters and operating parameters for the x-detectors, and calibrating the outputs of the detectors based on the values of these measured parameters.</div>
+<div p-id="p-0053" num="0052">For example, the Q-factor of an inductive vehicle detector circuit is partially a function of the series resistance of the associated oscillator circuit, including the wire-loop, lead-lines, capacitors, and eddy-current losses to ground. As lead-line length increases (or conductor diameter decreases), the resistance of the circuit increases and the Q-factor goes down. In fixed-frequency type inductive vehicle detectors, where the impedance of the oscillator circuit is being measured at a fixed frequency, this variation in Q-factor with lead-line length effectively scales the output of the detector to be substantially inversely proportional to the series resistance of the circuit. This factor is a first-order effect and can be compensated for, or normalized, by measuring the resistance of the circuit (or Q-factor) and multiplying the output of the detector by a scaling factor. In one embodiment, the detectors directly measure the loop circuit impedance (including both the in-phase and quadrature components) at the sensor unit operating frequency to determine the frequency response, or Q-factor, of the wire loop circuit at that frequency.</div>
+<div p-id="p-0054" num="0053">FIG. 2 illustrates a block diagram of a loop detector <b>10</b> with a first order correction. A wire loop sensor <b>202</b> is connected to an inductive detector <b>204</b>. The detector <b>204</b> feeds a differential amplifier <b>208</b> that has a gain adjust <b>206</b>. The output of the differential amplifier <b>208</b> goes to an analog-to-digital converter <b>210</b>.</div>
+<div p-id="p-0055" num="0054">The normalization is accomplished, in the illustrated embodiment, with an analog multiplier <b>208</b>, such as a programmable gain front-end differential (instrumentation) amplifier <b>208</b>. In one embodiment the gain <b>206</b> of the amplifier <b>208</b> is chosen as described above for the method of determining the first order coefficient with probe vehicles.</div>
+<div p-id="p-0056" num="0055">In another embodiment the gain <b>206</b> of the amplifier <b>208</b> is chosen to yield a substantially consistent amplitude within the oscillator circuit regardless of the Q-factor of the oscillator circuit. An advantage of the differential-type amplifier <b>208</b> is that it can be used to boost the differential signal of the oscillator without boosting unwanted common-mode noise at the same time. In addition to being useful for normalizing the output of an inductive vehicle detector, this programmable-gain front-end amplifier <b>208</b> also has the advantage of improving the signal-to-noise ratio of wire-loop detectors, and thereby enabling the use of smaller diameter lead wires (which have intrinsically higher resistance per unit length). Large diameter lead wire is more expensive than smaller diameter lead wires, and they consume much more conduit space than smaller lead wires.</div>
+<div p-id="p-0057" num="0056">In still another embodiment, the loop detector <b>10</b> directly measures the loop circuit impedance (including both the in-phase and quadrature components) at the sensor <b>202</b> operating frequency to determine the frequency response, or Q-factor, of a wire-loop circuit at that frequency and then the detector circuit normalizes the frequency response of the detector to a standard value; that is, adaptive frequency response control. In this embodiment, the gain adjust <b>206</b> is automatically set by the circuit that measure the loop circuit impedance.</div>
+<div p-id="p-0058" num="0057">FIG. 3 illustrates a block diagram of a loop detector <b>10</b>′ with digital normalization. In this embodiment, the loop detector <b>10</b>′ includes a wire loop sensor <b>202</b> is connected to an inductive detector <b>204</b>. The detector <b>204</b> goes to an analog-to-digital converter <b>210</b>, which feeds a digital signal processor (DSP) <b>302</b>. The DSP <b>302</b> compensates for first-order effects by multiplying a digitized precursor of the detector <b>204</b> output. In another embodiment, the second order effects and higher can be compensated by numerical computing means within the DSP <b>302</b>.</div>
+<div p-id="p-0059" num="0058">One embodiment of determining and applying the normalization coefficients is disclosed in the computer program listing appendix provided to the United States Patent and Trademark Office on a compact disc. The computer software includes a routine for applying a scaling factor for a first order normalization coefficient. In particular, one routine applies a first first-order signature magnitude normalization coefficient component (d-&gt;AutoRanger) in a computationally efficient way by right-shifting a raw inductance measurement sample (d-&gt;rawsample).</div>
+<div p-id="p-0060" num="0059">The software also includes a routine for continually measuring the differential energy (d-&gt;avgDifferentialEnergy) of a series of raw inductive signature samples. If a vehicle is not presently being detected, a software routine computes a second first-order signature magnitude normalization coefficient component (d-&gt;adjust).</div>
+<div p-id="p-0061" num="0060">The computer software normalizes a sensitivity threshold (d-&gt;threshold) of an inductive vehicle detector using both a first (d--&gt;AutoRanger) and a second (d-&gt;adjust) first-order normalization coefficient component. In this case, the sensitivity threshold is constrained by a maximum bound determined by the value of d-&gt;sense, and may be adjusted to a lower sensitivity based on the value of d-&gt;avgDifferentialEnergy, which corresponds to a measure of an average noise level on a series of inductance measurement samples. Finally, the software applies the second first-order signature magnitude normalization coefficient component (d-&gt;adjust), producing a normalized output signature (d-&gt;outSig).</div>
+<div p-id="p-0062" num="0061">One example of a second order electrical circuit operating parameter that can be normalized according to the present invention, is frequency response. In a fixed-frequency type detector circuit, the frequency response of an inductance-capacitance-resistance oscillator circuit typically has one primary resonance frequency where the response (oscillator amplitude) of the circuit is a maximum, and this response generally declines as the oscillator frequency is moved farther away (increasing or decreasing frequencies). Over a range of frequencies centered at the resonance frequency, this frequency response curve is smooth and non-linear. The output of the detector, at any given operating frequency, depends on the response of the circuit at that frequency. When a vehicle is detected, the frequency response curve shifts, and the magnitude of the response at the detector operating frequency changes; this can be measured by a fixed-frequency detector. Since the frequency response curve is non-linear, normalizing the output of such a fixed-frequency detector according to various operating frequencies requires a higher-order adjustment than a first-order effect such as Q-factor. The inverse of the derivative of the frequency response curve at the chosen operating frequency can give a good first-order approximation to a normalizing coefficient; and a lookup table is a computationally efficient way to compensate for such higher-order effects.</div>
+<div p-id="p-0063" num="0062">Though the present invention has been exemplified using a fixed-frequency type inductive vehicle detector, those skilled in the art will recognize that other types of vehicle detector outputs, particularly frequency counting type detector outputs, are normalized or calibrated according to the present invention without departing from the spirit and scope of the present invention.</div>
+<div p-id="p-0064" num="0063">These calibration coefficients are used to adjust a characteristic magnitude of an inductive vehicle detector output prior to comparing the output to a threshold value (bivalent detector), or the threshold value itself is changed; typically with respect to the first-order calibration coefficient only.</div>
+<div p-id="p-0065" num="0064">There are several electrical parameters in an inductive vehicle detection circuit that tend to vary with environmental conditions, among these are circuit resistance or Q-factor which requires a first-order compensation coefficient and has already been discussed, and external capacitance which requires a second-order compensation coefficient. External capacitance can vary with the temperature of circuit board components, and it can vary with water intrusion into and around wire-loops and lead-lines. It is useful to periodically measure external capacitance and circuit resistance and to update the appropriate normalizing coefficients accordingly to compensate for environmental drift.</div>
+<div p-id="p-0066" num="0065">Wire-loop geometry is subject to wide variation according to installation procedures, design, and other arbitrary factors. To accurately and repeatably measure vehicle features, such as inductive length, and operating parameters such as speed and acceleration, it is useful to have an accurate measure of the dimensions of the wire-loops that are being used as vehicle sensors. These wire loops can be measured directly, they can be calibrated using the signatures of known vehicles as a reference, and they can be calibrated using the signatures of known vehicle types as a reference. One way to accomplish this is to record an inductive time signature for a vehicle using one or more wire loops of known dimensions, and normalize this signature(s) into an inductive length signature. Then record an inductive time signature for the same vehicle using one or more wire loops of unknown dimensions, and normalize this signature using a set of assumed dimensions for the loops having unknown dimensions; compare the inductive length signatures from the known and unknown loops. Continue re-normalizing the signatures from the unknown loop(s) by varying the assumed dimensions until the best match between the known and unknown inductive length signatures is found. The assumed dimensions which generate the best match are then taken to be the calibrated dimensions of the loops which for which the dimensions were previously unknown.</div>
+<div p-id="p-0067" num="0066">For the case in which the vehicle has constant acceleration over the two loops, the following equations are applicable.
+<br />
+0=½<i>*αt</i><sub>a</sub><sup>2</sup>+υ<sub>0</sub><i>t</i><sub>a</sub>
+<br />
+<i>D=</i>½<i>*αt</i><sub>b</sub><sup>2</sup>+υ<sub>0</sub><i>t</i><sub>b</sub>
+<br />
+0=½<i>*αt</i><sub>c</sub><sup>2</sup>+υ<sub>0</sub><i>t</i><sub>c</sub><i>+L</i>
+<br />
+<i>D=</i>½<i>*αt</i><sub>d</sub><sup>2</sup>+υ<sub>0</sub><i>t</i><sub>d</sub><i>+L</i>
+<br />
+where D is distance between loops,
+<br />
+L is the length between features,
+<br />
+α is acceleration,
+<br />
+υ<sub>0 </sub>is initial speed,
+<br />
+t<sub>a </sub>is the time the car crossed the first loop,
+<br />
+t<sub>b </sub>is the time the car crossed the second loop,
+<br />
+t<sub>c </sub>is the time the car left the first loop, and
+<br />
+t<sub>d </sub>is the time the car left the second loop. Given t<sub>a</sub>, t<sub>b</sub>, t<sub>c</sub>, t<sub>d</sub>, and D, the vehicle's length, acceleration, and speed can be determined.
+</div>
+<div p-id="p-0068" num="0067">Inductive length measurements are a strong function of the normalized amplitude of an inductive vehicle detector output, and an applied detection threshold. Where such measurements are used for the classification, identification, or re-identification of vehicles it is useful to normalize the amplitude of these detector outputs or the applied detection threshold to produce consistent and repeatable length, speed, or acceleration measurements as desired.</div>
+<div p-id="p-0069" num="0068">FIG. 4 illustrates a typical vehicle population distribution from the Southern California freeways during the Spring of 2002. FIG. 5 illustrates an expanded portion of FIG. 4 corresponding to approximately 13 to 25 feet. In one embodiment of the present invention, a standard population distribution table, FIGS. 4 and 5, is rendered based on one or more features measured for a plurality of vehicles. The parameters measured generally include inductive length, maximum signature magnitude, number of local maxima, etc.</div>
+<div p-id="p-0070" num="0069">The population distribution of two vehicle parameters are presented in this table: the relative population distribution for Calibrated Vehicle Inductive Length (CVIL) <b>1</b> and Calibrated Average Maximum Inductive Signature Magnitude (CAMISM) vs. CVIL <b>2</b>. The total area under the relative population distribution for CVIL trace <b>1</b> corresponds to 100% of the vehicle population represented (all vehicles having a measured inductive length of between 0–85 feet); the area under the same trace <b>1</b> for any smaller range of calibrated inductive lengths corresponds to the relative rate of occurrence of vehicles in the smaller range as a percentage of the total vehicle population. For example, in FIG. 5, the area under trace <b>1</b>′ corresponds to the relative rate of occurrence of vehicles having a CVIL of between 13–25 feet. The measured vehicle inductive lengths in the standard population distribution table, FIGS. 4 and 5, have been calibrated to an arbitrarily chosen mean of 19.0 feet (for vehicle inductive lengths between 19–25 feet), and an arbitrarily chosen sensitivity threshold, for f(L), of −1000. Before calibration, the local population distributions of vehicle inductive length for a plurality of detectors had substantially similar shapes as the calibrated trace, <b>1</b>, but their mean inductive lengths varied significantly from one another. The detector outputs were then calibrated for inductive length by choosing a first-order coefficient for each detector such than when the signature output of each detector was multiplied by its corresponding first order coefficient, and using the arbitrarily chosen sensitivity threshold of −1000 for each detector output, the mean CVIL for each detector's local population distribution table was shifted to the arbitrarily chosen standard mean of 19.0 feet. Thereafter, local values of CVIL measured by each detector for any given vehicle were substantially consistent with the standard table, and with each other.</div>
+<div p-id="p-0071" num="0070">The Calibrated Average Maximum Inductive Signature Magnitude (CAMISM) vs. CVIL traces, <b>2</b> &amp; <b>2</b>′, represent the average maximum inductive signature magnitudes for vehicles having the corresponding CVIL. A second-order calibration coefficient for each detector's signature output was chosen such that the CAMISM for vehicles having a CVIL of 19.0 feet, <b>3</b>, would fall as close as possible to an arbitrarily chosen value of −16384. In this region <b>4</b> of the CAMISM traces, <b>2</b> &amp; <b>2</b>′, there is a fairly horizontal slope; calibrating to a point, <b>3</b>, on the CAMISM trace, <b>2</b> &amp; <b>2</b>′, near the center of this region, <b>4</b>, is generally less sensitive to small errors in the calibration of inductive length.</div>
+<div p-id="p-0072" num="0071">Though the present invention has been illustrated using inductive signature detectors, and the inductive length and maximum magnitude parameters of inductive signatures, it is anticipated that any other inductive signature parameters, or parameters associated with other types of vehicle detectors, are used to calibrate a vehicle detector without departing from the spirit or scope of the present invention. Calibration of any vehicle detector output based on a measured feature of a standard vehicle population will be understood to fall within the scope of the present invention. Calibration of any vehicle detector output based on a measured feature of a local vehicle population will be understood to fall within the scope of the present invention.</div>
+<div p-id="p-0073" num="0072">It is particularly useful to use a measured characteristic of a local vehicle population to calibrate a vehicle detector when the vehicle detector is not in communication with other detectors (e.g., stand alone operation). When a vehicle detector is in communication with other detectors, additional calibration precision is attained by combining two or more of the various calibration methods of the present invention (e.g., cascade).</div>
+<div p-id="p-0074" num="0073">Inductive sensors are deployed in a wide variety of shapes and sizes. One common configuration is for two 2-meter square wire-loops, 4-meters apart, to be placed in a single traffic lane to form a speed-trap. The dimensions of each loop, and the separation between the loops, is subject to both random and intentional variations from one installation to another. It is useful for a vehicle detector to be able to sense and compensate for these inconsistencies. The present invention does this by comparing one or more characteristics of the local vehicle population distribution to a standard vehicle population distribution table, and then calibrating various detector parameters so as to cause the population distribution of a detector output to substantially match a standard population distribution. For example, if a pair of 2-meter square loops are placed 6-meters apart instead of the expected 4-meters, then the vehicle speeds estimated by the detector pair (the two detectors connected to these two loops) would be slower than in reality, and therefore the measured inductive lengths would be shorter than expected. However, by matching the local population distribution to the standard, this discrepancy can be exposed and quantified. The assumed 4-meter separation between the detectors, which is part of the speed-trap equation, can be adjusted to a value which will cause the measured local population distribution to substantially match the standard population distribution, 6-meters in this example.</div>
+<div p-id="p-0075" num="0074">When using common wire-loop speed-traps of this type, 2-meter square, which do not cover the entire traffic lane, it is typical for the measured signature magnitudes from the upstream loop and the downstream loop to be different. This is typically due to a lateral velocity of the vehicle (zero lateral velocity occurring when the vehicle is traveling straight down the lane). The maximum signature magnitude occurs when the vehicle is substantially centered over the wire loop, and diminishes as the vehicle is offset to either side of center. Therefore, when two signatures are measured for the same vehicle using this type of wire-loop, it is preferred to designate the signature with the greatest magnitude as the dominant signature. The other signature is designated as the recessive signature, and can be scaled to match the dominant signature. When an n-th order calibration equation is used to calibrate an inductive signature, it is desirable to also use an n-th order scaling equation with substantially similar coefficients as the calibration equation when scaling the signature during subsequent normalization or correlation operations.</div>
+<div p-id="p-0076" num="0075">The vehicle inductive length and signature magnitude population distributions depicted in FIGS. 4 and 5 are typical of Southern California freeways as of the Spring of 2002. The peak in the CVIL trace, <b>1</b> &amp; <b>1</b>′, at around 18.25 feet roughly corresponds with the incidence of compact cars, minivans, and Sport Utility Vehicles (SUVs) in the local population. The peak in the CIVIL trace, <b>1</b> &amp; <b>1</b>′, at around 19.75 feet roughly corresponds with passenger cars. The shoulder in the CVIL trace at around 21 feet roughly corresponds with the incidence of full-size cars and king-cab pickup trucks in the local population. Motorcycles represent a small percentage of this local population, and are grouped at a CVIL of around 8 feet. Tractor trailers for a small percentage of this population with CVIL's of 60–70 feet being typical. This profile, when combined with a classification of the vehicles according to any econometric measure, can be used to produce an econometric profile of the local vehicle population. Significant variations in this profile from one continent to another are to be expected; less dramatic local variations can be used to characterize a local economy, and to spot trends in a local economy. Such use falls within the scope of the present invention.</div>
+<div p-id="p-0077" num="0076">In one embodiment of the present invention, a mobile passive inductive loop detector, comprising a pickup coil, is transported by a service vehicle. When the service vehicle encounters a fixed-point inductive loop detector, the mobile passive inductive loop detector measures one or more characteristics of a signal emitted by the fixed-point detector. For example, if the fixed point detector is a frequency counting type detector, then one of the characteristics measured by the mobile passive inductive loop detector is the frequency of the fixed point detector; another characteristic of the fixed-point detector that is measured is the frequency variation of the fixed-point detector in response to the presence of the service vehicle. By measuring a sequence of frequency response characteristics of the fixed-point detector that change as the service vehicle moves in relation to the fixed point detector, an inductive signature of the service vehicle is recorded. It is known in the prior art to use the fixed-point detector to record a first inductive signature; however, the present invention uses a mobile passive inductive loop detector comprising a pickup coil to measure a second inductive signature that is substantially similar to the first inductive signature measurable by the fixed-point detector. The advantage to this is that a service vehicle, having a known inductive signature generating profile, is driven over any deployed wire-loop sensor and records the frequency response of the fixed-point sensor due to the presence of the known service vehicle. This allows for many diagnostic parameters for the fixed-point detector to be measured without the necessity of having direct physical access to the vehicle detection circuitry of the fixed-point detector.</div>
+<div p-id="p-0078" num="0077">When used in combination with GPS and/or other position determining equipment (e.g., inertial reference system), the precise location of fixed-point inductive loop detectors in the field may be recorded along with the wirelessly measurable electrical parameters. Some of the wirelessly measurable electrical parameters that it is desirable to measure from a moving service vehicle include: the frequency response of the fixed-point detector circuit due to a known vehicle, the noise level on the fixed-point detector circuit, weather related variability of the fixed-point detector circuit frequency response (e.g., external capacitance and/or grounding due to rain), interference between closely spaced inductive loop detector circuits (e.g., crosstalk), wire-loop sensor footprint with respect to the traffic lane markings, wire-loop sensor geometry (e.g., multiple loop-heads wired together in series or parallel), etc. By wirelessly measuring these parameters from a mobile service vehicle rather than by manually accessing the detector circuitry directly, it is possible to safely and efficiently ground-truth a vehicle detector's performance without the necessity of involving local maintenance personnel. The service vehicle carrying the mobile passive inductive loop detector of the present invention is dedicated to the task of diagnosing loop detectors in the field, or an automated detector package is carried by any one of a number of fleet-type vehicles in which case the time, location, and measured parameters from inductive loops encountered in the field are logged for later retrieval and analysis. The mobile passive inductive loop detector of the present invention includes a pickup coil, either a fast sampling A/D converter or a zero-crossing detector, a bivalent signal detector that indicates the presence or absence of a relatively strong external signal, an optional onboard signal analyzer, and an onboard data logging system.</div>
+<div p-id="p-0079" num="0078">In one embodiment comprising a fast sampling A/D converter, analog signals detected by the pickup coil are converted to a stream of digital samples. In one embodiment comprising a bivalent signal detector, the absolute value of a fixed number of digital samples produced by the A/D converter are summed to produce a representation of the total energy of the pick-up signal. This total energy representation is then compared to a threshold value. When the total energy exceeds the threshold value, then further processing of the digital samples is indicated. When the total energy does not exceed the threshold value, then no further processing of the digital samples is indicated. Further processing of the digital samples includes the storage of the raw digital samples for later analysis, or an immediate analysis of the samples and storage of the raw samples and/or results. One method for analyzing the samples uses an FFT (Fast Fourier Transform). Contemporaneous time and position information is typically stored along with the electronic signal information recorded. This allows for a detailed mapping of the location of each fixed-point detector surveyed. The locations where operating fixed-point detectors are not detected is also noted. Where problems are detected such as missing (e.g., non-functioning) detectors, improper frequency settings, poor signal-to-noise ratios, etc., remedial action may be planned based on the mobile passive inductive loop detector survey results. Periodic, or continual, mobile passive inductive loop detector surveys are conducted to maintain the reliability of any operational vehicle detector system. The concepts of the present invention may be applied to other types of field-deployed vehicle detection systems which emit active signals including radar-based, ultrasonic-based, laser-based, and infrared-strobe utilizing camera-based vehicle detector systems without departing from the spirit and scope of the present invention.</div>
+<div p-id="p-0080" num="0079">In one embodiment of the present invention, a fixed-point inductive loop detector is able to sense the presence of a mobile service vehicle when it is in close proximity to a wire-loop sensor associated with the detector and the two devices, mobile and fixed-point devices, communicate digital information with each other. For example, it is useful for the fixed-point detector to be able to communicate identification information (e.g., serial number) to the mobile service vehicle; and it is useful for the mobile service vehicle to send inductive signature calibration coefficients, based on its own inductive signature, to the fixed-point detector. The detector responds by adjusting a digital signal processor or other processing device to adjust the output based upon the characteristics of the particular sensor configuration.</div>
+<div p-id="p-0081" num="0080">Out-of-pavement vehicle detectors (e.g., side-fire radar, passive acoustic, ultrasonic, cameras, etc.) are sometimes desirable for collecting speed, volume, and occupancy traffic-flow data where in-pavement sensors are not already installed. They may be installed on the roadside or on overhead mounts to collect traffic data without the need for permanently installing sensors in the roadway. In the prior-art, it has proven difficult to achieve an acceptable level of accuracy using such out-of-pavement detectors without undue effort to tune and calibrate the detectors. It is an object of the present invention to calibrate an out-of-pavement vehicle detector using feedback from a second vehicle detector. This is useful for product development and algorithm development. It is a second object of the present invention to calibrate an out-of-pavement vehicle detector using real-time feedback from a second vehicle detector in-situ where the out-of-pavement detector is to be deployed in the field.</div>
+<div p-id="p-0082" num="0081">In one embodiment, a temporarily deployed on-pavement sensor (e.g., tape-down wire-loop sensor, road tubes, etc.) is deployed as the second sensor to provide the real-time feedback for calibrating the out-of-pavement detector in-situ. Because temporarily deployed on-pavement sensors are highly accurate speed, volume, and occupancy detectors when used properly, they are ideal for in-situ calibration of any out-of-pavement detector. Nevertheless, any other sort of temporarily deployed detector may be used as the feedback/reference source for in-situ calibration of an out-of-pavement detector without departing from the spirit or scope of the present invention.</div>
+<div p-id="p-0083" num="0082">In one embodiment, real-time feedback from a temporarily deployed reference sensor is used to optimize the speed, volume, and/or occupancy detection precision of an out-of-pavement vehicle detector by simultaneously collecting traffic flow data using both detectors. The data collected by the out-of-pavement detector is compared to the data collected by the reference detector to determine a first error quantity for the out-of-pavement detector. Then at least one physical, optical, electrical, or algorithmic parameter of the out-of-pavement detector system is varied. New traffic-flow data is simultaneously collected by the out-of-pavement vehicle detector and the reference detector and compared to produce a second error quantity for the out of pavement detector. If the second error quantity is more favorable than the first error quantity, then the variation of the detector system parameter is potentially the cause of the improvement. By repeating these steps, one or more variable parameters of the out-of-pavement detector system may be optimized over time. It is another object of the present invention to optimize one or more variable parameters of an out-of-pavement detector system using feedback from a reference detector system. Once in-situ training of the out-of-pavement vehicle detector is complete, the accuracy of the out-of-pavement detector may be certified to a known degree of accuracy. The temporarily installed reference detector system may be completely, or partially, removed. The calibration and training method of the present invention may be employed at any time after the installation of any out-of-pavement vehicle detection system. This process is repeated at any time to improve the accuracy of the out-of-pavement detector, to compensate for changes in the geometry of the roadway, and/or to verify its continued operation is within acceptable accuracy limits.</div>
+<div p-id="p-0084" num="0083">It is common practice in the art of traffic engineering for lane occupancy, a measure of the percentage of the longitudinal area of a traffic lane that is occupied by vehicles, to be reported as a simple percentage of loop detector on-time/total-time for some pre-determined data aggregation period. Because a loop detector's on-time is a function of the longitudinal (e.g., in the direction of vehicle travel) dimension of the wire-loop sensor as well as the percentage of the longitudinal area of the traffic lane that is occupied by vehicles, a systematic error in the reported lane occupancy in introduced. This systematic error is not consistent for varying wire loop sensor dimensions, varying vehicle speeds, or varying types of vehicle detection technologies; it is therefore desirable to normalize measured lane occupancy to a more consistent value. In one embodiment of the present invention, lane occupancy is normalized to better approximate the true percentage of the longitudinal area of the traffic lane that is occupied by vehicles under all traffic flow conditions. In one embodiment, this is accomplished by measuring a speed and an inductive length of a vehicle as a function of vehicle speed, and a loop detector on-time (e.g., inductive length=speed×loop detector on-time); subtracting a longitudinal dimension of the inductive loop from the inductive length and computing a normalized on-time (e.g., normalized on-time=(inductive length−longitudinal dimension of the inductive loop)/speed). Normalized lane occupancy may then be reported as a percentage of normalized on-time/total-time. According to one embodiment of the present invention, the timing and duration of pulses generated by an inductive vehicle detector, or other comparable traffic-flow detector with contact-closure type outputs, may be adjusted to reflect the normalized lane occupancy. This may be accomplished by delaying the output of the contact-closure signal until a normalized lane occupancy signal has been defined, and then outputting a normalized (e.g., selectively shortened) pulse rather than the un-normalized on-time pulse as is common practice in the prior-art.</div>
+<div p-id="p-0085" num="0084">It is common for quartz crystals, used to provide a time-base pulse train to an electronic circuit, to have a resonant frequency that is slightly (e.g., observed frequency tolerance is typically on the order of one part in six-thousand) different from the expected value. When such crystals are used as a time-base for a field-deployed inductive vehicle detector, it is desirable to correct for this deviation from the expected frequency. In one embodiment, a frequency of a quartz crystal is measured with reference to a time-base of known frequency. The variation of the crystal's measured frequency from a desired value is noted, and a compensation factor is computed. A time-base signal output of the crystal is then processed by a correction circuit (e.g., Digital Difference Analyzer—DDA, etc.) which outputs a corrected time-base output pulse train. In another embodiment, the time-base frequency of a real time clock (RTC) of a personal computer (PC) is compared to a reference time-base frequency generator. The variation of the PC's RTC time-base generator from a desired value is measured thereby, and a correction (e.g., drift) factor for the PC's RTC time-base generator is determined. Then, a real time clock output of the PC may be adjusted to compensate for the un-desirable drift of the PC's RTC time-base generator. This calibrated PC RTC time-base is then used as the reference time-base.</div>
+<div p-id="p-0086" num="0085">A signal quality monitoring method for a vehicle detection system includes the steps of a) measuring a baseline noise level; b) avoiding detectors on the same frequency by selecting an operating frequency having a relatively low baseline noise level, especially near the operating frequency; this may be accomplished by demodulating the input signal at a frequency that is slightly offset from the operating frequency to be analyzed, and then looking for a beat frequency corresponding to the difference between the offset frequency and the slightly offset demodulation frequency; c) automatically setting a detection threshold to an optimal level to minimize false detections and maximize real detections (or set the detection threshold to a manual setting as desired); in one embodiment this is accomplished by measuring a standard deviation from the baseline, noise, and then setting the detection threshold to be some multiple of this standard deviation; d) measuring a vehicle detector signal level; e) measuring the quality of a recent history of vehicle detection events, or lack thereof; and f) when the quality of a recent history of vehicle detection events falls below a pre-determined threshold, re-evaluating the operating conditions of the vehicle detection circuitry and re-configuring for a more favorable signal-to-noise ratio for vehicle detector measurements.</div>
+<div p-id="p-0087" num="0086">From the foregoing description, it will be recognized by those skilled in the art that methods and apparatus for normalizing inductive vehicle signatures have been provided. In one embodiment, normalization coefficients are determined by comparing the signature produced by one or more probe vehicles. In another embodiment, normalization coefficients are determined from one or more operating or circuit parameters.</div>
+<div p-id="p-0088" num="0087">In one embodiment, the first order normalization coefficient is applied to the detector circuit through an amplifier. In another embodiment, the first and higher order normalization coefficients are applied by manipulating the digitized signatures through a digital signal processor.</div>
+<div p-id="p-0089" num="0088">While the present invention has been illustrated by description of several embodiments and while the illustrative embodiments have been described in considerable detail, it is not the intention of the applicant to restrict or in any way limit the scope of the appended claims to such detail. Additional advantages and modifications will readily appear to those skilled in the art. The invention in its broader aspects is therefore not limited to the specific details, representative apparatus and methods, and illustrative examples shown and described. Accordingly, departures may be made from such details without departing from the spirit or scope of applicant's general inventive concept.</div>
+        </div>
+    </div>
+
+    <br clear="all"/><br/>
+
+
+    <br clear="all"/><br/>
+    <div class="disp_doc2">
+
+            <center>
+    
+    <a onClick="_gaq.push(['_trackEvent', 'Bottom', 'Click', 'Previous']);" href="/6988051.html">&lt;- Previous Patent (Window average stati...)</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a onClick="_gaq.push(['_trackEvent', 'Bottom', 'Click', 'Next']);" href="/6988053.html">Next Patent (Combined off-board d...) -&gt;</a>
+            </center>
+        <br clear="all"/><br/>
+</div>
+    <br clear="all"/><br/>
+        </div>
+
+        <div class="pageFooter">
+    <div class="row-fluid top">
+        <div class="figure"></div>
+        <ul>
+            <li>
+                <a href="/" onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Home']);">Home</a>
+            </li>
+            <li>
+                <a href="/search.html" onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Search']);">Search</a>
+            </li>
+            <li>
+                <a href="/services.html" onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Services']);">Services</a>
+            </li>
+        </ul>
+        <ul class="socialIcons">
+            <li><a href="https://twitter.com/FPOCommunity" class="twitter"
+                   onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'social twitter']);"></a></li>
+            <li><a href="http://www.linkedin.com/groups/FPO-Community-4524797" class="linkedin"
+                   onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'social linkedin']);"></a></li>
+        </ul>
+    </div>
+    <div class="row-fluid bot">
+        <p>
+            &copy; 2004-2026 FreePatentsOnline.com. All rights reserved.
+            <a href="/privacy.html" onclick="_gaq.push(['_trackEvent', 'Footer', 'Click', 'Privacy']);">Privacy Policy
+                &amp; Terms of Use.</a>
+        </p>
+    </div>
+</div>    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    _gaq.push(['_setCustomVar', 2, 'User Origin Source', 'no referer', 2]);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+<script type="text/javascript">
+    function trackPageLoad() {
+        var plend = new Date();
+        var plload = plend.getTime() - plstart.getTime();
+        var pn = document.location.pathname;
+        var lc = 'slow';
+        var la = new Array(200, 300, 400, 500, 1000, 1500, 2000, 2500, 5000);
+        for (var i = 0, len = la.length; i < len; i++) {
+            if (plload <= la[i]) {
+                lc = String(la[i]);
+                break;
+            }
+        }
+        _gaq.push(['onLoadTracker._setAccount', 'UA-174791-5']);
+        _gaq.push(['onLoadTracker._trackEvent', "LoadTime", lc, pn, plload]);
+        }
+</script>
+<script type="text/javascript">
+    try {
+        if (window.onload != null) {
+            var oldOnload = window.onload;
+            window.onload = function (e) {
+                oldOnload(e);
+                trackPageLoad();
+            };
+        }
+        else {
+            window.onload = trackPageLoad();
+        }
+    } catch (err) {
+    }
+</script>
+<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/js/fpo_3.js"></script>
+
+</body>
+</html>

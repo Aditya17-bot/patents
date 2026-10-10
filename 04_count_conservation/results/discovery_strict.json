@@ -1,0 +1,126 @@
+{
+ "manifest": "window_full_M25_A.json",
+ "floor_multiple": 2.0,
+ "self_floor_pct": 1.306,
+ "pair_relations": 724,
+ "loose": {
+  "score": {
+   "relations_found": 726,
+   "true_relations": 199,
+   "exact_matches": 147,
+   "recall_exact": 0.739,
+   "precision_exact": 0.202,
+   "correct_detector_set_any_signs": 147,
+   "note": "exact match understates recovery; a surveyed relation can be implied by a combination of discovered ones without appearing verbatim - see span_coverage",
+   "recall_detector_set": 0.739
+  },
+  "span": {
+   "covered": 150,
+   "of": 199,
+   "coverage": 0.754
+  }
+ },
+ "strict": {
+  "score": {
+   "relations_found": 651,
+   "true_relations": 199,
+   "exact_matches": 139,
+   "recall_exact": 0.698,
+   "precision_exact": 0.214,
+   "correct_detector_set_any_signs": 139,
+   "note": "exact match understates recovery; a surveyed relation can be implied by a combination of discovered ones without appearing verbatim - see span_coverage",
+   "recall_detector_set": 0.698
+  },
+  "span": {
+   "covered": 145,
+   "of": 199,
+   "coverage": 0.729
+  }
+ },
+ "sweep": [
+  {
+   "multiple": 1.0,
+   "kept": 364,
+   "exact": 124,
+   "recall": 0.623,
+   "precision": 0.341,
+   "span": 0.658
+  },
+  {
+   "multiple": 1.5,
+   "kept": 575,
+   "exact": 136,
+   "recall": 0.683,
+   "precision": 0.237,
+   "span": 0.714
+  },
+  {
+   "multiple": 2.0,
+   "kept": 651,
+   "exact": 139,
+   "recall": 0.698,
+   "precision": 0.214,
+   "span": 0.729
+  },
+  {
+   "multiple": 2.5,
+   "kept": 690,
+   "exact": 144,
+   "recall": 0.724,
+   "precision": 0.209,
+   "span": 0.744
+  },
+  {
+   "multiple": 3.0,
+   "kept": 722,
+   "exact": 146,
+   "recall": 0.734,
+   "precision": 0.202,
+   "span": 0.754
+  },
+  {
+   "multiple": 4.0,
+   "kept": 726,
+   "exact": 147,
+   "recall": 0.739,
+   "precision": 0.202,
+   "span": 0.754
+  }
+ ],
+ "configs": {
+  "none": {
+   "MAE": 15.79,
+   "RMSE": 32.0,
+   "outside": 10.7
+  },
+  "surveyed": {
+   "MAE": 14.41,
+   "RMSE": 32.48,
+   "outside": 5.46,
+   "constraints": 199,
+   "seconds": 15.438
+  },
+  "discovered_loose": {
+   "MAE": 15.26,
+   "RMSE": 34.01,
+   "outside": 8.65,
+   "constraints": 692,
+   "seconds": 36.171
+  },
+  "discovered_strict": {
+   "MAE": 15.51,
+   "RMSE": 35.54,
+   "outside": 8.6,
+   "constraints": 621,
+   "seconds": 26.522
+  },
+  "both_strict": {
+   "MAE": 14.56,
+   "RMSE": 32.53,
+   "outside": 6.01,
+   "constraints": 820,
+   "seconds": 186.241
+  }
+ },
+ "train_floor_pct": 1.248
+}

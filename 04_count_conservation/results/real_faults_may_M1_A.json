@@ -1,0 +1,100 @@
+{
+ "manifest": "window_may_M1_A.json",
+ "span_intervals": 192,
+ "relations": 203,
+ "detectors_in_two_or_more": 124,
+ "eligible": 120,
+ "test_spans": 7,
+ "reference_spans": 7,
+ "reports_test": 4,
+ "reports_reference_chance": 0,
+ "detectors_reported": 4,
+ "binsum": {
+  "reports_with_rate_over_2x_own_reference": 2,
+  "reports_with_rate_above_others_median": 2,
+  "of": 4,
+  "overall_bad_rate_all_detectors": 0.0004
+ },
+ "status_not_active_today": {
+  "reported": 0.0,
+  "others": 0.0,
+  "n_reported": 4,
+  "n_others": 120
+ },
+ "in_map_audit_flagged_relation": {
+  "reported": null,
+  "others": null
+ },
+ "persistence_june": null,
+ "reports": [
+  {
+   "span_start": 1488,
+   "row": 101,
+   "bias": -37.75,
+   "relations": 4,
+   "relations_fired_in_span": 12,
+   "site": "6030",
+   "binsum_bad_span": 0.0078,
+   "binsum_bad_reference": 0.0,
+   "binsum_bad_others_median": 0.0,
+   "binsum_bad_rank_pct": 99.2,
+   "missing_span": 0.3281,
+   "missing_reference": 0.0,
+   "missing_others_median": 0.0,
+   "status_today": "Active",
+   "name": "MIDAS site at M1/4701A priority 1 on link 116025401; GPS Ref: 435219;399567; Northbound"
+  },
+  {
+   "span_start": 2256,
+   "row": 11,
+   "bias": -4.6,
+   "relations": 4,
+   "relations_fired_in_span": 30,
+   "site": "4288",
+   "binsum_bad_span": 0.0,
+   "binsum_bad_reference": 0.0,
+   "binsum_bad_others_median": 0.0,
+   "binsum_bad_rank_pct": 0.0,
+   "missing_span": 0.0,
+   "missing_reference": 0.0,
+   "missing_others_median": 0.0,
+   "status_today": "Active",
+   "name": "MIDAS site at M1/4113A priority 1 on link 107032101; GPS Ref: 449502;351474; Northbound"
+  },
+  {
+   "span_start": 2448,
+   "row": 61,
+   "bias": 23.19,
+   "relations": 2,
+   "relations_fired_in_span": 29,
+   "site": "9648",
+   "binsum_bad_span": 0.0,
+   "binsum_bad_reference": 0.0,
+   "binsum_bad_others_median": 0.0,
+   "binsum_bad_rank_pct": 0.0,
+   "missing_span": 0.0,
+   "missing_reference": 0.0,
+   "missing_others_median": 0.0,
+   "status_today": "Active",
+   "name": "MIDAS site at M1/4450A priority 1 on link 116026402; GPS Ref: 447465;382420; Northbound"
+  },
+  {
+   "span_start": 2448,
+   "row": 42,
+   "bias": 6.14,
+   "relations": 3,
+   "relations_fired_in_span": 29,
+   "site": "14236",
+   "binsum_bad_span": 0.0156,
+   "binsum_bad_reference": 0.0007,
+   "binsum_bad_others_median": 0.0,
+   "binsum_bad_rank_pct": 100.0,
+   "missing_span": 0.0,
+   "missing_reference": 0.0,
+   "missing_others_median": 0.0,
+   "status_today": "Active",
+   "name": "MIDAS site at M1/4311A priority 1 on link 200045918; GPS Ref: 444976;369421; Northbound"
+  }
+ ],
+ "reference_reports": []
+}

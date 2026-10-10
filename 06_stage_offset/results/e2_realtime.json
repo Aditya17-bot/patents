@@ -1,0 +1,229 @@
+{
+ "meta": {
+  "min_coupling": 0.95,
+  "big_ft": 0.1,
+  "win_d": 21,
+  "steady_ft": 0.25,
+  "min_days": 8,
+  "period": [
+   "2020-10-01",
+   "2026-09-30"
+  ]
+ },
+ "published": {
+  "n": 1637,
+  "targets": 59,
+  "r_change": 0.484,
+  "n_big": 843,
+  "all": {
+   "baseline": {
+    "n": 1637,
+    "median": 8.04,
+    "mean": 18.32,
+    "p90": 42.3
+   },
+   "method": {
+    "n": 1637,
+    "median": 7.78,
+    "mean": 14.43,
+    "p90": 31.7
+   },
+   "paired": {
+    "better": 775,
+    "of": 1356,
+    "share": 0.572,
+    "z": 5.27
+   }
+  },
+  "big": {
+   "baseline": {
+    "n": 843,
+    "median": 16.45,
+    "mean": 30.51,
+    "p90": 72.1
+   },
+   "method": {
+    "n": 843,
+    "median": 12.87,
+    "mean": 21.88,
+    "p90": 51.2
+   },
+   "paired": {
+    "better": 509,
+    "of": 725,
+    "share": 0.702,
+    "z": 10.88
+   }
+  },
+  "open_water": {
+   "baseline": {
+    "n": 1117,
+    "median": 7.72,
+    "mean": 13.68,
+    "p90": 30.2
+   },
+   "method": {
+    "n": 1117,
+    "median": 7.25,
+    "mean": 11.8,
+    "p90": 25.4
+   },
+   "paired": {
+    "better": 524,
+    "of": 924,
+    "share": 0.567,
+    "z": 4.08
+   }
+  },
+  "base_rating_alone": {
+   "n": 1637,
+   "median": 10.45,
+   "mean": 24.72,
+   "p90": 44.3
+  }
+ },
+ "realtime": {
+  "n": 793,
+  "targets": 37,
+  "r_change": 0.363,
+  "n_big": 423,
+  "all": {
+   "baseline": {
+    "n": 793,
+    "median": 6.88,
+    "mean": 15.61,
+    "p90": 35.7
+   },
+   "method": {
+    "n": 793,
+    "median": 7.45,
+    "mean": 14.01,
+    "p90": 33.3
+   },
+   "paired": {
+    "better": 343,
+    "of": 656,
+    "share": 0.523,
+    "z": 1.17
+   }
+  },
+  "big": {
+   "baseline": {
+    "n": 423,
+    "median": 13.72,
+    "mean": 25.34,
+    "p90": 56.4
+   },
+   "method": {
+    "n": 423,
+    "median": 11.43,
+    "mean": 20.63,
+    "p90": 48.7
+   },
+   "paired": {
+    "better": 224,
+    "of": 358,
+    "share": 0.626,
+    "z": 4.76
+   }
+  },
+  "open_water": {
+   "baseline": {
+    "n": 544,
+    "median": 6.53,
+    "mean": 11.2,
+    "p90": 26.2
+   },
+   "method": {
+    "n": 544,
+    "median": 6.94,
+    "mean": 11.02,
+    "p90": 23.3
+   },
+   "paired": {
+    "better": 231,
+    "of": 449,
+    "share": 0.514,
+    "z": 0.61
+   }
+  },
+  "base_rating_alone": {
+   "n": 793,
+   "median": 9.97,
+   "mean": 21.4,
+   "p90": 38.8
+  }
+ },
+ "rtfinal": {
+  "n": 788,
+  "targets": 37,
+  "r_change": 0.372,
+  "n_big": 421,
+  "all": {
+   "baseline": {
+    "n": 788,
+    "median": 6.9,
+    "mean": 15.61,
+    "p90": 35.7
+   },
+   "method": {
+    "n": 788,
+    "median": 7.1,
+    "mean": 13.75,
+    "p90": 33.7
+   },
+   "paired": {
+    "better": 358,
+    "of": 696,
+    "share": 0.514,
+    "z": 0.76
+   }
+  },
+  "big": {
+   "baseline": {
+    "n": 421,
+    "median": 13.38,
+    "mean": 25.29,
+    "p90": 55.8
+   },
+   "method": {
+    "n": 421,
+    "median": 11.3,
+    "mean": 20.28,
+    "p90": 49.0
+   },
+   "paired": {
+    "better": 231,
+    "of": 368,
+    "share": 0.628,
+    "z": 4.9
+   }
+  },
+  "open_water": {
+   "baseline": {
+    "n": 541,
+    "median": 6.54,
+    "mean": 11.24,
+    "p90": 26.3
+   },
+   "method": {
+    "n": 541,
+    "median": 6.79,
+    "mean": 10.84,
+    "p90": 23.8
+   },
+   "paired": {
+    "better": 242,
+    "of": 473,
+    "share": 0.512,
+    "z": 0.51
+   }
+  },
+  "base_rating_alone": {
+   "n": 788,
+   "median": 9.99,
+   "mean": 21.33,
+   "p90": 38.7
+  }
+ }
+}

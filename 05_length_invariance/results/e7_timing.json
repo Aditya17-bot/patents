@@ -1,0 +1,23 @@
+{
+ "month": "2025-04",
+ "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+ "python": "3.9.11",
+ "roads": {
+  "M25": {
+   "admitted_pairs": 125,
+   "fitted_detectors": 130,
+   "fit_seconds": 8.2,
+   "records_corrected": 359406,
+   "correct_seconds": 2.36,
+   "microseconds_per_record": 6.57
+  },
+  "M1": {
+   "admitted_pairs": 201,
+   "fitted_detectors": 220,
+   "fit_seconds": 16.4,
+   "records_corrected": 614632,
+   "correct_seconds": 3.915,
+   "microseconds_per_record": 6.37
+  }
+ }
+}

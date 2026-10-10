@@ -1,0 +1,19 @@
+Read in the browser on 2026-10-06 (Google Patents pages; scripted fetches refused with HTTP 503).
+Abstracts transcribed from the page.
+
+US 5,594,667 A - Method and apparatus for baseline drift correction for a sensor (Allen Myers;
+priority 1992-07-10; granted 1997-01-14; expired).
+Abstract (excerpt): "In one embodiment of the invention, baseline level is calculated as the average of
+a fixed percentage of the points in the data set which have the lowest values found in the data set."
+Applied to a grain mass flow rate sensor in a harvester (cyclically varying parameter); the baseline
+is the sensor's zero, subtracted continually. CLOSEST to the floor-tracking idea: a low-quantile
+baseline of the sensor's own record. Differences: no reference (laboratory) measurement anchors the
+baseline; the baseline is taken as zero signal, not as a non-zero, site-specific true background.
+
+US 2019/0034032 A1 (granted as US 11,294,503 B2) - Sensor baseline offset adjustment (Apple Inc).
+Touch-sensor panel: delays baseline updates while ungrounded objects are present; global baseline
+offset for temperature changes. Not relevant to water-quality sensors.
+
+US 6,237,394 B1 - Apparatus and method for correcting drift in a sensor (Redwood Microsystems / SMC).
+Pressure sensor: zero-pressure drift correction factor from a calibration voltage and temperature
+taken at a nominal zero-pressure condition on a calibration command. Not relevant.

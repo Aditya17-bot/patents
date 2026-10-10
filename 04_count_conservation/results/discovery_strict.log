@@ -1,0 +1,8 @@
+corridor 367 sites, 199 surveyed nodes
+self floor 1.306% from 724 pair relations; kept 651 of 726
+strict: exact 139/199 recall 0.698 precision 0.214 span 0.729
+  surveyed           MAE   14.41  outside   5.46%  constraints 199  15.4s
+  discovered_loose   MAE   15.26  outside   8.65%  constraints 692  36.2s
+  discovered_strict  MAE   15.51  outside   8.60%  constraints 621  26.5s
+  both_strict        MAE   14.56  outside   6.01%  constraints 820  186.2s
+wrote results/discovery_strict.json

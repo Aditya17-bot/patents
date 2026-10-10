@@ -1,0 +1,82 @@
+M25 window_apr_M25_A.json 499 relations
+M25 window_may_M25_A.json 541 relations
+M25 window_june_M25_A.json 509 relations
+M25 {
+ "exact": {
+  "relations": 139,
+  "recur_in_all_3": 114,
+  "recur_in_any": 132,
+  "months_recurring_total": 372,
+  "share_recur_all_3": 0.8201,
+  "share_recur_any": 0.9496,
+  "mean_months_recurring": 2.676
+ },
+ "unmapped_site": {
+  "relations": 136,
+  "recur_in_all_3": 65,
+  "recur_in_any": 101,
+  "months_recurring_total": 250,
+  "share_recur_all_3": 0.4779,
+  "share_recur_any": 0.7426,
+  "mean_months_recurring": 1.838
+ },
+ "outside_map": {
+  "relations": 90,
+  "recur_in_all_3": 45,
+  "recur_in_any": 59,
+  "months_recurring_total": 159,
+  "share_recur_all_3": 0.5,
+  "share_recur_any": 0.6556,
+  "mean_months_recurring": 1.767
+ },
+ "implied": {
+  "relations": 88,
+  "recur_in_all_3": 45,
+  "recur_in_any": 71,
+  "months_recurring_total": 177,
+  "share_recur_all_3": 0.5114,
+  "share_recur_any": 0.8068,
+  "mean_months_recurring": 2.011
+ }
+}
+M1 window_apr_M1_A.json 178 relations
+M1 window_may_M1_A.json 226 relations
+M1 window_june_M1_A.json 223 relations
+M1 {
+ "exact": {
+  "relations": 62,
+  "recur_in_all_3": 48,
+  "recur_in_any": 56,
+  "months_recurring_total": 156,
+  "share_recur_all_3": 0.7742,
+  "share_recur_any": 0.9032,
+  "mean_months_recurring": 2.516
+ },
+ "implied": {
+  "relations": 43,
+  "recur_in_all_3": 26,
+  "recur_in_any": 31,
+  "months_recurring_total": 86,
+  "share_recur_all_3": 0.6047,
+  "share_recur_any": 0.7209,
+  "mean_months_recurring": 2.0
+ },
+ "outside_map": {
+  "relations": 44,
+  "recur_in_all_3": 9,
+  "recur_in_any": 28,
+  "months_recurring_total": 58,
+  "share_recur_all_3": 0.2045,
+  "share_recur_any": 0.6364,
+  "mean_months_recurring": 1.318
+ },
+ "unmapped_site": {
+  "relations": 92,
+  "recur_in_all_3": 35,
+  "recur_in_any": 60,
+  "months_recurring_total": 139,
+  "share_recur_all_3": 0.3804,
+  "share_recur_any": 0.6522,
+  "mean_months_recurring": 1.511
+ }
+}

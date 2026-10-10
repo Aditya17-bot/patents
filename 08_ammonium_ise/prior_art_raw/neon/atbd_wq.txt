@@ -1,0 +1,1267 @@
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+NEON ALGORITHM THEORETICAL BASIS DOCUMENT
+(ATBD): WATER QUALITY
+PREPARED BY ORGANIZATION DATE
+Kaelin M. Cawley AQU 05/26/2022
+Jesse Vance AQU 10/10/2016
+APPROVALS ORGANIZATION APPROVAL DATE
+Mike SanClements CCB 05/26/2022
+Kate Thibault SCI 01/05/2021
+Keli Goodman AQU 01/05/2021
+David Barlow CCB 01/05/2021
+RELEASED BY ORGANIZATION RELEASE DATE
+Tanisha Waters CM 05/26/2022
+See configuration management system for approval history.
+The National Ecological Observatory Network is a project solely funded by the National Science Foundation and managed under cooperative
+agreement by Battelle Ecology Inc. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the
+author(s) and do not necessarily reflect the views of the National Science Foundation.
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+CHANGE RECORD
+REVISION DATE ECO# DESCRIPTION OF CHANGE
+A 09/22/2018 ECO‐05528 Initial Release
+B 01/05/2021 ECO‐06544
+Fixing typos in the algorithm, which include:
+Minus sign in equations 7 and 8, minus sign in
+partial derivatives for unceratainty, removed
+reference to unused chlorophyll absorbance
+and temperature flagging, measurement uncer‐
+tainty equation broken reference, CVAL table
+description in variable nomenclature section,
+equation for absorbance from SUNA response
+and reference spectrum, and removal of generic
+code examples
+C 05/26/2022 ECO‐06828 Updating the ATBD to include the chla RFU
+stream and DO percent saturation local stream.
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+TABLE OF CONTENTS
+1 DESCRIPTION 1
+1.1 Description . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.2 Purpose . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.3 Scope . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+2 RELATED DOCUMENTS AND ACRONYMS 2
+2.1 Applicable Documents . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+2.2 Reference Documents . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+2.3 External References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+2.4 Acronyms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+2.5 Variable Nomenclature . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+3 DATA PRODUCT DESCRIPTION 6
+3.1 Variables Reported . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+3.2 Input Dependencies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+3.3 Product Instances . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+3.4 Temporal Resolution and Extent . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+3.5 Spatial Resolution and Extent . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+4 SCIENTIFIC CONTEXT 7
+4.1 Theory of Measurement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+4.1.1 Specific Conductance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+4.1.2 Dissolved Oxygen . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+4.1.3 pH . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+4.1.4 Chlorophyll . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+4.1.5 Turbidity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+4.1.6 fDOM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+4.2 Theory of Algorithm . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+4.3 Removing buoy data streams with NaN values . . . . . . . . . . . . . . . . . . . . . . . 11
+4.4 fDOM correction procedure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+4.4.1 Absorbance Corrections . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+4.4.2 Temperature Corrections . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+4.4.3 Final Equation for fDOM corrections . . . . . . . . . . . . . . . . . . . . . . . . 15
+4.5 Publishing buoy depth data streams . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+4.6 Publishing fDOM data streams . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+4.7 Special Considerations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+5 ALGORITHM IMPLEMENTATION 16
+5.1 Data flow for signal processing of the L1 DPs will be treated in the following order: . . . . . 16
+5.2 QA/QC Procedure: . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+6 UNCERTAINTY 18
+6.1 Measurement Uncertainty . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+i
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+6.1.1 DAS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+6.1.2 Calibration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+6.1.3 Combined Measurement Uncertainties . . . . . . . . . . . . . . . . . . . . . . . 21
+6.2 Uncertainty Budget . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 29
+7 Flagging data using asset definition inputs 31
+8 FUTURE PLANS AND MODIFICATIONS 31
+9 BIBLIOGRAPHY 31
+LIST OF TABLES AND FIGURES
+Table 1 Multisonde L0 inputs for YSI EXO2 measurements . . . . . . . . . . . . . . . . . . 6
+Table 2 SUNA L0 inputs for YSI EXO2 measurements . . . . . . . . . . . . . . . . . . . . . 6
+Table 3 Flags associated with YSI EXO2 measurements at S1 (HOR 101), S2 (HOR 102), and
+buoy (HOR 103) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+Table 4 Information maintained in the CI data store for YSI EXO2 . . . . . . . . . . . . . . . 18
+Table 5 Uncertainty budget for individual measurements of depth, Specific Conductance,
+DO ( 𝑚𝑔
+𝐿 ), DO (percent), pH, chlorophyll, turbidity. . . . . . . . . . . . . . . . . . . . . . 30
+Table 6 Uncertainty budget for temperature and absorbance corrected individual measure‐
+ments of fDOM. Shaded rows denate the order of uncertainty propagation (from lightest
+to darkest). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+Table 7 Uncertainty budget for temperature only corrected individual measurements of
+fDOM. Shaded rows denate the order of uncertainty propagation (from lightest to darkest). 30
+Table 8 Uncertainty budget for absorbance only corrected individual measurements of
+fDOM. Shaded rows denate the order of uncertainty propagation (from lightest to darkest). 31
+Table 9 Uncertainty budget for un‐corrected individual measurements of fDOM. Shaded
+rows denate the order of uncertainty propagation (from lightest to darkest). . . . . . . . . 31
+Table 10 Flagging status for multisonde part numbers. . . . . . . . . . . . . . . . . . . . . . 32
+Table 11 Part numbers, names, and descriptions. . . . . . . . . . . . . . . . . . . . . . . . 32
+Figure 1 Overview diagram of the buoy profiling system. . . . . . . . . . . . . . . . . . . . 8
+Figure 2 Overview diagram of the three types of sites and the multisonde data streams
+present at each. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+Figure 3 Data flow and associated uncertainties of individual measurements for Water
+Quality at sensor set 1 and associated L1 DPs. . . . . . . . . . . . . . . . . . . . . . . . 19
+Figure 4 Data flow and associated uncertainties of individual measurements for Water
+Quality at sensor set 2 and associated L1 DPs. . . . . . . . . . . . . . . . . . . . . . . . 19
+Figure 5 Data flow and associated uncertainties of individual measurements for Water
+Quality at the buoy locations and associated L1 DPs. . . . . . . . . . . . . . . . . . . . . 20
+ii
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+1 DESCRIPTION
+1.1 Description
+Contained in this document are details concerning Water Quality measurements made at NEON aquatic
+sites. Water quality includes specific conductance, dissolved oxygen (concentration and percent satura‐
+tion), pH, chlorophyll a, turbidity, and, at some stations, fluorescent dissolved organic matter (fDOM).
+Specifically, the processes necessary to convert “raw” sensor measurements into meaningful scientific
+units and their associated uncertainties are described.
+1.2 Purpose
+This document details the algorithms used for creating NEON Level 1 data products for Water Quality
+from Level 0 data, and ancillary data as defined in this document (such as calibration data) obtained via
+instrumental measurements made by the YSI EXO2. It includes a detailed discussion of measurement
+theory and implementation, appropriate theoretical background, data product provenance, quality as‐
+surance and control methods used, approximations and/or assumptions made, and a detailed exposition
+of uncertainty resulting in a cumulative reported uncertainty for this product.
+1.3 Scope
+The theoretical background and entire algorithmic process used to derive Level 1 data from Level 0 data
+for YSI EXO2 is described in this document. The YSI EXO2 employed is a set of sensor body and probes,
+which is manufactured by YSI Inc./Xylem Inc.. This document does not provide computational implemen‐
+tation details, except for cases where these stem directly from algorithmic choices explained here.
+Page 1 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+2 RELATED DOCUMENTS AND ACRONYMS
+2.1 Applicable Documents
+AD[01] NEON.DOC.000001 NEON Observatory Design (NOD) Requirements
+AD[02] NEON.DOC.005003 NEON Scientific Data Products Catalog
+AD[03] NEON.DOC.002652 NEON Level 1, Level 2, and Level 3 Data Products Catalog
+AD[04] NEON.DOC.005005 NEON Level 0 Data Product Catalog
+AD[05] NEON.DOC.000782 ATBD QA/QC Data Consistency
+AD[06] NEON.DOC.011081 ATBD QA/QC Plausibility Tests
+AD[07] NEON.DOC.000783 ATBD De‐spiking and time series analysis
+AD[08] NEON.DOC.000746 Evaluating Uncertainty (CVAL)
+AD[09] NEON.DOC.000785 TIS Level 1 Data Products Uncertainty Budget Estimation Plan
+AD[10] NEON.DOC.000751 CVAL Transfer of Standard Procedure
+AD[11] NEON.DOC.000927 NEON Calibration and Sensor Uncertainty Values 1
+AD[12] NEON.DOC.001113 Quality Flags and Quality Metrics for TIS Data Products
+AD[13] NEON.DOC.005011 NEON Coordinate Systems Specification
+AD[14] NEON.DOC.00xxxx Water Quality ingest workbook
+AD[15] NEON.DOC.00xxxx Water Quality publication workbook
+AD[16] NEON.DOC.001152 Aquatic Sampling Strategy
+AD[17] NEON.DOC.001166 NEON Sensor Command, Control and Configuration (c3) Document:
+Multisonde, stream
+AD[18] NEON.DOC.003808 NEON Sensor Command, Control and Configuration (c3) Document:
+Buoy meteorological station and submerged sensor assembly
+2.2 Reference Documents
+RD[01] NEON.DOC.000008 NEON Acronym List
+RD[02] NEON.DOC.000243 NEON Glossary of Terms
+2.3 External References
+External references contain information pertinent to this document, but are not NEON configuration‐
+controlled. Examples include manuals, brochures, technical notes, and external websites.
+ER[01] EXO User Manual
+1Note that CI obtains calibration and sensor values directly from an XML file maintained and updated by CVAL in real time.
+This report is updated approximately quarterly such that there may be a log time between the XML and report updates.
+Page 2 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+2.4 Acronyms
+Acronym Definition
+AIS Aquatic Instrument System
+ATBD Algorithm Theoretical Basis Document
+CI NEON Cyberinfrastructure
+CVAL NEON Calibration, Validation, and Audit Laboratory
+DAS Data Acquisition System
+DP Data Product
+FDAS Field Data Acquisition System
+GRAPE Grouped Remote Analog Peripheral Equipment
+Hz Hertz
+L0 Level 0
+L1 Level 1
+QA/QC Quality assurance and quality control
+2.5 Variable Nomenclature
+The symbols used to display the various inputs in the ATBD, e.g., calibration coefficients and uncertainty
+estimates, were chosen so that the equations can be easily interpreted by the reader . However, the sym‐
+bols provided will not always reflect NEON’s internal notation, which is relevant for CI’s use, and/or the
+notation that is used to present variables on NEON’s data portal. Therefore a lookup table is provided in
+order to distinguish what symbols specific variables can be tied to in the following document.
+Page 3 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+Symbol Internal Notation Description
+𝜆 and
+𝑟𝑒𝑓𝑒𝑟𝑒𝑛𝑐𝑒𝑆𝑝𝑒𝑐𝑡𝑟𝑢𝑚 CVALTABLEA1
+Calibration table component containing wavelength
+(𝜆, independent variable) and calibration table
+component containing reference spectrum values
+(𝑟𝑒𝑓𝑒𝑟𝑒𝑛𝑐𝑒𝑆𝑝𝑒𝑐𝑡𝑟𝑢𝑚 , dependent variable)
+𝜌𝑓𝐷𝑂𝑀 CVALA1 Calibration factor for temperature correction function for
+fDOM
+𝑙𝑓𝐷𝑂𝑀 CVALB1 Calibration factor for absorbance correction function for
+fDOM
+𝑢𝐴1,𝑑 U_CVALA1 Combined, standard uncertainty of sensor depth; pro‐
+vided by CVAL
+𝑢𝐴1,𝑠𝐶𝑜𝑛𝑑 U_CVALA1 Combined, standard uncertainty of specific conductivity;
+provided by CVAL
+𝑢𝐴1,𝐷𝑂𝑠𝑎𝑡 U_CVALA1 Combined, standard uncertainty of dissolved oxygen
+saturation; provided by CVAL
+𝑢𝐴1,𝑝𝐻 U_CVALA1 Combined, standard uncertainty of pH; provided by CVAL
+𝑢𝐴1,𝑐ℎ𝑙𝑎 U_CVALA1 Combined, standard uncertainty of chlorophyll a; pro‐
+vided by CVAL
+𝑢𝐴1,𝑐ℎ𝑙𝑎𝑅𝐹 𝑈 U_CVALA1 Combined, standard uncertainty of chlorophyll a relative
+fluorescence; provided by CVAL
+𝑢𝐴1,𝑡𝑢𝑟𝑏 U_CVALA1 Combined, standard uncertainty of turbidity; provided by
+CVAL
+𝑢𝐴1,𝑓𝐷𝑂𝑀 U_CVALA1 Combined, standard uncertainty of fluorescent dissolved
+organic matter; provided by CVAL
+𝑢𝐴1,𝜌𝑓𝐷𝑂𝑀
+U_CVALA4 Combined, standard uncertainty of temperature correc‐
+tion function for fDOM; provided by CVAL
+𝑢𝐴1,𝑙𝑓𝐷𝑂𝑀
+U_CVALA5 Combined, standard uncertainty of absorbance correc‐
+tion function for fDOM; provided by CVAL
+𝑅1𝑑 CVALR1 Valid field calibration flag; provided by CVAL
+𝑅1𝑠𝐶𝑜𝑛𝑑 CVALR1 Combined, standard uncertainty of specific conductivity;
+provided by CVAL
+𝑅1𝐷𝑂𝑠𝑎𝑡 CVALR1 Combined, standard uncertainty of dissolved oxygen
+saturation; provided by CVAL
+𝑅1𝑝𝐻 CVALR1 Combined, standard uncertainty of pH; provided by CVAL
+𝑅1𝑐ℎ𝑙𝑎 CVALR1 Combined, standard uncertainty of chlorophyll a; pro‐
+vided by CVAL
+𝑅1𝑡𝑢𝑟𝑏 CVALR1 Combined, standard uncertainty of turbidity; provided by
+CVAL
+𝑅1𝑓𝐷𝑂𝑀 CVALR1 Combined, standard uncertainty of fluorescent dissolved
+organic matter; provided by CVAL
+Page 4 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+Symbol Internal Notation Description
+𝑓𝐷𝑂𝑀 NA Raw, calibrated fDOM measurement
+𝑓𝐷𝑂𝑀 20 NA Temperature corrected, calibrated fDOM measurement
+𝑓𝐷𝑂𝑀 𝐴 NA Absorbance corrected, calibrated fDOM measurement
+𝑓𝐷𝑂𝑀 𝐴,20 NA Absorbance and temperature corrected, calibrated fDOM
+measurement
+𝑇𝑚 NA Temperature reading from the specific conductance
+probe (surfaceWaterTemperature term)
+Page 5 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+Table 1: Multisonde L0 inputs for YSI EXO2 measurements
+fieldName units DPNumber
+specificConductance microSiemensPerCentimeter NEON.DOM.SITE.DP0.20005.001.01093.HOR.VER.000
+surfaceWaterTemperature celsius NEON.DOM.SITE.DP0.20005.001.01378.HOR.VER.000
+sensorDepth meter NEON.DOM.SITE.DP0.20005.001.01664.HOR.VER.000
+dissolvedOxygenSaturation percent NEON.DOM.SITE.DP0.20005.001.01360.HOR.VER.000
+dissolvedOxygen milligramsPerLiter NEON.DOM.SITE.DP0.20005.001.01151.HOR.VER.000
+localDissolvedOxygenSat percent NEON.DOM.SITE.DP0.20005.001.06397.HOR.VER.000
+pH pH NEON.DOM.SITE.DP0.20005.001.01657.HOR.VER.000
+chlorophyll microgramsPerLiter NEON.DOM.SITE.DP0.20005.001.01660.HOR.VER.000
+chlaRelativeFluorescence na NEON.DOM.SITE.DP0.20005.001.06396.HOR.VER.000
+turbidity formazineNephelometricUnit NEON.DOM.SITE.DP0.20005.001.01662.HOR.VER.000
+fDOM quinineSulfateUnits NEON.DOM.SITE.DP0.20005.001.01661.HOR.VER.000
+Table 2: SUNA L0 inputs for YSI EXO2 measurements
+fieldName units DPNumber
+rawNitrateSingleCompressedStream string NEON.DOM.SITE.DP0.20033.001.02242.HOR.VER.000
+3 DATA PRODUCT DESCRIPTION
+3.1 Variables Reported
+The Water Quality related L1 DPs provided by the algorithms documented in this ATBD are displayed in
+the accompanying file(s): Water Quality publication workbook, PublicationWorkbook_Water_quality.txt
+(AD[15]).
+3.2 Input Dependencies
+Table 1 and Table 2 (above) detail the YSI EXO2 related L0 DPs used to produce L1 YSI EXO2 DPs in this
+ATBD.
+Note: dissolvedOxygenSaturation produces seaLevelDOSat data streams and localDissolvedOxygenSat
+produces localDOSat data streams.
+3.3 Product Instances
+Two YSI EXO2 will be deployed at each NEON stream site. The upstream sensor, sensor set #1, will not
+have an fDOM sensor . The downstream sensor, sensor set #2, will have an fDOM sensor in addition to all
+of the sensors at sensor set #1.
+One YSI EXO2 with fDOM will be deployed at each NEON lake or river buoy, which will start a profile
+Page 6 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+through the water column every 4 hours provided that there are at least 2 m of water depth present at
+the site. The duration of the profile depends on the water depth and number of profile steps. In lakes
+that are shallow the profiler will remain at the parked depth recording measuremetns every 5 minutes. A
+profile will take no longer than 4 hours, but often takes less than a half hour at the shallow lakes.
+3.4 Temporal Resolution and Extent
+Measurement of water quality at stream sites will occur 1 per minute (0.01667 Hz).
+Measurement of water quality will occur at lake and river buoys at 1 per 5 minutes (0.003333 Hz).
+3.5 Spatial Resolution and Extent
+At stream sites the water quality sensors will be deployed about 30 to 45 minutes apart based on water
+velocity during baseflow conditions.
+A YSI EXO2 will be part of the submerged sensors on the buoy at lake and river NEON sites, which will be
+deployed at a deep area of the main basin in lakes and at a deep area outside of the navigation channel in
+rivers.
+4 SCIENTIFIC CONTEXT
+Water quality parameters cover a suite of values that vary over the course of a day and throughout sea‐
+sons. These measurements can be useful as a context for intepreting other results or to base metabolism
+model estimates on. These core parameters are related to a variety of biogeochemical processes im‐
+portant to surface water ecosystems. At lake and river sites, the water quality sonde is mounted to col‐
+lected information from multiple depths if the water body is at least 2 m deep in order to understand the
+changes in water quality through the vertical water column ( Figure 1). In small streams, however, there
+are two water quality multisondes deployed longitudinally to capture tha variation in water quality from
+upstream to downstream (Figure 2).
+Page 7 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+Figure 1: Overview diagram of the buoy profiling system.
+Page 8 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+Figure 2: Overview diagram of the three types of sites and the multisonde data streams present at each.
+4.1 Theory of Measurement
+All sensors used as part of this data product are part of the YSI EXO2 water quality system. Individual, in‐
+terchangeable probes are plugged into a body that is configured for deployment. The body remains at a
+site for its funtional life. The removable probes are field calibrated on a bi‐weekly basis and returned to
+the NEON calibration and validation laboratory on an annual basis, or earlier if field calibration fails, for
+laboratory calibration.
+###Depth A non‐vented pressure sensor is located in the body of the multisonde. At lake and river sites,
+where the system is installed on a profiling buoy, the pressure/depth sensor in the body is field calibrated
+to local barometric pressure initially and bi‐weekly. At stream sites, the depth sensor in the body is not
+calibrated and data is not reported as part of this data product. Pressure measurements collected using a
+vented level TROLL sensor are used to determine water level at stream sites and are published as part of
+the Elevation of Surface Water data product (DP1.20016.001).
+4.1.1 Specific Conductance
+The probe records temperature using a digital thermistor and conductivity using a 4‐electrode nickel cell.
+Specific conductance is calculated based on the temperature corrected conductivity.
+Page 9 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+4.1.2 Dissolved Oxygen
+The EXO utilizes an optical dissolved oxygen sensor that emits a blue light on a luminescent dye embed‐
+ded in a matrix which is quenched by the presence of oxygen.
+4.1.3 pH
+The EXO pH sensor uses a standard glass electrode.
+4.1.4 Chlorophyll
+The EXO total algae sensor is a dual‐channel fluorometer that uses a 470nm excitation beam that excites
+chlorophyll a and a second 590 nm excitation beam that excites the phyocyanin accessory pigment found
+in blue‐green algae (cyanobacteria). Chlorophyll concentration is a biogeochemically relavant parameter
+that is readily available by remote sensing and can be can serve as a proxy for phytoplankton biomass and
+light attenuation (Oestreich et al., 2016, Ganju et al., 2014, Jaud et al., 2012).
+4.1.5 Turbidity
+The EXO turbidity sensor employs a near‐IR light source (~780 ‐ 900 nm) and detects scattering at 90 de‐
+grees of the incident beam.
+4.1.6 fDOM
+The EXO fDOM sensor is a fluorometer with a single excitation/emission pair (365nm/480nm) used to
+detect the fluorescent fraction of the chromophoric DOM when exposed to near‐UV light. Because of the
+impacts of temperature and water column absorbance (from a combination of dissolved and particulate
+compounds) on these readings corrections must be applied to the calibrated data.
+4.2 Theory of Algorithm
+1. One‐minute or five‐minute instantaneous measurements of will be published along with uncer‐
+tainty and quality flags. Values outside of the specified ranges in the thresholds file should be
+flaged and not published.
+2. Depth (calibrated and published for buoy sites only), specific conductance, DO (mg/L), DO (%), pH,
+and turbidity measurements will have calibration factors applied in the field by the sensor body
+prior to data output. Therefore, calibration coefficients will not need to be applied to these data
+streams as part of the ATBD workflow.
+3. fDOM and chlorophyll sensors use fluorescence to make measurements and this is influenced
+by light absorbing and scattering compounds in the water column. Due to a shorter pathlength
+and longer wavelengths light, the chlorophyll readings will include additional uncertainty inputs
+from CVAL, but will not be corrected. However, fDOM data will be corrected using the absorbance
+data from the SUNA nitrate analyzer and temperature from the conductivity probe. fDOM mea‐
+surements will be corrected for the influence of temperature, turbidity, and absorbance similar to
+Downing et al. (2012).
+Page 10 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+4.3 Removing buoy data streams with NaN values
+Currently, water quality data coming off of the buoy (HOR index 103) are parsed into columns in the or‐
+der they come in from the sensor . In the case of a sensor returning a NaN value, that is not parsed or
+stored in the data table. Thus, when an individual probe is malfunctioning and returning NaN values,
+the data returned from other sensors can be shifted to the wrong column and come in to the database
+in the wrong stream. Thus, anytime there is a NaN value returned by any of the 20 L0 data stream for a
+time stamp all data streams should be converted to NaN or null, the buoyNAFlag should be set to 1, the
+finalQF should be set to 1, and all other QFs should be set to ‐1. If data is coming in without any NaN val‐
+ues the buoyNAFlag should be set to 0. The buoyNAFlag should only be populated for buoy locations
+(P/N HB07530100, HOR index 103).
+This does not apply to stream locations (HOR index 101 and 102) as a different data logger is used there.
+Currently, the only time that a null of gap flag would be set to 1 for buoy data would be if there is no data
+returned for any of the 20 data streams for a buoy. which would mean the whole sonde wasn’t returning
+data rather than just a probe.
+4.4 fDOM correction procedure
+Fluorescence is an optical property of water tied to a variety of ecological parameters. Temperature and
+other, non‐fluorescent but optically active, components of surface water can have an impact on fDOM
+readings that limit the ability to compare fDOM accross sites and over time. For this reason fDOM will be
+published as temperature and absorbance corrected (fDOM) and uncorrected (rawCalibratedfDOM) for
+users interested in both types of data (Downing, 2012; Watras et al. 2011).
+4.4.1 Absorbance Corrections
+4.4.1.1 Converting SUNA response data to absorbance There is one SUNA optical nitrate sensor that
+produces absorbance data at each NEON aquatic site. This one sensor will be used to correct all water
+quality fDOM data. The SUNA sensor will be located at HOR 102 at stream sites and 103 at buoy sites.
+The HOR 102 SUNA data at stream sites will be used to correct both HOR 101 and 102 water quality data.
+At the FLNT buoy the SUNA at VER 100 will be used to correct the water quality data for VER 100 and VER
+110, all other buoys have only one SUNA and one water quality sonde (both at HOR 103 and VER 100).
+When SUNA absorbance data is not available for the time range that covers the multisonde data process‐
+ing, set the fDOMAbsQF to 1 to indicate that the absorbance corrections could not be applied. Skip the
+algorithms outlined here and proceed with applying the temperature corrections (see section 4.3.2).
+In full ASCII mode, streams 11‐266 are the spectrum channels returned by the SUNA nitrate analyzer
+(sunaResponse). These responses can be converted to decadic absorbance values by taking the base 10
+log of the ratio of the response for index i and reference spectrum for index i. The reference spectrum of
+256 values (referenceSpectrum), which is the same number of SUNA response values, will be provided by
+CVAL as a calibration table.
+Absorbance values will be baseline corrected when the absorbance at the longest wavelength (channel
+266) is less than 0. The value of the baseline correction for each frame will be the absorbance at channel
+Page 11 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+266 subtracted from 0. For instance, if the absorbance at the longest wavelength is ‐0.02, a value of 0.02
+will be added to all light channels for that frame prior to calculating the mean or removing any frames.
+Any light frames that have an absorbance value of 0 or less (log10(sunaResponse[i]/referenceSpectrum[i])
+<= 0) between wavelengths of 205 and 380 (x[i] > 205 && x[i] < 380) should be removed before calculat‐
+ing the average as they will be problematic when fitting a linear regression for calculating the emission
+absorbance. The 10 (or fewer) remaining light frames, after the first 10 light frames are discarded dur‐
+ing during lamp warm‐up time and cleaning 0 or negative values, collected every 15 minutes should be
+averaged (using a mean) for each wavelength/channel to create the sunaResponse values. If no frames
+are left to calculate the average from, the data should be treated like there was no absorbance data and
+the fDOMAbsQF should be set to 1 to indicate that the absorbance corrections could not be applied. The
+number of frames that were used to calculate the mean absorbance spectrum should be published for
+each fDOM reading in the spectrumCount field. 0 should be populated if no frames were available.
+4.4.1.2 Calculate the mean ( 𝐴𝑒𝑥) and standard deviation of absorbance (𝑢𝐴𝑒𝑥
+) over the excitation
+range of the fDOM probe (351 to 361 nm) x is the wavelength (𝜆) provided by CVAL in the calibration
+table as the independent variable with the same length as the referenceSpectrum and streams 13‐268 of
+the SUNA spectrum data. The calculated mean absorbance cannot be negative, if the calculations result
+in a negative value set 𝐴𝑒𝑥 to 0, set 𝐴𝑒𝑚 to 0 as well, set fDOMAbsQF to 3 to indicate that the calculated
+absorbance correction factor was 0, set 𝑓𝐷𝑂𝑀 𝐴 equal to 𝑓𝐷𝑂𝑀 𝑚, and move on to applying tempera‐
+ture corrections (see section 4.3.2).
+When 𝐴𝑒𝑥 is greater than 0.6, set the fDOMAbsQF to 2 to indicate that the absorbance corrections were
+applied, but that the absorbance values were high enough to be outside of the linear range of correc‐
+tions.
+The standard deviation of the absorbance range can be calculated with the following equation:
+𝑢𝐴𝑒𝑥
+= √ Σ𝑁
+𝑖=1(𝑥𝑖 − 𝑥)2
+𝑁 − 1 (1)
+where
+      𝑢𝐴𝑒𝑥
+= uncertainty (standard deviation) of the mean absorbance
+      𝑁 = total number of absorbance values (same as abs_count in the above example)
+      𝑖 = index of the absorbance value
+      𝑥 = mean of the absorbance values (same as 𝐴𝑒𝑥 in the above example)
+      𝑥𝑖 = absorbance value of index i
+4.4.1.3 Calculate the mean and standard deviation of the absorbance ( 𝐴𝑒𝑚) over the emission range
+of the fDOM probe (480 nm) If the 𝐴𝑒𝑥 equals 0, set 𝐴𝑒𝑚 to 0 as well. The absorbance correction fac‐
+tor now becomes 1 since 100 = 1. Set fDOMAbsQF to 3 to indicate that the calculated absorbance correc‐
+tion factor was 0.
+Page 12 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+First calculate a slope and intercept of the least‐squares fit of a line to the natural log of the calculated
+absorbance versus wavelength so that an extrapolation to longer wavelengths than collected by the SUNA
+can be used for the calculations. Use only wavelengths above 205 nm since the spectrometer readings
+are not accurate below that region for this purpose. Then use the slope and intercept to estimate the
+absorbance at 480 nm.
+The slope can be fit using the following equation :
+𝑚 = 𝑛Σ𝑛
+𝑖=1𝑥𝑖𝑙𝑛(𝑦𝑖) − (Σ𝑛
+𝑖=1𝑥𝑖)(Σ𝑛
+𝑖=1𝑙𝑛(𝑦𝑖))
+𝑛Σ𝑛
+𝑖=1𝑥2
+𝑖 − (Σ𝑛
+𝑛=1𝑥𝑖)2 (2)
+where
+      𝑚 = slope for least‐squares linear fit to log(abs) v. 𝜆
+      𝑛 = index of the spectrum channel, 1:256
+      𝑥𝑖 = calculated wavelength of the channel
+      𝑦𝑖 = calculated absorbance of the channel
+The intercept can be fit using the following equation :
+𝑏 = Σ𝑛
+𝑖=1𝑙𝑛(𝑦𝑖) − 𝑚Σ𝑛
+𝑖=1𝑥𝑖
+𝑛 (3)
+where
+      𝑏 = intercept for least‐squares linear fit to log(abs) v. 𝜆
+      𝑛 = index of the spectrum channel, 1:256
+      𝑥𝑖 = calculated wavelength of the channel
+      𝑦𝑖 = calculated absorbance of the channel
+      𝑚 = slope for least‐squares linear fit to log(abs) v. 𝜆
+The absorbance at 480 nm can be estimated using the following equation :
+𝐴𝑒𝑚 = 𝑒𝑥𝑝(𝑚 ⋅ 𝜆 + 𝑏) (4)
+where
+      𝜆 = 480 (nm)
+      𝑚 = slope for least‐squares linear fit to ln(abs) v. 𝜆
+      𝑏 = intercept for least‐squares linear fit to ln(abs) v. 𝜆
+The standard deviation of the extrapolation 𝑢𝐴𝑒𝑚
+can be estimated with the following equation:
+Page 13 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+𝑢𝐴𝑒𝑚
+= √( 1
+𝑛 − 2 ) Σ𝑛
+𝑖=1(𝑦𝑖 − ̂ 𝑦)2 (5)
+where
+      𝑢𝐴𝑒𝑚
+= uncertainty (standard deviation) of y(x)
+      𝑛 = total number of absorbance values (maximum of 256 for this dataset)
+      𝑖 = index of the absorbance value
+      ̂ 𝑦= y calculated from the regression equation
+      𝑦𝑖 = absorbance value of index i
+4.4.1.4 Applying absorbance corrections Since the water quality multisonde data comes in every
+minute or every 5 minutes, usually, there will be multiple water quality readings per every SUNA ab‐
+sorbance spectrum. The same SUNA absorbance correction values should be applied to all water quality
+measurements collected within a 15 minute SUNA data window that starts at the time of the collection of
+the first SUNA light frame.
+𝑓𝐷𝑂𝑀 𝐴 = 𝑓𝐷𝑂𝑀 𝑚 ⋅ 10[(𝐴𝑒𝑥+𝐴𝑒𝑚)⋅𝑙𝑓𝐷𝑂𝑀 ] (6)
+where
+      𝑓𝐷𝑂𝑀 𝐴 = absorbance corrected fDOM measurement
+      𝑓𝐷𝑂𝑀 𝑚 = raw, calibrated fDOM measurement (QSU)
+      𝐴𝑒𝑥 = mean absorbance for 351 ‐ 361 nm, derived from SUNA data (see section 4.3.1.2)
+      𝐴𝑒𝑚 = extrapolated absorbance at 480 nm, derived from SUNA data (see section 4.3.1.3)
+      𝑙𝑓𝐷𝑂𝑀 = probe specific effective pathlength, CVAL will provide this value and its corresponding
+uncertainty
+Set fDOMAbsQF to 0 to indicate that the absorbance corrections were applied.
+4.4.2 Temperature Corrections
+Fluorescence data will be reported out corrected to a reference temperature of 20 ∘C. When temperature
+data is not available for the time range that covers the multisonde data processing, fDOMTempQF to 1
+to indicate that the temperature corrections could not be applied. Otherwise, set fDOMTempQF to 0 to
+indicate that the temperature corrections were applied.
+𝑓𝐷𝑂𝑀 20 = 𝑓𝐷𝑂𝑀
+1 + 𝜌𝑓𝐷𝑂𝑀 (𝑇𝑚 − 20) (7)
+Page 14 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+where
+      𝑓𝐷𝑂𝑀 20 = fDOM measurement corrected to 20 ∘C
+      𝑓𝐷𝑂𝑀 = raw, calibrated fDOM measurement taken at temperature m
+      𝜌𝑓𝐷𝑂𝑀 = temperature‐specific fluorescence coefficient (Watras et al. 2011) derived for NEON
+probes. CVAL will provide this value and its corresponding uncertainty.
+      𝑇𝑚 = temperature of the water when the fDOM reading was collected. This is from the surface‐
+WaterTemperaturestream of the sonde.
+4.4.3 Final Equation for fDOM corrections
+The final equations for absorbance and temperature corrected fDOM values are:
+𝑓𝐷𝑂𝑀 𝐴,20 = 𝑓𝐷𝑂𝑀 𝑚 ⋅ 10[(𝐴𝑒𝑥+𝐴𝑒𝑚)⋅𝑙𝑓𝐷𝑂𝑀 ]
+1 + 𝜌𝑓𝐷𝑂𝑀 (𝑇𝑚 − 20) (8)
+4.5 Publishing buoy depth data streams
+The depth measurements made by the water quality multisonde are calibrated only for buoy sites (P/N
+HB07530100, HOR index 103, VER index 100). A single buoy at FLNT has a non‐profiling multisonde at‐
+tached to a pump (VER 110) in addition to a sonde in a standpipe (VER 100). The sonde with the pump
+system should not have data populated for the depth stream since the sonde is not in the water measur‐
+ing the pressure of the water column. The following fields should only be populated in the pub WB for
+profiling buoys: ‐ sensorDepth ‐ sensorDepthExpUncert ‐ sensorDepthValidCalQF ‐ sensorDepthSuspect‐
+CalQF
+4.6 Publishing fDOM data streams
+There is not an fDOM sensor installed at sensor set #1 in streams (P/N HB07530010, HOR index 101). The
+following fields should only be populated for lake/river or sensor set #2 locations (P/N HB07530100, HOR
+index 103; P/N HB07530000 HOR index 102): ‐ fDOM ‐ fDOMExpUncert ‐ fDOMRangeQF ‐ fDOMStepQF
+‐ fDOMNullQF ‐ fDOMGapQF ‐ fDOMConsistQF ‐ fDOMSpikeQF ‐ fDOMValidCalQF ‐ fDOMSuspectCalQF ‐
+fDOMPersistenceQF ‐ fDOMalphaQF ‐ fDOMbetaQF ‐ fDOMTempQF ‐ fDOMAbsQF ‐ fDOMSciRvwQF
+4.7 Special Considerations
+Buoys will be deployed at 7 lake sites and 3 large river sites within NEON. These buoys are comprised of
+sensor sets which measure meteorological parameters over a water surface along with submerged sen‐
+sors that measure physical and chemical parameters of the water body. The water quality multisonde
+profiles every 4 hours. Depending on the depth of the water the water quality buoy data may come in
+more or less frequently than once every 5 minutes due to travel time within the water column. However,
+we expect this to be less than one minute difference.
+Page 15 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+5 ALGORITHM IMPLEMENTATION
+5.1 Data flow for signal processing of the L1 DPs will be treated in the following order:
+1. Data streams will be evaluted for any NaN values and data will be cleaned and flagged.
+2. fDOM will be corrected for absorbance and temperature.
+3. QA/QC Plausibility tests will be applied to the data stream in accordance with AD[06]. The details
+are provided below.
+4. Signal de‐spiking will be applied to the data stream in accordance with AD[07].
+5. Quality flags will be produced for instantaneous measurements according to AD[12].
+5.2 QA/QC Procedure:
+1. Plausibility Tests ‐ All plausibility tests will be determined for each measurement type (AD[06]).
+Test parameters will be provided by AQU and maintained in the CI data store. All plausibility tests
+will be applied to the sensor’s L0 DP and an associated quality flags (QFs) will be generated for each
+test.
+2. Signal De‐spiking and Time Series Analysis ‐ The time series de‐spiking routine will be run accord‐
+ing to AD[07]. Test parameters will be specified by AQU and maintained in the CI data store. Quality
+flags resulting from the de‐spiking analysis will be applied according to AD[07].
+3. Placeholder for Consistency Analysis (see section 7 for future implementation).
+4. Quality Flags (QFs) and Quality Metrics (QMs) AD[12] ‐ The following tests will be used to create
+the alpha and beta quality flags: fDOMTempQF , fDOMAbsQF , range, step (except for depth), spike,
+suspectCal, validCal, and persistence. QFs and QMs will be determined using the flags in Table 3.
+In addition, L1 DPs will have alpha and beta quality flags as well as a final quality flag, as detailed
+below. Ancillary information needed for the algorithm and other information maintained in the CI
+data store is shown in Table 4. Since the profiling buoy multisondes will collect data at varying fre‐
+quencies, the null test time range will vary from site to site. See the attached ATBD‐specific thresh‐
+olds file “CLdata_thresholds_WQ_nullFrequencies.csv” in the CI data store for specific frequencies
+for each site, column “Null Test Frequency (1/min)” .
+𝑄𝐹𝛼 =
+⎧{
+⎨{⎩
+0 if all QF = 0
+1 if any QF = 1
+(9)
+𝑄𝐹𝛽 =
+⎧{
+⎨{⎩
+0 if all QF = 0
+1 if any QF = ‐1
+(10)
+𝑄𝐹𝑓𝑖𝑛𝑎𝑙 =
+⎧{{
+⎨{{⎩
+0 if 𝑄𝐹𝛼 = 0
+1 if 𝑄𝐹𝛼 = 1
+1 if range test cannot be run, i.e. is ‐1
+(11)
+Page 16 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+Table 3: Flags associated with YSI EXO2 measurements at S1 (HOR 101), S2 (HOR 102), and buoy (HOR
+103)
+Tests Apply at S1 Apply at S2 Apply at buoy
+buoyNAFlag X
+fDOMTempQF X X
+fDOMAbsQF X X
+Range X X X
+Persistence X X X
+Step X X X (except for depth)
+Null X X X
+Gap X X X
+Valid Calibration X X X
+Suspect Calibration X X X
+Signal Despiking X X X (except for depth)
+Alpha Quality Flag (𝑄𝐹𝛼) X X X
+Beta Quality Flag (𝑄𝐹𝛽) X X X
+Final Quality Flag (𝑄𝐹𝑓𝑖𝑛𝑎𝑙 ) X X X
+Note: For the dissolvedOxygen, localDissolvedOxygenSat, and dissolvedOxygenSaturation data streams,
+the calibration file for dissolvedOxygenSaturation will be used to determine whether or not there is a
+valid calibration file and if the calibration factors are suspect. Calibrating dissolvedOxygenSaturation si‐
+multaneously calibrates dissolvedOxygen and localDissolvedOxygenSat for a probe and a separate calibra‐
+tion file is not produced.
+Note: The persistence test should be applied to L0 fDOM data streams prior to any temperature or ab‐
+sorbance corrections in order to detect stuck values that may be obscured by changes in temperature or
+absorbance when those corrections are applied.
+Page 17 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+Table 4: Information maintained in the CI data store for YSI EXO2
+Tests/Values CI Data Store Contents
+Range Minimum and maximum values
+Persistence Window size, threshold values and maximum time length
+Step Threshold values
+Null ATBD‐specific thresholds file
+Gap Test limit
+Valid Calibration CVAL sensor specific valid calibration date range
+Suspect Calibration CVAL sensor specific calibration pass or fail result
+Signal Despiking Time segments and threshold values
+Calibration CVAL sensor specific calibration coefficients
+Uncertainty AD[11]
+Final Quality Flag Section 5.2, step 4 of ATBD
+6 UNCERTAINTY
+Uncertainty of measurement is inevitable; therefore, measurements should be accompanied by a state‐
+ment of their uncertainty for completeness (JCGM 2008; Taylor 1997). To do so, it is imperative to iden‐
+tify all sources of measurement uncertainty related to the quantity being measured. Quantifying the
+uncertainty of AIS measurements will provide a measure of the reliability and applicability of individual
+measurements and AIS data products. This portion of the document serves to identify, evaluate, and
+quantify sources of uncertainty relating to individual, calibrated water quality measurements. It is a re‐
+flection of the information described in AD[11], and is explicitly described for the water quality assembly
+in the following sections. Uncertainty of the YSI EXO2 assembly is discussed in this section that informs
+the sources of measurement uncertainty, i.e., those associated with individual measurements. Diagrams
+detailing the data flow and known sources of uncertainty are displayed in Figure 3, Figure 4, and Figure 5.
+Page 18 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+Figure 3: Data flow and associated uncertainties of individual measurements for Water Quality at sensor
+set 1 and associated L1 DPs.
+Figure 4: Data flow and associated uncertainties of individual measurements for Water Quality at sensor
+set 2 and associated L1 DPs.
+Page 19 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+Figure 5: Data flow and associated uncertainties of individual measurements for Water Quality at the
+buoy locations and associated L1 DPs.
+6.1 Measurement Uncertainty
+The following subsections present the uncertainties associated with individual water quality observations.
+It is important to note that the uncertainties presented in the following subsections are measurement un‐
+certainties, that is, they reflect the uncertainty of an individual measurement. These uncertainties should
+not be confused with those presented in Section 6.1.2. We urge the reader to refer to AD[11] for further
+details concerning the discrepancies between quantification of measurement uncertainties and L1 uncer‐
+tainties.
+NEON calculates measurement uncertainties according to recommendations of the Joint Committee for
+Guides in Metrology (JCGM) 2008. In essence, if a measurand 𝑦 is a function of 𝑛 input quantities 𝑥𝑖(𝑖 =
+1, ..., 𝑛), i.e., 𝑦 = 𝑓(𝑥 1, 𝑥2, ..., 𝑥𝑛), the combined measurement uncertainty of 𝑦, assuming the inputs
+are independent, can be calculated as follows:
+𝑢𝑐(𝑦) = (
+𝑁
+∑
+𝑖=1
+( 𝜕𝑓
+𝜕𝑥𝑖
+)
+2
+𝑢2 (𝑥𝑖))
+1
+2
+(12)
+where
+      𝜕𝑓
+𝜕𝑥𝑖
+= partial derivative of 𝑦 with respect to 𝑥𝑖
+      𝑢 (𝑥𝑖) = Combined uncertainty of 𝑥𝑖
+Thus, the uncertainty of the measurand can be found be summing the input uncertainties in quadrature.
+For water quality measurements, the sources of uncertainty are depicted in Equation 12 and the calcual‐
+tions of these input uncertainties is discussed below.
+Page 20 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+6.1.1 DAS
+The YSI EXO2 has an internal Analog to Digital (A/D) converter and outputs data in digital form. Therefore,
+no data conversions occur within the DAS, and uncertainty introduced by the DAS can be considered neg‐
+ligible.
+6.1.2 Calibration
+Uncertainties associated with the YSI EXO2 calibration process will be provided by CVAL as individual stan‐
+dard combined uncertainty values. These uncertainties 𝑢𝐴1,𝑥 (see Section 2.5) represent i) the repeata‐
+bility and reproducibility of the sensor and the lab DAS and ii) uncertainty of the calibration procedures
+and coefficients including uncertainty in the standard (truth). Both are constant values that will be pro‐
+vided by CVAL, stored in the CI data store, and applied to all individual measurements (that is, the un‐
+certainty values do not vary with any specific sensor, DAS component, etc.). A detailed summary of the
+calibration procedures and corresponding uncertainty estimates can be found in AD[10] and AD[11].
+6.1.3 Combined Measurement Uncertainties
+6.1.3.1 Depth measurement uncertainty:
+Because the only known quantifiable uncertainties are those provided by CVAL, the combined uncer‐
+tainty is simply equal to the standard uncertainty values provided by CVAL, 𝑢𝐴1,𝑑, multiplied by the L1
+value.
+𝑢𝑐𝑑𝑒𝑝𝑡ℎ
+= √(𝑢𝐴1,𝑑 ⋅ 𝑠𝑒𝑛𝑠𝑜𝑟𝐷𝑒𝑝𝑡ℎ)2 (13)
+6.1.3.2 Specific conductance measurement uncertainty:
+Because the only known quantifiable uncertainties are those provided by CVAL, the combined uncer‐
+tainty is simply equal to the standard uncertainty values provided by CVAL, 𝑢𝐴1,𝑠𝐶𝑜𝑛𝑑, multiplied by the
+L1 value.
+𝑢𝑐𝑠𝐶𝑜𝑛𝑑
+= √(𝑢𝐴1,𝑠𝐶𝑜𝑛𝑑 ⋅ 𝑠𝑝𝑒𝑐𝑖𝑓𝑖𝑐𝐶𝑜𝑛𝑑𝑢𝑐𝑡𝑎𝑛𝑐𝑒) 2 (14)
+6.1.3.3 DO (mg/L) measurement uncertainty:
+Dissolved oxygen in mg/L is calculated internally by the probe using the DO percent saturation value,
+the measured temperature, and the barometric pressure at the time of the last calibration. According to
+manufacturer specifications, the accuracy of the measurements is ± 1% of reading between 0 ‐ 20 mg/L
+and ± 5% of reading between 20 ‐ 50 mg/L. So, the uncertainty can be calculated
+𝑢𝑐𝐷𝑂
+= √(𝑢𝐴1,𝐷𝑂 ⋅ 𝑑𝑖𝑠𝑠𝑜𝑙𝑣𝑒𝑑𝑂𝑥𝑦𝑔𝑒𝑛) 2 (15)
+where
+Page 21 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+𝑢𝐴1,𝐷𝑂 =
+⎧{
+⎨{⎩
+0.01 if dissolvedOxygen is > 0 and <= 20 mg/L
+0.05 if dissolvedOxygen is > 20 and < 50 mg/L
+(16)
+6.1.3.4 DO percent saturation at local conditions measurement uncertainty:
+Dissolved oxygen percent saturation at local conditions is calculated internally by the probe using the
+DO percent saturation value, the measured temperature, and the barometric pressure at the time of the
+last calibration. According to manufacturer specifications, the accuracy of the measurements is ± 1 % of
+reading between 0 ‐ 200 % and ± 5 % of reading between 200 ‐ 500 %. So, the uncertainty can be calcu‐
+lated
+𝑢𝑐𝐷𝑂𝑠𝑎𝑡𝑙𝑜𝑐𝑎𝑙
+= √(𝑢𝐴1,𝐷𝑂𝑠𝑎𝑡𝑙𝑜𝑐𝑎𝑙 ⋅ 𝑑𝑖𝑠𝑠𝑜𝑙𝑣𝑒𝑑𝑂𝑥𝑦𝑔𝑒𝑛𝑆𝑎𝑡𝐿𝑜𝑐𝑎𝑙) 2 (17)
+where
+𝑢𝐴1,𝐷𝑂𝑠𝑎𝑡𝑙𝑜𝑐𝑎𝑙 =
+⎧{
+⎨{⎩
+0.01 if dissolvedOxygen is > 0 and <= 200 %
+0.05 if dissolvedOxygen is > 200 and < 500 %
+(18)
+6.1.3.5 DO (%) saturation sea level corrected measurement uncertainty:
+Because the only known quantifiable uncertainties are those provided by CVAL, the combined uncer‐
+tainty is simply equal to the standard uncertainty values provided by CVAL, 𝑢𝐴1,𝐷𝑂𝑠𝑎𝑡, multiplied by the
+L1 value.
+𝑢𝑐𝐷𝑂𝑠𝑎𝑡
+= √(𝑢𝐴1,𝐷𝑂𝑠𝑎𝑡 ⋅ 𝑑𝑖𝑠𝑠𝑜𝑙𝑣𝑒𝑑𝑂𝑥𝑦𝑔𝑒𝑛𝑆𝑎𝑡𝑢𝑟𝑎𝑡𝑖𝑜𝑛) 2 (19)
+6.1.3.6 pH measurement uncertainty:
+Because the only known quantifiable uncertainties are those provided by CVAL, the combined uncer‐
+tainty is simply equal to the standard uncertainty values provided by CVAL, 𝑢𝐴1,𝑝𝐻, multiplied by the L1
+value.
+𝑢𝑐𝑝𝐻
+= √(𝑢𝐴1,𝑝𝐻 ⋅ 𝑝𝐻) 2 (20)
+6.1.3.7 turbidity measurement uncertainty:
+Because the only known quantifiable uncertainties are those provided by CVAL, the combined uncer‐
+tainty is simply equal to the standard uncertainty values provided by CVAL, 𝑢𝐴1,𝑡𝑢𝑟𝑏, multiplied by the L1
+value.
+Page 22 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+𝑢𝑐𝑡𝑢𝑟𝑏
+= √(𝑢𝐴1,𝑡𝑢𝑟𝑏 ⋅ 𝑡𝑢𝑟𝑏𝑖𝑑𝑖𝑡𝑦) 2 (21)
+.
+6.1.3.8 chlorophyll measurement uncertainty:
+Because the only known quantifiable uncertainties are those provided by CVAL, the combined uncer‐
+tainty is simply equal to the standard uncertainty values provided by CVAL, 𝑢𝐴1,𝑐ℎ𝑙𝑎, multiplied by the L1
+value. The uncertainty provided by CVAL will include estimates of uncertainty related to the impacts of
+turbidity, which can both increase and decrease the chla readings due to light scattering towards or away
+from the sensor’s detector . The temperature dependence of chla fluorescence is not captured in these
+uncertainty estimates.
+𝑢𝑐𝑐ℎ𝑙𝑎
+= √(𝑢𝐴1,𝑐ℎ𝑙𝑎 ⋅ 𝑐ℎ𝑙𝑜𝑟𝑜𝑝ℎ𝑦𝑙𝑙) 2 (22)
+.
+6.1.3.9 chlorophyll RFU measurement uncertainty:
+Because the only known quantifiable uncertainties are those provided by CVAL, the combined uncer‐
+tainty is simply equal to the standard uncertainty values provided by CVAL, 𝑢𝐴1,𝑐ℎ𝑙𝑎𝑅𝐹 𝑈, multiplied by
+the L1 value. The uncertainty provided by CVAL will include estimates of uncertainty related to the im‐
+pacts of turbidity, which can both increase and decrease the chla readings due to light scattering towards
+or away from the sensor’s detector . The temperature dependence of chla fluorescence is not captured in
+these uncertainty estimates.
+𝑢𝑐𝑐ℎ𝑙𝑎𝑅𝐹 𝑈
+= √(𝑢𝐴1,𝑐ℎ𝑙𝑎𝑅𝐹 𝑈 ⋅ 𝑐ℎ𝑙𝑜𝑟𝑜𝑝ℎ𝑦𝑙𝑙) 2 (23)
+.
+6.1.3.10 fDOM measurement uncertainty when absorbance and temperature corrections are applied:
+Note: 𝑙𝑜𝑔(10) is the natural log
+6.1.3.10.1 fDOM measurement uncertainty associated with fDOM measurements:
+The partial derivatives of Equation 8 with respect to fDOM measured values must be calculated in or‐
+der to identify the sensitivity coefficient of fDOM.
+𝜕𝑓𝐷𝑂𝑀 𝐴,20
+𝜕𝑓𝐷𝑂𝑀 = 10[𝑙𝑓𝐷𝑂𝑀 (𝐴𝑒𝑥+𝐴𝑒𝑚)]
+1 + 𝜌𝑓𝐷𝑂𝑀 (𝑇𝑚 − 20) (24)
+To derive the partial uncertainty of corrected fDOM as a function of the measured fDOM, the absolute
+value of this sensitivity coefficient is multiplied by the uncertainty of the measured fDOM.
+Page 23 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+𝑢𝑓𝐷𝑂𝑀 (𝑓𝐷𝑂𝑀 𝐴,20) = ∣ 𝜕𝑓𝐷𝑂𝑀 𝐴,20
+𝜕𝑓𝐷𝑂𝑀 ∣ ⋅ 𝑢𝐴1,𝑓𝐷𝑂𝑀 ⋅ 𝑓𝐷𝑂𝑀 (25)
+6.1.3.10.2 fDOM measurement uncertainty associated with temperature:
+The partial derivatives of Equation 8 with respect to measured temperature values must be calculated
+in order to identify the sensitivity coefficient of fDOM.
+𝜕𝑓𝐷𝑂𝑀 𝐴,20
+𝜕𝑇𝑚
+= − 𝑓𝐷𝑂𝑀 ⋅ 𝜌 𝑓𝐷𝑂𝑀 ⋅ 10[𝑙𝑓𝐷𝑂𝑀 (𝐴𝑒𝑥+𝐴𝑒𝑚)]
+((𝑇𝑚 − 20)𝜌𝑓𝐷𝑂𝑀 + 1)2 (26)
+To derive the partial uncertainty of corrected fDOM as a function of the measured temperature, the abso‐
+lute value of this sensitivity coefficient is multiplied by the uncertainty of temperature measurement.
+𝑢𝑇𝑚
+(𝑓𝐷𝑂𝑀 𝐴,20) = ∣ 𝜕𝑓𝐷𝑂𝑀 𝐴,20
+𝜕𝑇𝑚
+∣ ⋅ 𝑢𝐴1,𝑡𝑒𝑚𝑝 (27)
+where (according to manufacturer specifications)
+𝑢𝐴1,𝑡𝑒𝑚𝑝 =
+⎧{
+⎨{⎩
+0.01 ∘C if surfaceWaterTemperature is > ‐5 and <= 35 ∘C
+0.05 ∘C if surfaceWaterTemperature is > 35 ∘C
+(28)
+6.1.3.10.3 fDOM measurement uncertainty associated with temperature relationship 𝜌:
+The partial derivatives of Equation 8 with respect to the temperature relationship 𝜌 must be calculated
+in order to identify the sensitivity coefficient of fDOM.
+𝜕𝑓𝐷𝑂𝑀 𝐴,20
+𝜕𝜌𝑓𝐷𝑂𝑀
+= − 𝑓𝐷𝑂𝑀 (𝑇𝑚 − 20)10[𝑙𝑓𝐷𝑂𝑀 (𝐴𝑒𝑥+𝐴𝑒𝑚)]
+(1 + (𝑇𝑚 − 20)𝜌𝑓𝐷𝑂𝑀 )2 (29)
+To derive the partial uncertainty of corrected fDOM as a function of the temperature relationship 𝜌, the
+absolute value of this sensitivity coefficient is multiplied by the uncertainty of the temperature relation‐
+ship 𝜌.
+𝑢𝜌𝑓𝐷𝑂𝑀
+(𝑓𝐷𝑂𝑀 𝐴,20) = ∣ 𝜕𝑓𝐷𝑂𝑀 𝐴,20
+𝜕𝜌𝑓𝐷𝑂𝑀
+∣ ⋅ 𝑢𝐴1,𝜌𝑓𝐷𝑂𝑀
+(30)
+Page 24 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+6.1.3.10.4 fDOM measurement uncertainty associated with 𝐴𝑒𝑥:
+The partial derivatives of Equation 8 with respect to 𝐴𝑒𝑥 must be calculated in order to identify the
+sensitivity coefficient of fDOM.
+𝜕𝑓𝐷𝑂𝑀 𝐴,20
+𝜕𝐴𝑒𝑥
+= 𝑓𝐷𝑂𝑀 ⋅ 𝑙 𝑓𝐷𝑂𝑀 𝑙𝑜𝑔(10)10[𝑙𝑓𝐷𝑂𝑀 (𝐴𝑒𝑥+𝐴𝑒𝑚)]
+𝜌𝑓𝐷𝑂𝑀 (𝑇𝑚 − 20) + 1 (31)
+To derive the partial uncertainty of corrected fDOM as a function of 𝐴𝑒𝑥, the absolute value of this sensi‐
+tivity coefficient is multiplied by the uncertainty of 𝐴𝑒𝑥, which is calculated according to Equation 1.
+𝑢𝐴𝑒𝑥
+(𝑓𝐷𝑂𝑀 𝐴,20) = ∣ 𝜕𝑓𝐷𝑂𝑀 𝐴,20
+𝜕𝐴𝑒𝑥
+∣ ⋅ 𝑢𝐴𝑒𝑥
+(32)
+6.1.3.10.5 fDOM measurement uncertainty associated with $A_{em
+The partial derivatives of Equation 8 with respect to 𝐴𝑒𝑚 must be calculated in order to identify the
+sensitivity coefficient of fDOM.
+𝜕𝑓𝐷𝑂𝑀 𝐴,20
+𝜕𝐴𝑒𝑚
+= 𝑓𝐷𝑂𝑀 𝑙𝑓𝐷𝑂𝑀 𝑙𝑜𝑔(10)10[𝑙𝑓𝐷𝑂𝑀 (𝐴𝑒𝑥+𝐴𝑒𝑚)]
+𝜌𝑓𝐷𝑂𝑀 (𝑇𝑚 − 20) + 1 (33)
+To derive the partial uncertainty of corrected fDOM as a function of 𝐴𝑒𝑚, the absolute value of this sensi‐
+tivity coefficient is multiplied by the uncertainty of 𝐴𝑒𝑚.
+𝑢𝐴𝑒𝑚
+(𝑓𝐷𝑂𝑀 𝐴,20) = ∣ 𝜕𝑓𝐷𝑂𝑀 𝐴,20
+𝜕𝐴𝑒𝑚
+∣ ⋅ 𝑢𝐴1,𝐴𝑒𝑚
+(34)
+6.1.3.10.6 fDOM measurement uncertainty associated with 𝑙:
+The partial derivatives of Equation 8 with respect to 𝑙 must be calculated in order to identify the sensi‐
+tivity coefficient of fDOM.
+𝜕𝑓𝐷𝑂𝑀 𝐴,20
+𝜕𝑙𝑓𝐷𝑂𝑀
+= 𝑓𝐷𝑂𝑀 𝑙𝑜𝑔(10)(𝐴𝑒𝑥 + 𝐴𝑒𝑚)10[𝑙(𝐴𝑒𝑥+𝐴𝑒𝑚)]
+𝜌𝑓𝐷𝑂𝑀 (𝑇𝑚 − 20) + 1 (35)
+To derive the partial uncertainty of corrected fDOM as a function of 𝑙, the absolute value of this sensitivity
+coefficient is multiplied by the uncertainty of 𝑙.
+𝑢𝑙𝑓𝐷𝑂𝑀
+(𝑓𝐷𝑂𝑀 𝐴,20) = ∣ 𝜕𝑓𝐷𝑂𝑀 𝐴,20
+𝜕𝑙𝑓𝐷𝑂𝑀
+∣ ⋅ 𝑢𝐴1,𝑙𝑓𝐷𝑂𝑀
+(36)
+Page 25 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+6.1.3.10.7 fDOM combined measurement uncertainty when absorbance and temperature corrections
+are applied:
+𝑢𝑐𝑓𝐷𝑂𝑀𝐴,20
+= (𝑢 𝑓𝐷𝑂𝑀 (𝑓𝐷𝑂𝑀 𝐴,20)2 + 𝑢𝑇𝑚
+(𝑓𝐷𝑂𝑀 𝐴,20)2 + 𝑢𝜌𝑓𝐷𝑂𝑀
+(𝑓𝐷𝑂𝑀 𝐴,20)2 + 𝑢𝑙𝑓𝐷𝑂𝑀
+(𝑓𝐷𝑂𝑀 𝐴,20)2
++𝑢𝐴𝑒𝑥
+(𝑓𝐷𝑂𝑀 𝐴,20)2 + 𝑢𝐴𝑒𝑚
+(𝑓𝐷𝑂𝑀 𝐴,20)2)
+1
+2
+(37)
+6.1.3.11 fDOM measurement uncertainty when only absorbance corrections are applied:
+Note: 𝑙𝑜𝑔(10) is the natural log
+6.1.3.11.1 fDOM measurement uncertainty associated with fDOM measurements:
+The partial derivatives of Equation 6 with respect to fDOM measured values must be calculated in or‐
+der to identify the sensitivity coefficient of fDOM.
+𝜕𝑓𝐷𝑂𝑀 𝐴,20
+𝜕𝑓𝐷𝑂𝑀 = 10 [𝑙𝑓𝐷𝑂𝑀 (𝐴𝑒𝑥+𝐴𝑒𝑚)] (38)
+To derive the partial uncertainty of corrected fDOM as a function of the measured fDOM, the absolute
+value of this sensitivity coefficient is multiplied by the uncertainty of the measured fDOM.
+𝑢𝑓𝐷𝑂𝑀 (𝑓𝐷𝑂𝑀 𝐴,20) = ∣ 𝜕𝑓𝐷𝑂𝑀 𝐴,20
+𝜕𝑓𝐷𝑂𝑀 ∣ ⋅ 𝑢𝐴1,𝑓𝐷𝑂𝑀 ⋅ 𝑓𝐷𝑂𝑀 (39)
+6.1.3.11.2 fDOM measurement uncertainty associated with 𝐴𝑒𝑥:
+The partial derivatives of Equation 6 with respect to 𝐴𝑒𝑥 must be calculated in order to identify the
+sensitivity coefficient of fDOM.
+𝜕𝑓𝐷𝑂𝑀 𝐴
+𝜕𝐴𝑒𝑥
+= 𝑙 𝑓𝐷𝑂𝑀 ⋅ 𝑙𝑜𝑔(10) ⋅ 𝑓𝐷𝑂𝑀 10 𝑙𝑓𝐷𝑂𝑀 (𝐴𝑒𝑥+𝐴𝑒𝑚) (40)
+To derive the partial uncertainty of corrected fDOM as a function of 𝐴𝑒𝑥, the absolute value of this sensi‐
+tivity coefficient is multiplied by the uncertainty of 𝐴𝑒𝑥.
+𝑢𝐴𝑒𝑥
+(𝑓𝐷𝑂𝑀 𝐴) = ∣ 𝜕𝑓𝐷𝑂𝑀 𝐴
+𝜕𝐴𝑒𝑥
+∣ ⋅ 𝑢𝐴𝑒𝑥
+(41)
+Page 26 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+6.1.3.11.3 fDOM measurement uncertainty associated with 𝐴𝑒𝑚:
+The partial derivatives of Equation 6 with respect to 𝐴𝑒𝑚 must be calculated in order to identify the
+sensitivity coefficient of fDOM.
+𝜕𝑓𝐷𝑂𝑀 𝐴
+𝜕𝐴𝑒𝑚
+= 𝑙 𝑓𝐷𝑂𝑀 ⋅ 𝑙𝑜𝑔(10) ⋅ 𝑓𝐷𝑂𝑀 10 𝑙𝑓𝐷𝑂𝑀 (𝐴𝑒𝑥+𝐴𝑒𝑚) (42)
+To derive the partial uncertainty of corrected fDOM as a function of 𝐴𝑒𝑚, the absolute value of this sensi‐
+tivity coefficient is multiplied by the uncertainty of 𝐴𝑒𝑚.
+𝑢𝐴𝑒𝑚
+(𝑓𝐷𝑂𝑀 𝐴) = ∣ 𝜕𝑓𝐷𝑂𝑀 𝐴
+𝜕𝐴𝑒𝑚
+∣ ⋅ 𝑢𝐴1,𝐴𝑒𝑚
+(43)
+6.1.3.11.4 fDOM measurement uncertainty associated with 𝑙:
+The partial derivatives of Equation 6 with respect to 𝑙 must be calculated in order to identify the sensi‐
+tivity coefficient of fDOM.
+𝜕𝑓𝐷𝑂𝑀 𝐴
+𝜕𝑙𝑓𝐷𝑂𝑀
+= 𝑓𝐷𝑂𝑀 (𝐴 𝑒𝑥 + 𝐴𝑒𝑚) ⋅ 𝑙𝑜𝑔(10) ⋅ 10 𝑙𝑓𝐷𝑂𝑀 (𝐴𝑒𝑥+𝐴𝑒𝑚) (44)
+To derive the partial uncertainty of corrected fDOM as a function of 𝑙, the absolute value of this sensitivity
+coefficient is multiplied by the uncertainty of 𝑙.
+𝑢𝑙𝑓𝐷𝑂𝑀
+(𝑓𝐷𝑂𝑀 𝐴) = ∣ 𝜕𝑓𝐷𝑂𝑀 𝐴
+𝜕𝑙𝑓𝐷𝑂𝑀
+∣ ⋅ 𝑢𝐴1,𝑙𝑓𝐷𝑂𝑀
+(45)
+6.1.3.11.5 fDOM combined measurement uncertainty when only absorbance corrections are applied:
+𝑢𝑐𝑓𝐷𝑂𝑀𝐴
+= (𝑢 𝑓𝐷𝑂𝑀 (𝑓𝐷𝑂𝑀 𝐴)2 + 𝑢𝑙𝑓𝐷𝑂𝑀
+(𝑓𝐷𝑂𝑀 𝐴)2 + 𝑢𝐴𝑒𝑥
+(𝑓𝐷𝑂𝑀 𝐴)2 + 𝑢𝐴𝑒𝑚
+(𝑓𝐷𝑂𝑀 𝐴)2)
+1
+2
+(46)
+6.1.3.12 fDOM measurement uncertainty when only temperature corrections are applied:
+Page 27 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+6.1.3.12.1 fDOM measurement uncertainty associated with fDOM measurements:
+The partial derivatives of Equation 7 with respect to fDOM measured values must be calculated in or‐
+der to identify the sensitivity coefficient of fDOM.
+𝜕𝑓𝐷𝑂𝑀 20
+𝜕𝑓𝐷𝑂𝑀 = 1
+1 + 𝜌𝑓𝐷𝑂𝑀 (𝑇𝑚 − 20) (47)
+To derive the partial uncertainty of corrected fDOM as a function of the measured fDOM, the absolute
+value of this sensitivity coefficient is multiplied by the uncertainty of the measured fDOM.
+𝑢𝑓𝐷𝑂𝑀 (𝑓𝐷𝑂𝑀 20) = ∣ 𝜕𝑓𝐷𝑂𝑀 20
+𝜕𝑓𝐷𝑂𝑀 ∣ ⋅ 𝑢𝐴1,𝑓𝐷𝑂𝑀 ⋅ 𝑓𝐷𝑂𝑀 (48)
+6.1.3.12.2 fDOM measurement uncertainty associated with temperature:
+The partial derivatives of Equation 7 with respect to measured temperature values must be calculated
+in order to identify the sensitivity coefficient of fDOM.
+𝜕𝑓𝐷𝑂𝑀 20
+𝜕𝑇𝑚
+= − 𝑓𝐷𝑂𝑀 ∗ 𝜌 𝑓𝐷𝑂𝑀
+(1 + 𝜌𝑓𝐷𝑂𝑀 (𝑇𝑚 − 20))2 (49)
+To derive the partial uncertainty of corrected fDOM as a function of the measured temperature, the abso‐
+lute value of this sensitivity coefficient is multiplied by the uncertainty of temperature measurement.
+𝑢𝑇𝑚
+(𝑓𝐷𝑂𝑀 20) = ∣ 𝜕𝑓𝐷𝑂𝑀 20
+𝜕𝑇𝑚
+∣ ⋅ 𝑢𝐴1,𝑡𝑒𝑚𝑝 (50)
+where (according to manufacturer specifications)
+𝑢𝐴1,𝑡𝑒𝑚𝑝 =
+⎧{
+⎨{⎩
+0.01 ∘C if surfaceWaterTemperature is > ‐5 and <= 35 ∘C
+0.05 ∘C if surfaceWaterTemperature is > 35 ∘C
+(51)
+6.1.3.12.3 fDOM measurement uncertainty associated with temperature relationship 𝜌:
+The partial derivatives of Equation 7 with respect to the temperature relationship 𝜌 must be calculated
+in order to identify the sensitivity coefficient of fDOM.
+𝜕𝑓𝐷𝑂𝑀 20
+𝜕𝜌𝑓𝐷𝑂𝑀
+= − 𝑓𝐷𝑂𝑀 (𝑇𝑚 − 20)
+(1 + 𝜌𝑓𝐷𝑂𝑀 (𝑇𝑚 − 20))2 (52)
+Page 28 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+To derive the partial uncertainty of corrected fDOM as a function of the temperature relationship 𝜌, the
+absolute value of this sensitivity coefficient is multiplied by the uncertainty of the temperature relation‐
+ship 𝜌.
+𝑢𝜌𝑓𝐷𝑂𝑀
+(𝑓𝐷𝑂𝑀 20) = ∣ 𝜕𝑓𝐷𝑂𝑀 20
+𝜕𝜌𝑓𝐷𝑂𝑀
+∣ ⋅ 𝑢𝐴1,𝜌𝑓𝐷𝑂𝑀
+(53)
+6.1.3.12.4 fDOM combined measurement uncertainty when only temperature corrections are ap‐
+plied:
+𝑢𝑐𝑓𝐷𝑂𝑀20
+= (𝑢 𝑓𝐷𝑂𝑀 (𝑓𝐷𝑂𝑀 20)2 + 𝑢𝑇𝑚
+(𝑓𝐷𝑂𝑀 20)2 + 𝑢𝜌𝑓𝐷𝑂𝑀
+(𝑓𝐷𝑂𝑀 20)2)
+1
+2 (54)
+6.1.3.13 fDOM measurement uncertainty when absorbance and temperature corrections are not ap‐
+plied:
+The only quantifiable uncertainty associated with raw, calibrated fDOM measurements are those asso‐
+ciated with the measurement itself. When temperature and absorbance corrections are not applied the
+combined measurement uncertainty is defined by the following equations:
+𝑢𝑐𝑓𝐷𝑂𝑀
+= √(𝑢𝐴1,𝑓𝐷𝑂𝑀 ⋅ 𝑓𝐷𝑂𝑀 )2 (55)
+6.1.3.14 Expanded Measurement Uncertainty
+The expanded measurement uncertainty is calculated as:
+𝑢95(𝑥) = 𝑘 95 ⋅ 𝑢𝑥 (56)
+Where,
+      𝑢95(𝑥) = expanded uncertainty measurement uncertainty for measurement x at 95% confidence
+      𝑘95 = 2 (unitless); coverage factor 95% confidence
+      𝑢𝑥 = combined uncertainty for measurement x
+6.2 Uncertainty Budget
+The uncertainty budget is a visual aid detailing i) quantifiable sources of uncertainty, ii) means by which
+they are derived, and iii) the order of their propagation. Uncertainty values denoted in this budget are
+either derived within this document or are provided by other NEON teams (e.g., CVAL), and stored in the
+CI data store (Tables 5, 6, 7, 8, and 9).
+Page 29 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+Table 5: Uncertainty budget for individual measurements of depth, Specific Conductance, DO ( 𝑚𝑔
+𝐿 ), DO
+(percent), pH, chlorophyll, turbidity.
+Source of Measurement
+Uncertainty
+Measurement
+Uncertainty Com‐
+ponent 𝑢(𝑥𝑖)
+Measurement
+Uncertainty
+Value
+𝜕𝑓
+𝜕𝑥𝑖
+𝑢𝑥𝑖
+(𝑌 ) ≡ | 𝜕𝑓
+𝜕𝑥𝑖
+|𝑢(𝑥𝑖)
+depth 𝑢𝐴1,𝑑 𝑢𝐴1,𝑑 1 𝑢𝐴1,𝑑
+specific conductance 𝑢𝐴1,𝑠𝐶𝑜𝑛𝑑 𝑢𝐴1,𝑠𝐶𝑜𝑛𝑑 1 𝑢𝐴1,𝑠𝐶𝑜𝑛𝑑
+DO ( 𝑚𝑔
+𝐿 ) 𝑢𝐴1,𝐷𝑂 𝑢𝐴1,𝐷𝑂 1 𝑢𝐴1,𝐷𝑂
+DO (percent) 𝑢𝐴1,𝐷𝑂𝑠𝑎𝑡 𝑢𝐴1,𝐷𝑂𝑠𝑎𝑡 1 𝑢𝐴1,𝐷𝑂𝑠𝑎𝑡
+DO (percent local condi‐
+tions) 𝑢𝐴1,𝐷𝑂𝑠𝑎𝑡𝐿𝑜𝑐𝑎𝑙 𝑢𝐴1,𝐷𝑂𝑠𝑎𝑡𝐿𝑜𝑐𝑎𝑙1 𝑢𝐴1,𝐷𝑂𝑠𝑎𝑡𝐿𝑜𝑐𝑎𝑙
+pH 𝑢𝐴1,𝑝𝐻 𝑢𝐴1,𝑝𝐻 1 𝑢𝐴1,𝑝𝐻
+chlorophyll 𝑢𝐴1,𝑐ℎ𝑙𝑎 𝑢𝐴1,𝑐ℎ𝑙𝑎 1 𝑢𝐴1,𝑐ℎ𝑙𝑎
+chlorophyll RFU 𝑢𝐴1,𝑐ℎ𝑙𝑎𝑅𝐹 𝑈 𝑢𝐴1,𝑐ℎ𝑙𝑎𝑅𝐹 𝑈 1 𝑢𝐴1,𝑐ℎ𝑙𝑎𝑅𝐹 𝑈
+turbidity 𝑢𝐴1,𝑡𝑢𝑟𝑏 𝑢𝐴1,𝑡𝑢𝑟𝑏 1 𝑢𝐴1,𝑡𝑢𝑟𝑏
+Table 6: Uncertainty budget for temperature and absorbance corrected individual measurements of
+fDOM. Shaded rows denate the order of uncertainty propagation (from lightest to darkest).
+Source of Mea‐
+surement Uncer‐
+tainty
+Measurement
+Uncertainty Com‐
+ponent 𝑢(𝑥𝑖)
+Measurement
+Uncertainty
+Value
+𝜕𝑓
+𝜕𝑥𝑖
+𝑢𝑥𝑖
+(𝑌 ) ≡ | 𝜕𝑓
+𝜕𝑥𝑖
+|𝑢(𝑥𝑖)
+fDOM 𝑢𝐴1,𝑓𝐷𝑂𝑀 𝑢𝐴1,𝑓𝐷𝑂𝑀 Equation 25 Equation 24
+temperature 𝑢𝐴1,𝑡𝑒𝑚𝑝 𝑢𝐴1,𝑡𝑒𝑚𝑝 Equation 27 Equation 26
+𝐴𝑒𝑥 𝑢𝐴𝑒𝑥
+𝑢𝐴𝑒𝑥
+Equation 32 Equation 31
+𝐴𝑒𝑚 𝑢𝐴𝑒𝑚
+𝑢𝐴𝑒𝑚
+Equation 34 Equation 33
+𝑙 𝑢𝐴1,𝑙𝑓𝐷𝑂𝑀
+𝑢𝐴1,𝑙𝑓𝐷𝑂𝑀
+Equation 36 Equation 35
+𝜌 𝑢𝐴1,𝜌𝑓𝐷𝑂𝑀
+𝑢𝐴1,𝜌𝑓𝐷𝑂𝑀
+Equation 30 Equation 29
+Table 7: Uncertainty budget for temperature only corrected individual measurements of fDOM. Shaded
+rows denate the order of uncertainty propagation (from lightest to darkest).
+Source of Mea‐
+surement Uncer‐
+tainty
+Measurement
+Uncertainty Com‐
+ponent 𝑢(𝑥𝑖)
+Measurement
+Uncertainty
+Value
+𝜕𝑓
+𝜕𝑥𝑖
+𝑢𝑥𝑖
+(𝑌 ) ≡ | 𝜕𝑓
+𝜕𝑥𝑖
+|𝑢(𝑥𝑖)
+fDOM 𝑢𝐴1,𝑓𝐷𝑂𝑀 𝑢𝐴1,𝑓𝐷𝑂𝑀 Equation 27 Equation 47
+temperature 𝑢𝐴1,𝑡𝑒𝑚𝑝 𝑢𝐴1,𝑡𝑒𝑚𝑝 Equation 50 Equation 49
+𝜌 𝑢𝐴1,𝜌𝑓𝐷𝑂𝑀
+𝑢𝐴1,𝜌𝑓𝐷𝑂𝑀
+Equation 53 Equation 52
+Page 30 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+Table 8: Uncertainty budget for absorbance only corrected individual measurements of fDOM. Shaded
+rows denate the order of uncertainty propagation (from lightest to darkest).
+Source of Mea‐
+surement Uncer‐
+tainty
+Measurement
+Uncertainty Com‐
+ponent 𝑢(𝑥𝑖)
+Measurement
+Uncertainty
+Value
+𝜕𝑓
+𝜕𝑥𝑖
+𝑢𝑥𝑖
+(𝑌 ) ≡ | 𝜕𝑓
+𝜕𝑥𝑖
+|𝑢(𝑥𝑖)
+fDOM 𝑢𝐴1,𝑓𝐷𝑂𝑀 𝑢𝐴1,𝑓𝐷𝑂𝑀 Equation 39 Equation 38
+𝐴𝑒𝑥 𝑢𝐴𝑒𝑥
+𝑢𝐴𝑒𝑥
+Equation 41 Equation 40
+𝐴𝑒𝑚 𝑢𝐴𝑒𝑚
+𝑢𝐴𝑒𝑚
+Equation 43 Equation 42
+𝑙 𝑢𝐴1,𝑙𝑓𝐷𝑂𝑀
+𝑢𝐴1,𝑙𝑓𝐷𝑂𝑀
+Equation 45 Equation 44
+Table 9: Uncertainty budget for un‐corrected individual measurements of fDOM. Shaded rows denate the
+order of uncertainty propagation (from lightest to darkest).
+Source of Mea‐
+surement Uncer‐
+tainty
+Measurement
+Uncertainty Com‐
+ponent 𝑢(𝑥𝑖)
+Measurement
+Uncertainty
+Value
+𝜕𝑓
+𝜕𝑥𝑖
+𝑢𝑥𝑖
+(𝑌 ) ≡ | 𝜕𝑓
+𝜕𝑥𝑖
+|𝑢(𝑥𝑖)
+fDOM 𝑢𝐴1,𝑓𝐷𝑂𝑀 𝑢𝐴1,𝑓𝐷𝑂𝑀 1 Equation 55
+7 Flagging data using asset definition inputs
+Configuration changes for the water quality data product mean that the asset definition (or NEON part
+number) should guide data flagging. The following table ( 10) outlines when data streams should be
+flagged for a data stream based on part number .
+8 FUTURE PLANS AND MODIFICATIONS
+Details concerning the evaluation and quantification of Sensor drift will be added to the uncertainty sec‐
+tion.
+Future system flags may be incorporated into the data stream and included in the QA/QC summary DP
+(Qsum1min) that summarizes any flagged data that went into the computation of the L1 DP .
+QA/QC tests may be expanded to include consistency analyses among similar measurement streams.
+9 BIBLIOGRAPHY
+Ahrens, C. D. (2007) Meteorology Today: An introduction to Weather, Climate, and the Environment.
+Thomson Brooks/Cole. pp. 537.
+Brock, F. V ., and S. J. Richardson (2001) Meteorological Measurement Systems. Oxford University Press.
+pp. 290.
+Page 31 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+Table 10: Flagging status for multisonde part numbers.
+NEON Part
+Number depth spCond DO seaLvlDOSat localDOSat pH chla chlaRFU turbidity fDOM
+HB07530000 F T T T F T T F T T
+HB07530010 F T T T F T T F T F
+HB07530020 F T T T T T F F T T
+HB07530030 F T T T T T F F T F
+HB07530100 T T T T F T T F T T
+HB07530200 T T T T F T T F T T
+HB07531000 T T T T T T T T T T
+HB07532000 T T T T T T T T T T
+Table 11: Part numbers, names, and descriptions.
+NEON Part
+Number Part Name Part Description
+HB07530000 YSI EXO2 Multisonde with FDOM Downstream sensor set, KorExo 1.0
+HB07530010 YSI EXO2 Multisonde with no FDOM Upstream sensors set, KorExo 1.0
+HB07530020 Multisonde with Sensors, with FDOM, No Total Algae Downstream sensor set, KorExo 2.0
+HB07530030 Multisonde with Sensors, No FDOM, No Total Algae Upstream sensors set, KorExo 2.0
+HB07530100 Multisonde with Sensors, FDOM, Lake Buoy, KorExo 1.0
+HB07530200 Multisonde with Sensors, FDOM, Lake, 0‐100m Buoy, deep water, KorExo 1.0
+HB07531000 Multisonde with Sensors, FDOM, Lake, KorExo 2.0 Buoy, KorExo 2.0
+HB07532000 Multisonde with Sensors, FDOM, Lake, 0‐100m, KorExo 2.0 Buoy, deep water, KorExo 2.0
+Page 32 of 33
+Title: NEON Algorithm Theoretical Basis Document (ATBD): Water Quality Date: 05/26/2022
+NEON.DOC#: NEON.DOC.004931 Author: Kaelin M. Cawley Revision: C
+Bureau International des Poids et Meaures (BIPM) (1901) General conference on weights and measures,
+70.
+Henrion, M., and B. Fischhoff (1986), Assessing uncertainty in physical constants, Am. J. Phys., 54, 791‐
+798, doi :10.1119/1.14447.
+Johnson, H. 2013. Reaeration Measurements by Diffusion Dome. EPA‐SESDPROC‐505‐R3. U.S. Environ‐
+mental Protection Agency, Science and Ecosystem Support Division, Athens GA.
+JCGM (2012) International vocabulary of metrology ‐ Basic and general concepts and associated terms
+(VIM). 3rd Edition. pp. 92
+Joint Committee for Guides in Metrology (JCGM) (2008) Evaluation of measurement data ‐ Guide to the
+expression of uncertainty in measurement. pp. 120.
+Jursa, A. S., (1985) Handbook of Geophysics and the Space Environment, 4th ed., Air Force Geophysics
+Laboratory, pp. 14‐17.
+Met One Instruments, Inc. (1997) Fan Aspirated Radiation Shield: Specification Sheet. Rev. 076B, pp. 2.
+(K:\FIU\TIS Assemblies\3. Aspirated Air Temp‐single\Manuals)
+Rao, K.N. (1957) Regression of Vapour Pressure with Height, Latitude and Longitude. Bombay.
+Rao, K.N. (1958) Contribution of the humidity term in the formula for reduction of pressure to sea level.
+Bombay.
+Taylor, J. R. (1997) An Introduction to Error Analysis: The Study of Uncertainties in Physical Measurements.
+University Science Books, Mill Valley, California. 2nd Ed. pp. 327.
+Wallace, J. M., and P . V . Hobbs (2006) Atmospheric Science: An Introduction Survey. Academic Press. 2nd
+Ed. pp. 483.
+World Meteorological Organization (WMO) (1964) Note on the Standardization of Pressure Reduc‐
+tion Methods in the International Network of Synoptic Stations. WMO Technical Note No. 61, WMO‐
+No. 154.TP .74, Geneva.
+WMO (2008) Measurement of Atmospheric Pressure. Guide to Meteorological Instruments and Methods
+of Observation. 8th Ed. pp. 1.3‐1 ‐ 1.3‐25.
+Page 33 of 33

@@ -1,0 +1,37 @@
+operational: 367 sites x 2972 intervals, 199 nodes, 98126 cells hidden
+  mean node flow 706.3 veh/interval, mean tolerance band 31.9 veh (4.51%)
+  method                                     MAE     RMSE    resid%  outside%
+  historical_mean                          66.61   117.01     5.636     56.53
+  linear_interpolation                     94.30   202.29     5.609     58.48
+  knn_spatial                              15.79    32.00     0.891     10.70
+  soft_impute                              37.69    59.69     3.598     46.13
+  --- invention: calibrated relation, hard tolerance band ---
+  constrained(historical_mean)             30.22    73.76     2.475      0.99
+  constrained(linear_interpolation)        34.16    85.93     2.433      1.02
+  constrained(knn_spatial)                 14.50    34.57     0.915      0.93
+  constrained(soft_impute)                 24.48    57.50     2.352      0.98
+  --- ablations on the strongest prior ---
+  ablation(knn_spatial: exact equality, no band)   13.93    30.59     0.640      4.09
+  ablation(knn_spatial: textbook zero, no calibration)   14.80    34.96     0.935      6.36
+  ablation(knn_spatial: offset calibration only)   14.46    31.79     0.935      6.29
+  ablation(knn_spatial: uniform weighting)   14.42    33.90     0.915      0.92
+  wrote results/phase4_operational.json
+
+all_gaps: 367 sites x 2972 intervals, 199 nodes, 99175 cells hidden
+  mean node flow 706.3 veh/interval, mean tolerance band 31.9 veh (4.51%)
+  method                                     MAE     RMSE    resid%  outside%
+  historical_mean                          58.81   101.94     6.027     54.85
+  linear_interpolation                    334.80   482.76    16.302     84.16
+  knn_spatial                              15.45    29.16     0.928     11.43
+  soft_impute                              40.62    60.39     4.076     51.95
+  --- invention: calibrated relation, hard tolerance band ---
+  constrained(historical_mean)             26.80    59.77     2.579      0.94
+  constrained(linear_interpolation)        65.52   144.03     2.748      1.07
+  constrained(knn_spatial)                 14.43    34.13     0.885      0.86
+  constrained(soft_impute)                 23.98    45.71     2.377      0.90
+  --- ablations on the strongest prior ---
+  ablation(knn_spatial: exact equality, no band)   14.45    30.65     0.756      4.37
+  ablation(knn_spatial: textbook zero, no calibration)   14.48    31.30     0.928      7.23
+  ablation(knn_spatial: offset calibration only)   14.34    31.15     0.933      7.12
+  ablation(knn_spatial: uniform weighting)   14.03    29.52     0.883      0.86
+  wrote results/phase4_all_gaps.json

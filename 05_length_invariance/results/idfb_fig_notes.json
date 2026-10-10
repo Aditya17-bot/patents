@@ -1,0 +1,148 @@
+{
+ "fig05": {
+  "road": "M25",
+  "month": "2025-05",
+  "fit_month": "2025-04",
+  "detectors": [
+   "4332",
+   "5986",
+   "3212",
+   "4845",
+   "5256",
+   "1313",
+   "2512",
+   "1947",
+   "462",
+   "181",
+   "3700",
+   "3669",
+   "571",
+   "3026",
+   "3893",
+   "510"
+  ],
+  "fitted": 16,
+  "raw_range_pct": 27.08,
+  "corrected_range_pct": 1.0
+ },
+ "fig08": {
+  "shown": [
+   [
+    "M1",
+    "332"
+   ],
+   [
+    "M1",
+    "1932"
+   ]
+  ],
+  "continuity_5_days_either_side": [
+   {
+    "road": "M25",
+    "detector": "1133",
+    "both_pairs_all_days": false,
+    "missing_upstream_pair": [
+     -2,
+     -1
+    ],
+    "missing_downstream_pair": [
+     -2,
+     -1
+    ]
+   },
+   {
+    "road": "M25",
+    "detector": "5986",
+    "both_pairs_all_days": false,
+    "missing_upstream_pair": [
+     -4,
+     -3,
+     -2,
+     -1,
+     1,
+     2,
+     3,
+     4
+    ],
+    "missing_downstream_pair": [
+     -4,
+     -3,
+     -2,
+     -1,
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   {
+    "road": "M1",
+    "detector": "18900",
+    "both_pairs_all_days": true,
+    "missing_upstream_pair": [],
+    "missing_downstream_pair": []
+   },
+   {
+    "road": "M1",
+    "detector": "1932",
+    "both_pairs_all_days": true,
+    "missing_upstream_pair": [],
+    "missing_downstream_pair": []
+   },
+   {
+    "road": "M1",
+    "detector": "2602",
+    "both_pairs_all_days": false,
+    "missing_upstream_pair": [
+     -5,
+     -4,
+     -3,
+     -2,
+     -1
+    ],
+    "missing_downstream_pair": []
+   },
+   {
+    "road": "M1",
+    "detector": "2793",
+    "both_pairs_all_days": false,
+    "missing_upstream_pair": [
+     -2,
+     -1,
+     1,
+     2,
+     3,
+     4
+    ],
+    "missing_downstream_pair": [
+     -2,
+     -1,
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   {
+    "road": "M1",
+    "detector": "332",
+    "both_pairs_all_days": true,
+    "missing_upstream_pair": [],
+    "missing_downstream_pair": []
+   },
+   {
+    "road": "M1",
+    "detector": "405",
+    "both_pairs_all_days": false,
+    "missing_upstream_pair": [
+     -2,
+     -1
+    ],
+    "missing_downstream_pair": [
+     -2,
+     -1
+    ]
+   }
+  ]
+ }
+}

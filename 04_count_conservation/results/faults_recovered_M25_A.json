@@ -1,0 +1,351 @@
+{
+ "manifest": "window_full_M25_A.json",
+ "topology": "recovered",
+ "span_intervals": 192,
+ "seed": 0,
+ "nodes_fitted": 392,
+ "nodes_with_threshold": 379,
+ "detectors_tested": 40,
+ "detectors_eligible": 238,
+ "repeats_per_detector": 3,
+ "train_intervals": 1486,
+ "test_intervals": 1486,
+ "false_positive_rate_by_construction": 0.01,
+ "threshold_vehicles": {
+  "median": 2.89,
+  "min": 0.31,
+  "max": 116.88
+ },
+ "class_joint_scale": {
+  "median": 1.05,
+  "min": 0.999,
+  "max": 1.401,
+  "nodes": 379
+ },
+ "cases": [
+  {
+   "mode": "none",
+   "magnitude": 0.0,
+   "trials": 120,
+   "detection_rate": 0.05,
+   "attribution_top1": 0.0083,
+   "attribution_top3": 0.0167
+  },
+  {
+   "mode": "scale",
+   "magnitude": 0.8,
+   "trials": 120,
+   "detection_rate": 1.0,
+   "attribution_top1": 0.8917,
+   "attribution_top3": 0.925,
+   "type_correct": 1.0,
+   "estimated_size_median": -24.998,
+   "true_size": -20.0
+  },
+  {
+   "mode": "scale",
+   "magnitude": 0.9,
+   "trials": 120,
+   "detection_rate": 1.0,
+   "attribution_top1": 0.875,
+   "attribution_top3": 0.9083,
+   "type_correct": 1.0,
+   "estimated_size_median": -11.108,
+   "true_size": -10.0
+  },
+  {
+   "mode": "scale",
+   "magnitude": 0.95,
+   "trials": 120,
+   "detection_rate": 1.0,
+   "attribution_top1": 0.8833,
+   "attribution_top3": 0.9417,
+   "type_correct": 0.9821,
+   "estimated_size_median": -5.268,
+   "true_size": -5.0
+  },
+  {
+   "mode": "scale",
+   "magnitude": 0.98,
+   "trials": 120,
+   "detection_rate": 0.975,
+   "attribution_top1": 0.7917,
+   "attribution_top3": 0.8667,
+   "type_correct": 0.9649,
+   "estimated_size_median": -2.072,
+   "true_size": -2.0
+  },
+  {
+   "mode": "scale",
+   "magnitude": 0.99,
+   "trials": 120,
+   "detection_rate": 0.875,
+   "attribution_top1": 0.6917,
+   "attribution_top3": 0.775,
+   "type_correct": 0.8899,
+   "estimated_size_median": -1.003,
+   "true_size": -1.0
+  },
+  {
+   "mode": "scale",
+   "magnitude": 0.995,
+   "trials": 120,
+   "detection_rate": 0.7917,
+   "attribution_top1": 0.4917,
+   "attribution_top3": 0.5917,
+   "type_correct": 0.7658,
+   "estimated_size_median": -0.497,
+   "true_size": -0.5
+  },
+  {
+   "mode": "scale",
+   "magnitude": 1.005,
+   "trials": 120,
+   "detection_rate": 0.7417,
+   "attribution_top1": 0.5083,
+   "attribution_top3": 0.6,
+   "type_correct": 0.8818,
+   "estimated_size_median": 0.483,
+   "true_size": 0.5
+  },
+  {
+   "mode": "scale",
+   "magnitude": 1.01,
+   "trials": 119,
+   "detection_rate": 0.8571,
+   "attribution_top1": 0.6975,
+   "attribution_top3": 0.7311,
+   "type_correct": 0.9174,
+   "estimated_size_median": 0.991,
+   "true_size": 1.0
+  },
+  {
+   "mode": "scale",
+   "magnitude": 1.02,
+   "trials": 119,
+   "detection_rate": 0.9244,
+   "attribution_top1": 0.7731,
+   "attribution_top3": 0.8067,
+   "type_correct": 0.9725,
+   "estimated_size_median": 1.964,
+   "true_size": 2.0
+  },
+  {
+   "mode": "scale",
+   "magnitude": 1.05,
+   "trials": 120,
+   "detection_rate": 0.9667,
+   "attribution_top1": 0.8833,
+   "attribution_top3": 0.9,
+   "type_correct": 0.9821,
+   "estimated_size_median": 4.771,
+   "true_size": 5.0
+  },
+  {
+   "mode": "scale",
+   "magnitude": 1.1,
+   "trials": 120,
+   "detection_rate": 1.0,
+   "attribution_top1": 0.9,
+   "attribution_top3": 0.9083,
+   "type_correct": 1.0,
+   "estimated_size_median": 9.106,
+   "true_size": 10.0
+  },
+  {
+   "mode": "offset",
+   "magnitude": -30.0,
+   "trials": 119,
+   "detection_rate": 1.0,
+   "attribution_top1": 0.8992,
+   "attribution_top3": 0.9412,
+   "type_correct": 1.0,
+   "estimated_size_median": -29.93,
+   "true_size": -30.0
+  },
+  {
+   "mode": "offset",
+   "magnitude": -15.0,
+   "trials": 120,
+   "detection_rate": 1.0,
+   "attribution_top1": 0.8833,
+   "attribution_top3": 0.9167,
+   "type_correct": 1.0,
+   "estimated_size_median": -14.96,
+   "true_size": -15.0
+  },
+  {
+   "mode": "offset",
+   "magnitude": -8.0,
+   "trials": 120,
+   "detection_rate": 0.975,
+   "attribution_top1": 0.8167,
+   "attribution_top3": 0.9083,
+   "type_correct": 0.9455,
+   "estimated_size_median": -8.035,
+   "true_size": -8.0
+  },
+  {
+   "mode": "offset",
+   "magnitude": -4.0,
+   "trials": 120,
+   "detection_rate": 0.925,
+   "attribution_top1": 0.5833,
+   "attribution_top3": 0.7167,
+   "type_correct": 0.8991,
+   "estimated_size_median": -4.15,
+   "true_size": -4.0
+  },
+  {
+   "mode": "offset",
+   "magnitude": -2.0,
+   "trials": 120,
+   "detection_rate": 0.7167,
+   "attribution_top1": 0.275,
+   "attribution_top3": 0.5167,
+   "type_correct": 0.7477,
+   "estimated_size_median": -2.13,
+   "true_size": -2.0
+  },
+  {
+   "mode": "offset",
+   "magnitude": 2.0,
+   "trials": 120,
+   "detection_rate": 0.7,
+   "attribution_top1": 0.3667,
+   "attribution_top3": 0.4833,
+   "type_correct": 0.7091,
+   "estimated_size_median": 1.98,
+   "true_size": 2.0
+  },
+  {
+   "mode": "offset",
+   "magnitude": 4.0,
+   "trials": 119,
+   "detection_rate": 0.8235,
+   "attribution_top1": 0.6303,
+   "attribution_top3": 0.6807,
+   "type_correct": 0.8545,
+   "estimated_size_median": 3.87,
+   "true_size": 4.0
+  },
+  {
+   "mode": "offset",
+   "magnitude": 8.0,
+   "trials": 120,
+   "detection_rate": 0.9667,
+   "attribution_top1": 0.7833,
+   "attribution_top3": 0.8333,
+   "type_correct": 0.9459,
+   "estimated_size_median": 7.88,
+   "true_size": 8.0
+  },
+  {
+   "mode": "offset",
+   "magnitude": 15.0,
+   "trials": 119,
+   "detection_rate": 0.9832,
+   "attribution_top1": 0.8824,
+   "attribution_top3": 0.916,
+   "type_correct": 0.9636,
+   "estimated_size_median": 14.955,
+   "true_size": 15.0
+  },
+  {
+   "mode": "offset",
+   "magnitude": 30.0,
+   "trials": 120,
+   "detection_rate": 1.0,
+   "attribution_top1": 0.8917,
+   "attribution_top3": 0.9167,
+   "type_correct": 0.9909,
+   "estimated_size_median": 29.885,
+   "true_size": 30.0
+  },
+  {
+   "mode": "stuck",
+   "magnitude": 0.0,
+   "trials": 120,
+   "detection_rate": 0.9667,
+   "attribution_top1": 0.875,
+   "attribution_top3": 0.8917
+  },
+  {
+   "mode": "classify",
+   "magnitude": 0.0,
+   "trials": 119,
+   "detection_rate": 0.1513,
+   "attribution_top1": 0.0,
+   "attribution_top3": 0.0,
+   "detection_rate_via_total_balance": 0.0336,
+   "detection_rate_at_matched_1pct": 0.042,
+   "calibrated_trials": 119
+  },
+  {
+   "mode": "classify",
+   "magnitude": 0.01,
+   "trials": 119,
+   "detection_rate": 0.5462,
+   "attribution_top1": 0.2185,
+   "attribution_top3": 0.2605,
+   "detection_rate_via_total_balance": 0.0336,
+   "detection_rate_at_matched_1pct": 0.5042,
+   "calibrated_trials": 119
+  },
+  {
+   "mode": "classify",
+   "magnitude": 0.02,
+   "trials": 120,
+   "detection_rate": 0.6917,
+   "attribution_top1": 0.3583,
+   "attribution_top3": 0.4583,
+   "detection_rate_via_total_balance": 0.025,
+   "detection_rate_at_matched_1pct": 0.675,
+   "calibrated_trials": 120
+  },
+  {
+   "mode": "classify",
+   "magnitude": 0.05,
+   "trials": 120,
+   "detection_rate": 0.9,
+   "attribution_top1": 0.6333,
+   "attribution_top3": 0.675,
+   "detection_rate_via_total_balance": 0.0583,
+   "detection_rate_at_matched_1pct": 0.8833,
+   "calibrated_trials": 120
+  },
+  {
+   "mode": "classify",
+   "magnitude": 0.1,
+   "trials": 119,
+   "detection_rate": 0.9832,
+   "attribution_top1": 0.7815,
+   "attribution_top3": 0.8487,
+   "detection_rate_via_total_balance": 0.0168,
+   "detection_rate_at_matched_1pct": 0.9832,
+   "calibrated_trials": 119
+  },
+  {
+   "mode": "classify",
+   "magnitude": 0.2,
+   "trials": 119,
+   "detection_rate": 0.9916,
+   "attribution_top1": 0.8908,
+   "attribution_top3": 0.9244,
+   "detection_rate_via_total_balance": 0.042,
+   "detection_rate_at_matched_1pct": 0.9916,
+   "calibrated_trials": 119
+  },
+  {
+   "mode": "classify",
+   "magnitude": 0.4,
+   "trials": 120,
+   "detection_rate": 1.0,
+   "attribution_top1": 0.9167,
+   "attribution_top3": 0.9333,
+   "detection_rate_via_total_balance": 0.0583,
+   "detection_rate_at_matched_1pct": 1.0,
+   "calibrated_trials": 120
+  }
+ ]
+}

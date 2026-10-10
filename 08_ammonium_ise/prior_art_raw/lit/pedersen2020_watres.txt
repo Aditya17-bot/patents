@@ -1,0 +1,1116 @@
+ 
+ 
+General rights 
+Copyright and moral rights for the publications made accessible in the public portal are retained by the authors and/or other copyright 
+owners and it is a condition of accessing publications that users recognise and abide by the legal requirements associated with these rights. 
+ 
+ Users may download and print one copy of any publication from the public portal for the purpose of private study or research. 
+ You may not further distribute the material or use it for any profit-making activity or commercial gain 
+ You may freely distribute the URL identifying the publication in the public portal 
+ 
+If you believe that this document breaches copyright please contact us providing details, and we will remove access to the work immediately 
+and investigate your claim. 
+  
+ 
+   
+ 
+ 
+Downloaded from orbit.dtu.dk on: Oct 06, 2026
+Reconstruction of corrupted datasets from ammonium-ISE sensors at WRRFs through
+merging with daily composite samples
+Pedersen, Jonas Wied; Larsen, Laura Holm; Thirsing, Carsten; Vezzaro, Luca
+Published in:
+Water Research
+Link to article, DOI:
+10.1016/j.watres.2020.116227
+Publication date:
+2020
+Document Version
+Peer reviewed version
+Link back to DTU Orbit
+Citation (APA):
+Pedersen, J. W., Larsen, L. H., Thirsing, C., & Vezzaro, L. (2020). Reconstruction of corrupted datasets from
+ammonium-ISE sensors at WRRFs through merging with daily composite samples. Water Research, 185, Article
+116227. https://doi.org/10.1016/j.watres.2020.116227
+ 
+Journal Pre-proof
+Reconstruction of corrupted datasets from ammonium-ISE sensors at
+WRRFs through merging with daily composite samples
+Jonas Wied Pedersen , Laura Holm Larsen , Carsten Thirsing ,
+Luca Vezzaro
+PII: S0043-1354(20)30764-8
+DOI: https://doi.org/10.1016/j.watres.2020.116227
+Reference: WR 116227
+To appear in: Water Research
+Received date: 25 April 2020
+Revised date: 6 July 2020
+Accepted date: 23 July 2020
+Please cite this article as: Jonas Wied Pedersen , Laura Holm Larsen , Carsten Thirsing ,
+Luca Vezzaro , Reconstruction of corrupted datasets from ammonium-ISE sensors at
+WRRFs through merging with daily composite samples, Water Research (2020), doi:
+https://doi.org/10.1016/j.watres.2020.116227
+This is a PDF ﬁle of an article that has undergone enhancements after acceptance, such as the addition
+of a cover page and metadata, and formatting for readability, but it is not yet the deﬁnitive version of
+record. This version will undergo additional copyediting, typesetting and review before it is published
+in its ﬁnal form, but we are providing this version to give early visibility of the article. Please note that,
+during the production process, errors may be discovered which could affect the content, and all legal
+disclaimers that apply to the journal pertain.
+© 2020 Published by Elsevier Ltd.
+ 
+Page 1 of 38 
+ 
+Highlights 
+ Recalibration of A-ISE sensors with single grab samples is highly problematic. 
+ Useful information can be extracted from otherwise problematic, corrupted data.  
+ Merging A-ISE observations with composite samples increases data reliability. 
+ The corrected data gives sharper parameter distributions for a software sensor. 
+ Eight to sixteen weeks of data are sufficient for training a good software sensor. 
+ 
+  
+         
+         
+ 
+Page 2 of 38 
+ 
+Title: Reconstruction of corrupted datasets from ammonium-ISE sensors at WRRFs through merging 
+with daily composite samples 
+Authors: Jonas Wied Pedersen1,*, Laura Holm Larsen1, Carsten Thirsing2, Luca Vezzaro1,3 
+ 
+Affiliations and addresses: 
+1DTU Environment, Technical University of Denmark, Bygningstorvet, Building 115, 2800 Kgs. Lyngby, 
+Denmark 
+2BIOFOS A/S, Refshalevej 250, 1432 København K, Denmark 
+3Krüger A/S, Veolia Water Technologies, Gladsaxevej 363, 2860 Søborg, Denmark 
+* Corresponding author: jowi@env.dtu.dk 
+ 
+Keywords: 
+Ammonium; ion-selective electrodes; data merging; software sensor; sensor maintenance 
+ 
+Abstract: 
+Long-term, continuous datasets of high quality are important for instrumentation, control, and 
+automation efforts of wastewater resources recovery facility (WRRFs). This study presents a 
+methodology to increase the reliability of measurements from ammonium ion-selective electrodes 
+(ISEs). This is done by correcting corrupted ISE data with a data source that often is available at WRRFs 
+(volume-proportional composite samples). A yearlong measurement campaign showed that the existing 
+standard protocols for sensor maintenance might still create corrupted dataset, with poor sensor 
+recalibrations responsible for abrupt and unrealistic jumps in the measurements. The proposed 
+automatic correction methodology removes both recalibration jumps and signal drift by using 
+information from composite samples that already are taken for reporting to legal authorities. Results 
+         
+         
+ 
+Page 3 of 38 
+ 
+showed that the developed methodology provided a continuous, high-quality time series without the 
+major data quality issues of the original signal. In fact, the signal was improved for 87% of days when a 
+reference sample was available. The effect of correcting the data before use in a data-driven software 
+sensor was also investigated. The corrected dataset led to noticeably smaller day-to-day variations in 
+estimated NH4
++ loads, and to large improvements on both median estimates and prediction bounds. The 
+long time series allowed for an investigation of how much training data that is required to fit a software 
+sensor, which provides estimates that are representative for the entire study period. The results showed 
+that 8 weeks of data allowed for a good median estimate, while 16 weeks are required for obtaining 
+good 80% prediction bounds. Overall, the proposed method can increase the applicability of relatively 
+cheaper ISE sensors for ICA application within WRRFs.  
+         
+         
+ 
+Page 4 of 38 
+ 
+1. Introduction 
+The wastewater sector is moving towards more digitalization, and more instrumentation, control and 
+automation in an effort to improve infrastructure planning and operational performance (Olsson et al., 
+2014; Yuan et al., 2019). Nitrogen removal is among the major processes driving the design and affecting 
+the operations of Water Resources Recovery Facilities (WRRFs), and thus one of the key components 
+that are targeted by these efforts. Several WRRF control strategies imply monitoring of nitrogen forms, 
+mainly ammonium, NH4
++, and nitrate, NO3
+-, for defining set points for e.g. aeration or recycling rates 
+during removal processes (see the examples in Olsson et al. (2014); Sweeney and Kabouris (2018); Yuan 
+et al. (2019)), or to limit the emission of greenhouse gasses like N2O (Andalib et al., 2018; Ekström et al., 
+2017). Furthermore, information on incoming nitrogen concentrations and loads can also be used by 
+optimization approaches based on Model Predictive Control (e.g. Stentoft et al., 2019; Vrečko et al., 
+2011).  
+ 
+Long-term, continuous time series of relevant variables in the system are key for supporting all of these 
+efforts. For WRRFs, these time series can e.g. be used for the development of influent generators 
+(Martin and Vanrolleghem, 2014), to support the development of plant wide models (Cierkens et al., 
+2012), and to set up software sensors and/or data-driven models (Newhart et al., 2019). Online sensors 
+that measure NH4
++ and NO3
+-
+ are either based on ex-situ (analysers) or in-situ installations (Béltran et al., 
+2015). While the first analyse a pre-filtered wastewater sample, which is pumped out of the monitored 
+stream, the latter are placed directly in the wastewater stream. Generally, ex-situ commercial sensors 
+utilize colorimetric or ion-selective electrodes (ISE), while in-situ applications are based on ISE or UV-
+sensors (Gernaey et al., 1998). The two approaches obviously differ in terms of accuracy and precision, 
+reliability and maintenance requirements, and thereby also in their financial costs. Ex-situ sensors based 
+on colorimetric techniques are often judged as more reliable, but require important financial 
+         
+         
+ 
+Page 5 of 38 
+ 
+investments. Conversely, in-situ ISE sensors have the advantage that they are significantly cheaper, have 
+very little lag time in their data delivery, and do not require any chemicals for their analysis (Rieger et 
+al., 2002).  
+ 
+Ammonium-ISE (A-ISE) sensors have been tested in multiple environments (Winkler et al., 2004): in 
+harsh environments (sewer, WRRF) the A-ISE performance was strongly affected by clogging and fouling 
+(requiring extensive maintenance and sensor cleaning), while low target-ion concentrations challenged 
+measurements in cleaner streams (such as WRFF outlets). This was also observed by Papias et al. (2018) 
+when using A-ISE for monitoring a wetland treating WRRF effluent. The main issue with measuring in 
+low-concentration environments is that, other ions (especially K+ and Na+) can interfere with the ion-
+selective membrane (Cecconi et al., 2019; Winkler et al., 2004). 
+ 
+ISE sensors can also be strongly affected by drift, as experienced by Papias et al. (2018) after about 30 
+days of operation. Tendency to drift immediately after installation was also observed by Ohmura et al. 
+(2019) when benchmarking multiple ISE sensors for pH measurements in a laboratory study. Signal 
+degradation and sensor ageing are caused by (1) reversible fouling, which is more severe closer to the 
+WRRF inlet and which can be cleaned with a piece of cloth, and (2) irreversible fouling, which seems to 
+be independent of the location in the plant and which cannot be cleaned (Cecconi et al., 2019).  
+ 
+Appropriate Standard Operating Procedures (SOP) for sensor maintenance are thus essential to ensure 
+good quality of the collected data, while improper SOP can irremediably deteriorate the sensor signal. 
+For example, Cecconi et al. (2019) showed how the use of non-representative wastewater samples to 
+recalibrate A-ISE sensors can significantly worsen their performance. In this case, ex-situ reference 
+samples (i.e. collecting wastewater in a bucket and using it for sensor calibration) were recommended. 
+         
+         
+ 
+Page 6 of 38 
+ 
+Rieger et al. (2010) proposed a procedure for obtaining high-quality data, which requires performing 
+additional intensive monitoring campaigns. Both of these approaches produce additional workloads and 
+costs for the WRRF operators. Similarly, SOPs adopted by several scientific studies (Alferes et al. (2014), 
+for example, suggested a weekly sensor maintenance) might be regarded as too demanding by WRRF 
+operators, who need to navigate a trade-off between the relatively lower price tag of an A-ISE and the 
+maintenance costs required to ensure high-quality measurements. 
+ 
+There are examples of methods for retrieving useful information from unmaintained or poorly 
+maintained sensors (e.g. De Mulder et al., 2018; Schneider et al., 2019). Additional data validation 
+methodologies have also been described by several studies (Alferes et al., 2013; Leigh et al., 2019), with 
+some specifically considering sensor drift (Haimi et al., 2016; Rieger et al., 2005; Thomann et al., 2002), 
+data reconciliation and gap filling (De Mulder et al., 2018), and online estimation of measurement 
+uncertainty (Kahiluoto et al., 2019; Näykki et al., 2015). Papias et al. (2018) attempted a drift correction 
+with a simple linear relationship over time, while Schneider et al. (2019) extracted useful information 
+from the signals of unmaintained sensors. Most of these methods are, however, semi-automatic, i.e. 
+they still require some degree of intervention from a data scientist. 
+ 
+This study introduces an automatic data correction methodology for A-ISE sensors, which relies on 
+reference measurements that are commonly available at many WRRFs. The proposed method increases 
+the reliability of A-ISE data and extracts information from otherwise corrupted time series without 
+establishing new, resource-demanding SOPs for WRRF operators. Data from a 1-year measurement 
+campaign performed by the largest wastewater utility company in Denmark at a WRRF in Copenhagen 
+were used. Sensor maintenance was performed by closely following the SOP provided by the sensor 
+manufacturer, and the collected measurements thus represent a “state-of-the-art” dataset for everyday, 
+         
+         
+ 
+Page 7 of 38 
+ 
+in-field sensor operations. Nevertheless, sensor drift and recalibration jumps make the raw data difficult 
+to use in practice. In this study, we therefore: 
+1. Develop an automatic method for correcting the corrupted, raw time series by removing the 
+effects of improper sensor recalibration and by reconstructing a more reliable signal. The 
+developed method utilizes existing, commonly available, composite samples as reference, and it 
+thus reduces the need for additional maintenance resources; 
+2. Evaluate the performance of the automatic correction method when applied in online WRRF 
+operations as well as in an offline context (correction of historical data); 
+3. Investigate the impact of the corrected data for operating a WRRF (analysis of daily NH4
++ 
+profiles) and for the application of a data-driven, online software sensor; 
+4. Discuss the need for modifying existing SOP and maintenance procedures for A-ISE sensors 
+providing a trade-off between the need to maintain high-quality data while reducing the risk of 
+overzealous maintenance.  
+2. Materials and methods 
+2.1. Case study: Damhusaaen WRRF 
+The Damhusaaen WRRF is operated by BIOFOS, the largest Danish wastewaster utility, and is one of 
+three major plants in the city of Copenhagen, Denmark. The plant receives wastewater from a 55 km2 
+combined sewer catchment, consisting of a mix of households and industries. The plant has a capacity of 
+350,000 PE and is an alternating plant (Isaacs and Thornberg, 1998) with biological nitrogen and 
+phosphorous removal as well as chemical phosphorous precipitation. Figure 1 shows an overview of the 
+plant layout, the main hydraulic pathways, and the location of the monitoring locations used for this 
+study. The wastewater stream is sampled after primary treatment (location 1), just before a pumping 
+station. An A-ISE sensor is installed downstream of the pumping station, in the inlet channel to the 
+         
+         
+ 
+Page 8 of 38 
+ 
+biological treatment tanks (location 2). The placement of the sensor has been defined by BIOFOS staff 
+for logistical reasons, i.e. to provide easy access and to limit fouling caused by fat and grease, which are 
+known factors affecting the reliability of both in-situ and ex-situ sensors (Rieger et al., 2002). Data for 
+this study were collected for almost a full year in the period of June 4th 2018 to May 15th 2019. 
+ 
+ 
+Figure 1: Aerial photo of the WRRF with main hydraulic pathways indicated (top) and a schematic layout (bottom). The red 
+points designate measurement locations. 
+ 
+         
+         
+ 
+Page 9 of 38 
+ 
+2.2. Available data 
+2.2.1. Flow observations 
+Flow observations are collected after the central pumping station by using a magnetic inductive flow 
+meter with a one-minute resolution. Basic data quality control (DQC) is automatically performed by the 
+data collection platform, checking for out-of-sensor-range, sensor failures (flat lines), and sudden shifts. 
+Small gaps in the time series of less than 10 minutes are filled by linear interpolation. Since the pump’s 
+operation strongly affect the measured flow data, a moving average with a centred window of two 
+hours is used to remove the spikes caused by pump operations from the influent signal. Flow data are 
+available for the full period of study. 
+ 
+2.2.2. Volume-proportional composite samples 
+The Danish legislation requires WRRF operators to report on the plant’s yearly performance to the 
+Danish Environmental Protection Agency (DK-EPA). The performance is evaluated by taking 24-hour 
+volume-proportional composite samples (cf. definition in Ort et al. (2010)) at the inlet, outlet, and (when 
+happening) the bypass of the plant. The required sample frequency depends on the plant capacity: for 
+Damhusaaen, the DK-EPA requires at least 12 annual samples of the influent and 24 samples of the 
+effluent. The plant operators take additional samples for internal analysis to obtain a better overview of 
+the plant performance, with a total of 48 samples being collected annually at location 1 (Figure 1). The 
+auto-sampler is not started on a fixed schedule as the operators intend to collect representative samples 
+of all days of the week over a year. The sampling is thus spread out over the year, and there is 
+approximately one sample per week on average with typical intervals between sample ranging from 4 to 
+10 days. The auto-sampler that was used for this study is a MAXX SP Zone 2 auto-sampler with a total 
+sample capacity of 9 litres per sampling day. The auto-sampler collects wastewater aliquots of 60 ml, 
+resulting in a maximum of 150 samples per day. The sampling volume interval is modified by the plant 
+         
+         
+ 
+Page 10 of 38 
+ 
+operators depending on the expected inlet flow (i.e. if wet weather is expected during the sampling 
+period). Unfortunately, the auto-sampler settings have not been documented, but the operators often 
+utilize a value of 500 m3 of wastewater passing by the sampler before a new aliquot is taken. A sampling 
+day runs from 7AM to 7AM the following day. During heavy rainfall events, it is possible that the total 
+capacity of the auto-sampler is exceeded and that the sampling thus ends prematurely. During the study 
+period, 45 daily composite samples were collected. Three samples were discarded due to unrealistically 
+high or low values after consultations with the operators, while four samples were discarded due to 
+missing flow or A-ISE data for the same day. 
+ 
+2.2.3. Ammonium-ISE data 
+An ISE consists of an indicator electrode and a reference electrode. The reference electrode sits in a 
+reference solution and has a constant electrical potential that is known to the manufacturer, while the 
+potential of the indicator electrode will vary depending on the concentration of the target ion in the 
+wastewater. The sensor measures the difference in potential between the two electrodes with a 
+voltmeter. Knowing the potential in the reference solution and the measured difference between the 
+reference and the indicator, one can estimate the concentration of a target ion in the wastewater 
+through the Nernst equation: 
+        
+      ( ) (1) 
+ 
+Where   [V] is the electrode potential,    [V] is a constant that is specific to the indicator-reference 
+electrode pair, R is the gas constant [J K-1mol-1], T [K] is the temperature,   [-] is the charge of an ion,   is 
+the Faraday constant [C mol-1], and   [-] is the activity of the target ion. As there are different ions in 
+raw wastewater, an “ion-selective” membrane only allows a specific ion such as NH4
++ to reversibly bind 
+to the indicator electrode. However, no membrane is 100% selective towards its target ion, and other 
+         
+         
+ 
+Page 11 of 38 
+ 
+similar ions can cause interference. Accounting for this in equation 1, leads to equation 2 that is also 
+called the Nikolskii-Eisenmann equation: 
+ 
+          
+       (   ∑      
+  
+  
+ 
+   
+) (2) 
+ 
+Where       is the measured potential difference,   is a constant, while subscript   and   refers to the 
+target and the interfering ion, respectively.   is the total number of interfering ions, while     is the 
+selectivity coefficient and accounts for how well the membrane distinguishes between the target and 
+the interfering ion. Equation 2, also known as the calibration curve of an ISE sensor, is a linear 
+relationship between the measured potential difference and the logarithm of the activity, with an offset 
+(c) and a slope parameter (RT/ziF). Linearity only holds within a certain range of concentrations, and 
+interference from other ions becomes an issue at very low concentrations of the target ion. At high 
+concentrations, the assumption of concentration roughly equalling activity is not respected due to high 
+ionic strength in the wastewater. 
+ 
+ISE sensors are known to drift over time with several identified causes: the reference potential can be 
+affected by diffusion of molecules in the reference solution, the membrane can experience clogging, and 
+there might be aging issues with various components in the sensor. The degree of drifting is dependent 
+the type of sensor and the way it is used. The standard practice to minimize drift is to recalibrate the 
+sensor regularly by re-estimating the offset and slope parameters in Equation 2. This is normally done by 
+comparing sensor readings against laboratory analysis of grab samples. If just one grab sample is taken 
+for comparison with sensor readings, it is called a one-point calibration, which only makes it possible to 
+re-estimate one of the parameters in Equation 2. If both parameters are to be estimated a two- or multi-
+point calibration is needed.  
+         
+         
+ 
+Page 12 of 38 
+ 
+ 
+The ISE sensor placed at location 2 at Damhusaaen WRRF is a HACH AISE sc probe, which provided data 
+for the whole study period at two-minute resolution. The sensor corrects the signal for K+, as this is the 
+most important interfering ion in wastewater. Data were validated by using the same DQC procedure as 
+for flow observations with additional visual checks to remove sensor maintenance periods, which are 
+often not detected by automatic DQC. 
+ 
+The plant operators performed regular sensor maintenance, following a SOP that was agreed  upon with 
+the sensor manufacturer. The SOP required a manual cleaning of the sensor once a week with a wet 
+piece of cloth. No chemical cleaning of the sensor head was performed during the study period. Grab 
+samples were taken in the raw wastewater stream next to the sensor and a reading of the sensor 
+observation at the same time was logged. According to the SOP, the sensor should be recalibrated if 
+deviation between the grab sample and the sensor reading is greater than 10%. The utility company 
+chose the value of 10% based on their standard internal practice, which is also applied to other sensors 
+across their plants. Recalibration was done by following the sensor manufacturer’s recommendations, 
+suggesting a one-point calibration, where only the offset parameter is updated. In practice, the process 
+of recalibration consisted of the operator typing the result of the laboratory analysis of the grab samples 
+into a HACH SC1000 controller that directly connects to the ISE sensor. Proprietary software inside the 
+controller then automatically updated the offset parameter of the calibration curve. Overall, the 
+collected data are thus representative for a typical everyday use of such sensor by scrupulous operators 
+in daily WRRF operations.  
+ 
+         
+         
+ 
+Page 13 of 38 
+ 
+2.3. Data correction method 
+The proposed data correction method consists of three steps aiming at removing the large 
+discontinuities due to sensor recalibration as well as any sensor drift by using information from 24hr 
+volume-proportional samples. The signal reconstruction aims to preserve the information on relative 
+intra-daily variations from the ISE signal, while adjusting the absolute values to a more reliable estimate. 
+The use of a 24-hr sample implies that the correction is not affected by inter-daily variations (e.g. 
+weekdays vs. weekends), as long as the sensor data and the composite samples have been collected 
+over the same period. This correction also removes the signal disruption caused by sensor recalibration 
+based on non-representative grab samples. The entire process is illustrated in Figure 2. 
+ 
+1. Remove discontinuous recalibration “jumps”: The first step identifies and removes discontinuities 
+that are caused by manual sensor recalibrations in a measured time series, providing a smooth series of 
+observations. Jumps were identified thanks to the operators’ maintenance logbook, where recalibration 
+events were recorded. A recalibration event causes an instantaneous jump in the measured series as the 
+one-point calibration procedure adjusts the offset parameter in Equation 2. A change to the offset 
+parameter does not only move the daily average of the observations but also changes the magnitude of 
+the intra-daily variations. Since the sensor calibration curve relates the measured E signal linearly to the 
+logarithm of the NH4
++ concentration (see Equation 2), it is necessary to operate on log-transformed data. 
+The first step back-calculates erroneous jumps by using the difference between the mean of the 10 
+observations before the jump and the mean of the 10 observations after the jump (Figure 2a). This 
+difference is either added to or subtracted from the observations after the jump, aligning the 
+observations on both sides of the recalibration event (Figure 2b). This is done sequentially for all 
+recalibration events in the considered period, generating a times series where no sensor recalibrations 
+are visible. Because the jumps are removed by evaluating the average concentration immediately before 
+         
+         
+ 
+Page 14 of 38 
+ 
+and after a jump, it is important to choose a window of time for averaging that is long enough to smooth 
+out random noise in the data. The time window should also not be so long that the dynamics in the 
+system have led to a real change in concentration, e.g. during the ramping of the daily peak. For this 
+study, a window size of 10 observations provided a good compromise between the two aspects. 
+ 
+2. Emulate composite sampling: This step calculates a 24-hour average concentration based on ISE data, 
+emulating the auto-sampler’s volume-proportional sampling of the actual wastewater stream. First, the 
+cumulative wastewater volume during the sampling day is calculated (Figure 2c). According to the 
+typical settings at Damhusaaen WRRF, samples are taken every 500m3 of passing water volume. The 
+measured NH4
++ concentrations at corresponding sampling times are then extracted from the time series 
+(corrected at step 1), and their average is calculated, creating a composite sample from the sensor data 
+(Figure 2d). On rainy days with large incoming wastewater volumes, the auto-sampler might run out of 
+its 150-sample capacity. This is emulated by stopping the sampling from the sensor data at the 150th 
+sample as well.  
+ 
+3. Adjust ISE series with composite values: This step adjusts the ISE values to fit the measured 
+composite samples. As in step 1, the adjustment is performed on log-transformed data. First, a 
+correction factor is determined for the days when composite samples were taken as the ratio between 
+measured and emulated composite values (Figure 2e). Linear weighting between these correction 
+factors are then used to estimate correction factors for days between two composite samples. Finally, 
+the corrected time series is obtained by multiplying the correction factors to the data generated at step 
+1 (Figure 2f).  
+ 
+         
+         
+ 
+Page 15 of 38 
+ 
+ 
+Figure 2: Sketch of the different steps in the data correction method. It is worth noting that the time scales are different for each 
+column. On the left, the time axis is a couple of hours, in the middle it is 24 hours, while it is on the order of two weeks in the 
+right column. 
+ 
+2.4. Offline vs online applications 
+The proposed correction method can be applied in offline, desktop settings (i.e. to correct data collected 
+during past monitoring campaigns) and in online, operational settings (i.e. measurements are corrected 
+as soon as they are recorded by the sensor). For offline applications on historical data, the correction of 
+a given ISE data point can be based on its closest past and future composite samples. For online 
+applications, the correction procedure can only be based on past composites samples, since future 
+samples are obviously not available. In this case, the correction factors are kept constant and equal to 
+the one estimated at the most recent composite sample day (i.e. there is no interpolation between two 
+composite sample days). 
+ 
+         
+         
+ 
+Page 16 of 38 
+ 
+2.5. Evaluation of the corrected signal 
+The performance evaluation of the correction method depends on whether it is used in offline or online 
+mode. The offline performance is evaluated with a “leave-one-out” analysis, where a single composite 
+sample is removed from the dataset and the full correction procedure is performed with the remaining 
+samples. The relative error εraw for the raw signal on the removed day is calculated as: 
+      
+          
+     
+ (3) 
+Where Craw [mg l-1] is the concentration from the emulated composite sample (Step 2) based on the raw 
+ISE signal, and Ccomp [mg l-1] is the concentration from the removed composite sample measured in the 
+laboratory. The relative error εcorr for the corrected data on the removed day is then calculated as: 
+       
+           
+     
+ (4) 
+Where Ccorr [mg l-1] is the concentration from the emulated composite sample (Step 2) based on the 
+corrected ISE signal. The correction procedure has improved the value of the ISE data if       is smaller 
+than     . This procedure is then repeated for all composites in the measurement campaign. 
+ 
+The performance of online applications of the method is done for each composite sample at a time. 
+Here, the correction factors that were calculated for the most recent composite sample are extrapolated 
+forward to the ISE data for the day of interest. Equation 4 is then applied to the online corrected signal. 
+ 
+2.6. Application to a data-driven software sensor 
+The benefits of using the correction method in combination with a data-driven software sensor were 
+also evaluated. The modelling setup for the software sensor was based on the model initially presented 
+by Vezzaro et al. (2020), where it was used for forecasting flow and NH4
++ at the inlet of a WRRF. This 
+         
+         
+ 
+Page 17 of 38 
+ 
+model simulates incoming NH4
++ daily loads at the inlet of plant (    ) by using a widely applied simple 
+second-order Fourier series (e.g. Bechmann et al., 1999): 
+ 
+    ( )    ∑(     (    )       (    ))
+ 
+   
+ (6) 
+where   corresponds to the daily mean of the NH4
++ load [kg/hr], and    and    are Fourier coefficients 
+that reproduce the diurnal pattern. Since the ISE sensor is located after the primary clarifiers, their 
+volume will cause the diurnal pattern to be attenuated and delayed before it reaches the sensor 
+location. Equation 6 thus requires a modification, where the inflow signal is filtered by using a series of 
+continuously stirred tank reactors with a total volume equivalent to the total clarifiers’ volume. The 
+number of tanks in series (three in this case) were defined according to the attenuation observed in the 
+measurements. The NH4
++ concentration (    ) is then calculated as: 
+     ( )      ( )
+ ( )  (7) 
+Where  ( ) is the measured inlet flow. 
+ 
+The software sensor is trained by estimating the parameters of Equation 6 for each day within a user-
+specified time window. The estimation procedure consists of minimizing the root mean squared error 
+between simulated and observed data with a standard Nelder-Mead algorithm (R Core Team, 2019). 
+This provides an ensemble of daily profiles that contains as many members as there are days within the 
+time window. The ensemble allows for considering inter-daily variations (which are often neglected by 
+models only considering a single typical profile) and it is used for forecasting or for filling information 
+gaps in periods where NH4
++ concentrations and loads are missing, thus allowing the WRRF operations to 
+swiftly continue. 
+ 
+         
+         
+ 
+Page 18 of 38 
+ 
+To evaluate the influence of the amount of training data for estimating the software sensor, ensembles 
+of different sizes are compared. Only weekdays’ profiles are considered (i.e. no weekends). The 
+ensembles generated by using different time windows (ranging from 2 to 16 weeks, and sweeping 
+across the whole dataset) are compared to the results obtained by using all the 130 dry weekdays.  
+ 
+The performance of the software sensor is investigated with the following indicators:  
+(1) Mean Absolute Relative Error (MARE) of the ensemble median against the observations;  
+(2) Observation coverage of the 80% confidence interval as defined with the 10th and 90th percentile as 
+lower and upper boundary;  
+(3) Interval Score (IS) as given by Equation 8 for the (   )       confidence interval.  
+ 
+ 
+   ∑
+{
+ 
+ 
+ 
+          
+ 
+                                  
+     
+  (   )                     
+     
+  (   )                   
+ (8) 
+ 
+Where   is the observation at a given point in time,   is the lower boundary of the confidence interval,   
+is the upper boundary of the confidence interval, while   defines the confidence interval (e.g.   equals 
+0.05 and 0.2 gives a 95% and 80% confidence interval, respectively). 
+ 
+3. Results and discussion 
+3.1. Assessment of signal quality 
+Figure 3a shows all the available inlet flow data. The average flow was around 3,000 m3/hr during dry 
+days with discernible seasonal variations: the dry weather flow was larger during winter months and in a 
+         
+         
+ 
+Page 19 of 38 
+ 
+two-week rainy period in March 2019. These variations were due to groundwater infiltration-inflow and 
+followed the seasonal variations in the groundwater table. Wet weather occurred when the measured 
+flow exceeded 5,000 m3/hr with stormwater peaks reaching 20,000-23,000 m3/hr.  
+ 
+Figure 3b shows the raw NH4
++ signal from the ISE sensor where a change in colour indicates a manual 
+sensor recalibration event. The calibration time stamps are also shown in Figure 3c along with sensor 
+cleaning dates and change of the sensor cartridge (November 2018). An indication of a “calibration” 
+time means that the sensor was both cleaned and calibrated. Both infiltrated groundwater and 
+stormwater dilute wastewater, leading to lowered NH4
++ concentrations: these effects can be seen in the 
+gradual changes over long time intervals (weeks, months - indicating groundwater infiltration) and in the 
+sudden (hours, days) drops in the NH4
++ concentrations due to stormwater dilution. In the period from 
+September through November 2018, the sensor was maintained according to the original SOP with 
+frequent cleaning and comparison of the deviation between ISE values and grab samples (approximately 
+once a week). There were several exceedances of the 10% deviation threshold in this period, which led 
+to frequent recalibration of the sensor. Two of these were in hindsight due to grab samples with 
+unrealistically high concentrations, which should not have been used for recalibration in the first place. 
+This maintenance procedure changed from early December 2018 to late February 2019 when the sensor 
+was left unmaintained without any cleaning and recalibration. These changes in maintenance schedules 
+were not actively planned as part of this study, but they provide a realistic picture of sensor operations 
+outside an academic setup (including effects of operators’ vacations, sick days, etc.) 
+ 
+Figure 3d shows the raw sensor signal (red) and the corrected time series (purple) for the whole dataset. 
+The measured concentrations from the 24-hour volume proportional samples are also shown (black 
+squares). Figure 4 shows an enlargement of a period with intensive maintenance (Figure 4a), and a 
+         
+         
+ 
+Page 20 of 38 
+ 
+period with apparent sensor drift (July 2018 - Figure 4b). During the period with intensive sensor 
+maintenance, the signal showed large jumps in concentration of up to 30-40 mg/L before and after a 
+sensor re-calibration. After these jumps, the signal sometimes reached physically unreasonable values 
+above 90 mg/L. This raises serious concerns on the representativity of the raw ISE signal. If this was the 
+only available data source, it would be very difficult to determine which parts of the dataset that can be 
+regarded as reliable. Figure 4a shows how the corrected signal provides a continuous, more realistic 
+time series without the large disruptive jumps. While the dry weather concentrations varied between 30 
+to 90 mg/L in the raw series, they consistently stayed around 50 mg/L in the corrected signal. From a 
+qualitative perspective, the corrected values seem much more reasonable as they do not show 
+unrealistic changes in the dry weather concentrations. 
+ 
+The long period without sensor maintenance (Figure 3b) shows a downward trend in the raw ISE values 
+over time until the next sensor recalibration (late February), when the signal jumps back up. A similar 
+situation was observed in July 2018 (Figure 4b), where a period without maintenance resulted in an 
+increasing trend in NH4
++ values over time. However, the analysis of the ISE signal alone does not allow 
+identifying if these trends are caused by sensor drift, variations in groundwater infiltration that dilutes 
+wastewater (as seen in the flow observations from January 2018), changes in the wastewater influent 
+loads (due to e.g. summer holidays in July), or a combination of these. The additional information 
+provided by the composite samples thus enables a more thorough analysis, which, for example, shows 
+how the ISE signal drifted away from measurements during these two periods. The correction method 
+provides an adjusted signal that does not drift over time while still preserving the natural intra-daily 
+variations in NH4
++ concentration (Figure 4b). 
+         
+         
+ 
+Page 21 of 38 
+ 
+ 
+Figure 3: (a) Flow data, (b) raw ISE data with each calibration period in a separate colour, (c) indication of various types of 
+sensor maintenance, (d) raw vs. corrected ISE signal vs. 24hr composites. 
+         
+         
+ 
+Page 22 of 38 
+ 
+ 
+ 
+Figure 4: Zoom of part of the period with frequent maintenance (a, left column), and zoom of a period with sensor drift (b, right 
+column). 
+Figure 5 compares the quantitative performance of the raw ISE signal against the two application modes 
+(offline and online). Figure 5a shows the relative error between the measured composite samples and 
+their ISE-based equivalents for the raw and corrected signals, as calculated by Equation 3-5. Here, it is 
+seen that the offline correction produces smaller errors (quartile range of -8% to +7%) than the raw 
+signal (quartile range of -13% to 24%). The online correction is, as expected, worse than the offline setup 
+(quartile range of -15% to 12%) but it still provides an improvement compared to the raw signal. While 
+the boxplots (Figure 5a) summarize the overall performance over the entire measurement campaign, 
+Figure 5b,c show the errors for each individual sampling day. A red point indicates that the raw signal 
+outperforms the corrected signal for a given day, while a purple or blue point signifies that the corrected 
+signal is superior. Figure 5b,c show that there are a small fraction of days where the raw signal is best: 
+overall, the offline correction method outperforms the raw signal in 87% of the 38 sampling days, while 
+the online correction is superior in 71% of the days. 
+ 
+         
+         
+ 
+Page 23 of 38 
+ 
+ 
+ 
+Figure 5: Comparison of measurement errors for (a) all three methods over the entire period, (b) raw vs. offline correction, (c) 
+raw signal vs. online correction. Each point on the graphs is a day where composite samples were taken. Notice that (a) displays 
+the relative error, while (b,c) shows the absolute relative error.  
+ 
+3.2. Software sensor performance 
+3.2.1. Distribution of daily profiles 
+Figure 6a,b shows the daily pattern of NH4
++ loads for all 130 dry weekdays in the measurement 
+campaign, with line colours corresponding to the calibration periods shown in Figure 3b. Figure 6a 
+shows the daily load based on the raw data, where the classical daily wastewater profile is recognisable. 
+Figure 6b provides the same information, but based on the offline corrected dataset. The thick black 
+lines on the two graphs show the 10th, 50th, and 90th percentiles for all analysed days. The 50th percentile 
+(i.e. the median) shows the measured load on a typical day, while the profiles outside the 10% and 90% 
+bounds only represent 13 days (i.e. 10% of the profiles). A comparison between Figure 6a and 6b clearly 
+shows that the day-to-day variability of daily loads is significantly reduced. For practical modelling 
+purposes, this reduction will reduce the uncertainty in the estimation of daily loads. In fact, using the 
+raw data would result in a large overestimation of both intra- and inter-daily variations. 
+ 
+         
+         
+ 
+Page 24 of 38 
+ 
+Figure 6c,d show the results of parameter estimations for the data-driven software sensor (section 2.6) 
+in terms of full parameter distributions, while Table 1 summarize the median estimates and the range 
+between the 10% and 90% quantiles. Parameters are estimated for each individual dry weekday in the 
+campaign and summarised by their empirical distributions. By comparing the two graphs, it is seen that 
+there is a large difference in the spread of the µ-parameter between the raw and corrected data (Table 
+1 shows more than 50% reduction in the 10%-90% interquantile range). Since this parameter represents 
+the daily NH4
++ mean, this is a direct consequence of the tightening in the ranges shown in Figure 6b. 
+Table 1 also shows that the median of the parameter distributions are similar for the raw and corrected 
+datasets, which indicates that there were no particular biases in the parameters estimated on the raw 
+data. However, there are large reductions (25.8-34.5%) in the spread for three of the four shape 
+parameters. The parameter distributions shown in Figure 6d can be used in stochastic models with the 
+purpose of forecasting and to be used in e.g. Model Predictive Control (Stentoft et al., 2019). 
+ 
+ 
+ 
+Figure 6: Daily profiles of NH4
++ loads for 130 dry weekdays estimated with raw and corrected data, respectively (a, b). The colour 
+of each line indicates which sensor calibration period from Figure 3 a given day belongs to. The thick black lines indicate the 10th, 
+         
+         
+ 
+Page 25 of 38 
+ 
+50th, and 90th quantiles of the 130 daily profiles. Distributions of estimated parameter values in the software sensor for the raw 
+and corrected signal, respectively (c, d). 
+Table 1: Median estimates and interquantile range (difference between 10% and 90% values) for the parameters of the software 
+sensor. 
+ Median value  Interquartile range  
+Parameter Raw 
+[kg/hr] 
+Corrected 
+[kg/hr] 
+Difference 
+[%] 
+Raw 
+[kg/hr] 
+Corrected 
+[kg/hr] 
+Difference 
+[%] 
+µ 124.6 112.7 -9.5 77.3 34.4 -55.5 
+α1 -32.3 -31.3 -3.0 45.3 29.6 -34.5 
+α2 -15.6 -15.7 0.7 23.8 17.7 -25.8 
+β1 -5.88 -5.58 -5.0 32.8 32.1 -2.5 
+β2 17.4 17.6 1.6 26.2 19.1 -27.1 
+ 
+3.2.2. Effect on performance 
+Figure 7 shows a qualitative example of the difference between training the software sensor on data 
+from the raw ISE signal and the corrected signal. The figure also shows how the sensor is affected by the 
+amount of data it has been trained on (2 weeks versus 16 weeks). When Figure 7c,e is compared to 
+Figure 7d,f it is clear that training the software sensor on the corrected dataset improves both the 
+median estimate and the prediction bounds. With the raw data, the median estimate can be seriously 
+biased at just two weeks of training (c versus d), while the prediction bounds are much wider when the 
+sensor is trained on a longer period (e versus f). Although the median estimate is much more robust 
+with the corrected data, there is still some structural issues at just two weeks of training as the daily 
+peak concentration is estimated to arrive slightly later than in the observations (d). There is also a sharp 
+second peak each day in the median estimate, which is not present in the observation. Training on 16 
+weeks leads to a median estimate that almost perfectly tracks the observations during dry weather (d). 
+The 80% confidence interval is also larger for the 16-week case, which leads to a better coverage. 
+The software sensor has not been trained on wet weather and all of the software sensors (c,d,e,f) show 
+poor performance during the rain event on November 29-30. The observations show a slower onset and 
+recovery of the stormwater dilution effect than the model, a consequence of the model structural 
+         
+         
+ 
+Page 26 of 38 
+ 
+limitations of these simple dilution-based models. To obtain better software sensing during wet weather 
+situations, it will be necessary to implement additional elements in the model structure. Such additions 
+can e.g. be a delayed onset of the dilution effect, a gradual restoration of concentrations at the end of 
+an event, or a first flush effect (see Langeveld et al. (2017) for how to implement these additions). 
+ 
+ 
+Figure 7: Illustration of software sensor performance when trained on the raw ISE data (left column) and the corrected data 
+(right column). Observed flow (a,b), software sensor trained on two weeks (c,d), and software sensor trained on 16 weeks (e,f). 
+The red dots are the observed NH4
++ concentrations, the black line is the median software sensor estimate, and the coloured 
+envelope is the 80% prediction bounds. 
+ 
+A further investigation of how the performance of the software sensor depends on the amount of data 
+used for training is shown in Figure 8 (only shown for the corrected dataset). Figure 8a shows that the 
+MARE of the ensemble median drastically improves with even small increases of the training time 
+window. Already at eight weeks of training, the vast majority of the software sensors perform close to 
+an ensemble that is trained on all available days (red line), with little visible difference when using a 16-
+         
+         
+ 
+Page 27 of 38 
+ 
+week window. Figure 8b,c shows that a larger training window is required to obtain good performance 
+of the 80% confidence interval of the ensemble. While the ensemble median is quite stable already at 
+eight weeks, the coverage can still be up to 25% lower than what is obtained by training on the full 
+period. With two or four weeks of training, there is quite substantial variation in the performance 
+depending on the exact period that is chosen for training within the study period.  
+ 
+ 
+Figure 8: Performance of the software sensor as a function of the number of weeks that it is trained on. MARE of the ensemble 
+median (a). Coverage (b) and IS (c) of the 80% confidence interval. The red line indicates the performance of a software sensor 
+that has been trained on all available days. For a and c, lower values mean a better score, while the opposite is the case for b. 
+ 
+3.3. Implications for maintenance and operation of ISE sensors 
+Considering that the maintenance procedure was carried out by skilled operators of the largest Danish 
+wastewater utility and with recurring consultations with the sensor manufacturer, we consider the data 
+collected in this study as a good example of what a diligent operator can practically achieve in everyday 
+WRRF operations. Through our conversations with the WRRF maintenance staff, it is clear that the 
+erratic nature of the raw signal, with unrealistic jumps and low accuracy, seriously degrade trust in the 
+value of ISE sensors. For recalibration of A-ISE sensors in raw wastewater, SOPs that rely solely on single, 
+in-stream grab samples near the sensor are insufficient and should thus be abandoned. Our results also 
+confirm the conclusion from Cecconi et al. (2019) that overzealous maintenance can potentially become 
+         
+         
+ 
+Page 28 of 38 
+ 
+an issue for data quality, at least when it is based on single grab sample-based recalibration. Cecconi et 
+al. (2019) concluded that good sensor recalibration can be achieved by comparing sensor readings 
+against a grab sample from a bucket outside of the wastewater stream. However, this is considered 
+impractical by BIOFOS operators, as it increases the maintenance efforts beyond what it is deemed 
+reasonable for ISE sensors. Our correction method based on 24-hour composite samples removes these 
+additional maintenance efforts, since the recalibration utilizes already existing measurements. In 
+addition, the automatic procedure removes the risk related to human errors (e.g. “fat finger” errors 
+when operating in the field). Thanks to the proposed automatic correction, the only maintenance that is 
+necessary within the six-month lifetime of the sensor cartridge is physical cleaning of the sensor head. 
+Based on our experience with operating a sensor behind the primary clarifier, we suggest that the 
+sensor cleaning is kept at current frequency (e.g. weekly), while manual, in-field recalibration is done 
+more sparingly and more thoroughly. Manual recalibration could reasonably be done with a two-point 
+calibration that updates both offset and sensitivity parameters (e.g. monthly, or every other month). 
+ 
+Furthermore, using a 24hr composite sample follows the suggestion from Cecconi et al. (2019) to 
+perform sensor recalibration against multiple grab samples taken over the course of a day instead of a 
+single grab sample. Our results show how recalibration against composite samples improved the quality 
+of the signal by reducing the uncertainty linked to the representativity of a single grab sample. It is 
+worth noting that multiple single grab samples could be used to recalibrate both offset and sensitivity in 
+eq. 2, while the mixed composite only allows for recalibrating one of the parameters. 
+ 
+Currently, the raw potentiometric signal (E) is not available to the operator, and the only available 
+sensor output is the processed NH4
++ signal. The raw potentiometric data, the parameters of the 
+calibration curve, the selectivity coefficients for interfering ions, and other relevant settings are 
+         
+         
+ 
+Page 29 of 38 
+ 
+considered intellectual property of the sensor manufacturer. If this information were available to the 
+user, it would make it more straightforward to apply stochastic parameters that accounts for the 
+uncertainty in various parts of the E-NH4
++ transformation. Such a setup could provide uncertainty 
+estimates on the ISE data that can be utilized for stochastic control routines (Stentoft et al., 2019). 
+ 
+3.4. Limitations, uncertainties, and future outlook 
+An essential assumption of the proposed method is the availability and the representativeness of the 
+24-hour composite samples. In a Danish context, these composite samples are required by law and the 
+sampling protocols are defined by the Danish EPA. However, the method is applicable at any location 
+where composite samples (also with sampling durations different from the 24 hours in this study) are 
+routinely collected close to a sensor, and thereby making them available as reference values for the 
+sensor correction.  
+ 
+Clearly, the performance of the correction method is sensitive to the sampling frequency of the 
+reference samples. To ensure good performance, a minimum sampling frequency would be dependent 
+on e.g. the rate of signal drift (which is also dependent on the specific brand of the sensor), and the 
+composition of monitored wastewater. In this study, composite samples were available almost at a 
+weekly frequency. Future research should investigate the effect of different sampling frequency on the 
+performance of the correction method. 
+ 
+Since the composite samples are collected by following detailed protocols at Danish WRRFs, and they 
+are used for legal requirements, their uncertainty is seldom questioned. However, as for any sampling 
+operation, they are subject to equipment failures, sampling and lab uncertainties (Ort et al., 2010). 
+Some of these uncertainties can be quantified, and they might be considered by a data correction setup 
+         
+         
+ 
+Page 30 of 38 
+ 
+similar to ours (based on e.g. Kalman Filtering). Nonetheless, data quality control of the composite 
+samples is a crucial step in the procedure. Furthermore, some locations (e.g. plant effluent) might 
+significantly challenge the ISE sensors (due to e.g. too low concentrations, outside the ranges where 
+there is a linear relationship between the measured electrical potential and the NH4
++ concentration). 
+This would clearly limit the accuracy and precision of ISE sensors, thereby hindering the recalibration 
+procedure. 
+ 
+Whenever the auto-sampler and the ISE sensor are placed at different locations, a mathematical model 
+is needed to align the two datasets (i.e. to estimate an equivalent of the composite samples at the 
+sensor location or vice versa). Such a model will inherently have several uncertainties, which will be 
+propagated to the correction method. 
+ 
+The proposed correction is essentially a one-point calibration of the offset parameter against a 
+composite sample, and a two-point calibration of both offset and slope was not considered. 
+Theoretically, the slope of the calibration curve varies with temperature and can be affected by 
+membrane clogging. Also, offset and sensitivity might be affected by other components’ ageing issues, 
+while the importance of the temporal variability in the concentrations of interfering ions could also play 
+a role (although a real-time K+ compensation is performed by the sensor). Ohmura et al. (2019) showed 
+that the sensitivity parameter was quite stable over time for pH-ISE sensors used in wastewater, 
+suggesting that a one-point recalibration could be sufficient. However, this result was obtained in a 
+controlled laboratory setup and with a pH sensor, and a different behaviour could be hypothesized in a 
+field application at a WRRF. Because the proposed method only updates the offset parameter and only 
+compares estimated daily averages from the ISE sensor and a reference sample, it is limited in its ability 
+to ensure that intra-daily dynamics are correct. To check the sensor performance in representing these 
+         
+         
+ 
+Page 31 of 38 
+ 
+dynamics, a two- or multipoint recalibration with comparison against sub-daily estimates would be 
+needed. Since these data were not available in this study, a multi-point calibration was not investigated. 
+ 
+Further analysis should thus investigate the optimal frequency of sensor cleaning and composite-based 
+recalibration, as well as the benefits of two- or multi-point recalibration. This would require the analysis 
+of a fractionated, sub-daily reference sample, but since the infrastructure is already in place, this would 
+just require a modification of the current monitoring protocols defined by the authorities.  
+ 
+The performance of any software sensor is dependent on the representativity of the training dataset. 
+The software sensor investigated in this study assumes stationarity of the NH4
++ loads generated in the 
+catchment. Therefore, its performance might worsen in case of large intra-daily variations (e.g. weekend 
+and tourism effects) that were not observed during the measurement campaigns. The software sensor 
+evaluation suggests that a relatively short measurement campaign of 8-16 weeks is long enough to train 
+a good software sensor for this case study. 8 weeks of training provided a good median estimate of the 
+NH4
++ concentration, while 16 weeks were required for a good estimation of the uncertainty bounds. This 
+finding suggests that it might be possible to operate a sensor for a limited amount of time and still 
+obtain good estimates of NH4
++ for other periods. This finding is especially interesting for applications in 
+more harsh measurement environments such as the plant inlet or upstream in the sewer system, where 
+it is difficult to operate a sensor for long periods of time (e.g. for predicting concentrations upstream of 
+combined sewer overflows). Future research will investigate how well this finding holds up in these 
+environments. Also, the combination of this method with automatic online estimation of measurement 
+uncertainty, as in the approach investigated by Kahiluoto et al. (2019) and Näykki et al. (2015), could 
+increase the value of the reconstructed dataset. 
+ 
+         
+         
+ 
+Page 32 of 38 
+ 
+4. Conclusion 
+This study demonstrated how the reliability of an online water quality sensor (here an A-ISE for 
+measuring NH4
++ concentrations) can be improved when the raw signal, affected by several sources of 
+interference, is combined with information from traditional sampling methods (here daily volume-
+proportional composite samples).  
+ 
+The proposed correction method reconstructed a more reliable signal starting from a corrupted data set 
+and by using already existing information. The suggested approach removed the slow drifting of the 
+sensor signal over time, as well as the effect of flawed manual calibrations. The analysis in this study 
+showed that the suggested correction methodology improved the ISE estimate of NH4
++ concentrations 
+for 87% of the days where reference samples were available. 
+ 
+The time series of corrected NH4
++ values contained small inter-daily variations and it was possible to fit a 
+data-driven software sensor with reasonably tight parameter distributions. This makes the data more 
+suitable for stochastic generation of inlet data for WWTP modelling as well as stochastic forecasting and 
+control. 
+ 
+A quick investigation showed that there was good potential for setting up an ensemble-based software 
+sensor that can fill gaps in periods where there is no data. The results showed that training a software 
+sensor on the corrected rather than the raw data drastically improved both median estimates and 
+prediction bounds. Training a software sensor on just eight weeks of data led to a good median estimate 
+of NH4
++ concentrations. 16 weeks of data were required for training in order to obtain good 
+performance of the 80% confidence interval of the software sensor. 
+ 
+         
+         
+ 
+Page 33 of 38 
+ 
+Our results showed how existing SOPs for ISE sensors in raw wastewater should be modified and 
+improved. It was found that even in a fairly protected measurement location (after the primary clarifier), 
+and with qualified operators following a maintenance procedure in close collaboration with the sensor 
+manufacturer, single grab sample adjustments were not sufficient for maintaining good signal quality. 
+The resulting signal was very erratic during periods with frequent sensor maintenance and recalibration. 
+ 
+Our results support the hypothesis that the use of multiple grab sample for each sensor recalibration 
+could provide more robust recalibration. Indeed, using composite samples for sensor data correction led 
+to an improved signal. Based on the experience from this study, it is suggested that cleaning of the 
+sensor head is performed frequently, e.g. once a week, while manual, in-field sensor recalibration is 
+done more sparingly, e.g. once a month or every other month. In between those recalibration events, a 
+reliable ISE signal can be obtained by using the proposed automatic correction procedure.  
+ 
+The proposed methodology can be applied to improve the reliability of online sensors for WRRF 
+operations without requiring additional sampling efforts from the plant operators. It can also be applied 
+to retrieve information from corrupted data of historical measurements campaigns. Overall, it will thus 
+provide new possibilities for exploiting existing sensor data for better and more effective WRRF 
+operations. 
+Declaration of interests 
+ 
+☒ The authors declare that they have no known competing financial interests or personal relationships 
+that could have appeared to influence the work reported in this paper. 
+ 
+         
+         
+ 
+Page 34 of 38 
+ 
+5. Acknowledgements 
+This research was financially supported by the Innovation Fund Denmark through the Water Smart Cities 
+(WSC) project [grant number 5157-00009B]. The authors would like to thank Peter Steen Mikkelsen for 
+his contributions to developing the design of the study and for valuable comments on an early draft of 
+the manuscript. 
+6. References 
+Alferes, J., Lamaire-Chad, C., Chhetri, R.K., Thirsing, C., Sharma, A.K., Mikkelsen, P.S., Vanrolleghem, P.A., 
+2014. Advanced monitoring of wastewater quality: data collection and data quality assurance, in: 
+Proceedings of the 13th International Conference on Urban Drainage, Kuching, Sarawak, Malaysia, 
+7-12 September 2014. Kuching, Sarawak, Malaysia. 
+Alferes, J., Tik, S., Copp, J., Vanrolleghem, P.A., 2013. Advanced monitoring of water systems using in situ 
+measurement stations: data validation and fault detection. Water Sci. Technol. 68, 1022–1030. 
+https://doi.org/10.2166/wst.2013.302 
+Andalib, M., Taher, E., Donohue, J., Ledwell, S., Andersen, M.H., Sangrey, K., 2018. Correlation between 
+nitrous oxide (N2O) emission and carbon to nitrogen (COD/N) ratio in denitrification process: A 
+mitigation strategy to decrease greenhouse gas emission and cost of operation. Water Sci. Technol. 
+77, 426–438. https://doi.org/10.2166/wst.2017.558 
+Bechmann, H., Nielsen, M.K., Madsen, H., Kjølstad Poulsen, N., 1999. Grey-box modelling of pollutant 
+loads from a sewer system. Urban Water 1, 71–78. https://doi.org/10.1016/S1462-0758(99)00007-
+2 
+Béltran, S., Irizar, I., Ayesa, E., 2015. Instrumentation, monitoring and real-time control strategies for 
+efficient sewage treatment plant operation, in: Stamatelatou, K., Tsagarakis, K.P. (Eds.), Sewage 
+Treatment Plants: Economic Evaluation of Innovative Technologies for Energy Efficiency. IWA 
+         
+         
+ 
+Page 35 of 38 
+ 
+Publishing. 
+Cecconi, F., Reifsnyder, S., Ito, Y., Jimenez, M., Sobhani, R., Rosso, D., 2019. ISE-ammonium sensors in 
+WRRFs: Field assessment of their influencing factors. Environ. Sci. Water Res. Technol. 5, 737–746. 
+https://doi.org/10.1039/c8ew00763b 
+Cierkens, K., Plano, S., Benedetti, L., Weijers, S., De Jonge, J., Nopens, I., 2012. Impact of influent data 
+frequency and model structure on the quality of WWTP model calibration and uncertainty. Water 
+Sci. Technol. 65, 233–242. https://doi.org/10.2166/wst.2012.081 
+De Mulder, C., Flameling, T., Weijers, S., Amerlinck, Y., Nopens, I., 2018. An open software package for 
+data reconciliation and gap filling in preparation of Water and Resource Recovery Facility 
+Modeling. Environ. Model. Softw. https://doi.org/10.1016/j.envsoft.2018.05.015 
+Ekström, S., Vangsgaard, A.K., Lemaire, R., Valverde-Pérez, B., Benedetti, L., Jensen, M.M., Plósz, B.G., 
+Thornberg, D., Smets, B.F., 2017. Simple Control Strategy for Mitigating N2O Emissions in Phase 
+Isolated Full-Scale WWTPs., in: IWA-ICA, 12th IWA Specialist Conference on Instrumentation, 
+Automation and Control. 
+Gernaey, K., Bogaert, H., Vanrolleghem, P.A., Van Vooren, L., Verstraete, W., 1998. Sensors for nitrogen 
+removal monitoring in wastewater treatment, in: Environmental Biomonitoring: The Biotechnology 
+Ecotoxicology Interface. pp. 180–207. 
+Haimi, H., Mulas, M., Corona, F., Marsili-Libelli, S., Lindell, P., Heinonen, M., Vahala, R., 2016. Adaptive 
+data-derived anomaly detection in the activated sludge process of a large-scale wastewater 
+treatment plant. Eng. Appl. Artif. Intell. 52, 65–80. https://doi.org/10.1016/j.engappai.2016.02.003 
+Isaacs, S., Thornberg, D., 1998. Rule based control of a periodic activated sludge process. Water Sci. 
+Technol. 38, 281–289. https://doi.org/https://doi.org/10.2166/wst.1998.0222 
+Kahiluoto, J., Hirvonen, J., Näykki, T., 2019. Automatic real-time uncertainty estimation for online 
+measurements: a case study on water turbidity. Environ. Monit. Assess. 191, 259. 
+         
+         
+ 
+Page 36 of 38 
+ 
+https://doi.org/10.1007/s10661-019-7374-7 
+Langeveld, J., Van Daal, P., Schilperoort, R., Nopens, I., Flameling, T., Weijers, S., 2017. Empirical sewer 
+water quality model for generating influent data for WWTP modelling. Water (Switzerland) 9, 491. 
+doi:10.3390/w9070492 
+Leigh, C., Alsibai, O., Hyndman, R.J., Kandanaarachchi, S., King, O.C., McGree, J.M., Neelamraju, C., 
+Strauss, J., Talagala, P.D., Turner, R.D.R., Mengersen, K., Peterson, E.E., 2019. A framework for 
+automated anomaly detection in high frequency water-quality data from in situ sensors. Sci. Total 
+Environ. 664, 885–898. https://doi.org/10.1016/j.scitotenv.2019.02.085 
+Martin, C., Vanrolleghem, P.A., 2014. Analysing, completing, and generating influent data for WWTP 
+modelling: A critical review. Environ. Model. Softw. 60, 188–201. 
+https://doi.org/10.1016/j.envsoft.2014.05.008 
+Näykki, T., Virtanen, A., Kaukonen, L., Magnusson, B., Väisänen, T., Leito, I., 2015. Application of the 
+Nordtest method for “real-time” uncertainty estimation of on-line field measurement. Environ. 
+Monit. Assess. 187, 630. https://doi.org/10.1007/s10661-015-4856-0 
+Newhart, K.B., Holloway, R.W., Hering, A.S., Cath, T.Y., 2019. Data-driven performance analyses of 
+wastewater treatment plants: A review. Water Res. 157, 498–513. 
+https://doi.org/10.1016/j.watres.2019.03.030 
+Ohmura, K., Thürlimann, C.M., Kipf, M., Carbajal, J.P., Villez, K., 2019. Characterizing long-term wear and 
+tear of ion-selective pH sensors. Water Sci. Technol. 3, 541–550. 
+https://doi.org/10.2166/wst.2019.301 
+Olsson, G., Carlsson, B., Comas, J., Copp, J., Gernaey, K. V, Ingildsen, P., Jeppsson, U., Kim, C., Rieger, L., 
+Rodríguez-Roda, I., Steyer, J.-P., Takács, I., Vanrolleghem, P.A., Vargas, A., Yuan, Z., Åmand, L., 
+2014. Instrumentation, control and automation in wastewater--from London 1973 to Narbonne 
+2013. Water Sci. Technol. 69, 1373–85. https://doi.org/10.2166/wst.2014.057 
+         
+         
+ 
+Page 37 of 38 
+ 
+Ort, C., Lawrence, M.G., Reungoat, J., Mueller, J.F., 2010. Sampling for PPCPs in wastewater systems: 
+Comparison of different sampling modes and optimization strategies. Environ. Sci. Technol. 44, 
+6289–6296. https://doi.org/10.1021/es100778d 
+Papias, S., Masson, M., Pelletant, S., Prost-Boucle, S., Boutin, C., 2018. In situ continuous monitoring of 
+nitrogen with ion-selective electrodes in a constructed wetland receiving treated wastewater: An 
+operating protocol to obtain reliable data. Water Sci. Technol. 77, 1706–1713. 
+https://doi.org/10.2166/wst.2018.052 
+R Core Team, 2019. R: A language and environment for statistical computing. R Foundation for Statistical 
+Computing, Vienna, Austria. URL https://www.R-project.org 
+Rieger, L., Siegrist, H., Winkler, S., Saracevic, E., Votava, R., Nadler, J., 2002. In-situ measurement of 
+ammonium and nitrate in the activated sludge process. Water Sci. Technol. 45, 93–100. 
+https://doi.org/10.2166/wst.2002.0560 
+Rieger, L., Takács, I., Villez, K., Siegrist, H., Lessard, P., Vanrolleghem, P.A., Comeau, Y., 2010. Data 
+Reconciliation for Wastewater Treatment Plant Simulation Studies-Planning for High-Quality Data 
+and Typical Sources of Errors. Water Environ. Res. 
+https://doi.org/10.2175/106143009x12529484815511 
+Rieger, L., Thomann, M., Gujer, W., Siegrist, H., 2005. Quantifying the uncertainty of on-line sensors at 
+WWTPs during field operation. Water Res. 39, 5162–5174. 
+https://doi.org/10.1016/j.watres.2005.09.040 
+Schneider, M.Y., Carbajal, J.P., Furrer, V., Sterkele, B., Maurer, M., Villez, K., 2019. Beyond signal quality: 
+The value of unmaintained pH, dissolved oxygen, and oxidation-reduction potential sensors for 
+remote performance monitoring of on-site sequencing batch reactors. Water Res. 161, 639–651. 
+https://doi.org/10.1016/j.watres.2019.06.007 
+Stentoft, P.A., Munk-Nielsen, T., Vezzaro, L., Madsen, H., Mikkelsen, P.S., Møller, J.K., 2019. Towards 
+         
+         
+ 
+Page 38 of 38 
+ 
+model predictive control: Online predictions of ammonium and nitrate removal by using a 
+stochastic ASM. Water Sci. Technol. 79, 51–62. https://doi.org/10.2166/wst.2018.527 
+Sweeney, M.W., Kabouris, J.C., 2018. Modeling, Instrumentation, Automation, and Optimization of 
+Water Resource Recovery Facilities. Water Environ. Res. 90, 1007–1020. 
+https://doi.org/10.2175/106143018X15289915807119 
+Thomann, M., Rieger, L., Frommhold, S., Siegrist, H., Gujer, W., 2002. An efficient monitoring concept 
+with control charts for on-line sensors. Water Sci. Technol. 46, 107–116. 
+https://doi.org/10.2166/wst.2002.0563 
+Vezzaro, L., Pedersen, J.W., Larsen, L.H., Thirsing, C., Duus, L.B., Mikkelsen, P.S., 2020. Evaluating the 
+performance of a simple phenomenological model for online forecasting of ammonium 
+concentrations at WWTP inlets. Water Sci. Technol. 81, 109–120. 
+https://doi.org/10.2166/wst.2020.085 
+Vrečko, D., Hvala, N., Stražar, M., 2011. The application of model predictive control of ammonia nitrogen 
+in an activated sludge process. Water Sci. Technol. 64, 1115–1121. 
+https://doi.org/10.2166/wst.2011.477 
+Winkler, S., Rieger, L., Saracevic, E., Pressl, A., Gruber, G., 2004. Application of ion-sensitive sensors in 
+water quality monitoring. Water Sci. Technol. 50, 105–114. https://doi.org/10.2166/wst.2004.0678 
+Yuan, Z., Olsson, G., Cardell-Oliver, R., van Schagen, K., Marchi, A., Deletic, A., Urich, C., Rauch, W., Liu, 
+Y., Jiang, G., 2019. Sweating the assets – The role of instrumentation, control and automation in 
+urban water systems. Water Res. 155, 381–402. https://doi.org/10.1016/j.watres.2019.02.034 
+ 
+         
+         

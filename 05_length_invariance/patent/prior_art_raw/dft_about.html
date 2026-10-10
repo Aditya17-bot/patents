@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template">
+
+<head>
+    <meta charset="utf-8">
+    <title>About - Road traffic statistics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#1d70b8">
+    <link rel="icon" sizes="48x48" href="/assets/images/favicon.ico">
+    <link rel="icon" sizes="any" href="/assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="mask-icon" href="/assets/images/govuk-icon-mask.svg" color="blue">
+    <link rel="apple-touch-icon" href="/assets/images/govuk-icon-180.png">
+    <link rel="manifest" href="/assets/manifest.json">
+    <meta property="og:image" content="/assets/images/govuk-opengraph-image.png">
+    <link rel="preload" as="style" href="/build/assets/contents-TvYj8OKT.css" /><link rel="preload" as="style" href="/build/assets/govuk-Cv35cxhg.css" /><link rel="stylesheet" href="/build/assets/contents-TvYj8OKT.css" /><link rel="stylesheet" href="/build/assets/govuk-Cv35cxhg.css" />    <style nonce="yu0gmld4OoEiw31AEhizOrsBFq2DE1ss"></style>
+</head>
+
+<body class="govuk-template__body">
+    <script nonce="yu0gmld4OoEiw31AEhizOrsBFq2DE1ss">
+        document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');
+    </script>
+    <script nonce="yu0gmld4OoEiw31AEhizOrsBFq2DE1ss">
+        function setCookie(name, value, expiryDays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (expiryDays * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + d.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/;secure";
+        }
+
+        function getCookie(name) {
+            let nameEquals = name + "=";
+            for (let keyValueString of decodeURIComponent(document.cookie).split(';')) {
+                while (keyValueString.charAt(0) == ' ') {
+                    keyValueString = keyValueString.substring(1);
+                }
+                if (keyValueString.indexOf(nameEquals) == 0) {
+                    return keyValueString.substring(nameEquals.length, keyValueString.length);
+                }
+            }
+        }
+        var analyticsStorageGranted = false;
+        try {
+            analyticsStorageGranted = JSON.parse(getCookie('cookies_policy')).usage === true;
+        } catch (e) {
+
+        }
+        var analyticsStorage = analyticsStorageGranted === true ? 'granted' : 'denied';
+        var hasSentPageView = analyticsStorageGranted === true;
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script nonce="yu0gmld4OoEiw31AEhizOrsBFq2DE1ss" async src="https://www.googletagmanager.com/gtag/js?id=G-CY9F880N9N"></script>
+    <script nonce="yu0gmld4OoEiw31AEhizOrsBFq2DE1ss">
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': analyticsStorage
+        });
+        gtag('js', new Date());
+        gtag('config', 'G-CY9F880N9N', {
+            'cookie_domain': '.' + window.location.hostname,
+            'send_page_view': analyticsStorageGranted,
+            'allow_google_signals': false,
+            'allow_ad_personalization_signals': false,
+            'restricted_data_processing': true
+        });
+
+        function makeCookieDecision(decisionVerbPastTense) {
+            const cookiesPolicyString = (
+                '{"essential":true,"settings":false,"usage":' +
+                (decisionVerbPastTense === 'accepted' ? true : false) +
+                ',"campaigns":false}'
+            );
+            setCookie('cookies_preferences_set', 'true', 365);
+            setCookie('cookies_policy', cookiesPolicyString, 365);
+            gtag('consent', 'update', {
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'ad_storage': 'denied',
+                'analytics_storage': decisionVerbPastTense === 'accepted' ? 'granted' : 'denied'
+            });
+            if (!hasSentPageView && decisionVerbPastTense === 'accepted') {
+                gtag('event', 'page_view');
+                hasSentPageView = true;
+            }
+        }
+    </script>
+
+        <div id="cookie-banner" class="govuk-cookie-banner hide-when-js-disabled" data-nosnippet role="region" aria-label="Cookies on Road traffic statistics">
+    <div id="decided-additional-cookies-banner" class="govuk-cookie-banner__message govuk-width-container govuk-!-display-none">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <div class="govuk-cookie-banner__content">
+                    <p class="govuk-body">You’ve <span id="decision-verb-past-tense"></span> additional cookies.
+                        You can <a class="govuk-link" href="/cookies">change your cookie settings</a> at any time.</p>
+                </div>
+            </div>
+        </div>
+        <div class="govuk-button-group">
+            <button id="hide-cookie-message" value="yes" type="submit" name="cookies[hide]" class="govuk-button" data-module="govuk-button">
+                Hide cookie message
+            </button>
+        </div>
+    </div>
+    <div id="cookies-permission-request-banner" class="govuk-cookie-banner__message govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h2 class="govuk-cookie-banner__heading govuk-heading-m">
+                    Cookies on Road traffic statistics
+                </h2>
+                <div class="govuk-cookie-banner__content">
+                    <p class="govuk-body">We use some essential cookies to make this service work.</p>
+                    <p class="govuk-body">We’d like to set additional cookies so we can understand how people use the service and make improvements.</p>
+                </div>
+            </div>
+        </div>
+        <div class="govuk-button-group">
+            <button id="accept-additional-cookies" value="yes" type="submit" name="cookies[additional]" class="govuk-button" data-module="govuk-button">
+                Accept additional cookies
+            </button>
+            <button id="reject-additional-cookies" value="no" type="submit" name="cookies[additional]" class="govuk-button" data-module="govuk-button">
+                Reject additional cookies
+            </button>
+            <a class="govuk-link" href="/cookies">View cookies</a>
+            <script nonce="yu0gmld4OoEiw31AEhizOrsBFq2DE1ss">
+                function makeCookieDecisionFromBanner(decisionVerbPastTense) {
+                    makeCookieDecision(decisionVerbPastTense);
+                    document.getElementById('decision-verb-past-tense').innerText = decisionVerbPastTense;
+                    document.getElementById('decided-additional-cookies-banner').classList.remove('govuk-!-display-none');
+                    document.getElementById('cookies-permission-request-banner').classList.add('govuk-!-display-none');
+                }
+
+                document.getElementById('accept-additional-cookies').addEventListener(
+                    'click',
+                    e => {
+                        e.preventDefault();
+                        makeCookieDecisionFromBanner('accepted');
+                    }
+                );
+                document.getElementById('reject-additional-cookies').addEventListener(
+                    'click',
+                    e => {
+                        e.preventDefault();
+                        makeCookieDecisionFromBanner('rejected');
+                    }
+                );
+                document.getElementById('hide-cookie-message').addEventListener(
+                    'click',
+                    e => {
+                        document.getElementById('cookie-banner').classList.add('govuk-!-display-none');
+                    }
+                );
+            </script>
+        </div>
+    </div>
+</div>
+<script nonce="yu0gmld4OoEiw31AEhizOrsBFq2DE1ss">
+    if (getCookie('cookies_preferences_set') === 'true') {
+        document.getElementById("cookie-banner").classList.add("govuk-!-display-none");
+    };
+    document.getElementById("cookie-banner").classList.remove("hide-when-js-disabled");
+</script>
+    
+    <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+    <header class="govuk-template__header">
+        <div class="govuk-header">
+            <div class="govuk-header__container govuk-width-container">
+                <div class="govuk-header__logo">
+                    <a href="//gov.uk" class="govuk-header__homepage-link">
+                        <svg
+                            focusable="false"
+                            role="img"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 324 60"
+                            height="30"
+                            width="162"
+                            fill="currentcolor" class="govuk-header__logotype" aria-label="GOV.UK">
+                            <title>GOV.UK</title>
+                            <g>
+                                <circle cx="20" cy="17.6" r="3.7" />
+                                <circle cx="10.2" cy="23.5" r="3.7" />
+                                <circle cx="3.7" cy="33.2" r="3.7" />
+                                <circle cx="31.7" cy="30.6" r="3.7" />
+                                <circle cx="43.3" cy="17.6" r="3.7" />
+                                <circle cx="53.2" cy="23.5" r="3.7" />
+                                <circle cx="59.7" cy="33.2" r="3.7" />
+                                <circle cx="31.7" cy="30.6" r="3.7" />
+                                <path d="M33.1,9.8c.2-.1.3-.3.5-.5l4.6,2.4v-6.8l-4.6,1.5c-.1-.2-.3-.3-.5-.5l1.9-5.9h-6.7l1.9,5.9c-.2.1-.3.3-.5.5l-4.6-1.5v6.8l4.6-2.4c.1.2.3.3.5.5l-2.6,8c-.9,2.8,1.2,5.7,4.1,5.7h0c3,0,5.1-2.9,4.1-5.7l-2.6-8ZM37,37.9s-3.4,3.8-4.1,6.1c2.2,0,4.2-.5,6.4-2.8l-.7,8.5c-2-2.8-4.4-4.1-5.7-3.8.1,3.1.5,6.7,5.8,7.2,3.7.3,6.7-1.5,7-3.8.4-2.6-2-4.3-3.7-1.6-1.4-4.5,2.4-6.1,4.9-3.2-1.9-4.5-1.8-7.7,2.4-10.9,3,4,2.6,7.3-1.2,11.1,2.4-1.3,6.2,0,4,4.6-1.2-2.8-3.7-2.2-4.2.2-.3,1.7.7,3.7,3,4.2,1.9.3,4.7-.9,7-5.9-1.3,0-2.4.7-3.9,1.7l2.4-8c.6,2.3,1.4,3.7,2.2,4.5.6-1.6.5-2.8,0-5.3l5,1.8c-2.6,3.6-5.2,8.7-7.3,17.5-7.4-1.1-15.7-1.7-24.5-1.7h0c-8.8,0-17.1.6-24.5,1.7-2.1-8.9-4.7-13.9-7.3-17.5l5-1.8c-.5,2.5-.6,3.7,0,5.3.8-.8,1.6-2.3,2.2-4.5l2.4,8c-1.5-1-2.6-1.7-3.9-1.7,2.3,5,5.2,6.2,7,5.9,2.3-.4,3.3-2.4,3-4.2-.5-2.4-3-3.1-4.2-.2-2.2-4.6,1.6-6,4-4.6-3.7-3.7-4.2-7.1-1.2-11.1,4.2,3.2,4.3,6.4,2.4,10.9,2.5-2.8,6.3-1.3,4.9,3.2-1.8-2.7-4.1-1-3.7,1.6.3,2.3,3.3,4.1,7,3.8,5.4-.5,5.7-4.2,5.8-7.2-1.3-.2-3.7,1-5.7,3.8l-.7-8.5c2.2,2.3,4.2,2.7,6.4,2.8-.7-2.3-4.1-6.1-4.1-6.1h10.6,0Z" />
+                            </g>
+                            <circle class="govuk-logo-dot" cx="226" cy="36" r="7.3" />
+                            <path d="M93.94 41.25c.4 1.81 1.2 3.21 2.21 4.62 1 1.4 2.21 2.41 3.61 3.21s3.21 1.2 5.22 1.2 3.61-.4 4.82-1c1.4-.6 2.41-1.4 3.21-2.41.8-1 1.4-2.01 1.61-3.01s.4-2.01.4-3.01v.14h-10.86v-7.02h20.07v24.08h-8.03v-5.56c-.6.8-1.38 1.61-2.19 2.41-.8.8-1.81 1.2-2.81 1.81-1 .4-2.21.8-3.41 1.2s-2.41.4-3.81.4a18.56 18.56 0 0 1-14.65-6.63c-1.6-2.01-3.01-4.41-3.81-7.02s-1.4-5.62-1.4-8.83.4-6.02 1.4-8.83a20.45 20.45 0 0 1 19.46-13.65c3.21 0 4.01.2 5.82.8 1.81.4 3.61 1.2 5.02 2.01 1.61.8 2.81 2.01 4.01 3.21s2.21 2.61 2.81 4.21l-7.63 4.41c-.4-1-1-1.81-1.61-2.61-.6-.8-1.4-1.4-2.21-2.01-.8-.6-1.81-1-2.81-1.4-1-.4-2.21-.4-3.61-.4-2.01 0-3.81.4-5.22 1.2-1.4.8-2.61 1.81-3.61 3.21s-1.61 2.81-2.21 4.62c-.4 1.81-.6 3.71-.6 5.42s.8 5.22.8 5.22Zm57.8-27.9c3.21 0 6.22.6 8.63 1.81 2.41 1.2 4.82 2.81 6.62 4.82S170.2 24.39 171 27s1.4 5.62 1.4 8.83-.4 6.02-1.4 8.83-2.41 5.02-4.01 7.02-4.01 3.61-6.62 4.82-5.42 1.81-8.63 1.81-6.22-.6-8.63-1.81-4.82-2.81-6.42-4.82-3.21-4.41-4.01-7.02-1.4-5.62-1.4-8.83.4-6.02 1.4-8.83 2.41-5.02 4.01-7.02 4.01-3.61 6.42-4.82 5.42-1.81 8.63-1.81Zm0 36.73c1.81 0 3.61-.4 5.02-1s2.61-1.81 3.61-3.01 1.81-2.81 2.21-4.41c.4-1.81.8-3.61.8-5.62 0-2.21-.2-4.21-.8-6.02s-1.2-3.21-2.21-4.62c-1-1.2-2.21-2.21-3.61-3.01s-3.21-1-5.02-1-3.61.4-5.02 1c-1.4.8-2.61 1.81-3.61 3.01s-1.81 2.81-2.21 4.62c-.4 1.81-.8 3.61-.8 5.62 0 2.41.2 4.21.8 6.02.4 1.81 1.2 3.21 2.21 4.41s2.21 2.21 3.61 3.01c1.4.8 3.21 1 5.02 1Zm36.32 7.96-12.24-44.15h9.83l8.43 32.77h.4l8.23-32.77h9.83L200.3 58.04h-12.24Zm74.14-7.96c2.18 0 3.51-.6 3.51-.6 1.2-.6 2.01-1 2.81-1.81s1.4-1.81 1.81-2.81a13 13 0 0 0 .8-4.01V13.9h8.63v28.15c0 2.41-.4 4.62-1.4 6.62-.8 2.01-2.21 3.61-3.61 5.02s-3.41 2.41-5.62 3.21-4.62 1.2-7.02 1.2-5.02-.4-7.02-1.2c-2.21-.8-4.01-1.81-5.62-3.21s-2.81-3.01-3.61-5.02-1.4-4.21-1.4-6.62V13.9h8.63v26.95c0 1.61.2 3.01.8 4.01.4 1.2 1.2 2.21 2.01 2.81.8.8 1.81 1.4 2.81 1.81 0 0 1.34.6 3.51.6Zm34.22-36.18v18.92l15.65-18.92h10.82l-15.03 17.32 16.03 26.83h-10.21l-11.44-20.21-5.62 6.22v13.99h-8.83V13.9" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <section aria-label="Service information" class="govuk-service-navigation"
+            data-module="govuk-service-navigation">
+            <div class="govuk-width-container">
+                <div class="govuk-service-navigation__container">
+                    <span class="govuk-service-navigation__service-name">
+                        <a href="/" class="govuk-service-navigation__link">
+                            Road traffic statistics
+                        </a>
+                    </span>
+                    <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+                        <a href="/sitemap" id="govuk-service-navigation-menu-button-js-disabled" type="button" class="govuk-service-navigation__toggle govuk-service-navigation__toggle--js-disabled hide-from-tablet-width" aria-controls="navigation">
+                            Menu
+                        </a>
+                        <button id="govuk-service-navigation-menu-button" type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden aria-hidden="true">
+                            Menu
+                        </button>
+                        <ul class="govuk-service-navigation__list hide-up-to-tablet-width" id="navigation">
+                                                                                    <li class="govuk-service-navigation__item">
+                                <a class="govuk-service-navigation__link" href="/count-points" aria-current="false">
+                                                                        Map
+                                                                    </a>
+                            </li>
+                                                                                    <li class="govuk-service-navigation__item">
+                                <a class="govuk-service-navigation__link" href="/local-authorities" aria-current="false">
+                                                                        Local authorities
+                                                                    </a>
+                            </li>
+                                                                                    <li class="govuk-service-navigation__item">
+                                <a class="govuk-service-navigation__link" href="/regions" aria-current="false">
+                                                                        Regions
+                                                                    </a>
+                            </li>
+                                                                                    <li class="govuk-service-navigation__item">
+                                <a class="govuk-service-navigation__link" href="/downloads" aria-current="false">
+                                                                        Data
+                                                                    </a>
+                            </li>
+                                                                                    <li class="govuk-service-navigation__item govuk-service-navigation__item--active">
+                                <a class="govuk-service-navigation__link" href="/about" aria-current="true">
+                                                                        <strong class="govuk-service-navigation__active-fallback">About</strong>
+                                                                    </a>
+                            </li>
+                                                                                    <li class="govuk-service-navigation__item">
+                                <a class="govuk-service-navigation__link" href="/frequently-asked-questions" aria-current="false">
+                                                                        FAQs
+                                                                    </a>
+                            </li>
+                                                    </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+    </header>
+    <div class="govuk-width-container app-width-container">
+                <main class="govuk-main-wrapper app-main-class" id="main-content">
+            <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third content-list__sticky">
+    <nav aria-label="Contents" class="gem-c-contents-list govuk-!-margin-bottom-4">
+        <h2 class="gem-c-contents-list__title">
+            Contents
+        </h2>
+        <ol class="gem-c-contents-list__list">
+                                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--parent">
+                <span class="gem-c-contents-list__list-item-dash" aria-hidden="true"></span>
+                <a class="gem-c-contents-list__link govuk-link gem-c-force-print-link-styles govuk-link--no-underline" href="#data-quality">
+                    Data quality
+                </a>
+                                <ol class="gem-c-contents-list__nested-list">
+                                                            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <span class="gem-c-contents-list__list-item-dash" aria-hidden="true"></span>
+                        <a class="gem-c-contents-list__link govuk-link gem-c-force-print-link-styles govuk-link--no-underline" href="#data-disclaimer">
+                            Data disclaimer
+                        </a>
+                    </li>
+                                                            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <span class="gem-c-contents-list__list-item-dash" aria-hidden="true"></span>
+                        <a class="gem-c-contents-list__link govuk-link gem-c-force-print-link-styles govuk-link--no-underline" href="#quality-flags-in-data-downloads">
+                            Quality flags in data downloads
+                        </a>
+                    </li>
+                                    </ol>
+                            </li>
+                                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--parent">
+                <span class="gem-c-contents-list__list-item-dash" aria-hidden="true"></span>
+                <a class="gem-c-contents-list__link govuk-link gem-c-force-print-link-styles govuk-link--no-underline" href="#data-available">
+                    Data available
+                </a>
+                                <ol class="gem-c-contents-list__nested-list">
+                                                            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <span class="gem-c-contents-list__list-item-dash" aria-hidden="true"></span>
+                        <a class="gem-c-contents-list__link govuk-link gem-c-force-print-link-styles govuk-link--no-underline" href="#street-level-road-traffic-estimates">
+                            Street-level road traffic estimates
+                        </a>
+                    </li>
+                                                            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <span class="gem-c-contents-list__list-item-dash" aria-hidden="true"></span>
+                        <a class="gem-c-contents-list__link govuk-link gem-c-force-print-link-styles govuk-link--no-underline" href="#summary-estimates">
+                            Summary estimates
+                        </a>
+                    </li>
+                                    </ol>
+                            </li>
+                                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--parent">
+                <span class="gem-c-contents-list__list-item-dash" aria-hidden="true"></span>
+                <a class="gem-c-contents-list__link govuk-link gem-c-force-print-link-styles govuk-link--no-underline" href="#data-sources">
+                    Data sources
+                </a>
+                                <ol class="gem-c-contents-list__nested-list">
+                                                            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <span class="gem-c-contents-list__list-item-dash" aria-hidden="true"></span>
+                        <a class="gem-c-contents-list__link govuk-link gem-c-force-print-link-styles govuk-link--no-underline" href="#dft-roadside-surveys-manually-enumerated-counts">
+                            DfT Roadside Surveys (manually enumerated counts)
+                        </a>
+                    </li>
+                                                            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <span class="gem-c-contents-list__list-item-dash" aria-hidden="true"></span>
+                        <a class="gem-c-contents-list__link govuk-link gem-c-force-print-link-styles govuk-link--no-underline" href="#automatic-traffic-counts">
+                            Automatic traffic counts
+                        </a>
+                    </li>
+                                                            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <span class="gem-c-contents-list__list-item-dash" aria-hidden="true"></span>
+                        <a class="gem-c-contents-list__link govuk-link gem-c-force-print-link-styles govuk-link--no-underline" href="#road-lengths">
+                            Road lengths
+                        </a>
+                    </li>
+                                    </ol>
+                            </li>
+                                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--parent">
+                <span class="gem-c-contents-list__list-item-dash" aria-hidden="true"></span>
+                <a class="gem-c-contents-list__link govuk-link gem-c-force-print-link-styles govuk-link--no-underline" href="#definitions">
+                    Definitions
+                </a>
+                                <ol class="gem-c-contents-list__nested-list">
+                                                            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <span class="gem-c-contents-list__list-item-dash" aria-hidden="true"></span>
+                        <a class="gem-c-contents-list__link govuk-link gem-c-force-print-link-styles govuk-link--no-underline" href="#measurements-of-traffic">
+                            Measurements of traffic
+                        </a>
+                    </li>
+                                                            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <span class="gem-c-contents-list__list-item-dash" aria-hidden="true"></span>
+                        <a class="gem-c-contents-list__link govuk-link gem-c-force-print-link-styles govuk-link--no-underline" href="#vehicle-definitions">
+                            Vehicle definitions
+                        </a>
+                    </li>
+                                                            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <span class="gem-c-contents-list__list-item-dash" aria-hidden="true"></span>
+                        <a class="gem-c-contents-list__link govuk-link gem-c-force-print-link-styles govuk-link--no-underline" href="#road-definitions">
+                            Road definitions
+                        </a>
+                    </li>
+                                    </ol>
+                            </li>
+                                    <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--parent">
+                <span class="gem-c-contents-list__list-item-dash" aria-hidden="true"></span>
+                <a class="gem-c-contents-list__link govuk-link gem-c-force-print-link-styles govuk-link--no-underline" href="#other-sources-of-dft-traffic-data">
+                    Other sources of DfT traffic data
+                </a>
+                                <ol class="gem-c-contents-list__nested-list">
+                                                            <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                        <span class="gem-c-contents-list__list-item-dash" aria-hidden="true"></span>
+                        <a class="gem-c-contents-list__link govuk-link gem-c-force-print-link-styles govuk-link--no-underline" href="#road-traffic-estimates-in-great-britain">
+                            Road Traffic Estimates in Great Britain
+                        </a>
+                    </li>
+                                    </ol>
+                            </li>
+                    </ol>
+    </nav>
+</div>        <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-xl">About</h1>
+
+            <p class="govuk-body-l">Road traffic open data provides street-level data for every junction-to-junction link on the motorway and 'A' road network, and for some minor roads in Great Britain.</p>
+            <p class="govuk-body-m">This website presents the annual estimates of traffic on Great Britain’s roads. It provides figures for traffic broken down by vehicle type, road category and geographic area.</p>
+            <p class="govuk-body-m">Annual statistics are mostly presented in units of vehicle miles, which combines the number of vehicles on the road and how far they drive. Annual traffic statistics are compiled using data from around 7,000 roadside 12-hour manual counts, continuous data from automatic traffic counters, and data on road lengths.</p>
+
+            <p class="govuk-body">
+    This website uses data published on 20 May 2026.
+    The next data update is planned for summer 2027.
+</p>
+            <p class="govuk-body-m">Answers to common questions about this website and road traffic estimates are provided on the <a class="govuk-link" href="/frequently-asked-questions">frequently asked questions page</a>.</p>
+
+            <h2 class="govuk-heading-l" id="data-quality">Data quality</h2>
+
+            <h3 class="govuk-heading-m" id="data-disclaimer">Data disclaimer</h3>
+
+            <p class="govuk-body">Traffic figures at the regional and national level are robust, and are reported as accredited official statistics. However, DfT’s traffic estimates for individual road links and small areas are less robust, as they are not always based on up-to-date counts made at these locations. Where other more up-to-date sources of traffic data are available (e.g. from local highways authorities), this may provide a more accurate estimate of traffic at these locations.</p>
+
+            <p class="govuk-body">It is the responsibility of the user to decide which data are most appropriate for their purpose, and if DfT road link level traffic estimates are used, to make a note of the limitations in any published material.</p>
+
+            <h3 class="govuk-heading-m" id="quality-flags-in-data-downloads">Quality flags in data downloads</h3>
+
+            <p class="govuk-body">DfT’s road link level traffic estimates are calculated using a variety of methods, with some methods likely to produce more accurate estimates than others.</p>
+
+            <p class="govuk-body">The data tables available to download here contain two columns - "estimation_method" and "estimation_method_detailed" – showing the method used to estimate traffic for each location and year. Figures having an estimation method of “Counted” are likely to be more accurate than those marked as “Estimated”, and the latter should be used with caution.</p>
+
+            <h2 class="govuk-heading-l" id="data-available">Data available</h2>
+
+            <p class="govuk-body-l">A range of information is available about traffic on Great Britain’s roads:</p>
+
+            <h3 class="govuk-heading-m" id="street-level-road-traffic-estimates">Street-level road traffic estimates</h3>
+
+            <p class="govuk-body">The street-level road traffic estimates provide the number of vehicles that pass the ‘Count Point’ location. They are estimated for each link of Great Britain's major road network, and for a sample of locations on Great Britain’s minor road network.</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li><strong class="strong">Annual average daily flow:</strong> the number of vehicles that travel past (in both directions) the location on an average day of the year</li>
+                <li><strong class="strong">Annual average daily flow by direction:</strong> the number of vehicles that travel past the location on an average day of the year, by direction of travel</li>
+                <li><strong class="strong">Raw counts:</strong> Where a raw count has been conducted at a given location, this provides the number of vehicles that travelled past the location on the given day of the count, by direction of travel, for each hour 7am to 7pm.<br>Note: Counts are not conducted at some locations. For more information, see the guidance on the <a class="govuk-link" href="https://www.gov.uk/government/collections/road-traffic-statistics">GOV.UK traffic statistics web pages</a></li>
+            </ul>
+
+            <p class="govuk-body">This information is available by location.</p>
+
+            <p class="govuk-body">It is also available to download for all ‘Count Point’ locations within a local authority, within a region, and for all locations within Great Britain.</p>
+
+            <h3 class="govuk-heading-m" id="summary-estimates">Summary estimates</h3>
+
+            <p class="govuk-body">Summary statistics on roads are available at a national, regional and local authority level. These provide the number of vehicle miles travelled within the given area, by vehicle type and road type. Summary information is available on this website, and in the <a class="govuk-link" href="https://www.gov.uk/government/collections/road-traffic-statistics">Road traffic statistics publications on GOV.UK</a></p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li><a class="govuk-link" href="/">Great Britain level</a></li>
+                <li><a class="govuk-link" href="/regions">Regional level</a></li>
+                <li><a class="govuk-link" href="/local-authorities">Local authority level</a></li>
+            </ul>
+
+            <h2 class="govuk-heading-l" id="data-sources">Data sources</h2>
+
+            <h3 class="govuk-heading-m" id="dft-roadside-surveys-manually-enumerated-counts">DfT Roadside Surveys (manually enumerated counts)</h3>
+            <p class="govuk-body">Around 7,000 roadside counts which are conducted each year, on weekdays between March and October each year, outside of public holidays and school holidays, due to weather and light considerations at the count locations. They are undertaken over a 12-hour period (7am to 7pm). Trained enumerators either observe and count traffic from the side of the road, or set up cameras to do so and count the traffic at a later time. The locations of the counts are given a unique reference number called a count point number (CP).</p>
+            <p class="govuk-body"><strong class="bold">Roadside counts on major roads:</strong> It is not possible to count every single location every year; therefore, the sections of road are surveyed on either an annual basis or on a cycle of every 2 years, every 4 years or every 8 years (and in Scotland and Wales, every 12 years). The frequency is based on the traffic level. This means not every link in the major road network has a 12 hour count in each year.</p>
+            <p class="govuk-body"><strong class="bold">Roadside counts on minor roads:</strong> Due to the vast number of minor roads in Great Britain it is not possible to count them all, instead a representative sample of minor road sites are counted each year. The difference in traffic between the two years is then applied to overall minor road estimates to calculate estimates for the latest year.</p>
+            <p class="govuk-body">For more information about how traffic data is collected, see the guidance on the <a class="govuk-link" href="https://www.gov.uk/guidance/road-traffic-statistics-information">GOV.UK traffic statistics web pages</a>.</p>
+
+            <h3 class="govuk-heading-m" id="automatic-traffic-counts">Automatic traffic counts</h3>
+            <p class="govuk-body">The Department for Transport's road traffic statistics team have approximately 300 automatic traffic counters at locations on Great Britain’s road network. The locations are a stratified panel sample, and provide sufficient observations so that in-year traffic variations can be estimated by road type and vehicle type.</p>
+            <p class="govuk-body">The automatic traffic counters are permanent installations embedded in the road surface, which combine Inductive Loops with Piezoelectric Sensors in a ‘Loop – Piezo Sensors – Loop’ array, and record information about vehicles passing over them, including vehicle length and wheelbase, to classify vehicles</p>
+
+            <p class="govuk-body">The Department for Transport’s road traffic statistics also make use of automatic traffic counter data that is collected and maintained by other organisations. These are:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>National Highways: operate over 10,000 automatic traffic counters on some of the motorways and ‘A’ roads in England.</li>
+                <li>Transport Scotland: operate over 1,500 automatic traffic counters on some of the motorways and ‘A’ roads in Scotland.</li>
+                <li>Transport for London: operate over 300 automatic traffic counters on roads in London.</li>
+            </ul>
+
+            <h3 class="govuk-heading-m" id="road-lengths">Road lengths</h3>
+            <p class="govuk-body">Road lengths are taken from the Department for Transport's road length statistics. The estimates are based on information from a range of sources, including Ordnance Survey and local authorities.</p>
+            <p class="govuk-body">For information about the calculation of major and minor road length statistics, see the <a class="govuk-link" href="https://www.gov.uk/government/collections/road-lengths">guidance on the GOV.UK road length statistics web pages</a>.</p>
+
+            <h2 class="govuk-heading-l" id="definitions">Definitions</h2>
+
+            <h3 class="govuk-heading-m" id="measurements-of-traffic">Measurements of traffic:</h3>
+            <ul class="govuk-list govuk-list--bullet">
+                <li><strong class="bold">Annual Average Daily Flow (AADF):</strong> The average over a full year of the number of vehicles passing a point in the road network each day.</li>
+                <li><strong class="bold">Vehicle mile/kilometre:</strong> One vehicle times one mile/km travelled (vehicle miles/km are calculated by multiplying the AADF by the corresponding length of road). For example, 1 vehicle travelling 1 mile a day for a year would be 365 vehicle miles. This is sometimes known as the volume of traffic.</li>
+            </ul>
+
+            <h3 class="govuk-heading-m" id="vehicle-definitions">Vehicle definitions</h3>
+            <ul class="govuk-list govuk-list--bullet">
+                <li><strong class="bold">All motor vehicles:</strong> All vehicles except pedal cycles</li>
+                <li><strong class="bold">Pedal cycles:</strong> Includes all non-motorised pedal cycles and includes electric bicycles</li>
+                <li><strong class="bold">Cars and taxis:</strong> Includes passenger vehicles with nine or fewer seats, three wheeled cars and four wheel-drive ‘sports utility vehicles’. Cars towing caravans or trailers are counted as one vehicle.</li>
+                <li><strong class="bold">Motorcycles etc:</strong> Includes motorcycles, scooters and mopeds and all motorcycle or scooter combinations.</li>
+                <li><strong class="bold">Buses and coaches:</strong> Includes all public service vehicles and works buses which have a gross weight greater than 3.5 tonnes.</li>
+                <li><strong class="bold">Light vans:</strong> Goods vehicles not exceeding 3.5 tonnes gross vehicle weight. Includes all car-based vans and those of the next largest carrying capacity such as transit vans. Also included are ambulances, pickups and milk floats.</li>
+                <li><strong class="bold">Heavy goods vehicles (HGV):</strong> Includes all goods vehicles over 3.5 tonnes gross vehicle weight
+                    <ul>
+                        <li><strong class="bold">Rigid HGV with two axles:</strong> Includes all rigid heavy goods vehicles with two axles. Includes tractors (without trailers), road rollers, box vans and similar large vans. A two axle motor tractive unit without trailer is also included.</li>
+                        <li><strong class="bold">Rigid HGV with three axles:</strong> Includes all non articulated goods vehicles with three axles irrespective of the position of the axles. Excludes two axle rigid vehicles towing a single axle caravan or trailer. Three axle motor tractive units without a trailer are also included.</li>
+                        <li><strong class="bold">Rigid HGV with four or more axles:</strong> Includes all non articulated goods vehicles with four axles, regardless of the position of the axles. Excludes two or three axle rigid vehicles towing a caravan or trailer.</li>
+                    </ul>
+                </li>
+                <li><strong class="bold">Articulated heavy goods vehicles:</strong> When a heavy goods vehicle is travelling with one or more axles raised from the road (sleeping axles) then the vehicle is classified by the number of axles on the road, and not by the total number of axles. Articulated goods vehicles with three and four axles are merged into one category, as they are not differentiated during manual traffic counts.
+                    <ul>
+                        <li><strong class="bold">Articulated HGV with three axles (or with trailer):</strong> Includes all articulated goods vehicles with three axles. The motor tractive unit will have two axles and the trailer one. Also included in this class are two axle rigid goods vehicles towing a single axle caravan or trailer.</li>
+                        <li><strong class="bold">Articulated HGV with four axles (or with trailer):</strong> Includes all articulated vehicles with a total of four axles regardless of the position of the axles, i.e. two on the tractive unit with two on the trailer, or three on the tractive unit with one on the trailer. Also includes two axle rigid goods vehicles towing two axle close coupled or drawbar trailers.</li>
+                        <li><strong class="bold">Articulated HGV with five axles (or with trailer):</strong> This includes all articulated vehicles with a total of five axles regardless of the position of the axles. Also includes rigid vehicles drawing close coupled or drawbar trailers where the total axle number equals five and articulated vehicles where the motor tractive unit has more than one trailer and the total axle number equals five.</li>
+                        <li><strong class="bold">Articulated HGV with six or more axles (or with trailer):</strong> This includes all articulated vehicles with a total of six or more axles regardless of the position of the axles. Also includes rigid vehicles drawing close coupled or drawbar trailers where the total axle number equals six or more and articulated vehicles where the motor tractive unit has more than one trailer and the total axle number equals six or more.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3 class="govuk-heading-m" id="road-definitions">Road definitions</h3>
+            <p class="govuk-body">The road definitions included in the traffic estimates are as follows:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li><strong class="bold">Major roads</strong> includes motorways and all class ‘A’ roads. These roads usually have high traffic flows and are often the main arteries to major destinations.</li>
+                <li><strong class="bold">Motorways</strong> (built under the enabling legislation of the Special Roads Act 1949, now consolidated in the Highways Acts of 1959 and 1980): Includes major roads of regional and urban strategic importance, often used for long distance travel. They are usually three or more lanes wide in each direction and generally have the maximum speed limit of 70mph.</li>
+                <li><strong class="bold">'A' Roads:</strong> these can be trunk or principal roads. They are often described as the 'main' roads and tend to have heavy traffic flows though generally not as high as motorways.</li>
+                <li><strong class="bold">Trunk roads</strong> (designated by the Trunk roads Acts 1936 and 1946): Most motorways and many of the long distance rural ‘A’ roads are trunk roads. The responsibility for their maintenance lies with the Secretary of State and they are managed by National Highways (formerly the Highways England) in England, the Welsh Government and the Scottish Government (National Through Routes).</li>
+                <li><strong class="bold">Principal roads:</strong> these are major roads which are maintained by local authorities. They are mainly ‘A’ roads, though some local authorities do have responsibility for some motorways.</li>
+                <li><strong class="bold">Minor Roads</strong>: these are ‘B’ and ‘C’ classified roads and unclassified roads (all of which are maintained by the local authorities), as referred to above. Class III (later ‘C’) roads were created in April 1946. ‘B’ roads in urban areas can have relatively high traffic flows, but are not regarded as being as significant as ‘A’ roads, though in some cases may have similarly high flows. They are useful distributor roads often between towns or villages. ‘B’ roads in rural areas often have markedly low traffic flows compared with their ‘A’ road counterparts. ‘C’ Roads are regarded as of lesser importance than either ‘B’ or ‘A’ roads, and generally have only one carriageway of two lanes and carry less traffic. They can have low traffic flows in rural areas. Unclassified roads include residential roads both in urban and rural situations and rural lanes, the latter again normally having very low traffic flows. Most unclassified roads will have only two lanes, and in rural areas may only have one lane with “passing bays” at intervals to allow for two-way traffic flow</li>
+                <li><strong class="bold">Urban roads:</strong> these are major and minor roads that sit within a built up area, with a population of 10,000 or more in England and Wales or 3,000 in Scotland.</li>
+                <li><strong class="bold">Rural roads:</strong> These are major and minor roads that sit outside urban areas (these urban areas have a population of more than 10,000 people in England and Wales or 3,000 in Scotland)</li>
+                <li><strong class="bold">Private Roads:</strong> For the purpose of this publication, private roads are considered to be road not maintained at public expense. For major roads, private roads (usually toll roads, tunnels and bridges) are included in the road length figures as they are accessible to the general public. For minor roads, private roads are not included in the road length figures as they are not usually accessible to the general public.</li>
+            </ul>
+
+            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+            <h2 class="govuk-heading-l" id="other-sources-of-dft-traffic-data">Other sources of DfT traffic data</h2>
+
+            <h3 class="govuk-heading-s" id="road-traffic-estimates-in-great-britain">Road Traffic Estimates in Great Britain</h3>
+            <p class="govuk-body">DfT publish summary traffic statistics on a quarterly and annual basis. The publications give Great Britain totals, broken down by vehicle type and road category.</p>
+            <p class="govuk-body">The annual publication also contains breakdowns by country, region and local authority, plus tables on traffic distributions by time of day, by day, and by month.</p>
+            <p class="govuk-body"><a class="govuk-link" href="https://www.gov.uk/government/collections/road-traffic-statistics">Road traffic statistics on GOV.UK</a></p>
+        </div>
+    </div>
+        </main>
+    </div>
+    <footer class="govuk-template__footer">
+        <div class="govuk-footer">
+            <div class="govuk-width-container">
+                <svg
+                    focusable="false"
+                    role="presentation"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 64 60"
+                    height="30"
+                    width="32"
+                    fill="currentcolor" class="govuk-footer__crown">
+                    <g>
+                        <circle cx="20" cy="17.6" r="3.7" />
+                        <circle cx="10.2" cy="23.5" r="3.7" />
+                        <circle cx="3.7" cy="33.2" r="3.7" />
+                        <circle cx="31.7" cy="30.6" r="3.7" />
+                        <circle cx="43.3" cy="17.6" r="3.7" />
+                        <circle cx="53.2" cy="23.5" r="3.7" />
+                        <circle cx="59.7" cy="33.2" r="3.7" />
+                        <circle cx="31.7" cy="30.6" r="3.7" />
+                        <path d="M33.1,9.8c.2-.1.3-.3.5-.5l4.6,2.4v-6.8l-4.6,1.5c-.1-.2-.3-.3-.5-.5l1.9-5.9h-6.7l1.9,5.9c-.2.1-.3.3-.5.5l-4.6-1.5v6.8l4.6-2.4c.1.2.3.3.5.5l-2.6,8c-.9,2.8,1.2,5.7,4.1,5.7h0c3,0,5.1-2.9,4.1-5.7l-2.6-8ZM37,37.9s-3.4,3.8-4.1,6.1c2.2,0,4.2-.5,6.4-2.8l-.7,8.5c-2-2.8-4.4-4.1-5.7-3.8.1,3.1.5,6.7,5.8,7.2,3.7.3,6.7-1.5,7-3.8.4-2.6-2-4.3-3.7-1.6-1.4-4.5,2.4-6.1,4.9-3.2-1.9-4.5-1.8-7.7,2.4-10.9,3,4,2.6,7.3-1.2,11.1,2.4-1.3,6.2,0,4,4.6-1.2-2.8-3.7-2.2-4.2.2-.3,1.7.7,3.7,3,4.2,1.9.3,4.7-.9,7-5.9-1.3,0-2.4.7-3.9,1.7l2.4-8c.6,2.3,1.4,3.7,2.2,4.5.6-1.6.5-2.8,0-5.3l5,1.8c-2.6,3.6-5.2,8.7-7.3,17.5-7.4-1.1-15.7-1.7-24.5-1.7h0c-8.8,0-17.1.6-24.5,1.7-2.1-8.9-4.7-13.9-7.3-17.5l5-1.8c-.5,2.5-.6,3.7,0,5.3.8-.8,1.6-2.3,2.2-4.5l2.4,8c-1.5-1-2.6-1.7-3.9-1.7,2.3,5,5.2,6.2,7,5.9,2.3-.4,3.3-2.4,3-4.2-.5-2.4-3-3.1-4.2-.2-2.2-4.6,1.6-6,4-4.6-3.7-3.7-4.2-7.1-1.2-11.1,4.2,3.2,4.3,6.4,2.4,10.9,2.5-2.8,6.3-1.3,4.9,3.2-1.8-2.7-4.1-1-3.7,1.6.3,2.3,3.3,4.1,7,3.8,5.4-.5,5.7-4.2,5.8-7.2-1.3-.2-3.7,1-5.7,3.8l-.7-8.5c2.2,2.3,4.2,2.7,6.4,2.8-.7-2.3-4.1-6.1-4.1-6.1h10.6,0Z" />
+                    </g>
+                </svg>
+                <div class="govuk-footer__navigation">
+                    <div class="govuk-footer__section govuk-grid-column-one-half">
+                        <h2 class="govuk-footer__heading govuk-heading-m">Related Statistics</h2>
+                        <ul class="govuk-footer__list">
+                                                        <li class="govuk-footer__list-item">
+                                <a class="govuk-footer__link" href="https://www.gov.uk/government/organisations/department-for-transport/about/statistics">
+                                    All transport statistics
+                                </a>
+                            </li>
+                                                        <li class="govuk-footer__list-item">
+                                <a class="govuk-footer__link" href="https://www.gov.uk/government/collections/road-accidents-and-safety-statistics">
+                                    Road safety statistics
+                                </a>
+                            </li>
+                                                        <li class="govuk-footer__list-item">
+                                <a class="govuk-footer__link" href="https://www.gov.uk/government/collections/road-congestion-and-reliability-statistics">
+                                    Road congestion and travel times
+                                </a>
+                            </li>
+                                                        <li class="govuk-footer__list-item">
+                                <a class="govuk-footer__link" href="https://www.gov.uk/government/collections/road-freight-domestic-and-international-statistics">
+                                    Road freight: domestic and international
+                                </a>
+                            </li>
+                                                        <li class="govuk-footer__list-item">
+                                <a class="govuk-footer__link" href="https://www.gov.uk/government/collections/road-lengths">
+                                    Road lengths
+                                </a>
+                            </li>
+                                                        <li class="govuk-footer__list-item">
+                                <a class="govuk-footer__link" href="https://www.gov.uk/government/collections/road-network-size-and-condition">
+                                    Road conditions
+                                </a>
+                            </li>
+                                                        <li class="govuk-footer__list-item">
+                                <a class="govuk-footer__link" href="https://www.gov.uk/government/collections/road-traffic-statistics">
+                                    Road traffic
+                                </a>
+                            </li>
+                                                    </ul>
+                    </div>
+                    <div class="govuk-footer__section govuk-grid-column-one-half">
+                        <h2 class="govuk-footer__heading govuk-heading-m">Contact</h2>
+                        <div class="govuk-footer__meta-custom">
+                            <p class="govuk-body">
+                                Public enquiries:<br />
+                                <a href="mailto:roadtraff.stats@dft.gov.uk" class="govuk-link">roadtraff.stats@dft.gov.uk</a>
+                            </p>
+                            <p class="govuk-body">
+                                Media enquiries:<br />
+                                Newsdesk <a class="govuk-link" href="tel:03007777878">0300 7777 878</a> (Monday to Friday, 8am to 7pm)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="govuk-footer__section-break">
+                <div class="govuk-footer__meta">
+                    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+                        <h2 class="govuk-visually-hidden">Support links</h2>
+                        <ul class="govuk-footer__inline-list">
+                                                        <li class="govuk-footer__inline-list-item">
+                                <a class="govuk-footer__link" href="/about">
+                                    About
+                                </a>
+                            </li>
+                                                        <li class="govuk-footer__inline-list-item">
+                                <a class="govuk-footer__link" href="/frequently-asked-questions">
+                                    FAQs
+                                </a>
+                            </li>
+                                                        <li class="govuk-footer__inline-list-item">
+                                <a class="govuk-footer__link" href="/accessibility">
+                                    Accessibility
+                                </a>
+                            </li>
+                                                        <li class="govuk-footer__inline-list-item">
+                                <a class="govuk-footer__link" href="/sitemap">
+                                    Sitemap
+                                </a>
+                            </li>
+                                                        <li class="govuk-footer__inline-list-item">
+                                <a class="govuk-footer__link" href="/terms">
+                                    Terms and privacy
+                                </a>
+                            </li>
+                                                        <li class="govuk-footer__inline-list-item">
+                                <a class="govuk-footer__link" href="/cookies">
+                                    Cookies
+                                </a>
+                            </li>
+                                                        <li class="govuk-footer__inline-list-item">
+                                <a class="govuk-footer__link" href="/contact">
+                                    Contact
+                                </a>
+                            </li>
+                                                        <li class="govuk-footer__inline-list-item">
+                                <a class="govuk-footer__link" href="/api-documentation">
+                                    API
+                                </a>
+                            </li>
+                                                    </ul>
+                        <svg
+                            aria-hidden="true"
+                            focusable="false"
+                            class="govuk-footer__licence-logo"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 483.2 195.7"
+                            height="17"
+                            width="41">
+                            <path
+                                fill="currentColor"
+                                d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145" />
+                        </svg>
+                        <span class="govuk-footer__licence-description">
+                            All content is available under the
+                            <a
+                                class="govuk-footer__link"
+                                href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                                rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+                        </span>
+                    </div>
+                    <div class="govuk-footer__meta-item">
+                        <a
+                            class="govuk-footer__link govuk-footer__copyright-logo"
+                            href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">
+                            © Crown copyright
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script nonce="yu0gmld4OoEiw31AEhizOrsBFq2DE1ss">
+        document.getElementById("govuk-service-navigation-menu-button").addEventListener("click", () => {
+            document.getElementById("navigation").classList.remove("hide-up-to-tablet-width");
+        });
+
+        const elemsToShow = Array.from(
+            document.getElementsByClassName("hide-when-js-disabled")
+        );
+
+        for (const elem of elemsToShow) {
+            elem.classList.remove("hide-when-js-disabled");
+        }
+    </script>
+    <link rel="modulepreload" as="script" href="/build/assets/govuk-CjC3kOqP.js" /><link rel="modulepreload" as="script" href="/build/assets/configuration-DXsk_qcZ.js" /><script type="module" src="/build/assets/govuk-CjC3kOqP.js"></script></body>
+
+</html>

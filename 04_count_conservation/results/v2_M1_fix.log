@@ -1,0 +1,10 @@
+M1_A: 186 sites, 88 surveyed relations
+  pairs 492, adjacent after ordering 131, self floor 1.181%
+  junction candidates 614
+  categories {'exact': 62, 'implied': 43, 'outside_map': 44, 'unmapped_site': 92}, judged precision 0.705
+  recall by size {'2': {'recovered': 55, 'of': 75}, '3': {'recovered': 7, 'of': 11}, '4': {'recovered': 0, 'of': 2}}
+  prior_only   MAE   13.76  outside  11.68%
+  surveyed     MAE   12.60  outside   7.63%  constraints 88
+  recovered    MAE   11.88  outside   8.42%  constraints 209
+  both         MAE   11.71  outside   7.21%  constraints 297
+wrote results/discovery_v2_M1_A.json

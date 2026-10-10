@@ -1,0 +1,29 @@
+{
+ "manifest": "window_M1_A.json",
+ "topology": "recovered",
+ "constraints": 209,
+ "prior": "knn_spatial",
+ "seed": 0,
+ "fraction_hidden": 0.1,
+ "cap_multiple": 3.0,
+ "intervals_examined": 400,
+ "values_checked": 4211,
+ "bounded_by_physics": 4180,
+ "bounded_pct": 99.26,
+ "unbounded": 31,
+ "coverage_pct": 95.18,
+ "point_estimate_inside_pct": 100.0,
+ "median_width_vehicles": 29.65,
+ "p90_width_vehicles": 75.22,
+ "width_by_unknowns_at_node": {
+  "1": {
+   "n": 3957,
+   "median_width": 28.73
+  },
+  "2": {
+   "n": 223,
+   "median_width": 155.23
+  }
+ },
+ "seconds": 315.4
+}

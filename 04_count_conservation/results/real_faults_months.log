@@ -1,0 +1,194 @@
+{'road': 'M25', 'month': 3, 'tag': 'full_M25_A', 'reports': 14, 'reports_reference_chance': 0, 'reported_admitted': 9, 'reported_failed': 2, 'control': 40, 'control_failed': 1}
+C:\adi\patent 2\src\faults.py:148: RuntimeWarning: Mean of empty slice
+  mean = np.nanmean(block, axis=1)
+C:\adi\patent 2\src\faults.py:259: RuntimeWarning: Mean of empty slice
+  mean = np.nanmean(block, axis=1)
+apr_M25_A: 487 relations, 294 detectors in >=2 relations; reports: test 5 over 7 spans, reference (chance) 1 over 7 spans
+{
+ "manifest": "window_apr_M25_A.json",
+ "span_intervals": 192,
+ "relations": 487,
+ "detectors_in_two_or_more": 294,
+ "eligible": 273,
+ "test_spans": 7,
+ "reference_spans": 7,
+ "reports_test": 5,
+ "reports_reference_chance": 1,
+ "detectors_reported": 4,
+ "binsum": {
+  "reports_with_rate_over_2x_own_reference": 2,
+  "reports_with_rate_above_others_median": 2,
+  "of": 5,
+  "overall_bad_rate_all_detectors": 0.0005
+ },
+ "status_not_active_today": {
+  "reported": 0.0,
+  "others": 0.0,
+  "n_reported": 4,
+  "n_others": 290
+ },
+ "in_map_audit_flagged_relation": {
+  "reported": null,
+  "others": null
+ },
+ "persistence_june": null
+}
+{'road': 'M25', 'month': 4, 'tag': 'apr_M25_A', 'reports': 5, 'reports_reference_chance': 1, 'reported_admitted': 4, 'reported_failed': 2, 'control': 40, 'control_failed': 2}
+may_M25_A: 539 relations, 310 detectors in >=2 relations; reports: test 7 over 7 spans, reference (chance) 0 over 7 spans
+{
+ "manifest": "window_may_M25_A.json",
+ "span_intervals": 192,
+ "relations": 539,
+ "detectors_in_two_or_more": 310,
+ "eligible": 288,
+ "test_spans": 7,
+ "reference_spans": 7,
+ "reports_test": 7,
+ "reports_reference_chance": 0,
+ "detectors_reported": 7,
+ "binsum": {
+  "reports_with_rate_over_2x_own_reference": 2,
+  "reports_with_rate_above_others_median": 2,
+  "of": 7,
+  "overall_bad_rate_all_detectors": 0.0005
+ },
+ "status_not_active_today": {
+  "reported": 0.0,
+  "others": 0.0,
+  "n_reported": 7,
+  "n_others": 303
+ },
+ "in_map_audit_flagged_relation": {
+  "reported": null,
+  "others": null
+ },
+ "persistence_june": null
+}
+{'road': 'M25', 'month': 5, 'tag': 'may_M25_A', 'reports': 7, 'reports_reference_chance': 0, 'reported_admitted': 7, 'reported_failed': 1, 'control': 40, 'control_failed': 3}
+june_M25_A: 508 relations, 300 detectors in >=2 relations; reports: test 10 over 7 spans, reference (chance) 0 over 7 spans
+{
+ "manifest": "window_june_M25_A.json",
+ "span_intervals": 192,
+ "relations": 508,
+ "detectors_in_two_or_more": 300,
+ "eligible": 265,
+ "test_spans": 7,
+ "reference_spans": 7,
+ "reports_test": 10,
+ "reports_reference_chance": 0,
+ "detectors_reported": 6,
+ "binsum": {
+  "reports_with_rate_over_2x_own_reference": 2,
+  "reports_with_rate_above_others_median": 2,
+  "of": 10,
+  "overall_bad_rate_all_detectors": 0.0004
+ },
+ "status_not_active_today": {
+  "reported": 0.0,
+  "others": 0.0,
+  "n_reported": 6,
+  "n_others": 294
+ },
+ "in_map_audit_flagged_relation": {
+  "reported": null,
+  "others": null
+ },
+ "persistence_june": null
+}
+{'road': 'M25', 'month': 6, 'tag': 'june_M25_A', 'reports': 10, 'reports_reference_chance': 0, 'reported_admitted': 2, 'reported_failed': 1, 'control': 40, 'control_failed': 1}
+{'road': 'M1', 'month': 3, 'tag': 'M1_A', 'reports': 16, 'reports_reference_chance': 0, 'reported_admitted': 9, 'reported_failed': 3, 'control': 40, 'control_failed': 4}
+apr_M1_A: 203 relations, 123 detectors in >=2 relations; reports: test 0 over 7 spans, reference (chance) 0 over 7 spans
+{
+ "manifest": "window_apr_M1_A.json",
+ "span_intervals": 192,
+ "relations": 203,
+ "detectors_in_two_or_more": 123,
+ "eligible": 121,
+ "test_spans": 7,
+ "reference_spans": 7,
+ "reports_test": 0,
+ "reports_reference_chance": 0,
+ "detectors_reported": 0,
+ "binsum": {
+  "reports_with_rate_over_2x_own_reference": 0,
+  "reports_with_rate_above_others_median": 0,
+  "of": 0,
+  "overall_bad_rate_all_detectors": 0.0005
+ },
+ "status_not_active_today": {
+  "reported": null,
+  "others": 0.0,
+  "n_reported": 0,
+  "n_others": 123
+ },
+ "in_map_audit_flagged_relation": {
+  "reported": null,
+  "others": null
+ },
+ "persistence_june": null
+}
+{'road': 'M1', 'month': 4, 'tag': 'apr_M1_A', 'reports': 0, 'reports_reference_chance': 0, 'reported_admitted': 0, 'reported_failed': 0, 'control': 40, 'control_failed': 1}
+may_M1_A: 203 relations, 124 detectors in >=2 relations; reports: test 4 over 7 spans, reference (chance) 0 over 7 spans
+{
+ "manifest": "window_may_M1_A.json",
+ "span_intervals": 192,
+ "relations": 203,
+ "detectors_in_two_or_more": 124,
+ "eligible": 120,
+ "test_spans": 7,
+ "reference_spans": 7,
+ "reports_test": 4,
+ "reports_reference_chance": 0,
+ "detectors_reported": 4,
+ "binsum": {
+  "reports_with_rate_over_2x_own_reference": 2,
+  "reports_with_rate_above_others_median": 2,
+  "of": 4,
+  "overall_bad_rate_all_detectors": 0.0004
+ },
+ "status_not_active_today": {
+  "reported": 0.0,
+  "others": 0.0,
+  "n_reported": 4,
+  "n_others": 120
+ },
+ "in_map_audit_flagged_relation": {
+  "reported": null,
+  "others": null
+ },
+ "persistence_june": null
+}
+{'road': 'M1', 'month': 5, 'tag': 'may_M1_A', 'reports': 4, 'reports_reference_chance': 0, 'reported_admitted': 4, 'reported_failed': 2, 'control': 40, 'control_failed': 3}
+june_M1_A: 220 relations, 134 detectors in >=2 relations; reports: test 8 over 7 spans, reference (chance) 0 over 7 spans
+{
+ "manifest": "window_june_M1_A.json",
+ "span_intervals": 192,
+ "relations": 220,
+ "detectors_in_two_or_more": 134,
+ "eligible": 124,
+ "test_spans": 7,
+ "reference_spans": 7,
+ "reports_test": 8,
+ "reports_reference_chance": 0,
+ "detectors_reported": 5,
+ "binsum": {
+  "reports_with_rate_over_2x_own_reference": 1,
+  "reports_with_rate_above_others_median": 1,
+  "of": 8,
+  "overall_bad_rate_all_detectors": 0.0004
+ },
+ "status_not_active_today": {
+  "reported": 0.0,
+  "others": 0.0,
+  "n_reported": 5,
+  "n_others": 129
+ },
+ "in_map_audit_flagged_relation": {
+  "reported": null,
+  "others": null
+ },
+ "persistence_june": null
+}
+{'road': 'M1', 'month': 6, 'tag': 'june_M1_A', 'reports': 8, 'reports_reference_chance': 0, 'reported_admitted': 5, 'reported_failed': 2, 'control': 40, 'control_failed': 3}
+pooled per month {'reported_failed': 13, 'reported': 40, 'control_failed': 18, 'control': 320, 'fisher_exact_p_one_sided': 0.0}
+pooled per detector {'reported_failed': 12, 'reported': 37, 'control_failed': 12, 'control': 238, 'fisher_exact_p_one_sided': 1e-05}

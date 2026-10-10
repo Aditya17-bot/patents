@@ -1,0 +1,12 @@
+M25 target   found 1460  slip 0/43  precision 0.723
+M25 residual found 453  slip 21/43  precision 0.716
+M1 target   found 836  slip 0/13  precision 0.673
+M1 residual found 241  slip 7/13  precision 0.705
+wrote results/ablation_ranking.json
+M25 recovery: all 453 (precision 0.716)  stable 372 (precision 0.709)
+  recovered_all     MAE 14.47 RMSE 33.65 outside 6.89% constraints 429
+  recovered_stable  MAE 14.74 RMSE 34.69 outside 7.23% constraints 353
+M1 recovery: all 241 (precision 0.705)  stable 206 (precision 0.681)
+  recovered_all     MAE 12.72 RMSE 36.12 outside 8.66% constraints 209
+  recovered_stable  MAE 13.21 RMSE 42.05 outside 8.79% constraints 174
+wrote results/stability_split_half.json

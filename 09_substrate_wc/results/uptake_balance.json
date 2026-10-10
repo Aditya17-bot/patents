@@ -1,0 +1,110 @@
+{
+ "Reference_1": {
+  "n_days": 146,
+  "corr_D_R": 0.011,
+  "k": 0.1252,
+  "k_half1": 0.0994,
+  "k_half2": 0.1527,
+  "mae_fit": 0.88,
+  "R_mean": 2.821
+ },
+ "Reference_2": {
+  "n_days": 146,
+  "corr_D_R": 0.151,
+  "k": 0.148,
+  "k_half1": 0.1151,
+  "k_half2": 0.1911,
+  "mae_fit": 0.943,
+  "R_mean": 2.821
+ },
+ "AICU_1": {
+  "n_days": 150,
+  "corr_D_R": 0.747,
+  "k": 0.144,
+  "k_half1": 0.1179,
+  "k_half2": 0.1624,
+  "mae_fit": 0.425,
+  "R_mean": 2.023
+ },
+ "AICU_2": {
+  "n_days": 150,
+  "corr_D_R": -0.031,
+  "k": 0.0848,
+  "k_half1": 0.0601,
+  "k_half2": 0.125,
+  "mae_fit": 0.809,
+  "R_mean": 2.023
+ },
+ "Automatoes_1": {
+  "n_days": 151,
+  "corr_D_R": 0.255,
+  "k": 0.2016,
+  "k_half1": 0.1533,
+  "k_half2": 0.2438,
+  "mae_fit": 0.94,
+  "R_mean": 2.897
+ },
+ "Automatoes_2": {
+  "n_days": 151,
+  "corr_D_R": -0.179,
+  "k": 0.147,
+  "k_half1": 0.1065,
+  "k_half2": 0.1931,
+  "mae_fit": 1.129,
+  "R_mean": 2.897
+ },
+ "Digilog_1": {
+  "n_days": 149,
+  "corr_D_R": -0.315,
+  "k": 0.1219,
+  "k_half1": 0.0747,
+  "k_half2": 0.2122,
+  "mae_fit": 1.621,
+  "R_mean": 3.158
+ },
+ "Digilog_2": {
+  "n_days": 149,
+  "corr_D_R": -0.127,
+  "k": 0.1042,
+  "k_half1": 0.0649,
+  "k_half2": 0.1652,
+  "mae_fit": 1.567,
+  "R_mean": 3.158
+ },
+ "IUACAAS_1": {
+  "n_days": 150,
+  "corr_D_R": 0.17,
+  "k": 0.2061,
+  "k_half1": 0.1527,
+  "k_half2": 0.25,
+  "mae_fit": 1.186,
+  "R_mean": 3.568
+ },
+ "IUACAAS_2": {
+  "n_days": 150,
+  "corr_D_R": -0.164,
+  "k": 0.224,
+  "k_half1": 0.1597,
+  "k_half2": 0.2834,
+  "mae_fit": 1.385,
+  "R_mean": 3.568
+ },
+ "TheAutomators_1": {
+  "n_days": 152,
+  "corr_D_R": 0.361,
+  "k": 0.1513,
+  "k_half1": 0.119,
+  "k_half2": 0.1757,
+  "mae_fit": 0.879,
+  "R_mean": 2.845
+ },
+ "TheAutomators_2": {
+  "n_days": 152,
+  "corr_D_R": 0.519,
+  "k": 0.1799,
+  "k_half1": 0.1503,
+  "k_half2": 0.1974,
+  "mae_fit": 0.75,
+  "R_mean": 2.845
+ }
+}

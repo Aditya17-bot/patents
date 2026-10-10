@@ -1,0 +1,7 @@
+M25 recovery: all 453 (precision 0.716)  stable 372 (precision 0.709)
+  recovered_all     MAE 14.27 RMSE 31.30 outside 6.82% constraints 429
+  recovered_stable  MAE 14.33 RMSE 30.45 outside 7.11% constraints 353
+M1 recovery: all 241 (precision 0.705)  stable 206 (precision 0.681)
+  recovered_all     MAE 11.88 RMSE 26.39 outside 8.42% constraints 209
+  recovered_stable  MAE 11.85 RMSE 26.37 outside 8.49% constraints 174
+wrote results/stability_split_half.json

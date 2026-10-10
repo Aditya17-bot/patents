@@ -1,0 +1,330 @@
+{
+ "manifest": "window_full_M25_A.json",
+ "regime": "operational",
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "corridor": {
+  "sites": 367,
+  "intervals": 2972,
+  "nodes_fitted": 199,
+  "mean_node_flow": 706.3,
+  "mean_band_vehicles": 31.85
+ },
+ "table": {
+  "ablation(knn_spatial: exact equality, no band)": {
+   "MAE": {
+    "mean": 13.833,
+    "min": 13.75,
+    "max": 13.95,
+    "n_seeds": 3
+   },
+   "RMSE": {
+    "mean": 30.003,
+    "min": 28.73,
+    "max": 30.64,
+    "n_seeds": 3
+   },
+   "residual_pct": {
+    "mean": 0.651,
+    "min": 0.636,
+    "max": 0.665,
+    "n_seeds": 3
+   },
+   "outside_band_pct": {
+    "mean": 4.023,
+    "min": 3.96,
+    "max": 4.1,
+    "n_seeds": 3
+   }
+  },
+  "ablation(knn_spatial: offset calibration only)": {
+   "MAE": {
+    "mean": 14.38,
+    "min": 14.23,
+    "max": 14.56,
+    "n_seeds": 3
+   },
+   "RMSE": {
+    "mean": 31.627,
+    "min": 30.96,
+    "max": 32.82,
+    "n_seeds": 3
+   },
+   "residual_pct": {
+    "mean": 0.952,
+    "min": 0.934,
+    "max": 0.983,
+    "n_seeds": 3
+   },
+   "outside_band_pct": {
+    "mean": 6.56,
+    "min": 6.36,
+    "max": 6.73,
+    "n_seeds": 3
+   }
+  },
+  "ablation(knn_spatial: textbook zero, no calibration)": {
+   "MAE": {
+    "mean": 14.67,
+    "min": 14.24,
+    "max": 14.9,
+    "n_seeds": 3
+   },
+   "RMSE": {
+    "mean": 34.54,
+    "min": 29.87,
+    "max": 37.39,
+    "n_seeds": 3
+   },
+   "residual_pct": {
+    "mean": 0.953,
+    "min": 0.936,
+    "max": 0.985,
+    "n_seeds": 3
+   },
+   "outside_band_pct": {
+    "mean": 6.583,
+    "min": 6.45,
+    "max": 6.65,
+    "n_seeds": 3
+   }
+  },
+  "ablation(knn_spatial: uniform weighting)": {
+   "MAE": {
+    "mean": 14.347,
+    "min": 14.26,
+    "max": 14.41,
+    "n_seeds": 3
+   },
+   "RMSE": {
+    "mean": 33.39,
+    "min": 31.4,
+    "max": 35.65,
+    "n_seeds": 3
+   },
+   "residual_pct": {
+    "mean": 0.933,
+    "min": 0.906,
+    "max": 0.978,
+    "n_seeds": 3
+   },
+   "outside_band_pct": {
+    "mean": 5.777,
+    "min": 5.44,
+    "max": 6.1,
+    "n_seeds": 3
+   }
+  },
+  "constrained(historical_mean)": {
+   "MAE": {
+    "mean": 30.417,
+    "min": 30.06,
+    "max": 31.12,
+    "n_seeds": 3
+   },
+   "RMSE": {
+    "mean": 75.323,
+    "min": 72.68,
+    "max": 78.76,
+    "n_seeds": 3
+   },
+   "residual_pct": {
+    "mean": 2.495,
+    "min": 2.46,
+    "max": 2.559,
+    "n_seeds": 3
+   },
+   "outside_band_pct": {
+    "mean": 21.427,
+    "min": 20.95,
+    "max": 22.2,
+    "n_seeds": 3
+   }
+  },
+  "constrained(knn_spatial)": {
+   "MAE": {
+    "mean": 14.36,
+    "min": 14.26,
+    "max": 14.41,
+    "n_seeds": 3
+   },
+   "RMSE": {
+    "mean": 33.18,
+    "min": 31.39,
+    "max": 35.67,
+    "n_seeds": 3
+   },
+   "residual_pct": {
+    "mean": 0.933,
+    "min": 0.906,
+    "max": 0.978,
+    "n_seeds": 3
+   },
+   "outside_band_pct": {
+    "mean": 5.793,
+    "min": 5.46,
+    "max": 6.11,
+    "n_seeds": 3
+   }
+  },
+  "constrained(linear_interpolation)": {
+   "MAE": {
+    "mean": 34.883,
+    "min": 34.09,
+    "max": 36.38,
+    "n_seeds": 3
+   },
+   "RMSE": {
+    "mean": 92.897,
+    "min": 85.66,
+    "max": 101.64,
+    "n_seeds": 3
+   },
+   "residual_pct": {
+    "mean": 2.462,
+    "min": 2.408,
+    "max": 2.495,
+    "n_seeds": 3
+   },
+   "outside_band_pct": {
+    "mean": 21.963,
+    "min": 21.36,
+    "max": 22.63,
+    "n_seeds": 3
+   }
+  },
+  "constrained(soft_impute)": {
+   "MAE": {
+    "mean": 24.407,
+    "min": 23.97,
+    "max": 24.7,
+    "n_seeds": 3
+   },
+   "RMSE": {
+    "mean": 56.587,
+    "min": 53.44,
+    "max": 58.75,
+    "n_seeds": 3
+   },
+   "residual_pct": {
+    "mean": 2.333,
+    "min": 2.292,
+    "max": 2.361,
+    "n_seeds": 3
+   },
+   "outside_band_pct": {
+    "mean": 17.993,
+    "min": 17.73,
+    "max": 18.43,
+    "n_seeds": 3
+   }
+  },
+  "historical_mean": {
+   "MAE": {
+    "mean": 66.587,
+    "min": 66.19,
+    "max": 66.96,
+    "n_seeds": 3
+   },
+   "RMSE": {
+    "mean": 118.38,
+    "min": 117.01,
+    "max": 119.44,
+    "n_seeds": 3
+   },
+   "residual_pct": {
+    "mean": 5.646,
+    "min": 5.609,
+    "max": 5.692,
+    "n_seeds": 3
+   },
+   "outside_band_pct": {
+    "mean": 56.437,
+    "min": 56.2,
+    "max": 56.58,
+    "n_seeds": 3
+   }
+  },
+  "knn_spatial": {
+   "MAE": {
+    "mean": 15.733,
+    "min": 15.69,
+    "max": 15.79,
+    "n_seeds": 3
+   },
+   "RMSE": {
+    "mean": 31.137,
+    "min": 30.02,
+    "max": 32.0,
+    "n_seeds": 3
+   },
+   "residual_pct": {
+    "mean": 0.926,
+    "min": 0.891,
+    "max": 0.944,
+    "n_seeds": 3
+   },
+   "outside_band_pct": {
+    "mean": 10.897,
+    "min": 10.7,
+    "max": 11.06,
+    "n_seeds": 3
+   }
+  },
+  "linear_interpolation": {
+   "MAE": {
+    "mean": 92.96,
+    "min": 89.72,
+    "max": 94.86,
+    "n_seeds": 3
+   },
+   "RMSE": {
+    "mean": 201.11,
+    "min": 195.6,
+    "max": 205.44,
+    "n_seeds": 3
+   },
+   "residual_pct": {
+    "mean": 5.665,
+    "min": 5.533,
+    "max": 5.854,
+    "n_seeds": 3
+   },
+   "outside_band_pct": {
+    "mean": 58.2,
+    "min": 57.84,
+    "max": 58.48,
+    "n_seeds": 3
+   }
+  },
+  "soft_impute": {
+   "MAE": {
+    "mean": 37.61,
+    "min": 37.54,
+    "max": 37.69,
+    "n_seeds": 3
+   },
+   "RMSE": {
+    "mean": 60.327,
+    "min": 59.69,
+    "max": 60.75,
+    "n_seeds": 3
+   },
+   "residual_pct": {
+    "mean": 3.609,
+    "min": 3.598,
+    "max": 3.628,
+    "n_seeds": 3
+   },
+   "outside_band_pct": {
+    "mean": 46.047,
+    "min": 45.9,
+    "max": 46.13,
+    "n_seeds": 3
+   }
+  }
+ }
+}

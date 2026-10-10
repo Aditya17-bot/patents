@@ -1,0 +1,15 @@
+C:\adi\patent 2\src\faults.py:148: RuntimeWarning: Mean of empty slice
+  mean = np.nanmean(block, axis=1)
+M1_A {'detectors_live': 186, 'yf_surveyed_in_any_node': 119, 'yf_surveyed_identifiable': 111, 'ours_surveyed_in_two_or_more': 65, 'ours_recovered_in_two_or_more': 109} pool 40
+C:\adi\patent 2\src\faults.py:259: RuntimeWarning: Mean of empty slice
+  mean = np.nanmean(block, axis=1)
+C:\adi\patent 2\src\correction.py:63: RuntimeWarning: All-NaN slice encountered
+  est = np.nanmedian(np.vstack(per), axis=0)
+M1_A none 0.0 {'yf_surveyed': (0.0, None, 4), 'ours_surveyed': (0.0, None, 5), 'ours_recovered': (0.0, None, 7)}
+M1_A scale 0.9 {'yf_surveyed': (0.5333, -0.1906, 3), 'ours_surveyed': (0.975, 0.9402, 3), 'ours_recovered': (0.975, 0.9522, 3)}
+M1_A scale 0.95 {'yf_surveyed': (0.325, -0.697, 8), 'ours_surveyed': (0.9333, 0.9168, 4), 'ours_recovered': (0.9667, 0.9247, 4)}
+M1_A scale 1.05 {'yf_surveyed': (0.1417, -0.0789, 3), 'ours_surveyed': (0.925, 0.9286, 3), 'ours_recovered': (0.975, 0.9339, 3)}
+M1_A scale 1.1 {'yf_surveyed': (0.3, 0.1805, 3), 'ours_surveyed': (0.9583, 0.9277, 5), 'ours_recovered': (0.975, 0.9456, 3)}
+M1_A offset -15.0 {'yf_surveyed': (0.025, -0.236, 14), 'ours_surveyed': (0.9583, 0.8844, 5), 'ours_recovered': (0.95, 0.8705, 6)}
+M1_A offset 15.0 {'yf_surveyed': (0.1333, -0.2775, 5), 'ours_surveyed': (0.9583, 0.8887, 5), 'ours_recovered': (0.975, 0.9167, 3)}
+M1_A stuck 0.0 {'yf_surveyed': (0.1583, -0.2991, 83), 'ours_surveyed': (0.9, 0.9176, 6), 'ours_recovered': (0.95, 0.9388, 4)}

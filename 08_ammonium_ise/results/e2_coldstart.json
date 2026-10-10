@@ -1,0 +1,324 @@
+{
+ "sites": 67,
+ "samples": 1173,
+ "all": {
+  "raw": {
+   "n": 1173,
+   "mean": 111.93622190963342,
+   "median": 0.56,
+   "p90": 4.048,
+   "trimmed_mean_99": 2.5107534883720932
+  },
+  "net_offset": {
+   "n": 1173,
+   "mean": 111.74291508951407,
+   "median": 0.31899999999999984,
+   "p90": 4.0,
+   "trimmed_mean_99": 2.3194710594315247
+  },
+  "net_mean": {
+   "n": 1173,
+   "mean": 111.49280481431005,
+   "median": 0.15,
+   "p90": 3.7,
+   "trimmed_mean_99": 2.0828554670457495
+  },
+  "method": {
+   "n": 1173,
+   "mean": 110.52368989288891,
+   "median": 0.16,
+   "p90": 2.4,
+   "trimmed_mean_99": 1.135600812734632
+  },
+  "method_median_b": {
+   "n": 1173,
+   "mean": 110.59103057638771,
+   "median": 0.23353909680488355,
+   "p90": 2.527021603303403,
+   "trimmed_mean_99": 1.1977005572231973
+  },
+  "placebo_temp": {
+   "n": 1173,
+   "mean": 111.480555052011,
+   "median": 0.156,
+   "p90": 3.7,
+   "trimmed_mean_99": 2.0729564076021596
+  },
+  "placebo_shuffled": {
+   "n": 1173,
+   "mean": 111.74291508951407,
+   "median": 0.31899999999999984,
+   "p90": 4.0,
+   "trimmed_mean_99": 2.3194710594315247
+  }
+ },
+ "paired_vs_raw": {
+  "better": 889,
+  "of": 1148,
+  "z": 18.593862087180092
+ },
+ "paired_vs_net_offset": {
+  "better": 496,
+  "of": 723,
+  "z": 10.004217644460345
+ },
+ "paired_vs_net_mean": {
+  "better": 172,
+  "of": 304,
+  "z": 2.2941573387056176
+ },
+ "paired_median_b_vs_net_offset": {
+  "better": 629,
+  "of": 866,
+  "z": 13.320702254199462
+ },
+ "paired_vs_placebo_temp": {
+  "better": 183,
+  "of": 334,
+  "z": 1.7509620965266648
+ },
+ "paired_vs_placebo_shuffled": {
+  "better": 496,
+  "of": 723,
+  "z": 10.004217644460345
+ },
+ "k_per_1000uS_median": 0.5777471881902498,
+ "b_median": 0.8026830730379451,
+ "sites_better_than_raw": 55,
+ "sites_better_than_net_mean": 16,
+ "sites_better_than_net_offset": 45,
+ "sc_cuts": [
+  409.66,
+  926.0
+ ],
+ "by_sc": {
+  "low": {
+   "raw": {
+    "n": 392,
+    "mean": 50.48586275510204,
+    "median": 0.192,
+    "p90": 1.74,
+    "trimmed_mean_99": 1.1886384020618557
+   },
+   "net_offset": {
+    "n": 392,
+    "mean": 50.42455994897959,
+    "median": 0.056,
+    "p90": 1.552,
+    "trimmed_mean_99": 1.1308402061855671
+   },
+   "net_mean": {
+    "n": 392,
+    "mean": 50.403257826204026,
+    "median": 0.058,
+    "p90": 1.79,
+    "trimmed_mean_99": 1.1274043837883405
+   },
+   "method": {
+    "n": 392,
+    "mean": 50.42630605933856,
+    "median": 0.058,
+    "p90": 1.79,
+    "trimmed_mean_99": 1.1371270488621206
+   },
+   "paired_vs_net_offset": {
+    "better": 27,
+    "of": 63,
+    "z": -1.1338934190276817
+   },
+   "paired_vs_net_mean": {
+    "better": 4,
+    "of": 13,
+    "z": -1.386750490563073
+   }
+  },
+  "mid": {
+   "raw": {
+    "n": 391,
+    "mean": 278.75199948849104,
+    "median": 0.543,
+    "p90": 1.804,
+    "trimmed_mean_99": 0.9800976744186046
+   },
+   "net_offset": {
+    "n": 391,
+    "mean": 278.5404800511509,
+    "median": 0.27799999999999997,
+    "p90": 1.571,
+    "trimmed_mean_99": 0.7704229974160207
+   },
+   "net_mean": {
+    "n": 391,
+    "mean": 278.3341470920342,
+    "median": 0.13,
+    "p90": 1.1339157342657344,
+    "trimmed_mean_99": 0.5795906649134908
+   },
+   "method": {
+    "n": 391,
+    "mean": 278.40895315343835,
+    "median": 0.14,
+    "p90": 1.3,
+    "trimmed_mean_99": 0.644495195038114
+   },
+   "paired_vs_net_offset": {
+    "better": 185,
+    "of": 308,
+    "z": 3.532777870248776
+   },
+   "paired_vs_net_mean": {
+    "better": 37,
+    "of": 98,
+    "z": -2.424366106925306
+   }
+  },
+  "high": {
+   "raw": {
+    "n": 390,
+    "mean": 6.4582007692307695,
+    "median": 1.2,
+    "p90": 24.639999999999997,
+    "trimmed_mean_99": 5.779604404145077
+   },
+   "net_offset": {
+    "n": 390,
+    "mean": 6.150472307692308,
+    "median": 0.8639999999999999,
+    "p90": 24.310999999999996,
+    "trimmed_mean_99": 5.472453886010363
+   },
+   "net_mean": {
+    "n": 390,
+    "mean": 5.626490939303468,
+    "median": 0.423,
+    "p90": 23.246598695246973,
+    "trimmed_mean_99": 4.953120126042333
+   },
+   "method": {
+    "n": 390,
+    "mean": 2.613527143855323,
+    "median": 0.4327038985647107,
+    "p90": 6.07109146426651,
+    "trimmed_mean_99": 2.0644464771032047
+   },
+   "paired_vs_net_offset": {
+    "better": 284,
+    "of": 352,
+    "z": 11.512838683202963
+   },
+   "paired_vs_net_mean": {
+    "better": 131,
+    "of": 193,
+    "z": 4.966728680165993
+   }
+  }
+ },
+ "bootstrap_vs_net_offset": {
+  "median_reduction": {
+   "mean": 0.15209020689211403,
+   "ci95": [
+    0.05150000000000003,
+    0.2860000000000001
+   ]
+  },
+  "p90_reduction": {
+   "mean": 4.052671974656236,
+   "ci95": [
+    0.0389999999999997,
+    20.185
+   ]
+  },
+  "trimmed_mean_reduction": {
+   "mean": 1.1457200210211764,
+   "ci95": [
+    0.09823106246079782,
+    3.11158591990145
+   ]
+  }
+ },
+ "bootstrap_vs_net_mean": {
+  "median_reduction": {
+   "mean": -0.014470821063979023,
+   "ci95": [
+    -0.063,
+    0.01100000000000001
+   ]
+  },
+  "p90_reduction": {
+   "mean": 3.413113878585084,
+   "ci95": [
+    -0.4118711069446215,
+    19.656598695246974
+   ]
+  },
+  "trimmed_mean_reduction": {
+   "mean": 0.8927827517207734,
+   "ci95": [
+    -0.029228892125262806,
+    2.9607647393679963
+   ]
+  }
+ },
+ "alarms": {
+  "0.6": {
+   "lab_exceed": 227,
+   "lab_below": 946,
+   "raw": {
+    "false_alarms": 478,
+    "missed": 89
+   },
+   "net_offset": {
+    "false_alarms": 313,
+    "missed": 127
+   },
+   "net_mean": {
+    "false_alarms": 99,
+    "missed": 164
+   },
+   "method": {
+    "false_alarms": 121,
+    "missed": 195
+   }
+  },
+  "1": {
+   "lab_exceed": 148,
+   "lab_below": 1025,
+   "raw": {
+    "false_alarms": 337,
+    "missed": 80
+   },
+   "net_offset": {
+    "false_alarms": 227,
+    "missed": 89
+   },
+   "net_mean": {
+    "false_alarms": 105,
+    "missed": 101
+   },
+   "method": {
+    "false_alarms": 110,
+    "missed": 125
+   }
+  },
+  "2": {
+   "lab_exceed": 73,
+   "lab_below": 1100,
+   "raw": {
+    "false_alarms": 158,
+    "missed": 42
+   },
+   "net_offset": {
+    "false_alarms": 137,
+    "missed": 42
+   },
+   "net_mean": {
+    "false_alarms": 96,
+    "missed": 50
+   },
+   "method": {
+    "false_alarms": 86,
+    "missed": 63
+   }
+  }
+ }
+}

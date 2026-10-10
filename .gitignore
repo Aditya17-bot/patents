@@ -1,0 +1,22 @@
+# Credentials never go into git; back them up separately.
+_secrets/
+
+# Raw datasets: re-downloadable, too large for GitHub.
+**/data/
+_screening/**/*.csv
+_screening/**/*.npy
+_screening/**/*.txt
+_screening/**/*.pkl
+*.zip
+*.parquet
+*.npz
+*.h5
+*.pt
+*.onnx
+
+# Environments and caches
+__pycache__/
+.venv/
+venv/
+node_modules/
+.ipynb_checkpoints/

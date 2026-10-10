@@ -1,0 +1,143 @@
+{
+ "rule": "residual within the self-derived limit in both halves of the record",
+ "corridors": {
+  "M25": {
+   "recovery_all": {
+    "found": 453,
+    "categories": {
+     "exact": 139,
+     "unmapped_site": 136,
+     "outside_map": 90,
+     "implied": 88
+    },
+    "judged_precision": 0.716,
+    "recall_by_size": {
+     "2": {
+      "recovered": 118,
+      "of": 156
+     },
+     "3": {
+      "recovered": 20,
+      "of": 28
+     },
+     "4": {
+      "recovered": 1,
+      "of": 15
+     }
+    },
+    "slip_recovered": 21
+   },
+   "recovery_stable": {
+    "found": 372,
+    "categories": {
+     "unmapped_site": 111,
+     "outside_map": 76,
+     "exact": 115,
+     "implied": 70
+    },
+    "judged_precision": 0.709,
+    "recall_by_size": {
+     "2": {
+      "recovered": 98,
+      "of": 156
+     },
+     "3": {
+      "recovered": 16,
+      "of": 28
+     },
+     "4": {
+      "recovered": 1,
+      "of": 15
+     }
+    },
+    "slip_recovered": 17
+   },
+   "prior_only": {
+    "MAE": 15.79,
+    "RMSE": 32.0,
+    "outside": 10.7
+   },
+   "recovered_all": {
+    "MAE": 14.47,
+    "RMSE": 33.65,
+    "outside": 6.89,
+    "constraints": 429
+   },
+   "recovered_stable": {
+    "MAE": 14.74,
+    "RMSE": 34.69,
+    "outside": 7.23,
+    "constraints": 353
+   }
+  },
+  "M1": {
+   "recovery_all": {
+    "found": 241,
+    "categories": {
+     "exact": 62,
+     "implied": 43,
+     "outside_map": 44,
+     "unmapped_site": 92
+    },
+    "judged_precision": 0.705,
+    "recall_by_size": {
+     "2": {
+      "recovered": 55,
+      "of": 75
+     },
+     "3": {
+      "recovered": 7,
+      "of": 11
+     },
+     "4": {
+      "recovered": 0,
+      "of": 2
+     }
+    },
+    "slip_recovered": 7
+   },
+   "recovery_stable": {
+    "found": 206,
+    "categories": {
+     "exact": 56,
+     "implied": 38,
+     "outside_map": 44,
+     "unmapped_site": 68
+    },
+    "judged_precision": 0.681,
+    "recall_by_size": {
+     "2": {
+      "recovered": 49,
+      "of": 75
+     },
+     "3": {
+      "recovered": 7,
+      "of": 11
+     },
+     "4": {
+      "recovered": 0,
+      "of": 2
+     }
+    },
+    "slip_recovered": 7
+   },
+   "prior_only": {
+    "MAE": 13.76,
+    "RMSE": 29.09,
+    "outside": 11.68
+   },
+   "recovered_all": {
+    "MAE": 12.72,
+    "RMSE": 36.12,
+    "outside": 8.66,
+    "constraints": 209
+   },
+   "recovered_stable": {
+    "MAE": 13.21,
+    "RMSE": 42.05,
+    "outside": 8.79,
+    "constraints": 174
+   }
+  }
+ }
+}

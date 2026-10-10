@@ -1,0 +1,13 @@
+M1_A: 186 sites, 88 surveyed relations
+  pairs 492, adjacent after ordering 131, self floor 1.181%
+  junction candidates 614
+  categories {'exact': 62, 'implied': 43, 'outside_map': 44, 'unmapped_site': 92}, judged precision 0.705
+  recall by size {'2': {'recovered': 55, 'of': 75}, '3': {'recovered': 7, 'of': 11}, '4': {'recovered': 0, 'of': 2}}
+Traceback (most recent call last):
+  File "C:\adi\patent 2\src\discovery_v2_eval.py", line 121, in <module>
+    main(*(sys.argv[1:2] or ["window_full_M25_A.json"]))
+  File "C:\adi\patent 2\src\discovery_v2_eval.py", line 92, in main
+    disc = discover.relations_to_fitted(rel_train, c)
+  File "C:\adi\patent 2\src\discover.py", line 270, in relations_to_fitted
+    "baseline_residual": rel["median_abs_residual"],
+KeyError: 'median_abs_residual'

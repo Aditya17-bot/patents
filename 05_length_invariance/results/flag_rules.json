@@ -1,0 +1,114 @@
+{
+ "M25": {
+  "march_counts": {
+   "0.01": {
+    "detectors": 113,
+    "median": 74,
+    "local": 35
+   },
+   "0.02": {
+    "detectors": 113,
+    "median": 61,
+    "local": 27
+   },
+   "0.03": {
+    "detectors": 113,
+    "median": 53,
+    "local": 23
+   },
+   "0.05": {
+    "detectors": 113,
+    "median": 37,
+    "local": 16
+   }
+  },
+  "injection": {
+   "median T=0.02": {
+    "injections": 436,
+    "other_flips_per_injection": 0.521,
+    "newly_flagged": "183/196"
+   },
+   "local T=0.02": {
+    "injections": 436,
+    "other_flips_per_injection": 0.312,
+    "newly_flagged": "103/304"
+   },
+   "median T=0.03": {
+    "injections": 436,
+    "other_flips_per_injection": 0.417,
+    "newly_flagged": "189/236"
+   },
+   "local T=0.03": {
+    "injections": 436,
+    "other_flips_per_injection": 0.261,
+    "newly_flagged": "107/332"
+   },
+   "median T=0.05": {
+    "injections": 436,
+    "other_flips_per_injection": 0.273,
+    "newly_flagged": "173/304"
+   },
+   "local T=0.05": {
+    "injections": 436,
+    "other_flips_per_injection": 0.197,
+    "newly_flagged": "89/360"
+   }
+  }
+ },
+ "M1": {
+  "march_counts": {
+   "0.01": {
+    "detectors": 222,
+    "median": 152,
+    "local": 73
+   },
+   "0.02": {
+    "detectors": 222,
+    "median": 130,
+    "local": 69
+   },
+   "0.03": {
+    "detectors": 222,
+    "median": 105,
+    "local": 58
+   },
+   "0.05": {
+    "detectors": 222,
+    "median": 78,
+    "local": 43
+   }
+  },
+  "injection": {
+   "median T=0.02": {
+    "injections": 652,
+    "other_flips_per_injection": 0.506,
+    "newly_flagged": "208/228"
+   },
+   "local T=0.02": {
+    "injections": 652,
+    "other_flips_per_injection": 0.314,
+    "newly_flagged": "121/420"
+   },
+   "median T=0.03": {
+    "injections": 652,
+    "other_flips_per_injection": 0.525,
+    "newly_flagged": "220/284"
+   },
+   "local T=0.03": {
+    "injections": 652,
+    "other_flips_per_injection": 0.291,
+    "newly_flagged": "130/456"
+   },
+   "median T=0.05": {
+    "injections": 652,
+    "other_flips_per_injection": 0.505,
+    "newly_flagged": "188/352"
+   },
+   "local T=0.05": {
+    "injections": 652,
+    "other_flips_per_injection": 0.242,
+    "newly_flagged": "108/500"
+   }
+  }
+ }
+}

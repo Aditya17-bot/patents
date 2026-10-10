@@ -1,0 +1,96 @@
+{
+ "P_star": 80.88,
+ "setpoint": 75.88,
+ "sensors": {
+  "Reference_1": {
+   "n": 11162,
+   "offset_mean": 5.5,
+   "mismatch": 0.012,
+   "full_slab_irr": 0.0,
+   "starved": 0.005
+  },
+  "Reference_2": {
+   "n": 11162,
+   "offset_mean": 2.38,
+   "mismatch": 0.009,
+   "full_slab_irr": 0.0,
+   "starved": 0.004
+  },
+  "AICU_1": {
+   "n": 11163,
+   "offset_mean": -2.16,
+   "mismatch": 0.416,
+   "full_slab_irr": 0.185,
+   "starved": 0.0
+  },
+  "AICU_2": {
+   "n": 10778,
+   "offset_mean": -18.45,
+   "mismatch": 0.959,
+   "full_slab_irr": 0.535,
+   "starved": 0.0
+  },
+  "Automatoes_1": {
+   "n": 11162,
+   "offset_mean": -6.22,
+   "mismatch": 0.664,
+   "full_slab_irr": 0.475,
+   "starved": 0.0
+  },
+  "Automatoes_2": {
+   "n": 11162,
+   "offset_mean": -1.07,
+   "mismatch": 0.063,
+   "full_slab_irr": 0.0,
+   "starved": 0.003
+  },
+  "Digilog_1": {
+   "n": 11162,
+   "offset_mean": -4.65,
+   "mismatch": 0.554,
+   "full_slab_irr": 0.247,
+   "starved": 0.0
+  },
+  "Digilog_2": {
+   "n": 11162,
+   "offset_mean": -12.94,
+   "mismatch": 0.693,
+   "full_slab_irr": 0.478,
+   "starved": 0.0
+  },
+  "IUACAAS_1": {
+   "n": 11162,
+   "offset_mean": 1.45,
+   "mismatch": 0.039,
+   "full_slab_irr": 0.0,
+   "starved": 0.0
+  },
+  "IUACAAS_2": {
+   "n": 11162,
+   "offset_mean": -8.44,
+   "mismatch": 0.715,
+   "full_slab_irr": 0.397,
+   "starved": 0.0
+  },
+  "TheAutomators_1": {
+   "n": 11163,
+   "offset_mean": -4.06,
+   "mismatch": 0.288,
+   "full_slab_irr": 0.109,
+   "starved": 0.0
+  },
+  "TheAutomators_2": {
+   "n": 11163,
+   "offset_mean": -4.8,
+   "mismatch": 0.426,
+   "full_slab_irr": 0.141,
+   "starved": 0.0
+  }
+ },
+ "median_over_sensors": {
+  "mismatch": 0.421,
+  "full_slab_irr": 0.163,
+  "starved": 0.0
+ },
+ "sensors_with_mismatch_over_20pct": 8
+}

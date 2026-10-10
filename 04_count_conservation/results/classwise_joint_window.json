@@ -1,0 +1,105 @@
+{
+ "corridor": {
+  "sites": 51,
+  "intervals": 2972,
+  "nodes_fitted": 18
+ },
+ "prior": "knn_spatial",
+ "seed": 0,
+ "max_run": 96,
+ "missingness": {
+  "0.05": {
+   "cells_hidden": 6649,
+   "A_prior_MAE": 21.67,
+   "C_total_MAE": 19.94,
+   "E_total_only_MAE": 19.94,
+   "E_total_and_class_MAE": 22.32,
+   "gain_E_over_C_pct": -11.94,
+   "gain_E_over_A_pct": -3.0,
+   "outside_band_pct_C": 1.78,
+   "outside_band_pct_E": 2.24,
+   "class_MAE_under_E": {
+    "len_0_520": 19.27,
+    "len_521_660": 7.54,
+    "len_661_1160": 5.4,
+    "len_1160_plus": 7.03
+   },
+   "intervals_unreconciled_C": 225,
+   "intervals_unreconciled_E": 439,
+   "constraints_per_interval_C": 6.59,
+   "constraints_per_interval_E": 32.97,
+   "seconds_C": 3.79,
+   "seconds_E": 56.38
+  },
+  "0.10": {
+   "cells_hidden": 13297,
+   "A_prior_MAE": 22.03,
+   "C_total_MAE": 21.05,
+   "E_total_only_MAE": 21.05,
+   "E_total_and_class_MAE": 22.79,
+   "gain_E_over_C_pct": -8.27,
+   "gain_E_over_A_pct": -3.45,
+   "outside_band_pct_C": 1.17,
+   "outside_band_pct_E": 1.59,
+   "class_MAE_under_E": {
+    "len_0_520": 19.54,
+    "len_521_660": 7.38,
+    "len_661_1160": 5.39,
+    "len_1160_plus": 7.05
+   },
+   "intervals_unreconciled_C": 233,
+   "intervals_unreconciled_E": 492,
+   "constraints_per_interval_C": 8.31,
+   "constraints_per_interval_E": 41.54,
+   "seconds_C": 6.207,
+   "seconds_E": 87.93
+  },
+  "0.20": {
+   "cells_hidden": 26595,
+   "A_prior_MAE": 21.7,
+   "C_total_MAE": 20.96,
+   "E_total_only_MAE": 20.96,
+   "E_total_and_class_MAE": 29.59,
+   "gain_E_over_C_pct": -41.17,
+   "gain_E_over_A_pct": -36.36,
+   "outside_band_pct_C": 1.14,
+   "outside_band_pct_E": 1.59,
+   "class_MAE_under_E": {
+    "len_0_520": 24.62,
+    "len_521_660": 8.38,
+    "len_661_1160": 6.02,
+    "len_1160_plus": 7.65
+   },
+   "intervals_unreconciled_C": 251,
+   "intervals_unreconciled_E": 543,
+   "constraints_per_interval_C": 11.16,
+   "constraints_per_interval_E": 55.81,
+   "seconds_C": 9.476,
+   "seconds_E": 162.42
+  },
+  "0.40": {
+   "cells_hidden": 53192,
+   "A_prior_MAE": 24.67,
+   "C_total_MAE": 24.62,
+   "E_total_only_MAE": 24.62,
+   "E_total_and_class_MAE": 36.43,
+   "gain_E_over_C_pct": -47.97,
+   "gain_E_over_A_pct": -47.67,
+   "outside_band_pct_C": 0.7,
+   "outside_band_pct_E": 1.15,
+   "class_MAE_under_E": {
+    "len_0_520": 30.1,
+    "len_521_660": 9.34,
+    "len_661_1160": 6.36,
+    "len_1160_plus": 8.14
+   },
+   "intervals_unreconciled_C": 200,
+   "intervals_unreconciled_E": 454,
+   "constraints_per_interval_C": 14.96,
+   "constraints_per_interval_E": 74.8,
+   "seconds_C": 34.0,
+   "seconds_E": 576.02
+  }
+ },
+ "seconds": 1049.4
+}

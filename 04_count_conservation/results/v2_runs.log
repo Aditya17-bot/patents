@@ -1,0 +1,34 @@
+full_M25_A: 367 sites, 199 surveyed relations
+  pairs 959, adjacent after ordering 229, self floor 0.902%
+  junction candidates 1043
+  categories {'exact': 139, 'unmapped_site': 136, 'outside_map': 90, 'implied': 88}, judged precision 0.716
+  recall by size {'2': {'recovered': 118, 'of': 156}, '3': {'recovered': 20, 'of': 28}, '4': {'recovered': 1, 'of': 15}}
+  prior_only   MAE   15.79  outside  10.70%
+  surveyed     MAE   14.41  outside   5.46%  constraints 199
+  recovered    MAE   14.47  outside   6.89%  constraints 429
+  both         MAE   14.09  outside   5.57%  constraints 628
+wrote results/discovery_v2_full_M25_A.json
+full_M25_A: 367 sites, 199 map relations, 453 recovered relations
+control: 23 of 199 map relations flagged (false flags)
+  sign_flip     trials  60  detected  86.7%  repaired exactly  40.0%
+  drop_member   trials  60  detected  98.3%  repaired exactly  16.7%
+  wrong_site    trials  60  detected  78.3%  repaired exactly  36.7%
+  extra_member  trials  60  detected  76.7%  repaired exactly  70.0%
+wrote results/map_audit_full_M25_A.json
+M1_A: 186 sites, 88 surveyed relations
+  pairs 492, adjacent after ordering 131, self floor 1.181%
+  junction candidates 614
+  categories {'exact': 62, 'implied': 43, 'outside_map': 44, 'unmapped_site': 92}, judged precision 0.705
+  recall by size {'2': {'recovered': 55, 'of': 75}, '3': {'recovered': 7, 'of': 11}, '4': {'recovered': 0, 'of': 2}}
+  prior_only   MAE   13.76  outside  11.68%
+  surveyed     MAE   13.07  outside   7.68%  constraints 88
+  recovered    MAE   12.72  outside   8.66%  constraints 209
+  both         MAE   12.29  outside   7.35%  constraints 297
+wrote results/discovery_v2_M1_A.json
+M1_A: 186 sites, 88 map relations, 241 recovered relations
+control: 11 of 88 map relations flagged (false flags)
+  sign_flip     trials  47  detected  55.3%  repaired exactly  25.5%
+  drop_member   trials  38  detected  84.2%  repaired exactly   5.3%
+  wrong_site    trials  60  detected  76.7%  repaired exactly  28.3%
+  extra_member  trials  60  detected  83.3%  repaired exactly  71.7%
+wrote results/map_audit_M1_A.json

@@ -1,0 +1,97 @@
+{
+ "meta": {
+  "window": 12,
+  "min_prior": 6,
+  "match_min": 30,
+  "sites_paired": 71,
+  "sites_scored": 57,
+  "samples_scored": 778,
+  "samples_matched": 1120,
+  "period": [
+   "2007-12-09",
+   "2026-09-21"
+  ]
+ },
+ "all": {
+  "raw": {
+   "n": 778,
+   "mean": 145.7077771208226,
+   "median": 0.53,
+   "p90": 8.459
+  },
+  "offset": {
+   "n": 778,
+   "mean": 143.98244736503855,
+   "median": 0.16099999999999998,
+   "p90": 2.06
+  },
+  "drift": {
+   "n": 778,
+   "mean": 152.26582880871317,
+   "median": 0.172,
+   "p90": 3.921929955087679
+  },
+  "method": {
+   "n": 778,
+   "mean": 143.54853094613887,
+   "median": 0.158,
+   "p90": 2.06
+  },
+  "method_free": {
+   "n": 778,
+   "mean": 147.92114965695222,
+   "median": 0.17098546283822458,
+   "p90": 2.9
+  },
+  "placebo_temp": {
+   "n": 778,
+   "mean": 149.56164734174018,
+   "median": 0.1801616900039755,
+   "p90": 3.6652049040880295
+  },
+  "placebo_shuffled": {
+   "n": 778,
+   "mean": 143.78098050204363,
+   "median": 0.1501394130574857,
+   "p90": 2.0847987171904636
+  }
+ },
+ "paired": {
+  "raw": {
+   "better": 636,
+   "of": 763,
+   "z": 18.427037232815113
+  },
+  "offset": {
+   "better": 263,
+   "of": 488,
+   "z": 1.720179174807852
+  },
+  "drift": {
+   "better": 351,
+   "of": 650,
+   "z": 2.039607805437114
+  },
+  "method_free": {
+   "better": 76,
+   "of": 136,
+   "z": 1.3719886811400706
+  },
+  "placebo_temp": {
+   "better": 328,
+   "of": 633,
+   "z": 0.9141679285447388
+  },
+  "placebo_shuffled": {
+   "better": 273,
+   "of": 526,
+   "z": 0.8720414403938948
+  }
+ }
+}
+sites method < offset: 19 of 57
+bootstrap: {"offset": {"mean": 0.40986415300619694, "ci95": [-0.04080386776081468, 0.9753868702135264]}, "drift": {"mean": 9.238203072730345, "ci95": [-20.112088990951747, 53.221427778275434]}, "raw": {"mean": 2.0722967904480902, "ci95": [0.2601699727000548, 4.417721946093849]}}
+bands: {"0-0.2": {"raw": 24.816, "offset": 23.899, "method": 23.529}, "0.2-1": {"raw": 474.206, "offset": 472.618, "method": 472.403}, "1-1e+09": {"raw": 13.116, "offset": 7.518, "method": 6.356}}
+sc terciles: {"low": {"raw": 10.03, "offset": 9.842, "method": 9.841}, "mid": {"raw": 419.963, "offset": 419.559, "method": 419.827}, "high": {"raw": 7.654, "offset": 3.065, "method": 1.493}}
+alarms: {"0.6": {"lab_exceed": 171, "raw": {"false_alarms": 291, "missed": 64}, "offset": {"false_alarms": 106, "missed": 53}, "drift": {"false_alarms": 125, "missed": 49}, "method": {"false_alarms": 113, "missed": 47}}, "1": {"lab_exceed": 98, "raw": {"false_alarms": 224, "missed": 46}, "offset": {"false_alarms": 80, "missed": 35}, "drift": {"false_alarms": 112, "missed": 29}, "method": {"false_alarms": 92, "missed": 36}}, "2": {"lab_exceed": 52, "raw": {"false_alarms": 120, "missed": 30}, "offset": {"false_alarms": 56, "missed": 21}, "drift": {"false_alarms": 78, "missed": 5}, "method": {"false_alarms": 66, "missed": 21}}}
+physics: {"k_positive": 38, "k_n": 57, "k_median_mgL_per_1000uS": 0.5421300095593388, "within_site_r_median": 0.1783988239343996, "within_site_r_positive": 37, "within_site_r_n": 56, "across_site_spearman_overread_vs_sc": 0.8378273269380347}

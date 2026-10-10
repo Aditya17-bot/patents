@@ -1,0 +1,96 @@
+
+### (cavitation) (NPSH) (learn OR adaptive OR calibrat) (pump)
+US11852148B2  2019-10-29   Real-time pump monitoring with prescriptive analytics
+US9422938B2  2008-05-27   Relating to centrifugal pump impellers
+CA2726849C  2008-06-13   Lubricant retainer for pump shaft bearing assembly
+US7802734B2  2005-05-03   Packaged air handling system for fully integrated heat exchange optimization
+ES2856523T3  2013-12-03   Rotary diffuser pump
+US20120073822A1  2008-04-04   Fluid Treatment System
+US9188069B2  2012-12-27   Gaseous fuel system, direct injection gas engine system, and method
+CN104462652B  2014-11-07   A kind of design method of the integrated motor pump-jet propulsor hydraulic …
+US8550771B2  2009-08-03   Inducer for centrifugal pump
+US20210309334A1  2018-08-03   Propulsion device with outboard waterjet for marine vehicles
+ES2447827T3  2009-11-14   Thermodynamic machine and procedure for its operation
+US9631622B2  2009-10-09   Inducer for centrifugal pump
+ES2620178T3  2009-05-06   Gas-tolerant underwater pump.
+US20180258926A1  2011-04-29   Pump system
+JP5313338B2  2008-05-16   Device and method for pumping cryogenic fluid
+US20230098259A1  2018-09-11   Sealing In Helical Trochoidal Rotary Machines
+US9562533B2  2010-10-29   Cryogenic pump for liquefied gases
+US10577269B1  2014-02-08   De-scaling: The critical key to effective desalination
+CN112664464A  2020-12-28   Intelligent efficient optimization control method for water pump
+US20080097679A1  2006-03-23   Internal combustion water injection engine
+CN108591041A  2018-07-06   Minimum flow recirculation valve control system and method for feed pump
+US20200340483A1  2017-10-25   Method and device for maintaining a pumping system in operational condition
+CH701616B1  2009-08-07  …  device to prevent vortices in the vicinity of the suction section of a pump.
+JP6016889B2  2011-04-29   Controller for controlling frequency converter and control method
+US20200344945A1  2019-05-02   Trailered engine driven lagoon pump for mixing and pumping manure slurries
+CN103646297A  2013-12-02   Double-channel pump optimization method based on multi-objective genetic …
+US20210285440A1  2020-03-10   Fixed-Eccentricity Helical Trochoidal Rotary Machines
+US20200188838A1  2018-12-14   Process and apparatus for regeneration of a laden scrubbing medium from a gas …
+CN106039615B  2016-07-29   Large-flow remote fire extinguishing system
+US11561147B2  2019-05-16   Device and method for improved testing of a hydraulic part for a turbomachine
+
+### (cavitation) (wear) (distinguish OR discriminat OR separat) (centrifugal pump) (head)
+EP2917586B1  2012-11-12   Impeller for centrifugal pump and use thereof when pumping drill fluid …
+KR101722614B1  2016-07-08   Pump equipped with impeller
+KR101570665B1  2012-08-30   Flood disaster control system
+US12092116B2  2018-02-27   Fluid delivery system health monitoring systems and methods
+US20230175375A1  2021-06-18   Hydraulic fracturing blender system
+US11507898B2  2001-08-10   System and method for dynamic multi-objective optimization of machine selection …
+US20200388140A1  2019-06-07   Persistent monitoring and real time low latency local control of centrifugal …
+US7668694B2  2002-11-26  …  , and desired pump operating speed, using a control system for a centrifugal …
+US12209590B2  2019-10-29   Real-time pump monitoring with prescriptive analytics
+US20240050111A1  2018-06-15   Systems and methods for aspiration and monitoring
+US10711787B1  2014-05-27   Pumping facilities and control systems
+RU2642203C2  2013-01-25   Method and system of aero/hydrodynamic control of newtonian fluid flow in …
+RU2606196C2  2012-03-12   Pump and pump section
+US9729639B2  2001-08-10   System and method for dynamic multi-objective optimization of machine selection …
+US8417360B2  2001-08-10   System and method for dynamic multi-objective optimization of machine selection …
+US20210110827A1  2018-05-25   Voice Appliance
+US10184699B2  2014-10-27   Fluid distribution unit for two-phase cooling system
+US9852963B2  2014-10-27   Microprocessor assembly adapted for fluid cooling
+US12429262B2  2014-10-27   Redundant heat sink module
+US10921765B2  2017-12-20   Digital twin of centrifugal pump in pumping systems
+US9854714B2  2011-06-27   Method of absorbing sensible and latent heat with series-connected heat sinks
+US10022614B1  2016-05-02   Smart device
+US12285361B2  2019-02-01   Ophthalmic cutting instruments having integrated aspiration pump
+US20260108292A1  2011-01-04   Breastfeeding system
+US9771280B2  2001-07-16   System, method and apparatus for treating liquids with wave energy from plasma
+US9776893B2  2007-08-01   Mobile station for diagnosing and modeling site specific effluent treatment …
+EP2956643B1  2013-02-13   Outboard motor including oil tank features
+US8774972B2  2007-05-14   Intelligent pump system
+KR20230129143A  2022-02-28   AI, IoT, Meta equipment, facility, measures, system and works, construction, …
+JP2024531877A  2021-07-22   System and method for performing different operations on a single machine - …
+
+### (NPSH) (head drop) (operation) (determin) (in situ OR online OR during operation) (centrifugal pump)
+SU203487A1     SUBMERSIBLE ELECTRIC DRIVE PUMP FOR DRAINING SECURED LIQUID FROM WELLS
+CA2889539A1  2014-04-28   Apparatus, system and method for reducing gas to liquid ratios in submersible …
+CN114483600B  2020-11-13   Centrifugal pump operation
+CN101750258B  2008-12-09   Method and system for detecting cavitation of pump and frequency converter
+CA3048275A1  2019-06-28   Inducer for a submersible pump for pumping a pumping media containing solids …
+KR101570665B1  2012-08-30   Flood disaster control system
+US20230175375A1  2021-06-18   Hydraulic fracturing blender system
+EP4365086B1  2022-11-07   Integrated cryogenic hydrogen tank systems and methods for operating the same
+US20200378687A1  2016-08-01   Multi-Phase Thermal Control Apparatus, Evaporators and Methods of Manufacture …
+US8235776B2  2003-07-08   Fully articulated and comprehensive air and fluid distribution, metering, and …
+US7802734B2  2005-05-03   Packaged air handling system for fully integrated heat exchange optimization
+US8114954B2  2000-12-07   Polyester process using a pipe reactor
+US20220248567A1  2012-02-07   Computer Cooling System And Method of Use
+US20240167630A1  2022-05-10   Systems for refueling cryo-compressed hydrogen tanks and methods for operating …
+US8381544B2  2008-07-18   Method for liquefaction of natural gas
+US8774972B2  2007-05-14   Intelligent pump system
+US12209590B2  2019-10-29   Real-time pump monitoring with prescriptive analytics
+US9618006B2  2008-06-13   Lubricant retainer for pump shaft bearing assembly
+US9010141B2  2010-04-19   Computer cooling system and method of use
+CN106368960B  2016-10-27   Centrifugal pump critical cavitation point detection device and detection method
+US7553460B2  2004-05-21   Process and apparatus for cracking hydrocarbon feedstock containing resid to …
+KR102159859B1  2015-06-09   Gas Treatment System
+US11323003B2  2017-10-25   Compact, modular, pump or turbine with integral modular motor or generator and …
+US9422938B2  2008-05-27   Relating to centrifugal pump impellers
+US12370471B2  2021-05-12   Slurry removal system
+ES3041179T3  2014-08-12   Forward osmotic and water hammer method of membrane cleaning
+KR20240021497A  2022-08-10   Life Saving and Installation of Water Tank for Flood Control in Flooded Areas …
+CN103620218B  2011-04-29   Pumping system
+EP2865854B1  2013-10-23   Device and method for reliable starting of ORC systems
+USRE48011E1  2010-07-30   Screw type pump or motor

@@ -1,0 +1,340 @@
+Continuous monitoring of water utilities in 
+the UK using the EXO Ammonium ISE
+Application
+Effluent & stormwater monitoring
+Client
+Wastewater management
+Xylem’s role
+Deployment and data collection
+Project results
+Real-time ammonium data from EXO 
+sensors viewed on HydroSphere can 
+provide valuable insight on sewage 
+overflow events for Environment Act 
+monitoring in the UK.
+The Environment Act 2021
+In 2021, the United Kingdom passed the Environment Act (EA 21), a 
+pivotal legislative framework for environmental protection. Section 
+82 of EA 21 establishes stringent regulations for water quality to 
+safeguard aquatic ecosystems and ensure the health and safety of 
+the population. This section delineates the criteria and standards that 
+must be met to maintain or enhance the quality of waterbodies across 
+England. It calls for regulatory agencies to actively manage and monitor 
+water pollution sources, requiring that all discharges, whether industrial, 
+agricultural, or municipal, adhere to prescribed limits on contaminants.1  
+Among the water quality parameters of concern in Section 82 are 
+temperature, dissolved oxygen, pH, turbidity, and ammonia. Maintaining 
+compliance requires water companies in England to continuously 
+monitor water quality upstream and downstream of all combined sewer 
+overflows (CSOs) and sewage treatment works that discharge into a 
+watercourse, which is especially important during heavy rain events 
+when sewer pipe capacities are exceeded, causing untreated sewage to 
+spill into the environment.2  
+Case study
+YSI  • XA00358
+Ammonium ISEs for freshwater monitoring
+Ammonium and ammonia are important to monitor because they can indicate industrial, 
+agricultural, and wastewater runoff, and high concentrations can enhance the growth of algae 
+and macrophytes and are potentially toxic to aquatic organisms. Ammonium Ion Selective 
+Electrodes (ISEs), such as those compatible with the YSI EXO Multiparameter Sonde, can 
+measure ammonium directly in the water column using proven electrochemical techniques that 
+specifically measure ammonium (NH4
++) ions.  
+The EXO Ammonium ISE uses a silver/silver chloride wire electrode in a custom reference solution to measure the 
+potential across a membrane that depends on the relative concentration of ammonium ions in the water. The sensor is 
+ideal for freshwater (<1500 µS/cm) because ionic species in saltwater can interfere with the measurements. Ammonia is 
+a calculated parameter and is dependent on temperature, salinity, and pH. The sensor references live measurements from 
+the EXO Conductivity/Temperature and pH sensor for the most accurate ammonia data. This makes the Ammonium ISE a 
+valuable tool for monitoring ammonium and ammonia in freshwater environments, especially those impacted by CSOs.  
+Historically, Ammonium ISEs have been used for discrete measurements rather than deployments since they could be 
+prone to drift and require frequent calibration. Combined with their accuracy specification of ±2 mg/L-N, this created 
+a limitation for the use of the sensors to achieve the continuous monitoring required of water utilities by EA 21. 
+Improvements to sensor technology and calibration techniques have enabled Xylem to use these sensors for monitoring 
+applications. 
+To make the case for the use of the EXO Ammonium ISE in long-term deployments to provide data on the impact of 
+sewage overflows and wastewater effluent during storm events in real-time, Xylem UK worked with the Environment 
+Agency and several English water companies to install EXO2S sondes with telemetry upstream and downstream of 
+wastewater final effluent and sewage pumping stations.  
+02
+Long-term deployment testing
+Beginning in 2022, two EXO2S sondes were installed in the receiving water upstream and downstream of a sewage 
+pumping station to monitor water quality and the impact of the overflow tank during storm events. These site locations 
+were chosen to bracket the effects of the effluent on the waterbody, as demonstrated by the example scenario depicted 
+in Figure 1.
+Figure 1. An example showing how the wastewater outfall location is evident from the distribution of spatial ammonium concentration 
+data collected during a one-time survey performed with an rQPOD Remote Surface Water Vehicle equipped with an EXO Sonde.
+The sondes were equipped with EXO Conductivity/Temperature, Optical 
+Dissolved Oxygen, pH, Turbidity, and Ammonium Smart Sensors with a 
+Central Wiper for anti-fouling. The systems were connected via cellular 
+telemetry to HydroSphere, a cloud-based data collection platform, to 
+view site data remotely in real-time.
+The Xylem UK HydroDaaS (Data as a Service) team performed 
+regular calibration of the sondes in a laboratory approximately every 
+two months and swapped the sensors in the field, deploying newly 
+calibrated sensors and retrieving field sensors due for calibration. 
+Post-deployment checks were performed in calibration standards 
+to determine sensor drift. Grab samples from the upstream and 
+downstream deployment sites were collected by the water utility every 
+two weeks and analyzed by a certified lab. The lab-analyzed data was 
+used to compare against the data collected by the EXO sensors to 
+check for the accuracy of the field measurements. 
+A site-specific correction of the sensor data using correlations to grab 
+sample data may have improved the sensor accuracy, but the purpose 
+of the test was to deploy sensors calibrated in a lab with standard 
+solutions to represent the most user-friendly and direct approach to 
+collecting field measurements.
+Upstream
+Downstream
+03
+Figure 2. Upstream site EXO Turbidity sensor data with lab-analyzed grab sample data.
+Figure 3. Upstream site EXO pH sensor data with lab-analyzed grab sample data.
+EXO sensor stability and accuracy
+All sensors demonstrated high stability during the deployments. 
+Post-deployment checks showed minimal sensor drift. Most EXO 
+sensors, including Optical DO, Turbidity, and Conductivity/Temperature 
+experience very little measurement drift over time; after calibration and 
+subsequent deployment, they read very close to the calibration value 
+in standard after removal from the field. Historically, ISE sensors tend 
+to drift more readily during deployments; however, the EXO Ammonium 
+ISE sensor drifted only 0.25 mg/L at the upstream site and 0.31 mg/L 
+at the downstream site over a 73-day trial period. The reliable stability 
+of the sensors allowed the team to adhere to a 2-month cycle of 
+swapping deployed sensors with calibrated sensors. 
+The EXO sensor measurements were highly accurate when compared 
+to the lab-analyzed grab samples. For example, the Turbidity and pH 
+graphs (Figures 2 and 3) demonstrate the tight correlation between 
+the lab and field data. The data also demonstrate the benefit of the 
+granular, event-based data that field sensors can provide over grab 
+samples. 
+HydroSphere for real-time data 
+The ability to view real-time data in 
+HydroSphere allowed the team to 
+monitor the site conditions as storm 
+events occurred. 
+They not only watched for spikes 
+and changing indicators in the live 
+data, but also set customizable 
+alarms to notify them by email and 
+text of low batteries, high turbidity 
+events, changing temperatures, 
+and more. 
+!
+04
+They were able to stay aware of 
+situations that may require in-person 
+visits; to clear out accumulated 
+debris, fouling, and sediment, 
+maintain the deployment structures 
+and replace parts, swap out sondes, 
+and collect grab samples.
+Learn more about HydroSphere.
+HydroSphere
+ysi.com/HydroSphere
+Map
+Homepage
+Dashboard Builder
+Accounts
+Networks
+Alarms
+Data Exports
+Contacts
+Remote Servers
+My HydroSphere
+Help
+My Dashboards
+Dashboard Explorer  Brannum  Lake
+Line Graph
+10
+20
+30
+40
+50
+60
+Jan Feb Mar Apr May Jun
+Bar Graph
+10
+20
+30
+40
+50
+60
+Jan Feb Mar Apr May
+Preview Add Widget
+Surface Current Speed
+cm / s
+20
+0
+13:15 13:30 13:45 14:00 14:15 14:30 14:45
+12:00 PM
+12/31/2025
+Map
+Map
+Wave Direction
+N
+Line Graph
+10
+20
+30
+40
+50
+60
+Jan Feb Mar Apr May Jun
+Bar Graph
+10
+20
+30
+40
+50
+60
+Jan Feb Mar Apr May
+Surface Current Speed
+cm / s
+20
+0
+13:15 13:30 13:45 14:00 14:15 14:30 14:45
+ysi.com/HydroSphere
+Dashboard Explorer
+
+The Ammonium ISE collects direct measurements of the ionic concentration of ammonium (NH4
++) in the water. 
+Ammonium measurements averaged 0.21 mg/L at the upstream site and 0.24 mg/L at the downstream site in a four-
+month subset; the downstream data is more right-skewed with more high-value measurements during storm events than 
+at the upstream site (Figure 4).
+Figure 4. Boxplot distributions of the ammonium concentrations at the upstream and downstream sites.
+Figure 5. EXO ammonium and ammonia concentrations with lab-determined Total Ammonia Nitrogen 
+(TAN) at the downstream site.
+The ammonia (NH3) measurements were consistently close to zero (about 0.001 mg/L) due to the effect of pH, which 
+was between 7 and 8, on ammonia solubility.3 Ammonia therefore had a minimal contribution to the summation of 
+ammonia and ammonium measurements when comparing against laboratory results in Total Ammonia Nitrogen (TAN). 
+Interfering species, such as halide ions, can cause false positive ammonium measurements of up to 0.5 mg/L higher than 
+lab results. However, throughout the deployment test, the Ammonium ISE only read approximately 0.2 mg/L (NH4
++ + NH3) 
+higher than the laboratory results (TAN), exhibiting high accuracy compared to grab samples (Figure 5).
+05
+While the sensor’s total measurement range is up to 200 mg/L, it excels in the low-end sensitivity, within the 0 – 10 mg/L 
+NH4+-N range. According to local data, most UK surface waterbodies have total ammonia concentrations less than 1 
+mg/L, making the EXO Ammonium ISE ideal for these freshwater monitoring environments.
+Monitoring sewage overflows
+From the live data in HydroSphere, rainfall events were evident from decreases in pH and specific conductivity due to 
+the effects of precipitation and dilution from increased flow. The storm events caused increases in turbidity likely from 
+runoff and resuspension of sediment. The turbidity spikes tend to correlate with increased ammonium. During baseflow, 
+ammonium measurements at both the upstream and downstream sites were around 0.2 mg/L. During storm events, the 
+ammonium concentration downstream of the water treatment plant tended to be higher than upstream (Figures 6 and 7, 
+orange boxes). For example, an event in April saw 0.49 mg/L of ammonium upstream, and 0.59 mg/L downstream of the 
+sewage pumping station.
+Figure 6. Upstream site EXO sensor data from HydroSphere. Rain events are correlated with low 
+specific conductivity and spikes in turbidity and ammonium.
+Figure 7. Downstream site EXO sensor data from HydroSphere. Rain events are 
+correlated with low specific conductivity and spikes in turbidity and ammonium.
+06
+The sensor data can help differentiate between storm events in which sewage overflow discharges occur and those that 
+do not. For example, in this graph of the downstream data (Figure 8), the pink box indicates a large increase in Turbidity, 
+above 200 NTU, and decrease in specific conductivity that occurred during a storm event. This was followed by only a 
+small increase in ammonium.
+Figure 8. Downstream site live EXO sensor data excerpt from HydroSphere. Rain events 
+during which a sewage overflow discharge demonstrated higher increases in ammonium.
+However, during a later rain event outlined in the orange box (Figure 8), the sewage pumping station recorded an overflow 
+event using an Event Duration Monitor, a system that reports storm-related discharges. The overflow event correlated to 
+the increase in ammonium downstream of the sewage pumping station. Although the ammonium peaked around only 
+1 mg/l, this is a significant increase compared to baseflow conditions and events without recorded sewage overflows. 
+This data set demonstrates the sensitivity of the EXO Ammonium ISE for monitoring sewage overflows in freshwater, 
+highlighting why the Environment Agency deploys these sensors in hundreds of sites in the UK.
+Other ammonium sensors
+The EXO Ammonium ISE has exhibited high accuracy during the deployment studies performed by Xylem UK in 
+partnership with the Environment Agency and local water companies, and the data show the sensor is capable of ± 0.5 
+mg/L NH4
++-N from 0 – 2 mg/L NH4
++-N. To date there is no direct measurement for ammonium with an optical sensor, 
+making the Ammonium ISE the best choice for measuring ammonium ion concentrations in freshwater applications. 
+In wastewater process applications, a rugged probe able to withstand a harsh environment and frequent cleaning with a 
+higher measurement range is ideal. The IQ SensorNet Ammolyt or VARiON sensors work well in these high ammonium 
+wastewater applications but are less accurate at < 1 mg/L NH4
++-N, and hence are not ideal for freshwater sites. On 
+the other hand, for drinking water treatment applications where the measurement range needs to be even lower, from 
+0 to 0.3 mg/L, the Alyza Ammonium Analyzer for IQ SensorNet provides the most reliable data even at very low NH4
++ 
+concentrations. 
+Conclusion
+The deployment study is ongoing and continues to provide valuable real-time data for the water utility company. EXO field 
+sensors, specifically the Ammonium ISE, can provide highly sensitive yet reproducible data that allows the user to respond 
+quickly to field conditions and have high confidence in their data, especially when paired with telemetry for real-time data 
+in HydroSphere. The data demonstrate that deployed sondes equipped with Ammonium ISEs can produce reliable long-
+term data in freshwater to replace or supplement grab samples analyzed by a lab for monitoring sewage overflows and 
+compliance reporting in accordance with the Environment Act 2021.
+07
+Successful deployments with the EXO Ammonium ISE
+Methods to obtain stable, accurate, reliable data with minimal drift 
+using the Ammonium ISE for freshwater deployments.
+• Perform sensor calibrations in the lab or office and swap calibrated 
+sensors with field-deployed sensors. Lab-based calibrations allow 
+for more controlled and reproducible conditions, such as stable 
+temperatures and decreased contamination issues.
+• Use good lab techniques during calibrations, such as using a clean 
+sonde guard and calibration cup, removing field wiper brushes, 
+rinsing the sonde and sensors with deionized water and drying with 
+lint-free wipes, and triple rinses in calibration standard.
+• Pre-soak the Ammonium ISE tip overnight in 100 mg/L ammonium 
+standard, or the standard closest in value to the site, before 
+calibrating and deploying. Soaking improves the sensor performance 
+and increases the life of the module by removing contaminating ions 
+and reconditioning the membrane.
+• Replace the ISE module every 6 months at minimum, or as needed. 
+The study had success with 6-month replacements, but more 
+frequent replacements (every few weeks) may be necessary for the 
+best data. The sensor body does not need to be replaced.
+• Calibrate sensor multiples together in a batch on one sonde. Multi-
+sensor calibrations ensure the data are comparable between all 
+deployed sondes and adhere to the same quality standards. 
+• Use the Wiper Guard for the Ammonium ISE (599864) in high-fouling 
+deployments with a Central Wiper to protect the sensitive membrane 
+from the bristles. Note that the guard may cause the wiper bristles to 
+splay more quickly. 
+• Regularly maintain the deployment site and clean heavy fouling from 
+the sonde and sensors.
+• Perform post-calibration and post-deployment checks to measure 
+possible sensor measurement drift against a known and traceable 
+standard.
+• Optionally, to further improve sensor accuracy, apply a site-specific 
+offset to the data. Collect grab samples from the deployment site, 
+measure the ammonium concentration using lab analysis or a 
+photometer, and use the reference data to calculate an offset value 
+to apply to the deployment data.
+Calibrate sensors in the lab or office using clean 
+equipment for more consistent results.
+The EXO Central Wiper reduces fouling on the sensor 
+faces, while the Ammonium ISE wiper guards protect the 
+ISE membranes.
+Replace the ISE module every 6 months, or as needed.
+08
+Benefits of the EXO Ammonium ISE
+• Uses a direct electrochemical measurement of ammonium ions
+• Up to 6-month consumable module life; sensor body can last for years
+• Low cost
+• Low power consumption
+• High stability over deployments
+• Highly accurate at low measurement range (0-2 mg/L), with full range 
+up to 200 mg/L
+• Utilizes the EXO Sonde platform with field-tested EXO Sensor features:
+• Rugged titanium build
+• Wet-mate connector
+• Smart Sensor with SmartQC
+• Powerful Anti-fouling with the Central Wiper
+• Up to 7-sensor payload
+• Automatic sensor recognition
+• Universal sensor ports
+• 3-year sonde warranty
+References
+1. Department for Environment Food & Rural Affairs, Continuous Water Quality Monitoring Programme 
+2. Environment Agency, Combined Sewer Overflows Explained
+3. Environmental Protection Agency, Ammonia
+XA00358  1224
+© 2024 Xylem Inc. or its affiliate. All rights reserved. EXO is a trademark of Xylem or one of its subsidiaries.
+YSI Incorporated
+1725 Brannum Lane
+Yellow Springs, OH 45387
+Tel +1 937.767.7241
+Email info@ysi.com
+YSI.com
+All information presented herein is believed reliable and in accordance with accepted engineering practices. Xylem makes no warranties as to the 
+completeness of this information. Users are responsible for evaluating individual product suitability for specific applications. Xylem assumes no liability 
+whatsoever for any special, indirect or consequential damages arising from the sale, resale or misuse of its products. Subject to change without notice.

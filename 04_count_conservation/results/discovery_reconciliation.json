@@ -1,0 +1,22 @@
+{
+ "manifest": "window.json",
+ "seed": 0,
+ "true_nodes": 18,
+ "discovered_relations": 16,
+ "surveyed topology": {
+  "MAE": 21.05,
+  "RMSE": 51.0,
+  "outside_band_pct": 1.17,
+  "seconds": 10.785
+ },
+ "discovered topology": {
+  "MAE": 18.52,
+  "RMSE": 41.68,
+  "outside_band_pct": 8.63,
+  "seconds": 3.365
+ },
+ "no constraint": {
+  "MAE": 22.03,
+  "outside_band_pct": 13.47
+ }
+}

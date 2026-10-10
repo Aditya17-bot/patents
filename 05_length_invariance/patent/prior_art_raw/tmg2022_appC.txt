@@ -1,0 +1,215 @@
+Appendix C – 
+ 
+Compendium of 
+Data Quality Control Criteria
+
+C-1 
+Appendix C. COMPENDIUM OF DATA QUALITY CONTROL CRITERIA 
+C.1 CASE STUDY: LOCAL AGENCY DATA SHARING DELAWARE VALLEY REGIONAL 
+PLANNING COMMISSION (DVRPC) 
+C.1.1 INTRODUCTION 
+This case study discusses the quality control systems used for traffic data in the State of Vermont. Vermont 
+has 3,900 road centerline miles on Federal aid routes and 10,200 road centerline miles on local roads. The 
+Vermont Agency of Transportation (VTrans) Traffic Research Unit uses a combination of permanent in-
+house staff and summer temporary employees to collect traffic count data on Federal aid routes and on 
+local roads. 
+C.1.2 CONTINUOUS TRAFFIC COUNTS 
+VTrans is currently operating 60 continuous volume counters, 21 WIM, and 2 continuous vehicle 
+classification counters. 
+C.1.3 SHORT-TERM TRAFFIC COUNTS 
+The coverage count program includes 2,200 short-term ATR counts on Federal aid routes and 2,400 short-
+term ATR counts on local roads. The counts are done on either a three or a six -year cycle, depending on 
+the route. Each year VTrans collects around 500 week long ATR counts on Federal aid routes, including 
+interstate ramps and other grade separated ramps, and 400 weeklong ATR counts on local roads. Counts 
+performed on the Federal aid routes are typically vehicle classification and speed while the local road 
+counts are volume only. 
+VTrans conducts 12-hour manual turning movement counts at 1,300 intersections over a four-year period. 
+Either counts are done on a two or four-year cycle, with about 450 counts annually. VTrans is in the process 
+of implementing a bicy cle and pedestrian manual count program. VTrans collected trip generation data 
+over the past several years and has submitted 675 counts to ITE to be considered for the ITE Trip 
+Generation Manual. VTrans intends to continue to collect trip generation data on an every other year basis, 
+alternating with the bicycle/pedestrian count program.
+ 
+C.1.4 TRAFFIC MONITORING SYSTEM 
+VTrans currently uses an Oracle -based consultant -designed traffic monitoring system to manage traffic 
+count data but is planning to implement a new system. Various off -the-shelf products are under 
+consideration, as well as possibly another consultant designed system.  
+C.1.5 QA/QC PROCEDURES 
+The VTrans Traffic Research Unit does not have a formal QA/QC program but does have quality checks 
+built into the data collection and data review procedures as described briefly herein.  
+Field Procedures – Continuous Traffic Counter (CTC) 
+VTrans field technicians check the CTC sites on a monthly basis while downloading data at the site. The 
+field technician checks batteries and hardware as well as verifies that the counters are recording correctly. 
+Office Procedures – Continuous Traffic Counter (CTC) 
+Monthly traffic is reviewed for daily directional distribution. If the percent of traffic in the lower volume 
+direction is less than 48% the data is reviewed more closely for a potential problem.  
+Using an Excel based routine that pulls data from the Traffic Monitoring System, graphs are produced on 
+C-2 
+a monthly basis that show a particular day of the week, for each occurrence of that day of the week over 
+the month. For example, Sundays are reviewed and differences between Sundays may indicate where the 
+counter has stopped working on any one lane, or where there has been a period of resonation shown by 
+surges in the volume. 
+Monthly reports are generated that compare the current year’s average daily volumes with last year’s 
+average daily volumes. Differences of more than 10% are reviewed more closely. 
+Field Procedures – WIM 
+On a monthly basis, the WIM Technician visually inspects each WIM site and runs diagnostic reports.  
+VTrans relies largely on auto calibration to maintain calibration at the WIM sites but on occasion has used 
+a test vehicle or portable scales to recalibrate the systems. 
+Office Procedures – WIM 
+WIM counts are converted to volume counts and compared alongside the other CTC counts (see  above). 
+Field Procedures – Short-Term ATR 
+As each count is set out, the Field Technician checks to see that the recorder is collecting data and that the 
+data is accurate. When the count is picked- up, the field technician downloads and reviews the data on a 
+laptop computer and resets the count as needed. 
+Office Procedures – Short-Term ATR 
+Each ATR count is reviewed individually. The minimum duration is 48- hours of weekday data. The 
+estimated AADT is compared to historical volumes to ensure that it is not unreasonable. The following 
+table shows specific quality checks performed on vehicle classification counts.
+ 
+TABLE C-3 Q UALITY CHECKS FOR VEHICLE CLASSIFICATION COUNTS 
+Checks Criteria requiring additional review 
+Class 14s >5% for the count as a whole 
+Directional ADT DAY SPLIT > 53% for the count as a whole 
+Cycles > 2% 
+Cars <70% 
+Pickups >22% 
+uses > 1% 
+8s vs. 9s 8s > 9s, N/A for local streets, weekdays only 
+Multi trailers CL 11-13 > 1% 
+Med vs. Heavy med < heavy (med - heavy < 0) 
+Sat % ADTT > 75% of weekday ADTT 
+Sun % ADTT > 75% of weekday ADTT 
+Peak hr trucks > weekday ADTT 
+Misclassification 
+Class 3s can be misclassified as 5s – look for high class 5s; 
+High cycles can indicate problems with classes 2-5 
+Source: Vermont Agency of Transportation 
+C-3 
+Vehicle classification data is also reviewed for daily directional distribution by vehicle classification. 
+Differences of greater than 10% indicate a potential problem requiring additional review.  
+VTrans records speed as well as vehicle classification for most ATR counts, however the speed d ata files 
+are not loaded into the database but are stored separately in their raw format and are used only 
+occasionally. If the vehicle classification data for a count is rejected, the speed data for the same count is 
+also rejected. 
+Regarding site location, the field technicians are able to load GPS coordinates directly into the traffic 
+recorder and the coordinates appear in the header of each count file. The coordinates are checked using 
+a GIS application to verify that the count was set in the correct location.  
+Field Procedures – Manual Turning Movement Counts 
+The turning movement count program is very well supervised with a Field Technician, as well as a senior 
+temporary employee, circulating among the count staff answering questions, helping to find the  correct 
+intersection, verifying that safety measures are in place, filling out field sheets correctly, and providing 
+breaks over the day. A one-day training program is provided at the start of the season. 
+Office Procedures – Manual Turning Movement Counts 
+The turning movement counts are reviewed by the Field Technicians at the end of the count season. 
+Information provided on the field sheets is used to enter the street names, orient the count, etc.  
+C.1.6 LESSONS LEARNED 
+Using GPS to locate the ATR sites has been very beneficial. The Field Supervision for the turning movement 
+count program has also been very worthwhile, with very few counts rejected over the season and very few 
+safety related problems. 
+The VTrans Traffic Research Unit does not have a well -documented QA/QC procedure. This is due in large 
+part to having a very experienced staff with quality checking routines in place and little need to refer to 
+documentation. However, as staff members move on it will be more difficult to train new employees in 
+QA/QC without written guidelines. This was made apparent when it was discovered well into the season 
+that a new employee was setting up ATR counts incorrectly and the vehicle classification was inaccurate.  
+C.2 CASE STUDY #2 NEW YORK STATE DOT (NYSDOT) QA/QC SYSTEMS 
+FOR TRAFFIC DATA 
+C.2.1 INTRODUCTION 
+This case study examines the QA/QC systems used by the New York State Department of Transportation 
+(NYSDOT) for traffic data analysis and presents current practices and lessons learned that can benefit other 
+State DOT’s traffic monitoring programs. NYSDOT is responsible for managing a State and local highway 
+system of more than 113,000 highway miles and more than 17,400 bridges. This extensive network 
+supports annual travel of over 130 billion vehicle miles. The responsibility for collecting, processing, and 
+disseminating the traffic data at NYSDOT resides with the Highway Data Services Bureau. NYSDOT uses a 
+variety of counters and classifiers with 175 operating continuous count stations used to collect the volume, 
+class, and/or speed data. Twenty- six of those sites collect weigh -in-motion (WIM) data. The following 
+information provides an overview of the use of continuous count stations statewide.  
+C.2.2 NYSDOT CONTINUOUS COUNT STATIONS 
+The New York State continuous count statio ns are strategically placed in varying geographical locations, 
+population densities, and roadway functional classes, as well as differing volume groups within these 
+locations. The number of individual continuous count sites in each group can increase with additional sites 
+or decrease with equipment failure or removal. The continuous count sites are grouped by Highway 
+C-4 
+Performance Monitoring System (HPMS) volume group and urban type (urban, small urban and rural) 
+categories. The vehicle miles traveled (VMT) is estimated through HPMS and as such, it relies on expanded 
+samples and multi-year short count volume measurement adjusted to the current year. Equally important 
+is how bridges and tunnels are considered. Often these represent constriction points within the network 
+and may or may not be a fair representation of overall travel if no other toll or free alternatives exist. 
+Figure C-1 provides an illustration of the New York State Thruway network and the continuous count sites. 
+FIGURE C-1      NEW YORK STATE THRUWAY AND CONTINUOUS COUNT SITES 
+Source:       New York State Department  of Transportation.  
+C.2.3 WEIGH-IN-MOTION (WIM) STATIONS 
+Weight data are also collected at several WIM sites throughout the State. NYSDOT uses the following 
+guidance in establishing their WIM sites. Each site should exhibit the following characteristics:  
+• Free flowing traffic (it is preferred that trucks travel 30 mph or more) 
+• No daily traffic jams 
+• No nearby intersections 
+• Straight and level terrain at the site, including pavement that is in good condition 
+• At least 100 Class 9s identified in each lane daily 
+The QA/QC procedures presented in this section provide a high- level overview of these processes, with 
+more detailed information documented in Appendix C of the TMG. Quality control of traffic data at 
+NYSDOT begins with field staff inspections of traffic data collection sites on an annual basis. All physical 
+components of the data collection equipment are checked thoroughly and recorded on a site -specific 
+
+C-5 
+spreadsheet by the field staff to ensure that all components are in proper working order. How in- depth 
+the checks are depends upon the level and type of data being collected at the site. The following 
+paragraphs present an overview of the quality checks used at NYSDOT.  
+C.2.4 VOLUME, CLASSIFICATION, SPEED DATA 
+In the case of volume data only, a process of assuring that the loops are activating and each vehicle is 
+counted as one vehicle will typically suffice. Sites that collect speed data are checked for accuracy by a 
+radar gun. Sites that collect classification data are checked to make sure that there are no missing, or extra 
+axles on the vehicles. On a normal site inspection, data validation may range from watching just ten 
+vehicles to watching a few hundred vehicles. At a minimum, the test will last until all lanes have been 
+validated. 
+C.2.5 WEIGHT DATA 
+Validation of weight data at NYSDOT typically follows these steps:  
+• Data collected at counter. 
+• Data automatically polled daily to office PC. 
+• Data verified for completeness: 
+• Is there file corruption? 
+• Are all days retrieved? 
+• Are all days complete? 
+• Are all lanes present? 
+• Initial daily and hourly validity checks performed: 
+• Is the clock correct to +/- 5 minutes? 
+• Data imported and stored once per week in polling database. 
+• Monthly data checks performed. 
+• Data edited. 
+There are also a series of office checks and remote checks that are performed for the WIM data collection 
+sites.  Additional information on the specific types of validations performed may be found in TMG Appendix 
+D. 
+C.2.6 EXPERIENCES IMPLEMENTING QA/QC PROCEDURES AT THE DOT 
+This section provides informatio n about the experiences and significant accomplishments and challenges 
+in implementing QA/QC procedures for traffic data at NYSDOT. Some of the challenges and some system 
+limitations associated with collecting WIM data include the following:  
+• No vehicle types are collected, only classes 
+• There is no way available to check lane discipline of the vehicles; vehicles riding the edge of 
+a lane are likely to be classified correctly and weighed incorrectly 
+• Additional checks such as left/right wheel weights are not available 
+• No error is given for vehicles changing speed over sensors. 
+C-6 
+C.2.7 LESSONS LEARNED 
+Several of the lessons learned in implementing the QA/QC procedures for traffic data at NYSDOT are listed 
+below. These lessons are presented to offer guidance to other State traffic monitoring program managers 
+who are responsible for the collection and quality control of their State’s traffic data:  
+• Each site has its own limitations – an acceptable error at one site is not necessarily acceptable 
+at another site; 
+• Knowledge of the site layouts and typical traffic is required to decipher the automated check 
+warnings; 
+• Monitor for data completeness; 
+• Monitor data from the bottom up: Volume > Class > WIM; and 
+• General WIM checks can be a good indicator of overall site health, but, they do not give the 
+entire picture. 
+C.2.8 FUTURE ENHANCEMENTS 
+The most prominent enhancement to NYSDOT QA/QC procedures is the addition of a comprehensive data 
+system. The traffic monitoring group intends to use a comprehensive data system to QC continuous data 
+of all types using automated checks with parameters tailored to individual sites. This will provide the staff 
+with additional time for a more in -depth analysis of problematic sites that require closer scrutiny of 
+problems. 
+Current practices also put a lot of emphasis on monthly processing, which means that some errors are not 
+identified until they have been occurring for many weeks. The implementation of a comprehensive data 
+system should allow NYSDOT to analyze more up to date data, and the refore catch problems sooner. 
+WIM data is currently monitored at a very high level and the WIM data that is disseminated is nearly always 
+raw data. With less time spent converting data, NYSDOT has more time for a thorough review of data on 
+a weekly basis. This will allow technicians to more closely monitor calibrations and provide better data to 
+the customers. 

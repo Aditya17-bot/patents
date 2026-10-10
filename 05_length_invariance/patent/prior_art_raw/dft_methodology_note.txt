@@ -1,0 +1,210 @@
+Road Traffic Estimates – 
+Methodology Note – Page 1 of 6 
+Road Traffic Estimates 
+Annual Methodology Note
+An annual series of road traffic estimates are published by the Department for Transport, 
+approximately 6 months after t
+he end of the reference year. 
+Data Collection 
+There 
+are three main data sources which are used to calculate annual traffic estimates. Manual 
+traffic counts are 
+carried out at a number of sites throughout the counting season which  runs 
+between March 
+and October. This raw data is then combined with information from a network of 
+automatic traffic counters (A
+TCs) to calculate a series of annual average daily flows1 (average 
+vehicles per day) for each c
+ount point. These daily flows are combined with road lengths to 
+calculate the number of vehicle miles travelled each year by vehicle type, road category and 
+region. 
+Manual Traffic Counts 
+Annual traffic estimates are mainly based on around 8 ,000 manual counts which are conducted 
+each year, where trained enumerators count traffic by vehicle type over a 12 hour  period. 
+Manual counts are held on both major and minor roads on days in the year which have  been 
+assigned the status: ‘neutral day’. A neutral day is a weekday between March and October, 
+excluding all public holidays and school holidays; this is because it is on any of these days that 
+traffic is expected to behave similarly. There are usually 110 neutral counting days in a calendar 
+year. 
+Major roads in Great Britain are represented by a series of links, which are unique sections of 
+road w
+hich make up the entirety of the major roads network. A location on each of these links is 
+used to 
+count vehicles and this location is given a unique reference number called a count point 
+number or CP; referred to as CPs. It is not possible to c ount every single link every year; 
+therefore, the sections of road are surveyed on either an annual bas is or on a cycle of every 2 
+years, every 4 years or every 8 year s (and in Scotland and Wales, every 12 years). This means 
+not every link in 
+the major road networ k has a 12 hour count in each year. 
+Minor road estimates are calculated differently to major road estimates. Due to the large number 
+of minor roads in Great Britain it is not possible to count them all, instead a representative sample 
+of minor road sites are counted each year. The change in traffic levels between the  two years is 
+then applied to overall minor road estimates to calculate estimates for the latest year.  
+1
+ Annual average daily flow (AADF) is
+ the number of vehicles estimated to pass a given point on the road in a 24 hour 
+period on an average day in the year 
+
+Road Traffic Estimates – 
+Methodology Note – Page 2 of 6 
+Automatic Traffic Counters (ATCs) 
+Traffic data is also collected c ontinuously from a national network of around 30 0 Automatic Traffic 
+Counters (ATCs). In addition to count
+ing traffic, the ATCs record some of the physical properties 
+of pa
+ssing vehicles whic h are used to classify traffic by type. The ATCs produce two outputs which 
+are us
+ed in the production of annual estimates: expans ion factors and growth factors. 
+Expansion factors 
+Expansion factors 
+are used to convert the manual count 12 hour totals into flow figures that 
+represent traffic in an average 24 hour period, or annual average daily flow (AADF). In order to do 
+this, roads in Great Britain are split into 10 strata, based on the type of road, the location, and the 
+estimated AADF. See Annex A for details of these strata. These 10  strata are called the  expansion 
+factor stratification and each ATC is placed into one of these strata.  
+Eac
+h ATC records a 12 hour day figure from 7 am to 7 pm, and a 12 hour night figure, from 7 pm 
+to 7 am, and 
+also a 24 hour figure which is just the sum of these two 12 hour figures, for each day 
+in the year. E xpansion factors for each individual ATC are created by calculating the average of 
+the 
+24 hour totals over 365 (or 366) days of the year: this is effectively calculating an AADF for 
+each ATC. Then, for each neutral day (days on which manual counts are conducted), the ATC’s 
+AADF is divided by 
+the 12 hour (7 am to 7 pm)  total to give an expansion factor for every neutral 
+day for each ATC. 
+To produce the final expansion factor
+s a median of the individual ATC expansion factors in each of 
+the 10 expansion factor stratum for  each neutral day is calculated. This is done for the different 
+vehicles types. This results in 7,590 unique expansion factors (110 neutral days by 10 expansion 
+factor
+ strata by 7 different vehicle types, excluding any for pedal cycles on motorways). 
+HGVs: The data from the ATCs  is grouped into rigid and articulated HGVs and expansion factors 
+are created 
+for these two vehicle types. When a manual count is carried out 6 different 
+classifications of HGV are recorde
+d: 3 rigid types and 3 articulated types. The same expansion 
+factors 
+are applied to all 3 rigid types, and the same expansion factor is applied to all 3 articulated 
+types. 
+Converting the 12 hour raw totals into AADF figures is done by multiplying the 12 hour total by the 
+relevant expansion factor depending on vehicle type, count date and expansion factor strata. 
+Road Traffic 
+Estimates – Methodology Note – Page 3 of 6 
+Growth factors 
+Where a manual count has 
+not taken place in the reference year, growth factors are applied to the 
+previous year’s AADFs in order to bring them in line
+ with growth at the national level. Growth 
+factors are calculated from the change between the reference year and the previous year. They 
+are calculated from data from every ATC in t he 10 growth factor strata and for the 11  vehicle types 
+ATC data is grouped into. 
+By applying either expansion factor
+s to manual counts or growth factors to the previous year’s 
+AADFs we get a full set of up-to
+-date AADFs for every link of r oad on the major road network, and 
+for the minor roads on which counts have been carried out. 
+Creating AADFs 
+The expansion 
+factors are applied to all CPs which have had a manual count. At this point major 
+and minor road AADFs
+ are separated as traffic volume is calculated differently for major and minor 
+roads. The growth factors are then applied to t he previous year’s AADF of any remaining major 
+road 
+CPs. There are some CPs which are estimated differently, they are defined as either 
+dependent, derived or ATC CPs.  
+CPs are defined as dependent if the road to which they’re associated crosses through a local 
+authority boundary. We do this because we publish our traffic estimates by local authority. When 
+this happens 
+the link is simply broken into two parts and the AADF is equal for each section. 
+Therefore all the dependent
+ CPs are calculated after all other AADFs to ensure all data is 
+available. 
+CPs are defined 
+as derived if the link that is to be counted is very small (less than 300m) or is 
+considered too dangerous to count. In these situations, 
+surrounding roads have been studied and 
+a formula created to calculate the flow on the derived link using the flows of the other links. 
+Some roads have automatic  traffic counters on them managed by other organisations. Those 
+m
+anaged by National Highways,  Transport Scotland and Transport for London, supply DfT with 
+the ATC data for all motor vehicles. From this, the all motor vehicle AADF  is calculated for  these 
+roads by dividing the total count by the number of days of available data . 
+Once an 
+AADF for the latest year has been calculated for all of the links of the major  road 
+network, and for the sample of minor road sites counted each year, the figures are combined with 
+road lengths to produc e estimates for the amount of vehicle miles driven in the year. 
+Road Traffic Estimates – Methodology Note – Page 4 
+of 6 
+Road Lengths 
+Methodology on the calculation of major and minor road length statistics is available at 
+https://www.gov.uk/government/publications/road-length-statistics-information. 
+Major road  traffic 
+At this stage we have calculated AADFs for every link of road in the major road network. Traffic 
+volume is measured in vehicle miles, where one vehicle mile is equal to one vehicle travelling one 
+mile. For each CP in our database we have associated information, and one detail is the length of 
+each link. 
+To convert the AADFs into traffic volume we multiply each AADF with its associated link length; we 
+then multiply it by the number of day
+s in the year to get an annual total. 
+TrafficCP = AADFCP x Lengthlink x 365 (or 366)
+Total traffic = Σ TrafficCP 
+As we hav
+e traffic volume figures for  every link of the m ajor road network, these figures can then 
+be 
+summed to create total major  traffic volume figures for Great Britain, regions and local 
+authorities. 
+Minor road traffic 
+Minor road traffic estimates are grown from a baseline which is periodically updated by once-a-
+decade 
+minor road benchmarking exercises. In the base year, for each minor road class in each 
+local authority, an AADF is estimated based on a sample of traffic counts, including those 
+projected forward fr
+om counts done in earlier years. These AADFs are then multiplied by the total 
+road length 
+for the relevant minor road category to give an estimate of traffic for that  road 
+category.  
+The 
+minor roads are made up of six road categories, ‘B’, ‘C’ and unclassified roads, which are 
+often grouped 
+into four categories: ‘B’ roads and ‘C’ and unclassified roads. This is further split into 
+rural and urban areas. Minor road traffic estimates are split by the same 11 vehicle categories as 
+the 
+major road estimates. 
+Traffic for the latest year is obtained by calculating changes in traffic flows fr om a sample of minor 
+road manual counts which are counted every year. Minor  road AADFs are calculated as detailed 
+above for all of the growth sample of minor r oad count points. 
+For 
+each region and road type, the median AADF is found for the current year and the previous 
+year for the different vehicle types from 
+the growth sample. All CPs in the sample are included in 
+this calculation where valid data is available for both years. This gives a median AA DF for all splits 
+of data for the latest and the previous year for each region, for  example, cars on rural B roads in 
+North West. 
+Road Traffic Estimates – Methodology Note – Page 5 
+of 6 
+These medians are used to produce a series of "minor traffic factors" for each split of data. These 
+are calculated as the change in the regional medians between the two years. 
+Growth 
+factors for the road length in each category are also produced so that any changes in road 
+length 
+between years are reflected in the latest estimates. 
+These two sets of growth factors  are then applied to the previous year’s minor roads estimates to 
+calculate the latest year’s estimates. So for cars on rural B roads the latest year’s traffic estimate is 
+calculated using the following formula for each local authority: 
+Cars on rural B roadsy = Cars on rural B roadsy-1 x Growthtraffic x Growthlength
+Where: 
+Growthtraffic is the growth in the traffic (median AADF) for cars on rural B roads in the relevant 
+region between y-1 and y 
+Growthlength is the growth in rural B road length in t he relevant local authority between y-1 and y 
+The same formula is used to grow the traffic es timates from the previous year for the 4 (or 6 ) road 
+categories and 11 vehicle types which make up the mi nor road estimates. 
+For further information on these statistics please email roadtraff.stats@dft.gov.uk.  
+This 
+methodology note relates to the “Annual Road Traffic Estimates” statistics (tables and charts) 
+and statistical releas e published on the DfT website at: 
+https://www.gov.uk/government/collections/road-traffic-statistics
+Road Traffic Estimates – Methodology Note – Page 6 
+of 6 
+Annex A:
+Stratification used in the calculation of traffic estimates 

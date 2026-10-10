@@ -1,0 +1,31 @@
+{
+ "meta": {
+  "min_coupling": 0.95,
+  "big_ft": 0.1,
+  "win_d": 21,
+  "steady_ft": 0.25,
+  "min_days": 8,
+  "period": [
+   "2020-10-01",
+   "2026-09-30"
+  ]
+ },
+ "0.10": {
+  "n": 1637,
+  "median_ft": 0.0976,
+  "p10_ft": 0.0769,
+  "p90_ft": 0.1166,
+  "median_ratio_change": 0.091,
+  "ratio_change_cv": 0.842,
+  "stage_units_cv": 0.267
+ },
+ "0.30": {
+  "n": 1624,
+  "median_ft": 0.28,
+  "p10_ft": 0.2032,
+  "p90_ft": 0.3334,
+  "median_ratio_change": 0.2857,
+  "ratio_change_cv": 0.895,
+  "stage_units_cv": 0.257
+ }
+}

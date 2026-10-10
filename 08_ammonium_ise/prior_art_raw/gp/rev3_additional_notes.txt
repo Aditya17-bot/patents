@@ -1,0 +1,24 @@
+Read in the browser on 2026-10-06 (Google Patents pages, abstracts transcribed).
+
+US 10,918,318 B2 - System and methods for processing analyte sensor data for sensor calibration
+(Dexcom Inc; priority 2006; granted 2021-02-16). Abstract: systems and methods for processing sensor
+analyte data, including initiating calibration, updating calibration, evaluating clinical acceptability
+of reference and sensor analyte data; "The sensor can be calibrated using a calibration set of one or
+more matched sensor and reference analyte data pairs." Figure 1 plots slope against baseline.
+Continuous implanted glucose sensor calibrated (baseline, sensitivity) from matched reference pairs;
+no low-quantile floor of the record; medical field.
+
+JP H08-304324 A - Method for correcting base concentration of sample water (priority 1995-04-29).
+Abstract: a reference solution is added to the sample water, the electromotive force of the sensor is
+fitted to a calibration concentration; the sample water is measured; the true sample concentration X is
+computed from X = (A x C)/(A - C) and added to the calibration concentration to correct the calibration
+curve, by a microcomputer. Ion-selective calibration corrected for the sample's own base concentration
+by spiking; no continuous record, no floor, no field laboratory samples.
+
+CN 107884535 A - An automatic calibration device and calibration method for a water quality on-line
+analyzer (priority 2017-11-28). Abstract: upper computer, control modules, circuit board, solution mixing
+tank, injection pumps, peristaltic pump, electromagnetic stirrer, detection liquid pipe. Calibration
+hardware with standard solutions; no data correction between calibrations.
+
+JP 6920473 B2 - Online reference calibration (priority 2017, GB): pH measuring apparatus (G01N27/4165);
+no English abstract shown; hardware for pH reference calibration. Not cited.

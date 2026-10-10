@@ -1,0 +1,749 @@
+https://www.dora.lib4ri.ch/eawag/dload/eawag:19641/PDF/view
+Characterizing long-term wear and tear of ion-selective
+pH sensors
+Kito Ohmura, Christian M. Thürlimann, Marco Kipf, Juan Pablo Carbajal
+and Kris Villez
+ABSTRACT
+Today, the development and testing of methods for fault detection and identi ﬁcation in wastewater
+treatment research relies on two important assumptions: (i) that sensor faults appear at distinct
+times in different sensors and (ii) that any given sensor will function near-perfectly for a signi ﬁcant
+amount of time following installation. In this work, we show that such assumptions are unrealistic, at
+least for sensors built around an ion-selective measurement principle. Indeed, long-term exposure of
+sensors to treated wastewater shows that sensors exhibit fault symptoms that appear
+simultaneously and with similar intensity. Consequently, this suggests that future research should be
+reoriented towards methods that do not rely on the assumptions mentioned above. This study also
+provides the ﬁrst empirically validated sensor fault model for wastewater treatment simulation,
+which is useful for effective benchmarking of both fault detection and identi ﬁcation methods and
+advanced control strategies. Finally, we evaluate the value of redundancy for remote sensor
+validation in decentralized wastewater treatment systems.
+Kito Ohmura
+Christian M. Thürlimann
+Marco Kipf
+Juan Pablo Carbajal
+Kris Villez
+(corresponding author)
+Eawag,
+Überlandstrasse 133, CH-8600 Dübendorf,
+Switzerland
+E-mail: kris.villez@eawag.ch
+Kito Ohmura
+Toshiba Infrastructure Systems & Solutions
+Corporation,
+Tokyo,
+Japan
+Christian M. Thürlimann
+Kris Villez
+ETH Zürich, Institute of Environmental Engineering,
+8093 Zürich,
+Switzerland
+Key words | data quality, drift, fault detection and identi ﬁcation, ion-selective electrodes, predictive
+maintenance, wastewater
+INTRODUCTION
+By several accounts, the lack of online sensor data quality
+poses a long-standing challenge ( Rieger et al. , ,
+; Rosén et al. ). It is therefore not surprising that
+considerable time and energy has been invested in methods
+for automated quality assessment and quality control of
+online instruments (e.g. Thomann et al. ; Thomann
+; Corominas et al. ; Spindler & Vanrolleghem
+; Alferes et al. ; Spindler ; Villez et al. ; Le
+et al. ). Moreover, the wealth of literature and the
+number of reviews on these and related topics ( Venkatasu-
+bramanian et al. a, b, c; Haimi et al. ;
+Corominas et al. ) suggest that the science and practice
+of fault detection and identi ﬁcation (FDI) is far from settled.
+Data-analytical techniques can enable automated and
+remote detection of sensor faults. Without exception, such
+techniques rely on redundant relationships and can there-
+fore be categorized by the type of redundancy that is used.
+A ﬁrst category relies on reference laboratory measurements
+and computing a deviation between online sensor signal and
+a reference measurement. A second category relies on
+hardware redundancy by placing multiple online sensors
+in the same location. A third category relies on temporal
+redundancy, the idea that meaningful changes in the
+sensor signal can only be smooth when measured with a suf-
+ﬁciently high frequency. Finally, the fourth category relies
+on spatial redundancy, relating signals produced at distinct
+locations or for different variables. Examples of this
+category include methods based on ﬁrst principles; for
+example, balance equations, and methods rooted in statisti-
+cal practice; for example, principal component analysis.
+Importantly, each of these advanced methods require
+tuning to ﬁnd an optimal trade-off between correct alarms
+and false alarms. Invariably, such tuning is obtained by
+means of a historical, fault-free data set from which accepta-
+ble limits for computed residuals are derived. Consequently,
+optimal tuning relies on the availability of representative
+data of an acceptable quality. In addition, most techniques
+implicitly require that sensor fault symptoms appear inde-
+pendently from each other; that is, the probability that two
+sensor faults start at the same time is assumed to be zero.
+541 © IWA Publishing 2019 Water Science & Technology | 80.3 | 2019
+doi: 10.2166/wst.2019.301
+Downloaded from https://iwaponline.com/wst/article-pdf/80/3/541/620891/wst080030541.pdf
+by LIB4RI E-RESOURCES user
+on 29 November 2019
+In contrast to the tremendous amount of research on
+FDI methods, little is actually known about the cause-and-
+effect relationships between sensor ageing, the onset of
+sensor faults and failures, and the production of faulty
+data. This is explained by the fact that the availability of
+information describing the exact circumstances under
+which faults occur or faulty data are produced; that is,
+meta-data, is usually severely limited. For this reason, we
+report on a ﬁrst-time study of suf ﬁcient scale to study the
+long-term effects of ageing on the performance of online
+water quality sensors. Additional insight is obtained by
+studying a variety of dynamic models to describe the empiri-
+cal observations.
+MATERIALS AND METHODS
+We are particularly interested in the ageing process of typical
+pH sensors exposed to high-strength wastewaters. For this
+reason, a number of pH sensors are exposed to the contents
+of a reactor used to study process control strategies for
+nitriﬁcation of anthropogenic urine ( Thürlimann et al.
+). We study the effects of sensor ageing by regular evalu-
+ation of the sensors ’ offset and sensitivity through exposure
+of these sensors to calibration media. To do this, it is suf ﬁ-
+cient to record the raw sensor signal (electrode potential).
+This also avoids the need for regular calibration. The next
+paragraphs explain our approach in detail.
+Theoretical and real-world behavior of ion-selective
+electrodes for pH measurement
+The ion-selective measurement principle for pH measure-
+ment is understood rather well. In steady state, one
+measures an electric potential E (in mV) between a refer-
+ence electrode and an electrode exposed to the medium.
+This potential is described by the Nernst equation ( Westcott
+) as a function of the proton activity ([ H
+þ]) and tempera-
+ture ( T ) of the medium to which the sensor is exposed:
+E ¼ E0 þ R /C1 T
+F ln ([Hþ]) (1)
+where E0 is the reference potential, F is the Faraday constant
+(96485:33289 C =mol, Taylor et al. ), [ Hþ] is the proton
+activity in the reference cell, R is the molar gas constant
+(8:3144598 J=(mol /C1 K), Taylor et al. ), and T is the
+temperature measured in Kelvin. The pH is de ﬁned as
+log10 ([Hþ]) ( Buck et al. ) so that S(T) is the
+temperature-speciﬁc sensitivity, which can be computed as:
+S(T) ¼ R /C1 T
+F /C1 log10(e) (2)
+Most typically, pH sensors are designed to deliver 0 mV
+at pH 7 so that E0 is theoretically 0 mV. Similarly, the theor-
+etical sensitivity at standard ambient temperature and
+pressure (SATP) is S(298:15) ¼ 59:1593 mV per pH unit.
+The theoretical potential at pH 4.01 and SATP is
+177.0 mV. Since the actual values of these parameters can
+deviate from their theoretical values, it is common to
+apply a 2-point calibration procedure to estimate them,
+often with buffered calibration media with pH 4.01 and 7.00.
+Studied sensors
+A total of 12 pH sensors belonging to ﬁve sensor types
+(T1-T5) are studied. All sensors are produced by Endress þ
+Hauser (Reinach, Switzerland). The ﬁrst eight sensors are
+pairs of four commercially available sensor types (T1-T4).
+The ﬁrst (second) sensor in each pair is designated with an
+a (b), e.g. T1a, T1b. The remaining pH sensors (T5a, T5b,
+T5c, and T5d) are replicates of a recently developed proto-
+type (T5). The T1, T2, and T3 sensors are built around a
+glass electrode while the T4 and T5 are built around an
+ion sensitive ﬁeld-effect transistor (ISFET). The complete
+data series produced by these sensors is released as an
+open data set ( Ohmura et al. ).
+The ﬁrst three sensor pairs (T1-T3) were in use through-
+out the exposure experiment, which lasted 731 days
+(4 October 2016 – 4 October 2018). An overview of this
+experiment is given in Figure 1 . The fourth pair (T4) has
+been in use during the ﬁrst half year and was replaced
+with the ﬁfth pair (T5) on 3 April 2017 (day 182) (i) as the
+T4 sensors exhibit a long response time (not shown) and
+(ii) the T5 prototypes could then be tested. The T5a sensor
+stopped producing a meaningful signal on 30 June 2017
+(day 270) while T5b became faulty (details below) on 31
+August 2017 (day 332). These sensors were replaced with
+another sensor of the same prototype (T5) on 2 October
+2017 (day 364). In this last pair, one sensor (T5d) failed
+within 1 day (day 365) while the other (T5c) was fully
+functional until the end of the experiment.
+Long-term exposure experiment
+The contents of a 12 L urine nitri ﬁcation reactor are pumped
+through a recycle loop that includes a closed tube holding the
+542 K. Ohmura et al. | Wear and tear of pH sensors Water Science & Technology | 80.3 | 2019
+Downloaded from https://iwaponline.com/wst/article-pdf/80/3/541/620891/wst080030541.pdf
+by LIB4RI E-RESOURCES user
+on 29 November 2019
+sensors in a ﬁxed position. The design of this tube equipped
+with sensor-holding locks is shown in the Supplementary
+Information (Section B) (available with the online version
+of this paper). The recycle ﬂow rate was 43 L/h.
+The reactor was fed with urine collected from male lava-
+tories in the Forum Chriesbach building at Eawag, with
+exception of the period from 30 April 2018 to 21 June
+2018 (day 574– 625), when it was collected from female lava-
+tories in the same building. From 4 October 2017 to 24
+November 2017 (day 366 to 417), the reactor was addition-
+ally fed with a nitrite stock solution. During the
+experimental period, the measured concentrations of nitro-
+gen species in the nitri ﬁed urine ranged between 1,180
+and 2,730 mgN/L (mg atomic nitrogen per liter) for total
+ammonia, 0 and 82 mgN/L for nitrite, and 1,290 and
+2,720 mgN/L for nitrate ( Thürlimann et al. ). These
+time series are visualized in the Supplementary Information
+(Section C) (available online). The pH value of the nitri ﬁed
+urine, as measured by two pH sensors installed directly in
+the reactor, ranged between 5.7 and 7.3.
+Sensor characterization tests
+At regular intervals, the sensors were removed from their
+normal position, cleaned with a wet sponge, and exposed
+to calibration media. This was executed 47 times in total
+to quantify the effect of long-term exposure on the sensors ’
+offset and sensitivity. The exact times of these sensor charac-
+terization tests are listed in the Supplementary Information
+(Section G.1) (available online). Two pairs of tests were
+executed on the same day to ensure acceptable experimental
+reproducibility (day 70: tests 11 – 12; day 351: tests 29 – 30).
+The selected media include (C4) pH 4.01 calibration
+solution (CPY20-C10A1, Endress þ Hauser, Reinach, Swit-
+zerland); (C7) pH 7.00 calibration solution (CPY20-E10A1,
+Endress þ Hauser, Reinach, Switzerland); (U4) nitri ﬁed
+urine at pH 4; (U7) nitri ﬁed urine at pH 7; and (W) tap
+water. For the present work, the exposure to W, C4, and
+C7 is relevant. This occurs in ﬁve distinct phases (P0-P4),
+each lasting at least 5 minutes and exposing the sensors to
+W, C4, C7, C4, and W (in this order). Exemplary results
+are shown in Figure 2 and discussed in detail below.
+The offset ( E
+0) and two measurements of the sensitivity
+(SD and SR) are computed with raw potential measurements
+recorded during P1, P2, and P3. In line with Carr (), the
+following steps are applied for every sensor characterization
+test:
+1. Compute the median value among the potential measure-
+ments collected in P1, P2, and P3 between 2 and 1
+minutes before the start of the next phase (P2, P3, and
+P4). Refer to these values as E
+P1, EP2, and EP3.
+2. The sensor offset is de ﬁned as E0 ¼ EP2.
+3. The decay potential sensitivity is de ﬁned as
+SD ¼ EP1 /C0 EP2
+7:00 /C0 4:01.
+4. The rise potential sensitivity is de ﬁned as
+SR ¼ EP3 /C0 EP2
+7:00 /C0 4:01.
+These steps are demonstrated below with a practical
+example.
+Figure 1 | Overview of the complete experimental campaign. The periods of sensor
+exposure are indicated by rectangles. The periods during which the sensors
+produced meaningful data are marked in black.
+Figure 2 | Exemplary sensor characterization test. Raw data obtained in the ﬁrst sensor
+characterization test with sensor T1a. The measured potential decays during
+P0, P2, and P4, while it increases during P1 and P3. Steady state is reached
+quickly in P1, P2, and P3. The theoretical potential values for P1, P2, and P3 are
+indicated with dashed horizontal lines. Grey shading indicates the data used to
+obtain the potential measurements (2 to 1 minute before phase change). The
+selected median potential values are shown with red crosses. Please refer to
+the online version of this paper to see this ﬁgure in colour: http://dx.doi.org/10.
+2166/wst.2019.301.
+543 K. Ohmura et al. | Wear and tear of pH sensors Water Science & Technology | 80.3 | 2019
+Downloaded from https://iwaponline.com/wst/article-pdf/80/3/541/620891/wst080030541.pdf
+by LIB4RI E-RESOURCES user
+on 29 November 2019
+Drift models
+The results shown below indicate that the offset signi ﬁcantly
+varies over time while the sensitivity remains remarkably
+stable in all studied sensors. We describe the observed
+drift of the offset by means of three models.
+Model 1 – constant trend followed by linear trend
+For the ﬁrst model, we apply a modi ﬁed version of the exces-
+sive drift model proposed for the Benchmark Simulation
+Model family (Rosén et al. ). This model simulates E0(t),
+the sensor offset, as:
+E0(t) ¼ do þ rd /C1 max (t /C0 tf , 0) (3)
+with do the initial offset, rd the drift rate parameter, t the
+time since sensor installation, and tf the time of the drift
+onset. The applied modi ﬁcation consists of adding the
+parameter do.T o ﬁt this model, the offset measurements,
+~E
+0
+(th), collected at discrete time instants th, are assumed
+to exhibit independently and identically distributed
+measurement errors, ϵ
+h, drawn from a normal distribution
+with zero mean and standard deviation, σε:
+~E
+0
+(th) ¼ E0(th) þ ϵh, ϵh ∼ N(0, σε) (4)
+Values for the four parameters do, tf , rd, and σε are
+obtained independently for all sensors through maximum
+likelihood estimation (MLE). Once calibrated, the model is
+used to obtain the estimated mean and point-wise standard
+deviations for the sensor offset, μ
+1(t) ¼ E(E0(t)) and σ1(t),
+while using the estimates of tf and σε as ﬁxed hyperpara-
+meter values.
+Model 2 – integrated Brownian motion for a single sensor
+In model 2, we assume instead that the recorded offset
+measurements are generated by an integrated Brownian
+motion. This is a continuous-time stochastic process,
+which captures the idea that the drift rate is subject to
+unmeasured disturbances:
+_r
+d(t) ¼ γ(t) dt, rd(0) ¼ rd,o, γ(t) ∼ N(0, σγ ) (5)
+_E
+0
+(t) ¼ rd(t) dt, E0(0) ¼ do (6)
+~E
+0
+(th) ¼ E0(th) þ ϵh, ϵh ∼ N(0, σε) (7)
+This model also includes four parameters: the initial drift
+rate (rd,o); the initial offset ( do); an input noise standard devi-
+ation controlling the rate by which the drift rate changes (σγ );
+and an output noise standard deviation (σε). As with model 1,
+parameter values are obtained through MLE. This is achieved
+by formulating the above process as a Gaussian process
+(Rasmussen & Williams ). This also enables computation
+of expected values and associated point-wise standard devi-
+ations, μ
+2(t) ¼ E(E0(t)) and σ2(t), with the estimates of σγ
+and σε now used as ﬁxed hyperparameter values.
+Model 3 – integrated Brownian motion for multiple
+sensors
+A third model is derived from Equations (5) – (7) by consider-
+ing that two sensors of the same type may be characterized
+by distinct initial conditions ( rd,o, do) but the same noise
+parameters ( σε, σγ ). This leads to one model with six
+parameters ( ra
+d,o, da
+o, rb
+d,o, db
+o, σε, σγ ), describing the com-
+puted offsets for a pair of sensors, instead of two models
+with four parameters, each describing the computed offsets
+for one sensor only. Their values are again obtained via
+MLE and used to obtain calibrated predictions
+(μ
+3(t) ¼ E(E0(t)) and σ3(t)), once again using the estimates
+of σγ and σε as ﬁxed hyperparameter values.
+Model evaluation
+The proposed models are evaluated through visual inspec-
+tion of the measurements, predictions, and residuals
+between the measurements and predictions. In the present
+case, such a visual inspection is considered suf ﬁcient to
+select a suitable model.
+Implementation
+All data and code necessary to reproduce our results are
+added in the Supplementary Information (Section A) (avail-
+able online). The complete data set can be found in Ohmura
+et al. ().
+RESULTS
+Sensor characterization tests: example
+Figure 2 shows the results of the ﬁrst sensor characterization
+test with sensor T1a (day 3). The raw potential measurement
+decreases during P0, increases to a steady value in P1,
+544 K. Ohmura et al. | Wear and tear of pH sensors Water Science & Technology | 80.3 | 2019
+Downloaded from https://iwaponline.com/wst/article-pdf/80/3/541/620891/wst080030541.pdf
+by LIB4RI E-RESOURCES user
+on 29 November 2019
+decreases to a steady value in P2, increases to a steady value in
+P3, and decreases again in P4. The time intervals used for
+computation of EP1, EP2,a n d EP3 (in calibration medium,
+pH ¼ 4, 7, and 4) are indicated by grey shading. One can see
+that the measured offset, EP2, is slightly below 0 mV
+(/C0 1.30 mV). The values for EP1 and EP3 a r es l i g h t l yl o w e r
+than their ideal value (171.9 and 172.4 mV). The measured
+rise and decay sensitivities are therefore S
+D ¼ 57:73 and
+SR ¼ 57:90 mV per pH unit. The results of every sensor
+characterization test are available in the software package con-
+tained in the Supplementary I nformation (Section A).
+Long-term trends in the offset measurements within
+the warranty period
+Figure 3 displays the measured offsets in all sensors through-
+out the experimental period. The recorded values collected
+within the warranty period (1 year) range from approxi-
+mately 0 mV (no offset) to roughly /C0 70 mV. All
+commercially available sensors (T1-T4) produce a decaying
+trend in the offsets. To the authors ’ knowledge, this kind
+of drift is caused primarily by depletion of electrolyte in
+the cell containing the reference electrode. The ﬁrstly
+recorded offsets for the T1-T3 sensors are small in magni-
+tude and concentrate around 0 mV. In contrast, the T4
+sensors offset values indicate a shock effect producing a
+shift of /C0 20 and /C0 45 mV (T4a, T4b) within days from instal-
+lation. According to the manufacturer, this is due to the high
+ammonium concentration in the medium and is typical for
+this speci ﬁc type of sensors. The accumulated drift in the
+T1 sensors is at most /C0 25 mV after one year while the T2
+and T3 sensors exhibit an offset of /C0 75 mV after one year.
+Without calibration, this means the T1 sensors can produce
+a pH value as high as 7.4 when the true pH is 7. The T2 and
+T3 sensors will produce a pH value as high as 8.3 in the
+same circumstances. Due to failure of T5d, no offsets
+could be measured for this sensor. The remaining prototypes
+(T5a/b/c) do not produce a signi ﬁcant offset at any time,
+except for T5b which produces a dramatic shift in the
+offset during three sensor characterization tests executed
+prior to replacement. We speculate that the lack of drift is
+due to the use of a particularly robust reference electrolyte
+and reference junction in this sensor type. A detailed inspec-
+tion of the T5b measurements revealed that the ﬁrst
+symptoms of sensor degradation can be observed on day
+332. This is however only obvious when comparing
+these measurements with the simultaneous T1b/T2b/T3b
+measurements (see the Supplementary Information, Section
+D, available with the online version of this paper). In all
+cases, except for the T4 and T5a/b pairs, the difference
+between offsets in sensors of the same type remains rather
+small with 1 year of installation, with a maximal difference
+of 16.7 mV recorded with the T2 sensors. Taking the 0.1 pH
+threshold discussed above as a guideline, one could propose
+to validate and calibrate the sensors when their potential
+measurements are 5.9 mV apart. This happens for the ﬁrst
+time for the T1, T2, and T3 sensors on day 127, 79, and
+309. By these times, the absolute offsets are already larger
+Figure 3 | Offset in all studied sensors as a function of time. Vertical lines indicate a change of installed sensors (see Figure 1). Grey bands indicate a change of reactor medium (see the
+section Long-term exposure experiment above). The commercially available sensors (T1-T4) exhibit drift from the start of installation while the pr ototypes (T5) exhibit close to no
+drift when otherwise functioning properly. A signi ﬁcant shock effect is observed for the T4 sensors at the start of the experiment but not for any other sensor.
+545 K. Ohmura et al. | Wear and tear of pH sensors Water Science & Technology | 80.3 | 2019
+Downloaded from https://iwaponline.com/wst/article-pdf/80/3/541/620891/wst080030541.pdf
+by LIB4RI E-RESOURCES user
+on 29 November 2019
+than this accepted threshold. This means that the use of hard-
+ware redundancy when using sensors of the same type is
+unlikely to provide adequate drift detection performance.
+Figure 4 shows offsets for the sensors T1a, T3a, and T3b
+collected in the ﬁrst year of the experiment as a function of
+the difference in the offset between T1a and T3a (left panel)
+and between T3b and T3a (right panel). The left panel
+suggests that offset difference between sensors can be pre-
+dictive of the offset in an individual sensor. The right
+panel shows that this is less likely to be successful for sen-
+sors of the same sensor type, as also described above. This
+is considered an important opportunity for further research,
+which we discuss further below.
+Long-term trends in the offset measurements beyond
+the warranty period
+The offset measurements obtained after the warranty period
+expired exhibit two phenomena that are surprising (Figure 3).
+The ﬁrst phenomenon is the rise of the offset of the T1a
+sensor after 480 days of exposure and a similar rise of the
+offset of the T1b sensor after 630 days of exposure. Consider-
+ing that this appears at distinct times in the lifetime of the T1
+sensors, this cannot be explained as a direct effect of medium
+composition changes. Based on information provided by the
+sensor manufacturer, this type of drift rate sign reversal is
+unique for the T1 sensors and is unlikely for any other
+sensor type covered in this study. It is the opinion of the
+authors that the time for this reversal is dif ﬁcult to predict
+in advance. For this reason, this phenomenon is best handled
+as an unmeasured process disturbance.
+The second phenomenon consists of the rather ﬂat to
+increasing pro ﬁle of the offset measurements in the T2 and
+T3 sensors between day 360 and day 480. Before and after
+this period, the drift rate in these sensors is visually similar.
+Given the synchronicity of this effect between 4 pH sensors,
+it is hypothesized that this change in the drift rate is in ﬂu-
+enced by the deliberate addition of nitrite in the form of
+NaNO
+2 salt to the reactor contents from day 366 to 417.
+The nitrite addition affected the biomass concentration
+and the concentrations of all dominant nitrogen species
+(ammonia, nitrite, nitrate, see Supplementary Information,
+Section C) and may also have affected the ion strength
+and conductivity of the reactor medium. Due to this
+combination of effects, the available data only offer an
+incomplete understanding of the complete chain of causes
+and effects between the nitrite addition and the observed
+changes in the sensor drift rates. For this reason, the effects
+of changing media composition on the sensor drift rate is
+also considered an unmeasured process disturbance.
+Long-term trends in the sensitivity measurements
+Figure 5 displays the computed sensitivity measurements for
+the potential rise ( S
+R) during the complete experimental
+period. These measurements do not exhibit strong trends
+Figure 4 | Offset measurements as a function of relative deviations in the offset measurements. Left panel: Offsets of sensor T1a and T3a as a function of the diff erence of these offsets.
+These data are suggestive of a close to linear relationship between sensor offsets and the offset difference. Right panel: Offsets of sensors T3a and T 3b relative to the difference
+of these offsets. The difference in offset remains small and there is no obvious relationship in this case.
+546 K. Ohmura et al. | Wear and tear of pH sensors Water Science & Technology | 80.3 | 2019
+Downloaded from https://iwaponline.com/wst/article-pdf/80/3/541/620891/wst080030541.pdf
+by LIB4RI E-RESOURCES user
+on 29 November 2019
+in any particular direction. The sensitivity measurements fall
+between 54.9 and 62.1 mV per pH unit. This means that one
+can expect to measure a pH value between 5.95 and 6.08
+when (i) the true pH value is 6 and (ii) any offset is corrected
+for. This is likely acceptable for most wastewater appli-
+cations. The same graph also shows the theoretical value
+of the sensitivity according to Equation (2) and the recorded
+temperature. This pro ﬁle is very similar to the recorded
+sensitivity pro ﬁles and explains most of the variations
+in the sensitivity measurements, which are small anyway.
+The computed sensitivity measurements for the potential
+rise exhibit no meaningful differences with the computed
+sensitivity measurements for the potential decay (see
+Supplementary Information, Section E, available online).
+Drift models
+For practical intents and purposes, the sensitivity – when cor-
+rected for temperature variations– can be considered constant
+for the considered process and sensors. This is why only the
+offset measurements are used for modelling. While we discuss
+all modelling results next, we only display results obtained for
+the T2a and T2b sensors in view of space requirements. The
+remaining modelling results are shown in the Supplementary
+Information (Section F) (available online).
+The left panel of Figure 6 shows the offset measurements
+for the T2a and T2b sensor together with the model predic-
+tions and their con ﬁdence bounds. The right panel of
+Figure 6 shows the prediction residuals. With Model 1, the
+time of the drift onset ( t
+f ) is always identi ﬁed as a time
+before the ﬁrst measurement was obtained (2.1 and 2.3
+days), suggesting that drift occurs throughout the exper-
+iment. More importantly, however, is that Model 1 offers a
+rather poor description of the data. The con ﬁdence intervals
+are wide and the residuals are clearly auto-correlated.
+In contrast, Models 2 and 3 provide narrow con ﬁdence
+intervals and residuals that do not suggest the presence of
+autocorrelation. There are no clear differences in perform-
+ance between these two models so that Model 3, which
+has fewer free parameters, is preferred. The same kind of
+model performances are obtained for sensor types T1 to
+T3. For the T4 sensors, all model types delivered the same,
+adequate performance. This may indicate that (a) the T4 sen-
+sors exhibit a drift which is in ﬂuenced less by unmeasured
+disturbances and therefore occurs with a close to constant
+rate or (b) that the shortened exposure – 6 months in this
+case – was too short to capture the long-term effects of
+unmeasured disturbances.
+DISCUSSION
+This is the ﬁrst publicly available study discussing long-term
+wear-and-tear on wastewater quality sensors in a systematic
+manner and at this scale (12 sensors). The results reveal that
+commonly held assumptions regarding sensor faults and
+fault symptoms are false. First, drift in pH sensors occurs
+simultaneously in all commercially available sensors
+Figure 5 | Sensitivity measurements for the potential rise as a function of time. Vertical lines indicate a change of installed sensors (see Figure 1). Grey bands indicate a change of reactor
+medium (see the section Long-term exposure experiment above). A black line shows the theoretically expected sensitivity computed with Equation (2) . Variations in the
+sensitivity are small and follow the theoretical sensitivity closely.
+547 K. Ohmura et al. | Wear and tear of pH sensors Water Science & Technology | 80.3 | 2019
+Downloaded from https://iwaponline.com/wst/article-pdf/80/3/541/620891/wst080030541.pdf
+by LIB4RI E-RESOURCES user
+on 29 November 2019
+(T1-T4). Second, drift occurs as soon as a sensor is deployed
+in the measured medium. In some cases, drift is paired by a
+signiﬁcant shift in the offset at the time of installation.
+Importantly, one can compute offsets and sensitivities as a
+function of time with data that is electronically available
+in modern measurement transformers.
+These observations are consequential for the develop-
+ment of methods for FDI. For instance, it is our opinion
+that the development of FDI methods and model-based
+benchmarking (e.g. Downs & Vogel ; Barty et al.
+) should be focused on methods that do not rely on
+wrongful assumptions. The Benchmark Simulation Model
+family could especially bene ﬁt from an expanded sensor
+model for water quality sensors, considering that the avail-
+able drift model ( Rosén et al. ; Gernaey et al. )
+cannot adequately describe the naturally occurring drift in
+ion-selective electrodes. We believe the challenges associ-
+ated with the FDI task can be simulated more accurately
+with the proposed stochastic sensor drift model, speci ﬁcally
+an integrated Brownian process.
+Fortunately, our results also reveal a number of opportu-
+nities for the use and maintenance of ion-selective
+measurements. First, the obtained stochastic models enable
+prediction of the expected offset measurement and associ-
+ated con ﬁdence intervals beyond the last measurement.
+This means that such a model can be used for predictive
+sensor maintenance; for example, by planning sensor
+validation and/or calibration before the predicted con ﬁ-
+dence interval for the reference potential ( E
+0) exceeds a
+predetermined tolerance. Exploring the utility of this idea
+is considered for future research. Second, the prototype sen-
+sors tested in this study exhibit a remarkably stable offset.
+While these sensors appear prone to failure, as one might
+expect from a prototype, this suggests that practically drift-
+free yet economical pH sensors will enter the market soon.
+Third, the recorded sensitivity measurements in all sensors
+hover around the ideal values and are remarkably stable
+throughout the experimental period. Such a stable sensitivity
+lends support for advanced monitoring and control strat-
+egies which are inherently robust to changes in the offset
+but still assume a rather stable sensitivity ( Ruano et al.
+, ; Villez & Habermacher ; Thürlimann et al.
+, ; Schneider et al. ). Fourth, it was shown that
+the offset difference between two pH sensors in the same
+medium can be predictive of the offset of the individual
+pH sensors; however, only if two suf ﬁciently distinct
+sensor types are selected. Combined with a stable sensitivity,
+this means that the deviation between two online pH sensor
+signals could be used as a proxy for the offsets in the individ-
+ual sensors. Such a proxy measurement could be very useful
+for remote sensor quality assessment and predictive sensor
+maintenance, especially since one can compute such devi-
+ations between on-line sensor signals while the sensors
+remain in their normal measurement location.
+Figure 6 | Modeling results for the T2 sensors. Left panel: Offset con ﬁdence bounds ( μ ± 2σ) obtained with models 1 ( μ1 , σ1 ),2( μ2 , σ2 ), and 3 ( μ3 , σ3 ). Right panel: Residuals between
+expected values (μ) and measured potentials ( E0 ). Model 1 does not describe the data well, leading to larger con ﬁdence bounds and auto-correlated residuals. Models 2 and 3 ﬁt
+the data well and their predictions are hard to distinguish from each other.
+548 K. Ohmura et al. | Wear and tear of pH sensors Water Science & Technology | 80.3 | 2019
+Downloaded from https://iwaponline.com/wst/article-pdf/80/3/541/620891/wst080030541.pdf
+by LIB4RI E-RESOURCES user
+on 29 November 2019
+CONCLUSIONS
+Despite an abundance of literature on FDI methods, little
+information is actually known about the appearance of
+sensor faults and failures in wastewater quality sensors.
+This ﬁrst long-term study of the ageing of 12 individual pH
+sensors gives valuable insights into this challenge:
+ Commonly held assumptions in FDI method develop-
+ment and evaluation, such as the availability of fault-
+free historical data and fault independence, are invalid
+for commercially available pH sensors.
+ Offset drift in redundant sensors is unlikely to be ident-
+iﬁed early if these sensors are of the exact same type
+and experience the same exposure.
+ The observed sensor drift is different for every sensor,
+even when sensor types and exposure times are the
+same. This supports the idea that sensor drift is a stochas-
+tic process, rather than a deterministic one.
+ACKNOWLEDGEMENTS
+This research was made possible by the Swiss National
+Foundation (Project: 157097). Mr Ohmura ’s contributions
+are ﬁnancially supported by Toshiba, Tokyo, Japan.
+Dr Carbajal ’s contributions are ﬁnancially supported by
+Eawag Discretionary Funds (grant no. 5221.00492.011.05, pro-
+ject: DF2017/EMUmore). We thank Daniel Iten and Stefan
+Vogel from Endress þ Hauser for their valuable advice
+during this study. The stochastic models were calibrated with
+the GPML toolbox v4.2 ( Rasmussen & Nickisch ).
+REFERENCES
+Alferes, J., Tik, S., Copp, J. & Vanrolleghem, P. A.  Advanced
+monitoring of water systems using in situ measurement
+stations: data validation and fault detection . Water Science
+and Technology 68 (5), 1022 – 1030.
+Barty, M., Patton, R., Syfert, M., de las Heras, S. & Quevedo, J.
+ Introduction to the DAMADICS actuator FDI
+benchmark study. Control Engineering Practice 14 (6),
+577– 596.
+Buck, R. P., Rondinini, S., Covington, A. K., Baucke, F. G. K.,
+Brett, C. M., Camoes, M. F., Milton, M. J. T., Mussini, T.,
+Naumann, R., Pratt, K. W. & Spitzer, P.  Measurement
+of pH. Definition, standards, and procedures (IUPAC
+recommendations 2002). Pure and Applied Chemistry
+74 (11), 2169 – 2200.
+Carr, J. J.  Sensors and Circuits. PTR Prentice Hall, Englewood
+Cliffs, NJ, USA.
+Corominas, L., Villez, K., Aguado, D., Rieger, L., Rosén, C. &
+Vanrolleghem, P. A.  Performance evaluation of fault
+detection methods for wastewater treatment processes .
+Biotechnology and Bioengineering 108 (2), 333 – 344.
+Corominas, L., Garrido-Baserba, M., Villez, K., Olsson, G., Cortes,
+U. & Poch, M.  Transforming data into knowledge for
+improved wastewater treatment operation: a critical review
+of techniques . Environmental Modelling and Software
+106,8 9 – 103.
+Downs, J. J. & Vogel, E. F.  A plant-wide industrial process
+control problem . Computers and Chemical Engineering
+17 (3), 245 – 255.
+Gernaey, K. V., Jeppsson, U., Vanrolleghem, P. A. & Copp, J. B.
+ Benchmarking of Control Strategies for Wastewater
+Treatment Plants. Scientific and Technical Report No. 23.
+IWA Publishing, London, UK.
+Haimi, H., Mulas, M., Corona, F. & Vahala, R.  Data-derived
+soft-sensors for biological wastewater treatment plants: an
+overview. Environmental Modelling and Software 47,8 8– 107.
+Le, Q. H., Verheijen, P. J., van Loosdrecht, M. C. & Volcke, E. I.
+ Experimental design for evaluating WWTP data by
+linear mass balances . Water Research 142, 415 – 425.
+Ohmura, K., Thuerlimann, C. M., Kipf, M., Carbajal, J. P. & Villez,
+K.  pH Sensor Ageing Experiment (SoDAN-dataset1)
+,
+https://zenodo.org/record/3229195.
+Rasmussen, C. E. & Nickisch, H.  Gaussian Processes for
+Machine Learning (GPML) Toolbox. Journal of Machine
+Learning Research 11, 3011 – 3015.
+Rasmussen, C. E. & Williams, C. K.  Gaussian Processes for
+Machine Learning . MIT Press, Cambridge, MA, USA.
+Rieger, L., Langergraber, G. & Siegrist, H.  Uncertainties of
+spectral in situ measurements in wastewater using different
+calibration approaches. Water Science and Technology
+53 (12), 187 – 197.
+Rieger, L., Takács, I., Villez, K., Siegrist, H., Lessard, P.,
+Vanrolleghem, P. A. & Comeau, Y.  Data reconciliation
+for wastewater treatment plant simulation studies – planning
+for high-quality data and typical sources of errors . Water
+Environment Research 82, 426 – 433.
+Rieger, L., Thomann, M., Gujer, W. & Siegrist, H. 
+Quantifying the uncertainty of on-line sensors at WWTPs
+during field operation . Water Research 39 (20), 5162 – 5174.
+Rosén, C., Rieger, L., Jeppsson, U. & Vanrolleghem, P. A. 
+Adding realism to simulated sensors and actuators . Water
+Science and Technology 57 (3), 337 – 344.
+Ruano, M. V., Ribes, J., Seco, A. & Ferrer, J.  Low cost-sensors
+as a real alternative to on-line nitrogen analysers in
+continuous systems. Water Science and Technology 60 (12),
+3261– 3268.
+Ruano, M. V., Ribes, J., Seco, A. & Ferrer, J.  An advanced
+control strategy for biological nutrient removal in continuous
+systems based on pH and ORP sensors . Chemical
+Engineering Journal 183, 212 – 221.
+Schneider, M. Y., Carbajal, J. P., Furrer, V., Maurer, M. & Villez,
+K.  Beyond signal quality: the value of unmaintained pH,
+549 K. Ohmura et al. | Wear and tear of pH sensors Water Science & Technology | 80.3 | 2019
+Downloaded from https://iwaponline.com/wst/article-pdf/80/3/541/620891/wst080030541.pdf
+by LIB4RI E-RESOURCES user
+on 29 November 2019
+dissolved oxygen, and oxidation-reduction potential sensors
+for remote performance monitoring of on-site sequencing
+batch reactors. Water Research 161, 639 – 651.
+Spindler, A.  Structural redundancy of data from wastewater
+treatment systems. Determination of individual balance
+equations. Water Research 57, 193 – 201.
+Spindler, A. & Vanrolleghem, P. A.  Dynamic mass balancing
+for wastewater treatment data quality control using CUSUM
+charts. Water Science and Technology 65 (12), 2148 – 2153.
+Taylor, B. N., Mohr, P. J. & Douma, M.  The NIST Reference
+on constants, units, and uncertainty.
+Thomann, M.  Quality evaluation methods for wastewater
+treatment plant data . Water Science and Technology 10,
+1601– 1609.
+Thomann, M., Rieger, L., Frommhold, S., Siegrist, H. & Gujer, W.
+ An efficient monitoring concept with control charts for on-
+line sensors. Water Science and Technology 46 (4– 5), 107– 116.
+Thürlimann, C. M., Dürrenmatt, D. J. & Villez, K. Soft-sensing
+with qualitative trend analysis for control in full-scale wastewater
+treatment plants. Control Engineering Practice70, 121– 133.
+Thürlimann, C. M., Udert, K. M., Morgenroth, E. & Villez, K. 
+Stabilizing control of a urine nitrification process in the
+presence of sensor drift. Water Research. Accepted in press,
+https://doi.org/10.1016/j.watres.2019.114958.
+Venkatasubramanian, V., Rengaswamy, R. & Kavuri, S. N. a
+A review of process fault detection and diagnosis – Part II:
+qualitative models and search strategies . Computers and
+Chemical Engineering 27 (3), 313 – 326.
+Venkatasubramanian, V., Rengaswamy, R., Kavuri, S. N. & Yin, K.
+b A review of process fault detection and diagnosis – Part
+III: process history based methods . Computers and Chemical
+Engineering 27 (3), 327 – 346.
+Venkatasubramanian, V., Rengaswamy, R., Yin, K. & Kavuri, S. N.
+c A review of process fault detection and diagnosis – Part
+I: quantitative model-based methods . Computers and
+Chemical Engineering 27 (3), 293 – 311.
+Villez, K. & Habermacher, J.  Shape anomaly detection for
+process monitoring of a sequencing batch reactor . Computers
+and Chemical Engineering 91, 365 – 379.
+Villez, K., Vanrolleghem, P. A. & Corominas, L.  Optimal flow
+sensor placement on wastewater treatment plants . Water
+Research 101,7 5 – 83.
+Westcott, C.  pH Measurements . Academic Press, New York,
+NY, USA.
+First received 3 June 2019; accepted in revised form 23 August 2019. Available online 3 September 2019
+550 K. Ohmura et al. | Wear and tear of pH sensors Water Science & Technology | 80.3 | 2019
+Downloaded from https://iwaponline.com/wst/article-pdf/80/3/541/620891/wst080030541.pdf
+by LIB4RI E-RESOURCES user
+on 29 November 2019

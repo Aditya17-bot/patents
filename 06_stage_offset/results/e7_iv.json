@@ -1,0 +1,47 @@
+{
+ "n_iv": 89,
+ "n_common": 89,
+ "targets": 18,
+ "iv": {
+  "linear": {
+   "n": 89,
+   "median": 6.36,
+   "mean": 8.92,
+   "p90": 17.5
+  },
+  "method": {
+   "n": 89,
+   "median": 6.1,
+   "mean": 7.94,
+   "p90": 15.3
+  },
+  "paired": {
+   "better": 52,
+   "of": 86,
+   "share": 0.605,
+   "z": 1.94
+  }
+ },
+ "daily": {
+  "linear": {
+   "n": 89,
+   "median": 6.36,
+   "mean": 8.92,
+   "p90": 17.5
+  },
+  "method": {
+   "n": 89,
+   "median": 5.83,
+   "mean": 7.87,
+   "p90": 15.4
+  },
+  "paired": {
+   "better": 48,
+   "of": 73,
+   "share": 0.658,
+   "z": 2.69
+  }
+ },
+ "r_dev_iv": 0.529,
+ "r_dev_daily": 0.524
+}

@@ -1,0 +1,121 @@
+{
+ "per_sensor": {
+  "AICU_1": {
+   "k_cal": 0.1489,
+   "n_days": 79,
+   "mae_cal": 1.003,
+   "mae_shared": 0.861,
+   "bias_cal": 0.662,
+   "bias_shared": 0.221,
+   "R_mean": 2.514
+  },
+  "AICU_2": {
+   "k_cal": 0.1572,
+   "n_days": 79,
+   "mae_cal": 1.699,
+   "mae_shared": 1.085,
+   "bias_cal": 1.561,
+   "bias_shared": 0.81,
+   "R_mean": 2.514
+  },
+  "Automatoes_1": {
+   "k_cal": 0.1277,
+   "n_days": 80,
+   "mae_cal": 0.798,
+   "mae_shared": 0.796,
+   "bias_cal": -0.317,
+   "bias_shared": -0.304,
+   "R_mean": 3.684
+  },
+  "Automatoes_2": {
+   "k_cal": 0.0985,
+   "n_days": 80,
+   "mae_cal": 1.329,
+   "mae_shared": 0.953,
+   "bias_cal": -1.261,
+   "bias_shared": -0.531,
+   "R_mean": 3.684
+  },
+  "Digilog_1": {
+   "k_cal": 0.0835,
+   "n_days": 79,
+   "mae_cal": 1.865,
+   "mae_shared": 1.326,
+   "bias_cal": -1.814,
+   "bias_shared": -0.476,
+   "R_mean": 4.309
+  },
+  "Digilog_2": {
+   "k_cal": 0.0544,
+   "n_days": 79,
+   "mae_cal": 1.958,
+   "mae_shared": 1.861,
+   "bias_cal": -1.905,
+   "bias_shared": 1.358,
+   "R_mean": 4.309
+  },
+  "IUACAAS_1": {
+   "k_cal": 0.1602,
+   "n_days": 79,
+   "mae_cal": 1.155,
+   "mae_shared": 1.474,
+   "bias_cal": -0.33,
+   "bias_shared": -1.171,
+   "R_mean": 4.538
+  },
+  "IUACAAS_2": {
+   "k_cal": 0.1819,
+   "n_days": 79,
+   "mae_cal": 1.088,
+   "mae_shared": 1.442,
+   "bias_cal": 0.096,
+   "bias_shared": -1.27,
+   "R_mean": 4.538
+  },
+  "Reference_1": {
+   "k_cal": 0.1287,
+   "n_days": 79,
+   "mae_cal": 0.98,
+   "mae_shared": 0.985,
+   "bias_cal": -0.746,
+   "bias_shared": -0.757,
+   "R_mean": 3.43
+  },
+  "Reference_2": {
+   "k_cal": 0.1044,
+   "n_days": 77,
+   "mae_cal": 0.961,
+   "mae_shared": 0.833,
+   "bias_cal": -0.722,
+   "bias_shared": -0.097,
+   "R_mean": 3.462
+  },
+  "TheAutomators_1": {
+   "k_cal": 0.123,
+   "n_days": 80,
+   "mae_cal": 1.534,
+   "mae_shared": 1.68,
+   "bias_cal": 0.929,
+   "bias_shared": 1.122,
+   "R_mean": 3.651
+  },
+  "TheAutomators_2": {
+   "k_cal": 0.1523,
+   "n_days": 80,
+   "mae_cal": 2.361,
+   "mae_shared": 1.663,
+   "bias_cal": 1.957,
+   "bias_shared": 1.069,
+   "R_mean": 3.651
+  }
+ },
+ "all": {
+  "k_shared": 0.1282,
+  "n": 950,
+  "R_mean": 3.691,
+  "mae_cal": 1.396,
+  "mae_shared": 1.248,
+  "median_abs_rel_cal": 0.322,
+  "median_abs_rel_shared": 0.284
+ }
+}

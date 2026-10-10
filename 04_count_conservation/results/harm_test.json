@@ -1,0 +1,90 @@
+{
+ "corridors": {
+  "M25": {
+   "relations": 429,
+   "outside_map": 88,
+   "detectors_touched": 115,
+   "prior_only": {
+    "all": {
+     "cells": 98126,
+     "MAE": 15.795,
+     "RMSE": 32.005
+    },
+    "touched": {
+     "cells": 31059,
+     "MAE": 12.031,
+     "RMSE": 21.886
+    }
+   },
+   "all_recovered": {
+    "constraints": 429,
+    "all": {
+     "cells": 98126,
+     "MAE": 14.265,
+     "RMSE": 31.305
+    },
+    "touched": {
+     "cells": 31059,
+     "MAE": 11.017,
+     "RMSE": 23.575
+    }
+   },
+   "without_outside_map": {
+    "constraints": 341,
+    "all": {
+     "cells": 98126,
+     "MAE": 14.21,
+     "RMSE": 30.674
+    },
+    "touched": {
+     "cells": 31059,
+     "MAE": 10.827,
+     "RMSE": 20.607
+    }
+   }
+  },
+  "M1": {
+   "relations": 209,
+   "outside_map": 37,
+   "detectors_touched": 38,
+   "prior_only": {
+    "all": {
+     "cells": 50373,
+     "MAE": 13.763,
+     "RMSE": 29.087
+    },
+    "touched": {
+     "cells": 11020,
+     "MAE": 9.543,
+     "RMSE": 17.464
+    }
+   },
+   "all_recovered": {
+    "constraints": 209,
+    "all": {
+     "cells": 50373,
+     "MAE": 11.882,
+     "RMSE": 26.392
+    },
+    "touched": {
+     "cells": 11020,
+     "MAE": 7.858,
+     "RMSE": 16.26
+    }
+   },
+   "without_outside_map": {
+    "constraints": 172,
+    "all": {
+     "cells": 50373,
+     "MAE": 11.832,
+     "RMSE": 26.168
+    },
+    "touched": {
+     "cells": 11020,
+     "MAE": 7.651,
+     "RMSE": 14.618
+    }
+   }
+  }
+ }
+}

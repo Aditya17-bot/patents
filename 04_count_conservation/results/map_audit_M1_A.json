@@ -1,0 +1,164 @@
+{
+ "manifest": "window_M1_A.json",
+ "rule": "residual > self-derived limit",
+ "limit_pct": 2.363,
+ "min_shared": 2,
+ "min_overlap": 0.5,
+ "map_relations": 88,
+ "corruption_pool": 72,
+ "recovered_relations": 241,
+ "control": {
+  "evaluable": 88,
+  "false_flags": 16,
+  "false_flag_rate": 0.1818,
+  "flagged": [
+   {
+    "relation": {
+     "4338": 1,
+     "4288": -1
+    },
+    "residual_pct": 12.338
+   },
+   {
+    "relation": {
+     "5605": 1,
+     "2640": -1
+    },
+    "residual_pct": 17.175
+   },
+   {
+    "relation": {
+     "2640": 1,
+     "2092": -1
+    },
+    "residual_pct": 4.528
+   },
+   {
+    "relation": {
+     "2092": 1,
+     "3853": -1
+    },
+    "residual_pct": 10.04
+   },
+   {
+    "relation": {
+     "14194": 1,
+     "14237": -1
+    },
+    "residual_pct": 3.527
+   },
+   {
+    "relation": {
+     "20082": 1,
+     "9896": -1
+    },
+    "residual_pct": 2.369
+   },
+   {
+    "relation": {
+     "9981": 1,
+     "9948": -1
+    },
+    "residual_pct": 2.787
+   },
+   {
+    "relation": {
+     "14323": 1,
+     "14355": -1
+    },
+    "residual_pct": 22.392
+   },
+   {
+    "relation": {
+     "14336": 1,
+     "14348": -1
+    },
+    "residual_pct": 9.325
+   },
+   {
+    "relation": {
+     "1023": 1,
+     "3989": -1,
+     "3851": 1
+    },
+    "residual_pct": 3.38
+   },
+   {
+    "relation": {
+     "10159": 1,
+     "10219": -1
+    },
+    "residual_pct": 47.596
+   },
+   {
+    "relation": {
+     "10196": 1,
+     "10130": -1,
+     "10141": -1
+    },
+    "residual_pct": 3.872
+   },
+   {
+    "relation": {
+     "10134": 1,
+     "10220": -1,
+     "10215": 1
+    },
+    "residual_pct": 6.446
+   },
+   {
+    "relation": {
+     "10149": 1,
+     "10161": -1,
+     "10152": 1,
+     "10170": -1
+    },
+    "residual_pct": 2.505
+   },
+   {
+    "relation": {
+     "456": 1,
+     "1018": -1
+    },
+    "residual_pct": 46.83
+   },
+   {
+    "relation": {
+     "3999": 1,
+     "1982": -1
+    },
+    "residual_pct": 16.778
+   }
+  ]
+ },
+ "kinds": {
+  "sign_flip": {
+   "trials": 29,
+   "detected": 29,
+   "repaired_exact": 13,
+   "detection_rate": 1.0,
+   "repair_rate": 0.4483
+  },
+  "drop_member": {
+   "trials": 29,
+   "detected": 29,
+   "repaired_exact": 23,
+   "detection_rate": 1.0,
+   "repair_rate": 0.7931
+  },
+  "wrong_site": {
+   "trials": 60,
+   "detected": 37,
+   "repaired_exact": 4,
+   "detection_rate": 0.6167,
+   "repair_rate": 0.0667
+  },
+  "extra_member": {
+   "trials": 60,
+   "detected": 60,
+   "repaired_exact": 49,
+   "detection_rate": 1.0,
+   "repair_rate": 0.8167
+  }
+ }
+}

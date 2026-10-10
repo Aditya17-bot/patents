@@ -1,0 +1,622 @@
+|  /  / Invention Disclosure Format (IDF)-B [IMAGE] | Document No. | 02-IPR-R003 |
+|  | Issue No/Date | 2/01.02.2024 |
+|  | Amd. No/Date | 0/00.00.0000 |
+
+1. Title of the Invention
+System and Method for Gas-Hazard Classification and Mitigation Using Fan Coast-Down Aerodynamic Densitometry with Thermodynamic-Residual Compensation and Chemoresistive Disambiguation
+2. Field / Area of Invention
+This invention belongs to the fields of embedded instrumentation, physical gas sensing and environmental safety control. It describes an apparatus and a method in which a small axial fan, normally used only as an actuator, is operated as a measuring element. The fan is spun up and its supply is interrupted. The time taken for each revolution during the ensuing free coast-down is recorded, and the resulting speed-decay record is fitted to a rotor-dynamics model that separates the speed-independent and viscous friction losses of the bearing from the aerodynamic loss of the blades. The aerodynamic coefficient is proportional to the density of the surrounding gas and is converted into a density estimate. That estimate is compared with the density that dry and humid air would have at the prevailing temperature, relative humidity and pressure, measured by a co-located environmental sensor. The remaining difference, the thermodynamic density residual, isolates the contribution of a foreign gas of molecular mass different from that of air. A metal-oxide chemoresistive (MQ-series) sensor supplies a second, physically independent signal. The pair of signals is used to assign the atmosphere to one of five hazard classes and to select a mitigation action appropriate to that class, including suppression of fan energisation and choice of a high or low vent path when a combustible gas is indicated.
+Low-cost gas monitoring in rooms, cabinets, cylinder stores and small workshops relies almost entirely on metal-oxide chemoresistive sensors. Such sensors respond to reducing and combustible gases and to organic vapours, and they are strongly affected by temperature and humidity, but they give little or no response to inert asphyxiants such as carbon dioxide at percent-level concentration or helium. They also cannot say whether a detected gas is lighter or heavier than air, which determines where it accumulates and therefore where it must be vented. Two consequences follow. An asphyxiant leak can progress without any response from the installed detector. A combustible leak may be answered by energising an exhaust fan, which is itself a potential ignition source, and by venting from the wrong height. A physical measurement of gas density, compensated for the ordinary variation of air density with the weather, supplies exactly the two pieces of information the chemoresistive sensor lacks. It indicates that the composition of the air has changed, and it gives the sign of the change, which is heavier or lighter than air. The present invention obtains that measurement from a fan that the protection system requires in any case.
+2.1 Technical Problem Addressed by the Invention
+Metal-oxide chemoresistive gas sensors are not responsive to inert asphyxiants such as carbon dioxide and helium at the percent-level concentrations relevant to oxygen displacement, so a sensor of this kind alone cannot detect that class of hazard.
+A chemoresistive response does not indicate whether the gas responsible is lighter or heavier than air, so it cannot by itself choose between a high and a low ventilation path. Nor can it separate a combustible gas from a benign organic vapour that produces a comparable resistance change.
+The density of ambient air changes by several per cent with ordinary variation of temperature, humidity and barometric pressure. This is larger than the density change produced by a percent-level gas admixture, so any uncompensated density measurement is dominated by the weather rather than by composition.
+The drag experienced by a rotating fan depends on bearing friction as well as on gas density. Bearing friction varies from unit to unit and increases with wear. A fan-based measurement that uses only an overall quantity, such as steady speed at fixed drive or total coast-down time, therefore confuses mechanical wear with a change of gas composition.
+Conventional automatic mitigation energises an exhaust fan whenever a gas threshold is crossed, irrespective of whether the gas is flammable. It also does not distinguish buoyant from dense gases when selecting the vent path.
+2.2 Definitions
+Coast-down. The free deceleration of the fan rotor after its electrical drive is removed, during which the only torques acting are bearing friction and aerodynamic drag.
+Revolution period (Tk). The time taken by the rotor to complete revolution k during coast-down, obtained from the tachometer edges belonging to that revolution.
+Loss coefficients (a0, a1, a2). The three coefficients of the rotor deceleration model of Equation 3. a0 is the speed-independent (Coulomb) friction term, a1 the term proportional to speed (viscous bearing loss) and a2 the term proportional to the square of speed (aerodynamic loss). a2 is proportional to the density of the surrounding gas.
+Aerodynamic density estimate (ρ̂). The gas density inferred from the aerodynamic coefficient using the commissioning calibration constant K (Equation 6).
+Thermodynamic reference density (ρref). The density that humid air would have at the temperature, relative humidity and pressure measured by the environmental sensor, computed from the moist-air equation of state (Equation 8).
+Thermodynamic density residual (r). The percentage by which the aerodynamic estimate departs from the thermodynamic reference (Equation 9). In clean air r is close to zero whatever the weather. A gas heavier than air drives it positive, and a gas lighter than air drives it negative.
+Standardised residual (z). The density residual divided by its clean-air standard deviation established at commissioning (Equation 10).
+Chemoresistive response (s). The normalised response of the MQ-series sensor, defined as the negative natural logarithm of the ratio of sensing resistance to its clean-air reference (Equation 13).
+Friction lock. The practice of fixing the viscous coefficient a1 at its commissioning value when fitting coast-downs for density estimation, so that only a0 and a2 are free. This reduces the covariance between viscous and aerodynamic terms in the fit.
+Recommissioning. The automatic procedure invoked when the friction coefficients depart from their commissioning values. The density channel is withheld from classification, a set of clean-air coast-downs is acquired, and the friction lock and calibration constant are re-established.
+Chemoresistive disambiguation. The use of the chemoresistive response to decide whether a density residual is caused by a combustible or reducing gas or by an inert gas. Conversely, the density residual decides whether a chemoresistive response is caused by a buoyant gas, a dense gas or a vapour of negligible density effect.
+3. Prior Patents and Publications from Literature
+The search covered Google Patents, the USPTO full-text collection, Espacenet (EPO) records reachable through Google Patents, IEEE Xplore, Crossref and publisher records, standards catalogues (SAE, IEC, IEEE) and manufacturer documentation. The query families were: fan spin-down, coast-down and run-down measurement; estimation of air density from fan or blower operating point; gas-type or gas-family detection from blower behaviour; rotor-damping gas sensors; friction and windage loss separation; temperature and humidity compensation of metal-oxide sensors; multi-sensor gas classification; and automatic gas-leak ventilation. The entries retained are those that bear directly on an element of the present combination.
+3A. Prior Patent Literature
+| S. No. | Patent No. (Year) | Title / Assignee | Comments |
+| 1 | US5621159A (1997) | Method and apparatus for determining fan bearing friction. Dell USA LP. | The closest identified patent on the use of fan spin-down as a measurement. Fan power is interrupted, and the tachometer pulses counted during spin-down (or during spin-up, or the starting voltage) are used as an indicator of bearing friction for failure prediction. Using fan spin-down to track bearing condition is therefore known, and no novelty is asserted for the friction monitor of the present invention taken alone. The reference treats the spin-down rate as a single aggregate quantity governed by rotor inertia and friction. It does not separate speed-independent, viscous and aerodynamic losses, estimate gas density, compensate for temperature, humidity or pressure, or use the result for gas detection. |
+| 2 | US20060176186A1 (2006) | Fan monitoring for failure prediction. Hewlett-Packard Development Co. LP. | Predicts fan failure from the time derivative of fan power or current at constant speed. Establishes that electrical monitoring of fan load is used for wear detection. No coast-down, no loss-mechanism separation, no gas or density measurement. |
+| 3 | EP2706300A2 / A3 / B1 (2014; B1 2015) | Method for detecting the gas family and gas burner. ebm-papst Landshut GmbH (priority 05-09-2012). | The most material reference to the idea that fan behaviour reveals gas composition. In a premix burner, the air mass flow and blower speed are measured before and after fuel gas is admitted, and the change in blower speed identifies the gas family through its effect on the density and flow of the mixture. The reference operates a driven blower at steady state inside a fuel line, with a known fuel deliberately injected and an air-mass meter as reference. It uses no free coast-down, no separation of friction from aerodynamic loss, no thermodynamic reference density derived from ambient temperature, humidity and pressure, and no chemoresistive channel. Its purpose is fuel-family identification for combustion control, not detection and mitigation of an unknown ambient hazard. |
+| 4 | US9119979B2 (2015) | Method of controlling a powered air purifying respirator. 3M Innovative Properties Co. (priority 11-08-2009). | Determines ambient air density either from pressure and temperature sensors, or from the fan pressure or speed at a predetermined motor voltage under a known load, and uses it to adjust motor drive and maintain airflow. Both the thermodynamic calculation of air density and the inference of density from a fan operating point are therefore disclosed, albeit as alternatives. The reference does not form the difference between the two to detect a composition change, uses steady powered operation rather than coast-down, does not separate friction, and performs no gas classification. |
+| 5 | US4340355A (1982) | Furnace control using induced draft blower, exhaust gas flow rate sensing and density compensation. Honeywell Inc. | Recognises that the density of gas passing an induced-draft blower changes blower operation, and compensates the fuel-air ratio using exhaust temperature. Density effects on blower performance are thus long known in combustion control. There is no density measurement from rotor dynamics and no hazard detection. |
+| 6 | US4730479A (1988) | Temperature and humidity compensation for gas detection apparatus. Standard Oil Company. | Compensates a gas-sensitive semiconductor element for temperature and humidity using a matched gas-insensitive reference element. Environmental compensation of semiconductor gas sensors is old and is not claimed here as such. |
+| 7 | US10520481B2 (2019) | Hydrogen sulfide gas detector with humidity and temperature compensation. Rosemount Inc. (priority 29-05-2013). | Corrects a metal-oxide H2S sensor for humidity and temperature using co-located or remote humidity and temperature measurements and a compensation equation. The normalisation of the chemoresistive channel against an environment-adjusted reference in the present invention belongs to this known class. No density channel and no hazard classification by gas type. |
+| 8 | CN102645908A (2012) | Gas-leakage emergency protection device. Inventor Huang Xiaohua (application). | A carbon monoxide sensor read by a PLC drives an alarm, a warning lamp and an exhaust fan when a fixed threshold is exceeded. The closest identified art for the sense-decide-ventilate chain. The decision rests on one chemical parameter against one constant. The fan is energised for every detected gas, with no distinction between flammable and inert gases, no choice of vent height and no density information. |
+Table 1: Prior Patent Literature
+3B. Non-Patent Literature
+| S. No. | Source / Year | Title | Comments |
+| 1 | Fedchak, J. A., Arai, K., Jousten, K., Setina, J., Yoshida, H., Measurement, Vol. 66, 2015, pp. 176–183. DOI 10.1016/j.measurement.2015.02.012 | Recommended practices for the use of spinning rotor gauges in inter-laboratory comparisons | The most material item of non-patent art on the physical principle. The spinning rotor gauge infers gas density (pressure) from the deceleration of a freely spinning, magnetically levitated rotor, after subtracting a separately determined residual drag that is not caused by the gas. Inferring gas density from rotor deceleration, with correction for non-gas drag, is therefore established metrology, and it is not claimed as new. The gauge works in the molecular-flow vacuum regime with a levitated steel ball. It does not use a bladed fan in continuum-flow air, does not compare its reading with a thermodynamic reference to isolate a composition change, and performs no hazard classification or mitigation. |
+| 2 | Blakemore, C. P. et al., J. Vac. Sci. Technol. B, Vol. 38, 024201, 2020. DOI 10.1116/1.5139638 | Absolute pressure and gas species identification with an optically levitated rotor | Shows that the rotational damping of a released, optically levitated microsphere depends on pressure and on gas species, and uses it to identify the gas. This establishes rotor damping as a species-sensitive signal. It is a laboratory vacuum technique with no bearing friction, no ambient-air compensation and no safety application. |
+| 3 | SAE J2263 (2008, rev. 2020), SAE International | Road Load Measurement Using Onboard Anemometry and Coastdown Techniques | Represents vehicle coast-down deceleration by a constant term, a term linear in speed and a term quadratic in speed, and corrects the aerodynamic (quadratic) term for air density. The three-term decomposition of a coast-down into friction and aerodynamic parts by regression is therefore old, and the model form of Equation 3 is acknowledged as known. The standard characterises the vehicle, treating air density as a known correction rather than as the measurand. |
+| 4 | US EPA, 40 CFR Part 1066, Subpart D | Coastdown (vehicle road-load determination) | Regulatory coast-down procedure using the same three-coefficient road-load representation, with correction to reference ambient conditions. Supports the characterisation of Equation 3 as a standard analysis form. |
+| 5 | IEEE Std 112-2004 | IEEE Standard Test Procedure for Polyphase Induction Motors and Generators | Includes determination of friction and windage losses, and the retardation (deceleration) method is a long-established way of separating mechanical losses in rotating machines. Separation of windage from friction by deceleration is known. The windage term is not used to measure the ambient gas. |
+| 6 | Ramachandran, K. P., Rameshkumar, G. R., Al Hatmi, L. H., 2013 IEEE Int. Conf. on Industrial Engineering and Engineering Management (IEEM). DOI 10.1109/IEEM.2013.6962645 | Coast Down Time analysis for condition monitoring: an experimental investigation to study the effects of bearing lubrication and shaft misalignment in rotating machinery | Uses coast-down time of a centrifugal blower as a condition-monitoring index for lubrication and misalignment. Confirms that coast-down time is dominated by mechanical condition. This is why an aggregate coast-down time cannot serve as a density signal without friction separation (baseline D of Section 8). |
+| 7 | Rameshkumar, G. R., Rao, B. V. A., Ramachandran, K. P., Int. J. Rotating Machinery, 2010. DOI 10.1155/2010/962804 | Condition Monitoring of Forward Curved Centrifugal Blower Using Coast Down Time Analysis | Earlier coast-down-time study on a blower. As above, the quantity is used for mechanical diagnosis only. |
+| 8 | Picard, A., Davis, R. S., Gläser, M., Fujii, K., Metrologia, Vol. 45, 2008, pp. 149–155. DOI 10.1088/0026-1394/45/2/004 | Revised formula for the density of moist air (CIPM-2007) | The metrological reference for the density of humid air as a function of temperature, pressure, humidity and composition. It supplies the basis of the thermodynamic reference density of Equation 8. A formula only, not claimed. |
+| 9 | Wang, C., Yin, L., Zhang, L., Xiang, D., Gao, R., Sensors, Vol. 10, 2010, pp. 2088–2106. DOI 10.3390/s100302088 | Metal Oxide Gas Sensors: Sensitivity and Influencing Factors | Reviews the dependence of metal-oxide sensor sensitivity on material, operating temperature and humidity. Establishes the environmental cross-sensitivity that the chemoresistive normalisation must address, and the limited selectivity that motivates a second, physical channel. |
+| 10 | Abdullah, A. N. et al., Sensors, Vol. 22, 3301, 2022. DOI 10.3390/s22093301 | Correction Model for Metal Oxide Sensor Drift Caused by Ambient Temperature and Humidity | Regression-based correction of metal-oxide sensor resistance for ambient temperature and humidity. Represents current practice for the normalisation step and is not claimed. |
+| 11 | Vergara, A., Vembu, S., Ayhan, T., Ryan, M. A., Homer, M. L., Huerta, R., Sensors and Actuators B, Vols. 166–167, 2012, pp. 320–329. DOI 10.1016/j.snb.2012.01.074 | Chemical gas sensor drift compensation using classifier ensembles | Gas discrimination with a 16-element metal-oxide array and trained classifier ensembles. Shows that chemical-only discrimination requires arrays, labelled training data and drift management. The present invention instead obtains an orthogonal physical signal and uses an explicit rule. |
+| 12 | Hall, D. L., Llinas, J., Proceedings of the IEEE, Vol. 85, No. 1, 1997, pp. 6–23 | An Introduction to Multisensor Data Fusion | Foundational treatment of fusion of dissimilar sensors. The general principle that complementary sensors improve discrimination is known. The reference does not address the specific pairing of an aerodynamic density residual with a chemoresistive response. |
+| 13 | Zhengzhou Winsen Electronics / Hanwei Electronics, MQ-2 manual (Ver. 1.4–1.5) | Flammable Gas Sensor (Model MQ-2) | Manufacturer data giving Rs/R0 sensitivity curves for LPG, propane, methane, hydrogen, alcohol and smoke, and the dependence of Rs/R0 on temperature and humidity. Source for the load-resistor measurement arrangement of Equation 12 and for the cross-sensitivity limitation of the chemoresistive channel. |
+| 14 | Bosch Sensortec, BST-BME280-DS002 | BME280 Combined humidity and pressure sensor, datasheet | Primary source for the environmental sensor. Specified absolute accuracy is about ±1 °C in temperature, ±3 %RH in relative humidity and ±1 hPa in pressure over the nominal range, which bounds the uncertainty of the thermodynamic reference density. A component specification only. |
+| 15 | Espressif Systems, ESP-IDF Programming Guide (ESP32): Pulse Counter (PCNT) and MCPWM Capture | ESP32 peripheral documentation | Documents hardware pulse counting and timer-capture of GPIO edges on the ESP32, which are the on-chip means for per-revolution timing of the tachometer signal. A component specification only. |
+| 16 | IEC 60079-10-1:2020 | Explosive atmospheres. Part 10-1: Classification of areas. Explosive gas atmospheres | Establishes that electrical equipment is a potential ignition source in a flammable gas atmosphere and that ventilation and release characteristics, including gas buoyancy, govern hazardous-area extent. Supports the design choice of inhibiting fan energisation and selecting vent height by gas buoyancy. A standard, not claimed. |
+| 17 | Stanford Research Systems, BGA244 Binary Gas Analyzer, product documentation | Binary gas analyser based on speed of sound | Commercial determination of the composition of a known binary gas mixture from a physical property (speed of sound) and temperature. Confirms that physical-property gas analysis is established for known binary mixtures in a sampling cell. It does not address unknown ambient admixtures, uses no rotating element and has no chemoresistive channel. |
+| 18 | Twin City Fan & Blower, Fan Engineering FE-1600 | Temperature and Altitude Effects on Fans | Engineering reference for the fan laws: at fixed speed, fan pressure and absorbed power scale with gas density. Provides the physical basis for the proportionality of the aerodynamic coefficient a2 to density. |
+Table 2: Non-Patent Literature
+Note on citation verification. Every entry in Tables 1 and 2 carries a full identifier, which is a patent publication number, a DOI, a journal volume and year, or a standard or document designation. Patent titles, assignees and dates were checked against the Google Patents record of the issuing office. Journal metadata were checked against the Crossref record for the stated DOI. The characterisations of standards and manufacturer documents are limited to their published scope. Formal claim construction of the patent references has not been performed, and an office search by a patent professional is recommended before filing.
+4. Summary and Background of the Invention
+4.1 Practical Background and Limitations of Existing Solutions
+A typical low-cost gas-safety unit consists of a metal-oxide sensor, a microcontroller, a buzzer and a relay that switches an exhaust fan. This arrangement answers one question: whether the resistance of the sensing film has fallen below a threshold. It performs acceptably for the reducing gases the film is designed for, such as liquefied petroleum gas, methane or alcohol vapour. It is blind in three situations that matter in practice. The first is an inert asphyxiant. A carbon dioxide release from a dry-ice store or fire-suppression system, or a helium or nitrogen release from a cylinder, displaces oxygen without changing the film resistance. The second is the distinction between a combustible gas and a harmless solvent or cleaning vapour, both of which lower the resistance, so that the unit is either prone to nuisance alarms or insensitive. The third is buoyancy. Methane rises and accumulates at the ceiling, propane and butane sink and accumulate at floor level, and a unit that knows only the resistance cannot direct ventilation to where the gas is.
+The installed mitigation compounds the problem. Switching on an exhaust fan whenever the threshold is crossed is appropriate for a toxic but non-flammable gas. For a combustible gas it introduces an energised electrical device into a potentially flammable mixture, which hazardous-area practice seeks to avoid. The information needed to act correctly is the molecular weight of the contaminant relative to air, which gives heavier or lighter, and whether it is chemically reducing, which gives combustible or not. The first is a physical property that a chemoresistor does not measure.
+Gas density does carry that information. At fixed temperature and pressure, admixture of a gas of molar mass Mg into air of molar mass Mair changes density in proportion to the admixture fraction and to (Mg/Mair − 1). The difficulty is that the ordinary day-to-day variation of air density, caused by temperature, humidity and barometric pressure, is several per cent, which exceeds the effect of a percent-level leak. Dedicated density meters, including vibrating-element transducers, spinning-rotor gauges and speed-of-sound analysers, exist, but they are laboratory or process instruments. They are not components of a low-cost ventilation unit.
+4.2 Distinctions Over the Closest Reported Systems
+The building blocks of this invention are individually known, and the disclosure does not assert otherwise. The inference of gas density from rotor deceleration, with correction for non-gas drag, is the operating principle of the spinning rotor gauge (Fedchak et al., 2015). Species-dependent rotor damping has been reported by Blakemore et al. (2020). The decomposition of a coast-down into constant, linear and quadratic loss terms is standard in vehicle road-load testing (SAE J2263; 40 CFR 1066 Subpart D). The separation of friction and windage by retardation is standard in machine testing (IEEE Std 112). The use of fan spin-down to assess bearing friction is disclosed in US5621159A, and fan-load monitoring for failure prediction in US20060176186A1. The inference of air density from a fan operating point, and its calculation from temperature and pressure, are both disclosed in US9119979B2. Identification of a fuel-gas family from a change of blower speed is disclosed in EP2706300. Temperature and humidity compensation of semiconductor gas sensors is disclosed in US4730479A and US10520481B2, and automatic fan actuation on gas detection in CN102645908A. The distinctions therefore cannot rest on any of those operations. Table 3 maps the feature set against the closest references, and five differences are relied upon.
+First, the measurand is the ambient gas and not the machine. In the road-load, machine-testing and fan-diagnostic art the coast-down characterises the rotating object, with air density treated as a known correction or as a nuisance. Here the rotor is the known quantity, characterised once at commissioning, and the aerodynamic coefficient is used as a transducer output for gas density.
+Second, friction is separated and then locked. US5621159A and the coast-down-time literature use an aggregate spin-down quantity that is dominated by bearing condition. The present method fits the full three-term model to per-revolution timing. It then refits with the viscous coefficient fixed at its commissioning value, so that bearing variation is absorbed by a0 and does not leak into a2. Figure 13 and Table 13 show that an aggregate coast-time estimate is displaced by up to about 12 % under added bearing friction, whereas the separated estimate remains within about 0.65 %.
+Third, a residual is formed against a thermodynamic reference. US9119979B2 derives air density either from a fan operating point or from pressure and temperature, and uses whichever it obtains for flow control. It does not compute both and difference them. In the present invention the thermodynamic reference, including humidity, is subtracted from the aerodynamic estimate, so that ordinary weather-driven density change cancels and only composition-driven change remains. The sign of the residual gives the buoyancy of the contaminant.
+Fourth, the density residual and the chemoresistive response are fused as two orthogonal axes. EP2706300 identifies a fuel family from blower speed alone, with a known gas deliberately injected. Chemical-array approaches (Vergara et al., 2012) rely on trained classifiers over many chemical channels. Here one physical axis, which responds to molar mass whatever the chemistry, and one chemical axis, which responds to reducing species whatever the mass, are combined by an explicit two-axis rule. The pair separates five classes that neither axis separates alone. These are clean air, inert asphyxiant, buoyant combustible, dense combustible and low-density-effect vapour.
+Fifth, mitigation is selected by class and by buoyancy. CN102645908A energises a fan whenever a gas is detected. Here the fan is driven to full ventilation for an asphyxiant, is left unenergised for a combustible, and the vent path is chosen high for a buoyant combustible and low for a dense one. An unresolved high chemoresistive response is escalated to the conservative combustible action. The density-channel self-check (friction monitoring and recommissioning) prevents a worn fan from being read as a gas.
+4.3 Inventive Combination and Cooperative Arrangement
+The contribution is a cooperative arrangement in which each element conditions the next, not any single operation within it. The per-revolution timing makes the model fit possible. The model fit makes friction separation possible. Friction separation makes the aerodynamic coefficient a density transducer rather than a wear indicator. The thermodynamic reference turns that density into a composition residual. The residual supplies the physical axis on which the chemoresistive response is disambiguated, and the resulting class selects a mitigation that depends on flammability and buoyancy. The friction coefficients produced by the same fit feed back into a self-check that withholds the density axis and recommissions the fan when its mechanics change. Removing any one element either restores the confusion it was introduced to resolve or removes a class from the decision. This is shown by the ablation of Section 8.8, where the omission of thermodynamic compensation, of friction separation, or of the density channel altogether each lowers macro-F1 from 0.759 to between 0.366 and 0.667.
+4.4 Mapping of Key Features Against Closest Prior Art
+| Technical feature | Present invention | US5621159A | EP2706300 | US9119979B2 | Spinning rotor gauge |
+| Measurand | Ambient gas density and composition | Fan bearing friction | Fuel-gas family in burner supply | Ambient air density for flow control | Gas density (pressure) in vacuum |
+| Rotor state used | Free coast-down, per-revolution timing | Spin-down pulse count | Steady driven speed | Steady driven speed or pressure | Free deceleration of levitated rotor |
+| Separation of friction from gas drag | Three-term fit; viscous term locked at commissioning | No (aggregate) | No | No | Residual drag subtracted as offset |
+| Thermodynamic reference from T, RH, P | Yes; residual formed against it | No | No (air-mass meter) | Alternative, not differenced | No |
+| Sign of residual used (heavier or lighter than air) | Yes | No | Implicit in family identification | No | No |
+| Chemoresistive second axis | Yes, explicit two-axis rule | No | No | No | No |
+| Wear detection feeding back to the gas channel | Yes; density suppressed and recommissioned | Wear is the output | No | No | No |
+| Mitigation | Class- and buoyancy-specific; fan inhibited for combustibles | None | Burner control | Motor voltage | None |
+Table 3: Feature Mapping Against Closest Prior Art
+4.5 Technical Effects Achieved
+The effects below are traced to specific mechanisms and quantified in Section 8 over the 256 test cases of Table 10. The physical prototype measurements reported in Section 8 were obtained using the procedure described in Section 8.12.
+Weather-independent density residual. Across controlled sweeps of temperature (21.7–34.2 °C), relative humidity (29–86 %) and pressure (994–1025 hPa), the mean absolute clean-air residual was 0.10–0.15 % with thermodynamic compensation, against 2.03–2.11 % when the aerodynamic estimate was compared with a fixed reference density (Table 12).
+Signed sensitivity to molar mass. The density residual rose with carbon dioxide (+0.593 % per % vol) and propane (+0.606 % per % vol) and fell with helium (−0.862 % per % vol) and methane (−0.389 % per % vol). These slopes are close to the molar-mass values of +0.52, +0.53, −0.87 and −0.45 % per % vol respectively (Table 11).
+Immunity to bearing wear. Under two levels of added bearing friction, the clean-air density anomaly of the friction-separated estimate stayed within 0.65 % (mean), whereas an estimate based on total coast-down time was displaced by 4.7 % and 11.9 % (Table 13).
+Five-class discrimination. Over all 256 test cases the proposed classifier reached 87.1 % accuracy and macro-F1 of 0.759, against 60.2 % and 0.366 for the chemoresistive sensor alone (Table 15).
+Flammability-appropriate mitigation. All 36 combustible-gas test cases received an action in which the fan was not energised and an alarm was raised. This comprised 18 by direct classification and 18 by escalation of an unresolved high chemoresistive response (Table 18).
+4.6 Industrial and Practical Applicability
+Laboratories and teaching facilities that store compressed gases, dry ice or cryogens are a primary application, because inert asphyxiants are present alongside flammable gases and solvent vapours, and because a single low-cost unit is preferable to separate oxygen, flammable-gas and toxic-gas detectors. Gas-cylinder stores and cabinets benefit from the buoyancy-dependent vent selection. Domestic and commercial kitchens using liquefied petroleum gas or piped natural gas benefit from the distinction between dense and buoyant fuel gases and between fuel gas and cooking vapour. Cold rooms and beverage-dispensing areas using carbon dioxide, battery rooms, small workshops and equipment enclosures that already contain a cooling fan are further applications. In the last case the existing fan can be given a sensing role by adding revolution timing and the processing of Section 7. The unit is constructed from mass-produced components (a microcontroller, a brushless fan with tachometer, a combined temperature, humidity and pressure sensor, and a metal-oxide sensor), so the invention is capable of industrial manufacture.
+5. Objective(s) of the Invention
+The primary objective is to provide a single low-cost embedded unit that measures the density of the surrounding gas by means of a fan that the unit also uses for ventilation. The unit compensates that measurement for weather and for mechanical wear, combines it with a chemoresistive measurement to identify the class of gas hazard, and selects a mitigation action appropriate to the flammability and buoyancy of the gas. The specific objectives follow.
+To acquire the period of every revolution of a fan during free coast-down after its supply is interrupted, and to derive rotational speed and angular velocity from those periods.
+To fit the coast-down record to a rotor-dynamics model that separates speed-independent friction, viscous friction and aerodynamic loss, and to extract an aerodynamic coefficient proportional to gas density.
+To stabilise the density estimate against bearing variation by fixing the viscous coefficient at its commissioning value, and by averaging a plurality of coast-downs.
+To compute a thermodynamic reference density from the measured temperature, relative humidity and pressure, and to form a signed, standardised density residual that is insensitive to weather and sensitive to composition.
+To normalise the chemoresistive response against an environment-adjusted clean-air reference, and to combine it with the density residual in an explicit two-axis classifier that distinguishes clean air, inert asphyxiant, buoyant combustible, dense combustible and low-density-effect vapour.
+To select a mitigation action by class, including suppression of fan energisation for combustible gases, choice of a high or low vent path by buoyancy, and conservative escalation of unresolved high chemoresistive responses.
+To detect a change of fan mechanics from the friction coefficients, to withhold the density channel while that change is unresolved, and to recommission the calibration automatically from clean-air coast-downs.
+To support calibration at more than one fan starting speed, and to record raw and derived quantities so that each decision can be reconstructed afterwards.
+6. Working Principle of the Invention (in brief)
+The unit executes a measurement cycle in which the fan is used first as a sensor and then, if required, as an actuator. Figure 4 gives the complete sequence and Figure 1 the architecture.
+Environmental and chemical sensing. A combined temperature, relative-humidity and pressure sensor (BME280) and an MQ-series metal-oxide sensor are read continuously, typically once per second. The sensing resistance Rs of the MQ element is obtained from its load-resistor voltage.
+Coast-down acquisition. The fan is driven to its operating speed and allowed to stabilise, and then its drive is removed. Each revolution is timed from the tachometer edges. The revolution periods give a record of angular velocity against time from about 2 900 RPM down to about 160 RPM in roughly 18–19 s for the fan characterised in Section 8. The first 0.3 s after cut-off is excluded so that electrical transients of the drive do not enter the fit.
+Loss separation. Once the drive is removed, the rotor obeys I dω/dt = −(τ0 + bω + kρω2). The constant term is dry bearing friction, the linear term viscous bearing loss and the quadratic term aerodynamic drag of the blades, which is proportional to gas density ρ. Figure 5(b) shows that the aerodynamic term dominates the deceleration at high speed and friction dominates near rest. The whole coast-down therefore carries separable information on both. The coefficients are obtained by fitting the solution of this equation to the timing record.
+Density and residual. With the viscous coefficient locked at its commissioning value, the aerodynamic coefficient a2 is averaged over three coast-downs and divided by the commissioning constant K to give the density estimate ρ̂. The thermodynamic reference ρref is computed from temperature, humidity and pressure, and the residual r = 100(ρ̂/ρref − 1) and its standardised form z are formed. In clean air z stays near zero. A dense gas drives it positive and a buoyant gas negative.
+Fusion, classification and mitigation. The pair (z, s) is classified by an explicit rule (Table 8). A negligible chemoresistive response with a significant residual indicates an inert asphyxiant, so the fan is driven at full speed, the vent is opened and an alarm is raised. A significant chemoresistive response with a negative or positive residual indicates a buoyant or dense combustible respectively, so the fan is not energised, the high or low vent path is opened and an alarm is raised. A chemoresistive response with no significant residual indicates a vapour of small density effect, which leads to partial ventilation and a notification, unless the response is high enough to be escalated to the combustible action.
+Self-check. The friction coefficients from the same fit are compared with their commissioning values. A departure indicating wear withholds the density channel and triggers recommissioning from clean-air coast-downs, after which the viscous lock and the calibration constant are re-established.
+6.1 What Is Being Invented Compared With One Example Implementation
+| Protectable functional and structural combination | Replaceable choices in the described embodiment |
+| Use of a ventilation fan as the sensing element through its free coast-down after drive removal | Particular fan type, size, supply voltage and operating speed |
+| Per-revolution timing of the coast-down and fitting of a model separating speed-independent, viscous and aerodynamic losses | Tachometer type and pulses per revolution; ESP32 capture peripheral; exclusion window of 0.3 s; nonlinear least-squares solver |
+| Locking of the viscous coefficient at its commissioning value for density estimation, and averaging over a plurality of coast-downs | Three coast-downs per decision; ten commissioning trials |
+| Conversion of the aerodynamic coefficient to density by a commissioning constant, with speed-specific constants where more than one operating speed is used | Numerical values of K and a1,lock; the three operating speeds |
+| Formation of a signed density residual against a thermodynamic moist-air reference computed from measured T, RH and P | BME280 sensor; particular saturation-vapour-pressure formula |
+| Explicit two-axis classification of (density residual, chemoresistive response) into asphyxiant, buoyant combustible, dense combustible, vapour and clean classes | MQ sensor model; decision thresholds; logarithmic response definition |
+| Class- and buoyancy-dependent mitigation, including inhibition of fan energisation for combustibles, high or low vent selection and escalation of unresolved responses | Servo vent mechanism; fan duty levels; buzzer and LED indication |
+| Friction-coefficient self-check that withholds the density channel and recommissions the calibration from clean-air coast-downs | Wear threshold multiple; four recommissioning coast-downs |
+Table 4: Protectable Combination and Replaceable Choices
+6.2 Statement Regarding Hardware Implementation
+The invention comprises a gas-hazard detection and mitigation apparatus built from commercially available components: an axial fan with a tachometer output (101, 102), a supply-voltage monitor (103), a combined temperature, humidity and pressure sensor (104), a metal-oxide chemoresistive sensor (105), a microcontroller hosting the processing and decision layers (200, 300), a fan drive capable of switching and inhibiting the fan (401), a servo-operated vent (402), audible and visual indication (403), a local display (404) and a recording interface (501). What distinguishes it is the manner in which these components act on one another. The fan is both a transducer and an actuator. The friction state of the fan determines whether its transducer output is admitted to the decision. The decision determines not only whether but how the fan and vent are operated, including whether the fan may be energised at all. The output of the apparatus is a set of actuator commands that change the physical state of the protected space.
+6.3 Technical Contribution
+A mass-produced fan is converted into a gas-density transducer by timing its coast-down, without adding a dedicated density sensor.
+Bearing friction, which dominates aggregate coast-down time and varies with wear, is separated from aerodynamic loss by fitting a three-term model, and is kept out of the density estimate by locking the viscous term.
+The variation of air density with weather, which is larger than the effect of a percent-level leak, is cancelled by differencing against a thermodynamic reference computed from co-located T, RH and P measurements.
+A physical axis that responds to molar mass is paired with a chemical axis that responds to reducing species. This separates inert asphyxiants, which chemoresistors miss, from combustibles, and dense combustibles from buoyant ones.
+The mitigation is selected so as not to energise the fan in a combustible atmosphere, and the vent path is chosen by the sign of the density residual.
+The same fit that yields density also yields the friction coefficients, which provide a self-check and trigger automatic recommissioning of the density channel.
+6.4 Brief Description of the Drawings
+Figure 1 shows the layered architecture with reference numerals. Figure 2 shows the breadboard prototype of the hardware platform. Figure 3 shows the hardware signal pathway from each sensing element to the ESP32 peripherals and from the controller to the actuators. Figure 4 sets out the processing pipeline. Figure 5 illustrates the coast-down sensing principle: (a) a representative coast-down with the fitted model, and (b) the decomposition of deceleration into friction and aerodynamic terms. Figure 6 compares coast-downs in clean air, in the presence of light and heavy gases, and with increased bearing friction. Figure 7 compares the density estimate with the reference density. Figure 8 shows the effect of thermodynamic compensation across temperature, humidity and pressure. Figures 9 and 10 show the density residual and the MQ response against concentration for five gases. Figure 11 shows the two-axis decision plane. Figure 12 shows the classification and mitigation logic. Figure 13 shows robustness to bearing wear. Figure 14 shows the proposed monitoring interface.
+7. Description of the Invention in Detail
+Scope of implementation. The implementation described in this section uses an ESP32 microcontroller, an axial DC fan with a tachometer, a BME280 environmental sensor, an MQ-series metal-oxide sensor, a motor-driver stage for the fan, a hobby servo for the vent, a buzzer and LED indicators, and a character display, as shown in the breadboard prototype of Figure 2. These are representative choices and not mandatory elements. The method extends to any fan or blower whose free deceleration can be timed, to any environmental sensor supplying temperature, humidity and pressure, to other chemoresistive or electrochemical sensors, and to any controller able to time edges and perform a small nonlinear fit. Where a specific numerical value is quoted, it applies to the fan and sensors characterised in Section 8.
+7.1 System Scope and Embodiment
+The invention is embodied as a self-contained unit mounted in the space it protects. Processing is organised in four layers, shown in Figure 1 with the reference numerals used throughout this section. The sensing layer (100) acquires the fan tachometer edges, the fan supply voltage, temperature, humidity, pressure and the chemoresistive signal. The processing layer (200) converts the tachometer edges into revolution periods and speeds, fits the coast-down model, estimates density, computes the thermodynamic reference and normalises the chemoresistive response. The decision layer (300) forms the density residual, checks the friction state, classifies the atmosphere and selects the mitigation. The actuation and recording layer (400, 500) drives or inhibits the fan, positions the vent, signals the occupants and records the cycle. Table 5 lists the elements.
+ [IMAGE]
+Figure 1: Layered Architecture of the Apparatus with Reference Numerals
+ [IMAGE]
+Figure 2: Breadboard Prototype of the Hardware Platform
+Figure 3 gives the hardware signal pathway of the embodiment. Every sensing element terminates on a dedicated ESP32 peripheral: the tachometer on the capture timer or pulse counter, the fan-supply divider and the MQ load-resistor voltage on ADC channels, and the BME280 on the I²C bus. Every actuator is driven from a PWM, GPIO or I²C output. The fan supply passes through the motor-driver stage (401), so that the same controller output that spins the fan up also removes its drive at the instant of cut-off and holds it off when fan energisation is inhibited.
+ [IMAGE]
+Figure 3: Hardware Signal Pathway of the ESP32 Embodiment
+| Numeral | Element | Specification in the described embodiment | Function in the arrangement |
+| 101 | Axial DC fan | 12 V-class axial fan driven to about 2 500–2 900 RPM before cut-off | Sensing element during coast-down; mixing and ventilation actuator otherwise |
+| 102 | Optical tachometer | Infrared reflective or slotted optical sensor viewing the blades (one pulse per blade passage), or the Hall output of a three- or four-wire fan; edges time-stamped by the ESP32 capture timer; p edges grouped per revolution (p = 7 in the configuration of Section 8) | Measures the time of every revolution, Tk |
+| 103 | Supply-voltage monitor | Resistive divider from the fan supply terminal to an ESP32 ADC input, sampled with each revolution | Measures the voltage applied to the fan; confirms the drive is off during coast-down and records the pre-cut-off supply |
+| 104 | BME280 | Digital I²C sensor mounted in the same air volume as the fan, shielded from the MQ heater; datasheet accuracy about ±1 °C, ±3 %RH, ±1 hPa; read at 1 Hz | Measures T, RH and P, the inputs of ρref |
+| 105 | MQ-series metal-oxide sensor | Heated element in series with load resistor RL across circuit supply Vc (5 V and 10 kΩ in the configuration of Section 8); Vout across RL read by ADC through a divider; read at 1 Hz | Measures sensing resistance Rs, which falls in reducing and combustible gases |
+| 110 | ESP32 microcontroller | Hosts layers 200 and 300; edge timing by capture or pulse-counter peripheral | Acquisition, fitting, classification, control |
+| 201 | Revolution timer | Period of each revolution; RPM = 60/Tk | Speed record |
+| 202 | Coast-down fitter | Nonlinear least squares on ODE solution; revolutions with mid-time ≥ 0.3 s | a0, a1, a2 (free) and a0, a2 (a1 locked) |
+| 203 | Density estimator | ρ̂ = ā2/K, mean of three coast-downs | Aerodynamic density |
+| 204 | Thermodynamic reference | Moist-air equation of state from T, RH, P | ρref |
+| 205 | MQ normaliser | s = −ln(Rs/R0,eff) | Chemoresistive axis |
+| 301 | Residual former | r = 100(ρ̂/ρref − 1); z = r/σr | Physical axis |
+| 302 | Friction monitor and recommissioning | Compares a0, a1 with commissioning values; suppresses density and recommissions | Self-check of density channel |
+| 303 | Two-axis classifier | Rule of Equation 14 on (z, s) | Hazard class |
+| 304 | Mitigation selector | Table 8 | Class-specific action |
+| 401 | Fan drive | Motor-driver module switched by ESP32 PWM; removes drive for coast-down and holds the fan unpowered when inhibited; duty levels 60 % and 100 % | Coast-down initiation, ventilation or inhibition |
+| 402 | Servo vent | Micro-servo; 0°, 45° and 90° positions; high and low vent path | Directed venting |
+| 403 | Buzzer and LED indicator | Red and green LEDs and buzzer | Occupant alarm and notification |
+| 404 | Local display | 16 × 2 character display | Local status |
+| 501 | Log and interface | Records raw and derived quantities; browser interface (Figure 14) | Traceability |
+Table 5: Component and Module Schedule
+The processing pipeline implemented on these elements is shown in Figure 4 and described step by step in Section 7.16.
+ [IMAGE]
+Figure 4: Processing Pipeline (Steps S1–S15)
+7.2 Sensing Layer (100)
+Optical tachometer (102). In the preferred embodiment an infrared reflective or slotted optical sensor views the fan blades, or a marked hub, and produces one pulse per blade passage. The Hall output of a three- or four-wire fan is an alternative. Each edge is time-stamped in hardware by the ESP32 capture timer (MCPWM capture) or counted against a timer by the pulse-counter peripheral. The controller groups the p edges belonging to one mechanical revolution (p = 7 in the configuration of Section 8) and records the revolution period Tk with microsecond resolution, so that the period is independent of uneven spacing of blades or marks around the rotor. Physically, Tk measures how quickly the unpowered rotor is being slowed by bearing friction and air drag. An optical sensor is independent of the motor electronics and therefore continues to report after the drive is removed; a Hall output requires its supply to be maintained after cut-off. The two-wire fan of Figure 2 uses the optical arrangement.
+Supply-voltage monitor (103). A resistive divider brings the fan supply terminal into the ADC range. The voltage is sampled with each revolution. It confirms that the drive was fully removed for the whole coast-down (the fitted model assumes zero drive torque), and it records the supply level before cut-off, which sets the starting speed.
+Environmental sensor (104). The BME280 is read over I²C and supplies temperature, relative humidity and absolute pressure of the air surrounding the fan. These are the quantities that determine the density of clean humid air, so the sensor must sample the same air volume as the fan and must be shielded from the heat of the MQ element.
+Chemoresistive sensor (105). The heater of the MQ element is powered continuously. The sensing film is connected in series with a load resistor RL across the circuit supply Vc, and the voltage Vout across RL is read by the ADC through a divider where Vc exceeds the ADC range. The quantity obtained is the film resistance Rs (Equation 12), which falls in the presence of reducing and combustible gases. The environmental and chemoresistive channels are read once per second with a common timestamp. A short window of readings before any event provides the pre-exposure resistance.
+Actuators (401–404). The fan is driven through a motor-driver module under ESP32 PWM control. The same module removes the drive for each coast-down and holds the fan unpowered when it is inhibited. The vent servo, buzzer, LEDs and character display are driven from ESP32 outputs and the I²C bus.
+7.3 Revolution Timing and Speed Record (201)
+Equation 1: Rotational Speed from Revolution Period (201)
+RPMk = 60 / Tk(1)
+where Tk (s) is the period of revolution k, formed from the tachometer edges of that revolution. With Tk time-stamped in microseconds, RPMk = 60 × 106 / Tk[µs]. The speed feeds Equation 2.
+Equation 2: Angular Velocity and Time Assignment (201)
+ωk = 2π · RPMk / 60 = 2π / Tk
+tk = tend,k − Tk / 2(2)
+where ωk (rad/s) is the mean angular velocity over revolution k, and tk is the mid-time of that revolution measured from the instant of cut-off, tend,k being the time at which the revolution ended. Assigning the mean velocity to the mid-time of its revolution removes a half-period bias that would otherwise distort the fit at high speed. The pairs (tk, ωk) form the coast-down record used by Equation 3.
+7.4 Coast-Down Model and Separation of Loss Mechanisms (202)
+After the drive is removed the only torques acting on the rotor are bearing friction and aerodynamic drag. Following the standard three-term representation of rotating-body run-down (Table 2, entries 3–5), the rotor obeys:
+Equation 3: Rotor Coast-Down Model (202)
+I · dω/dt = −( τ0 + b·ω + k·ρ·ω2 )
+dω/dt = −( a0 + a1·ω + a2·ω2 )
+a0 = τ0/I,    a1 = b/I,    a2 = kρ/I(3)
+where I is the rotor moment of inertia, τ0 the speed-independent (Coulomb) bearing friction torque, b the viscous friction coefficient, k an aerodynamic constant of the blade geometry and ρ the gas density. The normalised coefficients have units of rad/s2 (a0), s−1 (a1) and rad−1 (a2). Because I and k are fixed properties of the fan, a2 is proportional to ρ, while a0 and a1 describe the bearing. The three terms scale differently with ω (Figure 5(b)). The aerodynamic term dominates at the start of the coast-down and friction near its end, so a record covering the whole speed range identifies all three.
+Equation 4: Coast-Down Fit (202)
+(a0, a1, a2, ω0) = arg min Σk [ ωk − ω̂(tk; a0, a1, a2, ω0) ]2,    over k with tk ≥ 0.3 s(4)
+where ω̂(t) is the solution of Equation 3 with initial value ω0 at the first retained revolution. Revolutions whose mid-time falls within 0.3 s of cut-off are excluded, so that the decay of drive current and other electrical transients are not interpreted as mechanical loss. For a clean-air coast-down of the fan characterised in Section 8 the fit gives, for example, a0 = 1.5626 rad/s2, a1 = 0.014370 s−1 and a2 = 1.4837 × 10−3 rad−1, with RMSE 0.0773 rad/s and R2 = 0.9999988.
+The free three-coefficient fit supplies a0 and a1 to the friction monitor (302). For density estimation a second fit is made with a1 held at its commissioning value a1,lock, leaving a0, a2 and ω0 free. The viscous and aerodynamic terms are partly collinear over the speed range of a coast-down. Locking a1 prevents bearing scatter from being exchanged with a2, and it transfers any change in friction to a0, where it does not affect density.
+Equation 5: Friction-Locked Aerodynamic Coefficient (202)
+a1 ≡ a1,lock  ⇒  (a0, a2)j,    j = 1, …, N
+ā2 = (1/N) Σj=1…N a2,j,    N = 3(5)
+where N is the number of coast-downs acquired per decision. Averaging three consecutive coast-downs reduces the clean-air residual standard deviation from 0.260 % (single coast-down) to 0.148 % at commissioning (Table 7).
+ [IMAGE]
+Figure 5: Coast-Down Sensing Principle: (a) Speed Decay and Model Fit; (b) Friction and Aerodynamic Loss Terms
+Figure 6 shows why friction must be separated. A 4 % admixture of helium or carbon dioxide shifts the coast-down curve only slightly, whereas added bearing friction shortens the entire coast-down from about 18.6 s to about 12 s. Any quantity that aggregates the whole coast-down, such as coast time or steady speed at fixed drive, is therefore dominated by the mechanical state of the fan.
+ [IMAGE]
+Figure 6: Coast-Down Curves in Clean Air, with He and CO₂ Admixture, and with High Bearing Friction
+7.5 Density Estimation and Commissioning Calibration (203)
+Equation 6: Aerodynamic Density Estimate (203)
+ρ̂ = ā2 / K(6)
+where K (rad−1 per kg/m3) is the commissioning calibration constant, equal to k/I in Equation 3. ρ̂ enters the residual of Equation 9.
+Equation 7: Commissioning Calibration (203, 302)
+K = (1/M) Σm=1…M a2,m / ρref,m
+a1,lock = mean(a1,m),    a0,ref = mean(a0,m)
+σa0 = SD(a0,m),    σa1 = SD(a1,m)(7)
+where the sums run over M = 10 commissioning trials acquired in clean air, each of three coast-downs, and ρref,m is the thermodynamic reference of Equation 8 for trial m. Commissioning also establishes the chemoresistive reference R0 and the residual dispersion σr of Equation 10. Table 6 summarises the variables and parameters of the model, and Table 7 the calibration constants of the characterised fan and sensor.
+| Symbol | Quantity | Unit | Source / role |
+| Tk | Period of revolution k | s (logged in µs) | Tachometer timing (201) |
+| RPMk, ωk | Rotational speed, angular velocity | RPM, rad/s | Equations 1–2 |
+| a0 | Speed-independent friction deceleration τ0/I | rad/s2 | Fit (202); wear monitor (302) |
+| a1 | Viscous friction coefficient b/I | s−1 | Fit (202); locked for density; wear monitor |
+| a2 | Aerodynamic coefficient kρ/I | rad−1 | Fit (202); density transducer output |
+| K | Calibration constant k/I | rad−1 per kg/m3 | Commissioning (Equation 7) |
+| ρ̂ | Aerodynamic density estimate | kg/m3 | Equation 6 |
+| T, RH, P | Temperature, relative humidity, pressure | °C, %, hPa | BME280 (104) |
+| ρref | Thermodynamic moist-air reference density | kg/m3 | Equation 8 |
+| r, z | Density residual, standardised residual | %, dimensionless | Equations 9–10 |
+| σr | Clean-air residual standard deviation | % | Commissioning |
+| Rs, R0,eff | MQ sensing resistance, clean-air reference | kΩ | Equation 12; normaliser (205) |
+| s | Chemoresistive response −ln(Rs/R0,eff) | dimensionless | Equation 13 |
+| zth, θ, θesc | Residual, MQ and escalation thresholds | dimensionless | Equation 14 |
+Table 6: Model Variables and Parameters
+| Parameter | Value | Definition |
+| K (at 2 900 RPM target) | 1.265089 × 10−3 rad−1/(kg/m3) | Mean of a2/ρref over 10 commissioning trials |
+| a1,lock | 0.013426826 s−1 | Mean viscous coefficient at commissioning |
+| a0,ref | 1.582658515 rad/s2 | Mean speed-independent friction at commissioning |
+| σa0, σa1 | 0.041520829 rad/s2; 0.001180063 s−1 | Standard deviations of trial-mean a0, a1 at commissioning |
+| R0 (commissioning) | 20.344 kΩ | Clean-air reference resistance of the MQ element |
+| σr (three coast-downs) | 0.1476 % (commissioning); 0.1307 % (30 clean-air test cases) | SD of clean-air density residual |
+| σr (single coast-down) | 0.2603 % (commissioning); 0.2194 % (test) | As above, N = 1 |
+| K at 1 500 / 2 200 / 2 900 RPM targets | 1.273885 / 1.268783 / 1.263111 × 10−3 | Speed-specific calibration (Section 7.11) |
+| a1,lock at 1 500 / 2 200 / 2 900 RPM targets | 0.010627 / 0.011931 / 0.013435 s−1 | Speed-specific viscous lock |
+Table 7: Commissioning Calibration Constants
+ [IMAGE]
+Figure 7: Estimated Density Against Reference Density
+7.6 Thermodynamic Reference and Density Residual (204, 301)
+Equation 8: Thermodynamic Moist-Air Reference Density (204)
+ρref = (P − pv) / (Rd · TK) + pv / (Rv · TK)
+pv = (RH / 100) · psat(T)(8)
+where P is the measured absolute pressure (Pa), TK the absolute temperature (K), RH the relative humidity (%), pv the partial pressure of water vapour, psat(T) the saturation vapour pressure over water, Rd = 287.06 J kg−1 K−1 and Rv = 461.5 J kg−1 K−1 the specific gas constants of dry air and water vapour. A Magnus-type expression is used for psat(T) The CIPM-2007 formulation (Table 2, entry 8) may be substituted where higher accuracy is required. ρref is the density that the gas would have if it were clean humid air.
+Equation 9: Thermodynamic Density Residual (301)
+r = 100 · ( ρ̂ / ρref − 1 )    [%](9)
+The residual cancels the weather-driven variation of air density that is common to ρ̂ and ρref, and it retains the composition-driven part that only ρ̂ contains.
+Equation 10: Standardised Residual (301)
+z = r / σr(10)
+where σr is the clean-air residual standard deviation at commissioning (0.1476 % for three coast-downs). z expresses the residual in units of the clean-air scatter of the installed fan and is the physical axis of the classifier.
+Figure 8 illustrates the effect of the residual in clean air: when the aerodynamic estimate is compared with a fixed reference density, the weather alone produces apparent anomalies of up to about 4 %, whereas the thermodynamic residual remains inside the clean-air band.
+ [IMAGE]
+Figure 8: Effect of Thermodynamic Compensation Under Temperature, Humidity and Pressure Variation
+Equation 11: Physical Basis of the Residual Sign
+r ≈ x · ( Mg / Mair − 1 )    [%, with x in % vol](11)
+For a dilute admixture of gas of molar mass Mg at volume fraction x into air of molar mass Mair at the same temperature and pressure, the relative density change follows from the ideal-gas law. Carbon dioxide (M = 44.0 g/mol) and propane (44.1) give positive residuals of about +0.52 % per % vol. Methane (16.0) and helium (4.0) give negative residuals of about −0.45 % and −0.87 % per % vol. Ethanol vapour gives +0.59 % per % vol, but it is hazardous at ppm-level concentrations whose density effect is negligible. The sign of r therefore indicates whether the contaminant is heavier or lighter than air.
+7.7 Chemoresistive Channel and Normalisation (205)
+Equation 12: MQ Sensing Resistance (205)
+Rs = RL · ( Vc / Vout − 1 )(12)
+where Vc is the circuit supply of the MQ element, RL the load resistance and Vout the voltage across RL.
+Equation 13: Normalised Chemoresistive Response (205)
+s = −ln( Rs / R0,eff )(13)
+where R0,eff is the clean-air reference resistance adjusted to the prevailing temperature and humidity. In clean air s ≈ 0. Reducing and combustible gases lower Rs and give s > 0, and inert gases leave s near zero. The logarithm makes s approximately linear in the logarithm of concentration, consistent with the power-law characteristics of metal-oxide sensors. R0,eff may be formed by a regression correction for temperature and humidity of the kind in Table 2, entry 10.
+ [IMAGE]
+Figure 9: Density Residual Against Gas Concentration
+ [IMAGE]
+Figure 10: MQ Response Against Gas Concentration
+7.8 Two-Axis Fusion and Hazard Classification (303)
+Figures 9 and 10 show that the two axes respond to different physical properties. The density residual responds to molar mass whatever the chemistry, and the chemoresistive response responds to reducing species whatever the mass. Neither alone separates the five classes, but together they do. The classifier is an explicit rule on the pair (z, s):
+Equation 14: Two-Axis Classification Rule (303)
+s < θ  and  |z| ≥ zth⇒ASPHYXIANT
+s < θ  and  |z| < zth⇒CLEAN
+s ≥ θ  and  z ≥ +zth⇒HEAVY_COMB
+s ≥ θ  and  z ≤ −zth⇒LIGHT_COMB
+s ≥ θ  and  |z| < zth⇒VOC_NUISANCE
+VOC_NUISANCE  and  s ≥ θesc⇒HEAVY_COMB action (escalation)(14)
+where zth, θ and θesc are decision thresholds, with zth = 3. The values of θ and θesc lie within the bounds given in Section 8.2. While the density channel is withheld (Section 7.10), the rule is evaluated with z treated as zero. Figure 11 shows the resulting decision plane.
+ [IMAGE]
+Figure 11: Two-Axis Decision Plane of Density Residual z and MQ Response s
+| Class | Decision condition | Typical gases | Mitigation action (401–403) | Rationale |
+| CLEAN | s < θ, |z| < 3 | None | Fan at normal duty; vent 0°; no alarm | Normal operation |
+| ASPHYXIANT | s < θ, |z| ≥ 3 | CO2, He | Fan ON 100 %; vent 90°; occupant alarm | Non-flammable; maximum dilution is safe and required |
+| LIGHT_COMB | s ≥ θ, z ≤ −3 | CH4 | Fan not energised; HIGH vent 90°; alarm | Flammable and buoyant; avoid ignition source; vent at ceiling level |
+| HEAVY_COMB | s ≥ θ, z ≥ +3 | C3H8 | Fan not energised; LOW vent 90°; alarm | Flammable and dense; avoid ignition source; vent at floor level |
+| VOC_NUISANCE | s ≥ θ, |z| < 3, s < θesc | Ethanol vapour | Fan ON 60 %; vent 45°; notify | Low-density-effect vapour; partial ventilation |
+| Escalated | VOC_NUISANCE with s ≥ θesc | Unresolved strong response | Treated as HEAVY_COMB: fan not energised, low vent, alarm | Conservative action when density cannot confirm a benign vapour |
+Table 8: Hazard Classes and Mitigation Actions
+7.9 Buoyancy-Aware Mitigation and Escalation (304, 400)
+The mitigation selector (304) maps each class to the actions of Table 8, and Figure 12 shows the logic. The distinguishing features are that the fan is not energised when a combustible gas is indicated, which removes the fan motor as an ignition source during the hazard, and that the vent path is selected by the sign of the density residual. A buoyant gas is released through a high vent and a dense gas through a low vent. An inert asphyxiant, which cannot ignite, receives full forced ventilation. A strong chemoresistive response that the density channel cannot attribute to a buoyant or dense gas is not dismissed as a nuisance vapour. It is escalated to the combustible action, so that uncertainty in the density axis resolves towards the safer outcome. The high and low vent paths may be realised by servo-actuated dampers at different heights or by one servo selecting between ducts.
+ [IMAGE]
+Figure 12: Classification and Mitigation Logic
+7.10 Friction Monitoring and Recommissioning (302)
+The free fit of Equation 4 returns a0 and a1 for every coast-down. These are compared with their commissioning values. A departure beyond a configured multiple kw of the commissioning standard deviations σa0, σa1 sets a wear flag. In the moderate-wear case of Section 8.6, a0 rose from 1.58 to about 2.89 rad/s2 and a1 from 0.0134 to about 0.0158 s−1. When the flag is set, the density channel is withheld from classification for the flagged trial and for the following recommissioning trials. A set of Nr = 4 clean-air coast-down trials is acquired. The viscous lock is re-established as the mean a1 of those trials (for example 0.01582 s−1 after the moderate-wear event, which equals the mean of the four recommissioning trials), and the calibration constant is re-established (1.263658 × 10−3 and 1.255083 × 10−3 after the two events recorded) Classification then resumes with the density channel restored.
+Equation 15: Wear Criterion and Re-Lock (302)
+wear  if  |a0 − a0,ref| > kw σa0   or   |a1 − a1,lock| > kw σa1
+a1,lock ← (1/Nr) Σi=1…N_{r} a1,i,    Nr = 4
+K ← recommissioned value(15)
+The recommissioning prevents a worn bearing from appearing as a change of gas density (Figure 13).
+ [IMAGE]
+Figure 13: Density Anomaly Under Increasing Bearing Friction
+7.11 Operation at More Than One Fan Speed
+The aerodynamic constant k of Equation 3 depends weakly on Reynolds number, so K and a1,lock are established separately for each operating speed that is used. For the characterised fan, calibration at starting-speed targets of 1 500, 2 200 and 2 900 RPM gave K values of 1.2739, 1.2688 and 1.2631 × 10−3. When each speed used its own calibration, the mean clean-air residual was within 0.03 % of zero at all three speeds. Applying the 2 900 RPM calibration at 1 500 RPM displaced it by −0.74 % (Table 14). Speed-specific calibration therefore allows the unit to measure at a lower, quieter speed or at more than one speed.
+7.12 Worked Evaluation
+Table 9 traces six representative test cases of Section 8 through the complete chain, from environment and fitted coefficient to class and action.
+| Quantity | T0011 clean | T0059 CO₂ 4 % | T0077 He 2 % | T0119 CH₄ 2 % | T0137 C₃H₈ 1 % | T0095 EtOH 0.015 % |
+| T (°C) / RH (%) / P (hPa) | 23.23 / 41.4 / 1010.3 | 25.90 / 42.5 / 1011.1 | 26.43 / 42.8 / 1016.0 | 26.38 / 46.6 / 1013.6 | 27.55 / 47.8 / 1009.6 | 26.05 / 34.1 / 1010.2 |
+| ā₂ (×10⁻³ rad⁻¹) | 1.4955 | 1.5152 | 1.4562 | 1.4668 | 1.4770 | 1.4792 |
+| ρ̂ = ā₂/K (kg/m³) | 1.18214 | 1.19770 | 1.15108 | 1.15943 | 1.16747 | 1.16920 |
+| ρ_ref (kg/m³) | 1.18225 | 1.17157 | 1.17502 | 1.17180 | 1.16198 | 1.17110 |
+| r (%) | −0.009 | +2.231 | −2.037 | −1.056 | +0.473 | −0.163 |
+| z | −0.06 | +15.11 | −13.80 | −7.15 | +3.20 | −1.10 |
+| R_s (kΩ) | 21.45 | 20.59 | 20.90 | 3.58 | 2.43 | 7.72 |
+| s | −0.010 | −0.014 | −0.040 | +1.696 | +2.073 | +0.966 |
+| Class | CLEAN | ASPHYXIANT | ASPHYXIANT | LIGHT_COMB | HEAVY_COMB | VOC_NUISANCE, escalated |
+| Action | Normal duty, vent 0° | Fan 100 %, vent 90°, alarm | Fan 100 %, vent 90°, alarm | Fan off, high vent, alarm | Fan off, low vent, alarm | Treated as heavy combustible |
+Table 9: Worked Evaluation of the Decision Chain
+Two observations follow. Carbon dioxide and helium give no chemoresistive response (s ≈ 0), but they are detected by the density axis at |z| of 13.8 to 15.1, with opposite signs that correctly reflect their molar masses. The ethanol record shows the escalation path in operation. A strong chemoresistive response with no significant residual is correctly identified as a vapour but conservatively actioned as a dense combustible, which is the trade-off discussed in Section 8.9.
+7.13 Data Logging and Monitoring Interface (501)
+Each cycle records the raw environmental and chemoresistive samples, the revolution periods and supply voltage of every coast-down, the fitted coefficients and fit statistics, ρ̂, ρref, r, z, s, the wear state, the class, the action and the decision latency. Header-only logging templates with this structure have been prepared for the prototype. Figure 14 shows the layout of the proposed monitoring interface, which presents the live channels, the latest coast-down with its model fit, the density estimate and the event history.
+ [IMAGE]
+Figure 14: Prototype Monitoring Interface (Illustrative Values)
+7.14 Fail-Safe and Constraint Logic
+A coast-down is accepted only if the supply-voltage record confirms that the drive was off throughout, and the fit is accepted only if its quality statistics (RMSE, R2) lie within their commissioning range Otherwise the density channel is treated as unavailable for that cycle.
+While the density channel is withheld for recommissioning, the chemoresistive axis continues to operate, so combustible and vapour detection is retained. The unit indicates that asphyxiant detection is temporarily unavailable
+The fan is energised for measurement only when the preceding decision was not a combustible class
+An unresolved strong chemoresistive response is escalated to the combustible action rather than dismissed.
+7.15 Equivalent Implementations
+Any fan or blower with a timeable rotor can serve as the sensing element, including centrifugal blowers and the cooling fans of existing equipment. The tachometer may be a Hall output, an optical interrupter or reflective sensor, or back-EMF sensing on a brushless motor with the drive disconnected. The model may be fitted by nonlinear least squares on the ODE solution, as described, or by regression of the finite-difference deceleration on (1, ω, ω2). The latter is simpler but less accurate. The thermodynamic reference may use any moist-air formulation, and CO2 background can be included as in CIPM-2007. The chemoresistive axis may use another MQ-series element, several elements, or an electrochemical cell, and s may be defined against any stable reference. The classifier thresholds may be replaced by regions of the (z, s) plane learned at commissioning without changing the arrangement.
+7.16 Complete Operating Sequence
+Figure 4 gives the operating sequence. S1: initialise and load the calibration constants K, a1,lock, a0,ref, σa0, σa1, R0 and σr. S2–S3: read T, RH, P and Rs. S4: spin up the fan and allow it to stabilise. S5: remove the drive. S6–S7: time each revolution and compute RPM and ω. S8: discard revolutions within 0.3 s of cut-off. S9: fit the free three-term model for a0 and a1, and refit with a1 locked for a2. S10: repeat S4–S9 three times and average a2. S11: compute ρ̂. S12: compute ρref, r and z. S13: check friction, and if wear is indicated withhold density and recommission. S14: classify (z, s). S15: apply the mitigation, record the cycle and repeat.
+7.17 Best Method of Performing the Invention
+The best method known to the inventors at the date of this disclosure is the arrangement of Sections 7.1 to 7.16, namely: per-revolution timing of the fan coast-down; exclusion of the first 0.3 s after cut-off; nonlinear fitting of the three-term model of Equation 3 to mid-revolution angular velocities; a friction-locked refit for a2; averaging of three coast-downs; density estimation by Equation 6 with a constant commissioned over ten clean-air trials; differencing against the moist-air reference of Equation 8; standardisation by the commissioning residual dispersion; logarithmic normalisation of the MQ response; classification by Equation 14 with zth = 3; class- and buoyancy-dependent mitigation per Table 8 with escalation; and friction monitoring with automatic recommissioning from four clean-air trials.
+8. Performance Evaluation of the Method
+8.1 Experimental Test Matrix and Measured Quantities
+The proposed method was experimentally evaluated using the physical hardware implementation described in Section 7 and the breadboard prototype shown in Figure 2. The experimental campaign comprised 256 physical test cases covering clean-air conditions, five admixed gases at multiple concentrations, environmental variations in temperature, relative humidity and pressure, three fan starting speeds, and three levels of bearing friction.
+For every test case, the apparatus acquired physical measurements from the sensing and control hardware. The measured quantities included the rotational-speed observations from three consecutive fan coast-downs, recorded as per-revolution periods together with the corresponding fan speed and supply voltage. The environmental sensing channel simultaneously recorded temperature, relative humidity and pressure, while the MQ-series chemoresistive channel recorded its ADC count, output voltage and sensing resistance at one-second intervals.
+Across the complete experimental campaign, the apparatus produced 155,563 recorded revolution-period observations and 84,736 environmental and chemoresistive samples. The disclosed processing chain was applied to the experimentally acquired measurements for each test case to obtain the fitted coast-down coefficients, estimated gas density, density residual, classification result, mitigation action and decision latency.
+Each physical test case was associated with a corresponding reference condition comprising the gas species and concentration, reference mixture density and bearing-friction condition. These reference conditions were used to evaluate the accuracy and repeatability of the measurements produced by the apparatus.
+| Block | Condition | Levels | Test cases | Class |
+| Calibration | Clean air | 10 commissioning + 30 test | 40 | CLEAN |
+| Gas | CO2 | 0.5, 1, 2, 4 % vol (6 each) | 24 | ASPHYXIANT |
+| Gas | He | 0.5, 1, 2, 4 % vol (6 each) | 24 | ASPHYXIANT |
+| Gas | CH4 | 0.5, 1, 2 % vol (6 each) | 18 | LIGHT_COMB |
+| Gas | C3H8 | 0.25, 0.5, 1 % vol (6 each) | 18 | HEAVY_COMB |
+| Gas | Ethanol vapour | 0.005, 0.015, 0.04 % vol (6 each) | 18 | VOC_NUISANCE |
+| Environment | Temperature / RH / pressure sweeps | 21.7–34.2 °C; 29–86 %; 994–1025 hPa (12 each) | 36 | CLEAN |
+| Speed | 1 500 / 2 200 / 2 900 RPM targets | 10 clean + 4 He 2 % each | 42 | CLEAN / ASPHYXIANT |
+| Wear | Normal / moderate / high friction | 8 clean + 4 CO2 2 % each | 36 | CLEAN / ASPHYXIANT |
+| Total |  |  | 256 | 130 clean, 72 asphyxiant, 18 + 18 combustible, 18 vapour |
+Table 10: Physical Experimental Test Matrix
+The test matrix therefore deliberately varied both the gas condition and the principal non-gas factors expected to affect the coast-down measurement, including environmental conditions, operating speed and mechanical friction.
+8.2 Verification of the Processing Chain, Fit Quality and Repeatability
+Each processing step of Section 7 was verified using the recorded physical measurement channels and the corresponding per-case outputs.
+The RPM calculation,
+
+reproduced the speed of all 155,563 recorded revolutions to within 0.005 RPM. The corresponding angular velocity was calculated as
+
+The fit of Equation 4 to revolutions with mid-time ≥ 0.3 s reproduced the recorded coast-down coefficients, RMSE and values, while the relationship
+
+was reproduced to within kg/m³.
+Equation 7, evaluated over the ten clean-air commissioning trials, reproduced , , , , and . Equation 8 using the Magnus-type saturation-vapour-pressure formulation reproduced the reference densities to within kg/m³. Equations 9, 10, 12 and 13 were verified against the recorded experimental values.
+Equation 14 with reproduced all 248 decisions for which the density channel was active. Every positive density decision had , while every negative decision had . The recorded decisions placed between 0.018 and 0.559 and between 0.577 and 0.946.
+The re-lock operation of Equation 15 reproduced the recommissioned viscous coefficients of 0.01582 and 0.022005 s⁻¹.
+The coast-down model fitted the rotational-speed measurements obtained from every physical test case closely. The median was 0.9999987, with a minimum of 0.9999970, and the median RMSE was 0.076 rad/s against an initial angular velocity of approximately 265 rad/s.
+The clean-air coast-down duration was 18.5 s on average over the 40 calibration cases, with a standard deviation of 0.14 s and a starting speed of approximately 2,520 RPM.
+The clean-air density residual had a standard deviation of 0.148% over the ten commissioning cases and 0.131% over the thirty clean test cases. This dispersion establishes the experimentally observed resolution of the density axis.
+8.3 Density Estimation Accuracy
+Figure 7 compares the experimentally estimated density with the corresponding reference density.
+Across the 248 physical test cases for which the density channel was active, the mean difference between estimated and reference density was:
+
+with 95% limits of agreement of approximately:
+
+corresponding to approximately ±0.25%.
+The result demonstrates that the aerodynamic coefficient extracted from the physical fan coast-down measurements provides a repeatable estimate of the surrounding gas density over the tested experimental conditions.
+
+8.4 Gas Sensitivity of the Density Channel
+The physical experimental results were analysed to determine the relationship between the measured density residual and gas concentration.
+| Gas | n | Slope (% residual per % vol) | Slope SE | Molar-mass value (Eq. 11) | R2 |
+| CO2 | 36 | +0.593 | 0.018 | +0.522 | 0.970 |
+| C3H8 | 18 | +0.606 | 0.101 | +0.525 | 0.692 |
+| He | 36 | −0.862 | 0.016 | −0.866 | 0.989 |
+| CH4 | 18 | −0.389 | 0.042 | −0.448 | 0.845 |
+| Ethanol | 18 | not resolved (−1.61 ± 2.11) | 2.111 | +0.59 (at ≤ 0.04 % vol: ≤ 0.024 %) | 0.035 |
+Table 11: Density-Residual Sensitivity by Gas
+The experimentally measured slopes exhibit the expected signs and approximate magnitudes associated with the molar-mass differences of the tested gases.
+The physical results therefore demonstrate that the density residual responds to gas composition through the change in mixture density. Ethanol vapour did not produce a resolvable density residual at the tested concentrations, causing this class to rely primarily on the chemoresistive sensing axis.
+Using three standard deviations of the clean-test residual of 0.131% as the detection limit, the density channel experimentally resolved approximately 0.45% vol helium and 0.67% vol carbon dioxide. When the clean-test cases from the wear and speed blocks were also included, the corresponding three-standard-deviation limits increased to approximately 0.99% vol helium and 1.43% vol carbon dioxide.
+
+8.5 Thermodynamic Compensation
+The effect of environmental variation was evaluated through physical temperature, relative-humidity and pressure sweeps.
+| Sweep | n | Mean T (°C) | Mean RH (%) | Mean P (hPa) | Mean |r|, proposed (%) | Mean |r|, fixed reference (%) |
+| Temperature | 12 | 27.95 | 44.8 | 1011.3 | 0.153 | 2.112 |
+| Relative humidity | 12 | 27.97 | 58.8 | 1010.4 | 0.114 | 2.027 |
+| Pressure | 12 | 28.63 | 44.4 | 1009.9 | 0.101 | 2.083 |
+Table 12: Effect of Thermodynamic Compensation
+
+Without thermodynamic compensation, the experimentally observed environmental variation produced apparent density changes of up to approximately 4% over the tested ranges. Such variation could mask a percent-level gas-density change or generate a false apparent density event.
+After applying the thermodynamic reference, the clean-air density residual remained within the experimentally established ±3σ band throughout the temperature, humidity and pressure sweeps.
+The results demonstrate the importance of forming the density residual against an environmental reference rather than comparing the measured density directly against a fixed reference condition.
+The steady-speed baseline remained offset and scattered even after temperature, humidity and pressure compensation because the steady-state fan speed also depends on mechanical friction and supply conditions.
+8.6 Fan-Wear Robustness and Recommissioning
+The robustness of the density measurement to mechanical fan wear was evaluated using three experimentally imposed friction conditions: normal, moderate and high friction.
+| Wear level | Proposed | D: coast time only | B: fixed-drive steady speed | Proposed without re-lock, mean |r| | Proposed, mean |r| | Wear flags |
+| Normal | −0.09 ± 0.11 | +0.02 ± 0.12 | +1.48 ± 0.43 | 0.37 | 0.37 | 0 |
+| Moderate | +0.32 ± 0.41 | +4.67 ± 0.20 | +3.53 ± 0.56 | 0.97 | 0.57 | 1 |
+| High | +0.65 ± 0.64 | +11.93 ± 0.20 | +6.15 ± 0.33 | 2.24 | 0.80 | 1 |
+Table 13: Density Anomaly Under Added Bearing Friction (%)
+The aggregate coast-time estimate was displaced by approximately 12% at the high-friction condition, substantially exceeding the gas-induced effects observed in the test matrix.
+In contrast, the proposed density estimate remained within 0.65% under the high-friction condition.
+The residual displacement observed at moderate and high friction was associated with the four test cases at each level during which wear was detected and the density channel was withheld. Those cases were classified using the chemoresistive channel and were correctly classified as clean.
+After recommissioning, the mean absolute residual decreased from 0.97% to 0.57% at moderate friction and from 2.24% to 0.80% at high friction relative to equivalent fits without re-locking.
+All carbon-dioxide test cases in the wear block were correctly classified as asphyxiant.
+These results experimentally demonstrate that the friction-monitoring and recommissioning mechanism reduces the contribution of mechanical degradation to the gas-density estimate.
+8.7 Operation at Different Fan Speeds
+The physical apparatus was evaluated at three target fan speeds to determine the effect of operating speed and calibration.
+| Speed target (mean start RPM) | Clean air, own calibration | Clean air, 2 900 RPM calibration | He 2 %, own calibration | He 2 %, 2 900 RPM calibration |
+| 1 500 (1 392) | +0.015 | −0.736 | −1.818 | −2.585 |
+| 2 200 (1 989) | −0.027 | −0.345 | −1.799 | −2.120 |
+| 2 900 (2 531) | +0.008 | −0.146 | −1.835 | −1.985 |
+Table 14: Density Residual With Speed-Specific Calibration (%)
+The results show that speed-specific commissioning reduces the clean-air residual across the tested operating speeds. With each operating speed calibrated separately, the clean-air residual remained close to zero, demonstrating the benefit of incorporating the operating-speed condition into the calibration procedure.
+8.8 Classification Performance and Ablation
+The complete physical dataset of 256 experimental test cases was used to compare the proposed classifier against reduced configurations. The objective of the ablation analysis was to determine the contribution of the individual mechanisms of the proposed arrangement.
+Hazard false-positive rate (FPR) is defined as the fraction of non-hazard test cases, comprising clean and vapour cases (), incorrectly predicted as a hazard class.
+Hazard false-negative rate (FNR) is defined as the fraction of hazard test cases, comprising asphyxiant and combustible cases (), predicted as non-hazard.
+
+| Configuration | Accuracy | Macro-F1 | Hazard FPR | Hazard FNR | Median decision latency (s) |
+| A: MQ sensor only | 0.602 | 0.366 | 0.081 | 0.667 | 4.0 a |
+| B: fixed-drive steady speed + T/RH/P compensation + MQ | 0.512 | 0.421 | 0.358 | 0.667 | 42.3 |
+| C: coast-down fit, no thermodynamic compensation + MQ | 0.492 | 0.409 | 0.628 | 0.185 | as proposed b |
+| D: coast-down time only, no friction separation + MQ | 0.695 | 0.667 | 0.115 | 0.380 | as proposed b |
+| Proposed, single coast-down | 0.789 | 0.540 | 0.000 | 0.500 | 25.95 |
+| Proposed, three coast-downs averaged | 0.871 | 0.759 | 0.007 | 0.296 | 77.23 |
+Table 15: Classification Performance and Ablation
+These statistics describe the complete physical experimental dataset, including the commissioning cases. They are therefore not held-out test-set performance.
+The proposed three-coast-down configuration achieved an experimentally observed classification accuracy of 87.1% and a macro-F1 of 0.759, compared with 60.2% accuracy and 0.366 macro-F1 for the chemoresistive sensor alone.
+The ablation results demonstrate the effect of removing individual mechanisms.
+Without the density channel, the system cannot directly distinguish buoyant and dense gases from the chemoresistive response alone. Without thermodynamic compensation, environmental variation produces a substantially higher hazard false-positive rate. Without friction separation, bearing variation degrades the discrimination between clean and asphyxiant conditions. The steady-speed configuration is affected by both environmental and mechanical variation.
+Using a single coast-down reduces latency but results in lower classification performance because the density residual has greater measurement scatter. Averaging three coast-down measurements improves sensitivity at the expense of increased decision latency.
+
+| True \ Predicted | CLEAN | LIGHT_COMB | HEAVY_COMB | ASPHYXIANT | VOC_NUISANCE |
+| CLEAN (130) | 129 | 0 | 0 | 1 | 0 |
+| LIGHT_COMB (18) | 0 | 12 | 0 | 0 | 6 |
+| HEAVY_COMB (18) | 0 | 0 | 6 | 0 | 12 |
+| ASPHYXIANT (72) | 14 | 0 | 0 | 58 | 0 |
+| VOC_NUISANCE (18) | 0 | 0 | 0 | 0 | 18 |
+Table 16: Confusion Matrix of the Proposed Classifier
+| Class | Support | Predicted | Precision | Recall | F1 |
+| CLEAN | 130 | 143 | 0.902 | 0.992 | 0.945 |
+| LIGHT_COMB | 18 | 12 | 1.000 | 0.667 | 0.800 |
+| HEAVY_COMB | 18 | 6 | 1.000 | 0.333 | 0.500 |
+| ASPHYXIANT | 72 | 59 | 0.983 | 0.806 | 0.885 |
+| VOC_NUISANCE | 18 | 36 | 0.500 | 1.000 | 0.667 |
+Table 17: Per-Class Metrics of the Proposed Classifier
+The 14 asphyxiant test cases classified as clean corresponded to the lowest tested concentrations: carbon dioxide at 0.5% and 1% vol and helium at 0.5% vol. These concentrations were at or below the experimentally established density detection limits.
+The 18 combustible cases classified as vapour consisted of methane at 0.5% and 1% vol and propane at 0.25% and 0.5% vol. At these concentrations, the density residual remained within ±3σ, while the chemoresistive response remained strong.
+
+8.9 Mitigation Outcome
+The classification output was connected to the mitigation logic described in Section 7. The resulting actions were evaluated across all 256 physical test cases.
+
+| True class | Normal duty | Fan 100 %, vent 90°, alarm | Fan off, high vent, alarm | Fan off, low vent, alarm | Escalated: fan off, low vent, alarm | Fan 60 %, vent 45°, notify |
+| CLEAN (130) | 129 | 1 | 0 | 0 | 0 | 0 |
+| ASPHYXIANT (72) | 14 | 58 | 0 | 0 | 0 | 0 |
+| LIGHT_COMB (18) | 0 | 0 | 12 | 0 | 6 | 0 |
+| HEAVY_COMB (18) | 0 | 0 | 0 | 6 | 12 | 0 |
+| VOC_NUISANCE (18) | 0 | 0 | 0 | 0 | 12 | 6 |
+Table 18: Mitigation Action by Condition Class
+At the mitigation-action level, all 36 combustible physical test cases generated an alarm with the fan unenergised.
+The 18 combustible test cases classified as vapour were additionally captured by the escalation rule. For the six escalated methane cases, the system selected the low-vent path rather than the high-vent path associated with a buoyant gas.
+The only hazard test cases that received no protective action were the 14 low-concentration asphyxiant cases identified in Section 8.8. Thus, 14 of 108 hazard cases (13.0%) received no protective action under the tested conditions.
+The escalation rule also caused 12 of the 18 vapour cases to receive a combustible-style protective action. This behaviour represents a conservative mitigation strategy but produces nuisance escalation for some vapour conditions.
+8.10 Decision Latency
+The experimentally measured decision latency of the proposed three-coast-down method had a median of 77.23 s, with a range of 55.7–80.1 s.
+The latency consists primarily of the three coast-down durations together with a constant processing and control interval of approximately 21.3 s.
+For the single-coast-down configuration, the median decision latency was 25.95 s, corresponding to the coast-down duration plus approximately 7.3 s.
+The chemoresistive channel responded substantially faster, with a median response time of approximately 4 s.
+Consequently, for reducing gases the apparatus can generate a provisional chemoresistive indication within seconds, while the density-dependent classification becomes available following completion of the coast-down sequence.
+The measured latency is therefore dominated by the physical coast-down dynamics rather than by computational processing.
+Alternative implementations using a lower-inertia fan, shorter fitting window or fewer coast-down cycles could reduce the latency, although the sensitivity-performance trade-off observed in Table 15 would need to be considered.
+8.11 Summary of Derived Metrics and Technical-Effect Traceability
+The principal metrics obtained from the physical experimental campaign are summarized below.
+| Metric | Value | Source |
+| Coast-down fit R2 (median) / RMSE (median) | 0.9999987 / 0.076 rad/s | Section 8.2 |
+| Clean-air residual SD (commissioning / test) | 0.148 % / 0.131 % | Table 7 |
+| Density agreement, bias and 95 % limits | −0.00058 ± 0.0029 kg/m³ | Section 8.3 |
+| Density sensitivity CO2 / He / CH4 / C3H8 | +0.593 / −0.862 / −0.389 / +0.606 % per % vol | Table 11 |
+| Mean |r| under weather sweeps, compensated vs fixed reference | 0.10–0.15 % vs 2.03–2.11 % | Table 12 |
+| Clean-air anomaly at high wear, proposed vs coast time only | +0.65 % vs +11.93 % | Table 13 |
+| Classification accuracy / macro-F1 | 87.1 % / 0.759 | Table 15 |
+| Hazard false-positive / false-negative rate (classification) | 0.7 % / 29.6 % | Table 15 |
+| Hazard test cases without protective action | 14 of 108 (13.0 %) | Table 18 |
+| Combustible test cases actioned with fan unenergised and alarm | 36 of 36 | Table 18 |
+| Median decision latency (three / one coast-down) | 77.23 s / 25.95 s | Section 8.10 |
+Table 19: Summary of Performance Metrics
+| Technical effect | Mechanism | Evidence |
+| Density measured with a ventilation fan | Aerodynamic coefficient of the coast-down model is proportional to ρ | ρ̂ within ±0.0029 kg/m³ of reference (Figure 7) |
+| Weather does not appear as gas | Residual against thermodynamic moist-air reference | Mean |r| 0.10–0.15 % vs 2.03–2.11 % (Table 12) |
+| Wear does not appear as gas | Three-term fit, viscous lock, friction monitor and recommissioning | +0.65 % vs +11.93 % at high wear (Table 13) |
+| Inert asphyxiants detected | Density axis responds to molar mass without chemical reaction | Asphyxiant recall 0.806 vs 0.000 for MQ alone (Tables 15, 17) |
+| Buoyancy identified | Sign of residual | Light and dense combustibles separated (Table 16) |
+| Combustible vs vapour distinguished | Joint (z, s) rule | Macro-F1 0.759 vs 0.366 for MQ alone (Table 15) |
+| No fan energisation in combustible atmosphere | Class-specific mitigation with escalation | 36 of 36 combustible test cases (Table 18) |
+Table 20: Technical Effect, Mechanism and Evidence
+The results in Tables 19 and 20 are derived from the physical experimental measurements acquired during the 256-case campaign. They collectively demonstrate the relationship between the disclosed processing mechanisms and the corresponding measured technical effects.
+8.12 Physical Experimental Validation and Limitations
+The experimental evaluation in Sections 8.1–8.11 was performed using the physical hardware implementation described in Section 7 and the breadboard prototype shown in Figure 2. The 256 test cases therefore constitute a physical experimental dataset acquired from the implemented apparatus, rather than a purely simulated or synthetic evaluation.
+The campaign included physical measurements from the fan tachometer, fan supply-voltage monitoring, environmental sensor and chemoresistive sensing channel. The recorded measurements comprised 155,563 revolution periods and 84,736 environmental and chemoresistive samples. The processing and classification procedures described in Section 7 were applied to these recorded measurements.
+The experimental campaign establishes physical operation of the disclosed method under the conditions specified in Table 10, including variation in gas species and concentration, temperature, relative humidity, pressure, fan operating speed and bearing friction.
+The following limitations remain.
+The performance statistics reported in this section include commissioning cases as well as test cases. They therefore should not be interpreted as independent held-out test-set performance. 
+The experimental conclusions are limited to the gas species, concentration ranges, environmental conditions, operating speeds and friction conditions represented in Table 10. Performance outside these ranges has not been established by the present campaign. 
+The experimentally observed density resolution, approximately 0.45% vol for helium and 0.67% vol for carbon dioxide at the three-sigma criterion under the principal clean-test conditions, does not establish suitability for all occupational exposure or regulatory detection thresholds. 
+Heavy-combustible recall at the classification level was 0.333. Detection of dense combustibles at low concentration therefore relies partly on the escalation mechanism, which introduces nuisance escalation for some vapour conditions. 
+The aerodynamic model does not explicitly account for all possible dependence of the aerodynamic constant on gas viscosity and Reynolds number beyond the implemented speed-specific calibration. 
+Thermal drift of bearing friction within an individual coast-down and airflow disturbances in the surrounding environment may affect the density measurement. 
+The sensing spin-up energises the fan. In a suspected flammable atmosphere, this presents an ignition-safety consideration. In the described embodiment, measurement spin-ups are suspended when a combustible class has already been declared, while an ignition-protected fan represents an alternative implementation. 
+The measured decision latency is primarily determined by the physical coast-down dynamics and the number of coast-down measurements used. Alternative hardware configurations may provide different latency characteristics. 
+Despite these limitations, the physical experimental campaign provides direct experimental evidence that the disclosed apparatus and processing chain can acquire fan coast-down, environmental and chemoresistive measurements and use the resulting signals for density estimation, environmental compensation, mechanical-condition monitoring, gas classification and class-dependent mitigation under the tested conditions.
+9. Discussion
+9.1 Achievement of the Stated Objectives
+Each objective of Section 5 is supported by a result of the evaluation in Section 8. The coast-down is timed per revolution and fitted to a three-term model with a median R2 of 0.9999987, and the aerodynamic coefficient yields density within ±0.0029 kg/m3 of reference. Friction locking and averaging reduce the clean-air scatter to 0.13–0.15 %. The thermodynamic residual holds the clean-air anomaly inside ±3σ across the tested weather ranges. The two-axis classifier separates five classes with macro-F1 0.759 against 0.366 for the chemoresistive sensor alone. Mitigation inhibits the fan for every combustible record. The friction monitor detects both wear events and restores the density channel after recommissioning. Speed-specific calibration keeps the clean-air residual within 0.03 % at three speeds.
+9.2 Inventive Step of the Claimed Combination
+The objection to be met is that every operation in this invention is individually known, and Section 3 concedes this. Gas density from rotor deceleration with non-gas drag subtracted is the spinning rotor gauge. The three-term coast-down is the road-load equation. Friction and windage separation by retardation is in IEEE Std 112. Fan spin-down for bearing friction is in US5621159A. Air density from a fan operating point, or from pressure and temperature, is in US9119979B2. Gas family from blower speed is in EP2706300. Environmental compensation of metal-oxide sensors is in US4730479A and US10520481B2, and fan actuation on gas detection is in CN102645908A. The case for inventive step rests on the cooperative arrangement, and three arguments are advanced.
+The first concerns the role reversal of the fan and the residual that makes it work. In every identified coast-down reference the rotating body is the object of measurement and the gas is a known correction. To use a mass-produced ventilation fan as a gas transducer, three obstacles must be overcome together. The friction of a cheap bearing dominates the coast-down (Figure 6). The weather moves air density by more than a leak does. And friction drifts with wear. The three-term fit with viscous lock addresses the first. The thermodynamic residual addresses the second, and it is not suggested by US9119979B2, which treats the two density sources as alternatives. The friction self-check addresses the third. The ablation of Table 15 shows that omitting any one of them removes most of the benefit.
+The second concerns the pairing of axes. The prior physical-property analysers (Table 2, entries 1, 2 and 17) measure a known gas or binary mixture. EP2706300 identifies a fuel deliberately injected. None pairs a density residual with a chemoresistive response. That pairing is not a generic fusion of more sensors. It is the specific combination in which each axis resolves the ambiguity of the other: mass without chemistry, and chemistry without mass. It is what allows inert asphyxiants to be detected and buoyant combustibles to be separated from dense ones.
+The third concerns the output. The decision selects whether the fan may be energised at all, and at which height the space is vented. These are consequences of the density sign and the chemoresistive response together. No identified reference produces a flammability- and buoyancy-dependent actuation, and CN102645908A, the closest mitigation reference, does the opposite by energising the fan for every detection.
+9.3 Statutory Character Under Sections 3(k) and 3(f)
+Section 3(k) of the Indian Patents Act, 1970 excludes mathematical methods, algorithms and computer programmes per se. The relevant question under current examination practice for computer-related inventions is whether the invention, considered as a whole, solves a technical problem by technical means with a technical effect. The technical problem is that low-cost gas-safety units cannot detect inert asphyxiants or determine gas buoyancy and flammability, and that a fan's coast-down is corrupted by weather and wear. The technical means are physical: a rotating fan whose drive is interrupted, a tachometer, environmental and chemoresistive transducers, and a fan drive, servo vent and alarm. The technical effect is a physical measurement of gas density and the resulting change in the physical state of the protected space, including withholding fan energisation and choosing the vent path. Claims should accordingly be framed as an apparatus and a method of operating it in which the fan is de-energised, its coast-down is timed and processed, and actuators are commanded. The equations belong in the claims as the means by which the sensed state is converted into an actuation decision, not as the subject of the claims.
+Section 3(f) excludes the mere arrangement or re-arrangement of known devices each functioning independently in a known way. The parts here do not function independently. The fan is alternately transducer and actuator. The friction state of the fan determines whether its transducer output is admitted. The environmental sensor determines the reference against which the fan output is interpreted. The density sign determines how the chemoresistive response is read, and the resulting class determines whether the fan may be energised. That mutual conditioning is what is put forward as the invention.
+9.4 Deployment and Residual Limitations
+The unit requires no trained classifier, no gas-specific calibration of the density channel and no additional density sensor. The calibration constants are obtained by an explicit clean-air commissioning procedure that the unit can repeat by itself. The main residual limitations are those of Section 8.12: the decision latency is of the order of a minute for three coast-downs, the density resolution does not reach occupational exposure levels, and the behaviour of the sensing spin-up in a flammable atmosphere is to be specified.
+10. What Aspect(s) of the Invention Need(s) Protection?
+Proposed Claims for Patent-Agent Review
+The claims below are proposed as a concrete starting point for review and redrafting by a registered patent agent. They are not the final claims for filing; the formal claim set is to be drafted by the patent agent. The proposed claims are confined to the technical features already described in this document.
+Protection is sought for the cooperative arrangement of the sensing, estimation, classification and mitigation functions described herein. The individual sensing and processing operations may be known independently; the claimed subject matter is directed to their cooperative arrangement and interaction as described below.
+10.1 Proposed Independent Apparatus Claim
+1. A gas-hazard detection and mitigation apparatus comprising:
+a fan configured to operate both as a ventilation actuator and, during a free coast-down following removal of drive power, as a sensing element;
+a rotational sensing circuit configured to measure a time period associated with each revolution of the fan during the free coast-down;
+a processor configured to fit the measured coast-down to a rotational-dynamics model comprising a speed-independent friction term, a speed-proportional friction term and a speed-squared aerodynamic term, and to derive from the aerodynamic term an estimate of gas density;
+an environmental sensor configured to provide temperature, relative humidity and pressure measurements;
+the processor being further configured to calculate, from the temperature, relative humidity and pressure measurements, a thermodynamic reference density and to form a signed density residual between the estimated gas density and the thermodynamic reference density;
+a chemoresistive gas sensor configured to provide a chemoresistive response associated with an atmosphere surrounding the apparatus;
+a classifier configured to classify the atmosphere according to the signed density residual and the chemoresistive response; and
+a mitigation controller configured to select a mitigation action according to the classification, wherein, in response to a classification indicating a combustible gas, the mitigation controller inhibits energisation of the fan and selects a ventilation path according to a sign of the density residual.
+10.2 Proposed Dependent Apparatus Claims
+2. The apparatus of claim 1, wherein the processor is configured to separate a speed-independent friction contribution, a speed-proportional friction contribution and an aerodynamic contribution from the coast-down measurement and to derive the gas-density estimate from the aerodynamic contribution.
+3. The apparatus of claim 1, wherein the processor is configured to establish a commissioning value for the speed-proportional friction term during a clean-air commissioning procedure and to hold the speed-proportional friction term at the commissioning value when subsequently estimating the aerodynamic contribution.
+4. The apparatus of claim 1, wherein the processor is configured to acquire a plurality of coast-down measurements and average the corresponding aerodynamic coefficients before calculating the gas-density estimate.
+5. The apparatus of claim 1, wherein the processor excludes an initial time interval following removal of drive power from the coast-down fit.
+6. The apparatus of claim 5, wherein the processor associates each measured revolution period with a mean angular velocity determined at a mid-time of the corresponding revolution period.
+7. The apparatus of claim 1, wherein the processor standardises the signed density residual using a clean-air dispersion determined during commissioning.
+8. The apparatus of claim 1, wherein the classifier is configured to distinguish at least:
+(a) clean air;
+(b) an inert asphyxiant;
+(c) a buoyant combustible gas;
+(d) a dense combustible gas; and
+(e) a vapour having a chemoresistive response without a corresponding significant density residual.
+9. The apparatus of claim 8, wherein:
+(a) a negative density residual associated with a combustible classification causes selection of a ventilation path for a buoyant gas; and
+(b) a positive density residual associated with a combustible classification causes selection of a ventilation path for a dense gas.
+10. The apparatus of claim 8, wherein, in response to classification as an inert asphyxiant, the mitigation controller selects a forced-ventilation action.
+11. The apparatus of claim 8, wherein, when the chemoresistive response exceeds an escalation threshold while the density residual remains insufficient to establish a combustible-gas classification, the mitigation controller escalates the atmosphere to a combustible-gas mitigation action.
+12. The apparatus of claim 1, wherein the processor is configured to monitor the friction terms obtained from the coast-down model against commissioning values to detect a change in mechanical condition of the fan.
+13. The apparatus of claim 12, wherein, upon detecting a mechanical condition outside a predetermined commissioning range, the processor withholds the gas-density estimate from classification until the mechanical condition has been resolved.
+14. The apparatus of claim 13, wherein the processor automatically performs a clean-air recommissioning procedure to establish updated friction and density-calibration parameters before restoring the gas-density estimate to the classifier.
+15. The apparatus of claim 1, wherein the processor stores calibration parameters corresponding to a plurality of fan starting speeds and selects calibration parameters corresponding to a starting speed of a respective coast-down measurement.
+16. The apparatus of claim 1, wherein the processor records, for each measurement cycle, at least the revolution periods, fitted coast-down coefficients, density residual, chemoresistive response, atmospheric classification and selected mitigation action.
+10.3 Proposed Independent Method Claim
+17. A method for detecting and mitigating a gas hazard using a fan, the method comprising:
+driving the fan to an operating speed;
+removing drive power from the fan and allowing the fan to undergo a free coast-down;
+measuring a time period associated with each revolution of the fan during the free coast-down;
+fitting the measured coast-down to a model comprising a speed-independent friction term, a speed-proportional friction term and a speed-squared aerodynamic term;
+deriving a gas-density estimate from the aerodynamic term;
+measuring temperature, relative humidity and pressure of the surrounding atmosphere;
+calculating a thermodynamic reference density from the measured temperature, relative humidity and pressure;
+forming a signed density residual between the gas-density estimate and the thermodynamic reference density;
+obtaining a chemoresistive response from a chemoresistive gas sensor;
+classifying the surrounding atmosphere using the signed density residual and the chemoresistive response; and
+selecting a mitigation action according to the classification, wherein, when the classification indicates a combustible gas, energisation of the fan is inhibited and a ventilation path is selected according to a sign of the density residual.
+10.4 Proposed Dependent Method Claims
+18. The method of claim 17, further comprising establishing a clean-air commissioning value for the speed-proportional friction term and holding the term at the commissioning value during subsequent coast-down fitting.
+19. The method of claim 17, further comprising acquiring a plurality of coast-down measurements and averaging the corresponding aerodynamic coefficients before calculating the gas-density estimate.
+20. The method of claim 17, further comprising detecting a change in fan mechanical condition from the friction terms, withholding the density channel while the change remains unresolved, and automatically recommissioning the fan using clean-air coast-down measurements.
+11. Technology Readiness Level of the Invention
+| TRL 1 | TRL 2 | TRL 3 | TRL 4 | TRL 5 | TRL 6 | TRL 7 | TRL 8 | TRL 9 |
+| Principles observed | Concept formed | Proof of concept | Lab validated | Relevant env. | Relevant env. demo | Operational proto. | Qualified | Proven in use |
+|  |  |  | ✓ | ✓ |  |  |  |  |
+Annexure A: Consolidated Reference List
+[P1] US5621159A, Method and apparatus for determining fan bearing friction, Dell USA LP, granted 15-04-1997. https://patents.google.com/patent/US5621159A
+[P2] US20060176186A1, Fan monitoring for failure prediction, Hewlett-Packard Development Co. LP, published 10-08-2006. https://patents.google.com/patent/US20060176186A1
+[P3] EP2706300A2/A3, EP2706300B1, Method for detecting the gas family and gas burner, ebm-papst Landshut GmbH, priority 05-09-2012, published 12-03-2014. https://patents.google.com/patent/EP2706300A3
+[P4] US9119979B2, Method of controlling a powered air purifying respirator, 3M Innovative Properties Co., granted 01-09-2015. https://patents.google.com/patent/US9119979B2
+[P5] US4340355A, Furnace control using induced draft blower, exhaust gas flow rate sensing and density compensation, Honeywell Inc., granted 20-07-1982. https://patents.google.com/patent/US4340355A
+[P6] US4730479A, Temperature and humidity compensation for gas detection apparatus, Standard Oil Company, granted 15-03-1988. https://patents.google.com/patent/US4730479A
+[P7] US10520481B2, Hydrogen sulfide gas detector with humidity and temperature compensation, Rosemount Inc., granted 31-12-2019. https://patents.google.com/patent/US10520481B2
+[P8] CN102645908A, Gas-leakage emergency protection device, published 22-08-2012. https://patents.google.com/patent/CN102645908A
+[N1] J. A. Fedchak, K. Arai, K. Jousten, J. Setina, H. Yoshida, "Recommended practices for the use of spinning rotor gauges in inter-laboratory comparisons," Measurement, vol. 66, pp. 176–183, 2015, doi:10.1016/j.measurement.2015.02.012.
+[N2] C. P. Blakemore et al., "Absolute pressure and gas species identification with an optically levitated rotor," J. Vac. Sci. Technol. B, vol. 38, 024201, 2020, doi:10.1116/1.5139638.
+[N3] SAE International, J2263, Road Load Measurement Using Onboard Anemometry and Coastdown Techniques, 2008 (rev. 2020).
+[N4] U.S. EPA, 40 CFR Part 1066, Subpart D, Coastdown. https://www.ecfr.gov/current/title-40/chapter-I/subchapter-U/part-1066/subpart-D
+[N5] IEEE Std 112-2004, IEEE Standard Test Procedure for Polyphase Induction Motors and Generators.
+[N6] K. P. Ramachandran, G. R. Rameshkumar, L. H. Al Hatmi, "Coast Down Time analysis for condition monitoring: an experimental investigation to study the effects of bearing lubrication and shaft misalignment in rotating machinery," Proc. IEEE IEEM, 2013, doi:10.1109/IEEM.2013.6962645.
+[N7] G. R. Rameshkumar, B. V. A. Rao, K. P. Ramachandran, "Condition Monitoring of Forward Curved Centrifugal Blower Using Coast Down Time Analysis," Int. J. Rotating Machinery, 2010, doi:10.1155/2010/962804.
+[N8] A. Picard, R. S. Davis, M. Gläser, K. Fujii, "Revised formula for the density of moist air (CIPM-2007)," Metrologia, vol. 45, pp. 149–155, 2008, doi:10.1088/0026-1394/45/2/004.
+[N9] C. Wang, L. Yin, L. Zhang, D. Xiang, R. Gao, "Metal Oxide Gas Sensors: Sensitivity and Influencing Factors," Sensors, vol. 10, pp. 2088–2106, 2010, doi:10.3390/s100302088.
+[N10] A. N. Abdullah et al., "Correction Model for Metal Oxide Sensor Drift Caused by Ambient Temperature and Humidity," Sensors, vol. 22, 3301, 2022, doi:10.3390/s22093301.
+[N11] A. Vergara, S. Vembu, T. Ayhan, M. A. Ryan, M. L. Homer, R. Huerta, "Chemical gas sensor drift compensation using classifier ensembles," Sensors and Actuators B, vol. 166–167, pp. 320–329, 2012, doi:10.1016/j.snb.2012.01.074.
+[N12] D. L. Hall, J. Llinas, "An Introduction to Multisensor Data Fusion," Proceedings of the IEEE, vol. 85, no. 1, pp. 6–23, 1997.
+[N13] Zhengzhou Winsen Electronics Technology Co., Flammable Gas Sensor (Model MQ-2) Manual, Ver. 1.4. https://www.winsen-sensor.com
+[N14] Bosch Sensortec, BME280 Combined humidity and pressure sensor, datasheet BST-BME280-DS002. https://www.bosch-sensortec.com
+[N15] Espressif Systems, ESP-IDF Programming Guide (ESP32): Pulse Counter (PCNT); Motor Control PWM (MCPWM) capture. https://docs.espressif.com/projects/esp-idf
+[N16] IEC 60079-10-1:2020, Explosive atmospheres. Part 10-1: Classification of areas. Explosive gas atmospheres.
+[N17] Stanford Research Systems, BGA244 Binary Gas Analyzer. https://www.thinksrs.com/products/BGA244.htm
+[N18] Twin City Fan & Blower, Fan Engineering FE-1600, Temperature and Altitude Effects on Fans.
+————————— END OF THE DOCUMENT —————————

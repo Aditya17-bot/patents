@@ -1,0 +1,104 @@
+{
+ "Reference": {
+  "plateau1": 86.7,
+  "plateau2": 85.1,
+  "n_plateau_days": [
+   121,
+   84
+  ],
+  "plateau_gap_test_median": 2.83,
+  "plateau_gap_test_iqr": [
+   2.3,
+   4.0
+  ],
+  "k2_over_k1": 0.814,
+  "wc_gap_raw_median": 3.2,
+  "wc_gap_offset_median": 1.62,
+  "wc_gap_offset_scale_median": 1.27
+ },
+ "AICU": {
+  "plateau1": 87.1,
+  "plateau2": 68.7,
+  "n_plateau_days": [
+   24,
+   15
+  ],
+  "plateau_gap_test_median": 17.3,
+  "plateau_gap_test_iqr": [
+   14.6,
+   21.55
+  ],
+  "k2_over_k1": 0.773,
+  "wc_gap_raw_median": 15.2,
+  "wc_gap_offset_median": 3.6,
+  "wc_gap_offset_scale_median": 5.01
+ },
+ "Automatoes": {
+  "plateau1": 73.6,
+  "plateau2": 77.6,
+  "n_plateau_days": [
+   88,
+   123
+  ],
+  "plateau_gap_test_median": -5.05,
+  "plateau_gap_test_iqr": [
+   -5.75,
+   -4.6
+  ],
+  "k2_over_k1": 0.725,
+  "wc_gap_raw_median": 4.8,
+  "wc_gap_offset_median": 1.1,
+  "wc_gap_offset_scale_median": 1.26
+ },
+ "Digilog": {
+  "plateau1": 87.5,
+  "plateau2": 75.6,
+  "n_plateau_days": [
+   63,
+   52
+  ],
+  "plateau_gap_test_median": 9.4,
+  "plateau_gap_test_iqr": [
+   8.4,
+   10.38
+  ],
+  "k2_over_k1": 0.721,
+  "wc_gap_raw_median": 9.9,
+  "wc_gap_offset_median": 2.35,
+  "wc_gap_offset_scale_median": 5.49
+ },
+ "IUACAAS": {
+  "plateau1": 87.7,
+  "plateau2": 81.2,
+  "n_plateau_days": [
+   112,
+   109
+  ],
+  "plateau_gap_test_median": 9.9,
+  "plateau_gap_test_iqr": [
+   9.15,
+   11.89
+  ],
+  "k2_over_k1": 1.021,
+  "wc_gap_raw_median": 10.7,
+  "wc_gap_offset_median": 4.25,
+  "wc_gap_offset_scale_median": 4.46
+ },
+ "TheAutomators": {
+  "plateau1": 80.5,
+  "plateau2": 78.9,
+  "n_plateau_days": [
+   112,
+   113
+  ],
+  "plateau_gap_test_median": 0.0,
+  "plateau_gap_test_iqr": [
+   -0.3,
+   1.6
+  ],
+  "k2_over_k1": 1.213,
+  "wc_gap_raw_median": 0.9,
+  "wc_gap_offset_median": 1.75,
+  "wc_gap_offset_scale_median": 1.25
+ }
+}

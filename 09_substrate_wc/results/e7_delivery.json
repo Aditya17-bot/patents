@@ -1,0 +1,41 @@
+{
+ "0.15": {
+  "alarm_weeks": 11,
+  "section_weeks": 95,
+  "rate": 0.116,
+  "per_compartment": {
+   "Reference": 2,
+   "AICU": 2,
+   "Automatoes": 6,
+   "Digilog": 1,
+   "IUACAAS": 0,
+   "TheAutomators": 0
+  }
+ },
+ "0.2": {
+  "alarm_weeks": 3,
+  "section_weeks": 95,
+  "rate": 0.032,
+  "per_compartment": {
+   "Reference": 1,
+   "AICU": 0,
+   "Automatoes": 2,
+   "Digilog": 0,
+   "IUACAAS": 0,
+   "TheAutomators": 0
+  }
+ },
+ "0.3": {
+  "alarm_weeks": 0,
+  "section_weeks": 95,
+  "rate": 0.0,
+  "per_compartment": {
+   "Reference": 0,
+   "AICU": 0,
+   "Automatoes": 0,
+   "Digilog": 0,
+   "IUACAAS": 0,
+   "TheAutomators": 0
+  }
+ }
+}

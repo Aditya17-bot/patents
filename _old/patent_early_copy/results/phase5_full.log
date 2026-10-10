@@ -1,0 +1,72 @@
+=== seed 0 ===
+operational: 367 sites x 2972 intervals, 199 nodes, 98126 cells hidden
+  mean node flow 706.3 veh/interval, mean tolerance band 31.9 veh (4.51%)
+  method                                     MAE     RMSE    resid%  outside%
+  historical_mean                          66.61   117.01     5.636     56.53
+  linear_interpolation                     94.30   202.29     5.609     58.48
+  knn_spatial                              15.79    32.00     0.891     10.70
+  soft_impute                              37.69    59.69     3.598     46.13
+  --- invention: calibrated relation, hard tolerance band ---
+  constrained(historical_mean)             30.22    73.76     2.475      0.99
+  constrained(linear_interpolation)        34.16    85.93     2.433      1.02
+  constrained(knn_spatial)                 14.50    34.57     0.915      0.93
+  constrained(soft_impute)                 24.48    57.50     2.352      0.98
+  --- ablations on the strongest prior ---
+  ablation(knn_spatial: exact equality, no band)   13.93    30.59     0.640      4.09
+  ablation(knn_spatial: textbook zero, no calibration)   14.80    34.96     0.935      6.36
+  ablation(knn_spatial: offset calibration only)   14.46    31.79     0.935      6.29
+  ablation(knn_spatial: uniform weighting)   14.42    33.90     0.915      0.92
+  wrote results/_scratch_phase5.json
+=== seed 1 ===
+operational: 367 sites x 2972 intervals, 199 nodes, 98125 cells hidden
+  mean node flow 706.3 veh/interval, mean tolerance band 31.9 veh (4.51%)
+  method                                     MAE     RMSE    resid%  outside%
+  historical_mean                          66.19   118.69     5.692     56.20
+  linear_interpolation                     89.72   195.60     5.533     57.84
+  knn_spatial                              15.72    30.02     0.944     11.06
+  soft_impute                              37.60    60.75     3.628     46.11
+  --- invention: calibrated relation, hard tolerance band ---
+  constrained(historical_mean)             29.95    74.08     2.543      0.99
+  constrained(linear_interpolation)        34.11    90.97     2.483      0.99
+  constrained(knn_spatial)                 14.43    33.54     0.960      0.92
+  constrained(soft_impute)                 23.55    49.96     2.341      0.97
+  --- ablations on the strongest prior ---
+  ablation(knn_spatial: exact equality, no band)   13.72    28.67     0.642      3.95
+  ablation(knn_spatial: textbook zero, no calibration)   14.90    37.38     0.985      6.65
+  ablation(knn_spatial: offset calibration only)   14.46    32.84     0.977      6.50
+  ablation(knn_spatial: uniform weighting)   14.38    32.89     0.960      0.91
+  wrote results/_scratch_phase5.json
+=== seed 2 ===
+operational: 367 sites x 2972 intervals, 199 nodes, 98125 cells hidden
+  mean node flow 706.3 veh/interval, mean tolerance band 31.9 veh (4.51%)
+  method                                     MAE     RMSE    resid%  outside%
+  historical_mean                          66.96   119.44     5.609     56.58
+  linear_interpolation                     94.86   205.44     5.854     58.28
+  knn_spatial                              15.69    31.39     0.942     10.93
+  soft_impute                              37.54    60.54     3.601     45.90
+  --- invention: calibrated relation, hard tolerance band ---
+  constrained(historical_mean)             31.30    80.42     2.489      1.04
+  constrained(linear_interpolation)        35.98    99.91     2.473      1.04
+  constrained(knn_spatial)                 14.38    35.21     0.915      0.94
+  constrained(soft_impute)                 24.71    59.61     2.328      0.99
+  --- ablations on the strongest prior ---
+  ablation(knn_spatial: exact equality, no band)   13.79    30.61     0.656      4.01
+  ablation(knn_spatial: textbook zero, no calibration)   14.35    31.08     0.947      6.61
+  ablation(knn_spatial: offset calibration only)   14.27    31.36     0.932      6.53
+  ablation(knn_spatial: uniform weighting)   14.31    34.50     0.915      0.93
+  wrote results/_scratch_phase5.json
+
+method                                   MAE mean [min-max]     outside% mean [min-max]
+ablation(knn_spatial: exact equality, no band)   13.81 [ 13.72- 13.93]    4.02 [ 3.95- 4.09]
+ablation(knn_spatial: offset calibration only)   14.40 [ 14.27- 14.46]    6.44 [ 6.29- 6.53]
+ablation(knn_spatial: textbook zero, no calibration)   14.68 [ 14.35- 14.90]    6.54 [ 6.36- 6.65]
+ablation(knn_spatial: uniform weighting)   14.37 [ 14.31- 14.42]    0.92 [ 0.91- 0.93]
+constrained(historical_mean)               30.49 [ 29.95- 31.30]    1.01 [ 0.99- 1.04]
+constrained(knn_spatial)                   14.44 [ 14.38- 14.50]    0.93 [ 0.92- 0.94]
+constrained(linear_interpolation)          34.75 [ 34.11- 35.98]    1.02 [ 0.99- 1.04]
+constrained(soft_impute)                   24.25 [ 23.55- 24.71]    0.98 [ 0.97- 0.99]
+historical_mean                            66.59 [ 66.19- 66.96]   56.44 [56.20-56.58]
+knn_spatial                                15.73 [ 15.69- 15.79]   10.90 [10.70-11.06]
+linear_interpolation                       92.96 [ 89.72- 94.86]   58.20 [57.84-58.48]
+soft_impute                                37.61 [ 37.54- 37.69]   46.05 [45.90-46.13]
+wrote results/phase5_robustness_full.json

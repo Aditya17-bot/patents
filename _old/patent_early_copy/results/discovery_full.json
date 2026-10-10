@@ -1,0 +1,52 @@
+{
+ "manifest": "window_full_M25_A.json",
+ "score": {
+  "relations_found": 726,
+  "true_relations": 199,
+  "exact_matches": 147,
+  "recall_exact": 0.739,
+  "precision_exact": 0.202,
+  "correct_detector_set_any_signs": 147,
+  "note": "exact match understates recovery; a surveyed relation can be implied by a combination of discovered ones without appearing verbatim - see span_coverage",
+  "recall_detector_set": 0.739
+ },
+ "span": {
+  "covered": 150,
+  "of": 199,
+  "coverage": 0.754
+ },
+ "validity": {
+  "valid": 245,
+  "of": 726,
+  "share": 0.337,
+  "noise_floor_pct": 1.06
+ },
+ "discovered_usable": 692,
+ "configs": {
+  "none": {
+   "MAE": 15.79,
+   "outside": 10.7
+  },
+  "surveyed": {
+   "MAE": 14.5,
+   "RMSE": 34.57,
+   "outside": 0.93,
+   "constraints": 199,
+   "seconds": 85.795
+  },
+  "discovered": {
+   "MAE": 15.1,
+   "RMSE": 32.92,
+   "outside": 7.13,
+   "constraints": 692,
+   "seconds": 209.714
+  },
+  "both": {
+   "MAE": 14.22,
+   "RMSE": 31.22,
+   "outside": 2.43,
+   "constraints": 891,
+   "seconds": 465.0
+  }
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "sondes": 67,
+ "reading_interval_min": {
+  "median": 15.0,
+  "share_15min": 0.5470155960240103
+ },
+ "lab_to_reading_gap_min": {
+  "median": 6.866666666666666,
+  "p90": 20.8,
+  "max": 29.816666666666666,
+  "n": 1173
+ },
+ "processing_us_per_reading": {
+  "median": 5.688390555028253,
+  "max": 7.116007179571304
+ },
+ "window_readings_max": 673,
+ "window_bytes_max_float32": 2692,
+ "share_of_15min_interval": 6.320433950031392e-09
+}

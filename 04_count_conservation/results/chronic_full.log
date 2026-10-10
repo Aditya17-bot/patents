@@ -1,0 +1,21 @@
+corridor 367 detectors, 199 nodes; 162 detectors belong to >=2 nodes
+baseline per-detector offsets recovered from the network's own calibration:
+  non-zero for 199 of 367 detectors; median |offset| 1.19, p90 7.18, max 43.73
+  residual of the decomposition: median 0.00 vehicles, max 0.00
+
+injected chronic fault        trials  recovered ranked 1st   in top 3
+constant loss of 30 veh/interval, all month      25  -30.0000  -30.0270     92.0%     92.0%
+constant loss of 15 veh/interval, all month      25  -15.0000  -15.0139     92.0%     92.0%
+constant loss of 8 veh/interval, all month       25   -8.0000   -8.0072     88.0%     88.0%
+constant gain of 8 veh/interval, all month       25    8.0000    7.9900     92.0%     92.0%
+constant gain of 15 veh/interval, all month      25   15.0000   14.9812     92.0%     92.0%
+constant gain of 30 veh/interval, all month      25   30.0000   30.0282     92.0%     92.0%
+under-count by 5%, all month                     25   -0.0500   -0.0560     88.0%     92.0%
+under-count by 2%, all month                     25   -0.0200   -0.0220     80.0%     88.0%
+over-count by 2%, all month                      25    0.0200    0.0209     84.0%     92.0%
+over-count by 5%, all month                      25    0.0500    0.0518     84.0%     88.0%
+
+control (no fault injected): the decomposition is unchanged by construction,
+so the meaningful control is the baseline offset spread printed above.
+
+wrote results/chronic_full_M25_A.json

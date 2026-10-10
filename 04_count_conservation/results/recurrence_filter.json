@@ -1,0 +1,148 @@
+{
+ "corridors": {
+  "M25": {
+   "relations": 496,
+   "by_category": {
+    "unmapped_site": {
+     "relations": 127,
+     "kept_by_recurrence": 96
+    },
+    "outside_map": {
+     "relations": 126,
+     "kept_by_recurrence": 86
+    },
+    "exact": {
+     "relations": 140,
+     "kept_by_recurrence": 134
+    },
+    "implied": {
+     "relations": 103,
+     "kept_by_recurrence": 82
+    }
+   },
+   "prior_only": {
+    "all": {
+     "cells": 96869,
+     "MAE": 17.751,
+     "RMSE": 33.249
+    },
+    "touched": {
+     "cells": 34495,
+     "MAE": 15.106,
+     "RMSE": 26.087
+    }
+   },
+   "all_recovered": {
+    "constraints": 496,
+    "all": {
+     "cells": 96869,
+     "MAE": 15.59,
+     "RMSE": 30.68
+    },
+    "touched": {
+     "cells": 34495,
+     "MAE": 13.884,
+     "RMSE": 28.46
+    }
+   },
+   "recurring_in_may": {
+    "constraints": 398,
+    "all": {
+     "cells": 96869,
+     "MAE": 15.452,
+     "RMSE": 29.718
+    },
+    "touched": {
+     "cells": 34495,
+     "MAE": 13.453,
+     "RMSE": 26.156
+    }
+   },
+   "oracle_without_outside_map": {
+    "constraints": 370,
+    "all": {
+     "cells": 96869,
+     "MAE": 15.38,
+     "RMSE": 29.454
+    },
+    "touched": {
+     "cells": 34495,
+     "MAE": 13.301,
+     "RMSE": 24.551
+    }
+   }
+  },
+  "M1": {
+   "relations": 200,
+   "by_category": {
+    "exact": {
+     "relations": 59,
+     "kept_by_recurrence": 53
+    },
+    "implied": {
+     "relations": 42,
+     "kept_by_recurrence": 28
+    },
+    "outside_map": {
+     "relations": 18,
+     "kept_by_recurrence": 10
+    },
+    "unmapped_site": {
+     "relations": 81,
+     "kept_by_recurrence": 59
+    }
+   },
+   "prior_only": {
+    "all": {
+     "cells": 50877,
+     "MAE": 13.899,
+     "RMSE": 30.994
+    },
+    "touched": {
+     "cells": 9303,
+     "MAE": 8.025,
+     "RMSE": 12.982
+    }
+   },
+   "all_recovered": {
+    "constraints": 200,
+    "all": {
+     "cells": 50877,
+     "MAE": 12.17,
+     "RMSE": 28.559
+    },
+    "touched": {
+     "cells": 9303,
+     "MAE": 7.381,
+     "RMSE": 13.344
+    }
+   },
+   "recurring_in_may": {
+    "constraints": 150,
+    "all": {
+     "cells": 50877,
+     "MAE": 12.292,
+     "RMSE": 28.622
+    },
+    "touched": {
+     "cells": 9303,
+     "MAE": 7.408,
+     "RMSE": 12.898
+    }
+   },
+   "oracle_without_outside_map": {
+    "constraints": 182,
+    "all": {
+     "cells": 50877,
+     "MAE": 12.137,
+     "RMSE": 28.473
+    },
+    "touched": {
+     "cells": 9303,
+     "MAE": 7.248,
+     "RMSE": 12.529
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,1093 @@
+ 
+ US8961068B2 - Device, system, and method of irrigation 
+ - Google Patents 
+ US8961068B2 - Device, system, and method of irrigation 
+ - Google Patents 
+ Device, system, and method of irrigation 
+ Download PDF 
+ Info 
+ Publication number 
+ US8961068B2 
+ US8961068B2 
+ US13/778,194 
+ US201313778194A 
+ US8961068B2 
+ US 8961068 B2 
+ US8961068 B2 
+ US 8961068B2 
+ US 201313778194 A 
+ US201313778194 A 
+ US 201313778194A 
+ US 8961068 B2 
+ US8961068 B2 
+ US 8961068B2 
+ Authority 
+ US 
+ United States 
+ Prior art keywords 
+ irrigation 
+ time 
+ depth 
+ point 
+ root 
+ Prior art date 
+ 2012-02-29 
+ Legal status (The legal status is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the status listed.) 
+ Expired - Fee Related , expires 2033-03-25 
+ Application number 
+ US13/778,194 
+ Other versions 
+ US20130223934A1 
+ ( en 
+ Inventor 
+ Alexander VEITSMAN 
+ Yuri DANILOV 
+ Current Assignee (The listed assignees may be inaccurate. Google has not performed a legal analysis and makes no representation or warranty as to the accuracy of the list.) 
+ TEVATRONIC Ltd
+ Original Assignee 
+ TEVATRONIC Ltd 
+ Priority date (The priority date is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the date listed.) 
+ 2012-02-29 
+ Filing date 
+ 2013-02-27 
+ Publication date 
+ 2015-02-24 
+ 2013-02-27 
+ Application filed by TEVATRONIC Ltd 
+ filed 
+ Critical 
+ TEVATRONIC Ltd 
+ 2013-06-03 
+ Assigned to TEVATRONIC LTD. 
+ reassignment 
+ TEVATRONIC LTD. 
+ ASSIGNMENT OF ASSIGNORS INTEREST (SEE DOCUMENT FOR DETAILS). 
+ Assignors: DANILOV, YURI, VEITSMAN, ALEXANDER 
+ 2013-08-29 
+ Publication of US20130223934A1 
+ publication 
+ Critical 
+ patent/US20130223934A1/en 
+ 2015-02-24 
+ Application granted 
+ granted 
+ Critical 
+ 2015-02-24 
+ Publication of US8961068B2 
+ publication 
+ Critical 
+ patent/US8961068B2/en 
+ Status 
+ Expired - Fee Related 
+ legal-status 
+ Critical 
+ Current 
+ 2033-03-25 
+ Adjusted expiration 
+ legal-status 
+ Critical 
+ Links 
+ USPTO 
+ USPTO PatentCenter 
+ USPTO Assignment 
+ Espacenet 
+ Global Dossier 
+ Discuss 
+ Images 
+ Classifications 
+ A — HUMAN NECESSITIES 
+ A01 — AGRICULTURE; FORESTRY; ANIMAL HUSBANDRY; HUNTING; TRAPPING; FISHING 
+ A01G — HORTICULTURE; CULTIVATION OF VEGETABLES, FLOWERS, RICE, FRUIT, VINES, HOPS OR SEAWEED; FORESTRY; WATERING 
+ A01G25/00 — Watering gardens, fields, sports grounds or the like 
+ A01G25/16 — Control of watering 
+ A01G25/167 — Control by humidity of the soil itself or of devices simulating soil or of the atmosphere; Soil humidity sensors 
+ Definitions 
+ the present invention 
+ relates to the field of irrigation. 
+ Irrigation systems 
+ may be used for providing water to land or soil. 
+ irrigation systems 
+ may assist in the growing of agricultural crops, as well as maintenance of landscapes. Irrigation may be particularly important in dry areas, during periods of inadequate rainfall, or in a greenhouse with ground plant growing or floor plant growing (e.g., disconnected from the ground). 
+ Some irrigation systems 
+ may operate, manually or automatically, based on pre-defined agricultural guidelines, for example, indicating that a certain type of crop is to be irrigated for a particular period of time at a particular water flow rate. 
+ pre-defined agricultural guidelines 
+ may not be optimal or adequate, and insufficient irrigation or excessive irrigation may adversely affect the growth of agricultural crops. 
+ excessive irrigation 
+ may waste water, and may increase the irrigation cost paid by a crop owner. 
+ the present invention 
+ may include, for example, devices, systems, and methods of irrigation. 
+ an irrigation system for irrigating a plant having a root 
+ comprises: a valve to begin irrigation from a water source at a first time-point; a moisture sensor to sense moisture at a second, subsequent, time-point, said moisture sensor being located underground at an insertion depth between ground surface and a maximum depth of the root; a water drainage speed calculator to calculate a water drainage speed based on the first time-point, the second time-point, and the insertion depth of the moisture sensor; and a target drainage time calculator to calculate a remaining time for irrigation, based on the calculated water drainage speed and further based on a difference between the insertion depth and the maximum depth of the root. 
+ the irrigation system 
+ further comprises: an irrigation processor to determine that the remaining time for irrigation elapsed, and to send a signal commanding the valve to stop irrigation from said water source. 
+ the irrigation system 
+ further comprises: a wireless transmitter to transmit to a remote server data corresponding to at least one of: the first time-point, the second time-point, the calculated water drainage speed, and the calculated remaining time for irrigation. 
+ the irrigation system 
+ further comprises: a wireless receiver to receive from a remote server data indicating the maximum depth of the root. 
+ the irrigation system 
+ further comprises: a memory unit to store, in proximity to the plant, a parameter indicating the maximum depth of the root. 
+ the irrigation system 
+ further comprises: a remote server comprising a wireless transmitter to enable a user to remotely modify a value of said parameter stored in said memory unit proximal to the plant. 
+ the insertion depth 
+ is approximately 25 to 40 percent of the maximum root depth. 
+ the insertion depth 
+ is approximately 40 to 60 percent of the maximum root depth. 
+ the insertion depth of the moisture sensor 
+ is unchanged as the root of the plant grows. 
+ a method for irrigating a plant having a root 
+ comprises: beginning irrigation from a water source at a first time-point; sensing moisture at a second, subsequent, time-point, by a moisture sensor being located underground at an insertion depth between ground surface and a maximum depth of the root; calculating a water drainage speed based on the first time-point, the second time-point, and the insertion depth of the moisture sensor; and calculating a remaining time for irrigation, based on the calculated water drainage speed and further based on a difference between the insertion depth and the maximum depth of the root. 
+ the method 
+ further comprises: determining that the remaining time for irrigation elapsed; and sending a signal commanding the valve to stop irrigation from said water source. 
+ the method 
+ further comprises: wirelessly transmitting to a remote server data corresponding to at least one of: the first time-point, the second time-point, the calculated water drainage speed, and the calculated remaining time for irrigation. 
+ the method 
+ further comprises: receiving from a remote server data indicating the maximum depth of the root. 
+ the method 
+ further comprises: storing in proximity to the plant, a parameter indicating the maximum depth of the root. 
+ the method 
+ further comprises: remotely modifying a value of said parameter stored in said memory unit proximal to the plant. 
+ the insertion depth 
+ is approximately 25 to 40 percent of the maximum root depth. 
+ the insertion depth 
+ is approximately 40 to 60 percent of the maximum root depth. 
+ the method 
+ further comprises: maintaining the insertion depth of the moisture sensor unchanged as the root of the plant grows. 
+ the present invention 
+ may provide other and/or additional benefits or advantages. 
+ FIG. 1A 
+ is another illustration of some components of an irrigation system, in accordance with the present invention. 
+ FIG. 1B 
+ is a schematic block diagram illustration of the irrigation system, in accordance with the present invention. 
+ FIGS. 2A-2B 
+ are schematic graphs demonstrating a linear relation between irrigation time and irrigation drainage depth, in accordance with demonstrative examples of the present invention. 
+ FIG. 3 
+ is a flow-chart of a method of irrigation, in accordance with the present invention. 
+ an irrigation system 
+ may determine a suitable irrigation depth for a particular crop being irrigated. 
+ the irrigation system 
+ may automatically adjust the amount of water being provided and/or the period(s) of time in which irrigation is performed, to ensure that water reaches the suitable irrigation depth in its entirety, and that water is not wasted by irrigating the soil located beneath the suitable irrigation depth. This may result in saving in the amount of saving irrigation water needed, may eliminate or reduce damage to crops due to excessive irrigation, may assist in determining the speed of plant growth, and may allow automation of the irrigation process and reduction in manpower involved in irrigation. 
+ FIG. 1B 
+ is a schematic block diagram illustration of a system 100 in accordance with the present invention; as well as to FIG. 1A , which further demonstrates some of the components of system 100 . 
+ System 100 
+ may comprise, for example, an irrigation device 110 connected to a water source 105 . 
+ System 100 
+ may further comprise, optionally, a server 131 , a database 132 , and one or more computing device(s) 133 . 
+ System 100 
+ may be used, for example, to efficiently irrigate a crop, plants, a tree, or other suitable plant, which may typically be planted in soil and may typically have one or more roots beneath ground level (or relative to one or more levels, e.g., in a greenhouse having multi-level platforms or shelves or growing containers or planters). 
+ the demonstrative illustration of FIG. 1A 
+ depicts a tree 171 having a root 172 , and further indicates a deepest point 173 of root 172 . 
+ Water source 105 
+ may be or may comprise, for example, a water pipe, a water tube, a faucet, a hose, a well, a pool, or other suitable artificial or natural source of water or body of water. 
+ water source 105 
+ may comprise, or may be operable associated with or connected to, a pipe 175 able to deliver or transfer irrigation water from water source 105 to a target location or target area. 
+ Irrigation device 110 
+ may comprise, for example, a valve 111 , a valve controller 112 , a moisture sensor 113 , a real-time clock (RTC) 115 , an irrigation processor 116 , a memory unit 117 , a parameters table 118 (e.g., stored in memory unit 117 ), a transceiver 120 , a water inlet 123 , a water passage 122 , a water outlet 121 , and/or other suitable hardware components or software modules. 
+ RTC 
+ real-time clock 
+ Valve 111 
+ may comprise a valve or shutter able to stop and start the flow of water incoming through water inlet 123 from water source 105 and outgoing through water passage 122 and out of water outlet 121 . 
+ Valve controller 112 
+ may control the operation of valve 111 , for example, to cause valve 111 to be entirely open, to be entirely closed, or to be partially open and partially closed. 
+ Moisture sensor 113 
+ may comprise a unit able to measure or determine soil humidity, soil moisture, soil moisture tension, or matric water potential. Moisture sensor 113 may be implemented as a stand-alone sensor or an independent sensor, or may be implemented as part of another sensor or unit, for example, vacuum sensor or pressure sensor as a part of a soil tensiometer. 
+ moisture sensor 113 
+ may comprise a porcelain tensiometer, an electronic tensiometer, a tensiometer probe, or other suitable type of tensiometer. 
+ moisture sensor 113 
+ may have a particular region or area or tip which may be sensitive to humidity or moisture, for example, a sensitive tip 144 . 
+ Moisture sensor 113 
+ may be located beneath ground level (or, beneath a surface level or an upper level in a platform or shelf of container or planter), for example, at a pre-defined depth D. 
+ moisture sensor 113 
+ may be entirely under the ground; or alternatively, at least a sensing portion or sensing region of moisture sensor 113 (e.g., particularly sensitive tip 144 ) may be under the ground, at the pre-defined insertion depth D. 
+ the value of insertion depth D 
+ may be determined manually by the user or automatically by irrigation processor 116 , based on the particular type of crop to be irrigated, and/or based on other irrigation-related parameters (e.g., type of soil; time of year). 
+ the value of insertion depth D 
+ may be smaller (e.g., approximately 25 or 33 or 50 or 66 percent smaller) relative to the typical maximum depth of roots (Droot) of the particular crop to be irrigated. In some demonstrative embodiments, the value of insertion depth D may be approximately 25 to 40 percent, or approximately 40 to 60 percent, of the maximum depth of roots Droot. It is noted that the value of Droot may be, for example, the actual or known value of the maximum depth of the root, or an estimated value (e.g., based on agricultural tables or databases which indicate a typical maximum root depth for various types of crops or plants). 
+ Memory unit 117 
+ may comprise, for example, a Flash memory unit, or other suitable short-term or long-term memory unit able to store data. 
+ Memory unit 117 
+ may store parameters table 118 , storing parameters used in the operation of irrigation device 110 , or storing a log of parameters or measurements or calculated values. 
+ valve controller 112 
+ may cause valve 111 to open and allow water to flow from water source 105 and out of water outlet 121 . 
+ irrigation processor 116 
+ may receive a signal from valve controller 112 , may read the current value of real time clock 115 , and may store or record that value as the first time-point T 1 in parameters table 118 . 
+ water 
+ may flow downward from water outlet 121 , and may gradually drain downward. 
+ the draining water 
+ may reach moisture sensor 113 , which may sense moisture. 
+ Moisture sensor 113 
+ may send a signal to irrigation processor 116 , indicating that moisture sensor 113 sensed moisture. 
+ Irrigation processor 116 
+ may read the current value of real time clock 115 , and may store or record that value as the second time-point T 2 in parameters table 118 . 
+ Irrigation processor 116 
+ may calculate the time difference between the first time-point T 1 and the second time-point T 2 , thereby producing a value dT indicating the time period that it took the water to drain the pre-defined depth D. 
+ Irrigation processor 116 
+ may comprise one or more modules able to further process the data that was collected and/or previously-stored in parameters table 118 . 
+ irrigation processor 116 
+ may comprise a water drainage speed calculator 119 , and a target drainage time calculator 125 . 
+ Water drainage speed calculator 119 
+ may divide the pre-defined depth D by the time period dT, thereby determining a value of water drainage speed V, which may be stored in parameters table 118 . 
+ Target drainage time calculator 125 
+ may multiply the value of water drainage speed V, by the maximum depth Droot of the roots of the particular crops being irrigated, thereby producing a value indicating the total time required (Ttotal), measured from the first time-point T 1 , until the draining water reaches the maximum depth Droot. 
+ target drainage time calculator 125 
+ may determine the depth difference between Droot and D, to determine the remaining depth Dremain for drainage; and may multiply that depth difference Dremain by the water drainage speed V, thereby producing a time value (Tremain) indicating the remaining time until the draining water reaches the maximum depth Droot. 
+ Irrigation processor 116 
+ may utilize real time clock 115 to monitor passing time, and to determine that the remaining time period Tremain elapses. Once the time period Tremain elapses, irrigation processor 116 may send a signal to valve controller 112 , and valve controller 112 may cause valve 111 to shut, thereby stopping further irrigation of water. 
+ irrigation processor 116 
+ may communicate with one or more remote units, for example, via transceiver 118 which may include a wireless transmitter or a wired transceiver. 
+ irrigation processor 116 
+ may communicate with server 131 , and may transmit to server 131 the collected data and/or the calculated data. 
+ Server 131 
+ may store the data in database 132 , and may serve generate reports and/or statistics which may be served to a user (e.g., administrator, crop owner, agronomist) utilizing computing device(s) 133 (e.g., a desktop computer, a laptop computer, a tablet, a smartphone). 
+ server 131 
+ may generate and present data in a format which may be accessible to users of computer device(s) 133 over the Internet and/or via a Web browser. 
+ memory unit 117 and/or database 132 
+ may store moisture level values, which may be sensed by moisture sensor 113 , for example, substantially continuously or at pre-defined time intervals (e.g., every five seconds, every ten seconds, every thirty seconds). 
+ the moisture data 
+ may be taken into account by irrigation processor 116 in order to determine that additional irrigation is required and to initiate opening of valve 111 through valve controller 112 . 
+ Server 131 and processor 116 
+ may be capable of two-way communication, such that, for example, irrigation processor 116 may report data to server 131 , and server 131 may optionally provide data and/or commands to irrigation processor 116 . 
+ server 131 
+ may be utilized by a user, either directly or through computing device 133 , in order to set or modify the value of maximum root depth Droot, or in order to provide commands that manually override the decisions made by irrigation processor 116 (for example, the crop owner may decide to stop irrigation, based on weather prediction of rainfall), or in order to allow other modifications of irrigation intensity (e.g., in order to increase or decrease growth-time of plants or fruit or flowers; in order to control fruit size; in order to make fruit more oily or more diluted). 
+ irrigation intensity 
+ e.g., in order to increase or decrease growth-time of plants or fruit or flowers; in order to control fruit size; in order to make fruit more oily or more diluted. 
+ the maximum root depth 
+ may be 45 centimeters; and moisture sensor 113 may be placed in ground such that sensitive tip 144 may be placed at a depth of 15 centimeters. Irrigation may commence, and after three minutes, moisture sensor 113 may sense the draining water. Accordingly, irrigation processor 116 may divide 15 centimeters by 3 minutes, to determine that the drainage speed of water is 5 centimeters per minute. Since the maximum root depth, in this demonstrative example, is 45 centimeters, the total irrigation time may be calculated to be 9 minutes (by dividing the depth of 45 centimeters, by the drainage speed of 5 centimeters per minute). Since three minutes elapsed already, six minutes remain until closure of water source 105 . In an alternate calculation, 30 centimeter of depth remain for drainage, at a water drainage speed of 5 centimeters per minute, again yielding the result of 6 minutes remaining for irrigation. 
+ the present invention 
+ may be utilized in order to irrigate a single plant, or a batch or set of plants or crops, or a field or multiple fields of plants or crops. 
+ multiple irrigation devices 110 
+ may be operable connected to a single water source 105 and/or to a single server 131 . 
+ the present invention 
+ may utilize only a single humidity sensor (e.g., moisture sensor 113 ) per crop, in contrast with conventional irrigation systems which may require two or three separate humidity sensors per crop (e.g., a first humidity sensor located at ground level, and one or more humidity sensor located underground, with at least one sensor located at or near the maximum root depth). 
+ a single humidity sensor 
+ e.g., moisture sensor 113 
+ conventional irrigation systems 
+ which may require two or three separate humidity sensors per crop (e.g., a first humidity sensor located at ground level, and one or more humidity sensor located underground, with at least one sensor located at or near the maximum root depth). 
+ the present invention 
+ may eliminate the need to place a humidity sensor at or near the maximum root depth of the crop, in order to determine that moisture reaches the maximum root depth. Furthermore, the present invention may avoid excessive irrigation or wasteful irrigation, since a humidity sensor that is operable at the maximum root depth may sense water as soon as they reach it, such that the water that are still draining above it are wasteful and were not needed to irrigate the root. The present invention thus avoids a situation in which a root-level humidity sensor senses moisture and instructs to stop the irrigation, which is typically too late on the timeline and already reflects wasting of water. 
+ the present invention 
+ need not utilize a humidity sensor located at the maximum root depth, and therefore, the present invention need not replace or relocate such humidity sensor once the roots of the crops grow or deepen further into the ground. 
+ the present invention 
+ may allow crop-owners to determine and modify a precise irrigation depth in agriculture, to calculate an exact or optimal volume of water required for irrigating a particular plant or crop or tree, and to allow closing or shutting of a water source or water stream before it reaches the entire depth or length of the root. This may be achieved by calculating the speed of water spreading or draining in the soil, and closing the water source at a time-point such that already-irrigated water continues spreading or draining towards the depth required for the plant growing, and along the length of its root only, without unnecessary waste. In addition to water saving, this may allow utilization of a single humidity sensor per plant, and may avoid sensor replacement or sensor relocation during various stages of the plant growth life, and reduces or eliminates the need to consult with or to employ agriculture experts. 
+ Some portions of the discussion herein 
+ may relate, for demonstrative purposes, to irrigation of crops of trees or other plants which may be planted in the ground, or may be located at ground level. 
+ the present invention 
+ may further be utilized in conjunction with crops, trees and/or plants which may be located off-ground, on a floor, in a planter, in a greenhouse, in a growing device or a growing container which may be disconnected from the ground or may be unattached to the ground, in a container which may be movable or portable, in single-level or multiple-level platform(s) or soil containers or other containers (e.g., in a greenhouse), or the like. 
+ ground surface 
+ or “ground level” as used herein may thus optionally refer to a top surface or a top level of such planter, level, platform, shelf, soil container, or the like. 
+ reference herein to a “ground” or to “soil” 
+ may optionally include other suitable types of material(s) in which plants or crops may be grown. 
+ FIGS. 2A-2B 
+ The results of some demonstrative experiments are shown in FIGS. 2A-2B . 
+ FIG. 2A 
+ is a schematic graph 201 demonstrating a linear relation between irrigation time (the vertical axis, in minutes) and irrigation drainage depth (the horizontal axis, in centimeters), in accordance with a demonstrative example of the present invention. Measurements were performed on a peat-tuff substrate, with soil water tension of 10 cbar. 
+ FIG. 2B 
+ is a schematic graph 202 demonstrating a linear relation between irrigation time (the vertical axis, in seconds) and irrigation drainage depth (the horizontal axis, in centimeters), in accordance with another demonstrative example of the present invention. Measurements were performed in a water-air environment without substrate; water tension of 10 cbar; clay inserted into water upon commencement of irrigation, causing rapid decrease water tension within seconds. A coefficient R was used to normalize the data. 
+ FIG. 3 
+ is a flow-chart of a method of irrigation, in accordance with the present invention. 
+ the method 
+ may be used, for example, in conjunction with irrigation system 100 of FIGS. 1A-1B , or other suitable systems or devices. 
+ the method 
+ may comprise, for example, determining a maximum root depth of a plant (block 310 ). 
+ the method 
+ may comprise, for example, inserting a moisture sensor into the ground, such that a sensitive tip of the moisture sensor may be located in between the ground surface and the maximum root depth (block 320 ), for example, at depth equivalent to Xctd mentioned in the above equations. 
+ the method 
+ may comprise, for example, calculating a remaining depth, as the depth difference between the maximum root depth and the moisture sensor depth (block 330 ). 
+ the method 
+ may comprise, for example, commencing water irrigation at a first time-point (block 340 ). 
+ the method 
+ may comprise, for example, sensing at a second time-point that irrigation water reached the moisture sensor (block 350 ). 
+ the method 
+ may comprise, for example, calculating the drainage speed of water based on the first time-point, the second time-point, and the depth of the moisture sensor (block 360 ). 
+ the method 
+ may comprise, for example, calculating the remaining irrigation time until irrigation water is expected to reach the maximum root depth, based on the calculated drainage speed of water and the remaining depth (block 370 ). 
+ the method 
+ may comprise, for example, terminating the irrigation (e.g., closing the water source or shutting the water valve) once the calculated remaining irrigation time elapses (block 380 ). 
+ Discussions herein utilizing terms such as, for example, “processing,” “computing,” “calculating,” “determining,” “establishing”, “analyzing”, “checking”, or the like, 
+ may refer to operation(s) and/or process(es) of a computer, a computing platform, a computing system, or other electronic computing device, that manipulate and/or transform data represented as physical (e.g., electronic) quantities within the computer's registers and/or memories into other data similarly represented as physical quantities within the computer's registers and/or memories or other information storage medium that may store instructions to perform operations and/or processes. 
+ Some embodiments of the present invention 
+ may take the form of an entirely hardware embodiment, an entirely software embodiment, or an embodiment including both hardware and software elements. Some embodiments of the present invention may be implemented in software, firmware, resident software, microcode, an application which may be downloaded and/or installed by a user, an application which may run in a browser, a client-side application, a server-side application, a client-server application, or the like. Some embodiments of the present invention may take the form of a computer program product accessible from a computer-usable or computer-readable medium providing program code for use by or in connection with a computer or any instruction execution system. 
+ a computer-usable or computer-readable medium 
+ may be or may include any apparatus that can contain, store, communicate, propagate, or transport the program for use by or in connection with the instruction execution system or device. 
+ Some embodiments of the present invention 
+ may be implemented, for example, using a machine-readable medium or article which may store an instruction or a set of instructions that, if executed by a machine, cause the machine (e.g., a computer or an electronic device) to perform a method and/or operations described herein. 
+ Some embodiments of the present invention 
+ may include or may utilize, for example, a processor, a central processing unit (CPU), a digital signal processor (DSP), a controller, an integrated circuit (IC), a memory unit, a storage unit, input units, output units, wired and/or wireless communication units, an operating system, and other suitable hardware components and/or software modules. 
+ a processor 
+ a central processing unit (CPU), a digital signal processor (DSP), a controller, an integrated circuit (IC), a memory unit, a storage unit, input units, output units, wired and/or wireless communication units, an operating system, and other suitable hardware components and/or software modules. 
+ Landscapes 
+ Life Sciences & Earth Sciences 
+ ( AREA )
+ Soil Sciences 
+ ( AREA )
+ Engineering & Computer Science 
+ ( AREA )
+ Water Supply & Treatment 
+ ( AREA )
+ Environmental Sciences 
+ ( AREA )
+ Management, Administration, Business Operations System, And Electronic Commerce 
+ ( AREA )
+ Cultivation Of Plants 
+ ( AREA )
+ Abstract 
+ An irrigation system for irrigating a plant having a root comprises: a valve to begin irrigation from a water source at a first time-point; a moisture sensor to sense moisture at a second, subsequent, time-point, said moisture sensor being located underground at an insertion depth between ground surface and a maximum depth of the root; a water drainage speed calculator to calculate a water drainage speed based on the first time-point, the second time-point, and the insertion depth of the moisture sensor; and a target drainage time calculator to calculate a remaining time for irrigation, based on the calculated water drainage speed and further based on a difference between the insertion depth and the maximum depth of the root. 
+ Description 
+ PRIOR APPLICATION DATA 
+ The present application claims priority from Israeli patent application 218385, entitled “Smart Irrigation”, filed on Feb. 29, 2012, which is hereby incorporated by reference in its entirety. 
+ FIELD OF THE INVENTION 
+ The present invention relates to the field of irrigation. 
+ BACKGROUND 
+ Irrigation systems may be used for providing water to land or soil. For example, irrigation systems may assist in the growing of agricultural crops, as well as maintenance of landscapes. Irrigation may be particularly important in dry areas, during periods of inadequate rainfall, or in a greenhouse with ground plant growing or floor plant growing (e.g., disconnected from the ground). 
+ Some irrigation systems may operate, manually or automatically, based on pre-defined agricultural guidelines, for example, indicating that a certain type of crop is to be irrigated for a particular period of time at a particular water flow rate. However, the pre-defined agricultural guidelines may not be optimal or adequate, and insufficient irrigation or excessive irrigation may adversely affect the growth of agricultural crops. Furthermore, excessive irrigation may waste water, and may increase the irrigation cost paid by a crop owner. 
+ SUMMARY 
+ The present invention may include, for example, devices, systems, and methods of irrigation. 
+ In accordance with the present invention, for example, an irrigation system for irrigating a plant having a root comprises: a valve to begin irrigation from a water source at a first time-point; a moisture sensor to sense moisture at a second, subsequent, time-point, said moisture sensor being located underground at an insertion depth between ground surface and a maximum depth of the root; a water drainage speed calculator to calculate a water drainage speed based on the first time-point, the second time-point, and the insertion depth of the moisture sensor; and a target drainage time calculator to calculate a remaining time for irrigation, based on the calculated water drainage speed and further based on a difference between the insertion depth and the maximum depth of the root. 
+ In accordance with the present invention, for example, the irrigation system further comprises: an irrigation processor to determine that the remaining time for irrigation elapsed, and to send a signal commanding the valve to stop irrigation from said water source. 
+ In accordance with the present invention, for example, the irrigation system further comprises: a wireless transmitter to transmit to a remote server data corresponding to at least one of: the first time-point, the second time-point, the calculated water drainage speed, and the calculated remaining time for irrigation. 
+ In accordance with the present invention, for example, the irrigation system further comprises: a wireless receiver to receive from a remote server data indicating the maximum depth of the root. 
+ In accordance with the present invention, for example, the irrigation system further comprises: a memory unit to store, in proximity to the plant, a parameter indicating the maximum depth of the root. 
+ In accordance with the present invention, for example, the irrigation system further comprises: a remote server comprising a wireless transmitter to enable a user to remotely modify a value of said parameter stored in said memory unit proximal to the plant. 
+ In accordance with the present invention, for example, the insertion depth is approximately 25 to 40 percent of the maximum root depth. 
+ In accordance with the present invention, for example, the insertion depth is approximately 40 to 60 percent of the maximum root depth. 
+ In accordance with the present invention, for example, the insertion depth of the moisture sensor is unchanged as the root of the plant grows. 
+ In accordance with the present invention, for example, a method for irrigating a plant having a root comprises: beginning irrigation from a water source at a first time-point; sensing moisture at a second, subsequent, time-point, by a moisture sensor being located underground at an insertion depth between ground surface and a maximum depth of the root; calculating a water drainage speed based on the first time-point, the second time-point, and the insertion depth of the moisture sensor; and calculating a remaining time for irrigation, based on the calculated water drainage speed and further based on a difference between the insertion depth and the maximum depth of the root. 
+ In accordance with the present invention, for example, the method further comprises: determining that the remaining time for irrigation elapsed; and sending a signal commanding the valve to stop irrigation from said water source. 
+ In accordance with the present invention, for example, the method further comprises: wirelessly transmitting to a remote server data corresponding to at least one of: the first time-point, the second time-point, the calculated water drainage speed, and the calculated remaining time for irrigation. 
+ In accordance with the present invention, for example, the method further comprises: receiving from a remote server data indicating the maximum depth of the root. 
+ In accordance with the present invention, for example, the method further comprises: storing in proximity to the plant, a parameter indicating the maximum depth of the root. 
+ In accordance with the present invention, for example, the method further comprises: remotely modifying a value of said parameter stored in said memory unit proximal to the plant. 
+ In accordance with the present invention, for example, the insertion depth is approximately 25 to 40 percent of the maximum root depth. 
+ In accordance with the present invention, for example, the insertion depth is approximately 40 to 60 percent of the maximum root depth. 
+ In accordance with the present invention, for example, the method further comprises: maintaining the insertion depth of the moisture sensor unchanged as the root of the plant grows. 
+ The present invention may provide other and/or additional benefits or advantages. 
+ BRIEF DESCRIPTION OF THE DRAWINGS 
+ For simplicity and clarity of illustration, elements shown in the figures have not necessarily been drawn to scale. For example, the dimensions of some of the elements may be exaggerated relative to other elements for clarity of presentation. Furthermore, reference numerals may be repeated among the figures to indicate corresponding or analogous elements. The figures are listed below. 
+ FIG. 1A is another illustration of some components of an irrigation system, in accordance with the present invention; 
+ FIG. 1B is a schematic block diagram illustration of the irrigation system, in accordance with the present invention; 
+ FIGS. 2A-2B are schematic graphs demonstrating a linear relation between irrigation time and irrigation drainage depth, in accordance with demonstrative examples of the present invention; and 
+ FIG. 3 is a flow-chart of a method of irrigation, in accordance with the present invention. 
+ DETAILED DESCRIPTION OF THE PRESENT INVENTION 
+ In the following detailed description, numerous specific details are set forth in order to provide a thorough understanding of some embodiments. However, it will be understood by persons of ordinary skill in the art that some embodiments may be practiced without these specific details. In other instances, well-known methods, procedures, components, units and/or circuits have not been described in detail so as not to obscure the discussion. 
+ In accordance with the present invention, an irrigation system may determine a suitable irrigation depth for a particular crop being irrigated. The irrigation system may automatically adjust the amount of water being provided and/or the period(s) of time in which irrigation is performed, to ensure that water reaches the suitable irrigation depth in its entirety, and that water is not wasted by irrigating the soil located beneath the suitable irrigation depth. This may result in saving in the amount of saving irrigation water needed, may eliminate or reduce damage to crops due to excessive irrigation, may assist in determining the speed of plant growth, and may allow automation of the irrigation process and reduction in manpower involved in irrigation. 
+ Reference is made to FIG. 1B , which is a schematic block diagram illustration of a system 100 in accordance with the present invention; as well as to FIG. 1A , which further demonstrates some of the components of system 100 . System 100 may comprise, for example, an irrigation device 110 connected to a water source 105 . System 100 may further comprise, optionally, a server 131 , a database 132 , and one or more computing device(s) 133 . System 100 may be used, for example, to efficiently irrigate a crop, plants, a tree, or other suitable plant, which may typically be planted in soil and may typically have one or more roots beneath ground level (or relative to one or more levels, e.g., in a greenhouse having multi-level platforms or shelves or growing containers or planters). For example, the demonstrative illustration of FIG. 1A depicts a tree 171 having a root 172 , and further indicates a deepest point 173 of root 172 . 
+ Water source 105 may be or may comprise, for example, a water pipe, a water tube, a faucet, a hose, a well, a pool, or other suitable artificial or natural source of water or body of water. Optionally, water source 105 may comprise, or may be operable associated with or connected to, a pipe 175 able to deliver or transfer irrigation water from water source 105 to a target location or target area. 
+ Irrigation device 110 may comprise, for example, a valve 111 , a valve controller 112 , a moisture sensor 113 , a real-time clock (RTC) 115 , an irrigation processor 116 , a memory unit 117 , a parameters table 118 (e.g., stored in memory unit 117 ), a transceiver 120 , a water inlet 123 , a water passage 122 , a water outlet 121 , and/or other suitable hardware components or software modules. 
+ Valve 111 may comprise a valve or shutter able to stop and start the flow of water incoming through water inlet 123 from water source 105 and outgoing through water passage 122 and out of water outlet 121 . Valve controller 112 may control the operation of valve 111 , for example, to cause valve 111 to be entirely open, to be entirely closed, or to be partially open and partially closed. 
+ Moisture sensor 113 may comprise a unit able to measure or determine soil humidity, soil moisture, soil moisture tension, or matric water potential. Moisture sensor 113 may be implemented as a stand-alone sensor or an independent sensor, or may be implemented as part of another sensor or unit, for example, vacuum sensor or pressure sensor as a part of a soil tensiometer. For example, moisture sensor 113 may comprise a porcelain tensiometer, an electronic tensiometer, a tensiometer probe, or other suitable type of tensiometer. Optionally, moisture sensor 113 may have a particular region or area or tip which may be sensitive to humidity or moisture, for example, a sensitive tip 144 . 
+ Moisture sensor 113 may be located beneath ground level (or, beneath a surface level or an upper level in a platform or shelf of container or planter), for example, at a pre-defined depth D. For example, moisture sensor 113 may be entirely under the ground; or alternatively, at least a sensing portion or sensing region of moisture sensor 113 (e.g., particularly sensitive tip 144 ) may be under the ground, at the pre-defined insertion depth D. The value of insertion depth D may be determined manually by the user or automatically by irrigation processor 116 , based on the particular type of crop to be irrigated, and/or based on other irrigation-related parameters (e.g., type of soil; time of year). In some demonstrative embodiments of the invention, for example, the value of insertion depth D may be smaller (e.g., approximately 25 or 33 or 50 or 66 percent smaller) relative to the typical maximum depth of roots (Droot) of the particular crop to be irrigated. In some demonstrative embodiments, the value of insertion depth D may be approximately 25 to 40 percent, or approximately 40 to 60 percent, of the maximum depth of roots Droot. It is noted that the value of Droot may be, for example, the actual or known value of the maximum depth of the root, or an estimated value (e.g., based on agricultural tables or databases which indicate a typical maximum root depth for various types of crops or plants). 
+ Memory unit 117 may comprise, for example, a Flash memory unit, or other suitable short-term or long-term memory unit able to store data. Memory unit 117 may store parameters table 118 , storing parameters used in the operation of irrigation device 110 , or storing a log of parameters or measurements or calculated values. 
+ At a first time-point T 1 , valve controller 112 may cause valve 111 to open and allow water to flow from water source 105 and out of water outlet 121 . At the first time-point T 1 , irrigation processor 116 may receive a signal from valve controller 112 , may read the current value of real time clock 115 , and may store or record that value as the first time-point T 1 in parameters table 118 . 
+ Following the opening of valve 111 , water may flow downward from water outlet 121 , and may gradually drain downward. At a second, subsequent, time-point T 2 , the draining water may reach moisture sensor 113 , which may sense moisture. Moisture sensor 113 may send a signal to irrigation processor 116 , indicating that moisture sensor 113 sensed moisture. Irrigation processor 116 may read the current value of real time clock 115 , and may store or record that value as the second time-point T 2 in parameters table 118 . 
+ Irrigation processor 116 may calculate the time difference between the first time-point T 1 and the second time-point T 2 , thereby producing a value dT indicating the time period that it took the water to drain the pre-defined depth D. 
+ Irrigation processor 116 may comprise one or more modules able to further process the data that was collected and/or previously-stored in parameters table 118 . For example, irrigation processor 116 may comprise a water drainage speed calculator 119 , and a target drainage time calculator 125 . 
+ Water drainage speed calculator 119 may divide the pre-defined depth D by the time period dT, thereby determining a value of water drainage speed V, which may be stored in parameters table 118 . 
+ Target drainage time calculator 125 may multiply the value of water drainage speed V, by the maximum depth Droot of the roots of the particular crops being irrigated, thereby producing a value indicating the total time required (Ttotal), measured from the first time-point T 1 , until the draining water reaches the maximum depth Droot. Alternatively, target drainage time calculator 125 may determine the depth difference between Droot and D, to determine the remaining depth Dremain for drainage; and may multiply that depth difference Dremain by the water drainage speed V, thereby producing a time value (Tremain) indicating the remaining time until the draining water reaches the maximum depth Droot. 
+ Irrigation processor 116 may utilize real time clock 115 to monitor passing time, and to determine that the remaining time period Tremain elapses. Once the time period Tremain elapses, irrigation processor 116 may send a signal to valve controller 112 , and valve controller 112 may cause valve 111 to shut, thereby stopping further irrigation of water. 
+ Optionally, irrigation processor 116 may communicate with one or more remote units, for example, via transceiver 118 which may include a wireless transmitter or a wired transceiver. For example, irrigation processor 116 may communicate with server 131 , and may transmit to server 131 the collected data and/or the calculated data. Server 131 may store the data in database 132 , and may serve generate reports and/or statistics which may be served to a user (e.g., administrator, crop owner, agronomist) utilizing computing device(s) 133 (e.g., a desktop computer, a laptop computer, a tablet, a smartphone). Optionally, server 131 may generate and present data in a format which may be accessible to users of computer device(s) 133 over the Internet and/or via a Web browser. 
+ Optionally, memory unit 117 and/or database 132 may store moisture level values, which may be sensed by moisture sensor 113 , for example, substantially continuously or at pre-defined time intervals (e.g., every five seconds, every ten seconds, every thirty seconds). The moisture data may be taken into account by irrigation processor 116 in order to determine that additional irrigation is required and to initiate opening of valve 111 through valve controller 112 . 
+ Server 131 and processor 116 may be capable of two-way communication, such that, for example, irrigation processor 116 may report data to server 131 , and server 131 may optionally provide data and/or commands to irrigation processor 116 . For example, server 131 may be utilized by a user, either directly or through computing device 133 , in order to set or modify the value of maximum root depth Droot, or in order to provide commands that manually override the decisions made by irrigation processor 116 (for example, the crop owner may decide to stop irrigation, based on weather prediction of rainfall), or in order to allow other modifications of irrigation intensity (e.g., in order to increase or decrease growth-time of plants or fruit or flowers; in order to control fruit size; in order to make fruit more oily or more diluted). 
+ Optionally, irrigation processor 116 may utilize the following equation for calculating the speed Virr of irrigation water spreading or draining within the soil:
+ Virr=Xctd/Tx   (1)
+where Xctd may indicate the depth of the sensitive part of moisture sensor 113 (e.g., sensing tip 144 ) in the soil; and Tx may indicate the time during which the water drained and arrived at the sensitive part of moisture sensor 113 .
+ Accordingly, the time Tclose that should remain until closing of water source 105 may be calculated by irrigation processor 116 by using the following equation:
+ T close=( S depth− Xctd )/ Virr   (2)
+where Sdepth is the depth of the desired irrigation (e.g., may be equivalent or similar to the maximum depth of the root of the plant).
+ In a demonstrative example, the maximum root depth may be 45 centimeters; and moisture sensor 113 may be placed in ground such that sensitive tip 144 may be placed at a depth of 15 centimeters. Irrigation may commence, and after three minutes, moisture sensor 113 may sense the draining water. Accordingly, irrigation processor 116 may divide 15 centimeters by 3 minutes, to determine that the drainage speed of water is 5 centimeters per minute. Since the maximum root depth, in this demonstrative example, is 45 centimeters, the total irrigation time may be calculated to be 9 minutes (by dividing the depth of 45 centimeters, by the drainage speed of 5 centimeters per minute). Since three minutes elapsed already, six minutes remain until closure of water source 105 . In an alternate calculation, 30 centimeter of depth remain for drainage, at a water drainage speed of 5 centimeters per minute, again yielding the result of 6 minutes remaining for irrigation. 
+ The present invention may be utilized in order to irrigate a single plant, or a batch or set of plants or crops, or a field or multiple fields of plants or crops. Optionally, multiple irrigation devices 110 may be operable connected to a single water source 105 and/or to a single server 131 . 
+ The present invention may utilize only a single humidity sensor (e.g., moisture sensor 113 ) per crop, in contrast with conventional irrigation systems which may require two or three separate humidity sensors per crop (e.g., a first humidity sensor located at ground level, and one or more humidity sensor located underground, with at least one sensor located at or near the maximum root depth). 
+ The present invention may eliminate the need to place a humidity sensor at or near the maximum root depth of the crop, in order to determine that moisture reaches the maximum root depth. Furthermore, the present invention may avoid excessive irrigation or wasteful irrigation, since a humidity sensor that is operable at the maximum root depth may sense water as soon as they reach it, such that the water that are still draining above it are wasteful and were not needed to irrigate the root. The present invention thus avoids a situation in which a root-level humidity sensor senses moisture and instructs to stop the irrigation, which is typically too late on the timeline and already reflects wasting of water. 
+ The present invention need not utilize a humidity sensor located at the maximum root depth, and therefore, the present invention need not replace or relocate such humidity sensor once the roots of the crops grow or deepen further into the ground. 
+ The present invention may allow crop-owners to determine and modify a precise irrigation depth in agriculture, to calculate an exact or optimal volume of water required for irrigating a particular plant or crop or tree, and to allow closing or shutting of a water source or water stream before it reaches the entire depth or length of the root. This may be achieved by calculating the speed of water spreading or draining in the soil, and closing the water source at a time-point such that already-irrigated water continues spreading or draining towards the depth required for the plant growing, and along the length of its root only, without unnecessary waste. In addition to water saving, this may allow utilization of a single humidity sensor per plant, and may avoid sensor replacement or sensor relocation during various stages of the plant growth life, and reduces or eliminates the need to consult with or to employ agriculture experts. 
+ Some portions of the discussion herein may relate, for demonstrative purposes, to irrigation of crops of trees or other plants which may be planted in the ground, or may be located at ground level. However, the present invention may further be utilized in conjunction with crops, trees and/or plants which may be located off-ground, on a floor, in a planter, in a greenhouse, in a growing device or a growing container which may be disconnected from the ground or may be unattached to the ground, in a container which may be movable or portable, in single-level or multiple-level platform(s) or soil containers or other containers (e.g., in a greenhouse), or the like. The term “ground surface” or “ground level” as used herein may thus optionally refer to a top surface or a top level of such planter, level, platform, shelf, soil container, or the like. Similarly, reference herein to a “ground” or to “soil” may optionally include other suitable types of material(s) in which plants or crops may be grown. 
+ Applicants have conducted experiments demonstrating the generally-linear progress of irrigation drainage depth, as a function of the time that elapses since irrigation begins. The results of some demonstrative experiments are shown in FIGS. 2A-2B . 
+ Reference is made to FIG. 2A , which is a schematic graph 201 demonstrating a linear relation between irrigation time (the vertical axis, in minutes) and irrigation drainage depth (the horizontal axis, in centimeters), in accordance with a demonstrative example of the present invention. Measurements were performed on a peat-tuff substrate, with soil water tension of 10 cbar. 
+ Reference is further made to FIG. 2B , which is a schematic graph 202 demonstrating a linear relation between irrigation time (the vertical axis, in seconds) and irrigation drainage depth (the horizontal axis, in centimeters), in accordance with another demonstrative example of the present invention. Measurements were performed in a water-air environment without substrate; water tension of 10 cbar; clay inserted into water upon commencement of irrigation, causing rapid decrease water tension within seconds. A coefficient R was used to normalize the data. 
+ Reference is made to FIG. 3 , which is a flow-chart of a method of irrigation, in accordance with the present invention. The method may be used, for example, in conjunction with irrigation system 100 of FIGS. 1A-1B , or other suitable systems or devices. 
+ The method may comprise, for example, determining a maximum root depth of a plant (block 310 ). 
+ The method may comprise, for example, inserting a moisture sensor into the ground, such that a sensitive tip of the moisture sensor may be located in between the ground surface and the maximum root depth (block 320 ), for example, at depth equivalent to Xctd mentioned in the above equations. 
+ The method may comprise, for example, calculating a remaining depth, as the depth difference between the maximum root depth and the moisture sensor depth (block 330 ). 
+ The method may comprise, for example, commencing water irrigation at a first time-point (block 340 ). 
+ The method may comprise, for example, sensing at a second time-point that irrigation water reached the moisture sensor (block 350 ). 
+ The method may comprise, for example, calculating the drainage speed of water based on the first time-point, the second time-point, and the depth of the moisture sensor (block 360 ). 
+ The method may comprise, for example, calculating the remaining irrigation time until irrigation water is expected to reach the maximum root depth, based on the calculated drainage speed of water and the remaining depth (block 370 ). 
+ The method may comprise, for example, terminating the irrigation (e.g., closing the water source or shutting the water valve) once the calculated remaining irrigation time elapses (block 380 ). 
+ Other suitable operations may be used in accordance with the present invention. 
+ Discussions herein utilizing terms such as, for example, “processing,” “computing,” “calculating,” “determining,” “establishing”, “analyzing”, “checking”, or the like, may refer to operation(s) and/or process(es) of a computer, a computing platform, a computing system, or other electronic computing device, that manipulate and/or transform data represented as physical (e.g., electronic) quantities within the computer's registers and/or memories into other data similarly represented as physical quantities within the computer's registers and/or memories or other information storage medium that may store instructions to perform operations and/or processes. 
+ Some embodiments of the present invention may take the form of an entirely hardware embodiment, an entirely software embodiment, or an embodiment including both hardware and software elements. Some embodiments of the present invention may be implemented in software, firmware, resident software, microcode, an application which may be downloaded and/or installed by a user, an application which may run in a browser, a client-side application, a server-side application, a client-server application, or the like. Some embodiments of the present invention may take the form of a computer program product accessible from a computer-usable or computer-readable medium providing program code for use by or in connection with a computer or any instruction execution system. For example, a computer-usable or computer-readable medium may be or may include any apparatus that can contain, store, communicate, propagate, or transport the program for use by or in connection with the instruction execution system or device. Some embodiments of the present invention may be implemented, for example, using a machine-readable medium or article which may store an instruction or a set of instructions that, if executed by a machine, cause the machine (e.g., a computer or an electronic device) to perform a method and/or operations described herein. 
+ Some embodiments of the present invention may include or may utilize, for example, a processor, a central processing unit (CPU), a digital signal processor (DSP), a controller, an integrated circuit (IC), a memory unit, a storage unit, input units, output units, wired and/or wireless communication units, an operating system, and other suitable hardware components and/or software modules. 
+ Functions, operations, components and/or features described herein with reference to one or more embodiments of the present invention, may be combined with, or may be utilized in combination with, one or more other functions, operations, components and/or features described herein with reference to one or more other embodiments of the present invention. 
+ While certain features of the present invention have been illustrated and described herein, many modifications, substitutions, changes, and equivalents may occur to those skilled in the art. Accordingly, the claims are intended to cover all such modifications, substitutions, changes, and equivalents. 
+ Claims ( 16 ) 
+ What is claimed is: 
+ 1. An irrigation system for irrigating a plant having a root, the irrigation system comprising:
+ a valve to begin irrigation from a water source at a first time-point; 
+ a single moisture sensor to sense moisture at a second, subsequent, time-point, said moisture sensor being located underground at an insertion depth between ground surface and a maximum depth; 
+ a water drainage speed calculator to calculate a water drainage speed based on the first time-point, the second time-point, and the insertion depth of the moisture sensor; and 
+ a target drainage time calculator to calculate a remaining time for irrigation, based on the calculated water drainage speed and further based on a difference between the insertion depth and the maximum depth. 
+ 2. The irrigation system of claim 1 , further comprising:
+ an irrigation processor to determine that the remaining time for irrigation elapsed, and to send a signal commanding the valve to stop irrigation from said water source. 
+ 3. The irrigation system of claim 2 , further comprising:
+ a wireless transmitter to transmit to a remote server data corresponding to at least one of: the first time-point, the second time-point, the calculated water drainage speed, and the calculated remaining time for irrigation. 
+ 4. The irrigation system of claim 1 , further comprising:
+ a memory unit to store, in proximity to the plant, a parameter indicating the maximum depth. 
+ 5. The irrigation system of claim 4 , further comprising:
+ a remote server comprising a wireless transmitter to enable a user to remotely modify a value of said parameter stored in said memory unit proximal to the plant. 
+ 6. The irrigation system of claim 1 , wherein the insertion depth is approximately 25 to 40 percent of the maximum root depth. 
+ 7. The irrigation system of claim 1 , wherein the insertion depth is approximately 40 to 60 percent of the maximum root depth. 
+ 8. The irrigation system of claim 1 , wherein the insertion depth of the moisture sensor is unchanged as the root of the plant grows. 
+ 9. A method for irrigating a plant having a root, the method comprising:
+ beginning irrigation from a water source at a first time-point; 
+ sensing moisture at a second, subsequent, time-point, by a single moisture sensor being located underground at an insertion depth between ground surface and a maximum depth of the root; 
+ calculating a water drainage speed based on the first time-point, the second time-point, and the insertion depth of the moisture sensor; and 
+ calculating a remaining time for irrigation, based on the calculated water drainage speed and further based on a difference between the insertion depth and the maximum depth of the root. 
+ 10. The method of claim 9 , further comprising:
+ determining that the remaining time for irrigation elapsed; and 
+ sending a signal commanding the valve to stop irrigation from said water source. 
+ 11. The method of claim 10 , further comprising:
+ wirelessly transmitting to a remote server data corresponding to at least one of: the first time-point, the second time-point, the calculated water drainage speed, and the calculated remaining time for irrigation. 
+ 12. The method of claim 9 , further comprising:
+ storing in proximity to the plant, a parameter indicating the maximum depth. 
+ 13. The method of claim 12 , further comprising: remotely modifying a value of said parameter stored in said memory unit proximal to the plant. 
+ 14. The method of claim 9 , wherein the insertion depth is approximately 25 to 40 percent of the maximum root depth. 
+ 15. The method of claim 9 , wherein the insertion depth is approximately 40 to 60 percent of the maximum root depth. 
+ 16. The method of claim 9 , wherein the insertion depth of the moisture sensor is unchanged as the root of the plant grows. 
+ US13/778,194 
+ 2012-02-29 
+ 2013-02-27 
+ Device, system, and method of irrigation 
+ Expired - Fee Related 
+ US8961068B2 
+ ( en )
+ Applications Claiming Priority (2) 
+ Application Number 
+ Priority Date 
+ Filing Date 
+ Title 
+ IL21838512A 
+ IL218385B 
+ ( en )
+ 2012-02-29 
+ 2012-02-29 
+ Smart irrigation 
+ IL218385 
+ 2012-02-29 
+ Publications (2) 
+ Publication Number 
+ Publication Date 
+ US20130223934A1 
+ US20130223934A1
+ ( en )
+ 2013-08-29 
+ US8961068B2 
+ true 
+ US8961068B2
+ ( en )
+ 2015-02-24 
+ Family 
+ ID=46145237 
+ Family Applications (1) 
+ Application Number 
+ Title 
+ Priority Date 
+ Filing Date 
+ US13/778,194 
+ Expired - Fee Related 
+ US8961068B2 
+ ( en )
+ 2012-02-29 
+ 2013-02-27 
+ Device, system, and method of irrigation 
+ Country Status (5) 
+ Country 
+ Link 
+ US 
+ ( 1 )
+ US8961068B2 
+ ( en )
+ EP 
+ ( 1 )
+ EP2819504B1 
+ ( en )
+ ES 
+ ( 1 )
+ ES2661514T3 
+ ( en )
+ IL 
+ ( 1 )
+ IL218385B 
+ ( en )
+ WO 
+ ( 1 )
+ WO2013128384A1 
+ ( en )
+ Cited By (1) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ US20140347474A1 
+ ( en )
+ * 
+ 2013-05-22 
+ 2014-11-27 
+ Claas Agrosystems Kgaa Mbh & Co Kg 
+ Device and method for monitoring the cutting edge sharpness 
+ Families Citing this family (9) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ US10015938B1 
+ ( en )
+ * 
+ 2012-03-20 
+ 2018-07-10 
+ Valmont Industries, Inc. 
+ Soil management system 
+ CN104751011B 
+ ( en )
+ * 
+ 2015-04-23 
+ 2016-02-17 
+ 中国水利水电科学研究院 
+ A Calculation Method of Critical Burial Depth for Groundwater Recharge Vegetation
+ US10531617B2 
+ ( en )
+ 2017-02-21 
+ 2020-01-14 
+ International Business Machines Corporation 
+ Cognitive watering system with plant-initiated triggering of watering 
+ AU2019242631B2 
+ ( en )
+ * 
+ 2018-03-28 
+ 2025-04-10 
+ Valmont Industries, Inc. 
+ System, method and apparatus for spraying the leaf and root areas of plants 
+ AU2019243828B2 
+ ( en )
+ 2018-03-29 
+ 2025-04-10 
+ Valmont Industries, Inc. 
+ Irrigation system for applying applicant having a microbe concentration to enhance crop production 
+ CN108935028B 
+ ( en )
+ * 
+ 2018-06-27 
+ 2020-07-03 
+ 合肥草木蕃景生态科技有限公司 
+ Tree watering device and control method thereof 
+ CN111833211A 
+ ( en )
+ * 
+ 2020-07-29 
+ 2020-10-27 
+ 江苏天水灌排设备有限公司 
+ An intelligent control method for irrigation and drainage equipment
+ CN114246108B 
+ ( en )
+ * 
+ 2021-12-23 
+ 2023-07-14 
+ 浙江寿仙谷医药股份有限公司 
+ Intelligent agricultural intelligent pressure-stabilizing sprinkling irrigation system and method 
+ FR3157065A1 
+ ( en )
+ * 
+ 2023-12-21 
+ 2025-06-27 
+ Commissariat A L'energie Atomique Et Aux Energies Alternatives 
+ SYSTEM AND METHOD FOR CONTROLLING AN IRRIGATION INSTALLATION ON AN AGRICULTURAL FARM
+ Citations (16) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ US3407608A 
+ ( en )
+ * 
+ 1965-10-21 
+ 1968-10-29 
+ Whitehead Brownloe 
+ Subsurface irrigation system 
+ US3874590A 
+ ( en )
+ * 
+ 1973-10-19 
+ 1975-04-01 
+ William H Gibson 
+ Moisture responsive apparatus for controlling moisture content of soil 
+ USRE31023E 
+ ( en )
+ * 
+ 1975-04-11 
+ 1982-09-07 
+ Advanced Decision Handling, Inc. 
+ Highly automated agricultural production system 
+ SU1509734A1 
+ ( en )
+ 1987-07-20 
+ 1989-09-23 
+ Ставропольский Научно-Исследовательский Институт Гидротехники И Мелиорации 
+ Method of determining the soaking ability of soils 
+ US4930934A 
+ ( en )
+ * 
+ 1988-05-11 
+ 1990-06-05 
+ Adkins Donald E 
+ Surface, subsurface, continuous feed moisture maintenance system apparatus and method 
+ US4934096A 
+ ( en )
+ * 
+ 1987-09-24 
+ 1990-06-19 
+ Innocom (Electro) B.V. 
+ Apparatus for automatically watering plants 
+ US5350251A 
+ ( en )
+ * 
+ 1992-04-08 
+ 1994-09-27 
+ Purdue Research Foundation 
+ Planted surface moisture control system 
+ US5667336A 
+ ( en )
+ * 
+ 1994-06-20 
+ 1997-09-16 
+ Technion Research And Development Foundation 
+ Furrow irrigation 
+ US5749521A 
+ ( en )
+ * 
+ 1996-05-22 
+ 1998-05-12 
+ Lore Parker 
+ Moisture sensing electronic irrigation control 
+ WO2005006836A2 
+ ( en )
+ 2003-07-23 
+ 2005-01-27 
+ C.I.T. Controlled Irrigation Technologies Ltd. 
+ Adaptive irrigation of vegetation 
+ US20070220808A1 
+ ( en )
+ * 
+ 2004-12-20 
+ 2007-09-27 
+ Kaprielian Craig L 
+ Computer Controlled Fertigation System and Method 
+ US7358626B2 
+ ( en )
+ * 
+ 2004-05-26 
+ 2008-04-15 
+ The Toro Company 
+ Two-wire power and communications for irrigation systems 
+ US7404899B2 
+ ( en )
+ * 
+ 2001-12-13 
+ 2008-07-29 
+ Turf Sentry, Inc. 
+ Water treatment system 
+ US7413380B2 
+ ( en )
+ * 
+ 2006-04-10 
+ 2008-08-19 
+ Subair Systems, Llc 
+ Golf course turf conditioning control system and method 
+ US20100212409A1 
+ ( en )
+ * 
+ 2009-02-25 
+ 2010-08-26 
+ Ramanathan Sri Ranjan 
+ Plant-Controlled Atmometer for Measuring Crop Evapotranspiration 
+ US8219254B2 
+ ( en )
+ * 
+ 2006-11-20 
+ 2012-07-10 
+ Water Optimizer LLC. 
+ Adaptive control for irrigation system 
+ Family Cites Families (3) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ NZ562316A 
+ ( en )
+ * 
+ 2007-10-09 
+ 2009-03-31 
+ New Zealand Inst For Crop And 
+ Method and system of managing performance of a tuber crop 
+ WO2010117944A1 
+ ( en )
+ * 
+ 2009-04-06 
+ 2010-10-14 
+ Martin Tommy J 
+ Remote analysis and correction of crop condition 
+ AU2010100234A4 
+ ( en )
+ * 
+ 2010-03-17 
+ 2010-05-06 
+ Wilson, Matthew John Mr 
+ Esitech IMS 
+ 2012 
+ 2012-02-29 
+ IL 
+ IL21838512A 
+ patent/IL218385B/en 
+ active 
+ IP Right Grant 
+ 2013 
+ 2013-02-27 
+ ES 
+ ES13754197.5T 
+ patent/ES2661514T3/en 
+ active 
+ Active 
+ 2013-02-27 
+ WO 
+ PCT/IB2013/051566 
+ patent/WO2013128384A1/en 
+ not_active 
+ Ceased 
+ 2013-02-27 
+ EP 
+ EP13754197.5A 
+ patent/EP2819504B1/en 
+ not_active 
+ Not-in-force 
+ 2013-02-27 
+ US 
+ US13/778,194 
+ patent/US8961068B2/en 
+ not_active 
+ Expired - Fee Related 
+ Patent Citations (16) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ US3407608A 
+ ( en )
+ * 
+ 1965-10-21 
+ 1968-10-29 
+ Whitehead Brownloe 
+ Subsurface irrigation system 
+ US3874590A 
+ ( en )
+ * 
+ 1973-10-19 
+ 1975-04-01 
+ William H Gibson 
+ Moisture responsive apparatus for controlling moisture content of soil 
+ USRE31023E 
+ ( en )
+ * 
+ 1975-04-11 
+ 1982-09-07 
+ Advanced Decision Handling, Inc. 
+ Highly automated agricultural production system 
+ SU1509734A1 
+ ( en )
+ 1987-07-20 
+ 1989-09-23 
+ Ставропольский Научно-Исследовательский Институт Гидротехники И Мелиорации 
+ Method of determining the soaking ability of soils 
+ US4934096A 
+ ( en )
+ * 
+ 1987-09-24 
+ 1990-06-19 
+ Innocom (Electro) B.V. 
+ Apparatus for automatically watering plants 
+ US4930934A 
+ ( en )
+ * 
+ 1988-05-11 
+ 1990-06-05 
+ Adkins Donald E 
+ Surface, subsurface, continuous feed moisture maintenance system apparatus and method 
+ US5350251A 
+ ( en )
+ * 
+ 1992-04-08 
+ 1994-09-27 
+ Purdue Research Foundation 
+ Planted surface moisture control system 
+ US5667336A 
+ ( en )
+ * 
+ 1994-06-20 
+ 1997-09-16 
+ Technion Research And Development Foundation 
+ Furrow irrigation 
+ US5749521A 
+ ( en )
+ * 
+ 1996-05-22 
+ 1998-05-12 
+ Lore Parker 
+ Moisture sensing electronic irrigation control 
+ US7404899B2 
+ ( en )
+ * 
+ 2001-12-13 
+ 2008-07-29 
+ Turf Sentry, Inc. 
+ Water treatment system 
+ WO2005006836A2 
+ ( en )
+ 2003-07-23 
+ 2005-01-27 
+ C.I.T. Controlled Irrigation Technologies Ltd. 
+ Adaptive irrigation of vegetation 
+ US7358626B2 
+ ( en )
+ * 
+ 2004-05-26 
+ 2008-04-15 
+ The Toro Company 
+ Two-wire power and communications for irrigation systems 
+ US20070220808A1 
+ ( en )
+ * 
+ 2004-12-20 
+ 2007-09-27 
+ Kaprielian Craig L 
+ Computer Controlled Fertigation System and Method 
+ US7413380B2 
+ ( en )
+ * 
+ 2006-04-10 
+ 2008-08-19 
+ Subair Systems, Llc 
+ Golf course turf conditioning control system and method 
+ US8219254B2 
+ ( en )
+ * 
+ 2006-11-20 
+ 2012-07-10 
+ Water Optimizer LLC. 
+ Adaptive control for irrigation system 
+ US20100212409A1 
+ ( en )
+ * 
+ 2009-02-25 
+ 2010-08-26 
+ Ramanathan Sri Ranjan 
+ Plant-Controlled Atmometer for Measuring Crop Evapotranspiration 
+ Non-Patent Citations (2) 
+ * Cited by examiner, † Cited by third party 
+ Title 
+ International Search Report for corresponding PCT application PCT/IB2013/051566 mailed on Aug. 8, 2013. 
+ Machine translation of Abstract of SU 1509734 generated online on Aug. 22, 2013. 
+ Cited By (1) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ US20140347474A1 
+ ( en )
+ * 
+ 2013-05-22 
+ 2014-11-27 
+ Claas Agrosystems Kgaa Mbh & Co Kg 
+ Device and method for monitoring the cutting edge sharpness 
+ Also Published As 
+ Publication number 
+ Publication date 
+ EP2819504A1 
+ ( en )
+ 2015-01-07 
+ EP2819504A4 
+ ( en )
+ 2015-10-28 
+ IL218385B 
+ ( en )
+ 2019-11-28 
+ EP2819504B1 
+ ( en )
+ 2017-12-20 
+ WO2013128384A4 
+ ( en )
+ 2013-12-12 
+ ES2661514T3 
+ ( en )
+ 2018-04-02 
+ WO2013128384A1 
+ ( en )
+ 2013-09-06 
+ IL218385A0 
+ ( en )
+ 2012-04-30 
+ US20130223934A1 
+ ( en )
+ 2013-08-29 
+ Similar Documents 
+ Publication 
+ Publication Date 
+ Title 
+ EP2819504B1 
+ ( en )
+ 2017-12-20 
+ Device, system, and method of irrigation 
+ CN105941101B 
+ ( en )
+ 2022-05-31 
+ Intelligent irrigation and fertilization control method, device and system 
+ CN208999817U 
+ ( en )
+ 2019-06-18 
+ A kind of fertilising based on Internet of Things and irrigation integral control system 
+ RU2735555C2 
+ ( en )
+ 2020-11-03 
+ Plant growth control system 
+ US10188051B2 
+ ( en )
+ 2019-01-29 
+ Method for controlling irrigation 
+ JP5354500B2 
+ ( en )
+ 2013-11-27 
+ Irrigation equipment
+ CN103918528A 
+ ( en )
+ 2014-07-16 
+ Method and device for intelligently controlling precision irrigation and fertilization 
+ US10412907B2 
+ ( en )
+ 2019-09-17 
+ Deficit-irrigation control system, based on dynamic organization of multi-agents systems and wireless or wired network 
+ JP6306384B2 
+ ( en )
+ 2018-04-04 
+ Method for controlling irrigation supply in plant cultivation and controller thereof
+ CN105557475A 
+ ( en )
+ 2016-05-11 
+ Multi-opening intelligent irrigation system and method for rice fields 
+ CN118799102B 
+ ( en )
+ 2025-09-05 
+ Crop irrigation method, system, electronic equipment and medium
+ CN109374468B 
+ ( en )
+ 2022-02-11 
+ Greenhouse water surface evaporation amount measuring device, irrigation system and method 
+ CN204837366U 
+ ( en )
+ 2015-12-09 
+ Hillside orchard irrigation system 
+ CN105325266A 
+ ( en )
+ 2016-02-17 
+ Automatic watering device 
+ KR102785196B1 
+ ( en )
+ 2025-03-21 
+ Irrigation method and device based on solar sensor, rain sensor and temperature sensor 
+ CN116508464A 
+ ( en )
+ 2023-08-01 
+ Water and fertilizer irrigation adjustment method and device 
+ CN108235887A 
+ ( en )
+ 2018-07-03 
+ A kind of method of greenhouse Zhong Kuan ridges overlay film furrow irrigation 
+ CN118844318A 
+ ( en )
+ 2024-10-29 
+ An intelligent irrigation remote control system and method based on Internet of Things application
+ Duangpakdee et al. 
+ 2024 
+ Vertical smart farm system for off-season crop production using hydroponics and iot-based environmental control 
+ JP6757025B1 
+ ( en )
+ 2020-09-16 
+ Irrigation fertilization system and citrus cultivation method using it
+ JP2022046994A 
+ ( en )
+ 2022-03-24 
+ Greening management method and greening management device 
+ CN103999745A 
+ ( en )
+ 2014-08-27 
+ Automatic plant watering device 
+ Jusman et al. 
+ 2024 
+ Implementation of an IoT-Based Automated Watering System for Melon Cultivation 
+ Nikolaou et al. 
+ 2021 
+ Advances in irrigation/fertigation techniques in greenhouse soilless culture systems (SCS) 
+ Rodríguez et al. 
+ 2015 
+ New adaptive hybrid-automatic irrigation control system for soilless culture 
+ Legal Events 
+ Date 
+ Code 
+ Title 
+ Description 
+ 2013-06-03 
+ AS 
+ Assignment 
+ Owner name :
+ TEVATRONIC LTD., ISRAEL 
+ Free format text :
+ ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:VEITSMAN, ALEXANDER;DANILOV, YURI;REEL/FRAME:030529/0866 
+ Effective date :
+ 20130306 
+ 2015-02-04 
+ STCF 
+ Information on status: patent grant 
+ Free format text :
+ PATENTED CASE 
+ 2018-02-24 
+ MAFP 
+ Maintenance fee payment 
+ Free format text :
+ PAYMENT OF MAINTENANCE FEE, 4TH YR, SMALL ENTITY (ORIGINAL EVENT CODE: M2551) 
+ Year of fee payment :
+ 4 
+ 2022-10-17 
+ FEPP 
+ Fee payment procedure 
+ Free format text :
+ MAINTENANCE FEE REMINDER MAILED (ORIGINAL EVENT CODE: REM.); ENTITY STATUS OF PATENT OWNER: SMALL ENTITY 
+ 2023-04-03 
+ LAPS 
+ Lapse for failure to pay maintenance fees 
+ Free format text :
+ PATENT EXPIRED FOR FAILURE TO PAY MAINTENANCE FEES (ORIGINAL EVENT CODE: EXP.); ENTITY STATUS OF PATENT OWNER: SMALL ENTITY 
+ 2023-04-03 
+ STCH 
+ Information on status: patent discontinuation 
+ Free format text :
+ PATENT EXPIRED DUE TO NONPAYMENT OF MAINTENANCE FEES UNDER 37 CFR 1.362 
+ 2023-04-25 
+ FP 
+ Lapsed due to failure to pay maintenance fee 
+ Effective date :
+ 20230224 

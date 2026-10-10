@@ -1,0 +1,80 @@
+{
+ "Reference": {
+  "k1": 0.1285,
+  "k2": 0.1046,
+  "n_pulses": [
+   225,
+   265
+  ],
+  "n_test_days": 76,
+  "pair_gap_shared_median": 0.239,
+  "pair_gap_calibrated_median": 0.438,
+  "decl_ratio_median": 1.271,
+  "k_ratio_k2_over_k1": 0.814
+ },
+ "AICU": {
+  "k1": 0.1489,
+  "k2": 0.115,
+  "n_pulses": [
+   154,
+   222
+  ],
+  "n_test_days": 76,
+  "pair_gap_shared_median": 0.159,
+  "pair_gap_calibrated_median": 0.143,
+  "decl_ratio_median": 0.852,
+  "k_ratio_k2_over_k1": 0.773
+ },
+ "Automatoes": {
+  "k1": 0.1277,
+  "k2": 0.0926,
+  "n_pulses": [
+   344,
+   416
+  ],
+  "n_test_days": 76,
+  "pair_gap_shared_median": 0.193,
+  "pair_gap_calibrated_median": 0.136,
+  "decl_ratio_median": 0.824,
+  "k_ratio_k2_over_k1": 0.725
+ },
+ "Digilog": {
+  "k1": 0.0754,
+  "k2": 0.0543,
+  "n_pulses": [
+   336,
+   427
+  ],
+  "n_test_days": 76,
+  "pair_gap_shared_median": 0.164,
+  "pair_gap_calibrated_median": 0.163,
+  "decl_ratio_median": 0.849,
+  "k_ratio_k2_over_k1": 0.721
+ },
+ "IUACAAS": {
+  "k1": 0.1602,
+  "k2": 0.1637,
+  "n_pulses": [
+   219,
+   173
+  ],
+  "n_test_days": 76,
+  "pair_gap_shared_median": 0.167,
+  "pair_gap_calibrated_median": 0.156,
+  "decl_ratio_median": 1.182,
+  "k_ratio_k2_over_k1": 1.021
+ },
+ "TheAutomators": {
+  "k1": 0.0967,
+  "k2": 0.1173,
+  "n_pulses": [
+   358,
+   274
+  ],
+  "n_test_days": 76,
+  "pair_gap_shared_median": 0.112,
+  "pair_gap_calibrated_median": 0.084,
+  "decl_ratio_median": 1.119,
+  "k_ratio_k2_over_k1": 1.213
+ }
+}

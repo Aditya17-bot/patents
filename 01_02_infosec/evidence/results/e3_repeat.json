@@ -1,0 +1,3106 @@
+{
+  "config": {
+    "n_trials": 20,
+    "stations": [
+      "machine-3-1",
+      "machine-3-10",
+      "machine-3-11",
+      "machine-3-2",
+      "machine-3-3",
+      "machine-3-4",
+      "machine-3-5",
+      "machine-3-6",
+      "machine-3-7",
+      "machine-3-8",
+      "machine-3-9"
+    ],
+    "n_pairs": 55,
+    "couple_lag": 2,
+    "n_events": 60,
+    "amp": 0.15,
+    "n_channels": 8,
+    "lag_max": 6,
+    "corpus": "SMD group 3, MIT licence",
+    "units": "lags in reporting intervals (SMD = 1 min/sample)",
+    "note": "pairs and injection resampled per trial; models fixed"
+  },
+  "summary": {
+    "C_pair_only|shared|none": {
+      "n_trials": 20,
+      "detection_rate_top_ranked": 0.0,
+      "auroc_over_pairs_mean": 0.6092592592592593,
+      "auroc_over_pairs_median": 0.75,
+      "z_median": 0.2914445028545112,
+      "z_p25": -0.4821229826193858,
+      "z_p75": 1.1388533370775031,
+      "target_r_median": 0.134359886383558,
+      "uncoupled_mean_r_median": 0.07371757363589013
+    },
+    "C_pair_only|shared|raw_median": {
+      "n_trials": 20,
+      "detection_rate_top_ranked": 0.0,
+      "auroc_over_pairs_mean": 0.5101851851851852,
+      "auroc_over_pairs_median": 0.5833333333333334,
+      "z_median": 0.1485587543307182,
+      "z_p25": -0.7754442671071331,
+      "z_p75": 0.6501666263639171,
+      "target_r_median": 0.1691464209747747,
+      "uncoupled_mean_r_median": 0.1361185130763038
+    },
+    "C_pair_only|shared|standardised_median": {
+      "n_trials": 20,
+      "detection_rate_top_ranked": 0.0,
+      "auroc_over_pairs_mean": 0.5648148148148148,
+      "auroc_over_pairs_median": 0.5370370370370371,
+      "z_median": 0.1844151419049476,
+      "z_p25": -0.3226084895973935,
+      "z_p75": 1.0601673159031981,
+      "target_r_median": 0.07576497958446425,
+      "uncoupled_mean_r_median": 0.03541934818493975
+    },
+    "C_pair_only|per_station|none": {
+      "n_trials": 20,
+      "detection_rate_top_ranked": 0.55,
+      "auroc_over_pairs_mean": 0.9185185185185185,
+      "auroc_over_pairs_median": 1.0,
+      "z_median": 3.032165044998857,
+      "z_p25": 1.0355416306293015,
+      "z_p75": 5.117872139914935,
+      "target_r_median": 0.3148181657177457,
+      "uncoupled_mean_r_median": 0.06114903559316398
+    },
+    "C_pair_only|per_station|raw_median": {
+      "n_trials": 20,
+      "detection_rate_top_ranked": 0.65,
+      "auroc_over_pairs_mean": 0.9768518518518519,
+      "auroc_over_pairs_median": 1.0,
+      "z_median": 4.12746670721554,
+      "z_p25": 1.9912637790278422,
+      "z_p75": 5.895189605265192,
+      "target_r_median": 0.2594172056465689,
+      "uncoupled_mean_r_median": 0.024241694109666097
+    },
+    "C_pair_only|per_station|standardised_median": {
+      "n_trials": 20,
+      "detection_rate_top_ranked": 0.55,
+      "auroc_over_pairs_mean": 0.9444444444444444,
+      "auroc_over_pairs_median": 1.0,
+      "z_median": 3.5324668951731963,
+      "z_p25": 1.3642820374647846,
+      "z_p75": 5.57127437927385,
+      "target_r_median": 0.25914974607224145,
+      "uncoupled_mean_r_median": 0.013648211812499755
+    },
+    "D_both|shared|none": {
+      "n_trials": 20,
+      "detection_rate_top_ranked": 0.0,
+      "auroc_over_pairs_mean": 0.5324074074074074,
+      "auroc_over_pairs_median": 0.5833333333333333,
+      "z_median": 0.0127242730209048,
+      "z_p25": -0.7864952921413222,
+      "z_p75": 0.9843758862554979,
+      "target_r_median": 0.16927416897024344,
+      "uncoupled_mean_r_median": 0.18148486350481807
+    },
+    "D_both|shared|raw_median": {
+      "n_trials": 20,
+      "detection_rate_top_ranked": 0.0,
+      "auroc_over_pairs_mean": 0.5157407407407408,
+      "auroc_over_pairs_median": 0.6018518518518519,
+      "z_median": 0.17830995656186682,
+      "z_p25": -0.7671006397101919,
+      "z_p75": 0.7048935772451197,
+      "target_r_median": 0.17171133917363718,
+      "uncoupled_mean_r_median": 0.1288101019566179
+    },
+    "D_both|shared|standardised_median": {
+      "n_trials": 20,
+      "detection_rate_top_ranked": 0.0,
+      "auroc_over_pairs_mean": 0.5592592592592592,
+      "auroc_over_pairs_median": 0.5370370370370371,
+      "z_median": 0.19482466134831306,
+      "z_p25": -0.4773425609057546,
+      "z_p75": 1.0346364760360025,
+      "target_r_median": 0.0791750896609817,
+      "uncoupled_mean_r_median": 0.03657471051932258
+    },
+    "D_both|per_station|none": {
+      "n_trials": 20,
+      "detection_rate_top_ranked": 0.1,
+      "auroc_over_pairs_mean": 0.6324074074074074,
+      "auroc_over_pairs_median": 0.6574074074074074,
+      "z_median": 0.5709106296906646,
+      "z_p25": -0.5763584994172213,
+      "z_p75": 1.7622006321751575,
+      "target_r_median": 0.43801535676730496,
+      "uncoupled_mean_r_median": 0.3502963894862043
+    },
+    "D_both|per_station|raw_median": {
+      "n_trials": 20,
+      "detection_rate_top_ranked": 0.6,
+      "auroc_over_pairs_mean": 0.9833333333333332,
+      "auroc_over_pairs_median": 1.0,
+      "z_median": 4.416789546547228,
+      "z_p25": 2.252467075527125,
+      "z_p75": 6.1265179880896605,
+      "target_r_median": 0.26697646371246525,
+      "uncoupled_mean_r_median": 0.02179117794702641
+    },
+    "D_both|per_station|standardised_median": {
+      "n_trials": 20,
+      "detection_rate_top_ranked": 0.55,
+      "auroc_over_pairs_mean": 0.9203703703703704,
+      "auroc_over_pairs_median": 1.0,
+      "z_median": 3.281626248369881,
+      "z_p25": 1.4954927043025084,
+      "z_p75": 4.493098700804387,
+      "target_r_median": 0.29817064312604646,
+      "uncoupled_mean_r_median": 0.02739778354364457
+    }
+  },
+  "trials": {
+    "C_pair_only|shared|none": [
+      {
+        "trial": 0,
+        "pair": [
+          "machine-3-11",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": 0.422875261944773,
+        "target_r": 0.16089959797455797,
+        "mean_r": 0.074516535370451,
+        "auroc_pairs": 0.7777777777777778
+      },
+      {
+        "trial": 1,
+        "pair": [
+          "machine-3-5",
+          "machine-3-8"
+        ],
+        "top_ranked": false,
+        "z": 0.8552686748277427,
+        "target_r": 0.25291683524159897,
+        "mean_r": 0.07686808218412412,
+        "auroc_pairs": 0.8888888888888888
+      },
+      {
+        "trial": 2,
+        "pair": [
+          "machine-3-3",
+          "machine-3-5"
+        ],
+        "top_ranked": false,
+        "z": 0.7755666557486955,
+        "target_r": 0.23576917875974437,
+        "mean_r": 0.07514799230212874,
+        "auroc_pairs": 0.8888888888888888
+      },
+      {
+        "trial": 3,
+        "pair": [
+          "machine-3-11",
+          "machine-3-9"
+        ],
+        "top_ranked": false,
+        "z": 1.941549384936762,
+        "target_r": 0.45612831526979275,
+        "mean_r": 0.07243857689538304,
+        "auroc_pairs": 0.9259259259259259
+      },
+      {
+        "trial": 4,
+        "pair": [
+          "machine-3-1",
+          "machine-3-6"
+        ],
+        "top_ranked": false,
+        "z": 1.1294016583937774,
+        "target_r": 0.28696099994603347,
+        "mean_r": 0.06957905217985631,
+        "auroc_pairs": 0.8888888888888888
+      },
+      {
+        "trial": 5,
+        "pair": [
+          "machine-3-1",
+          "machine-3-3"
+        ],
+        "top_ranked": false,
+        "z": -0.21299459332987192,
+        "target_r": 0.02959761138065147,
+        "mean_r": 0.07337301595169389,
+        "auroc_pairs": 0.3888888888888889
+      },
+      {
+        "trial": 6,
+        "pair": [
+          "machine-3-2",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -0.5469514570750339,
+        "target_r": -0.0380417731150613,
+        "mean_r": 0.07502461861177194,
+        "auroc_pairs": 0.24074074074074073
+      },
+      {
+        "trial": 7,
+        "pair": [
+          "machine-3-1",
+          "machine-3-9"
+        ],
+        "top_ranked": false,
+        "z": 2.5820476324975687,
+        "target_r": 0.5743292217406176,
+        "mean_r": 0.07191480766524762,
+        "auroc_pairs": 0.9814814814814815
+      },
+      {
+        "trial": 8,
+        "pair": [
+          "machine-3-10",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": 0.6294689659155132,
+        "target_r": 0.2045997880723352,
+        "mean_r": 0.07353275712629594,
+        "auroc_pairs": 0.8518518518518519
+      },
+      {
+        "trial": 9,
+        "pair": [
+          "machine-3-1",
+          "machine-3-6"
+        ],
+        "top_ranked": false,
+        "z": 1.3649480126583768,
+        "target_r": 0.32628683025839206,
+        "mean_r": 0.06747916448556343,
+        "auroc_pairs": 0.8888888888888888
+      },
+      {
+        "trial": 10,
+        "pair": [
+          "machine-3-10",
+          "machine-3-5"
+        ],
+        "top_ranked": false,
+        "z": 1.1672083731286806,
+        "target_r": 0.3190147170642672,
+        "mean_r": 0.07815075400556189,
+        "auroc_pairs": 0.8888888888888888
+      },
+      {
+        "trial": 11,
+        "pair": [
+          "machine-3-11",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": -0.701876203075997,
+        "target_r": -0.06952937001177002,
+        "mean_r": 0.07260522221630494,
+        "auroc_pairs": 0.18518518518518517
+      },
+      {
+        "trial": 12,
+        "pair": [
+          "machine-3-2",
+          "machine-3-6"
+        ],
+        "top_ranked": false,
+        "z": 0.045957594392074516,
+        "target_r": 0.08028680057663429,
+        "mean_r": 0.07146619023099389,
+        "auroc_pairs": 0.5740740740740741
+      },
+      {
+        "trial": 13,
+        "pair": [
+          "machine-3-10",
+          "machine-3-7"
+        ],
+        "top_ranked": false,
+        "z": 0.16001374376424932,
+        "target_r": 0.10782017479255805,
+        "mean_r": 0.07476096075266754,
+        "auroc_pairs": 0.7222222222222222
+      },
+      {
+        "trial": 14,
+        "pair": [
+          "machine-3-3",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -0.4695918551379709,
+        "target_r": -0.021955518500938177,
+        "mean_r": 0.07507726172370423,
+        "auroc_pairs": 0.2777777777777778
+      },
+      {
+        "trial": 15,
+        "pair": [
+          "machine-3-2",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -0.5197163650636305,
+        "target_r": -0.033967129457094625,
+        "mean_r": 0.0736986251572145,
+        "auroc_pairs": 0.24074074074074073
+      },
+      {
+        "trial": 16,
+        "pair": [
+          "machine-3-11",
+          "machine-3-5"
+        ],
+        "top_ranked": false,
+        "z": -0.24760631650574336,
+        "target_r": 0.025184611803075588,
+        "mean_r": 0.0741190993244454,
+        "auroc_pairs": 0.42592592592592593
+      },
+      {
+        "trial": 17,
+        "pair": [
+          "machine-3-8",
+          "machine-3-9"
+        ],
+        "top_ranked": false,
+        "z": 1.1776528162970274,
+        "target_r": 0.3126707282954174,
+        "mean_r": 0.07085053918097921,
+        "auroc_pairs": 0.8888888888888888
+      },
+      {
+        "trial": 18,
+        "pair": [
+          "machine-3-5",
+          "machine-3-7"
+        ],
+        "top_ranked": false,
+        "z": -0.9788491035740676,
+        "target_r": -0.12476428606009636,
+        "mean_r": 0.07437033111944112,
+        "auroc_pairs": 0.1111111111111111
+      },
+      {
+        "trial": 19,
+        "pair": [
+          "machine-3-11",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": -0.8113733349350248,
+        "target_r": -0.091900286684994,
+        "mean_r": 0.07373652211456577,
+        "auroc_pairs": 0.14814814814814814
+      }
+    ],
+    "C_pair_only|shared|raw_median": [
+      {
+        "trial": 0,
+        "pair": [
+          "machine-3-11",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -0.7167429465662155,
+        "target_r": -0.037972251244905074,
+        "mean_r": 0.13662804860046845,
+        "auroc_pairs": 0.24074074074074073
+      },
+      {
+        "trial": 1,
+        "pair": [
+          "machine-3-5",
+          "machine-3-8"
+        ],
+        "top_ranked": false,
+        "z": 1.624930269495301,
+        "target_r": 0.5017420857936657,
+        "mean_r": 0.12931727551788583,
+        "auroc_pairs": 0.9259259259259259
+      },
+      {
+        "trial": 2,
+        "pair": [
+          "machine-3-3",
+          "machine-3-5"
+        ],
+        "top_ranked": false,
+        "z": 1.4409823914534592,
+        "target_r": 0.4861627117906609,
+        "mean_r": 0.13987717681166753,
+        "auroc_pairs": 0.8888888888888888
+      },
+      {
+        "trial": 3,
+        "pair": [
+          "machine-3-11",
+          "machine-3-9"
+        ],
+        "top_ranked": false,
+        "z": 0.05046943797215383,
+        "target_r": 0.1483651666473198,
+        "mean_r": 0.13602610432152645,
+        "auroc_pairs": 0.5370370370370371
+      },
+      {
+        "trial": 4,
+        "pair": [
+          "machine-3-1",
+          "machine-3-6"
+        ],
+        "top_ranked": false,
+        "z": 0.4749803178819155,
+        "target_r": 0.2338069909400501,
+        "mean_r": 0.1223868297444476,
+        "auroc_pairs": 0.7222222222222222
+      },
+      {
+        "trial": 5,
+        "pair": [
+          "machine-3-1",
+          "machine-3-3"
+        ],
+        "top_ranked": false,
+        "z": 0.24664807068928257,
+        "target_r": 0.19695585989006262,
+        "mean_r": 0.13621092183108113,
+        "auroc_pairs": 0.6666666666666666
+      },
+      {
+        "trial": 6,
+        "pair": [
+          "machine-3-2",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -0.6623108390760293,
+        "target_r": -0.024269735267451815,
+        "mean_r": 0.13991131278483906,
+        "auroc_pairs": 0.25925925925925924
+      },
+      {
+        "trial": 7,
+        "pair": [
+          "machine-3-1",
+          "machine-3-9"
+        ],
+        "top_ranked": false,
+        "z": 0.7478570546200115,
+        "target_r": 0.3186476375440242,
+        "mean_r": 0.1347908481388481,
+        "auroc_pairs": 0.7962962962962963
+      },
+      {
+        "trial": 8,
+        "pair": [
+          "machine-3-10",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": 0.905527517403067,
+        "target_r": 0.3436530401812695,
+        "mean_r": 0.1303162445595121,
+        "auroc_pairs": 0.8148148148148148
+      },
+      {
+        "trial": 9,
+        "pair": [
+          "machine-3-1",
+          "machine-3-6"
+        ],
+        "top_ranked": false,
+        "z": 0.6176031502785523,
+        "target_r": 0.26566620197523055,
+        "mean_r": 0.1197953064502974,
+        "auroc_pairs": 0.7962962962962963
+      },
+      {
+        "trial": 10,
+        "pair": [
+          "machine-3-10",
+          "machine-3-5"
+        ],
+        "top_ranked": false,
+        "z": 2.0332236353588287,
+        "target_r": 0.5964163864270471,
+        "mean_r": 0.1306439778967879,
+        "auroc_pairs": 0.9814814814814815
+      },
+      {
+        "trial": 11,
+        "pair": [
+          "machine-3-11",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": -1.5071504268940292,
+        "target_r": -0.217964227033288,
+        "mean_r": 0.1381474099603114,
+        "auroc_pairs": 0.07407407407407407
+      },
+      {
+        "trial": 12,
+        "pair": [
+          "machine-3-2",
+          "machine-3-6"
+        ],
+        "top_ranked": false,
+        "z": 0.2558515669470074,
+        "target_r": 0.1899276753022296,
+        "mean_r": 0.12865500568196575,
+        "auroc_pairs": 0.6296296296296297
+      },
+      {
+        "trial": 13,
+        "pair": [
+          "machine-3-10",
+          "machine-3-7"
+        ],
+        "top_ranked": false,
+        "z": -0.9515482287298861,
+        "target_r": -0.09030705906962469,
+        "mean_r": 0.13127303871290055,
+        "auroc_pairs": 0.16666666666666666
+      },
+      {
+        "trial": 14,
+        "pair": [
+          "machine-3-3",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -0.32086569867247666,
+        "target_r": 0.05986282908306218,
+        "mean_r": 0.1391189262407776,
+        "auroc_pairs": 0.3888888888888889
+      },
+      {
+        "trial": 15,
+        "pair": [
+          "machine-3-2",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -0.6677135530663326,
+        "target_r": -0.027210292342991018,
+        "mean_r": 0.13817973014233118,
+        "auroc_pairs": 0.25925925925925924
+      },
+      {
+        "trial": 16,
+        "pair": [
+          "machine-3-11",
+          "machine-3-5"
+        ],
+        "top_ranked": false,
+        "z": -1.0593547821955611,
+        "target_r": -0.10425857888417518,
+        "mean_r": 0.13636909291828928,
+        "auroc_pairs": 0.12962962962962962
+      },
+      {
+        "trial": 17,
+        "pair": [
+          "machine-3-8",
+          "machine-3-9"
+        ],
+        "top_ranked": false,
+        "z": 0.5921541349404187,
+        "target_r": 0.25817081584337237,
+        "mean_r": 0.12167924600123485,
+        "auroc_pairs": 0.7592592592592593
+      },
+      {
+        "trial": 18,
+        "pair": [
+          "machine-3-5",
+          "machine-3-7"
+        ],
+        "top_ranked": false,
+        "z": -1.2852651988162802,
+        "target_r": -0.16485715020914854,
+        "mean_r": 0.1374601948796386,
+        "auroc_pairs": 0.12962962962962962
+      },
+      {
+        "trial": 19,
+        "pair": [
+          "machine-3-11",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": -1.6128574007397554,
+        "target_r": -0.24191390035796245,
+        "mean_r": 0.13828302835235998,
+        "auroc_pairs": 0.037037037037037035
+      }
+    ],
+    "C_pair_only|shared|standardised_median": [
+      {
+        "trial": 0,
+        "pair": [
+          "machine-3-11",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -0.18827605535487868,
+        "target_r": -0.00532436167609158,
+        "mean_r": 0.03627370186581401,
+        "auroc_pairs": 0.35185185185185186
+      },
+      {
+        "trial": 1,
+        "pair": [
+          "machine-3-5",
+          "machine-3-8"
+        ],
+        "top_ranked": false,
+        "z": 0.9877799997230565,
+        "target_r": 0.2488172326728365,
+        "mean_r": 0.032163251939742656,
+        "auroc_pairs": 0.8703703703703703
+      },
+      {
+        "trial": 2,
+        "pair": [
+          "machine-3-3",
+          "machine-3-5"
+        ],
+        "top_ranked": false,
+        "z": 1.378906963348233,
+        "target_r": 0.34006968508081425,
+        "mean_r": 0.03582890798619221,
+        "auroc_pairs": 0.9259259259259259
+      },
+      {
+        "trial": 3,
+        "pair": [
+          "machine-3-11",
+          "machine-3-9"
+        ],
+        "top_ranked": false,
+        "z": 1.020606467661177,
+        "target_r": 0.2591403211983743,
+        "mean_r": 0.035756726805209235,
+        "auroc_pairs": 0.8888888888888888
+      },
+      {
+        "trial": 4,
+        "pair": [
+          "machine-3-1",
+          "machine-3-6"
+        ],
+        "top_ranked": false,
+        "z": 0.6972459155737554,
+        "target_r": 0.18325547767874717,
+        "mean_r": 0.03408265288080737,
+        "auroc_pairs": 0.7777777777777778
+      },
+      {
+        "trial": 5,
+        "pair": [
+          "machine-3-1",
+          "machine-3-3"
+        ],
+        "top_ranked": false,
+        "z": 0.4518130381537839,
+        "target_r": 0.13402786513176085,
+        "mean_r": 0.03303652135111512,
+        "auroc_pairs": 0.6851851851851852
+      },
+      {
+        "trial": 6,
+        "pair": [
+          "machine-3-2",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -0.2127220551908419,
+        "target_r": -0.011569294497418147,
+        "mean_r": 0.03628792650649116,
+        "auroc_pairs": 0.35185185185185186
+      },
+      {
+        "trial": 7,
+        "pair": [
+          "machine-3-1",
+          "machine-3-9"
+        ],
+        "top_ranked": false,
+        "z": 2.0097786236178705,
+        "target_r": 0.46610790046261114,
+        "mean_r": 0.03217726207198729,
+        "auroc_pairs": 0.9814814814814815
+      },
+      {
+        "trial": 8,
+        "pair": [
+          "machine-3-10",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": 1.11076290282281,
+        "target_r": 0.2765569323151384,
+        "mean_r": 0.03330710293735762,
+        "auroc_pairs": 0.9074074074074074
+      },
+      {
+        "trial": 9,
+        "pair": [
+          "machine-3-1",
+          "machine-3-6"
+        ],
+        "top_ranked": false,
+        "z": 1.0433021202633275,
+        "target_r": 0.25243729639268275,
+        "mean_r": 0.03341773961429356,
+        "auroc_pairs": 0.9259259259259259
+      },
+      {
+        "trial": 10,
+        "pair": [
+          "machine-3-10",
+          "machine-3-5"
+        ],
+        "top_ranked": false,
+        "z": 1.4224723333021096,
+        "target_r": 0.3449369756521388,
+        "mean_r": 0.03540623741498601,
+        "auroc_pairs": 0.9259259259259259
+      },
+      {
+        "trial": 11,
+        "pair": [
+          "machine-3-11",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": -1.2496485961822081,
+        "target_r": -0.23243925057999076,
+        "mean_r": 0.036544623774318816,
+        "auroc_pairs": 0.12962962962962962
+      },
+      {
+        "trial": 12,
+        "pair": [
+          "machine-3-2",
+          "machine-3-6"
+        ],
+        "top_ranked": false,
+        "z": -0.13773127508333144,
+        "target_r": 0.005569283900225687,
+        "mean_r": 0.03476092405852941,
+        "auroc_pairs": 0.3888888888888889
+      },
+      {
+        "trial": 13,
+        "pair": [
+          "machine-3-10",
+          "machine-3-7"
+        ],
+        "top_ranked": false,
+        "z": -0.6522677928170485,
+        "target_r": -0.10591494052083997,
+        "mean_r": 0.035129955240023825,
+        "auroc_pairs": 0.2222222222222222
+      },
+      {
+        "trial": 14,
+        "pair": [
+          "machine-3-3",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -0.08298275434388869,
+        "target_r": 0.017502094037167647,
+        "mean_r": 0.036245418187092836,
+        "auroc_pairs": 0.37037037037037035
+      },
+      {
+        "trial": 15,
+        "pair": [
+          "machine-3-2",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -0.17524802432650335,
+        "target_r": -0.003470785848049995,
+        "mean_r": 0.036043371483064704,
+        "auroc_pairs": 0.35185185185185186
+      },
+      {
+        "trial": 16,
+        "pair": [
+          "machine-3-11",
+          "machine-3-5"
+        ],
+        "top_ranked": false,
+        "z": -1.0034194823751572,
+        "target_r": -0.17315633957157578,
+        "mean_r": 0.035432458954893484,
+        "auroc_pairs": 0.14814814814814814
+      },
+      {
+        "trial": 17,
+        "pair": [
+          "machine-3-8",
+          "machine-3-9"
+        ],
+        "top_ranked": false,
+        "z": 1.1502397243746645,
+        "target_r": 0.27903051802815826,
+        "mean_r": 0.028720797269392022,
+        "auroc_pairs": 0.9074074074074074
+      },
+      {
+        "trial": 18,
+        "pair": [
+          "machine-3-5",
+          "machine-3-7"
+        ],
+        "top_ranked": false,
+        "z": -1.6192245453807255,
+        "target_r": -0.31297584065276296,
+        "mean_r": 0.03585100333396404,
+        "auroc_pairs": 0.07407407407407407
+      },
+      {
+        "trial": 19,
+        "pair": [
+          "machine-3-11",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": -1.3513772845933203,
+        "target_r": -0.25722722681057725,
+        "mean_r": 0.03684415704733162,
+        "auroc_pairs": 0.1111111111111111
+      }
+    ],
+    "C_pair_only|per_station|none": [
+      {
+        "trial": 0,
+        "pair": [
+          "machine-3-11",
+          "machine-3-4"
+        ],
+        "top_ranked": true,
+        "z": 2.5572005006854623,
+        "target_r": 0.25839261205564873,
+        "mean_r": 0.05810444323885424,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 1,
+        "pair": [
+          "machine-3-5",
+          "machine-3-8"
+        ],
+        "top_ranked": true,
+        "z": 4.595426661090827,
+        "target_r": 0.4712098960473019,
+        "mean_r": 0.07164118042066925,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 2,
+        "pair": [
+          "machine-3-3",
+          "machine-3-5"
+        ],
+        "top_ranked": false,
+        "z": 2.1671375603094063,
+        "target_r": 0.2587605701650351,
+        "mean_r": 0.06507497553401884,
+        "auroc_pairs": 0.9814814814814815
+      },
+      {
+        "trial": 3,
+        "pair": [
+          "machine-3-11",
+          "machine-3-9"
+        ],
+        "top_ranked": true,
+        "z": 6.711697603318848,
+        "target_r": 0.5521658936833701,
+        "mean_r": 0.05958571894240016,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 4,
+        "pair": [
+          "machine-3-1",
+          "machine-3-6"
+        ],
+        "top_ranked": true,
+        "z": 5.26400720103244,
+        "target_r": 0.49629991350776137,
+        "mean_r": 0.05867339482756064,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 5,
+        "pair": [
+          "machine-3-1",
+          "machine-3-3"
+        ],
+        "top_ranked": false,
+        "z": 1.6767698718961548,
+        "target_r": 0.1976827942991411,
+        "mean_r": 0.055603076146540795,
+        "auroc_pairs": 0.9444444444444444
+      },
+      {
+        "trial": 6,
+        "pair": [
+          "machine-3-2",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": 0.343291277803649,
+        "target_r": 0.0919192722218396,
+        "mean_r": 0.06071090613393564,
+        "auroc_pairs": 0.7037037037037037
+      },
+      {
+        "trial": 7,
+        "pair": [
+          "machine-3-1",
+          "machine-3-9"
+        ],
+        "top_ranked": true,
+        "z": 5.913132479364983,
+        "target_r": 0.5418566822846548,
+        "mean_r": 0.059354108355267075,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 8,
+        "pair": [
+          "machine-3-10",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": 1.0053025791974626,
+        "target_r": 0.15323742618280844,
+        "mean_r": 0.06444278691682845,
+        "auroc_pairs": 0.8518518518518519
+      },
+      {
+        "trial": 9,
+        "pair": [
+          "machine-3-1",
+          "machine-3-6"
+        ],
+        "top_ranked": true,
+        "z": 5.069160452875766,
+        "target_r": 0.486192704093522,
+        "mean_r": 0.060049791307062395,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 10,
+        "pair": [
+          "machine-3-10",
+          "machine-3-5"
+        ],
+        "top_ranked": true,
+        "z": 3.5071295893122523,
+        "target_r": 0.375130463824522,
+        "mean_r": 0.06709178070511526,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 11,
+        "pair": [
+          "machine-3-11",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": 0.34888519058832007,
+        "target_r": 0.08099374202162879,
+        "mean_r": 0.055050673540745,
+        "auroc_pairs": 0.6666666666666666
+      },
+      {
+        "trial": 12,
+        "pair": [
+          "machine-3-2",
+          "machine-3-6"
+        ],
+        "top_ranked": false,
+        "z": 1.5717914646403204,
+        "target_r": 0.19764539431468173,
+        "mean_r": 0.06098032873882289,
+        "auroc_pairs": 0.9259259259259259
+      },
+      {
+        "trial": 13,
+        "pair": [
+          "machine-3-10",
+          "machine-3-7"
+        ],
+        "top_ranked": true,
+        "z": 6.894041119723207,
+        "target_r": 0.6040780412075004,
+        "mean_r": 0.06442429503744126,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 14,
+        "pair": [
+          "machine-3-3",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": 0.783567096169879,
+        "target_r": 0.13389483323123463,
+        "mean_r": 0.06379166308336093,
+        "auroc_pairs": 0.8333333333333334
+      },
+      {
+        "trial": 15,
+        "pair": [
+          "machine-3-2",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": 0.1986318898142008,
+        "target_r": 0.0786120780635169,
+        "mean_r": 0.06058652123394281,
+        "auroc_pairs": 0.6111111111111112
+      },
+      {
+        "trial": 16,
+        "pair": [
+          "machine-3-11",
+          "machine-3-5"
+        ],
+        "top_ranked": true,
+        "z": 4.403891846530955,
+        "target_r": 0.39849723532043013,
+        "mean_r": 0.06306290776324217,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 17,
+        "pair": [
+          "machine-3-8",
+          "machine-3-9"
+        ],
+        "top_ranked": true,
+        "z": 5.744221284426643,
+        "target_r": 0.5568850902708803,
+        "mean_r": 0.061949242116454986,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 18,
+        "pair": [
+          "machine-3-5",
+          "machine-3-7"
+        ],
+        "top_ranked": true,
+        "z": 3.8553648860187675,
+        "target_r": 0.3708757612704563,
+        "mean_r": 0.06186789019689887,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 19,
+        "pair": [
+          "machine-3-11",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": 1.0456213144399145,
+        "target_r": 0.14162097437514598,
+        "mean_r": 0.061317742447505076,
+        "auroc_pairs": 0.8518518518518519
+      }
+    ],
+    "C_pair_only|per_station|raw_median": [
+      {
+        "trial": 0,
+        "pair": [
+          "machine-3-11",
+          "machine-3-4"
+        ],
+        "top_ranked": true,
+        "z": 3.6820292159887686,
+        "target_r": 0.22830898067639113,
+        "mean_r": 0.024383695139039544,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 1,
+        "pair": [
+          "machine-3-5",
+          "machine-3-8"
+        ],
+        "top_ranked": true,
+        "z": 6.0609008470632375,
+        "target_r": 0.4071733530822297,
+        "mean_r": 0.02266102023809379,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 2,
+        "pair": [
+          "machine-3-3",
+          "machine-3-5"
+        ],
+        "top_ranked": true,
+        "z": 3.4281312458035647,
+        "target_r": 0.2329552694900005,
+        "mean_r": 0.024414694766988636,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 3,
+        "pair": [
+          "machine-3-11",
+          "machine-3-9"
+        ],
+        "top_ranked": true,
+        "z": 8.411901348489563,
+        "target_r": 0.4935657997164939,
+        "mean_r": 0.025999326737533704,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 4,
+        "pair": [
+          "machine-3-1",
+          "machine-3-6"
+        ],
+        "top_ranked": true,
+        "z": 5.715970139445098,
+        "target_r": 0.40009571918677483,
+        "mean_r": 0.02218816220118327,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 5,
+        "pair": [
+          "machine-3-1",
+          "machine-3-3"
+        ],
+        "top_ranked": false,
+        "z": 2.3618904491635253,
+        "target_r": 0.16143139639713122,
+        "mean_r": 0.021090318725442727,
+        "auroc_pairs": 0.9814814814814815
+      },
+      {
+        "trial": 6,
+        "pair": [
+          "machine-3-2",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": 1.2588512198419763,
+        "target_r": 0.09899268351980996,
+        "mean_r": 0.024632964503691148,
+        "auroc_pairs": 0.9444444444444444
+      },
+      {
+        "trial": 7,
+        "pair": [
+          "machine-3-1",
+          "machine-3-9"
+        ],
+        "top_ranked": true,
+        "z": 7.725594407234041,
+        "target_r": 0.4786528433423468,
+        "mean_r": 0.027393659124055357,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 8,
+        "pair": [
+          "machine-3-10",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": 2.0286805163028436,
+        "target_r": 0.13874973626576625,
+        "mean_r": 0.020240040606009545,
+        "auroc_pairs": 0.9814814814814815
+      },
+      {
+        "trial": 9,
+        "pair": [
+          "machine-3-1",
+          "machine-3-6"
+        ],
+        "top_ranked": true,
+        "z": 5.682966911392909,
+        "target_r": 0.38140665065155105,
+        "mean_r": 0.02449533278125634,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 10,
+        "pair": [
+          "machine-3-10",
+          "machine-3-5"
+        ],
+        "top_ranked": true,
+        "z": 4.572904198442313,
+        "target_r": 0.3164237788214664,
+        "mean_r": 0.022842599907142113,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 11,
+        "pair": [
+          "machine-3-11",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": 1.0964679475798595,
+        "target_r": 0.08066595162616894,
+        "mean_r": 0.021862349668032077,
+        "auroc_pairs": 0.8518518518518519
+      },
+      {
+        "trial": 12,
+        "pair": [
+          "machine-3-2",
+          "machine-3-6"
+        ],
+        "top_ranked": true,
+        "z": 2.582974891853051,
+        "target_r": 0.17866224302061617,
+        "mean_r": 0.02346717980502571,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 13,
+        "pair": [
+          "machine-3-10",
+          "machine-3-7"
+        ],
+        "top_ranked": true,
+        "z": 8.634931216975504,
+        "target_r": 0.4833428913158578,
+        "mean_r": 0.023841700941030494,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 14,
+        "pair": [
+          "machine-3-3",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": 1.6822316812736862,
+        "target_r": 0.12384042770943808,
+        "mean_r": 0.025787016223054963,
+        "auroc_pairs": 0.9629629629629629
+      },
+      {
+        "trial": 15,
+        "pair": [
+          "machine-3-2",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": 1.0368035567490355,
+        "target_r": 0.08537404709259601,
+        "mean_r": 0.02409969308029265,
+        "auroc_pairs": 0.8333333333333334
+      },
+      {
+        "trial": 16,
+        "pair": [
+          "machine-3-11",
+          "machine-3-5"
+        ],
+        "top_ranked": true,
+        "z": 5.8399525246658435,
+        "target_r": 0.3520324859986514,
+        "mean_r": 0.027866696880096933,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 17,
+        "pair": [
+          "machine-3-8",
+          "machine-3-9"
+        ],
+        "top_ranked": true,
+        "z": 8.904406776942748,
+        "target_r": 0.5042709834849286,
+        "mean_r": 0.018514377833608632,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 18,
+        "pair": [
+          "machine-3-5",
+          "machine-3-7"
+        ],
+        "top_ranked": true,
+        "z": 4.634939160718795,
+        "target_r": 0.2858791418031372,
+        "mean_r": 0.02452229148579397,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 19,
+        "pair": [
+          "machine-3-11",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": 1.8790135672028376,
+        "target_r": 0.12714623121928936,
+        "mean_r": 0.024758965781073495,
+        "auroc_pairs": 0.9814814814814815
+      }
+    ],
+    "C_pair_only|per_station|standardised_median": [
+      {
+        "trial": 0,
+        "pair": [
+          "machine-3-11",
+          "machine-3-4"
+        ],
+        "top_ranked": true,
+        "z": 2.855114873999514,
+        "target_r": 0.20363145619735312,
+        "mean_r": 0.01286738018692719,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 1,
+        "pair": [
+          "machine-3-5",
+          "machine-3-8"
+        ],
+        "top_ranked": true,
+        "z": 5.263275576814648,
+        "target_r": 0.4116289461144415,
+        "mean_r": 0.016603427382010996,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 2,
+        "pair": [
+          "machine-3-3",
+          "machine-3-5"
+        ],
+        "top_ranked": false,
+        "z": 2.8005029289909382,
+        "target_r": 0.21797941222259018,
+        "mean_r": 0.01501525794277868,
+        "auroc_pairs": 0.9814814814814815
+      },
+      {
+        "trial": 3,
+        "pair": [
+          "machine-3-11",
+          "machine-3-9"
+        ],
+        "top_ranked": true,
+        "z": 8.136411507106107,
+        "target_r": 0.5198809916243978,
+        "mean_r": 0.01180351634235573,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 4,
+        "pair": [
+          "machine-3-1",
+          "machine-3-6"
+        ],
+        "top_ranked": true,
+        "z": 5.617354501437394,
+        "target_r": 0.43213355212242405,
+        "mean_r": 0.012973243321568713,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 5,
+        "pair": [
+          "machine-3-1",
+          "machine-3-3"
+        ],
+        "top_ranked": false,
+        "z": 1.7440342860603368,
+        "target_r": 0.13841445193188368,
+        "mean_r": 0.009972396125016197,
+        "auroc_pairs": 0.9629629629629629
+      },
+      {
+        "trial": 6,
+        "pair": [
+          "machine-3-2",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": 0.877904202927937,
+        "target_r": 0.08128129072671869,
+        "mean_r": 0.013749559538497966,
+        "auroc_pairs": 0.8703703703703703
+      },
+      {
+        "trial": 7,
+        "pair": [
+          "machine-3-1",
+          "machine-3-9"
+        ],
+        "top_ranked": true,
+        "z": 7.178510530604544,
+        "target_r": 0.5085501541694768,
+        "mean_r": 0.012528623111609322,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 8,
+        "pair": [
+          "machine-3-10",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": 1.745518223052508,
+        "target_r": 0.1403791947795196,
+        "mean_r": 0.013090485288463917,
+        "auroc_pairs": 0.9444444444444444
+      },
+      {
+        "trial": 9,
+        "pair": [
+          "machine-3-1",
+          "machine-3-6"
+        ],
+        "top_ranked": true,
+        "z": 5.55591433855267,
+        "target_r": 0.4229932902050432,
+        "mean_r": 0.01464425919125905,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 10,
+        "pair": [
+          "machine-3-10",
+          "machine-3-5"
+        ],
+        "top_ranked": true,
+        "z": 4.734455101003724,
+        "target_r": 0.3609596114376666,
+        "mean_r": 0.014728105429765008,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 11,
+        "pair": [
+          "machine-3-11",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": 0.4876391623365282,
+        "target_r": 0.04176893834478305,
+        "mean_r": 0.010525296583558847,
+        "auroc_pairs": 0.6296296296296297
+      },
+      {
+        "trial": 12,
+        "pair": [
+          "machine-3-2",
+          "machine-3-6"
+        ],
+        "top_ranked": false,
+        "z": 1.4818107236247529,
+        "target_r": 0.12507069026970813,
+        "mean_r": 0.014627213059687378,
+        "auroc_pairs": 0.9444444444444444
+      },
+      {
+        "trial": 13,
+        "pair": [
+          "machine-3-10",
+          "machine-3-7"
+        ],
+        "top_ranked": true,
+        "z": 7.885251601034652,
+        "target_r": 0.5350494783076253,
+        "mean_r": 0.018163392495841767,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 14,
+        "pair": [
+          "machine-3-3",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": 0.9060445293977604,
+        "target_r": 0.08257255689277498,
+        "mean_r": 0.014141155640138322,
+        "auroc_pairs": 0.8703703703703703
+      },
+      {
+        "trial": 15,
+        "pair": [
+          "machine-3-2",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": 0.7014966386289074,
+        "target_r": 0.06744808113501075,
+        "mean_r": 0.013546864086501546,
+        "auroc_pairs": 0.8148148148148148
+      },
+      {
+        "trial": 16,
+        "pair": [
+          "machine-3-11",
+          "machine-3-5"
+        ],
+        "top_ranked": true,
+        "z": 5.267087707625261,
+        "target_r": 0.34791160982825586,
+        "mean_r": 0.015974819760191654,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 17,
+        "pair": [
+          "machine-3-8",
+          "machine-3-9"
+        ],
+        "top_ranked": true,
+        "z": 7.215246766685458,
+        "target_r": 0.5206561763810292,
+        "mean_r": 0.011416141878647538,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 18,
+        "pair": [
+          "machine-3-5",
+          "machine-3-7"
+        ],
+        "top_ranked": true,
+        "z": 4.209818916346879,
+        "target_r": 0.3003200799218927,
+        "mean_r": 0.016402978890098837,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 19,
+        "pair": [
+          "machine-3-11",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": 1.01169597898488,
+        "target_r": 0.07818529157671297,
+        "mean_r": 0.012415099452128589,
+        "auroc_pairs": 0.8703703703703703
+      }
+    ],
+    "D_both|shared|none": [
+      {
+        "trial": 0,
+        "pair": [
+          "machine-3-11",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": 0.1241430575827028,
+        "target_r": 0.1916490791105178,
+        "mean_r": 0.16669163093255257,
+        "auroc_pairs": 0.6666666666666666
+      },
+      {
+        "trial": 1,
+        "pair": [
+          "machine-3-5",
+          "machine-3-8"
+        ],
+        "top_ranked": false,
+        "z": 0.9734629554489758,
+        "target_r": 0.36323699111398905,
+        "mean_r": 0.17716774004607752,
+        "auroc_pairs": 0.8333333333333334
+      },
+      {
+        "trial": 2,
+        "pair": [
+          "machine-3-3",
+          "machine-3-5"
+        ],
+        "top_ranked": false,
+        "z": 0.4899201823032845,
+        "target_r": 0.2791606282184087,
+        "mean_r": 0.1806726796995437,
+        "auroc_pairs": 0.8148148148148148
+      },
+      {
+        "trial": 3,
+        "pair": [
+          "machine-3-11",
+          "machine-3-9"
+        ],
+        "top_ranked": false,
+        "z": 1.630595925675556,
+        "target_r": 0.4943007580601442,
+        "mean_r": 0.1769700035375492,
+        "auroc_pairs": 0.8888888888888888
+      },
+      {
+        "trial": 4,
+        "pair": [
+          "machine-3-1",
+          "machine-3-6"
+        ],
+        "top_ranked": false,
+        "z": 1.0171146786750642,
+        "target_r": 0.3586035063177093,
+        "mean_r": 0.16476629195420497,
+        "auroc_pairs": 0.8518518518518519
+      },
+      {
+        "trial": 5,
+        "pair": [
+          "machine-3-1",
+          "machine-3-3"
+        ],
+        "top_ranked": false,
+        "z": -0.4716997571422252,
+        "target_r": 0.07831973956372094,
+        "mean_r": 0.17266422488579938,
+        "auroc_pairs": 0.3148148148148148
+      },
+      {
+        "trial": 6,
+        "pair": [
+          "machine-3-2",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -0.9244686102654317,
+        "target_r": 0.022046291529853518,
+        "mean_r": 0.21035466581830328,
+        "auroc_pairs": 0.12962962962962962
+      },
+      {
+        "trial": 7,
+        "pair": [
+          "machine-3-1",
+          "machine-3-9"
+        ],
+        "top_ranked": false,
+        "z": 1.9731006551392571,
+        "target_r": 0.6373461633470467,
+        "mean_r": 0.25311682944823694,
+        "auroc_pairs": 0.9629629629629629
+      },
+      {
+        "trial": 8,
+        "pair": [
+          "machine-3-10",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": 0.2730041457693759,
+        "target_r": 0.2439779304874247,
+        "mean_r": 0.18883298566921425,
+        "auroc_pairs": 0.6851851851851852
+      },
+      {
+        "trial": 9,
+        "pair": [
+          "machine-3-1",
+          "machine-3-6"
+        ],
+        "top_ranked": false,
+        "z": 1.2087304921853057,
+        "target_r": 0.4262375179775824,
+        "mean_r": 0.2021959322882564,
+        "auroc_pairs": 0.8703703703703703
+      },
+      {
+        "trial": 10,
+        "pair": [
+          "machine-3-10",
+          "machine-3-5"
+        ],
+        "top_ranked": false,
+        "z": 1.4618677430083733,
+        "target_r": 0.4595231228739525,
+        "mean_r": 0.17942608238373403,
+        "auroc_pairs": 0.8888888888888888
+      },
+      {
+        "trial": 11,
+        "pair": [
+          "machine-3-11",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": -1.1330058936916425,
+        "target_r": -0.016094795621682673,
+        "mean_r": 0.20221718631495425,
+        "auroc_pairs": 0.1111111111111111
+      },
+      {
+        "trial": 12,
+        "pair": [
+          "machine-3-2",
+          "machine-3-6"
+        ],
+        "top_ranked": false,
+        "z": -0.0986945115408932,
+        "target_r": 0.14689925882996907,
+        "mean_r": 0.16565387015333782,
+        "auroc_pairs": 0.4444444444444444
+      },
+      {
+        "trial": 13,
+        "pair": [
+          "machine-3-10",
+          "machine-3-7"
+        ],
+        "top_ranked": false,
+        "z": -0.15435318287739594,
+        "target_r": 0.09941870938915263,
+        "mean_r": 0.1298438744527749,
+        "auroc_pairs": 0.5
+      },
+      {
+        "trial": 14,
+        "pair": [
+          "machine-3-3",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -0.7405041860999523,
+        "target_r": 0.036982987328793834,
+        "mean_r": 0.19156669856704261,
+        "auroc_pairs": 0.18518518518518517
+      },
+      {
+        "trial": 15,
+        "pair": [
+          "machine-3-2",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -1.01917097467861,
+        "target_r": 0.018715088471063193,
+        "mean_r": 0.21658284237621125,
+        "auroc_pairs": 0.1111111111111111
+      },
+      {
+        "trial": 16,
+        "pair": [
+          "machine-3-11",
+          "machine-3-5"
+        ],
+        "top_ranked": false,
+        "z": -0.48696648976698004,
+        "target_r": 0.12916491974481023,
+        "mean_r": 0.22242216964476316,
+        "auroc_pairs": 0.3333333333333333
+      },
+      {
+        "trial": 17,
+        "pair": [
+          "machine-3-8",
+          "machine-3-9"
+        ],
+        "top_ranked": false,
+        "z": 0.961938595333681,
+        "target_r": 0.387226234541038,
+        "mean_r": 0.20955190603152113,
+        "auroc_pairs": 0.8148148148148148
+      },
+      {
+        "trial": 18,
+        "pair": [
+          "machine-3-5",
+          "machine-3-7"
+        ],
+        "top_ranked": false,
+        "z": -1.141408624036741,
+        "target_r": -0.04961709738998802,
+        "mean_r": 0.1822970473100924,
+        "auroc_pairs": 0.12962962962962962
+      },
+      {
+        "trial": 19,
+        "pair": [
+          "machine-3-11",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": -1.0921086090814616,
+        "target_r": -0.0652731021329547,
+        "mean_r": 0.15538528283826683,
+        "auroc_pairs": 0.1111111111111111
+      }
+    ],
+    "D_both|shared|raw_median": [
+      {
+        "trial": 0,
+        "pair": [
+          "machine-3-11",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -0.6963848206594917,
+        "target_r": -0.037335271620776905,
+        "mean_r": 0.12678854531155043,
+        "auroc_pairs": 0.24074074074074073
+      },
+      {
+        "trial": 1,
+        "pair": [
+          "machine-3-5",
+          "machine-3-8"
+        ],
+        "top_ranked": false,
+        "z": 1.5381840429949272,
+        "target_r": 0.4760933297480272,
+        "mean_r": 0.12571761454902086,
+        "auroc_pairs": 0.9259259259259259
+      },
+      {
+        "trial": 2,
+        "pair": [
+          "machine-3-3",
+          "machine-3-5"
+        ],
+        "top_ranked": false,
+        "z": 1.4329256437582438,
+        "target_r": 0.46599026937091115,
+        "mean_r": 0.132711687124218,
+        "auroc_pairs": 0.8888888888888888
+      },
+      {
+        "trial": 3,
+        "pair": [
+          "machine-3-11",
+          "machine-3-9"
+        ],
+        "top_ranked": false,
+        "z": 0.1210966627606054,
+        "target_r": 0.15678347745127857,
+        "mean_r": 0.12824763626794214,
+        "auroc_pairs": 0.5740740740740741
+      },
+      {
+        "trial": 4,
+        "pair": [
+          "machine-3-1",
+          "machine-3-6"
+        ],
+        "top_ranked": false,
+        "z": 0.4212577453166364,
+        "target_r": 0.21465566288309215,
+        "mean_r": 0.11850554123515245,
+        "auroc_pairs": 0.7037037037037037
+      },
+      {
+        "trial": 5,
+        "pair": [
+          "machine-3-1",
+          "machine-3-3"
+        ],
+        "top_ranked": false,
+        "z": 0.23552325036312827,
+        "target_r": 0.1866392008959958,
+        "mean_r": 0.12990572984996943,
+        "auroc_pairs": 0.6666666666666666
+      },
+      {
+        "trial": 6,
+        "pair": [
+          "machine-3-2",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -0.6230654909731298,
+        "target_r": -0.020399818184211275,
+        "mean_r": 0.13042891558430092,
+        "auroc_pairs": 0.25925925925925924
+      },
+      {
+        "trial": 7,
+        "pair": [
+          "machine-3-1",
+          "machine-3-9"
+        ],
+        "top_ranked": false,
+        "z": 0.8334730773963608,
+        "target_r": 0.3312203049790338,
+        "mean_r": 0.12937256764529367,
+        "auroc_pairs": 0.8148148148148148
+      },
+      {
+        "trial": 8,
+        "pair": [
+          "machine-3-10",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": 0.9447445418162178,
+        "target_r": 0.3431875721022447,
+        "mean_r": 0.124888405292765,
+        "auroc_pairs": 0.8148148148148148
+      },
+      {
+        "trial": 9,
+        "pair": [
+          "machine-3-1",
+          "machine-3-6"
+        ],
+        "top_ranked": false,
+        "z": 0.6620337438613726,
+        "target_r": 0.26672335329309127,
+        "mean_r": 0.11355233616897839,
+        "auroc_pairs": 0.7962962962962963
+      },
+      {
+        "trial": 10,
+        "pair": [
+          "machine-3-10",
+          "machine-3-5"
+        ],
+        "top_ranked": false,
+        "z": 2.0357728297597295,
+        "target_r": 0.5972270584017725,
+        "mean_r": 0.13007656520503316,
+        "auroc_pairs": 0.9814814814814815
+      },
+      {
+        "trial": 11,
+        "pair": [
+          "machine-3-11",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": -1.4596063112010174,
+        "target_r": -0.2069796860306581,
+        "mean_r": 0.13378858653975895,
+        "auroc_pairs": 0.09259259259259259
+      },
+      {
+        "trial": 12,
+        "pair": [
+          "machine-3-2",
+          "machine-3-6"
+        ],
+        "top_ranked": false,
+        "z": 0.28505379988291124,
+        "target_r": 0.1876286211812584,
+        "mean_r": 0.12133469021414271,
+        "auroc_pairs": 0.6296296296296297
+      },
+      {
+        "trial": 13,
+        "pair": [
+          "machine-3-10",
+          "machine-3-7"
+        ],
+        "top_ranked": false,
+        "z": -0.9792480968622927,
+        "target_r": -0.0979457075811446,
+        "mean_r": 0.12172924355595899,
+        "auroc_pairs": 0.16666666666666666
+      },
+      {
+        "trial": 14,
+        "pair": [
+          "machine-3-3",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -0.301255375706851,
+        "target_r": 0.05793911517902658,
+        "mean_r": 0.12970081123290142,
+        "auroc_pairs": 0.3888888888888889
+      },
+      {
+        "trial": 15,
+        "pair": [
+          "machine-3-2",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -0.6506679911105576,
+        "target_r": -0.022315383570638333,
+        "mean_r": 0.13504864740205033,
+        "auroc_pairs": 0.25925925925925924
+      },
+      {
+        "trial": 16,
+        "pair": [
+          "machine-3-11",
+          "machine-3-5"
+        ],
+        "top_ranked": false,
+        "z": -1.0542065694843377,
+        "target_r": -0.10237670817718156,
+        "mean_r": 0.12991013188548967,
+        "auroc_pairs": 0.12962962962962962
+      },
+      {
+        "trial": 17,
+        "pair": [
+          "machine-3-8",
+          "machine-3-9"
+        ],
+        "top_ranked": false,
+        "z": 0.5814486851473014,
+        "target_r": 0.25381785498602,
+        "mean_r": 0.1190420362416161,
+        "auroc_pairs": 0.7777777777777778
+      },
+      {
+        "trial": 18,
+        "pair": [
+          "machine-3-5",
+          "machine-3-7"
+        ],
+        "top_ranked": false,
+        "z": -1.2551897162264507,
+        "target_r": -0.15702130207470238,
+        "mean_r": 0.12966307170359362,
+        "auroc_pairs": 0.12962962962962962
+      },
+      {
+        "trial": 19,
+        "pair": [
+          "machine-3-11",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": -1.536119056198819,
+        "target_r": -0.2189197520501759,
+        "mean_r": 0.12786988362886162,
+        "auroc_pairs": 0.07407407407407407
+      }
+    ],
+    "D_both|shared|standardised_median": [
+      {
+        "trial": 0,
+        "pair": [
+          "machine-3-11",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -0.21536350098201787,
+        "target_r": -0.0024074287452002826,
+        "mean_r": 0.040425314245063244,
+        "auroc_pairs": 0.3148148148148148
+      },
+      {
+        "trial": 1,
+        "pair": [
+          "machine-3-5",
+          "machine-3-8"
+        ],
+        "top_ranked": false,
+        "z": 0.8985320663475788,
+        "target_r": 0.21788884428381808,
+        "mean_r": 0.03513491282775295,
+        "auroc_pairs": 0.8333333333333334
+      },
+      {
+        "trial": 2,
+        "pair": [
+          "machine-3-3",
+          "machine-3-5"
+        ],
+        "top_ranked": false,
+        "z": 1.5226999912713421,
+        "target_r": 0.34889296906970185,
+        "mean_r": 0.03937001710600879,
+        "auroc_pairs": 0.9629629629629629
+      },
+      {
+        "trial": 3,
+        "pair": [
+          "machine-3-11",
+          "machine-3-9"
+        ],
+        "top_ranked": false,
+        "z": 1.0646616039991463,
+        "target_r": 0.2511489552117411,
+        "mean_r": 0.03823225193845043,
+        "auroc_pairs": 0.9074074074074074
+      },
+      {
+        "trial": 4,
+        "pair": [
+          "machine-3-1",
+          "machine-3-6"
+        ],
+        "top_ranked": false,
+        "z": 0.6132513950788474,
+        "target_r": 0.15684811508740554,
+        "mean_r": 0.03602933709323233,
+        "auroc_pairs": 0.7592592592592593
+      },
+      {
+        "trial": 5,
+        "pair": [
+          "machine-3-1",
+          "machine-3-3"
+        ],
+        "top_ranked": false,
+        "z": 0.4238119320031117,
+        "target_r": 0.12484488616345484,
+        "mean_r": 0.036563618277880974,
+        "auroc_pairs": 0.6851851851851852
+      },
+      {
+        "trial": 6,
+        "pair": [
+          "machine-3-2",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -0.18047584725830101,
+        "target_r": 0.0003852472791086269,
+        "mean_r": 0.037423243586370086,
+        "auroc_pairs": 0.3333333333333333
+      },
+      {
+        "trial": 7,
+        "pair": [
+          "machine-3-1",
+          "machine-3-9"
+        ],
+        "top_ranked": false,
+        "z": 2.2091867742388263,
+        "target_r": 0.4663613775936183,
+        "mean_r": 0.033853700637926955,
+        "auroc_pairs": 0.9814814814814815
+      },
+      {
+        "trial": 8,
+        "pair": [
+          "machine-3-10",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": 1.084079521393703,
+        "target_r": 0.24971408920239369,
+        "mean_r": 0.032875920324981954,
+        "auroc_pairs": 0.9074074074074074
+      },
+      {
+        "trial": 9,
+        "pair": [
+          "machine-3-1",
+          "machine-3-6"
+        ],
+        "top_ranked": false,
+        "z": 1.024628100048288,
+        "target_r": 0.2366846097710515,
+        "mean_r": 0.03543653595257562,
+        "auroc_pairs": 0.9074074074074074
+      },
+      {
+        "trial": 10,
+        "pair": [
+          "machine-3-10",
+          "machine-3-5"
+        ],
+        "top_ranked": false,
+        "z": 1.5611676449037888,
+        "target_r": 0.350503727508969,
+        "mean_r": 0.03574559550388873,
+        "auroc_pairs": 0.9629629629629629
+      },
+      {
+        "trial": 11,
+        "pair": [
+          "machine-3-11",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": -1.1522109684667166,
+        "target_r": -0.19311123894608995,
+        "mean_r": 0.036235375429950416,
+        "auroc_pairs": 0.12962962962962962
+      },
+      {
+        "trial": 12,
+        "pair": [
+          "machine-3-2",
+          "machine-3-6"
+        ],
+        "top_ranked": false,
+        "z": -0.350482233884892,
+        "target_r": -0.035560521744220815,
+        "mean_r": 0.034243945342007844,
+        "auroc_pairs": 0.2777777777777778
+      },
+      {
+        "trial": 13,
+        "pair": [
+          "machine-3-10",
+          "machine-3-7"
+        ],
+        "top_ranked": false,
+        "z": -0.8579235419683423,
+        "target_r": -0.13132606534308552,
+        "mean_r": 0.03658580276076418,
+        "auroc_pairs": 0.2222222222222222
+      },
+      {
+        "trial": 14,
+        "pair": [
+          "machine-3-3",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -0.03416260930648557,
+        "target_r": 0.03350529315850857,
+        "mean_r": 0.040541337927669216,
+        "auroc_pairs": 0.3888888888888889
+      },
+      {
+        "trial": 15,
+        "pair": [
+          "machine-3-2",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -0.16322137310388957,
+        "target_r": 0.004121115029080505,
+        "mean_r": 0.0377307601760946,
+        "auroc_pairs": 0.35185185185185186
+      },
+      {
+        "trial": 16,
+        "pair": [
+          "machine-3-11",
+          "machine-3-5"
+        ],
+        "top_ranked": false,
+        "z": -1.078039686878405,
+        "target_r": -0.16329233127229348,
+        "mean_r": 0.03967093389194603,
+        "auroc_pairs": 0.16666666666666666
+      },
+      {
+        "trial": 17,
+        "pair": [
+          "machine-3-8",
+          "machine-3-9"
+        ],
+        "top_ranked": false,
+        "z": 1.0105129689671297,
+        "target_r": 0.22986477741832637,
+        "mean_r": 0.030615758963059302,
+        "auroc_pairs": 0.8888888888888888
+      },
+      {
+        "trial": 18,
+        "pair": [
+          "machine-3-5",
+          "machine-3-7"
+        ],
+        "top_ranked": false,
+        "z": -1.612596869700181,
+        "target_r": -0.2816502335809717,
+        "mean_r": 0.03896495513255565,
+        "auroc_pairs": 0.05555555555555555
+      },
+      {
+        "trial": 19,
+        "pair": [
+          "machine-3-11",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": -1.2928086282488238,
+        "target_r": -0.21283153728317522,
+        "mean_r": 0.042674745956148376,
+        "auroc_pairs": 0.14814814814814814
+      }
+    ],
+    "D_both|per_station|none": [
+      {
+        "trial": 0,
+        "pair": [
+          "machine-3-11",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -0.09298686870318165,
+        "target_r": 0.34655628934822885,
+        "mean_r": 0.36181450227824835,
+        "auroc_pairs": 0.48148148148148145
+      },
+      {
+        "trial": 1,
+        "pair": [
+          "machine-3-5",
+          "machine-3-8"
+        ],
+        "top_ranked": false,
+        "z": 1.7284793815657533,
+        "target_r": 0.5914778351749962,
+        "mean_r": 0.3122610074672539,
+        "auroc_pairs": 0.9814814814814815
+      },
+      {
+        "trial": 2,
+        "pair": [
+          "machine-3-3",
+          "machine-3-5"
+        ],
+        "top_ranked": false,
+        "z": 0.07894637881491715,
+        "target_r": 0.36810421185902487,
+        "mean_r": 0.3540741120840321,
+        "auroc_pairs": 0.5370370370370371
+      },
+      {
+        "trial": 3,
+        "pair": [
+          "machine-3-11",
+          "machine-3-9"
+        ],
+        "top_ranked": true,
+        "z": 2.1206822225201303,
+        "target_r": 0.6917453902826035,
+        "mean_r": 0.3550378817473223,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 4,
+        "pair": [
+          "machine-3-1",
+          "machine-3-6"
+        ],
+        "top_ranked": false,
+        "z": 1.8633643840033707,
+        "target_r": 0.59430855272236,
+        "mean_r": 0.3079005527492004,
+        "auroc_pairs": 0.9629629629629629
+      },
+      {
+        "trial": 5,
+        "pair": [
+          "machine-3-1",
+          "machine-3-3"
+        ],
+        "top_ranked": false,
+        "z": -0.07268989202286148,
+        "target_r": 0.32451710524273186,
+        "mean_r": 0.3385131354258076,
+        "auroc_pairs": 0.5
+      },
+      {
+        "trial": 6,
+        "pair": [
+          "machine-3-2",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -1.20806856383983,
+        "target_r": 0.13051877985323543,
+        "mean_r": 0.35420944105868435,
+        "auroc_pairs": 0.12962962962962962
+      },
+      {
+        "trial": 7,
+        "pair": [
+          "machine-3-1",
+          "machine-3-9"
+        ],
+        "top_ranked": false,
+        "z": 1.936604566726094,
+        "target_r": 0.6622347827322099,
+        "mean_r": 0.3514857688765751,
+        "auroc_pairs": 0.9814814814814815
+      },
+      {
+        "trial": 8,
+        "pair": [
+          "machine-3-10",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": -0.5273408728408571,
+        "target_r": 0.26489641181582363,
+        "mean_r": 0.3472097659516999,
+        "auroc_pairs": 0.3888888888888889
+      },
+      {
+        "trial": 9,
+        "pair": [
+          "machine-3-1",
+          "machine-3-6"
+        ],
+        "top_ranked": false,
+        "z": 1.4636011109432585,
+        "target_r": 0.6085962098986961,
+        "mean_r": 0.34688987240366786,
+        "auroc_pairs": 0.9074074074074074
+      },
+      {
+        "trial": 10,
+        "pair": [
+          "machine-3-10",
+          "machine-3-5"
+        ],
+        "top_ranked": false,
+        "z": 1.4672860900761744,
+        "target_r": 0.5079265016755851,
+        "mean_r": 0.2902445071469354,
+        "auroc_pairs": 0.9259259259259259
+      },
+      {
+        "trial": 11,
+        "pair": [
+          "machine-3-11",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": -1.1407292686065165,
+        "target_r": 0.17193882281438172,
+        "mean_r": 0.35615576410277916,
+        "auroc_pairs": 0.12962962962962962
+      },
+      {
+        "trial": 12,
+        "pair": [
+          "machine-3-2",
+          "machine-3-6"
+        ],
+        "top_ranked": false,
+        "z": -0.41391917359139924,
+        "target_r": 0.25071587611249535,
+        "mean_r": 0.31477230446471244,
+        "auroc_pairs": 0.42592592592592593
+      },
+      {
+        "trial": 13,
+        "pair": [
+          "machine-3-10",
+          "machine-3-7"
+        ],
+        "top_ranked": true,
+        "z": 2.776524704505516,
+        "target_r": 0.6902413864784088,
+        "mean_r": 0.30039122965283516,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 14,
+        "pair": [
+          "machine-3-3",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -0.8713766368636623,
+        "target_r": 0.20948399146030683,
+        "mean_r": 0.36875380911950106,
+        "auroc_pairs": 0.2777777777777778
+      },
+      {
+        "trial": 15,
+        "pair": [
+          "machine-3-2",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": -1.3169931862069795,
+        "target_r": 0.12416547516275443,
+        "mean_r": 0.3641453215311057,
+        "auroc_pairs": 0.1111111111111111
+      },
+      {
+        "trial": 16,
+        "pair": [
+          "machine-3-11",
+          "machine-3-5"
+        ],
+        "top_ranked": false,
+        "z": 1.062874880566412,
+        "target_r": 0.5256430657586887,
+        "mean_r": 0.35780676086158386,
+        "auroc_pairs": 0.8148148148148148
+      },
+      {
+        "trial": 17,
+        "pair": [
+          "machine-3-8",
+          "machine-3-9"
+        ],
+        "top_ranked": false,
+        "z": 1.9478477875110718,
+        "target_r": 0.6393650806780987,
+        "mean_r": 0.3359505727677974,
+        "auroc_pairs": 0.9814814814814815
+      },
+      {
+        "trial": 18,
+        "pair": [
+          "machine-3-5",
+          "machine-3-7"
+        ],
+        "top_ranked": false,
+        "z": 1.0845612282731292,
+        "target_r": 0.5271186727708124,
+        "mean_r": 0.34910701009583345,
+        "auroc_pairs": 0.7777777777777778
+      },
+      {
+        "trial": 19,
+        "pair": [
+          "machine-3-11",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": -0.7234113791463139,
+        "target_r": 0.2516557478370471,
+        "mean_r": 0.37115263063649334,
+        "auroc_pairs": 0.3333333333333333
+      }
+    ],
+    "D_both|per_station|raw_median": [
+      {
+        "trial": 0,
+        "pair": [
+          "machine-3-11",
+          "machine-3-4"
+        ],
+        "top_ranked": true,
+        "z": 3.9467841410475497,
+        "target_r": 0.23130208452778048,
+        "mean_r": 0.021078532602249365,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 1,
+        "pair": [
+          "machine-3-5",
+          "machine-3-8"
+        ],
+        "top_ranked": true,
+        "z": 6.155914210107797,
+        "target_r": 0.4054123760093662,
+        "mean_r": 0.019723088253961314,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 2,
+        "pair": [
+          "machine-3-3",
+          "machine-3-5"
+        ],
+        "top_ranked": true,
+        "z": 3.8465265551537535,
+        "target_r": 0.24200304008994156,
+        "mean_r": 0.021180027250744186,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 3,
+        "pair": [
+          "machine-3-11",
+          "machine-3-9"
+        ],
+        "top_ranked": true,
+        "z": 8.912947053849672,
+        "target_r": 0.4990570199681802,
+        "mean_r": 0.02299939809399557,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 4,
+        "pair": [
+          "machine-3-1",
+          "machine-3-6"
+        ],
+        "top_ranked": true,
+        "z": 5.848796782251299,
+        "target_r": 0.40417138636066874,
+        "mean_r": 0.02005797658198926,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 5,
+        "pair": [
+          "machine-3-1",
+          "machine-3-3"
+        ],
+        "top_ranked": false,
+        "z": 2.417106385320324,
+        "target_r": 0.16547472555517498,
+        "mean_r": 0.02012244200104029,
+        "auroc_pairs": 0.9814814814814815
+      },
+      {
+        "trial": 6,
+        "pair": [
+          "machine-3-2",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": 1.4509202032569997,
+        "target_r": 0.10628850245459323,
+        "mean_r": 0.022478866067742864,
+        "auroc_pairs": 0.9444444444444444
+      },
+      {
+        "trial": 7,
+        "pair": [
+          "machine-3-1",
+          "machine-3-9"
+        ],
+        "top_ranked": true,
+        "z": 8.164377601398458,
+        "target_r": 0.4862216989827689,
+        "mean_r": 0.025846838323788444,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 8,
+        "pair": [
+          "machine-3-10",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": 2.3240140778483918,
+        "target_r": 0.1480106160576343,
+        "mean_r": 0.018607708445236907,
+        "auroc_pairs": 0.9814814814814815
+      },
+      {
+        "trial": 9,
+        "pair": [
+          "machine-3-1",
+          "machine-3-6"
+        ],
+        "top_ranked": true,
+        "z": 5.851288739101748,
+        "target_r": 0.3900556364277672,
+        "mean_r": 0.024085865945365447,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 10,
+        "pair": [
+          "machine-3-10",
+          "machine-3-5"
+        ],
+        "top_ranked": true,
+        "z": 5.074926600866301,
+        "target_r": 0.3163988437396706,
+        "mean_r": 0.021442440442462223,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 11,
+        "pair": [
+          "machine-3-11",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": 1.2774565309214987,
+        "target_r": 0.08827894598999042,
+        "mean_r": 0.021222946009542484,
+        "auroc_pairs": 0.9259259259259259
+      },
+      {
+        "trial": 12,
+        "pair": [
+          "machine-3-2",
+          "machine-3-6"
+        ],
+        "top_ranked": false,
+        "z": 2.7510649071298383,
+        "target_r": 0.17994962983908738,
+        "mean_r": 0.022139915451590598,
+        "auroc_pairs": 0.9814814814814815
+      },
+      {
+        "trial": 13,
+        "pair": [
+          "machine-3-10",
+          "machine-3-7"
+        ],
+        "top_ranked": true,
+        "z": 9.011875806519562,
+        "target_r": 0.48268927820670016,
+        "mean_r": 0.020216781230576124,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 14,
+        "pair": [
+          "machine-3-3",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": 1.9122436262939255,
+        "target_r": 0.1287813860916431,
+        "mean_r": 0.023709462653908244,
+        "auroc_pairs": 0.9629629629629629
+      },
+      {
+        "trial": 15,
+        "pair": [
+          "machine-3-2",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": 1.1173779394244152,
+        "target_r": 0.08945323567601116,
+        "mean_r": 0.02271815213735518,
+        "auroc_pairs": 0.9074074074074074
+      },
+      {
+        "trial": 16,
+        "pair": [
+          "machine-3-11",
+          "machine-3-5"
+        ],
+        "top_ranked": true,
+        "z": 6.116719247416948,
+        "target_r": 0.3576542587563893,
+        "mean_r": 0.027624509209407722,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 17,
+        "pair": [
+          "machine-3-8",
+          "machine-3-9"
+        ],
+        "top_ranked": true,
+        "z": 8.879013909001385,
+        "target_r": 0.5055629165009156,
+        "mean_r": 0.01745066300748693,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 18,
+        "pair": [
+          "machine-3-5",
+          "machine-3-7"
+        ],
+        "top_ranked": true,
+        "z": 4.886794952046906,
+        "target_r": 0.29194988733498894,
+        "mean_r": 0.022173770360520897,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 19,
+        "pair": [
+          "machine-3-11",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": 2.0378260685633256,
+        "target_r": 0.12963057029757225,
+        "mean_r": 0.02308526442492282,
+        "auroc_pairs": 0.9814814814814815
+      }
+    ],
+    "D_both|per_station|standardised_median": [
+      {
+        "trial": 0,
+        "pair": [
+          "machine-3-11",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": 1.5371048681085338,
+        "target_r": 0.15019680388380624,
+        "mean_r": 0.02737043918953642,
+        "auroc_pairs": 0.9259259259259259
+      },
+      {
+        "trial": 1,
+        "pair": [
+          "machine-3-5",
+          "machine-3-8"
+        ],
+        "top_ranked": true,
+        "z": 3.4919439274462496,
+        "target_r": 0.31952714182931713,
+        "mean_r": 0.02930251053827311,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 2,
+        "pair": [
+          "machine-3-3",
+          "machine-3-5"
+        ],
+        "top_ranked": true,
+        "z": 3.071308569293512,
+        "target_r": 0.28268219530685357,
+        "mean_r": 0.022322440763465706,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 3,
+        "pair": [
+          "machine-3-11",
+          "machine-3-9"
+        ],
+        "top_ranked": true,
+        "z": 6.472529779836304,
+        "target_r": 0.542494020906331,
+        "mean_r": 0.025912619122655196,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 4,
+        "pair": [
+          "machine-3-1",
+          "machine-3-6"
+        ],
+        "top_ranked": true,
+        "z": 5.014524378033685,
+        "target_r": 0.4384326432090552,
+        "mean_r": 0.02367799344904939,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 5,
+        "pair": [
+          "machine-3-1",
+          "machine-3-3"
+        ],
+        "top_ranked": false,
+        "z": 0.9281984535330873,
+        "target_r": 0.11432257906103763,
+        "mean_r": 0.023399983943070024,
+        "auroc_pairs": 0.8333333333333334
+      },
+      {
+        "trial": 6,
+        "pair": [
+          "machine-3-2",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": 2.1260623589920598,
+        "target_r": 0.23375590197183316,
+        "mean_r": 0.03047268757715052,
+        "auroc_pairs": 0.9814814814814815
+      },
+      {
+        "trial": 7,
+        "pair": [
+          "machine-3-1",
+          "machine-3-9"
+        ],
+        "top_ranked": true,
+        "z": 5.839927655154285,
+        "target_r": 0.5157003182399696,
+        "mean_r": 0.02559813201001077,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 8,
+        "pair": [
+          "machine-3-10",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": 1.370656212884432,
+        "target_r": 0.14852034305842765,
+        "mean_r": 0.02695123042452908,
+        "auroc_pairs": 0.9074074074074074
+      },
+      {
+        "trial": 9,
+        "pair": [
+          "machine-3-1",
+          "machine-3-6"
+        ],
+        "top_ranked": true,
+        "z": 4.202393840339624,
+        "target_r": 0.43147362936998934,
+        "mean_r": 0.0301682703148524,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 10,
+        "pair": [
+          "machine-3-10",
+          "machine-3-5"
+        ],
+        "top_ranked": true,
+        "z": 4.3192901417279534,
+        "target_r": 0.35482367700305184,
+        "mean_r": 0.02742512789775272,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 11,
+        "pair": [
+          "machine-3-11",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": -0.03224442153033906,
+        "target_r": 0.020528885703942974,
+        "mean_r": 0.022985013478722328,
+        "auroc_pairs": 0.48148148148148145
+      },
+      {
+        "trial": 12,
+        "pair": [
+          "machine-3-2",
+          "machine-3-6"
+        ],
+        "top_ranked": false,
+        "z": 1.015971060962641,
+        "target_r": 0.1038463426778316,
+        "mean_r": 0.023967398841375356,
+        "auroc_pairs": 0.8148148148148148
+      },
+      {
+        "trial": 13,
+        "pair": [
+          "machine-3-10",
+          "machine-3-7"
+        ],
+        "top_ranked": true,
+        "z": 6.879446874602093,
+        "target_r": 0.5276790206223085,
+        "mean_r": 0.028115659074875118,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 14,
+        "pair": [
+          "machine-3-3",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": 2.1235717343245217,
+        "target_r": 0.2159215974521132,
+        "mean_r": 0.03018589078954346,
+        "auroc_pairs": 0.9814814814814815
+      },
+      {
+        "trial": 15,
+        "pair": [
+          "machine-3-2",
+          "machine-3-4"
+        ],
+        "top_ranked": false,
+        "z": 1.7632920011494362,
+        "target_r": 0.20262090342893788,
+        "mean_r": 0.028212662178738513,
+        "auroc_pairs": 0.9629629629629629
+      },
+      {
+        "trial": 16,
+        "pair": [
+          "machine-3-11",
+          "machine-3-5"
+        ],
+        "top_ranked": true,
+        "z": 4.0528550013365185,
+        "target_r": 0.31655842926526134,
+        "mean_r": 0.02984109362993763,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 17,
+        "pair": [
+          "machine-3-8",
+          "machine-3-9"
+        ],
+        "top_ranked": true,
+        "z": 6.176449364859883,
+        "target_r": 0.5239452730443072,
+        "mean_r": 0.029738506750115995,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 18,
+        "pair": [
+          "machine-3-5",
+          "machine-3-7"
+        ],
+        "top_ranked": true,
+        "z": 3.5209385812139318,
+        "target_r": 0.31365909094523936,
+        "mean_r": 0.03028282238191531,
+        "auroc_pairs": 1.0
+      },
+      {
+        "trial": 19,
+        "pair": [
+          "machine-3-11",
+          "machine-3-2"
+        ],
+        "top_ranked": false,
+        "z": 0.026554104800924513,
+        "target_r": 0.02614047878321706,
+        "mean_r": 0.023824703394180306,
+        "auroc_pairs": 0.5185185185185185
+      }
+    ]
+  },
+  "best_cell": "D_both|per_station|raw_median",
+  "skew_sweep": {
+    "0": {
+      "detection_rate_top_ranked": 0.75,
+      "z_median": 3.9299245263385414,
+      "auroc_over_pairs_mean": 0.9916666666666666
+    },
+    "1": {
+      "detection_rate_top_ranked": 0.65,
+      "z_median": 3.4905025046519897,
+      "auroc_over_pairs_mean": 0.987037037037037
+    },
+    "2": {
+      "detection_rate_top_ranked": 0.6,
+      "z_median": 3.3724929120465927,
+      "auroc_over_pairs_mean": 0.9814814814814815
+    },
+    "3": {
+      "detection_rate_top_ranked": 0.35,
+      "z_median": 2.6897615180371095,
+      "auroc_over_pairs_mean": 0.9537037037037036
+    },
+    "4": {
+      "detection_rate_top_ranked": 0.3,
+      "z_median": 1.8823071394636166,
+      "auroc_over_pairs_mean": 0.9388888888888889
+    },
+    "6": {
+      "detection_rate_top_ranked": 0.15,
+      "z_median": 1.2482502503075654,
+      "auroc_over_pairs_mean": 0.8277777777777778
+    },
+    "8": {
+      "detection_rate_top_ranked": 0.15,
+      "z_median": 0.8029640451462507,
+      "auroc_over_pairs_mean": 0.7259259259259261
+    }
+  },
+  "runtime_s": 249.6
+}

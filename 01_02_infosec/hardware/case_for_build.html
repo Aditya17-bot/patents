@@ -1,0 +1,397 @@
+<title>Interlock Node Build Case</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+
+<style>
+  :root{
+    --paper:#F1F3F2; --surface:#FAFBFA; --sunk:#E6E9E8;
+    --ink:#12171A; --ink-2:#3D474C; --ink-3:#6B767C;
+    --rule:#D2D7D6; --rule-2:#BFC6C5;
+    --accent:#06697A; --accent-soft:#DCEBEE; --accent-ink:#04505E;
+    --ok:#2F7D4F; --advise:#9A6510; --gate:#A93B2B;
+    --ok-soft:#E2F0E7; --advise-soft:#F6EBD8; --gate-soft:#F7E3DF;
+    --shadow:0 1px 2px rgba(18,23,26,.06),0 8px 24px -12px rgba(18,23,26,.18);
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --paper:#0E1214; --surface:#161C1F; --sunk:#0A0E10;
+      --ink:#E8EDEC; --ink-2:#AEB9B9; --ink-3:#7C8888;
+      --rule:#252D30; --rule-2:#364044;
+      --accent:#54B8CC; --accent-soft:#123037; --accent-ink:#8FD6E4;
+      --ok:#63BE8A; --advise:#D8A341; --gate:#E0705C;
+      --ok-soft:#152C20; --advise-soft:#2E2413; --gate-soft:#301A16;
+      --shadow:0 1px 2px rgba(0,0,0,.5),0 8px 24px -12px rgba(0,0,0,.7);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#0E1214; --surface:#161C1F; --sunk:#0A0E10;
+    --ink:#E8EDEC; --ink-2:#AEB9B9; --ink-3:#7C8888;
+    --rule:#252D30; --rule-2:#364044;
+    --accent:#54B8CC; --accent-soft:#123037; --accent-ink:#8FD6E4;
+    --ok:#63BE8A; --advise:#D8A341; --gate:#E0705C;
+    --ok-soft:#152C20; --advise-soft:#2E2413; --gate-soft:#301A16;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 8px 24px -12px rgba(0,0,0,.7);
+  }
+
+  *{box-sizing:border-box}
+  body{
+    background:var(--paper); color:var(--ink);
+    font-family:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,sans-serif;
+    font-size:16px; line-height:1.6; margin:0;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:78ch; margin:0 auto; padding:clamp(2rem,5vw,4.5rem) clamp(1.1rem,4vw,2rem) 6rem}
+  h1,h2,h3{font-family:Archivo,"IBM Plex Sans",sans-serif; text-wrap:balance; margin:0}
+  h1{font-size:clamp(2rem,5.2vw,3.1rem); font-weight:700; letter-spacing:-.022em; line-height:1.08}
+  h2{font-size:clamp(1.3rem,2.9vw,1.65rem); font-weight:600; letter-spacing:-.012em}
+  h3{font-size:1.02rem; font-weight:600; letter-spacing:-.005em}
+  p{margin:0; max-width:66ch}
+  a{color:var(--accent-ink)}
+  code,.mono{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.87em}
+
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace; font-size:.7rem; font-weight:500;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--ink-3);
+  }
+  header{display:flex; flex-direction:column; gap:1.1rem; padding-bottom:2.2rem;
+    border-bottom:2px solid var(--ink)}
+  .lede{font-size:1.12rem; color:var(--ink-2); max-width:60ch}
+
+  section{display:flex; flex-direction:column; gap:1.1rem; padding:2.9rem 0;
+    border-bottom:1px solid var(--rule)}
+  section:last-of-type{border-bottom:none}
+
+  .ask{
+    display:flex; flex-wrap:wrap; gap:0; border:1px solid var(--rule-2);
+    border-radius:3px; overflow:hidden; background:var(--surface); box-shadow:var(--shadow);
+  }
+  .ask div{flex:1 1 8rem; padding:1.05rem 1.2rem; border-right:1px solid var(--rule)}
+  .ask div:last-child{border-right:none}
+  .ask .n{font-family:Archivo,sans-serif; font-size:1.55rem; font-weight:700;
+    letter-spacing:-.02em; font-variant-numeric:tabular-nums; display:block}
+  .ask .k{font-family:"IBM Plex Mono",monospace; font-size:.68rem; letter-spacing:.13em;
+    text-transform:uppercase; color:var(--ink-3)}
+
+  /* measured vs derived is the spine of the whole document */
+  .tag{display:inline-flex; align-items:center; gap:.4rem; font-family:"IBM Plex Mono",monospace;
+    font-size:.66rem; letter-spacing:.1em; text-transform:uppercase; padding:.17rem .5rem;
+    border-radius:2px; white-space:nowrap; vertical-align:.08em}
+  .tag.m{background:var(--accent-soft); color:var(--accent-ink); border:1px solid transparent}
+  .tag.d{background:transparent; color:var(--ink-3); border:1px dashed var(--rule-2)}
+  .tag.risk{background:var(--gate-soft); color:var(--gate); border:1px solid transparent}
+
+  .tbl{overflow-x:auto; border:1px solid var(--rule-2); border-radius:3px; background:var(--surface)}
+  table{border-collapse:collapse; width:100%; font-size:.88rem; min-width:30rem}
+  th,td{text-align:left; padding:.6rem .85rem; border-bottom:1px solid var(--rule)}
+  thead th{font-family:"IBM Plex Mono",monospace; font-size:.66rem; letter-spacing:.11em;
+    text-transform:uppercase; color:var(--ink-3); background:var(--sunk);
+    border-bottom:1px solid var(--rule-2); font-weight:500; white-space:nowrap}
+  tbody tr:last-child td{border-bottom:none}
+  td.num{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums; white-space:nowrap}
+  tr.total td{font-weight:600; background:var(--sunk)}
+  tr.total td.num{color:var(--accent-ink)}
+
+  figure{margin:0; display:flex; flex-direction:column; gap:.75rem}
+  figcaption{font-size:.83rem; color:var(--ink-3); max-width:62ch}
+  .fig-box{border:1px solid var(--rule-2); border-radius:3px; background:var(--surface);
+    padding:1.3rem 1rem; overflow-x:auto}
+  svg{display:block; max-width:100%; height:auto; margin:0 auto}
+
+  .budget{display:flex; flex-direction:column; gap:.55rem}
+  .bar{display:flex; height:2.6rem; border-radius:3px; overflow:hidden;
+    border:1px solid var(--rule-2)}
+  .bar span{display:block; position:relative}
+  .seg-sw{background:var(--accent)}
+  .seg-hw{background:var(--accent); opacity:.42;
+    background-image:repeating-linear-gradient(45deg,transparent 0 5px,rgba(255,255,255,.28) 5px 10px)}
+  .seg-margin{background:var(--sunk)}
+  .legend{display:flex; flex-wrap:wrap; gap:1.2rem; font-size:.8rem; color:var(--ink-2)}
+  .legend i{display:inline-block; width:.85rem; height:.85rem; border-radius:2px;
+    margin-right:.42rem; vertical-align:-.1em; border:1px solid var(--rule-2)}
+
+  .ladder{display:flex; flex-direction:column; gap:.5rem}
+  .rung{display:grid; grid-template-columns:5.5rem 1fr; gap:.9rem; align-items:baseline;
+    padding:.7rem .9rem; border-radius:3px; border:1px solid var(--rule)}
+  .rung .s{font-family:"IBM Plex Mono",monospace; font-size:.73rem; font-weight:600;
+    letter-spacing:.1em; text-transform:uppercase}
+  .r-obs{background:var(--surface)} .r-obs .s{color:var(--ink-3)}
+  .r-adv{background:var(--advise-soft); border-color:transparent} .r-adv .s{color:var(--advise)}
+  .r-gate{background:var(--gate-soft); border-color:transparent} .r-gate .s{color:var(--gate)}
+  .r-hold{background:var(--sunk)} .r-hold .s{color:var(--ink-2)}
+  .rung p{font-size:.9rem}
+
+  .callout{border-left:3px solid var(--gate); background:var(--gate-soft);
+    padding:1rem 1.2rem; border-radius:0 3px 3px 0; display:flex; flex-direction:column; gap:.5rem}
+  .callout .eyebrow{color:var(--gate)}
+  .note{border-left:3px solid var(--rule-2); padding-left:1.1rem; color:var(--ink-2); font-size:.93rem}
+
+  ul{margin:0; padding-left:1.15rem; display:flex; flex-direction:column; gap:.5rem}
+  li{max-width:64ch}
+  li::marker{color:var(--ink-3)}
+  strong{font-weight:600}
+  footer{padding-top:2.5rem; color:var(--ink-3); font-size:.82rem}
+</style>
+
+<div class="wrap">
+
+<header>
+  <span class="eyebrow">Build proposal &middot; candidate-station interlock node</span>
+  <h1>₹1,150 of parts is what stands between this patent and a filing</h1>
+  <p class="lede">The control software is written, verified against real recordings, and
+  consumes 0.06&nbsp;% of its timing budget. What it has never been connected to is a single
+  one of the sensors the disclosure actually claims.</p>
+  <div class="ask">
+    <div><span class="n">₹1,150</span><span class="k">parts, one station</span></div>
+    <div><span class="n">8</span><span class="k">bench measurements</span></div>
+    <div><span class="n">1.588 ms</span><span class="k">software path, measured</span></div>
+    <div><span class="n">169 ms</span><span class="k">latency margin</span></div>
+  </div>
+</header>
+
+<section>
+  <span class="eyebrow">The problem this solves</span>
+  <h2>Every number in the disclosure today comes from a stand-in</h2>
+  <p>The invention claims three things that separate it from the closest prior art
+  (<code>US20190156689A1</code>, which flags a behavioural sequence and then suspends the exam
+  <em>in software</em>): a question-onset anchor that is physically measured rather than read
+  from a log; attribution of a sound to the seated candidate through structure-borne coupling,
+  so a neighbour cannot implicate them; and an intervention that physically interrupts the
+  keyboard's data path.</p>
+  <p>None of the three has been measured. The validation corpus supplied a software log marker
+  instead of a photodiode, a pocket-worn phone instead of a desk sensor, and password typing
+  instead of exam transcription. No public dataset carries synchronised photodiode,
+  desk-contact and keystroke channels from one station &mdash; which is precisely why the
+  parts have to exist.</p>
+  <div class="note">A reviewer graded the current draft <strong>3/10 on patent
+  defensibility</strong> for exactly this reason. The reference filing that cleared stage&nbsp;1
+  had hardware that was, in its own words, assembled and interconnected, with integration
+  tests run against it.</div>
+</section>
+
+<section>
+  <span class="eyebrow">Signal path</span>
+  <h2>Four channels in, one physical interruption out</h2>
+  <figure>
+    <div class="fig-box">
+      <svg viewBox="0 0 720 330" role="img" aria-label="Signal path from four transducers through the node controller and host to the in-line USB gate">
+        <defs>
+          <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+          </marker>
+        </defs>
+        <g fill="none" stroke="currentColor" color="var(--rule-2)" stroke-width="1.4"/>
+
+        <!-- transducers -->
+        <g font-family="IBM Plex Mono, monospace" font-size="10.5">
+          <g>
+            <rect x="8" y="16" width="150" height="42" rx="3" fill="var(--sunk)" stroke="var(--rule-2)"/>
+            <text x="20" y="34" fill="var(--ink)" font-size="11.5" font-weight="600">photodiode</text>
+            <text x="20" y="49" fill="var(--ink-3)">210 &middot; onset anchor</text>
+          </g>
+          <g>
+            <rect x="8" y="70" width="150" height="42" rx="3" fill="var(--sunk)" stroke="var(--rule-2)"/>
+            <text x="20" y="88" fill="var(--ink)" font-size="11.5" font-weight="600">desk piezo</text>
+            <text x="20" y="103" fill="var(--ink-3)">400 &middot; structure-borne</text>
+          </g>
+          <g>
+            <rect x="8" y="124" width="150" height="42" rx="3" fill="var(--sunk)" stroke="var(--rule-2)"/>
+            <text x="20" y="142" fill="var(--ink)" font-size="11.5" font-weight="600">electret mic</text>
+            <text x="20" y="157" fill="var(--ink-3)">402 &middot; airborne</text>
+          </g>
+          <g>
+            <rect x="8" y="178" width="150" height="42" rx="3" fill="var(--sunk)" stroke="var(--rule-2)"/>
+            <text x="20" y="196" fill="var(--ink)" font-size="11.5" font-weight="600">IMU</text>
+            <text x="20" y="211" fill="var(--ink-3)">410 &middot; desk motion</text>
+          </g>
+        </g>
+
+        <!-- node -->
+        <rect x="228" y="16" width="132" height="204" rx="3" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.8"/>
+        <text x="294" y="40" text-anchor="middle" fill="var(--ink)" font-family="Archivo, sans-serif" font-size="13" font-weight="600">node MCU</text>
+        <text x="294" y="56" text-anchor="middle" fill="var(--ink-3)" font-family="IBM Plex Mono, monospace" font-size="10">200 Hz sampling</text>
+        <g font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-2)">
+          <text x="294" y="88" text-anchor="middle">edge detect (210)</text>
+          <text x="294" y="108" text-anchor="middle">coincidence gate</text>
+          <text x="294" y="122" text-anchor="middle">420 &middot; piezo &and; mic</text>
+          <text x="294" y="146" text-anchor="middle">M_total, Eq. 1</text>
+          <text x="294" y="172" text-anchor="middle" fill="var(--gate)">watchdog</text>
+          <text x="294" y="186" text-anchor="middle" fill="var(--gate)">GATE_MAX_MS</text>
+        </g>
+
+        <!-- host -->
+        <rect x="424" y="52" width="132" height="132" rx="3" fill="var(--surface)" stroke="var(--rule-2)" stroke-width="1.4"/>
+        <text x="490" y="76" text-anchor="middle" fill="var(--ink)" font-family="Archivo, sans-serif" font-size="13" font-weight="600">host</text>
+        <g font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-2)">
+          <text x="490" y="100" text-anchor="middle">corroboration 700</text>
+          <text x="490" y="118" text-anchor="middle">scheduler 800</text>
+          <text x="490" y="136" text-anchor="middle">interlock 850</text>
+          <text x="490" y="162" text-anchor="middle" fill="var(--accent-ink)">1.588 ms measured</text>
+        </g>
+
+        <!-- gate -->
+        <rect x="424" y="238" width="132" height="56" rx="3" fill="var(--gate-soft)" stroke="var(--gate)" stroke-width="1.8"/>
+        <text x="490" y="260" text-anchor="middle" fill="var(--ink)" font-family="Archivo, sans-serif" font-size="12.5" font-weight="600">USB gate 920</text>
+        <text x="490" y="277" text-anchor="middle" fill="var(--gate)" font-family="IBM Plex Mono, monospace" font-size="9.5">fail-closed &middot; D+/D&minus;</text>
+
+        <rect x="600" y="16" width="112" height="42" rx="3" fill="var(--sunk)" stroke="var(--rule-2)"/>
+        <text x="656" y="34" text-anchor="middle" fill="var(--ink)" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600">keyboard</text>
+        <text x="656" y="49" text-anchor="middle" fill="var(--ink-3)" font-family="IBM Plex Mono, monospace" font-size="9.5">candidate</text>
+
+        <rect x="600" y="252" width="112" height="42" rx="3" fill="var(--sunk)" stroke="var(--rule-2)"/>
+        <text x="656" y="270" text-anchor="middle" fill="var(--ink)" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600">terminal</text>
+        <text x="656" y="285" text-anchor="middle" fill="var(--ink-3)" font-family="IBM Plex Mono, monospace" font-size="9.5">exam host</text>
+
+        <g stroke="var(--rule-2)" stroke-width="1.5" fill="none" marker-end="url(#ar)" color="var(--rule-2)">
+          <path d="M158,37 H222"/><path d="M158,91 H222"/>
+          <path d="M158,145 H222"/><path d="M158,199 H222"/>
+          <path d="M360,118 H418"/>
+        </g>
+        <g stroke="var(--gate)" stroke-width="1.8" fill="none" marker-end="url(#ar)" color="var(--gate)">
+          <path d="M490,184 V232"/>
+        </g>
+        <g stroke="var(--ink-3)" stroke-width="1.5" fill="none" marker-end="url(#ar)" color="var(--ink-3)">
+          <path d="M656,58 V238 H562"/>
+          <path d="M490,294 V310 H656 V300"/>
+        </g>
+        <text x="502" y="212" fill="var(--gate)" font-family="IBM Plex Mono, monospace" font-size="9.5">assert</text>
+        <text x="572" y="152" fill="var(--ink-3)" font-family="IBM Plex Mono, monospace" font-size="9.5">D+/D&minus;</text>
+      </svg>
+    </div>
+    <figcaption>The keyboard's data pair passes through the gate before reaching the exam
+    terminal. Opening it is the active state and needs a live controller asserting it &mdash;
+    a dead node leaves the candidate typing normally.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <span class="eyebrow">Latency budget</span>
+  <h2>The software half is already measured and it is almost free</h2>
+  <p>Timed on real recordings: channel extraction over a 20&nbsp;second window, the
+  corroboration value, and the scheduler decision together take <strong>1.588&nbsp;ms</strong>
+  at the median and 3.724&nbsp;ms at the 95th percentile. Against the 200&nbsp;ms
+  responsiveness bound the reference filing argued for, that leaves the entire budget to the
+  transducers.</p>
+  <div class="budget">
+    <div class="bar" role="img" aria-label="Of a 200 millisecond bound, software uses 1.6 ms, derived transducer path 29.3 ms, leaving 169.1 ms margin">
+      <span class="seg-sw" style="flex:1.588"></span>
+      <span class="seg-hw" style="flex:29.306"></span>
+      <span class="seg-margin" style="flex:169.106"></span>
+    </div>
+    <div class="legend">
+      <span><i style="background:var(--accent)"></i>software 1.588 ms &mdash; measured</span>
+      <span><i class="seg-hw"></i>transducers 29.3 ms &mdash; derived</span>
+      <span><i style="background:var(--sunk)"></i>margin 169.1 ms</span>
+    </div>
+  </div>
+
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Path element</th><th>Basis</th><th>ms</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Channel extraction, 20 s window</td><td>real corpus, this machine</td><td class="num">1.340</td><td><span class="tag m">measured</span></td></tr>
+        <tr><td>Corroboration value (700)</td><td>fitted model inference</td><td class="num">0.247</td><td><span class="tag m">measured</span></td></tr>
+        <tr><td>Scheduler decision (800/850)</td><td>5,000 decisions</td><td class="num">0.0004</td><td><span class="tag m">measured</span></td></tr>
+        <tr><td>Photodiode edge &rarr; MCU</td><td>BPW34 rise &lt;1 µs, 200 Hz</td><td class="num">0.005</td><td><span class="tag d">derived</span></td></tr>
+        <tr><td>Display panel response</td><td>one refresh at 120 Hz</td><td class="num">8.300</td><td><span class="tag d">derived</span></td></tr>
+        <tr><td>Node frame &rarr; host</td><td><code>REPORT_HZ = 50</code></td><td class="num">20.000</td><td><span class="tag d">derived</span></td></tr>
+        <tr><td>Gate command &rarr; switch</td><td>TS3USB221A t<sub>pd</sub></td><td class="num">0.001</td><td><span class="tag d">derived</span></td></tr>
+        <tr><td>USB full-speed frame</td><td>worst-case HID poll</td><td class="num">1.000</td><td><span class="tag d">derived</span></td></tr>
+        <tr class="total"><td>Projected sense-to-gate</td><td>&mdash;</td><td class="num">30.9</td><td><span class="tag d">5 rows derived</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Every derived row becomes a bench measurement the day the node exists. That
+  is the entire difference between a prophetic disclosure and a reduced-to-practice one.</p>
+</section>
+
+<section>
+  <span class="eyebrow">Enforcement ladder</span>
+  <h2>Nothing cuts a wire on one sensor's word</h2>
+  <div class="ladder">
+    <div class="rung r-obs"><span class="s">observe</span><p>Corroboration value below the eligibility threshold. No output of any kind.</p></div>
+    <div class="rung r-adv"><span class="s">advise</span><p>Desk indicator only. Requires persistence across consecutive control cycles, so one noisy cycle cannot actuate.</p></div>
+    <div class="rung r-gate"><span class="s">gate</span><p>Input path physically opened &mdash; and only when two physically independent channels each clear their own threshold.</p></div>
+    <div class="rung r-hold"><span class="s">hold</span><p>Session latched for invigilator review after repeated corroborated gating.</p></div>
+  </div>
+  <p>On replayed recordings the interlock cuts wrongful gating of unassisted candidates from
+  29.7&nbsp;% to 10.8&nbsp;% of questions, at a cost of a quarter of the true gates. The
+  ladder as a whole holds 419 eligible cycles down to 83 actuations.</p>
+  <p class="note">Stated honestly: that reduction is measured on top of a self-referential
+  baseline, and the detector underneath it is modest &mdash; roughly 0.70&ndash;0.78 AUC on
+  eleven candidates. Neither is fixed by building the node. They are fixed by collecting a
+  corpus from the node once it exists.</p>
+</section>
+
+<section>
+  <span class="eyebrow">Bill of materials</span>
+  <h2>One station</h2>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Ref</th><th>Part</th><th>Role</th><th>₹</th></tr></thead>
+      <tbody>
+        <tr><td class="num">210</td><td>BPW34 photodiode + op-amp stage</td><td>onset anchor</td><td class="num">100</td></tr>
+        <tr><td class="num">400</td><td>27 mm piezo disc + JFET preamp</td><td>structure-borne</td><td class="num">70</td></tr>
+        <tr><td class="num">402</td><td>MAX9814 electret module</td><td>airborne</td><td class="num">180</td></tr>
+        <tr><td class="num">410</td><td>MPU-6050 six-axis IMU</td><td>desk motion</td><td class="num">90</td></tr>
+        <tr><td class="num">920</td><td>TS3USB221A analog USB switch</td><td>the gate itself</td><td class="num">120</td></tr>
+        <tr><td class="num">910</td><td>RGB indicator + resistors</td><td>advise stage</td><td class="num">20</td></tr>
+        <tr><td class="num">&mdash;</td><td>ESP32-WROOM devkit</td><td>node controller</td><td class="num">350</td></tr>
+        <tr><td class="num">&mdash;</td><td>Perfboard, USB breakouts, wire</td><td>&mdash;</td><td class="num">200</td></tr>
+        <tr class="total"><td>&mdash;</td><td>Total</td><td>&mdash;</td><td class="num">1,130</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">Bench plan</span>
+  <h2>Eight measurements, in this order</h2>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>#</th><th>Measurement</th><th>Expectation</th><th>Settles</th></tr></thead>
+      <tbody>
+        <tr><td class="num">H2</td><td>Own whisper vs confederate at 1 m</td><td class="num">&ge;10 dB</td><td>attribution claim</td></tr>
+        <tr><td class="num">H1</td><td>Photodiode edge vs render callback, ×500</td><td class="num">&lt;2 ms jitter</td><td>T0 is physical</td></tr>
+        <tr><td class="num">H4</td><td>Gate assert &rarr; reports cease, ×200</td><td class="num">&lt;2 ms</td><td>the technical effect</td></tr>
+        <tr><td class="num">H6</td><td>Cut node power mid-gate</td><td>path closes</td><td>fail-safe limitation</td></tr>
+        <tr><td class="num">H7</td><td>Stop host heartbeat mid-gate</td><td>releases</td><td>watchdog limitation</td></tr>
+        <tr><td class="num">H3</td><td>Piezo response to typing impulses</td><td class="num">&gt;20 dB</td><td>second commit anchor</td></tr>
+        <tr><td class="num">H5</td><td>Gate release &rarr; re-enumeration</td><td class="num">&lt;100 ms</td><td>proportionality</td></tr>
+        <tr><td class="num">H8</td><td>IMU seated noise floor at the desk</td><td class="num">~0.18 m/s²</td><td>proxy was representative</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <span class="eyebrow">Run H2 first <span class="tag risk">highest risk</span></span>
+    <p>Structure-borne coupling of whispered speech is the weakest link in the disclosure. If
+    a candidate's own whisper does not separate from a neighbour's by a usable margin, the
+    attribution unit needs re-framing around contact events &mdash; typing impulses, leaning,
+    hand placement &mdash; and the claims should be rewritten <em>before</em> filing rather
+    than after a rejection.</p>
+    <p>One afternoon with a piezo, a microphone and a willing second person answers it.</p>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">What the build unblocks</span>
+  <h2>Three things, none of which more analysis can reach</h2>
+  <ul>
+    <li><strong>Reduction to practice.</strong> The claimed transducers move from described to
+    measured, matching the evidentiary position of the filing that already cleared stage 1.</li>
+    <li><strong>A corpus of the actual system.</strong> Ten candidates, thirty minutes each,
+    with photodiode, desk contact, gaze and keystrokes on one clock. That tests the invention
+    rather than five stand-ins for it, and retires the eleven-candidate ceiling that no
+    amount of statistics could lift.</li>
+    <li><strong>An honest Section 8.</strong> Physical response times, sensor tolerances and
+    actuation latencies measured on the apparatus &mdash; the form of evidence the examination
+    guidelines ask for, and the form the current draft cannot supply.</li>
+  </ul>
+</section>
+
+<footer>
+  Software path measured on the recorded corpus; transducer rows derived from datasheets and
+  standard signalling bounds, and labelled as such throughout. Prices are indicative Indian
+  retail for single quantities.
+</footer>
+
+</div>

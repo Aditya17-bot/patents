@@ -1,0 +1,89 @@
+{
+ "policy": "all/additive, chains of 3 or more",
+ "roads": {
+  "M25": {
+   "fixed": {
+    "2025-04": {
+     "touched_pairs": 95,
+     "raw_mean_abs_gap_520": 0.06987,
+     "corrected_mean_abs_gap_520": 0.0058,
+     "worse_by_1pt": 3
+    },
+    "2025-05": {
+     "touched_pairs": 94,
+     "raw_mean_abs_gap_520": 0.06973,
+     "corrected_mean_abs_gap_520": 0.00655,
+     "worse_by_1pt": 3
+    },
+    "2025-06": {
+     "touched_pairs": 83,
+     "raw_mean_abs_gap_520": 0.0712,
+     "corrected_mean_abs_gap_520": 0.00922,
+     "worse_by_1pt": 2
+    }
+   },
+   "rolling": {
+    "2025-04": {
+     "touched_pairs": 95,
+     "raw_mean_abs_gap_520": 0.06987,
+     "corrected_mean_abs_gap_520": 0.0058,
+     "worse_by_1pt": 3
+    },
+    "2025-05": {
+     "touched_pairs": 100,
+     "raw_mean_abs_gap_520": 0.06821,
+     "corrected_mean_abs_gap_520": 0.00292,
+     "worse_by_1pt": 1
+    },
+    "2025-06": {
+     "touched_pairs": 98,
+     "raw_mean_abs_gap_520": 0.06438,
+     "corrected_mean_abs_gap_520": 0.0046,
+     "worse_by_1pt": 0
+    }
+   }
+  },
+  "M1": {
+   "fixed": {
+    "2025-04": {
+     "touched_pairs": 173,
+     "raw_mean_abs_gap_520": 0.08935,
+     "corrected_mean_abs_gap_520": 0.00921,
+     "worse_by_1pt": 6
+    },
+    "2025-05": {
+     "touched_pairs": 169,
+     "raw_mean_abs_gap_520": 0.08442,
+     "corrected_mean_abs_gap_520": 0.0147,
+     "worse_by_1pt": 9
+    },
+    "2025-06": {
+     "touched_pairs": 172,
+     "raw_mean_abs_gap_520": 0.08183,
+     "corrected_mean_abs_gap_520": 0.02653,
+     "worse_by_1pt": 14
+    }
+   },
+   "rolling": {
+    "2025-04": {
+     "touched_pairs": 173,
+     "raw_mean_abs_gap_520": 0.08935,
+     "corrected_mean_abs_gap_520": 0.00921,
+     "worse_by_1pt": 6
+    },
+    "2025-05": {
+     "touched_pairs": 172,
+     "raw_mean_abs_gap_520": 0.08364,
+     "corrected_mean_abs_gap_520": 0.00699,
+     "worse_by_1pt": 4
+    },
+    "2025-06": {
+     "touched_pairs": 177,
+     "raw_mean_abs_gap_520": 0.0816,
+     "corrected_mean_abs_gap_520": 0.01425,
+     "worse_by_1pt": 8
+    }
+   }
+  }
+ }
+}

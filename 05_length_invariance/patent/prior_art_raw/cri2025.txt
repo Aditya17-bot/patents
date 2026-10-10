@@ -1,0 +1,2411 @@
+1 
+ 
+  
+
+Page 2 of 63 
+ 
+Contents 
+1. Introduction ............................................................................................................................. 3 
+2. Terms/Definitions ................................................................................................................. 5 
+3. Legal Provisions and recent jurisprudence relating to CRIs ................................... 8 
+4. Examination Procedure Related to CRI Applications .............................................. 15 
+4.1 Novelty ............................................................................................................................. 15 
+4.2 Inventive step ................................................................................................................ 16 
+4.3 Industrial Applicability: ............................................................................................ 18 
+4.4 Sufficiency of Disclosure: .......................................................................................... 19 
+4.5 Determination of excluded subject matter relating to CRIs: ........................ 22 
+5. Examination of Inventions related to Artificial Intelligence (AI), Machine 
+Learning (ML) and Deep Learning (DL), Blockchain, Quantum Computing ............. 45 
+5.1. Introduction ................................................................................................................... 45 
+5.2. Dealing with AI/ML/DL related inventions: ....................................................... 45 
+5.3. Dealing with Quantum computing related inventions: .................................. 57 
+5.4. Dealing with Blockchain related inventions: ..................................................... 60 
+6. Saving Clause of Provisions of Manual .......................................................................... 63 
+7. Applicability of Guidelines ................................................................................................ 63 
+ 
+ 
+ 
+ 
+Page 3 of 63 
+ 
+1. Introduction 
+1.1. Information Technology has gained special significance in the past few decades. It 
+has emerged as a vital tool for scientific development. The term “Information 
+Technology” encompasses the whole gamut of inputting, storing, retrieving, 
+transmitting and managing data through the use of computers and various other 
+networks, hardware, software, electronics and telecommunication equipment. 
+Industry has witnessed rapid growth due to the computerization of activities 
+which were hitherto carried out manually or mechanically. The advent of the 
+internet and the World Wide Web (www) coupled with the exponential growth of 
+processing and storage power has led to capabilities previously unheard of. Recent 
+developments in the field of Information and Communication Technol ogy (ICT) 
+and Computer Science, such as advancements in artificial intelligence (AI), 
+blockchain technology, quantum computing, cloud computing and the Internet of 
+Things (IoT), are rapidly transforming industries and reshaping innovation. These 
+technologies often involve complex algorithms, data processing techniques, and 
+hardware-software integrations. In recent times centric to this advancement are 
+Artificial Intelligence (AI), Machine Learning, Natural Language Processing and 
+Large language Model which are now recognized as core technologies that can 
+revolutionize industries by enabling sophisticated automation, customized user 
+experiences, and predictive analytics. These technologies are increasingly 
+integrated into fields such as healthcare for early d iagnostics, finance for risk 
+management, and education for adaptive learning, enhancing overall system 
+intelligence. Additionally, AI -driven natural language processing technologies are 
+revolutionizing human- computer interactions by enabling virtual assistants, 
+automated translation, and sentiment analysis tools, thus broadening accessibility 
+and functionality. Cloud computing has significantly catalyzed this evolution, 
+providing scalable and cost -effective solutions for data storage and processing, 
+essential to modern IT architectures. The shift to cloud -based infrastructure 
+allows organizations to handle extensive data volumes, facilitate collaboration, 
+and deploys applications rapidly, making it a fundamental component in IT 
+frameworks. Meanwhile, edge co mputing, a complementary technology to cloud 
+computing, enables data processing near the source, reducing latency and 
+accelerating real-time analytics—capabilities vital for the Internet of Things (IoT) 
+and smart city applications. Quantum algorithms promise to solve complex 
+problems in mere seconds, challenges that would take classical computing 
+systems centuries to process. This capability could significantly impact fields such 
+as cryptography, climate modeling, and pharmaceutical development. Quantum 
+computing, regarded as a keystone technology of the future, is the focus of 
+substantial investment from technology giants and research institutions striving 
+to advance its commercialization. Cyber security remains a critical priority as 
+digital transformation  accelerates and cyber threats grow in complexity and 
+frequency. Advances in cyber security technology, including AI -driven threat 
+detection, empower systems to identify and mitigate cyber -attacks in real time, 
+while blockchain technology provides enhanced  data security through distributed 
+Page 4 of 63 
+ 
+ledger mechanisms. Privacy -centric computing techniques, such as homomorphic 
+encryption and differential privacy, are also emerging as critical components, 
+allowing organizations to extract insights from data without comp romising 
+individual privacy, thereby meeting regulatory and compliance requirements. The 
+adoption of 5G/6G technology is further shaping the IT landscape by delivering 
+faster, more reliable connectivity that supports advanced applications in field of 
+communication such as in Internet of Things (IoT), augmented reality (AR), and 
+virtual reality (VR). High -speed 5G/6G technology networks facilitate real -time 
+data transmission across devices, creating new possibilities for remote work, 
+smart infrastructure, au tonomous vehicles, and immersive gaming and 
+educational experiences. Collectively, these advancements are constructing a 
+robust, interconnected, and intelligent digital ecosystem, paving a way for new 
+patentable innovations. The convergence of technologies  including AI, cloud 
+computing, cyber security, quantum computing, 5G, and many more is driving a 
+surge in patent applications, reflecting both the originality and applicability of 
+these developments. As society and industry increasingly embraces a digital  
+future, careful consideration of these issues is essential to ensure responsible and 
+sustainable technological progress. However, this rapid pace of innovation brings 
+a need to develop a complementary regulatory system for patent examination.  
+1.2. Creators of knowledge in the domain of Computer Related Inventions (CRIs) have 
+consistently endeavored for appropriate protection of their patent rights. The 
+patent regimes have to cope up with the challenges of processing of patent 
+applications related to CRIs. While examining applications for patent in these 
+cutting-edge fields, it is essential to consider how these innovations transcend 
+traditional software and algorithms to provide a technical solution. The core 
+elements in the application of Information Technolog y are computers and their 
+peripherals. CRIs comprise inventions which involve the use of computers, 
+computer networks or other programmable apparatus and techniques related 
+thereto and include such inventions having one or more features of which are 
+realized wholly or partially by means of a computer hardware/software. 
+1.3. The aim of this document is to provide guidelines for the examination of patent 
+applications in the field of CRIs by the Indian Patent Office so as to further foster 
+consistency in the examination of such applications. The objective of this 
+document is to bring out clarity in terms of exclusions expected under section 3(k) 
+so that eligible applications of patents relating to CRIs can be examined efficiently 
+and effectively. 
+1.4. The guidelines discuss various provisions relating to the patentability of CRIs. The 
+procedure to be adopted by the Patent Office while examining such applications 
+and the jurisprudence that has evolved in this field has also been discussed. 
+Various examples and case laws relating to CRIs have also been incorporated for 
+better understanding of the issues involved . It is important to mention that these 
+guidelines do not constitute rule making. In case of any conflict between these 
+Page 5 of 63 
+ 
+guidelines and the statutory provisions of the Patents Act, 1970 (as amended), 
+herein after referred as “the Act”, or the Patents Rules, 2003 (as amended), herein 
+after referred as “the Rules”, made there under, the said provisions of the Act and 
+Rules will prevail over these guidelines. The guideline s are subject to revision 
+from time to time based on interpretations by Courts of law, statutory 
+amendments and valuable inputs from the stakeholders. 
+1.5. It is important to mention that the case laws referenced in the Guidelines are 
+intended for the interpretation of the relevant provisions of the Patents Act, 1970, 
+and are inherently dynamic in nature. 
+ 
+2. Terms/Definitions 
+The terms/definitions often used while dealing with CRIs are summarized hereunder. 
+The terms which are defined in any of the Indian statutes have been construed 
+accordingly and those which have not been given any statutory definition are normally 
+construed in accordance with their use and ordinary dictionary meaning or judicial 
+pronouncements.  
+2.1 Algorithm 
+The term “algorithm” is not defined in Indian statutes. However, Hon’ble Madras High 
+Court in the matter of Microsoft Technology Licensing LLC vs Assistant  Controller of 
+Patents And Designs
+1 on 3 July, 2024 at Para 25 stated:  “...An algorithm may be defined 
+as a set of rules or instructions for solving a problem, typically through a sequence of steps 
+or operations. Devising an algorithm would also, therefore, be an intellectual exercise and 
+intellectual property protection would be limited to copyright protection, subject to 
+originality, for the form of expression. While the expression is commonly used in the 
+context of software- based routines in computers, a s is evident from the above, it can be 
+used in other contexts...”. 
+2.2 Computer 
+The term “computer” is defined in The Information Technology Act, 2000 (No. 21 of 
+2000) as “any electronic, magnetic, optical or other high -speed data processing device or 
+system w hich performs logical, arithmetic, and memory functions by manipulations of 
+electronic, magnetic or optical impulses, and includes all input, output, processing, 
+storage, computer software, or communication facilities which are connected or related to 
+the computer in a computer system or computer network.” 
+                                                       
+1Microsoft Technology Licensing LLCvs Assistant Controller of Patents(3 July, 2024) ((T) CMA (PT) No.49 of 
+2023[OA/36/2020/PT/CHN]) 
+Page 6 of 63 
+ 
+2.3 Computer Network 
+The term “computer network” is defined in The Information Technology Act, 2000 (No. 
+21 of 2000) as “the interconnection of one or more computers through –  
+(i)  the use of satellite, microwave, terrestrial line or other communication media; and 
+(ii) terminals or a complex consisting of two or more interconnected computers whether 
+or not the interconnection is continuously maintained;” 
+2.4 Computer Programme 
+The term computer programme has been defined in the Copyright Act 1957 under 
+Section 2(ffc) as “"computer programme" means a set of instructions expressed in words, 
+codes, schemes or in any other form, including a machine readable  medium, capable of 
+causing a computer to perform a particular task or achieve a particular result;” 
+2.5 Computer System 
+The term “computer system” is defined in The Information Technology Act, 2000 (No. 21 
+of 2000) as “a device or collection of devices, including input and output support devices 
+and excluding calculators which are not programmable and capable of being used in 
+conjunction with external files, which contain computer programmes, electronic 
+instructions, input data and output data, that performs logic, arithmetic, data storage and 
+retrieval, communication control and other functions;” 
+2.6 Data 
+The term “data” is defined in the Information Technology Act, 2000 (No. 21 of 2000) as 
+“a representation of information, knowledge, facts, concepts or instructions which are 
+being prepared or have been prepared in  a formalised manner, and is intended to be 
+processed, is being processed or has been processed in a computer system or computer 
+network, and may be in any form (including computer printouts, magnetic or optical 
+storage media, punched cards, punched tapes) or stored internally in the memory of the 
+computer;” 
+2.7 Firmware 
+The term “firmware” is not defined in Indian statutes and hence, for interpretation of 
+this term, the general dictionary meaning is being used. 
+The Oxford Advanced Learners Dictionary defines “ firmware” as “a type of computer 
+software that is stored in such a way that it cannot be changed or lost”. 
+Page 7 of 63 
+ 
+The Cambridge Dictionary defines “firmware” as “a computer program or data that is 
+stored on a chip and that cannot be changed or lost”. 
+2.8 Function 
+The term “function” is defined in the Information Technology Act, 2000 (No. 21 of 2000) 
+as “"function", in relation to a computer, includes logic, control arithmetical process, 
+deletion, storage and retrieval and communication or telecommunication from or wit hin a 
+computer;” 
+2.9 Hardware 
+The term “hardware” is not defined in Indian statutes and hence, for interpretation of 
+this term, the general dictionary meaning is being used.  
+The Oxford Advanced Learners Dictionary defines “hardware” as “the physical and 
+electronic parts of a computer, rather than the instructions it follows”. 
+The Cambridge Dictionary defines “hardware” as “the physical and electronic parts of a 
+computer, rather than the instructions it follows”. 
+2.10 Information 
+The term “information” is defined in The Information Technology Act, 2000 (No. 21 of 
+2000) as "information" includes data, message, text, images, sound, voice, codes, computer 
+programmes, software and databases or micro film or computer-generated micro fiche;” 
+2.11 Per se 
+The term “per se” is not  defined in Indian statutes including the Act, However, Hon’ble 
+Madras High Court in the matter of Microsoft Technology Licensing LLC vs Assistant 
+Controller of Patents and Designs
+2 on 3 July, 2024 at Para 25 stated: “... Black's Law 
+Dictionary (Thomson Reuters, 11th ed., 2019, p. 1378) defines 'per se' as follows: “of, in, or 
+by itself; standing alone, without reference to additional facts; this phrase denotes that 
+something is being considered alone, and not with other collected things...”. 
+ 
+ 
+                                                       
+2Microsoft Technology Licensing LLC vs Assistant Controller of Patents (3 July, 2024) ((T) CMA (PT) No.49 of 
+2023 [OA/36/2020/PT/CHN]) 
+Page 8 of 63 
+ 
+2.12 Software 
+The term “software” is not defined in Indian statutes and hence, for interpretation of 
+this term, the general dictionary meaning is being used. The Oxford Advanced Learners 
+Dictionary defines “software” as “the programs, etc. used to operate a computer”. 
+The Cambridge Dictionary defines “software” as “the instructions that control what a 
+computer does; computer programs”.  
+2.13 Manual 
+The term “Manual” as hereafter appears means “Manual of Patent Office Practice and 
+Procedure” issued by the Office of CGPDTM, as may be amended from time to time, 
+unless there is anything repugnant in the subject or context. 
+ 
+3. Legal Provisions and recent jurisprudence relating 
+to CRIs 
+3.1 The Patents (Amendment) Act 2002 (No. 38 of 2002) came into effect on 20th 
+May, 2003. The Act defines “invention” 3 under section 2(1)(j) as “ “Invention” 
+means a new product or process involving an inventive step and capable of industrial 
+application;” 
+“Inventive step”4 under section 2(1)(ja) as “ “Inventive Step” means a feature of an 
+invention that involves technical advance as compared to the existing knowledge 
+or having economic significance or both and that makes the invention not obvious 
+to a person skilled in the art; ” 
+Further, “capable of industrial application”
+5 under section 2(1) (ac) as “"capable of 
+industrial application", in relation to an invention, means that the invention is 
+capable of being made or used in an industry;” 
+3.2 The Patents (Amendment) Act, 2002 also amended the exclusions from 
+patentability under section 3 for CRIs as under: 
+                                                       
+3Definition of ‘Invention’ under The Patents Act 1970, after 2002 Amendments 
+4Definition of ‘Inventive Step’ under The Patents Act 1970, after 2005 amendments 
+5Definition of ‘Capable of Industrial Application’ under The Patents Act 1970 
+Page 9 of 63 
+ 
+(k) a mathematical or business method or a computer programme per se or 
+algorithms; 
+(l) a literary, dramatic, musical or artistic work or any other aesthetic creation 
+whatsoever including cinematographic works and television productions; 
+(m) a mere scheme or rule or method of performing mental act or method of playing 
+game; 
+(n) a presentation of information; 
+(o) topography of integrated circuits; 
+3.3 While examining the Patents (Amendments) Bill, 2002the Joint Parliamentary 
+Committee expressed the following views regarding suffix “per se” to computer 
+programme in section 3(k): 
+“In the new proposed clause (k) the words ''per se" have been inserted. This change 
+has been proposed because sometimes the computer programme may include 
+certain other things, ancillary thereto or developed thereon. The intention here is not 
+to reject them for grant of patent if they are inventions. However, the computer 
+programmes as such are not intended to be granted patent. This amendment has 
+been proposed to clarify the purpose.”
+6 
+3.4 Hence, as on date there are four limbs of section 3(k), namely: 
+- Mathematical method, 
+- Business method, 
+- Algorithm, 
+- Computer programme per se 
+ 
+3.5 Recent jurisprudence 
+In the recent times, while dealing with matters pertaining to section 3(k) Hon’ble  
+courts have  articulated the interpretation of the legislative provisions, their 
+meaning and legislative intent. The same has helped in evolution of jurisprudence 
+with regard to CRIs. In fast evolving Indian jurisprudence of CRIs, there have been 
+many decisions which have looked the allowability/non-allowability of CRIs under 
+section 3(k) from different perspectives (Refer ANNEXURE-II). Though the case 
+laws are inherently dynamic in nature and their reference would always be non-
+exhaustive in nature, yet excerpts from few of the related case lawsfor the purpose 
+of elucidating j urisprudential evolution with regard to interpretation of the 
+relevant provisions of section 3(k) of the Patents Act, 1970, are given below: 
+                                                       
+6Report of the Joint Committee presented to the Rajya Sabha on 19th December, 2001 and laid on the table 
+of Lok Sabha on 19th December 2001 
+Page 10 of 63 
+ 
+3.5.1 In the matter of FeridAllani vs. Union of India &Ors 7:Whileadjudicating a 
+matter with regard to judging the non- patentability under computer programme 
+per se exclusion of section 3(k ), Hon’ble  Delhi High Court in the matter of 
+FeridAllani vs. Union of India &Ors on  12thDecember, 2019 at para 11 
+commented on the importance of adopting technical effect and/or technical 
+contribution test for deciding the patentability of computer program -
+basedinventions, it stated: 
+“11. ...Across the world, patent offices have tested patent applications in this field of 
+innovation, on the fulcrum of “technical effect” and “technical contribution”. If the 
+invention demonstrates a “technical effect” or a “technical contribution” it is 
+patentable even though it may be based on a computer program...” 
+3.5.2 In the matter of Microsoft Technol ogy Licensing, Llc vs The Assistant 
+Controller Of Patents And Designs
+8:While deciding whether  the claimed  
+invention falls within the scope of exclusion under computer programme per se 
+limb of the section 3(k) or not,Hon’ble Delhi High Court in the matter of 
+Microsoft Technology Licensing, Llc vs The Assistant Controller Of Patents And 
+Designs on 15
+thMay, 2023 at looked into the technical effect produced by the 
+technical solution of the claimed invention and determined whether the claimed 
+technical solution is beyond mere user interface design and whether the solution 
+is closer to the heart of computer and netw ork technology than user-interface. It 
+stated: 
+ 
+“41. … This technical solution goes beyond the user- interface level and provides a 
+technical effect and contribution, that is patentable. The technical aspects of the 
+invention, such as the use of cookies and  two-factor authentication, are 
+fundamental to the functioning of computer networks and are not limited to the 
+user-interface…. Additionally , the use of multiple cookies for authentication is a 
+technical solution that goes beyond mere user interface design  and involves 
+complex network- level communication protocols. The technical aspects of the 
+invention are closer to the heart of computer and network technology, rather than 
+user-interface...”. 
+3.5.3 In the matter of OpentvInc vs The Controller Of Patents And Desi gns
+9:While 
+adjudicating on wheth er the claimed subject matter falls under the exclusion 
+ofbusiness method or not, Hon’ble Delhi High Court in the matter of OpentvIncvs. 
+The Controller Of Patents And Designs on 11thMay, 2023 at paras 67 and 72 -
+73delved into the differences of Indian legislative provisions regarding section 
+3(k) vis-à-vis those under UK and EP Law. The fact that unlike UK or EP laws, in 
+                                                       
+7FeridAllani vs. Union Of India &Ors [W.P.(C) 7/2014 & CM APPL. 40736/2019] 
+8Microsoft Technology Licensing, Llc vs The Assistant Controller Of Patents And Designs [C.A. (COMM.IPD-
+PAT) 29/2022] 
+9OpentvInc vs The Controller Of Patents AndDesigns[C.A. (COMM.IPD-PAT) 14/2021] 
+Page 11 of 63 
+ 
+Indian law “per se” is suffixed only to computer programme per se exclusions 
+and not with any other limbs of section 3(k), was clearly brought out in this 
+decision. Hon’ble Court stated: 
+“67. …the exclusion in respect of business methods is an absolute one and is not 
+restricted by the words 'per se' as in the case of computer programs…” 
+“72. …The qualifier ` as such ‘thus applies in both U.K. and Europe to all categories 
+of excluded inventions including business methods. Thus,  the bar is not absolute 
+and if there is something more than the business method itself, patentin g could be 
+permissible. However, in India, the phrase ‘per se’ does not qualify business 
+methods. Thus, the patentability of inventions based on methods of doing business 
+or financial transactions, raised on the basis of decisions from the U.K. and 
+European Patent Office which analyse the technical effect of a business method 
+invention would not be squarely applicable in India. The bar in India to grant of 
+business method patents has to be read as an absolute bar without analysing issues 
+relating to technic al effect, implementation, technical advancement or technical 
+contribution…”  
+“73. …Thus, the only question that the Court or the Patent Office while dealing with 
+patent applications involving a business method, needs to consider is whether the 
+patent application addresses a business or administrative problem and provides a 
+solution for the same…” 
+3.5.4 In the matter of Microsoft Technology Licensing LLC vs Assistant Controller 
+of Patents and Designs
+10: While looking into the exclusion under mathematical 
+method, Hon’ble Madras High Court in the matter of Microsoft Technology 
+Licensing LLC vs Assistant Controller of Patents and Designs on 3 rdJuly, 2024 
+observed that mere presence of a mathematical formula in a claim would not 
+necessarily render it 'a mathematical m ethod' claim. Hon’ble Court at Para 23 
+stated:  
+“…A mathematical method is a specific approach to resolve a mathematical 
+problem or question and would typically involve a series of steps. Consequently, at 
+the idea or concept level, it would be ineligible for any kind of intellectual property 
+protection. The CRI Guidelines 2017 suggest -  and, in my view, correctly -  that the 
+mathematical method exclusion is intended to exclude the mere expression of an 
+intellectual exercise, such as a method of calculation, the formulation of equations 
+and the like. By way of illustration, Brent's method in numerical analysis to find the 
+root or the Adams' method of solving differential equations would be excluded. Said 
+Guidelines also clarify - again, correctly - that the mere presence of a mathematical 
+                                                       
+10Microsoft Technology Licensing LLC vs Assistant Controller of Patents (3 July, 2024) ((T) CMA (PT) No.49 of 
+2023 [OA/36/2020/PT/CHN]) 
+Page 12 of 63 
+ 
+formula in a claim would not necessarily render it 'a mathematical method' 
+claim…”. 
+3.5.5 In the matter of Raytheon Company vs Controller General Of Patents And 
+Designs11:While dealing with exclusions under computer programme per se,  
+Hon’ble Delhi High Court in the matter of Raytheon Company vs Controller 
+General Of Patents And Designs on 15thSeptember, 2023 at para 21 reiterated the 
+importance of technical effect and/or technical contribution test and 
+categorically barred the requirement of novel hardware and termed it as lacking 
+any legal basis. It stated: 
+“21. ...in case of computer related inventions, the patent office needs to examine if 
+there is a technical contribution or as to what is the technical effect generated by 
+the invention as claimed...The requirement of novel hardware is a higher standard 
+which lacks any basis in law…” 
+3.5.6 In the matter of Microsoft Technology Licensing Llc vs The Assistant 
+Controller Of Patents And Designs
+12:While looking into theways to  overcome 
+the limitations imposed under section 3(k), Hon’ble Delhi High Court in the 
+matter of Microsoft Technology Licensing Llc vs The Assistant Controller Of 
+Patents And Designs on 16 thApril, 2024 at paras 33, 34 and 35 commented that 
+the claimed invention upon impl emented on a general -purpose computer must 
+contribute directly to a specific and credible technical effect beyond mere 
+general computing processes. It stated:  
+“33. …in case of an invention involving computer programmes, to circumvent the 
+limitations imposed by Section 3(k) of the Act, a patentee must demonstrate that 
+the overall method and system disclosed in the patent application, upon 
+implementation in a general- purpose computer, must contribute directly to a 
+specific and credible technical effect or en hancement beyond mere general 
+computing processes. Therefore, the inventive contribution of a patent should not 
+only improve the functionality of the system but also achieve an innovative 
+technical advantage that is clearly defined and distinct from ordina ry operations 
+expected of such systems…” 
+“34. …From the claim construction analysis carried out, it is clear that the subject 
+patent application discloses a method and system that not only provides a real -
+world application for complex mathematical transformations, including lapped 
+transforms and reversible overlap operators, but also integrates these operations 
+into a hardware setup (processor [4710] and data storage buffer [4740]) that 
+performs digital media data compression. This integration significantly  enhances 
+the functionality of the hardware components of the subject patent application by 
+                                                       
+11Raytheon Company vs Controller General Of Patents And Designs [C.A. (COMM.IPD-PAT) 121/2022] 
+12Microsoft Technology Licensing Llc vs The Assistant Controller Of Patents And Designs [C.A.(COMM.IPD-
+PAT) 185/2022] 
+Page 13 of 63 
+ 
+enabling efficient and reversible compression, which directly contributes to 
+improved system performance and efficiency. Therefore, clearly the subject patent 
+application enhances the functionality of the general- purpose computers that 
+would implement the subject patent application…” 
+“35. …Clearly, in the understanding of the Court, this optimization is not merely a 
+theoretical improvement but is applied in practical hardware configurations, 
+contributing a clear technical effect of enhanced data compression capabilities and 
+reduced storage requirements during processing. Accordingly, the integration of 
+the described methods and techniques into a digital media processor, as detailed in 
+Claims involving specific hardware components of data storage buffers and 
+processors, transforms the capabilities of general- purpose computing hardware 
+into a specialised apparatus capable of efficient and effective data compression, 
+which it otherwise was not expected to be capable of. This transformation also 
+meets the criteria of further technical effect as stated to be a requirement in Lava 
+(supra), wherein an invention that incorporates computer programmes or 
+algorithms in such a way that it significantly enhances the hardware's functionality 
+is considered patentable, as long as it meets the criteria for patentability …”. 
+ 
+ 
+3.5.7 In the matter of Microsoft Technology Licensing LLC vs Assistant Controller 
+of Patents And Designs
+13:While looking  into exclusion/non- exclusion of 
+computer program based inventions, Hon’ble Madras High Court in the matter of 
+Microsoft Technology Licensing LLC vs Assistant Controller of Patents And 
+Designs on 3rd July, 2024 at para 36 highlighted the importance of impr oving the 
+system’s functioning and efficacy; and providing a technical solution to a 
+technical problem to overcome section 3(k) related exclusion. It stated: 
+“36.…Thus, even when the claimed invention relates to a CRI, if it results in a 
+technical effect t hat improves the system's functioning and efficacy (effect on 
+hardware), or provides a technical solution to a technical problem and is, therefore, 
+not limited in its impact to a particular application or data set, it would surmount 
+the exclusion under section 3(k) of the Patents Act…” 
+                                                       
+13Microsoft Technology Licensing LLC vs Assistant Controller of Patents and Designs [[(T) CMA (PT) No.49 of 
+2023, [OA/36/2020/PT/CHN]] 
+Page 14 of 63 
+ 
+3.5.8 In the matter of Ab Initio Technology Llc vs Assistant Controller Of Patents 
+And Designs 14:While delving a little deeper into what constitutes technical 
+effect and what not, Hon’ble Delhi High Court in the matter of Ab Initio 
+Technology Llc vs Assistant Controller Of Patents And Designs on 30 thJuly, 2024 
+observed that technical effect should be something which is beyond the usual 
+'user interface'. At para 38, Hon’ble Court stated: 
+“38. …'Technical effect' is the bridge or the connect between an input and the 
+processor. If an ingenious input system/method is able to allow the processor to 
+give a more efficient and faster output and computation, the effect, in this Court's 
+opinion, would be 'technical'. A 'technical effect' cannot be just about nuts and 
+bolts, or hardware tweaks and transformations. If an innovative input [in form of a 
+program] allows the hardware to process the output faster, then it would amount 
+to a 'techn ical effect'. In other words, a well- designed innovative input in the form 
+of a process, system, or method which enhances the computational ability of the 
+processor would undoubtedly result in a 'technical effect' and which goes beyond 
+the usual 'user interface'…” 
+3.5.9 In the matter of Blackberry Limited vs Assistant Controller Of Patents And 
+Designs
+15:While adjudicating in a matter pertaining to exclusion under 
+algorithms, Hon’ble Delhi High Court in the matter of Blackberry Limited vs 
+Assistant Controller Of Pa tents And Designs on 30 thAugust, 2024 observed the 
+importance of implementation and enablement while judging exclusion under 
+section 3(k) under the limb of algorithm. Hon’ble Courtat para 48 and 52 stated: 
+“48. …Accordingly, it is evident that insofar as a lgorithms are concerned, if the 
+invention relates purely to a set of instruction or policies which determine the flow 
+without any substantial change in the hardware, such instructions even if they have 
+a bearing on the manner in which the flow of data occu rs would not be entitled to 
+patent protection in India…” 
+“52…Insofar as the patentability of inventions incorporating algorithms is 
+concerned, if the invention relates purely to a set of instruction or policies which 
+determine the flow without any substantial change in the hardware, such 
+instructions even if the y have a bearing on the manner in which the flow of data 
+occurs would not be entitled to patent protection in India. But if the algorithm 
+instructions are thereafter implemented through computer software coded for this 
+purpose and result in a technical eff ect or technical contribution then the test 
+applicable to computer software can also be applied and patentability can be 
+adjudged. In such a case the inventive feature would have to be the implementation 
+and not the algorithm itself…”  
+                                                       
+14Ab Initio Technology Llc vs Assistant Controller Of Patents and Designs [C.A. (COMM.IPD-PAT) 26/2021] 
+15Blackberry Limited vs Assistant Controller Of Patents And Designs [C.A. (COMM.IPD-PAT) 229/2022] 
+Page 15 of 63 
+ 
+ 
+4. Examination Procedure Related to CRI Applications 
+The examination procedure of patent applications relating to CRIs is the same as that 
+for other inventions to the extent of consideration of novelty, inventive step, industrial 
+applicability and sufficiency of disclosu re, clarity, definitiveness etc. The determination 
+that the subject matter relates to one of the excluded categories requires greater skill on 
+the part of the Examiner and these guidelines focus more on this aspect. 
+ 
+4.1 Novelty 
+Novelty is the foremost requirement to determine the patentability of any invention. No 
+invention can be held patentable if the subject matter as described and claimed was 
+disclosed before the date of filing, or before the date of priority, as the case may be. The 
+determination of novel ty in respect of CRIs is no different from any other field of 
+invention. 
+In Telefonktiebolaget Lm Ericsson (Publ) vs Lava International Ltd
+16 on 28 thMarch, 
+2024,Hon’ble Delhi High Court while proposing a 7 -step approach for novelty 
+determination have stated at para 87-88 that: 
+“87.…Taking into consideration the judgements given by various Courts, and the guidance 
+given in the Manual, I have deemed it appropriate to develop a step- wise approach for 
+determination of novelty. 
+88. When assessing the novelty of an invention, a Judge or even a patent examiner ought to 
+follow a systematic approach to ensure a thorough and unbiased analysis of the invention 
+claimed and the prior art cited. Another important aspect of the test for assessment of 
+novelty in an invention is to maintain a distinction between the test of novelty and test for 
+inventive step or lack of obviousness. I am of the view that the following steps, which may 
+be referred to as the 'Seven Stambhas Approach'  serve as guiding Stambhas are referred 
+to as columns or pillars in Indian Architecture principles and provide a clear framework 
+for assessing novelty, reflecting the distinction between novelty and non-obviousness: 
+(i) Understanding of the Claims of the Invention • The determination of lack of novelty 
+should begin with the understanding of the Claims of the invention as it is the Claims that 
+define the boundaries of the invention and what the applicant considers as their novel 
+contribution. 
+                                                       
+16Telefonktiebolaget Lm Ericsson (Publ) vs Lava International Ltd [CS(COMM) 65/2016] 
+Page 16 of 63 
+ 
+(ii) Identify Relevant Prior Art • Collecting the prior art, including any public disclosure, 
+publication, patent, or patent application that predates the filing date of the patent 
+application which is relevant to the Claims of the patent. 
+(iii) Analyse the Prior Art  • Conducting a detailed analysis of the identified prior art to 
+ascertain its relevance to the Claims of the invention. This step involves searching and 
+documenting both the similarities and the differences, if any, between the Claims of the 
+invention and the text of the prior art. 
+This step requires comparing the technical details and features of the prior art against 
+those claimed in the invention. 
+(iv) Determine Explicit and Implicit Disclosures • Examining whether the prior art 
+explicitly or implicitly discloses t he same invention. Explicit disclosure means the prior art 
+directly describes the invention claimed. Implicit disclosure refers to whether the prior art 
+describes elements or aspects so similar to the claimed invention that a direct link can be 
+drawn. 
+(v) Assessment material differences while considering the entire scope of the Claims 
+• Identifying the material differences between the claimed invention and the prior art, if 
+any, such that a material difference would indicate that the claimed invention has not 
+been disclosed in the prior art and, therefore, the invention, is novel. 
+(vi) Verifying Novelty in light of Comprehensive Scope and Specific Combination of 
+Claimed Elements • Evaluation of novelty of the invention is carried out in light of the 
+comprehensive scope of its claims, not just individual elements. • The invention is novel 
+only if the combination of claimed elements as a whole has not been previously disclosed. 
+(vii) Documentation of the Analysis and Novelty Determination • Specify the finding 
+of the examination of novelty, while providing a clear rationale for the said determination. 
+The specific documentation must include references to specific sections of the prior art 
+examined and a reasoning as to how the section affects the novelty of the claims and the 
+inventive concept of the invention.” [Emphasis added] 
+Apart from the above, the novelty criterion is judged under various provisions of the Act 
+and the Rules made thereunder and also based on the procedures laid out in chapter 
+09.03.02 of the Manual. 
+4.2 Inventive step 
+Inventive step is decided in accordance with the provisions of section 2(1) (ja) of the 
+Act. The determination of inventive step with regard to CRIs is carried out in like 
+manner as in other categories of inventions. 
+Page 17 of 63 
+ 
+As per 2(1) (j a), "inventive step" means a feature of an invention that involves technical 
+advance as compared to the existing knowledge or having economic significance or both 
+and that makes the invention not obvious to a person skilled in the art; 
+Hon’ble Supreme Court of India on inventive step: In Biswanath Prasad RadheyShyam 
+vs Hindustan Metal Industries Ltd
+17 it was held that “…The 'obviousness' has to be strictly 
+and objectively judged. For this determination several forms of the question have been 
+suggested. The one suggested by Salmond L. J. in Rado v. John Tye& Son Ltd. is apposite. It 
+is: "Whether the alleged discovery lies so much out of the Track of what was known before 
+as not naturally to suggest itself to a person thinking on the subject, it must not be the 
+obvious or natural suggestion of what was previously known…" 
+“…Another test of whether a document is a publication which would negative existence of 
+novelty or an "inventive step" is suggested, as under:" Had the document been placed in the 
+hands of a  competent craftsman (or engineer as distinguished from a mere artisan), 
+endowed with the common general knowledge at the 'priority date',who was faced with 
+the problem solved by the patentee but without knowledge of the patented invention, 
+would he have said, "this gives me what I want?" (Encyclopedia  Britannica; ibid). To put it 
+in another form: "Was it for practical purposes obvious to a skilled worker, in the field 
+concerned, in the state of knowledge existing at the date of the patent to be found in th e 
+literature then available to him, that he would or should make the invention the subject of 
+the claim concerned?..." 
+In the F. Hoffman la Roche v Cipla
+18 case the Hon’ble Delhi High Court had observed that 
+the obviousness test is what is laid down in Bisw anath Prasad RadheyShyam vs 
+Hindustan Metal Industries Ltd (AIR 1982 SC 1444)and that “Such observations made in 
+the foreign judgments are not the guiding factors in the true sense of the term as to what 
+qualities that person skilled in the art should possess. The reading of the said qualities 
+would mean qualifying the said statement and the test laid down by the Supreme Court.” 
+Hon’ble High Court further added “From the bare reading of the afore quoted 
+observations of Supreme Court, it is manifest that the Hon'ble Supreme Court has laid 
+down the test for the purposes of ascertaining as to what constitutes an inventive step 
+which is to be seen from the standpoint of technological advancement as well as 
+obviousness to a person who is skilled in the art. It is to be emphasized that what is 
+required to be seen is that the invention should not be obvious to the person skilled in art. 
+These are exactly the wordings of New Patents Act, 2005 u/s Section 2(ja) as seen above. 
+Therefore, the same cannot be read to mean  that there has to exist other qualities in the 
+said person like unimaginary nature of the person or any other kind of person having 
+distinct qualities……. Normal and grammatical meaning of the said person who is skilled in 
+art would presuppose that the sai d person would have the knowledge and the skill in the 
+said field of art and will not be unknown to a particular field of art and it is from that 
+angle one has to see that if the said document which is prior patent if placed in the hands 
+                                                       
+17Biswanath Prasad Radhey Shyam vs Hindustan Metal Industries Ltd (AIR 1982 SC 1444) 
+18F. Hoffmann-La Roche Ltd vs Cipla Ltd., Mumbai Central, ... on 7 September, 2012 
+Page 18 of 63 
+ 
+of the said person  skilled in art whether he will be able to work upon the same in the 
+workshop and achieve the desired result leading to patent which is under challenge. If the 
+answer comes in affirmative, then certainly the said invention under challenge is 
+anticipated by  the prior art or in other words, obvious to the person skilled in art as a 
+mere workshop result and otherwise it is not. The said view propounded by Hon'ble 
+Supreme Court in Biswanath Prasad (supra) holds the field till date and has been followed 
+from time to time by this Court till recently without any variance …. Therefore, it is proper 
+and legally warranted to apply the same very test for testing the patent; be it any kind of 
+patent. It would be improper to import any further doctrinal approach by making  the test 
+modified or qualified what has been laid down by the Hon'ble Supreme Court in of 
+Biswanath Prasad (supra).” 
+The “obviousness” must be strictly and objectively judged
+19. While determining 
+inventive step, it is important to look at the invention as a whole. 
+Accordingly, the following points need to be objectively judged to ascertain whether, 
+looking at the invention as a whole, the invention does have inventive step or not: 
+1. Identify the "person skilled in the art", i.e., competent craftsman or eng ineer 
+as distinguished from a mere artisan; 
+2. Identify the relevant common general knowledge of that person at the 
+priority date; 
+3. Identify the inventive concept of the claim in question or if that cannot 
+readily be done, construe it; 
+4. Identify what, if any, differences exist between the matter cited as forming 
+part of the "state of the art" and the inventive concept of the claim or the claim 
+as construed; 
+5. Viewed without any knowledge of the alleged invention as claimed, do those 
+differences constitute steps which would have been obvious to the person 
+skilled in the art or do they require any degree of inventive ingenuity? 
+Recently, in Telefonktiebolaget Lm Ericsson (Publ) vs Lava International Ltd
+20 on 28 th 
+March, 2024, Hon’ble Delhi High Court has f urther emphasised on the above mentioned 
+5-step analysis approach for Inventive Step determination. 
+4.3 Industrial Applicability: 
+                                                       
+19Biswanath Prasad Radhey Shyam vs Hindustan Metal Industries Ltd (AIR 1982 SC 1444) 
+20Telefonktiebolaget Lm Ericsson(Publ) vs Lava International Ltd [CS(COMM) 65/2016] 
+Page 19 of 63 
+ 
+Inpatent law, industrial applicability or industrial application is a patentability 
+requirement according to which a patent can only be granted for an invention which is 
+capable of industrial application, i.e. for an invention which can be made or used in 
+some kind of industry. 
+It has been defined in section 2(1) (ac) of the Act as follows: 
+"capable of industrial application", in relation to an invention, means that the 
+invention is capable of being made or used in an industry; 
+The requirement of workability and usefulness are both connected to the requirement 
+of industrial applicability. If an invention is not workable, it means that it is also not 
+industrially applicable. The patent specification must disclose a practical application 
+and industrial use for the claimed invention wherein a concrete benefit must be 
+derivable directly from the description coupled with common general know ledge. Mere 
+speculative use or vague and speculative indication of possible objective will not suffice.
+  
+4.4 Sufficiency of Disclosure: 
+Grant of patents is quid pro quo 21 to disclosure. It is for the disclosure of invention by 
+the applicant that the patent righ ts are granted to him for a limited period of time, if all 
+criteria of patentability are fulfilled. The requirement of “Sufficiency of Disclosure” is 
+essential to determine whether the application is sufficiently clear, informative, and 
+meets statutory requirements for disclosure. These requirements aim to ensure that the 
+invention can be understood, replicated, and practically applied by a person skilled in 
+the relevant technical field. This requirement ensures that patent fulfils its purpose as 
+tool for t echnological advancement, fair competition, and public benefit and fosters a 
+balanced and effective patent system by supporting innovation while safeguarding 
+public access to technological knowledge. 
+The requirement for "sufficiency of disclosure" under th e Act is established in Section 
+10 of the Act, under the section titled "Content of Specification". Specifically, Section 10 
+(4) of the Act provides that any Complete Specification shall:  
+a) fully and particularly describe the invention  and its operation or use and the 
+method by which it is to be performed;  
+b) disclose the  best method of performing the invention which is known to the 
+applicant and for which he is entitled to claim protection;  
+c) end with a claim or claims defining the scope of the invention  for which 
+protection is claimed;  
+d) be accompanied by an abstract to provide technical information  on the 
+invention." 
+                                                       
+21 something for something" or "this for that" in Latin 
+Page 20 of 63 
+ 
+The Act requires the applicant to specify “what” the invention is  and “how” to  perform 
+it. The invention shall be described fully and particularly to satisfy the “what” 
+requirement and further the best method of performing the invention known to the 
+applicant to satisfy the “how” requirement. The Complete Specification should therefore 
+disclose the invention fully and particularly to meet the requirement of the Act and 
+should also enable a person skilled in the art to work the invention without any 
+assistance of the patentee or any further undue experimentation. The description must 
+be unambiguous, clear, correct and accurate. It must not contain any statements which 
+may mislead the person skilled in the art to whom the specification is addressed. While 
+the requirements of sufficiency of disclosure is considered generally in all field s of 
+invention; in cases of patent application concerning CRIs, these requirements are 
+considered as fulfilled if the specification addresses the “What” and “How” 
+requirements.  
+Fully and particularly (What): 
+If the patent application relates to apparatus/ system/device, i.e., hardware -based 
+inventions, each and every feature of the invention shall be described with suitable 
+illustrative drawings. If the invention relates to “method”, the necessary sequence of 
+steps shall clearly be described so as to distinguish the invention from the prior art with 
+the help of the flowcharts and other information required to perform the invention 
+along with their implementing mechanism. The specification shall describe the working 
+relationship of different components togeth er with connectivity. It shall also describe 
+the desired result/output or the outcome of the invention as envisaged and any 
+intermediate applicable components/steps
+. 
+Best Method of performing the invention (How): 
+The best mode of performing and/or use of the invention shall be described with 
+suitable illustrations. The specification should not limit the description of the invention 
+only to its functionality rather it should specifically and clearly describe the 
+implementation of the invention.  
+In field of Computer Related Inventions, one peculiar issue is that many times the 
+problem statements or prospective use case scenario of a particular technology itself 
+may be extrapolated and camouflaged as a proposed solution and filed as patent 
+application, therefore, the disclosure requirements are critical and need to be specific 
+and particular to the invention. It is important that the aspect that is claimed as the 
+novel and inventive solution, must be disclosed fully and particularly. 
+4.4.1 Claims
+: 
+1. The claims should clearly define the scope of the invention and should take care 
+of unity of invention requirements as defined under section 10(5) of the Act.  
+Page 21 of 63 
+ 
+2. The claim(s) of a Complete Specification should be clear and succinct and should 
+be fairly based on the matter disclosed in the specification. 
+3. The claims in the field of CRIs need to be construed to ascertain the substance of 
+the claim without wholly relying on the forms and types of the claims. 
+4.4.2 Form and substance
+: 
+Section 3(k ) excludes a mathematical or business method or a computer programme 
+per se or algorithms from patentability. While the judgment of mathematical methods 
+or business methods is comparatively easier, it is the computer programme per se or 
+algorithms related inventions that require careful consideration of the Examiner. 
+Computer programmes are often claimed in the form of method claims or system claims 
+with some “means” indicating the functions of flow charts or process steps. The 
+algorithm related claims are even wider than the computer programmes claimed by 
+themselves as a single algorithm can be implemented through different programmes in 
+different computer languages. If, in substance, claims in any form such as 
+method/process, apparatus/system/device, compu ter program product/ computer 
+readable medium belong to the said excluded categories, they would not be patentable. 
+Even when the issue is related to hardware/software relation, the expression of the 
+functionality as a “method” is to be judged on its substance. It is well -established that, in 
+patentability cases, the focus should be on the underlying substance of the invention, 
+not the particular form in which it is claimed. The Act clearly excludes computer 
+programmes per se and the exclusion should not be  allowed to be avoided merely by 
+camouflaging the substance of the claim by its wording. 
+It is important to note that section 3(k) does not limit that only system or only 
+method claims are to be granted in a computer related patent application. If the 
+specification has descriptional support, both set of method as well as system 
+claims may be allowed even if they are claimed as independent claims;  there is no 
+bar on that aspect. Further,a
+non-exhaustive indicative list of examples pertaining to 
+allowable/non-allowable method as well as system claims  vis-à-vis section 3(k) of the 
+Patents Act, 1970 has been annexed as ANNEXURE-I. 
+4.4.3 Means plus Function: 
+The claims concerning CRIs are often phrased in means for performing some function 
+such as means for converting digital to analog signal etc. These types of claims are 
+termed as means plus function format. The “means” mentioned in the claims shall 
+clearly be defined with the help of structur al features and their reference numerals to 
+enhance the intelligibility of the claims. The claims in means plus function form shall not 
+be allowed if the structural features of those means are not disclosed in the 
+specification. “Means” in the means plus function claims shall be limited to the means 
+Page 22 of 63 
+ 
+disclosed in the specification.  The specification must disclose the corresponding 
+structure that performs the function, wherein, the structure may be the specific 
+hardware, firmware, or software module disclosed in the specification and drawings 
+that implements the claimed function. 
+ 
+4.5 Determination of excluded subject matter relating to CRIs: 
+Along with determining the merit of invention as envisaged under Sections 2(1)(j), (ja) 
+and (ac), the Examiner should also determine whether or not they are patentable 
+inventions under Section 3 of the Act. The sub -section 3(k) excludes mathematical 
+methods or business methods or computer programme per se or algorithms from 
+patentability. Computer programmes are often claimed in the form of algorithms as 
+method claims or system claims with some “means” indicating the functions of flow 
+charts or process steps. It is well -established that, while establishing patentability, the 
+focus should be on the underlying substance of the invention and not on the 
+particular form in which it is claimed. 
+What is important is to judge the substance of claims taking whole of the claim 
+together. If any claim in any form such as method/process, apparatus/system/device, 
+computer program product/ computer readable medium falls under the said excluded 
+categories, such a claim would not be patentable. However, if in substance, the c laim, 
+taken as whole, does not fall in any of the excluded categories, the patent should not be 
+denied.  
+Based on the legislative provisions and the jurisprudence in the recent times, the 
+determination of whether subject matter of the claimed invention is p atentable or non-
+patentable with regard to the four limbs of section 3(k) may be determined in the 
+following manner: 
+4.5.1 
+“Mathematical Method”: 
+Mathematical methods are a particular example of the principle that purely abstract or 
+intellectual methods are not patentable. Mathematical methods like method of 
+calculation, formulation of equations, finding square roots, cube roots and all other 
+similar acts of mental skill are therefore, not patentable. Similarly mere manipulations 
+of abstract idea or solving purely mathematical problem/equations without specifying a 
+practical application also attract the exclusion under this category. However, mere 
+presence of a mathematical formula in a claim, to clearly specify the scope of protection 
+being sought in an invention, may not necessarily render it to be a “mathematical 
+method” claim. Also, such exclusions may not apply to inventions that include 
+mathematical formulae and resulting in systems for encoding, reducing noise in 
+communications/ electrical/electronic systems  or encrypting/ decrypting electronic 
+communications. 
+Page 23 of 63 
+ 
+4.5.1.1 Assessing whether the claimed invention is a mathematical method:  
+ 
+1. Construe the substance of claimed invention: Understanding the claimed 
+invention in its entirety to capture its primary underlying objective and the 
+solution it aims to provide. 
+ 
+2. Determination regarding the identified solution : The identified solution 
+in Step 1 shall be assessed to determine: 
+ 
+a) Whether the solution, in its essence, lies in abstract mathematical 
+processing by inherently showing only operations/functions of 
+equations, statistical models, mathematical computations or alike, 
+only to define any output.  
+OR 
+b) Whether the mathematical processing is not the primary objective but 
+part of a larger technical process, where the output calculation is not 
+the main aim rather it contributes to achieving a broader technical 
+objective 
+ 
+3. If the determination in step 2 matches with 2(a), then the claimed 
+subject matter falls under exclusion of “Mathematical Method”; else if 
+the determination matches with 2(b), then the claimed subject matter 
+does NOT fall under exclusion of “Mathematical Method”.
+ 
+ 
+4.5.1.2 Understanding assessment of Mathematical Method exclusions through 
+hypothetical examples:  
+Example 1: System for data compatibility index calculation  
+Claim:  
+A data processing system for determining the compatib ility between two datasets, the      
+system comprising:  
+a) a processor; a memory coupled to the processor, storing instructions and data;   
+b) and a compatibility analysis module stored in the memory and executable by the 
+processor, the compatibility analysis module configured to: receive a first dataset 
+and a second dataset;  
+c) apply a predefined mathematical formula to the first and second datasets to 
+calculate a compatibility index.  
+d) and output the compatibility index. 
+Analysis of Example 1: 
+Step 1-  Construing the substance of claimed invention: Based on a substance 
+analysis, the core objective and concept of the above claim liesin the application of a 
+predefined mathematical formula to two datasets to calculate a compatibility index. 
+Page 24 of 63 
+ 
+Step 2- Determination regarding the identified solution:The core functionality is the 
+application of a predefined mathematical formula, which is inherently a mathematical 
+operation. The output-the compatibility index is directly the result of this mathematical 
+computation, with this calculation as the core objective of the claimed invention. The 
+essence of the invention is the mathematical calculation itself and the numerical result it 
+produces. The compa tibility index is defined by the formula, and the system is merely 
+used as a tool to perform this mathematical operation.  
+Step 3: Since the invention’s essence is the mathematical computation itself, and it does 
+not contribute to a larger technical proces s, it satisfies the conditions of step2(a) and is 
+considered as falling under mathematical method exclusion of section 3(k). 
+Example 2: Method for controlling a robotic arm. 
+Claim: A method for controlling a robotic arm to position its end effector at a specified 
+target location in a three-dimensional workspace, the method comprising: 
+a) Receiving input parameters defining a target position for the end effector of the 
+robotic arm, the parameters including three- dimensional coordinates (x, y, z) and 
+optionally orientation data (pitch, yaw, roll) to specify the position and alignment 
+of the end effector relative to a reference frame; 
+b) calculating the required joint angles for the robotic arm using inverse kinematics 
+equations, based on the input parameters, the arm’s kinematic model (including 
+segment lengths and joint types), and constraints such as joint angle limits and 
+collision avoidance, to determine the precise angles for each joint to position the 
+end effector at the target location; 
+c) generating control si gnals based on the calculated joint angles and transmitting 
+the signals to actuators of the robotic arm to move its joints to the calculated 
+angles, using feedback from sensors to ensure accurate positioning, thereby 
+positioning the end effector at the specified target position. 
+Analysis of Example 2:  
+Step 1-  Construing the substance of claimed invention: The primary objective is to 
+control a robotic arm to achieve precise positioning of its end effector in a physical 
+workspace enabling tasks. The method us es inverse kinematics equations to determine 
+the angles for each joint of the robotic arm (e.g., shoulder, elbow, wrist) required to 
+place the end effector at the target position. This calculation accounts for the arm’s 
+physical structure (lengths of segments, joint types) and constraints (e.g., maximum 
+joint angles, avoiding collisions with obstacles). The calculated joint angles are 
+translated into control signals that drive the arm’s actuators. 
+Step 2-  Determination regarding the identified solution: The identified solution 
+involves mathematical calculations like calculating joint angles using inverse kinematics 
+equations, solving a system of nonlinear equations based on the arm’s kinematic chain 
+(the geometric relationship between its joints and segments). It allows to translate a 
+desired end effector position into physical arm movement. It combines data input, 
+Page 25 of 63 
+ 
+mathematical computation, and mechanical actuation to achieve the movement of the 
+robotic arm to perform a task in the real world. 
+The calculation is not the core goal but a necessary intermediate step. The equations are 
+solved to determine how to configure the arm’s joints. The method starts with a 
+practical input (target coordinates) and ends with a physical action (moving the arm). 
+The mathema tical steps serve a broader technical process of controlling the arm’s 
+movement. The output of the calculation (joint angles) is not the final product but it is 
+used to generate control signals that drive physical actuators.  
+Step 3: The mathematical processing is not the primary objective but a part of a larger 
+technical process aimed at achieving precise control of a robotic arm’s physical 
+movement. The output of the calculation (joint angles) contributes to a broader 
+technical objective (positioning the end effector). Thus, the solution s atisfies the 
+conditions of step 2(b ) and is considered as NOT falling under mathematical method 
+exclusion of section 3(k). 
+4.5.2 
+“Business Method”: 
+The term “Business Method” involves whole gamut of activities in a commercial or 
+industrial enterprise relating to transaction of goods or services. It is important to note 
+that mere presence of the words such as “enterprise”, “business”, “business rules”, 
+“supply-chain”, “order”, “sales”, “transactions”, “commerce”, “payment” etc. or a 
+business context such as “profile matching”, “relationship matching”, “event planning”, 
+“credit providing”, “employee scheduling”, “customer feedback analysis”, “customer 
+relationship management” etc. in the claims may not lead to the conclusion of th e 
+claimed invention being a “Business Method”. 
+The decision regarding allowability/non- allowability under Business method lies in 
+evaluating the substance of the claimed invention and where the core of invention lies. It 
+is to be determined whether the claim’s primary function is an organized administrative 
+or commercial strategy or a pure business strategy. 
+In case the claimed subject matter is essentially about carrying out business/ trade/ 
+financial activity/ transaction and/or a method of buying/selling  goods through web, it 
+should be treated as business method and shall not be patentable. If the invention's core 
+contribution is a method of conducting business, such as a financial scheme, a marketing 
+strategy, or an administrative process, then even if implemented using technology, if the 
+core idea resides purely in the commercial rules or organizational approach, it shall not 
+be patentable. 
+However, if the core of invention has technical characteristic to the underlying system 
+or process, addressing how something is done from a technical perspective and 
+provides technical solution to a technical problem through technical means, then it is 
+more likely to be considered a technical invention, even if applied in a business context. 
+Page 26 of 63 
+ 
+Therefore, the guiding factor in assessing these claims is to look beyond the surface 
+application and identify whether the invention lies in a commercial strategy or a 
+technical solution to a technical problem through technical means.   
+It is important to assess if the claimed invention focuses on a technical 
+improvement/solution to an underlying system or process, aimed at refining 
+operational framework or infrastructure, and using business context only as a 
+constraint to define the scope of the invention, then it is not considered to be a business 
+method.  
+For example, a claim that describes a method for a bank to calculate and apply a tiered 
+service fee structure based on a customer's account balance and transaction volume 
+would, in its substance, be a business method because the c ore of the invention is a 
+scheme for revenue generation and customer management- an organized administrative 
+and financial strategy. It dictates how the business (the bank) interacts commercially 
+with its customers and charges for services. 
+Conversely, if a claim describes a new cryptographic technique to secure data 
+transmission during online banking, or technical process that significantly speeds up 
+the transaction processing time within the bank's server architecture by optimizing 
+data handling at a technical level, this would likely not be considered a business method 
+as the substance is a technical   improvement to the underlying financial transaction 
+engine or infrastructure, rather than defining a method of doing financial business. 
+Another example cou ld be a claim directed towards a method for optimizing customer 
+engagement through a loyalty rewards program. If the claim outlines steps such as 
+awarding points based on purchase frequency and value, offering multiple membership 
+levels with varying benefi ts, and providing exclusive discounts to higher -tier members, 
+this would, in substance, be a business method. The core of such a claim is a strategic 
+marketing and customer retention plan, which is an organized administrative approach 
+to encourage repeated  business and enhance customer loyalty. It defines a commercial 
+strategy. Even if this method is implemented using a computer system for tracking 
+points and managing memberships, the invention lies in the business strategy itself 
+(how to structure and oper ate a loyalty program), not in any technical functionality of 
+the system beyond its standard data processing capabilities. 
+4.5.2.1 Steps for assessing whether the claimed invention falls under the 
+exclusion under “Business method” or not: 
+1. Construe the substance of  claimed invention: Understanding the claimed 
+invention in its entirety to capture its primary underlying objective and the 
+solution it aims to provide. It includes evaluating the substance of claimed 
+invention and determining where the core of claimed invention lies. 
+ 
+Page 27 of 63 
+ 
+2. Determination regarding the identified core of the claimed invention: The 
+identified core in Step 1 shall be assessed to determine –  
+ 
+a) Whether the core of claimed invention, in its essence, is primarily an 
+administrative/commercial/business strategy like financial schemes, 
+marketing strategies, administrative processes outlining rules or strategies 
+for revenue generation, customer management or financial transactions.  
+OR 
+b) Whether the core of claimed invention, in its essence, is technical 
+improvement/ solution to an underlying system or process, aimed at refining 
+operational framework or infrastructure, and using business context only as 
+a constraint to define the scope of the invention. 
+ 
+3. If the determination in step 2 matches with 2(a), then the claimed subject 
+matter falls under exclusion of “Business Method”; else if the 
+determination matches with 2(b), then the claimed subject matter does 
+NOT fall under exclusion of “Business Method”. 
+4.5.2.2 Understanding assessment of Business Method exclusions through 
+hypothetical examples:  
+Example 3: System for dynamic pricing of online advertisements  
+Claim: 
+A networked system for managing dynamic pricing of online advertisements, the system 
+comprising:  
+a) a server computer with a processor and memory;  
+b) a database storing financial data and advertisement performance data; and a 
+pricing engine module stored in th e memory and executable by the processor, 
+configured to: 
+c) receive real-time bid data from a plurality of advertisers;  
+d) retrieve historical performance data for a plurality of advertisement slots;  
+e) apply a set of business rules to the real- time bid data and historical performance 
+data to calculate a dynamic price for an advertisement slot; and  
+f) instruct a display module to display the advertisement associated with the 
+calculated dynamic price in the advertisement slot. 
+Analysis of Example 3: 
+Step 1- Construing the substance of claimed invention:  The objective of claimed 
+invention is to facilitate the dynamic pricing and placement of online advertisements 
+through a networked system that optimizes revenue generation. The system uses a 
+server computer, a database storing financial and advertisement performance data, and 
+Page 28 of 63 
+ 
+a pricing engine module to achieve this goal. Specifically, it receives real -time bid data 
+from multiple advertisers, retrieves historical performance metrics for advertisement 
+slots, and applies predefined business rules to these datasets to calculate an optimal, 
+dynamic price for each advertisement slot. The calculated price determines which 
+advertisement is displayed in a given slot, aiming to maximize the effectiveness of ad 
+placements and the financial return for the platform. The focus is on automating and 
+optimizing the commercial process of advertisement pricing and allocation, ensuring 
+that the system responds dynamically to market demand and historical trends to 
+enhance revenue outcomes. 
+Step 2-  Determination regarding the identified substance of the claimed 
+invention: The invention primarily focuses on calculating dynamic prices for 
+advertisement slots by applying business rules to real -time bid data and historical 
+performance data. This process involves strategic commercial decisions related to 
+pricing and advertisement placement, which are core aspects of a business method, 
+specifically a marketing or revenue- generation strategy. The use of a server, database, 
+and pricing engine module serves as a computational framework to implement these 
+business rules, but the primary objective is to optimize financial outcomes in 
+advertising, which aligns with a method of doing business. 
+Step 3: The claimed invention is a business method , as its primary objective is to 
+implement a strategic commercial approach for dynamically pricing online 
+advertisements, focusing on revenue optimization rather than a technical improvement 
+to the underlying system or infrastructure, it satisfies the cond itions of step 2(a)  and is 
+considered as falling under business method exclusion of section 3(k). 
+Example 4- Method for enhancing cashless payment transactions at a point -of-
+sale (POS) 
+Claim: 
+A method for enhancing cashless payment transactions at a point -of-sale (POS) system by 
+incorporating a tap-and-pay card feature, the method comprising: 
+a) Configuring the POS system to include a near- field communication (NFC) reader 
+capable of detecting and communicating with a contactless payment card;  
+b) Receiving, via the NFC reader, payment data from a contactless payment card 
+when the card is tapped or placed in proximity to the NFC reader;  
+c) Processing the payment data using a secure payment protocol to authenticate the 
+transaction and verify the card’s validity with a payment network;  
+d) Transmitting the processed payment data to a financial institution for 
+authorization; Receiving an authorization response from the financial institution; 
+and  
+e) Completing the transaction by updating the POS system to reflect the authorized 
+payment and providing a confirmation to the user. 
+Analysis of Example 4:  
+Page 29 of 63 
+ 
+Step 1- Construing the substance of claimed invention:  The objective of claimed 
+invention is to enhance the technical capability of a point- of-sale (POS) system to 
+support secure and efficient cashless transactions through the integration of near -field 
+communication (NFC) technology for tap -and-pay card payments. The method involves 
+configuring the POS system with an NFC reader to detect and communicate with 
+contactless pay ment cards when they are tapped or placed in proximity. It further 
+encompasses receiving payment data via the NFC reader, processing it using a secure 
+payment protocol to authenticate the transaction and verify the card’s validity with a 
+payment network, transmitting the data to a financial institution for authorization, and 
+updating the POS system to reflect the authorized payment while providing user 
+confirmation.  
+Step 2-  Determination regarding the identified substance of the claimed 
+invention: The focu s of the claimed invention is on improving the operational 
+infrastructure of the POS system by enabling secure, contactless payment processing, 
+with the financial transaction context serving as a framework for the technical 
+implementation.The claimed metho d addresses technical challenges, such as detecting 
+and communicating with a contactless card, securely processing payment data, and 
+ensuring compatibility with a payment network for authentication and authorization. 
+These steps refine the operational fram ework of the POS system, enhancing its 
+functionality and security for cashless transactions. The business context (payment 
+processing) is a constraint that defines the scope of the technical implementation, 
+rather than the primary objective. 
+Step 3:The cla imed invention is not a business method but a technical solution, as its 
+primary objective is to enhance the technical functionality of a POS system through NFC 
+technology and secure payment processing, with the business context of payments 
+serving as a co nstraint rather than the focus, it satisfies the conditions of step 2(b)  and 
+is considered as not falling under business method exclusion of section 3(k). 
+4.5.3 
+“Algorithm”:   
+Algorithms in all forms including but not limited to, a set of rules or procedures, any 
+sequence of steps or any method expressed by way of a finite list of defined instructions, 
+whether for whether for solving a problem or otherwise, and whether employing a 
+logical, a rithmetical or computational method, recursive or otherwise, are excluded 
+from patentability. 
+The algorithm claims are to be assessed due to their potential to be classified as abstract 
+concepts. A claim is typically deemed abstract if it merely presents a sequence of 
+procedural steps without sufficient technical implementation details, effectively leaving 
+the algorithm as an isolated concept detached from practical application. For instance, 
+consider a claim for a sorting algorithm, such as quicksort or me rge sort: if the patent 
+application only lists the steps (e.g., "partition the array, recursively sort sub -arrays") 
+without specifying how these steps are technically applied in a specific context like 
+optimizing database query performance in a cloud compu ting system or managing real -
+time data streams in a 5G network, or   if a claim directed as a cryptographic algorithm 
+only describes the mathematical steps (e.g. generate a key, encrypt the data) without 
+Page 30 of 63 
+ 
+explaining how it is implemented in a payment system/ framework to make it more 
+secure such as integrating with the payment card’s firmware or handling real -time 
+transaction validation, it might be seen as an abstract idea camouflaged as a technical 
+invention. 
+Therefore, the claimed invention must provide specific enabling details to solve a real -
+life problem, transforming it into a practical innovation rather than a hypothetical 
+sequence. This means including not just the algorithm’s logical flow but also its 
+technical realization or application in a technical framework to provide a technical 
+solution to a real-world problem. 
+4.5.3.1 Steps for assessing whether the claimed invention falls under the 
+exclusion under “Algorithm” or not:  
+1. Construe the substance of claimed invention and thereby Identification of 
+series of Steps: Understanding the claimed invention in its entirety to capture 
+where the core of claimed invention lies, and then assess  it to identify a series of 
+steps outlining a sequential process. 
+ 
+2. Determination of Enablement/Abstractness: The identified series of steps in 
+Step 1 shall be assessed to determine –  
+ 
+a) Whether the identified series of steps have a level of abstractness devoid of 
+technical specifics or components needed to implement those steps,  
+OR 
+b) Whether the identified series of steps are enabled in the sense that they have 
+the technical specifics/components needed to implement those steps, 
+detailing the technical implementation and if this results in a technical 
+solution to a real-world problem.  
+ 
+3. If the determination in step 2 matches with 2(a), then the claimed subject 
+matter falls under exclusion of “Algorithm”; else if the determination 
+matches with 2(b), then the claimed subject matter does NOT fall under 
+exclusion of “Algorithm”. 
+ 
+4.5.3.2 Understanding assessment of Algorithm exclusions through hypothetical 
+examples: 
+Example 5: Method for cryptographic key generation  
+Claim:  
+A method for generating pseudo-random numbers, comprising:  
+a) an input module configured to receive a seed value;  
+Page 31 of 63 
+ 
+b) a permutation engine configured to apply a series of permutations to the seed 
+value; and 
+c) an output module configured to output a sequence of pseudo- random numbers 
+derived from the permuted seed value. 
+Analysis of Example 5: 
+Step 1 - Construe the substance of claimed invention and thereby Identification of 
+series of Steps: The claimed invention describes a method for generating pseudo -
+random numbers through steps of receiving a seed, applying permutations, and 
+outputting numbers. It outlines a flow for processing a seed value (input) to produce 
+pseudo-random numbers (outputs). 
+Step 2 -  Determination of Enablement/Abstractness: The steps -  "receive a seed 
+value", "apply a series of permutations" and "output a sequence of pseudo -random 
+numbers" are highly abstract in nature. They don't specify how the seed is received, 
+what specific permutations are applied (e.g. how they are chosen or executed), or how 
+the output sequence is derived. The "permutation engine" is a conceptual compo nent 
+without specific technical implementational details lacking enablement. Further, the 
+claim's objective to "generate pseudo-random numbers" is a fundamental building block 
+for any specific field. However, the claim itself does not detail how its technical 
+implementation results in a technical solution to a real -world problem. It doesn't 
+explain how these generated numbers are used to solve a problem (say -secure 
+communication, simulation, or statistical sampling). It simply generates numbers 
+without connecting that generation to a concrete technical application or improvement 
+in a specific context. 
+Step 3 -  The claimed subject matter describes a sequential process with high level of 
+abstractness and fails to detail the specific technical implementation th at results in a 
+concrete technical solution to a real -world problem. Hence, it satisfies the conditions of 
+step 2(a) and is considered as falling under Algorithm exclusion of section 3(k). 
+Example 6: Method for encrypting and transmitting data securely using 
+permutation-based pseudo-random number generation  
+Claim:  
+A method for encrypting and transmitting data securely using permutation -based pseudo-
+random number generation, the method comprising: 
+a) receiving, by a hardware security module (HSM) integrated into a network 
+interface card (NIC), a cryptographic seed derived from true random entropy 
+sources within the HSM;  
+b) generating, by permutation unit within the HSM a stream of 128 -bit pseudo-
+random numbers (PRNs) by iteratively applying a permutation algorithm to the 
+cryptographic seed and storing intermediate states in a high -speed volatile 
+memory buffer;  
+Page 32 of 63 
+ 
+c) retrieving, by a cryptographic processor within the NIC, successive 128 -bit PRNs 
+from the volatile memory buffer;  
+d) encrypting, by the cryptographic processor using an AES -GCM encryption engine, a 
+block of plaintext data using a retrieved 128 -bit PRN as a session key and a unique 
+initialization vector (IV) generated by a timestamp counter;  
+e) encapsulating, by the NIC's packetization engine, the encrypted data and the IV 
+into a data packet frame; and  
+f) transmitting, the frame to a receiving device. 
+Analysis of Example 6:  
+Step 1 - Construe the substance of claimed invention and thereby Identification of 
+series of Steps: The claimed invention describes a structured and a sequential process 
+involving seed reception, pseudo -random number generation, retrieval, encryption, 
+encapsulation, and transmission. It outlines a series of steps forming a sequential flow 
+for processing a seed and plaintext data to produce a secure, encrypted data stream.  
+Step 2 -  Determination of Enablement/Abstractness: The steps have substantial 
+technical specifics detailing how  the random numbers are generated and how  they are 
+used to achieve encryption and transmission using specific components and 
+cryptographic standards. The real -world problem is insecure data transm ission and 
+vulnerability to cryptographic attacks. The claimed invention explicitly details how this 
+technical implementation results in a technical solution- establishing a secure and 
+verifiable data link with enhanced resistance to cryptographic attacks d ue to the high 
+entropy and rapid generation of permutation derived session keys. This is a concrete, 
+tangible improvement in data security and reliability, achieved through the specific 
+interaction of hardware components and cryptographic algorithms. 
+Step 3 – The claim goes beyond abstractness by detailing how the steps are 
+implemented and by what mean viz. the specific technical means like HSM, permutation 
+unit, AES -GCM, NIC, data frame, etc... This detailed technical implementation allowing 
+enablement dir ectly leads to a technical solution to the real -world problem of secure 
+data transmission by providing enhanced resistance to cryptographic attacks through 
+specific components and cryptographic mechanisms. Hence, it satisfies the conditions of 
+step 2(b) and is considered as NOT falling under Algorithm exclusion of section 3(k). 
+4.5.4 
+“Computer Programmeper se” 
+Claims which are aimed to protect only the following subject matters are excluded from 
+patentability, like: 
+- Claims only about computer programmes/ set of instructions/ Routines and/or 
+Sub-routines. 
+Page 33 of 63 
+ 
+- Claims only about “computer programme products” / “Storage Medium having 
+instructions”/ “Database” / “Computer Memory with instruction” stored in a 
+computer readable medium. 
+It is important to note that qualification of the term Computer Programme with the 
+suffix per se means that the legislative intent for the exclusion under section 3(k) is not 
+absolute with regard to all computer programme led inventions, rather it leaves scope 
+for allowability of certain other  things, ancillary thereto or developed thereon.  There 
+have been many tests, multiple phrases and various approaches used to determine what 
+this phrase certain other things, ancillary thereto or developed thereon  implies to and 
+thereby what is the extent of exclusion in software led inventions. The term has been 
+progressively interpreted by the Indian Patent Office, Stakeholders and Indian Courts 
+while adjudicating various matters related to Computer Related Inventions.  
+One thing is emphatically clear that allowability under section 3(k) does not 
+necessitate presence of “ Novel Hardware”. Rather presence of technical solution to 
+technical problem through technical means and thereby achieving certain technical 
+effects, which are beyond mere incidental effects, even when the same is achieved by 
+implementation of computer programme, may lead the claimed invention to overcome 
+exclusion under computer programme per se of section 3(k). 
+Guided by the Indian legislative provisions, legislative intent and recent jurisprudence 
+in the field, the following is to be used to assess the exclusion/non- exclusion under 
+computer programme per se provision of section 3(k). 
+4.5.4.1 Steps for Assessing whether the claimed invention falls under the 
+exclusion of computer programmeper se or Not: 
+1. Construing the substance of claimed invention as a whole and 
+identifying the essential technical features -  understanding the 
+claimed invention holistically, looking beyond the specific wording or 
+form of the claims to understand the actual underlying  objective and 
+concept of the invention to capture claimed invention’s actual technical 
+contribution.Further,pinpointing the core technical components and/or 
+functionalities that are indispensable building blocks of the claimed 
+invention and are vital for its operation and achieving the claimed 
+purpose. 
+2. Identifying the core problem addressed by the invention and the 
+solution it proposes and thereby determining the technicality. 
+3. Determining whether the identified technicality results in a 
+technical effect- which is beyond a mere incidental effect. 
+4. If the determination in step 3 results into affirmation, then the 
+claimed subject matter does NOT fall under the exclusion of 
+“Computer Programme per se”; else the claimed subject matter is 
+excluded under “Computer Programme per se” of section 3(k). 
+Page 34 of 63 
+ 
+To elaborate further on which aspect may constitute exclusion under “computer 
+programme per se” and which takes it away from the exclusion, a non -exhaustive list 
+is enclosed below. It is important to note the given list is only indicative and there may 
+be many other scenarios that shall be judged on case- to-case basis applying the above-
+mentioned principles and legislative provisions. 
+4.5.4.2 Understanding assessment of Computer Programme per se exclusions 
+through hypothetical examples 
+Example 7: A system for recipe management 
+Claim:  
+A system for managing culinary recipes, the system comprising: 
+a) a computing device including a processor and memory; 
+b) a recipe data storage configured to store recipe information; 
+c) a recipe input module configured to receive and store new recipe entries; 
+d) a recipe search and display module configured to search stored recipes and present 
+results to a user; 
+e) an ingredient scaling module configured to automatically adjust ingredient 
+quantities based on desired serving sizes. 
+f) a shopping list generation module configured to create consolidated shopping lists 
+from selected recipes 
+Analysis of Example 7:  
+Step–1: Construing the substance of claimed invention as a whole and identifying 
+the essential technical features -  The claimed invention is about organizing and 
+managing culinary recipes for a user, helping with meal planning and grocery shopping. 
+Its cor e purpose is information management and presentation for personal 
+convenience. The identified essential technical features are a computer system that 
+allows users to store recipes, search them by ingredients, scale serving sizes and create 
+shopping lists b ased on selected recipes having a database (stores recipe data), 
+software modules (a search function, a scaling algorithm, a list generator, a user 
+interface), input/output devices (keyboard, screen).  
+Step –2: Identifying the core problem addressed by the invention and the solution 
+it proposes and thereby determining the technicality: 
+Problem:  managing 
+disorganized recipes, difficulty in scaling ingredients and manual grocery list creation. 
+Solution: computer system that allows users to store recipes, search them by 
+ingredients, scale serving sizes and create shopping lists based on selected recipes 
+through database storage, search functions, and algorithms to manage and present this 
+information. 
+Page 35 of 63 
+ 
+Step–3:Determining whether the identified technicality resul ts in a technical 
+effect which is beyond a mere incidental effect: The problem is a non -technical problem 
+– it's a problem of personal/ information management and convenience and the 
+solution lacks technical effect. There is no impact that the solution mak es the computer 
+itself run faster, use less memory for its internal operations, improve data transmission 
+speed, or control any physical device or provide any enhanced real -world outcome. Its 
+"effect" is simply to organize information, which is a functional effect for the user's 
+convenience or administrative purpose, not a technical effect on the underlying 
+computer system or related physical world. 
+Step-4: The claimed invention falls under the exclusion of computer programme per se 
+of section 3(k) as its substance lies in the idea of organizing recipes, which is 
+implemented using standard programming techniques on general purpose computer, 
+without providing  a technicality beyond the incidental effect of making user choices 
+recipe choices easy. 
+Example 8: Adaptive network optimizer  
+Claim: 
+ A system for dynamically optimizing data transmission performance within a 
+communication network, the system comprising: 
+a) a network monitoring unit configured to acquire real- time environmental data 
+indicative of network conditions, including signal interference and traffic load; 
+b) at least one network interface controller (NIC), characterized by its dynamic 
+parameter adjustme nt capabilities to actively modify data transmission 
+parameters (such as power, frequency, or routing) in real-time; 
+c) a processing unit communicatively coupled to the network monitoring unit and 
+the at least one NIC; 
+d) a memory storing executable instructions for an adaptive network optimization 
+module; 
+e) the processing unit, upon executing said instructions, being configured to:  
+● analyze the acquired real-time network environment data; 
+● determine optimal data transmission parameters based on said analysis to 
+counteract identified network degradations; and 
+● transmit control commands to the at least one network interface controller 
+to dynamically implement the determined optimal parameters, thereby 
+maintaining a predetermined data throughput and reducing 
+communication latency across the network amidst fluctuating conditions. 
+Analysis of Example 8: 
+Page 36 of 63 
+ 
+Step–1: Construing the substance of claimed invention as a whole and identifying 
+the essential technical features – The clamed invention aims to provide highly 
+reliable and efficient data communication over a network by intelligently adapting to 
+environmental challenges, ensuring smooth data flow without manual intervention or 
+pre-set fixed configurations. Its core purpose is to optimize network performance. The 
+claimed invention provides a system that dynamically adjusts network data 
+transmission parameters (like signal strength, frequency, or routing) in real -time to 
+maintain optimal data throughput and reduce latency, even in fluctuating network 
+conditions (e.g., due to  interference or changing user load). It utilizes Network Interface 
+Controllers (NICs) with dynamic signal processing capabilities with real-time parameter 
+adjustment, multiple, diverse sensing units (dedicated interference detectors, signal -to-
+noise ratio monitors, network traffic analyzers) distributed across the network, a 
+centralized processing unit (server/controller) for complex, real -time data analysis, an 
+adaptive optimization algorithm (software) designed to correlate sensor data with 
+network perfor mance metrics and derive optimal transmission parameters, and 
+actuator modules (software/firmware) for sending commands to the NICs to implement 
+the dynamically adjusted parameters. 
+Step–2: Identifying the core problem addressed by the invention and the so lution 
+it proposes and thereby determining the technicality: 
+Problem: Maintaining 
+consistent, high -performance data throughput and low latency in dynamic and 
+unpredictable network environments where interference, congestion, or physical 
+obstacles constantl y change signal quality and data flow. This is a technical problem 
+inherent to telecommunications and data networking, dealing with physical phenomena 
+like electromagnetic interference and technical constraints like bandwidth and 
+processing power. 
+Solution: The system continuously monitors network conditions 
+using specialized sensors, analyzes this technical data in real -time via a complex 
+optimization algorithm, and then dynamically adjusts fundamental network 
+transmission parameters (e.g., modulating power, selecting frequencies, re- routing data 
+packets) through the network interface controllers to counteract adverse conditions. 
+The problem is technical (network performance, interference mitigation). The solution 
+involves a real -time technical process that  directly manipulates underlying technical 
+characteristics of data transmission and leverages specific hardware capabilities to 
+overcome these technical challenges. The technicality can be seen in-  combination and 
+interaction of these elements (sensors, NI Cs, and the adaptive algorithm) to create a 
+closed-loop control mechanism that directly manipulates the physical aspects of data 
+transmission.  
+Step–3: Determining whether the identified technicality results in a technical 
+effect: From the identified technicality in the last step, it can be seen that the invention 
+provides demonstrable, real -time, and realizable improvement in the technical system 
+(the network) viz.: i) Higher data throughput: the network can transmit more data in a 
+given time, a key perfor mance metric; ii) reduced communication latency: data travels 
+across the network faster, another crucial performance metric; iii) Enhanced robustness 
+Page 37 of 63 
+ 
+and reliability: the network maintains its performance even when faced with 
+interference or changing traffic patterns, making it more dependable; iv) Efficient use of 
+network resources: by dynamically adapting to conditions, the system avoids wasting 
+bandwidth or energy on suboptimal transmission settings. 
+This is a clear technical effect on the fundamental op eration of the network, resulting 
+directly from the identified technicality.  
+Step -4: The claimed invention does NOT fall under the exclusion of computer 
+programme per se of section 3(k) as its substance lies in the idea of enhancing network 
+using a specific technical architecture, providing a technicality resulting in a result 
+which is beyond the incidental effect of a computer programme running on a computer. 
+ 
+Table 1: Non-Exhaustive List of the aspects of aninventiondue to which it 
+may NOT fall under the exclusion of computer programme per se 
+Broad Category Examples 
+Boosting internal 
+system 
+efficiency/functio
+nality 
+i. Method/System for achieving faster data processing through 
+technical implementation of innovative algorithms or system 
+architecture interaction (e.g., enhancing the computational 
+ability of the processor for more efficient processing; 
+enabling hardware to process the output faster) 
+ii. Creating a more efficient storage system - using techniques to 
+reduce data access time from storage (e.g., improved caching 
+methodologies, optimised disc I/O scheduling).  
+iii. Optimising computer memory utilisation or management (e.g., 
+reducing the use of memory space in the system and 
+augmenting efficiency). 
+iv. Technical implementation of efficient searching, indexing, or 
+retrieving data from databases that improve overall system 
+performance. 
+v. Creating more effective data compression tech niques using 
+advanced techniques for lossless or lossy data 
+compression/expansion offering better rates or speeds. 
+vi. Improved security of the authentication process; enhanced 
+Page 38 of 63 
+ 
+encryption/decryption techniques - Concrete technical 
+methods/systems to improve da ta security, encryption, or user 
+privacy (e.g., cryptographic implementation, intrusion detection 
+systems analysing network traffic patterns).  
+vii. Technical implementation of enhanced management or allocation 
+of computational resources such as CPU, network bandwidth, 
+cloud resources etc. (e.g., reducing the time period in 
+scheduling job execution in HPC). 
+viii. Improved error detection and correction within data storage or 
+transmission. 
+Governing 
+external devices 
+or physical 
+processes 
+i. Precise, improved, or adaptive control over machinery (robots, 
+industrial units, 3D printers) (e.g. better control of robotic 
+arms for more efficient arm manoeuvring, accurate 
+positioning and intricate movements). 
+ii. Improved reception/transmission of 
+radio/electromagnetic/communication signals - improved 
+handling (receiving, processing, sending) of electronic signals 
+(e.g., enhanced noise filtering, better signal 
+modulation/demodulation). 
+iii. real-time monitoring and control of devices leading to 
+technical solutions -using sensor data processing (e.g., from IoT 
+devices, medical sensors) to enhance the operation, monitoring, 
+or control of physical equipment or environments.  
+iv. Embedded code dictating specific and advantageous actions of a 
+hardware device (e.g., optimizing power consumption in an IoT 
+device based on usage patterns). 
+v. Technical implementation ofgenerating control signals for 
+autonomous vehicles or drones based on real -time sensor data 
+processing. 
+Concrete technical 
+implementations 
+i. Technical implementation of medical image analysis using 
+inventive algorithms to detect anomalies or enhance image 
+quality leading to better technical outcome. 
+ii. Implementation of technically optimizing data synchronization, 
+consistency, or fault tolerance in distribu ted systems or cloud 
+environments. 
+iii. Technical implementation of simulation of complex 
+technical/physical systems accurately (e.g., fluid dynamics, 
+protein folding) to predict behavior, enable control, or facilitate 
+Page 39 of 63 
+ 
+design, 
+iv. Technical implementation of effici ent training for machine 
+learning models or inventive neural network architectures that 
+improve performance/reduce computational cost for a specific 
+technical task. 
+v. Technical implementation of efficient signal processing 
+techniques to solve a technical problem.  
+Table 2: Non-Exhaustive List of the aspects of an invention due to 
+which it falls under the exclusion of computer programme per se 
+Broad Category Examples 
+Core exclusion Computer instructions/code in isolation/Computer 
+Program/Computer Program Product 
+Form of claim/other 
+issues  
+ 
+i. Claims defining software merely by its storage medium (e.g., 
+"program on a disk", "computer -readable medium storing 
+instructions"). 
+a) e.g. " A computer-readable medium storing instructions 
+for data processing..." 
+ii. Data organization methods (structures) detached from a 
+technical process or system that produces a technical result. 
+a) e.g. a new file format without improving efficiency 
+b) e.g. a hierarchical data structure for organizational 
+charts. 
+Lack of technical 
+effect 
+i. Simple conversion of manual tasks (like record keeping, 
+scheduling) to computer execution without additional 
+technical gain beyond inherent computer speed/efficiency:  
+a) e.g. automating bookkeeping or accounting processes 
+without improving data processing efficiency. 
+b) e.g. software for managing employee schedules using 
+standard database operations. 
+ 
+ii. Claimed i nvention whose main function is presenting data 
+Page 40 of 63 
+ 
+visually or textually (e.g., generating standard business 
+reports, dashboards) without a technical solutio n in data 
+handling or display.  
+a) e.g. a new layout for displaying weather information 
+without technical innovation. 
+b) e.g. generating business charts with standard tools. 
+iii. Claimed Invention embodying rules for games or processes 
+for mental exercises (e.g., teaching methods, puzzle -solving 
+strategies). 
+a) e.g. a program implementing a new chess variant. 
+b) e.g. software for solving Sudoku puzzles. 
+ 
+iv. Claimed invention that mimics human reasoning or decision-
+making without providing a specific technical 
+implementation leading to a technical effect.  
+a) e.g. a basic expert system for legal advice using if- then 
+rules. 
+b) e.g. software diagnosing diseases by symptom matching 
+without technical innovation. 
+v. Claimed Invention primarily concerned with aesthetics or 
+artistic creation (protected by copyright).  
+a) e.g. a program for generating digital art or music 
+compositions. 
+b) e.g. software for designing fashion layouts. 
+ 
+vi. Methods/System for performing medical diagn osis based 
+only on symptom correlation or rule -based logic mimicking a 
+doctor's mental process.  
+a) e.g. a decision tree for medical diagnosis without 
+technical processing. 
+b) e.g. correlating symptoms to a database without 
+innovation. 
+ 
+vii. Claimed invention for simple information retrieval or 
+database lookups based on standard query methods - 
+Customized playlist generation based solely on user 
+preferences or listening history (lacks technical effect on the 
+system).  
+a) e.g. a search engine using standard keyword matching. 
+b) e.g. cataloging library books with basic queries. 
+ 
+viii. Customized playlist generation based solely on user 
+preferences or listening history (lacks technical effect on the 
+system).  
+a) e.g. suggesting songs based on genre preferences 
+Page 41 of 63 
+ 
+without any innovation. 
+b) e.g. a recommendation system using basic user 
+profiling. 
+4.5.5 Flow charts showing procedures of examination of CRIs: 
+1. Mathematical Method: 
+
+Page 42 of 63 
+ 
+2. Business Method: 
+
+Page 43 of 63 
+ 
+3. Algorithm: 
+ 
+ 
+  
+
+Page 44 of 63 
+ 
+4. Computer Programme per se: 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 45 of 63 
+ 
+5. Examination of Inventions related  to Artificial 
+Intelligence (AI), Machine Learning  (ML) and Deep 
+Learning (DL), Blockchain, Quantum Computing 
+5.1. Introduction: 
+Technologies like Artificial Intelligence (AI), Machine Learning and Deep Learning 
+(ML/DL), Blockchain, Quantum Computing etc. harness computational architectures 
+and algorithmic techniques to tackle complex tasks such as pattern classification, 
+data segmentation, binary classification, linear and logistic regression, predictive 
+analytics, feature space optimization and faster computation. These technologies, 
+while powerful, are fundamentally built upon mathematical models, learning 
+algorithms, computational models and abstract principles. For instance, blockchain 
+technology relies on cryptographic principles to create a distributed, im mutable 
+ledger. Similarly, quantum computing harnesses the concepts of quantum 
+mechanics, such as superposition and entanglement to perform complex 
+calculations. Further, their sheer potential and immense futuristic possibilities, both 
+realistic as well as unrealistic, have been envisioned in various academic pursuits as 
+possible user scenarios and use cases. As a result, examination of inventions related 
+to AI/ML/DL, Blockchain, Quantum Computing pose unique challenges to 
+traditional patent frameworks especially with regard to fulfilment of the 
+requirements of Sufficiency of Disclosure and their evaluation for exclusion/non-
+exclusion vis-à-vis section 3(k). The core question for patentability is whether the 
+claimed invention leverages the theoretical constructs to provide an implementable 
+technical solution or it remains in the realm of abstract theory. Therefore, the focus 
+of the examination is to distinguish between the theoretical construct based on 
+documented possibilities laid out in the complete specification, against its practical 
+implementable application that offers technical solution to a problem through 
+technical means with sufficient details for a person skilled in the art to be able to 
+reproduce it without undue experimentation.  
+ 
+5.2. Dealing with AI/ML/DL related inventions: 
+AI/ML related inventions generally include deep learning constructs like Artificial 
+Neural Network (ANN), Convolutional Neural Networks (CNNs), Recurrent Neural 
+Networks (RNNs), Spiking Neural Network (SNN), Generative Adversaria l Network 
+(GAN) and transformers, alongside traditional Machine Learning (ML) methods 
+such as Random Forests, Decision Tree, Bayesian Networks, expectation-
+maximization for clustering, and t- distributed stochastic neighbor embedding (t -
+SNE) for dimensional ity reduction. Deep learning -specific mechanisms, such as 
+Page 46 of 63 
+ 
+backpropagation, gradient descent optimization, attention mechanisms, further 
+enable models to learn intricate representations from vast datasets. These 
+computational systems and algorithms, whether  leveraging supervised, 
+unsupervised, or reinforcement learning paradigms, are inherently abstract 
+mathematical entities, defined by their logical structure. As such, their theoretical 
+foundations remain independent of empirical training processes. An abstract idea, 
+such as a mathematical formula or a theoretical construct of Artificial 
+intelligence/Machine learning/ Deep learning, is not patentable, as it lacks practical 
+application. However, when an AI/ML/DL innovation transforms abstract principles 
+into a real-world tangible application, it may become a patentable subject matter.  
+ 
+5.2.1 Inventorship in AI related inventions: AI related inventions can be categorised 
+in two broad categories like AI -generated inventions and AI -assisted inventions. 
+AI-generated inventions refer to  inventions created by AI systems 
+autonomously, or with very limited human intervention. Such AI -generated 
+inventions are not patentable as AI cannot be termed as a “Person” claiming to be 
+the true and first inventor of an invention under section 6 of the Patents Act, 
+1970. AI-assisted inventions are Inventions made using AI as a tool in the 
+inventive process. AI -assisted inventions are not categorically non- patentable 
+under section 3(k) of the Patents Act provided they meet the patentability 
+criteria and demonstrate technical effect through their tangible inventive 
+applications. 
+ 
+5.2.2 Fulfilment of requirements of Sufficiency of Disclosure: Rapid transformative 
+research with published future vision statements; few realised and many 
+unrealised potential and possibilities; theoretical, mathematical and algorithmic 
+nature of the AI/ML/DL related inventions sometimes make it possible for 
+prospective use-case scenarios being extrapolated and camouflaged as a solution 
+to certain problems without necessary specific details. Since the basic premise of 
+patenting regime is Quid -pro-Quo, the disclosure requirements are critical and 
+need to be disclosed fully and particularly with regard to the aspect of the 
+claimed invention.In this regard, it is important to note that in the matter of 
+Caleb Suresh Motupalli vs Controller Of Patents
+22  on 29 th January, 2025 at para 
+21, 23-24, 26, 30-32, Hon’ble Madras High Court stated that: 
+ 
+“ …21. The claimed invention proposes to solve the problem of loss of agency 
+and control by humans as a result of increased AI capabilities, by creating 
+a super- augmented persona. To this end, independent Claim Nos. 14, 20 
+and 25 provide for, inter alia, an  user interface comprising a persona -
+extender, persona -augmenter, ecosystem indicia which provide for an 
+                                                       
+22Caleb Suresh Motupalli vs Controller Of Patents [C.M.A. (PT) No. 2 of 2024] 
+Page 47 of 63 
+ 
+integration technology for integrating the extended persona with plurality 
+of objects, other extended persona of other actors; a delegated processing 
+unit indicium which provides for the actor to non-invasively delegate grunt 
+work or low level processing to delegated processing unit. The metaphor 
+environment performs a black- box modernization technique to provide 
+persona extender or persona augmenter to the actor…” 
+ 
+“ …23. For determining whether the teachings in the complete 
+specification support these claims, the court must assume the mantle 
+of a notional PSITA. The PSITA can be one technical expert or a team 
+consisting of multiple experts depending on t he nature of the invention. 
+The appellant argued that the multifaceted interdisciplinary nature of the 
+claimed invention necessitates that the invention be examined by a PSI TA 
+team consisting of relevant experts. Without doubt, the claimed invention 
+pertains to the field of AI, more particularly, Augmented Reality and 
+Mixed Reality. Therefore, the PSITA is a software engineer with 
+expertise in AI and allied fields or a team having experts well -versed 
+in AI, black - box modernization techniques, Object Oriented Analysis 
+and Design techniques…” 
+ 
+“ …24. On perusal of the complete specification by assuming the mantle of 
+the said PSITA team, I find that the disclosures therein do not sufficiently 
+enable the product, method or means claims. The perceived problem of loss 
+of human control is proposed to be solved using the necktie persona - 
+extender/environment integrator… the complete specification teach that 
+through the black- box modernization technique, the computer works 
+towards extending human minds and bodie s beyond their conventional 
+boundaries; the computer is recast as the necktie persona -
+extender/integrator; the hardware of the extender/integrator consists of 
+the pocket data processing device connected to a global network with 
+handwriting, speech, gesture and image synthesizing/processing software, 
+a camera on the forehead, earphone with microphone and a projector. 
+Distributed Object Technology (DOT) and its middleware provide the 
+necessary integration technology whereas the browser and the web 
+provide for the extension technology.… 
+ 
+…26. On carefully examining the complete specification and the relevant 
+prior art documents, I find that the appellant has merely coalesced the 
+disclosures and discussions in the patent and non -patent literature, which 
+largely relate to harnessing AI capabilities for advancing human 
+operations, to arrive at the claimed invention. Significantly, black -box 
+modernization, DOT , object oriented analysis and design techniques, which 
+lie at the heart of the claimed invention and form t he bedrock for enabling 
+the claimed technical features, persona extension and augmentation, are 
+disclosed in the prior art document D3 for modernizing outdated 
+information systems. The teachings in the complete specification of the 
+Page 48 of 63 
+ 
+claimed invention do not  provide any directions for the adoption of 
+these technologies for persona extension and augmentation. In order to 
+meet enablement requirements, undue levels of experimentation 
+entailing the deployment of inventive faculty should not be required 
+to work th e invention. A fair reading of the complete specification does 
+not lay bare the purported working and usage of the aforementioned 
+techniques…Absent such teachings and the techniques not being common 
+general knowledge for persona extension and augmentation,  in my view, 
+undue experimentation requiring the use of inventive faculty is necessary 
+to achieve the promised result.……30. Upon a fair reading of the 
+specification, I find that it does not contain any details as regards the 
+conventional information processing and user interface design techniques 
+to mitigate n - entropy as claimed in Claim…nor the conventional wired or 
+wireless integration or interfacing techniques used for layering of the 
+cyberspace over the meatspace to form the labourspace as claimed…As f or 
+the working of the CNSOA…the complete specification in Page 14, merely 
+mentions the usage of standard "Object Oriented Analysis and 
+Design" techniques for integration but glaringly lacks any teachings 
+or working examples regarding its usage in achieving the integration 
+as claimed …the complete specification contains an elaboration of the 
+proposed decussation and biblical and natural element analogy but is 
+devoid of any technological enablement of the features in the claim . 
+For the aforementioned lack of t echnical criteria in the complete 
+specification to work the claims for achieving the intended result, the 
+claimed invention fails the enablement test under Section 10(4)(a) of the 
+Patents Act…” 
+ 
+“ …31. Section 10(4)(b)  of the Patents Act requires the comple te 
+specification to disclose the "best method of performing the invention 
+which is known to the applicant and for which he is entitled to claim 
+protection." While grappling with the question of whether the patent -in-
+suit relating to “improvements in or relating to soil cultivating 
+implements” discloses the best mode of performing the invention, Lord 
+Justice Nicholls in C Van Der Lely NV v. Ruston's Engineering Co. Ltd. ('Van 
+Der Lely') [1993] RPC 45 propounded that the standard for ascertaining 
+whether the claimed invention discloses its best mode of performance 
+is to be determined as per practice and not in theory… the complete 
+specification is bereft of a) any teachings to use the object oriented analysis 
+technique to achieve the promised integration and b) any technical feature 
+to result in the decussation of the pyramids hosting the actors. Therefore, 
+the claimed invention fails under section 10(4)(b) as it does not disclose 
+any workable criteria to arrive at the intended result , let alone the 
+best mode of performing the invention……32.  Section 10(5)  of the Patents 
+Act requires the claims of the invention to be clear and succinct and to be 
+fairly based on the matter disclosed in the specification. Elucidating the 
+rule of clarity and succinctness, the UK Court of Appeal in  The General Tire 
+Page 49 of 63 
+ 
+& Rubber Company v. The FirestoneType and Rubber Company Limited and 
+Others [1972] R.P .C. 457, posited that the rule requires the patentee to 
+provide "as clear a definition as the subject matter admits of" and the 
+question o f definition has to be decided as a "practical matter" and the 
+puzzles set out at the edge of the claim carry little weight. The principle 
+underlying the second part of the provision, the fair basing rule, was 
+formulated in Biogen Inc v  Medava Plc, [1997] R.P .C. 1. The rule requires 
+that the specification must enable the invention to be performed to 
+the full extent of the monopoly claimed. Further, in Van Der Lely, it was 
+held that a claim covering an unimplementable or an unworkable 
+embodiment is not fairl y based on the specification…” [Emphasis 
+Added] 
+ 
+From above, it is evident that the nature of disclosure shall be such that it enables 
+reproducibility without undue experimentation by a person skill in the art. 
+ 
+5.2.3 Non-exhaustive illustrative s cenarios vis- à-vis AI/ML/DL applications: To 
+elaborate on the above discussions, the following non- exhaustive illustrative 
+scenarios vis-à-vis AI/ML/DL applications have been provided.  
+ 
+Scenario-1: 
+ 
+In AI systems, while the inputs and outputs are typically  known, the logic that 
+transforms the input into output may be complex or abstract or derived on the 
+go. If the claimed invention is mainly focused on getting monopolistic rights over 
+this input/output transformation , then thespecification should aim to cl arify 
+this transformation in compliance with the statutory requirements for a 
+complete and enabling disclosure , by detailing known processes and variables  
+withsufficient specificity and clarity for a person skilled in the art to reproduce 
+the transformatio n. If test results or other forms of evidences , validate the 
+accuracy of the model’s output, these should be included, especially when the AI 
+is used for precise applications where reliability is essential  such as but not 
+limited to - providing concrete, unambiguous evidence of output consistency 
+(e.g., identical diagnoses for the same medical image across multiple runs), 
+accuracy under varying but expected conditions (e.g., autonomous vehicle 
+braking functioning reliably in diverse weather conditions), ro bustness to minor 
+input perturbations (e.g., fraud detection unaffected by minor data formatting 
+changes), and a demonstrably low rate of critical errors (e.g., precisely quantified 
+false positive and false negative rates in fault detection for critical machinery). 
+ 
+Example-9 (Hypothetical): An invention relating to system/method for 
+translating handwritten medical prescriptions into structured electronic medical 
+records using deep learning, comprises a neural network system where the input 
+is a scanned image of a handwritten medical prescription and the output is a 
+Page 50 of 63 
+ 
+structured digital format, such as a JSON object containing patient instructions, 
+drug names, and dosages; wherein a CNN (e.g., ResNet) is used to extract features 
+from image pixels; a Transforme r-based sequence- to-sequence decoder maps 
+image embeddings to text; andthe pre- processing includes image binarization, 
+noise filtering, and size normalization. The invention’s training data includes 1 
+million labelled prescriptions annotated by pharmacists  and the validation 
+results show higher field -level extraction accuracy on a separate 10,000 -image 
+test set. 
+ 
+Sufficiency of Disclosure requirements: 
+ 
+i. The neural network architecture (CNN and Transformer -based decoder) 
+should be disclosed with sufficient structural detail: layer types, depth, 
+and activation functions. 
+ii. The dataset used (1 million labelled prescriptions) should be adequately 
+characterized, including handwriting variability and structure of the 
+digital output and how the prescriptions were labeled or annotated. 
+iii. Pre-processing steps (image cleaning, size normalization, image filtering, 
+image enhancement, noise removal, segmentation etc.) should be 
+described with implementation logic. 
+iv. Training details (loss functions, optimizer settings, training epochs)  
+should be provided. 
+v. Validation metrics and real -world test results (accuracy, recall) support 
+that the model generalizes well, should be disclosed. 
+ 
+Aspect(s) which may take it out of the purview of exclusion under section 
+3(k): The claimed invention automates the digitization of complex and often 
+illegible handwritten prescriptions, reduces human transcription errors, ensures 
+prescription safety, and improves processing speed in clinical workflows. 
+ 
+Scenario – 2: 
+ 
+When the claimed invention is primarily based on an already trained AI model , 
+clearly defining the correlation between input and output data is critical. For 
+describing th is correlation between the AI model's learned behavior and its 
+intended technical function clearly:  
+ 
+• The training data used for the model should be  explicitly identified  (its 
+nature, any unique characteristics, etc.), 
+• A clear link between the training data's characteristics and the specific 
+technical problem the invention addresses should be established, 
+explaining why that data is suitable for solving the problem, 
+Page 51 of 63 
+ 
+• The specific learning model (e.g., neural network architecture, algorithm 
+type) and the training methodology (e.g., hyperparameters, optimization 
+techniques, training duration, any pre- processing steps) should be 
+comprehensively described and 
+• The model, when trained, should be shown to effectively address the 
+technical problem with predictable and reliable results, typically supported 
+by validation metrics and real-world test outcomes. 
+ 
+Example-10 (Hypothetical): An invention relating to failure prediction systems 
+for industrial machines using recurrent neural networks (RNN) trained on 
+historical sensor data; wherein the system uses Long Short- Term Memory 
+(LSTM) layers to analyze multivariate time -series sensor data (temperature, 
+vibration, speed) collected at certain time intervals; LSTM network architecture 
+includes three stacked layers, with dropout and batch normalization; Input is 
+Sensor logs from turbines (Wind Turbine SCADA Dataset:  a public labelled 
+dataset i.e.Kaggle dataset which contains data such as wind speed, direction, and 
+power output.); Output is Binary label indicating whether a failure will occur 
+within certain time period. The training methodology includes Adam optimizer, 
+learning rate scheduling, binary cross -entropy loss. The trained model achieves 
+very high prediction accuracy across five cross-validation folds. 
+ 
+Sufficiency of Disclosure requirements: 
+ 
+i. Training dataset (Wind Turbine SCADA) should be explicitly identified, 
+with details of sensors (type, frequency, duration of collection) and data 
+labelling methodology. 
+ii. Correlation between the dataset and the technical task (i.e., time- series 
+prediction of mechanical failure) should be explained. It should be defined 
+how the features of time series dataset are being processed; whether the 
+parameters like stationarity, seasonality, trends etc. have been properly 
+tested, if yes, then the information of these steps should be explained. 
+iii. Architectural details of the LSTM (number of layers, time window, 
+dropout rates) should be clearly provided. 
+iv. The training process (loss function, learning rate, regularization) should 
+be clearly explained. 
+v. Performance results shou ld be provided to demonstrate that the model 
+solves the technical problem predictably. 
+Aspect(s) which may take it out of the purview of exclusion under section 
+3(k): The claimed invention provides early and accurate detection of mechanical 
+anomalies, ther eby reducing unplanned outages, optimizing maintenance 
+scheduling, and increasing operational efficiency of wind farms. 
+ 
+Page 52 of 63 
+ 
+Scenario – 3: 
+ 
+If in the claimed invention, data pre -processing plays a key role, all steps and 
+functions of pre-processing should be disclosed, along with how they correlate to 
+the end model. If this correlation isn’t clear ly described,and a person skilled in 
+the art struggles to understand the link between raw data and processed learning 
+data, the claimed inventionrisks failing to meet the enablement requirement. 
+ 
+Example-11 (Hypothetical): An invention relating to remote sensing and 
+agricultural monitoring, particularly in classifying crop types using satellite 
+imagery and deep learning. The raw satellite data undergoes multiple pre-
+processing stages prior to classification: Sen2Cor algorithm is used for 
+Atmospheric correction, Normalized Difference Vegetation Index (NDVI) 
+calculation, Image segmentation Based on veg etation indices and texture filters. 
+The processed images are classified using a CNN (EfficientNet) trained on 
+labelled plots with crop type annotations. The model achieves X% classification 
+accuracy, with pre-processing contributing to a Y% performance boost compared 
+to using raw imagery. 
+ 
+Sufficiency of Disclosure requirements: 
+ 
+i. A step -by-step pre -processing pipeline should be described including 
+details s uch as : atmospheric correction (name algorithm), NDVI 
+calculation, and segmentation logic. 
+ii. A clear explanation of how pre- processed data improves classification 
+performance over raw imagery should be provided. 
+iii. Different implementational parameters and their inter -relationship 
+used in the CNN model structure (EfficientNet) mentioned should be 
+disclosed. 
+iv. The training dataset characteristics ( especially that are relevant to the 
+pre-processing challenges)  andlabelling methodology should be 
+disclosed. 
+v. A comparative performance benchmark which shows the material 
+effect of pre-processing should be disclosed. 
+Aspect(s) which may take it out of the purview of exclusion under section 
+3(k): The claimed invention e nables large- scale, high -accuracy crop 
+classification which enhances land use management, precision agriculture, and 
+food security planning. 
+Scenario–4: 
+ 
+If the claimed invention is based onreinforcement learning, it must specify how 
+the system interacts with its environment, including - agent interactions, states, 
+Page 53 of 63 
+ 
+actions, and rewards. This includes detailed descriptions of agent interactions, 
+clearly outlining how the learning agent observes and influences its 
+surroundings. Furthermore, the states, actions, and rewards must be 
+comprehensively defined, detailing the observable characteristics of the 
+environment the agent perceives, the set of possible m oves or decisions it can 
+make, and the mechanism and values by which it receives feedback to guide its 
+learning. Omitting these details or failing to describe them in a way that a person 
+skilled in the art can deduce, could result in a non-enabled disclosure. 
+ 
+Example-12 (Hypothetical): An invention relating to " Adaptive Urban Traffic 
+Optimizer" (AUTO) which is a deep reinforcement learning (DRL) system for real-
+time traffic signal control. AUTO employs a Deep Q- Network (DQN) with 
+convolutional neural networks to process traffic camera feeds, defining states as 
+vehicle density and queue lengths. Actions include adjusting signal timings 
+(green/red durations). The advantages are calculated as reduced average vehicle 
+wait times, weighted by traffic flow. The agent, a centralized server, interacts with 
+traffic signals via IoT protocols. Training uses simulated urban environments, 
+with transfer learning for real -world deployment. AUTO optimizes traffic flow, 
+reducing congestion and emissions. 
+ 
+Sufficiency of Disclosure requirements: 
+ 
+i. DQN architecture disclosure should be provided, encompassing its 
+input handling (e.g., raw camera feeds), state representation 
+methodology (e.g., vehicle density, queue lengths, traffic flow rates), 
+agent action space (e.g., discrete o r continuous signal timing 
+adjustments), and the precise advantage function calculation (e.g., 
+optimization for wait time reduction). 
+ii. IoT-based agent- environment interaction should be clearly described , 
+including specific sensor types (e.g., smart cameras,  vehicle detectors) 
+for environmental observation and actuator mechanisms (e.g., smart 
+traffic light controllers, road signage) for agent influence. 
+iii. Training methodology should be disclosed clearly detailing the 
+simulation environment setup and parameters ( e.g., traffic simulator 
+used, scale) and the specifics of transfer learning application (e.g., pre-
+trained model used, fine- tuning strategy, source domain 
+characteristics). 
+Aspect(s) which may take it out of the purview of exclusion under section 
+3(k): The claimed invention is optimizing urban traffic flow by reducing average 
+vehicle wait times by dynamically adjusting signal timings based on real -time 
+data. This leads to decreased traffic congestion, lower fuel consumption, and 
+reduced CO2 emissions. By pr ocessing complex traffic patterns via convolutional 
+Page 54 of 63 
+ 
+neural networks, AUTO achieves scalability across diverse urban environments, 
+enhancing transportation efficiency and environmental sustainability. 
+Scenario–5: 
+ 
+If the claimed invention is based on ( allegedly) improving a computer’s internal 
+structure or operations , it  should describe how the underlying algorithm 
+interacts with the hardware or system architecture. This includes specifying how 
+the model optimizes internal performance metrics like data s torage, scheduling 
+or processing speeds, offering the necessary technical context. 
+ 
+Example-13 (Hypothetical): An invention relating to operating system (OS) 
+kernel optimization, more specifically to a method for task scheduling using 
+neural networks. The invention integrates a lightweight neural network model 
+into the OS kernel to predict the most efficient CPU core for task execution based 
+on Input features viz. Thread priority, cache hit rate, CPU utilization. Two -layer 
+multi-layer perceptron Model architecture is trained on profiling data. The model 
+replaces the default heuristic in the Linux Completely Fair Scheduler (CFS). 
+Evaluation shows X% average latency reduction and Y% throughput 
+improvement across benchmark tests. 
+ 
+Sufficiency of Disclosure requirements: 
+ 
+i. Precise definition of input features (thread priority, core stats) and 
+rationale for selection should be provided to explain how the model 
+perceives and leverages relevant system state(s) for its optimization 
+decisions. 
+ii. Architecture of the neural network (layers, activation, training method) 
+should be described. 
+iii. Integration with the Linux CFS should be explained at the system -call 
+or kernel -hook level along with compatibility range with CPU 
+configurations and OS. 
+iv. Training data sources  (if ap plicable) and pre-processing methodology 
+should be disclosed. 
+v. Performance results (latency and throughput) should be validated.  
+Aspect(s) which may take it out of the purview of exclusion under section 
+3(k): The claimed invention e nhances OS-level task sc heduling using intelligent 
+learning-based prediction, leading to improved CPU resource utilization and 
+system performance. 
+ 
+ 
+Page 55 of 63 
+ 
+Scenario–6: 
+ 
+When the claimed invention’s inventiveness depends on specific traits of the 
+training dataset, these traits must be disclosed unless a p erson skilled in the art 
+could identify them without undue experimentation. This is because these data 
+characteristics are essential to how the model functions and w hat problem it 
+solves. Details such as whether th e data is from a particular domain, its variety, 
+its precise labeling methodology, or any unique inherent characteristics should 
+be included In most cases, it’s sufficient to describe the data’s defining 
+characteristics rather than the specific dataset itself  which could be voluminous 
+or sensitive. 
+ 
+Example-14 (Hypothetical): An invention for addressing the problem of facial 
+recognition accuracy for elderly individuals, especially in healthcare and safety 
+monitoring applications. A facial recognition model is  trained specifically on a 
+dataset comprising individuals aged 65–90, including various aging features such 
+as wrinkles, loose skin, and common occlusions. Dataset attributes are viz. High 
+diversity in lighting, poses, and accessories (e.g., glasses). Modi fied FaceNet 
+architecture, a pre- trained deep convolutional neural network model, with age-
+aware embedding loss is used for facial recognition. The model achieves X% 
+recognition accuracy for elderly subjects, compared to Y% (X>Y) for a baseline 
+model trained on a general dataset (specific trait/characteristic of the dataset is 
+the key innovation). 
+ 
+Sufficiency of Disclosure Requirements: 
+ 
+i. A description of dataset traits critical to the effect (age distribution, 
+facial characteristics of elderly subjects, oc clusions) should be 
+disclosed.  
+ii. Explanation of why generic face datasets would not suffice and how 
+specific dataset traits impact model performance should be given.  
+iii. Neural network architecture (FaceNet variant) should be given, with 
+modifications (age-weighted loss) should be described. 
+iv. Quantitative comparison with baseline models showing material 
+improvement due to dataset selection should be provided. 
+Aspect(s) which may take it out of the purview of exclusion under section 
+3(k): The claimed invention p rovides reliable person identification in elderly 
+care environments, reduces false negatives in safety monitoring, and enables 
+automated fall detection and health event tracking. 
+ 
+ 
+Page 56 of 63 
+ 
+Scenario–7: 
+ 
+If the  claimed invention's inventiveness is in the implementation of new 
+learning algorithm,then a comprehensive description of that specific algorithm, 
+including its unique elements, mathematical foundations, and operational steps, 
+is absolutely essential for sufficiency of disclosure. However, if the inv entive core 
+isn't in the algorithmic implementation itself, but rather in a new method of 
+creating, curating, or specifically utilizing a dataset  that enables even a 
+standard or known algorithm  to achieve a breakthrough result , then the focus of 
+thedisclosure shifts to detailing the innovative data- centric processes, while the 
+common algorithm merely serves as a tool to leverage that inventively prepared 
+data. 
+ 
+Scenario–7(a): Technical implementation of Algorithmic learning is the 
+Invention:  
+ 
+Example-15 (Hypothetical): The claimed invention discloses that the 
+innovation lies in the function of a new deep learning algorithm for crop 
+classification. This includes custom neural network architecture, such as a 
+modified EfficientNet with additional attention mechanisms (e.g., Squeeze- and-
+Excitation blocks or Spatial Attention modules). This New neural architecture 
+results in Improvements in learning temporal patterns from satellite data (e.g., 
+incorporating a temporal convolution or Transformer layers to m odel seasonal 
+changes). Model employs Optimization techniques that improve convergence, 
+generalization, or resilience to noise (e.g., custom loss functions or training 
+schedules). The claim is that no prior model effectively extracts high -resolution 
+crop-type features across seasons from multispectral imagery with this level of 
+accuracy or efficiency. 
+ 
+Sufficiency of Disclosure Requirements: 
+ 
+The claimed invention must disclose following technical details of the 
+algorithm/architecture to satisfy enablement requirements: 
+ 
+i. Full architectural layout: layer-by-layer diagram; input dimensions and 
+output structure; number of parameters, specific functions (e.g., ReLU, 
+GELU), etc. 
+ii. Training protocol:Loss function; Optimizer; Batch size, number of 
+epochs, data augmentation strategies. 
+iii. Benchmarking: Performance comparisons on known datasets. 
+ 
+Scenario – 7 (b): Data engineering and its usage is the invention: 
+ 
+Example-16 (Hypothetical): The claimed invention is an automated system for 
+generating a high -fidelity, h ighly consistent, and uniquely harmonized multi-
+Page 57 of 63 
+ 
+seasonal and multi- source satellite imagery dataset for crop type classification. 
+This system addresses the inherent challenges of complex satellite data and 
+inconsistent ground truth labels by implementing an inventive pipeline that 
+includes dynamic cross-sensor calibration, intelligent temporal stacking and gap-
+filling algorithms, and novel AI -assisted label validation and conflict resolution 
+techniques. This unique data creation and curation process, rather  than the 
+subsequent classification algorithm, directly enables unprecedented high -
+accuracy crop classification across diverse agricultural regions, significantly 
+improving agricultural monitoring and decision-making systems. 
+ 
+Sufficiency of Disclosure Requirements: 
+i. The claimed invention should disclose the data pipeline and usage 
+context encompassing the sequence of data handling operations and 
+the specific environment or application where the invention is 
+deployed, while the algorithm can remain generic or lightly described. 
+ii. Technical rationale as to why these specific steps and techniques are 
+innovative and necessary to achieve the desired data quality and 
+characteristics should be provided in detail. 
+iii. Demonstration of validation methodology(e.g., comparin g against 
+models trained on conventionally processed data) should be provided. 
+Aspect(s) which may take inventions as discussed in 7a and 7b, out of the 
+purview of exclusion under section 3(k): The claimed invention achieves high-
+accuracy and efficiency in extracting high -resolution crop- type features across 
+seasons from multispectral satellite imagery. This directly enhances the technical 
+performance of agricultural monitoring, resource management, and decision-
+making systems, enabling more precise land us e mapping, yield estimation, and 
+optimized agricultural practices. 
+5.3. Dealing with Quantum computing related inventions: 
+Quantum computing utilizes key principles of quantum mechanics -superposition, 
+entanglement, and Quantum tunnelling -to process information.  Applications of 
+quantum computing span across various fields, including quantum sensing, 
+Quantum key distribution in cryptography (QKD), quantum simulation, quantum 
+internet, and the development of advanced quantum materials and devices. 
+Depending on thei r implementation, quantum computers may include various 
+layers and components. These include qubit technologies, quantum gates and 
+multipliers, quantum chips, and processors such as spin qubits or superconducting 
+transmon qubits, dilution refrigerators, cr yoperm shields, and qubit signal 
+amplifiers. They may also incorporate quantum interference devices, compiler 
+engines (optimizers, translators, and mappers), decoders, simulators, emulators, 
+Page 58 of 63 
+ 
+circuit visualization tools and error-correcting codes like Steane Code, Bacon-Shor, 
+3D color codes, and surface codes.  One of the primary challenges in quantum 
+computing lies in developing the physical hardware necessary to build operational 
+quantum systems. Unlike classical computers that rely on mature technologies like 
+transistors and silicon- based chips, quantum computers demand highly 
+specialized and often still -experimental hardware. These systems must accurately 
+manipulate qubits using platforms such as ion traps, superconducting circuits, or 
+photonic technologi es.An abstract idea, such as a mathematical formula or a 
+theoretical concept such as quantum computing/mechanics principle, is not 
+patentable, as it lacks practical application. However, when a quantum computing 
+innovation transforms such abstract principl es into a real -world, tangible 
+application, such as a method for optimizing logistics using quantum algorithms or 
+a specific hardware configuration for qubit control, it may become patentable. The 
+key lies in demonstrating a concrete technical effect or im provement in a 
+technological process. Thus, practical implementations of quantum computing that 
+solve real -world problems can move beyond abstract ideas and qualify as 
+patentable subject matter. 
+ 
+5.3.1. 
+Non-exhaustive illustrative examples vis-à-vis Quantumcomputing 
+Applications:  
+ 
+Example 17: The claimed invention relates to a hybrid quantum- classical 
+computing system that enables dynamic optimization on a superconducting qubit-
+based quantum processor, system comprises: a quantum processing unit (QPU) 
+built using transmon qubits  fabricated from high -coherence superconducting 
+materials of niobium -titanium alloy with sapphire substrate; a classical control 
+unit (CCU) integrating a machine learning (ML) algorithm  for real-time feedback, 
+calibration, and error mitigation during quantum circuit execution; a compiler that 
+translates high -level quantum programming languages into low -level pulse 
+sequences tailored to the specific qubit topology and noise model of the QPU; a 
+cooling and shielding system  that maintains the QPU at 10 -15 milli -kelvin and 
+isolates it from environmental electromagnetic interference; a synchronization 
+module that coordinates quantum gate operations with classical post- processing 
+steps to optimize hybrid computation. 
+Sufficiency of Disclosure Requirements 
+ 
+i. The materials, dimensions, and design of the superconducting 
+transmon qubits should be disclosed. 
+ii. The architecture of the classical machine learning control unit, 
+including model parameters, training data types, and feedback 
+protocols should be clearly defined. 
+Page 59 of 63 
+ 
+iii. A flow diagram for compiler -to-pulse translation, including timing 
+sequences and qubit-specific error margins should be clearly defined. 
+iv. Specifications of the cryogenic environment and electromagnetic 
+shielding methods should be clearly disclosed. 
+v. Block-level diagrams showing the integration of QPU, CCU, compiler, 
+and synchronization modulesshould be clearly defined. 
+Aspect(s) which may take it out of the purview of exclusion under section 
+3(k): The invention allows for adaptive gate- level adjustments using ML during 
+execution, enabling enhanced fidelity and minimizing incoherence, thereby 
+increasing the effective performance of quantum computing technique. 
+Example 18: The claimed invention relates to a chip-based photonic quantum 
+computing device that uses reconfigurable optical circuits for executing linear 
+optical quantum computing (LOQC) protocols, Device comprises:a silicon 
+photonic chip with embedded waveguides, beam splitters, and phase shifters 
+fabricated using CMOS -compatible techniques;single- photon sources, quantum 
+dots, to inject qubits encoded in photon path; Thermo -optic tuning elements that 
+dynamically alter waveguide paths via micro -heaters for on -chip re -
+configurability; superconducting nanowire single-photon detectors (SNSPDs) for 
+efficient on-chip photon detection; Optical delay lines and feedback mechanisms 
+for performing multi-qubit interference experiments.  
+ 
+Sufficiency of Disclosure Requirements 
+ 
+i. The chip layout with detailed waveguide geometry, materials (e.g., 
+silicon nitride, silica), and fabrication steps should be disclosed. 
+ii. Control logic to implement universal single - and two-qubit gates 
+should be disclosed. 
+iii. Test data on insertion loss, extinction ratios, and phase tuning  
+response should be disclosed.  
+iv. Sample Technique execution using the LOQC protocol along with 
+timing diagrams and expected output distributions should  be 
+disclosed. 
+Aspect(s) which may take it out of the purview of exclusion under section 
+3(k): Invention discloses a reconfigurable, CMOS -compatible photonic quantum 
+computing platform enables high-speed, low-noise operations with enhanced gate 
+fidelity and scalability, leveraging thermal decoherence immunity, precise control, 
+and miniaturized integration. 
+ 
+Page 60 of 63 
+ 
+5.4. Dealing with Blockchain related inventions: 
+Blockchain is a Peer -to-Peer, distributed, immutable digital ledger that enables 
+secure transactions, append only, updated only by consensus among peers and 
+tracking assets across a network of computers/Nodes/bloc k. It enables the secure 
+tracking and trading of valuable assets on a distributed digital database shared 
+across a computer network. Blockchain, also known as Distributed Ledger 
+Technology (DL T), uses independent nodes to record, share, and synchronize 
+transactions in their respective electronic ledgers instead of keeping them in one 
+centralized server. Blockchain uses several technologies like non- repudiation, 
+digital signatures, distributed networks, encryption/ decryption methods, smart 
+contracts written in the form of code and distributed ledger technology to enable 
+blockchain applications. Transactions are recorded with an immutable 
+cryptographic signature called a hash. Blockchain has real world application in 
+different field of Technologies viz. Banki ng, Cyber Security, Supply chain 
+management, Healthcare, Governance. 
+ 
+An abstract idea, such as a mathematical formula or a theoretical concept such as 
+Blockchain, is not patentable, as it lacks practical application. However, when a 
+Blockchain innovation transforms such abstract principles into a real -world, 
+tangible application, it may become patentable. The key lies in demonstrating a 
+concrete technical effect or improvement in a technological process. Thus, practical 
+implementations of Blockchain that s olves real-world problems can move beyond 
+abstract ideas and qualify as patentable subject matter. 
+ 
+5.4.1. Sufficiency of Disclosure Requirements vis-à-vis Blockchain applications: 
+ 
+Blockchain patent applications are required to include comprehensive 
+descriptions of the cryptographic techniques used, the specific data structures 
+involved, the consensus mechanisms employed, and any interactions with 
+hardware or network systems. These detailed disclosures enable a person skilled 
+in the art to understand  and replicate the functionality and innovation of the 
+blockchain technology described. Blockchain patent applications must clearly 
+define elements like distributed ledgers, smart contract(disclose only high -level 
+functionality while keeping sensitive implement ation details undisclosed if 
+technical effect does not  lies in Smart contract), consensus mechanisms (e.g., 
+Proof of stake, Delegated Proof of Stake, proof of work, proof of burn, multi-
+signature, Practical Byzantine Fault Tolerance, Proof of Deposit, Pro of of 
+Importance, Proof of Activity), cryptographic processes, and network 
+configurations. Clear descriptions of consensus mechanisms and data layouts (e.g., 
+block structures, linkages) are crucial for enablement.
+ 
+ 
+Page 61 of 63 
+ 
+ 
+5.4.2. Non-exhaustive illustrative examples vis-à-vis Blockchain Applications:  
+Example 19: The claimed invention relates to a  computer-implemented method 
+for executing a rental agreement over a blockchain network, the method 
+comprising:deploying a smart contract to a distributed ledger, the smart cont ract 
+including executable code defining rental terms and access control conditions; 
+receiving, by a decentralized node, a rental request including a digital identity and 
+payment data from a tenant device; verifying, by the smart contract, a crypto -
+currency payment transaction on the blockchain associated with the rental term; 
+upon verification, generating a digital access token and transmitting the access 
+token to a rental access control module; activating, via the access control module, 
+a physical or virtu al asset responsive to the access token; and recording rental 
+events, including access timestamps and payment confirmation, immutably on the 
+blockchain ledger. 
+Sufficiency of Disclosure Requirements 
+i. Smart Contract Logic and its parameter for auto -triggering 
+conditionshould be clearly defined. 
+ii. Protocol stack or interface for connecting smart contracts to IoT 
+hardwareshould be disclosed. 
+iii. What events are recorded immutably (e.g., transaction hashes, 
+timestamps, user IDs)should be disclosed. 
+iv. Explanation of fallback mechanisms (e.g., if smart contract fails to execute, 
+manual override protocol, external oracle, handling failed payments, 
+expired contracts, disputed access events)should be provided. 
+Aspect(s) which may take it out of the purview of exclusion under section 
+3(k): The invention enables automated enforcement of access and payment rights 
+without centralized servers, reduces fraud and transaction latency using trust- less 
+logic execution and Integrates physical IoT devices for secure and  conditional 
+access provisioning. 
+Example 2 0: The claimed invention relates to a  decentralized system for supply 
+chain provenance tracking, comprising: a private/closed blockchain network with a 
+consensus mechanism combining Proof of Authority (PoA) and Pr actical Byzantine 
+Fault Tolerance (PBFT); smart contracts for registering product provenance, 
+verifying sensor data against regulatory thresholds, and dynamically adjusting 
+delivery routes where routing contract integrates external data via oracles to 
+optimize delivery routes in real -time; an off-chain data anchoring mechanism using 
+Merkle trees to store high -volume sensor data with on- chain integrity verification; 
+wherein the Provenance Contract records product details ( e.g., origin, batch 
+number, timestamp)  and updates ownership at each supply chain stage. 
+Page 62 of 63 
+ 
+ 
+ 
+Sufficiency of Disclosure Requirements:  
+ 
+i. For Blockchain Platform , setup instructions like node configuration, 
+network permissions, and consensus parameters should be disclosed. 
+ii. For Smart Contract , detailed functionality of each smart contract (e.g., 
+Provenance Contract for   recording product details, Compliance Contract 
+for regulatory checks, Routing Contract for dynamic rerouting)  should be 
+disclosed. 
+iii. Explanation of the off-chain storage mechanism (e.g., Inter Planetary File 
+System for sensor data) and on- chain anchoring (e.g., Merkle trees for 
+integrity).Detail the hybrid PoA- PBFT consensus, including validator 
+selection, fault tolerance (e.g., tolerating up to one-third faulty nodes), and 
+transaction validation process should be provided. 
+iv. Detailed oracle integration (e.g., ChainlinkAPI  endpoints for weather or 
+traffic data) and IoT sensor protocols (e.g., Message Queuing Telemetry 
+Transport, i.e., MQTT for data transmission) should be disclosed. 
+Aspect(s) which may take it out of the purview of exclusion under section 
+3(k):The invention provides a technical solution with tangible effects in supply chain 
+provenance tracking by integrating a private blockchain with a hybrid Proof of 
+Authority (PoA) and Practical Byzantine Fault Tolerance (PBFT) consensus 
+mechanism, the system achieves low -latency transaction finality, enabling real -time 
+tracking of product details such as origin and batch number, critical for perishable 
+goods like vaccines. The use of off- chain storage on the Inter Planetary File System 
+(IPFS) with Merkle tree anchoring reduces on- chain storage demands, enhancing 
+scalability and lowering costs compared to traditional blockchain systems. Smart 
+contracts automate provenance logging, regulatory compliance checks via IoT sensor 
+data, and dynamic delivery route optimization using external oracle data, ensuring 
+tamper-proof authentication and operational efficiency. The incorporation of IoT 
+sensors with MQTT protocols facilitates secure, real -time environmental monitoring, 
+further embedding hardware integration. These are measurable improvements in 
+supply chain security and efficiency. 
+ 
+ 
+Page 63 of 63 
+ 
+6. Saving Clause of Provisions of Manual 
+Chapter 09.03.05.10 of the Manual, containi ng provisions pertaining to section 3(k) of 
+the Act shall stand deleted with coming into force of these Guidelines for examination of 
+CRIs. 
+ 
+7. Applicability of Guidelines 
+These Guidelines shall be applicable with immediate effect. 
+ 
+ 
+-----------End of Document---------- 
+ 

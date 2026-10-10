@@ -1,0 +1,239 @@
+{
+ "E1_sensitivity": [
+  {
+   "W": 7,
+   "thr": 0.2,
+   "P_star": 79.4,
+   "gap_median": 0.96,
+   "gap_max": 1.3,
+   "mismatch_median": 0.301
+  },
+  {
+   "W": 7,
+   "thr": 0.3,
+   "P_star": 80.88,
+   "gap_median": 1.22,
+   "gap_max": 2.0,
+   "mismatch_median": 0.491
+  },
+  {
+   "W": 7,
+   "thr": 0.4,
+   "P_star": 81.21,
+   "gap_median": 1.1,
+   "gap_max": 1.9,
+   "mismatch_median": 0.476
+  },
+  {
+   "W": 14,
+   "thr": 0.2,
+   "P_star": 79.4,
+   "gap_median": 1.04,
+   "gap_max": 1.92,
+   "mismatch_median": 0.212
+  },
+  {
+   "W": 14,
+   "thr": 0.3,
+   "P_star": 80.88,
+   "gap_median": 1.44,
+   "gap_max": 2.4,
+   "mismatch_median": 0.421
+  },
+  {
+   "W": 14,
+   "thr": 0.4,
+   "P_star": 81.21,
+   "gap_median": 1.39,
+   "gap_max": 2.35,
+   "mismatch_median": 0.476
+  },
+  {
+   "W": 28,
+   "thr": 0.2,
+   "P_star": 79.4,
+   "gap_median": 1.43,
+   "gap_max": 2.05,
+   "mismatch_median": 0.204
+  },
+  {
+   "W": 28,
+   "thr": 0.3,
+   "P_star": 80.88,
+   "gap_median": 1.58,
+   "gap_max": 2.25,
+   "mismatch_median": 0.398
+  },
+  {
+   "W": 28,
+   "thr": 0.4,
+   "P_star": 81.21,
+   "gap_median": 1.41,
+   "gap_max": 2.9,
+   "mismatch_median": 0.433
+  }
+ ],
+ "E1_raw_gap_median": 7.35,
+ "E2_daily_sign": {
+  "per_compartment": {
+   "Reference": {
+    "days": 80,
+    "anchor_lower": 74,
+    "of": 80,
+    "z": 7.6
+   },
+   "AICU": {
+    "days": 77,
+    "anchor_lower": 77,
+    "of": 77,
+    "z": 8.77
+   },
+   "Automatoes": {
+    "days": 80,
+    "anchor_lower": 73,
+    "of": 80,
+    "z": 7.38
+   },
+   "Digilog": {
+    "days": 80,
+    "anchor_lower": 80,
+    "of": 80,
+    "z": 8.94
+   },
+   "IUACAAS": {
+    "days": 80,
+    "anchor_lower": 80,
+    "of": 80,
+    "z": 8.94
+   },
+   "TheAutomators": {
+    "days": 80,
+    "anchor_lower": 43,
+    "of": 76,
+    "z": 1.15
+   }
+  },
+  "pooled": {
+   "anchor_lower": 427,
+   "of": 473,
+   "z": 17.52
+  }
+ },
+ "E3_coverage": {
+  "Reference": {
+   "1": {
+    "plateau_days": 121,
+    "irrigated_days": 155,
+    "coverage": 0.781,
+    "day_to_day_sd": 1.22
+   },
+   "2": {
+    "plateau_days": 84,
+    "irrigated_days": 155,
+    "coverage": 0.542,
+    "day_to_day_sd": 1.46
+   }
+  },
+  "AICU": {
+   "1": {
+    "plateau_days": 24,
+    "irrigated_days": 162,
+    "coverage": 0.148,
+    "day_to_day_sd": 2.81
+   },
+   "2": {
+    "plateau_days": 15,
+    "irrigated_days": 162,
+    "coverage": 0.093,
+    "day_to_day_sd": 3.43
+   }
+  },
+  "Automatoes": {
+   "1": {
+    "plateau_days": 88,
+    "irrigated_days": 161,
+    "coverage": 0.547,
+    "day_to_day_sd": 1.44
+   },
+   "2": {
+    "plateau_days": 123,
+    "irrigated_days": 161,
+    "coverage": 0.764,
+    "day_to_day_sd": 1.52
+   }
+  },
+  "Digilog": {
+   "1": {
+    "plateau_days": 63,
+    "irrigated_days": 155,
+    "coverage": 0.406,
+    "day_to_day_sd": 3.13
+   },
+   "2": {
+    "plateau_days": 52,
+    "irrigated_days": 155,
+    "coverage": 0.335,
+    "day_to_day_sd": 13.54
+   }
+  },
+  "IUACAAS": {
+   "1": {
+    "plateau_days": 112,
+    "irrigated_days": 160,
+    "coverage": 0.7,
+    "day_to_day_sd": 1.25
+   },
+   "2": {
+    "plateau_days": 109,
+    "irrigated_days": 160,
+    "coverage": 0.681,
+    "day_to_day_sd": 1.56
+   }
+  },
+  "TheAutomators": {
+   "1": {
+    "plateau_days": 112,
+    "irrigated_days": 161,
+    "coverage": 0.696,
+    "day_to_day_sd": 1.3
+   },
+   "2": {
+    "plateau_days": 113,
+    "irrigated_days": 161,
+    "coverage": 0.702,
+    "day_to_day_sd": 1.21
+   }
+  }
+ },
+ "E5_whole_season": {
+  "Reference": {
+   "raw": 3.2,
+   "anchor": 1.35
+  },
+  "AICU": {
+   "raw": 15.1,
+   "anchor": 1.75
+  },
+  "Automatoes": {
+   "raw": 3.8,
+   "anchor": 1.19
+  },
+  "Digilog": {
+   "raw": 9.2,
+   "anchor": 2.75
+  },
+  "IUACAAS": {
+   "raw": 9.3,
+   "anchor": 0.99
+  },
+  "TheAutomators": {
+   "raw": 1.0,
+   "anchor": 1.0
+  }
+ },
+ "E4_timing": {
+  "sensor_days": 334,
+  "seconds": 0.736,
+  "ms_per_sensor_day": 2.2
+ }
+}

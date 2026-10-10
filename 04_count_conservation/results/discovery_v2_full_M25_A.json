@@ -1,0 +1,75 @@
+{
+ "manifest": "window_full_M25_A.json",
+ "sites": 367,
+ "surveyed_relations": 199,
+ "sites_in_survey": 295,
+ "meta": {
+  "pairs": 959,
+  "adjacent": 229,
+  "self_floor_pct": 0.902,
+  "limit_pct": 1.804
+ },
+ "seconds": 84.4,
+ "found": 453,
+ "found_by_size": {
+  "2": 196,
+  "3": 217,
+  "4": 26,
+  "5": 14
+ },
+ "categories": {
+  "exact": 139,
+  "unmapped_site": 136,
+  "outside_map": 90,
+  "implied": 88
+ },
+ "judged_precision": 0.716,
+ "recall_by_size": {
+  "2": {
+   "recovered": 118,
+   "of": 156
+  },
+  "3": {
+   "recovered": 20,
+   "of": 28
+  },
+  "4": {
+   "recovered": 1,
+   "of": 15
+  }
+ },
+ "configs": {
+  "prior_only": {
+   "MAE": 15.79,
+   "RMSE": 32.0,
+   "outside": 10.7
+  },
+  "surveyed": {
+   "MAE": 14.06,
+   "RMSE": 28.6,
+   "outside": 5.38,
+   "constraints": 199,
+   "seconds": 16.334
+  },
+  "recovered": {
+   "MAE": 14.27,
+   "RMSE": 31.3,
+   "outside": 6.82,
+   "constraints": 429,
+   "seconds": 50.536
+  },
+  "both": {
+   "MAE": 13.9,
+   "RMSE": 29.86,
+   "outside": 5.48,
+   "constraints": 628,
+   "seconds": 102.817
+  }
+ },
+ "train_meta": {
+  "pairs": 961,
+  "adjacent": 225,
+  "self_floor_pct": 0.898,
+  "limit_pct": 1.796
+ }
+}

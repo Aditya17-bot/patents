@@ -1,0 +1,1062 @@
+{
+ "source": "CAMELS-IND (Mangukiya et al. 2025, ESSD 17:461), CWC observed daily streamflow 1980-2020; Kaggle mirror abhisingh2615/camels-ind-india-streamflow",
+ "stations_with_flow": 242,
+ "same_river_consecutive_pairs": 77,
+ "pairs_incr_ok": 15,
+ "admitted_directions": 12,
+ "admitted_pairs": 6,
+ "rivers": [
+  "Brahmani",
+  "Godavari",
+  "Godavari/Pranhita/Wardha",
+  "Mahanadi/Seonath",
+  "Tapi"
+ ],
+ "basins": [
+  "Brahmani-Baitarani",
+  "Godavari",
+  "Mahanadi",
+  "Tapi"
+ ],
+ "gap_days": 50,
+ "win_d": 21,
+ "steady_ln": 0.1,
+ "india_floor": {
+  "n": 1527,
+  "median": 0.0856,
+  "p90": 0.3064
+ },
+ "us_floor_upper": {
+  "n": 3826,
+  "median": 0.0385,
+  "p90": 0.1347
+ },
+ "admitted": [
+  {
+   "river": "Godavari/Pranhita/Wardha",
+   "basin": "Godavari",
+   "x": "3087",
+   "y": "3008",
+   "x_name": "Sakmur",
+   "y_name": "Bamni",
+   "x_area": 47500.0,
+   "y_area": 46020.0,
+   "incr": 0.0322,
+   "lag": 1,
+   "coupling": 0.9555,
+   "days": 8659,
+   "lat": 19.5614,
+   "lon": 79.6133,
+   "lat_y": 19.8139,
+   "lon_y": 79.3794,
+   "floor_n": 116,
+   "floor_median": 0.1097,
+   "floor_p90": 0.3699
+  },
+  {
+   "river": "Godavari/Pranhita/Wardha",
+   "basin": "Godavari",
+   "x": "3008",
+   "y": "3087",
+   "x_name": "Bamni",
+   "y_name": "Sakmur",
+   "x_area": 46020.0,
+   "y_area": 47500.0,
+   "incr": 0.0322,
+   "lag": -1,
+   "coupling": 0.9555,
+   "days": 8659,
+   "lat": 19.8139,
+   "lon": 79.3794,
+   "lat_y": 19.5614,
+   "lon_y": 79.6133,
+   "floor_n": 101,
+   "floor_median": 0.1155,
+   "floor_p90": 0.3515
+  },
+  {
+   "river": "Godavari",
+   "basin": "Godavari",
+   "x": "3043",
+   "y": "3073",
+   "x_name": "Koida",
+   "y_name": "Perur",
+   "x_area": 305460.0,
+   "y_area": 268200.0,
+   "incr": 0.1389,
+   "lag": 1,
+   "coupling": 0.9612,
+   "days": 9656,
+   "lat": 17.4875,
+   "lon": 81.3875,
+   "lat_y": 18.5872,
+   "lon_y": 80.3958,
+   "floor_n": 201,
+   "floor_median": 0.0979,
+   "floor_p90": 0.3246
+  },
+  {
+   "river": "Godavari",
+   "basin": "Godavari",
+   "x": "3073",
+   "y": "3043",
+   "x_name": "Perur",
+   "y_name": "Koida",
+   "x_area": 268200.0,
+   "y_area": 305460.0,
+   "incr": 0.1389,
+   "lag": -1,
+   "coupling": 0.9612,
+   "days": 9656,
+   "lat": 18.5872,
+   "lon": 80.3958,
+   "lat_y": 17.4875,
+   "lon_y": 81.3875,
+   "floor_n": 209,
+   "floor_median": 0.1095,
+   "floor_p90": 0.2953
+  },
+  {
+   "river": "Godavari",
+   "basin": "Godavari",
+   "x": "3075",
+   "y": "3043",
+   "x_name": "Polavaram",
+   "y_name": "Koida",
+   "x_area": 307800.0,
+   "y_area": 305460.0,
+   "incr": 0.0077,
+   "lag": 0,
+   "coupling": 0.9887,
+   "days": 9657,
+   "lat": 17.2519,
+   "lon": 81.6564,
+   "lat_y": 17.4875,
+   "lon_y": 81.3875,
+   "floor_n": 216,
+   "floor_median": 0.0593,
+   "floor_p90": 0.2002
+  },
+  {
+   "river": "Godavari",
+   "basin": "Godavari",
+   "x": "3043",
+   "y": "3075",
+   "x_name": "Koida",
+   "y_name": "Polavaram",
+   "x_area": 305460.0,
+   "y_area": 307800.0,
+   "incr": 0.0077,
+   "lag": 0,
+   "coupling": 0.9887,
+   "days": 9657,
+   "lat": 17.4875,
+   "lon": 81.3875,
+   "lat_y": 17.2519,
+   "lon_y": 81.6564,
+   "floor_n": 195,
+   "floor_median": 0.0593,
+   "floor_p90": 0.1584
+  },
+  {
+   "river": "Brahmani",
+   "basin": "Brahmani-Baitarani",
+   "x": "7007",
+   "y": "7011",
+   "x_name": "Gomlai",
+   "y_name": "Panposh",
+   "x_area": 21950.0,
+   "y_area": 19448.0,
+   "incr": 0.1287,
+   "lag": 0,
+   "coupling": 0.9829,
+   "days": 6038,
+   "lat": 21.8378,
+   "lon": 84.9425,
+   "lat_y": 22.2772,
+   "lon_y": 84.8519,
+   "floor_n": 54,
+   "floor_median": 0.0648,
+   "floor_p90": 0.1707
+  },
+  {
+   "river": "Brahmani",
+   "basin": "Brahmani-Baitarani",
+   "x": "7011",
+   "y": "7007",
+   "x_name": "Panposh",
+   "y_name": "Gomlai",
+   "x_area": 19448.0,
+   "y_area": 21950.0,
+   "incr": 0.1287,
+   "lag": 0,
+   "coupling": 0.9829,
+   "days": 6038,
+   "lat": 22.2772,
+   "lon": 84.8519,
+   "lat_y": 21.8378,
+   "lon_y": 84.9425,
+   "floor_n": 95,
+   "floor_median": 0.0688,
+   "floor_p90": 0.2177
+  },
+  {
+   "river": "Mahanadi/Seonath",
+   "basin": "Mahanadi",
+   "x": "8035",
+   "y": "8011",
+   "x_name": "Simga",
+   "y_name": "Jondhra",
+   "x_area": 30761.0,
+   "y_area": 29645.0,
+   "incr": 0.0376,
+   "lag": -1,
+   "coupling": 0.9556,
+   "days": 11806,
+   "lat": 21.6256,
+   "lon": 81.6931,
+   "lat_y": 21.7158,
+   "lon_y": 82.3472,
+   "floor_n": 134,
+   "floor_median": 0.1001,
+   "floor_p90": 0.3738
+  },
+  {
+   "river": "Mahanadi/Seonath",
+   "basin": "Mahanadi",
+   "x": "8011",
+   "y": "8035",
+   "x_name": "Jondhra",
+   "y_name": "Simga",
+   "x_area": 29645.0,
+   "y_area": 30761.0,
+   "incr": 0.0376,
+   "lag": 1,
+   "coupling": 0.9556,
+   "days": 11806,
+   "lat": 21.7158,
+   "lon": 82.3472,
+   "lat_y": 21.6256,
+   "lon_y": 81.6931,
+   "floor_n": 193,
+   "floor_median": 0.1171,
+   "floor_p90": 0.4739
+  },
+  {
+   "river": "Tapi",
+   "basin": "Tapi",
+   "x": "13008",
+   "y": "13017",
+   "x_name": "Gidhade",
+   "y_name": "Savkheda",
+   "x_area": 54750.0,
+   "y_area": 48136.0,
+   "incr": 0.1374,
+   "lag": 0,
+   "coupling": 0.959,
+   "days": 4060,
+   "lat": 21.2947,
+   "lon": 74.8092,
+   "lat_y": 21.1481,
+   "lon_y": 75.2408,
+   "floor_n": 2,
+   "floor_median": 0.1498,
+   "floor_p90": 0.1506
+  },
+  {
+   "river": "Tapi",
+   "basin": "Tapi",
+   "x": "13017",
+   "y": "13008",
+   "x_name": "Savkheda",
+   "y_name": "Gidhade",
+   "x_area": 48136.0,
+   "y_area": 54750.0,
+   "incr": 0.1374,
+   "lag": 0,
+   "coupling": 0.959,
+   "days": 4060,
+   "lat": 21.1481,
+   "lon": 75.2408,
+   "lat_y": 21.2947,
+   "lon_y": 74.8092,
+   "floor_n": 11,
+   "floor_median": 0.2406,
+   "floor_p90": 0.8964
+  }
+ ],
+ "candidates": [
+  {
+   "river": "Godavari/Pranhita/Wainganga",
+   "a": "3040",
+   "b": "3048",
+   "incr": 1.7172
+  },
+  {
+   "river": "Godavari/Pranhita/Wainganga",
+   "a": "3048",
+   "b": "3072",
+   "incr": 3.4015
+  },
+  {
+   "river": "Godavari/Pranhita/Wainganga",
+   "a": "3072",
+   "b": "3005",
+   "incr": 0.4355
+  },
+  {
+   "river": "Godavari/Pranhita/Wardha",
+   "a": "3014",
+   "b": "3030",
+   "incr": 1.048
+  },
+  {
+   "river": "Godavari/Pranhita/Wardha",
+   "a": "3030",
+   "b": "3028",
+   "incr": 1.0927
+  },
+  {
+   "river": "Godavari/Pranhita/Wardha",
+   "a": "3028",
+   "b": "3008",
+   "incr": 1.1476
+  },
+  {
+   "river": "Godavari/Pranhita/Wardha",
+   "a": "3008",
+   "b": "3087",
+   "incr": 0.0322
+  },
+  {
+   "river": "Godavari/Indravati",
+   "a": "3068",
+   "b": "3031",
+   "incr": 1.0818
+  },
+  {
+   "river": "Godavari/Indravati",
+   "a": "3031",
+   "b": "3018",
+   "incr": 1.3401
+  },
+  {
+   "river": "Godavari/Indravati",
+   "a": "3018",
+   "b": "3071",
+   "incr": 1.3162
+  },
+  {
+   "river": "Godavari",
+   "a": "3020",
+   "b": "3029",
+   "incr": 0.1003
+  },
+  {
+   "river": "Godavari",
+   "a": "3029",
+   "b": "3109",
+   "incr": 0.5804
+  },
+  {
+   "river": "Godavari",
+   "a": "3109",
+   "b": "3055",
+   "incr": 0.9187
+  },
+  {
+   "river": "Godavari",
+   "a": "3055",
+   "b": "3073",
+   "incr": 1.6064
+  },
+  {
+   "river": "Godavari",
+   "a": "3073",
+   "b": "3043",
+   "incr": 0.1389
+  },
+  {
+   "river": "Godavari",
+   "a": "3043",
+   "b": "3075",
+   "incr": 0.0077
+  },
+  {
+   "river": "Godavari/Pranhita/Wardha/Penganga",
+   "a": "3038",
+   "b": "3074",
+   "incr": 4.2464
+  },
+  {
+   "river": "Godavari/Sabari",
+   "a": "3092",
+   "b": "3045",
+   "incr": 5.4161
+  },
+  {
+   "river": "Krishna",
+   "a": "4021",
+   "b": "4003",
+   "incr": 1.3178
+  },
+  {
+   "river": "Krishna",
+   "a": "4003",
+   "b": "4026",
+   "incr": 0.1998
+  },
+  {
+   "river": "Krishna",
+   "a": "4026",
+   "b": "4017",
+   "incr": 2.6307
+  },
+  {
+   "river": "Krishna",
+   "a": "4017",
+   "b": "4019",
+   "incr": 1.4102
+  },
+  {
+   "river": "Krishna",
+   "a": "4019",
+   "b": "4062",
+   "incr": 0.7721
+  },
+  {
+   "river": "Krishna",
+   "a": "4062",
+   "b": "4060",
+   "incr": 0.0671
+  },
+  {
+   "river": "Krishna/Tungabhadra",
+   "a": "4016",
+   "b": "4013",
+   "incr": 1.0611
+  },
+  {
+   "river": "Krishna/Tungabhadra",
+   "a": "4013",
+   "b": "4040",
+   "incr": 1.2643
+  },
+  {
+   "river": "Krishna/Tungabhadra",
+   "a": "4040",
+   "b": "4031",
+   "incr": 0.8363
+  },
+  {
+   "river": "Krishna/Tungabhadra",
+   "a": "4031",
+   "b": "4004",
+   "incr": 0.108
+  },
+  {
+   "river": "Krishna/Tungabhadra/Tunga",
+   "a": "4005",
+   "b": "4015",
+   "incr": 0.3
+  },
+  {
+   "river": "Krishna/Bhima",
+   "a": "4044",
+   "b": "4038",
+   "incr": 9.3655
+  },
+  {
+   "river": "Krishna/Bhima",
+   "a": "4038",
+   "b": "4054",
+   "incr": 0.4839
+  },
+  {
+   "river": "Krishna/Bhima",
+   "a": "4054",
+   "b": "4064",
+   "incr": 1.0599
+  },
+  {
+   "river": "Cauvery",
+   "a": "5010",
+   "b": "5002",
+   "incr": 17.9669
+  },
+  {
+   "river": "Cauvery",
+   "a": "5002",
+   "b": "5029",
+   "incr": 0.2022
+  },
+  {
+   "river": "Cauvery",
+   "a": "5029",
+   "b": "5008",
+   "incr": 0.2071
+  },
+  {
+   "river": "Cauvery",
+   "a": "5008",
+   "b": "5012",
+   "incr": 0.2444
+  },
+  {
+   "river": "Cauvery/Kabini",
+   "a": "5013",
+   "b": "5028",
+   "incr": 4.5556
+  },
+  {
+   "river": "Cauvery/Bhavani",
+   "a": "5015",
+   "b": "5018",
+   "incr": 2.9159
+  },
+  {
+   "river": "Subarnarekha",
+   "a": "6008",
+   "b": "6006",
+   "incr": 0.1207
+  },
+  {
+   "river": "Baitarni",
+   "a": "7005",
+   "b": "7002",
+   "incr": 4.0117
+  },
+  {
+   "river": "Brahmani",
+   "a": "7011",
+   "b": "7007",
+   "incr": 0.1287
+  },
+  {
+   "river": "Brahmani",
+   "a": "7007",
+   "b": "7009",
+   "incr": 0.5469
+  },
+  {
+   "river": "Mahanadi/Hasdeo",
+   "a": "8023",
+   "b": "8003",
+   "incr": 7.8455
+  },
+  {
+   "river": "Mahanadi",
+   "a": "8029",
+   "b": "8034",
+   "incr": 4.4852
+  },
+  {
+   "river": "Mahanadi",
+   "a": "8034",
+   "b": "8006",
+   "incr": 0.2025
+  },
+  {
+   "river": "Mahanadi",
+   "a": "8006",
+   "b": "8038",
+   "incr": 1.1539
+  },
+  {
+   "river": "Mahanadi/Seonath",
+   "a": "8009",
+   "b": "8020",
+   "incr": 1.3031
+  },
+  {
+   "river": "Mahanadi/Seonath",
+   "a": "8020",
+   "b": "8011",
+   "incr": 3.2411
+  },
+  {
+   "river": "Mahanadi/Seonath",
+   "a": "8011",
+   "b": "8035",
+   "incr": 0.0376
+  },
+  {
+   "river": "Mahanadi/Tel",
+   "a": "8016",
+   "b": "8013",
+   "incr": 0.6388
+  },
+  {
+   "river": "Pennar",
+   "a": "9012",
+   "b": "9002",
+   "incr": 2.0429
+  },
+  {
+   "river": "Pennar",
+   "a": "9002",
+   "b": "9009",
+   "incr": 0.3375
+  },
+  {
+   "river": "Mahi",
+   "a": "10010",
+   "b": "10011",
+   "incr": 3.1874
+  },
+  {
+   "river": "Mahi",
+   "a": "10011",
+   "b": "10008",
+   "incr": 1.001
+  },
+  {
+   "river": "Sabarmati",
+   "a": "11006",
+   "b": "11001",
+   "incr": 0.8422
+  },
+  {
+   "river": "Sabarmati",
+   "a": "11001",
+   "b": "11010",
+   "incr": 1.9203
+  },
+  {
+   "river": "Narmada",
+   "a": "12016",
+   "b": "12036",
+   "incr": 1.0362
+  },
+  {
+   "river": "Narmada",
+   "a": "12036",
+   "b": "12004",
+   "incr": 4.6681
+  },
+  {
+   "river": "Narmada",
+   "a": "12004",
+   "b": "12046",
+   "incr": 0.2835
+  },
+  {
+   "river": "Narmada",
+   "a": "12046",
+   "b": "12026",
+   "incr": 0.312
+  },
+  {
+   "river": "Narmada",
+   "a": "12026",
+   "b": "12025",
+   "incr": 0.2128
+  },
+  {
+   "river": "Narmada",
+   "a": "12025",
+   "b": "12035",
+   "incr": 0.3476
+  },
+  {
+   "river": "Narmada",
+   "a": "12035",
+   "b": "12020",
+   "incr": 0.2072
+  },
+  {
+   "river": "Tapi",
+   "a": "13006",
+   "b": "13004",
+   "incr": 0.2743
+  },
+  {
+   "river": "Tapi",
+   "a": "13004",
+   "b": "13017",
+   "incr": 4.6717
+  },
+  {
+   "river": "Tapi",
+   "a": "13017",
+   "b": "13008",
+   "incr": 0.1374
+  },
+  {
+   "river": "Tapi",
+   "a": "13008",
+   "b": "13016",
+   "incr": 0.0667
+  },
+  {
+   "river": "Tapi",
+   "a": "13016",
+   "b": "13007",
+   "incr": 0.0843
+  },
+  {
+   "river": "Tapi/Purna",
+   "a": "13012",
+   "b": "13010",
+   "incr": 1.6685
+  },
+  {
+   "river": "Tapi/Purna",
+   "a": "13010",
+   "b": "13025",
+   "incr": 0.7386
+  },
+  {
+   "river": "Bharathapuzha",
+   "a": "15020",
+   "b": "15016",
+   "incr": 1.0739
+  },
+  {
+   "river": "Periyar",
+   "a": "15031",
+   "b": "15021",
+   "incr": 4.9466
+  },
+  {
+   "river": "Vamsadhara",
+   "a": "16004",
+   "b": "16007",
+   "incr": 0.1602
+  },
+  {
+   "river": "Vaigai",
+   "a": "17001",
+   "b": "17015",
+   "incr": 6.9953
+  },
+  {
+   "river": "Palar",
+   "a": "17003",
+   "b": "17005",
+   "incr": 3.9182
+  },
+  {
+   "river": "Ponnaiyar",
+   "a": "17006",
+   "b": "17022",
+   "incr": 1.3333
+  },
+  {
+   "river": "Ponnaiyar",
+   "a": "17022",
+   "b": "17024",
+   "incr": 0.1967
+  }
+ ],
+ "candidates_coupling": [
+  {
+   "incr": 1.7172,
+   "coupling": 0.8154
+  },
+  {
+   "incr": 3.4015,
+   "coupling": 0.9006
+  },
+  {
+   "incr": 0.4355,
+   "coupling": 0.9562
+  },
+  {
+   "incr": 1.048,
+   "coupling": 0.737
+  },
+  {
+   "incr": 1.0927,
+   "coupling": 0.864
+  },
+  {
+   "incr": 1.1476,
+   "coupling": 0.9305
+  },
+  {
+   "incr": 0.0322,
+   "coupling": 0.9555
+  },
+  {
+   "incr": 1.0818,
+   "coupling": 0.9087
+  },
+  {
+   "incr": 1.3401,
+   "coupling": 0.9313
+  },
+  {
+   "incr": 1.3162,
+   "coupling": 0.9272
+  },
+  {
+   "incr": 0.1003,
+   "coupling": 0.7995
+  },
+  {
+   "incr": 0.5804,
+   "coupling": 0.7965
+  },
+  {
+   "incr": 0.9187,
+   "coupling": 0.6824
+  },
+  {
+   "incr": 1.6064,
+   "coupling": 0.7679
+  },
+  {
+   "incr": 0.1389,
+   "coupling": 0.9612
+  },
+  {
+   "incr": 0.0077,
+   "coupling": 0.9887
+  },
+  {
+   "incr": 4.2464,
+   "coupling": 0.8085
+  },
+  {
+   "incr": 5.4161,
+   "coupling": 0.8794
+  },
+  {
+   "incr": 1.3178,
+   "coupling": 0.9174
+  },
+  {
+   "incr": 0.1998,
+   "coupling": 0.9481
+  },
+  {
+   "incr": 2.6307,
+   "coupling": 0.5264
+  },
+  {
+   "incr": 1.4102,
+   "coupling": 0.8946
+  },
+  {
+   "incr": 0.7721,
+   "coupling": 0.5968
+  },
+  {
+   "incr": 0.0671,
+   "coupling": 0.7461
+  },
+  {
+   "incr": 1.0611,
+   "coupling": 0.945
+  },
+  {
+   "incr": 1.2643,
+   "coupling": 0.4012
+  },
+  {
+   "incr": 0.8363,
+   "coupling": 0.8379
+  },
+  {
+   "incr": 0.108,
+   "coupling": 0.7859
+  },
+  {
+   "incr": 0.3,
+   "coupling": 0.5581
+  },
+  {
+   "incr": 9.3655,
+   "coupling": 0.5576
+  },
+  {
+   "incr": 0.4839,
+   "coupling": 0.8741
+  },
+  {
+   "incr": 1.0599,
+   "coupling": 0.8579
+  },
+  {
+   "incr": 17.9669,
+   "coupling": 0.6958
+  },
+  {
+   "incr": 0.2022,
+   "coupling": 0.542
+  },
+  {
+   "incr": 0.2071,
+   "coupling": 0.889
+  },
+  {
+   "incr": 0.2444,
+   "coupling": 0.8844
+  },
+  {
+   "incr": 4.5556,
+   "coupling": 0.7262
+  },
+  {
+   "incr": 2.9159,
+   "coupling": 0.233
+  },
+  {
+   "incr": 0.1207,
+   "coupling": 0.934
+  },
+  {
+   "incr": 4.0117,
+   "coupling": 0.9356
+  },
+  {
+   "incr": 0.1287,
+   "coupling": 0.9829
+  },
+  {
+   "incr": 0.5469,
+   "coupling": 0.7927
+  },
+  {
+   "incr": 7.8455,
+   "coupling": 0.6654
+  },
+  {
+   "incr": 4.4852,
+   "coupling": 0.8873
+  },
+  {
+   "incr": 0.2025,
+   "coupling": 0.9051
+  },
+  {
+   "incr": 1.1539,
+   "coupling": 0.8524
+  },
+  {
+   "incr": 1.3031,
+   "coupling": 0.8151
+  },
+  {
+   "incr": 3.2411,
+   "coupling": 0.903
+  },
+  {
+   "incr": 0.0376,
+   "coupling": 0.9556
+  },
+  {
+   "incr": 0.6388,
+   "coupling": 0.9538
+  },
+  {
+   "incr": 2.0429,
+   "coupling": 0.598
+  },
+  {
+   "incr": 0.3375,
+   "coupling": 0.5273
+  },
+  {
+   "incr": 3.1874,
+   "coupling": 0.7505
+  },
+  {
+   "incr": 1.001,
+   "coupling": 0.6891
+  },
+  {
+   "incr": 0.8422,
+   "coupling": 0.4863
+  },
+  {
+   "incr": 1.9203,
+   "coupling": 0.5753
+  },
+  {
+   "incr": 1.0362,
+   "coupling": 0.8951
+  },
+  {
+   "incr": 4.6681,
+   "coupling": 0.7344
+  },
+  {
+   "incr": 0.2835,
+   "coupling": 0.9553
+  },
+  {
+   "incr": 0.312,
+   "coupling": 0.9573
+  },
+  {
+   "incr": 0.2128,
+   "coupling": 0.9589
+  },
+  {
+   "incr": 0.3476,
+   "coupling": 0.8558
+  },
+  {
+   "incr": 0.2072,
+   "coupling": 0.6735
+  },
+  {
+   "incr": 0.2743,
+   "coupling": 0.9632
+  },
+  {
+   "incr": 4.6717,
+   "coupling": 0.8783
+  },
+  {
+   "incr": 0.1374,
+   "coupling": 0.959
+  },
+  {
+   "incr": 0.0667,
+   "coupling": 0.946
+  },
+  {
+   "incr": 0.0843,
+   "coupling": 0.5159
+  },
+  {
+   "incr": 1.6685,
+   "coupling": 0.867
+  },
+  {
+   "incr": 0.7386,
+   "coupling": 0.8882
+  },
+  {
+   "incr": 1.0739,
+   "coupling": 0.8343
+  },
+  {
+   "incr": 4.9466,
+   "coupling": 0.7683
+  },
+  {
+   "incr": 0.1602,
+   "coupling": 0.8658
+  },
+  {
+   "incr": 6.9953,
+   "coupling": 0.3886
+  },
+  {
+   "incr": 3.9182,
+   "coupling": 0.4647
+  },
+  {
+   "incr": 1.3333,
+   "coupling": 0.2613
+  },
+  {
+   "incr": 0.1967,
+   "coupling": 0.7527
+  }
+ ]
+}

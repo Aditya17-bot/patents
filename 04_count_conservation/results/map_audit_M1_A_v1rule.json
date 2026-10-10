@@ -1,0 +1,42 @@
+{
+ "manifest": "window_M1_A.json",
+ "ratio": 0.5,
+ "min_overlap": 0.5,
+ "map_relations": 88,
+ "recovered_relations": 241,
+ "control": {
+  "evaluable": 88,
+  "false_flags": 11,
+  "false_flag_rate": 0.125
+ },
+ "kinds": {
+  "sign_flip": {
+   "trials": 47,
+   "detected": 26,
+   "repaired_exact": 12,
+   "detection_rate": 0.5532,
+   "repair_rate": 0.2553
+  },
+  "drop_member": {
+   "trials": 38,
+   "detected": 32,
+   "repaired_exact": 2,
+   "detection_rate": 0.8421,
+   "repair_rate": 0.0526
+  },
+  "wrong_site": {
+   "trials": 60,
+   "detected": 46,
+   "repaired_exact": 17,
+   "detection_rate": 0.7667,
+   "repair_rate": 0.2833
+  },
+  "extra_member": {
+   "trials": 60,
+   "detected": 50,
+   "repaired_exact": 43,
+   "detection_rate": 0.8333,
+   "repair_rate": 0.7167
+  }
+ }
+}

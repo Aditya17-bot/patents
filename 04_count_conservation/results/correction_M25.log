@@ -1,0 +1,21 @@
+C:\adi\patent 2\src\faults.py:148: RuntimeWarning: Mean of empty slice
+  mean = np.nanmean(block, axis=1)
+392 relations, 238 eligible, 40 under test
+C:\adi\patent 2\src\faults.py:259: RuntimeWarning: Mean of empty slice
+  mean = np.nanmean(block, axis=1)
+C:\adi\patent 2\src\correction.py:63: RuntimeWarning: All-NaN slice encountered
+  est = np.nanmedian(np.vstack(per), axis=0)
+{'mode': 'none', 'magnitude': 0.0, 'trials': 120, 'detected': 0.05, 'attributed_correctly': 0.0, 'mae_before': 0.0, 'mae_after': {'parametric': 0.0, 'substitution': 0.0, 'auto': 0.0}, 'innocent_corrections': 6, 'innocent_mae_introduced': 2.6}
+{'mode': 'scale', 'magnitude': 0.8, 'trials': 120, 'detected': 0.975, 'attributed_correctly': 0.9, 'mae_before': 123.89, 'mae_after': {'parametric': 13.24, 'substitution': 21.57, 'auto': 13.24}, 'innocent_corrections': 9, 'innocent_mae_introduced': 143.31, 'error_removed_pct_auto': 89.3}
+{'mode': 'scale', 'magnitude': 0.9, 'trials': 120, 'detected': 0.975, 'attributed_correctly': 0.9083, 'mae_before': 64.33, 'mae_after': {'parametric': 7.63, 'substitution': 16.61, 'auto': 7.63}, 'innocent_corrections': 8, 'innocent_mae_introduced': 71.94, 'error_removed_pct_auto': 88.1}
+{'mode': 'scale', 'magnitude': 0.95, 'trials': 120, 'detected': 0.975, 'attributed_correctly': 0.8917, 'mae_before': 31.98, 'mae_after': {'parametric': 4.25, 'substitution': 12.63, 'auto': 4.25}, 'innocent_corrections': 10, 'innocent_mae_introduced': 29.87, 'error_removed_pct_auto': 86.7}
+{'mode': 'scale', 'magnitude': 1.05, 'trials': 120, 'detected': 0.9833, 'attributed_correctly': 0.8833, 'mae_before': 31.97, 'mae_after': {'parametric': 4.51, 'substitution': 12.91, 'auto': 4.51}, 'innocent_corrections': 12, 'innocent_mae_introduced': 26.51, 'error_removed_pct_auto': 85.9}
+{'mode': 'scale', 'magnitude': 1.1, 'trials': 120, 'detected': 0.9833, 'attributed_correctly': 0.9083, 'mae_before': 63.95, 'mae_after': {'parametric': 7.9, 'substitution': 16.84, 'auto': 7.9}, 'innocent_corrections': 9, 'innocent_mae_introduced': 83.68, 'error_removed_pct_auto': 87.6}
+{'mode': 'offset', 'magnitude': -30.0, 'trials': 119, 'detected': 0.9748, 'attributed_correctly': 0.916, 'mae_before': 29.28, 'mae_after': {'parametric': 3.95, 'substitution': 11.95, 'auto': 3.95}, 'innocent_corrections': 7, 'innocent_mae_introduced': 31.14, 'error_removed_pct_auto': 86.5}
+{'mode': 'offset', 'magnitude': -15.0, 'trials': 120, 'detected': 0.975, 'attributed_correctly': 0.8667, 'mae_before': 14.75, 'mae_after': {'parametric': 2.93, 'substitution': 10.84, 'auto': 2.93}, 'innocent_corrections': 13, 'innocent_mae_introduced': 11.96, 'error_removed_pct_auto': 80.1}
+{'mode': 'offset', 'magnitude': -8.0, 'trials': 120, 'detected': 0.925, 'attributed_correctly': 0.8083, 'mae_before': 7.85, 'mae_after': {'parametric': 2.08, 'substitution': 9.56, 'auto': 2.08}, 'innocent_corrections': 14, 'innocent_mae_introduced': 6.91, 'error_removed_pct_auto': 73.5}
+{'mode': 'offset', 'magnitude': 8.0, 'trials': 120, 'detected': 0.95, 'attributed_correctly': 0.8333, 'mae_before': 8.0, 'mae_after': {'parametric': 2.06, 'substitution': 9.98, 'auto': 2.06}, 'innocent_corrections': 14, 'innocent_mae_introduced': 13.86, 'error_removed_pct_auto': 74.2}
+{'mode': 'offset', 'magnitude': 15.0, 'trials': 120, 'detected': 0.9667, 'attributed_correctly': 0.8917, 'mae_before': 15.0, 'mae_after': {'parametric': 2.25, 'substitution': 11.02, 'auto': 2.25}, 'innocent_corrections': 9, 'innocent_mae_introduced': 11.53, 'error_removed_pct_auto': 85.0}
+{'mode': 'offset', 'magnitude': 30.0, 'trials': 120, 'detected': 0.9917, 'attributed_correctly': 0.9167, 'mae_before': 30.0, 'mae_after': {'parametric': 3.23, 'substitution': 12.38, 'auto': 3.23}, 'innocent_corrections': 9, 'innocent_mae_introduced': 31.7, 'error_removed_pct_auto': 89.2}
+{'mode': 'stuck', 'magnitude': 0.0, 'trials': 120, 'detected': 0.9833, 'attributed_correctly': 0.875, 'mae_before': 357.09, 'mae_after': {'parametric': 48.94, 'substitution': 48.94, 'auto': 48.94}, 'innocent_corrections': 13, 'innocent_mae_introduced': 102.94, 'error_removed_pct_auto': 86.3}
+wrote results/correction_M25_A.json

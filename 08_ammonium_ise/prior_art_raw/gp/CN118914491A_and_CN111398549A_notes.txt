@@ -1,0 +1,37 @@
+Read in the browser on 2026-10-06 (Google Patents, machine translation from Chinese), because
+scripted fetches were refused (HTTP 503). Verbatim excerpts of the English translation.
+
+CN118914491A - Water quality monitoring station calibration, compensation, data processing and
+evaluation method and system. Chengdu Borui Kechuan Technology Co ltd; priority 2024-08-12;
+published 2024-11-08; status pending.
+
+Abstract: "The method includes: systematically calibrating a water quality monitoring station;
+performing environmental compensation on a water quality monitoring station; processing
+monitoring data acquired by a water quality monitoring station; and evaluating water quality
+using continuous monitoring data acquired by a water quality monitoring station."
+
+Summary: "Environmental compensation for water quality monitoring stations, including: sludge
+impact compensation for ion selective sensors; microbial impact compensation for UVCOD sensors;
+installation position compensation for sensors"
+
+Sludge compensation: "The monitoring value C v of the ion selective sensor is corrected by using
+the influence value ΔC sum of the sludge covered by the current sensor installation cabin on the
+ion selective sensor to obtain the corrected monitoring value C w" - the sludge amount is
+modelled from time since maintenance, water velocity, sludge concentration and viscosity.
+
+Smoothing: "Smoothing the monitoring data after calibration using concentrated water samples
+within a calibration period" with a rate of change and offset interpolated between the
+concentrated-water-sample calibration slope/offset of the current and the last calibration cycle.
+
+Not found in the text read: conductivity used to estimate interfering-ion activity; any
+correction of the ion-selective reading proportional to a co-measured conductivity.
+
+CN111398549A - A reagent-free multi-parameter water quality in-situ monitor. Yangtze Delta Region
+Institute of Tsinghua University Zhejiang; priority 2020-04-13.
+
+Abstract: "The electrode method module and the photometric method module are used to correspond
+to temperature, conductivity, dissolved oxygen, pH, ammonia nitrogen turbidity And chemical
+oxygen demand and other testing items, no need to add any reagents, effectively monitor water
+quality changes in real time, and give warnings to emergencies."
+Hardware (buoy platform, detection system, solar panels); no interference correction described
+in the abstract.

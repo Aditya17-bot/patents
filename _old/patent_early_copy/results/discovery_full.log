@@ -1,0 +1,7 @@
+corridor 367 sites, 199 surveyed nodes
+found 726 | exact 147/199 (0.739) | span coverage 0.754 | valid share 0.337
+  none                 MAE   15.79  outside  10.70%
+  surveyed             MAE   14.50  outside   0.93%  constraints 199  85.8s
+  discovered           MAE   15.10  outside   7.13%  constraints 692  209.7s
+  both                 MAE   14.22  outside   2.43%  constraints 891  465.0s
+wrote results/discovery_full.json

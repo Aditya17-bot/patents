@@ -1,0 +1,422 @@
+{
+ "meta": {
+  "min_coupling": 0.95,
+  "big_ft": 0.1,
+  "win_d": 21,
+  "steady_ft": 0.25,
+  "min_days": 8,
+  "period": [
+   "2020-10-01",
+   "2026-09-30"
+  ]
+ },
+ "ratio_variant": "e_rmean",
+ "all": {
+  "linear_time": {
+   "n": 1206,
+   "median": 7.31,
+   "mean": 17.01,
+   "p90": 36.8
+  },
+  "flood_step": {
+   "n": 1206,
+   "median": 8.04,
+   "mean": 18.08,
+   "p90": 38.9
+  },
+  "flood_ramp": {
+   "n": 1206,
+   "median": 7.95,
+   "mean": 18.18,
+   "p90": 39.7
+  },
+  "per_rise": {
+   "n": 1206,
+   "median": 7.73,
+   "mean": 17.65,
+   "p90": 38.2
+  },
+  "practice_per_station": {
+   "n": 1206,
+   "median": 7.52,
+   "mean": 17.02,
+   "p90": 36.7
+  },
+  "fit_median": {
+   "n": 1206,
+   "median": 6.97,
+   "mean": 13.58,
+   "p90": 29.1
+  },
+  "fit_weighted_median": {
+   "n": 1206,
+   "median": 7.29,
+   "mean": 14.32,
+   "p90": 29.5
+  },
+  "no_ratio_term": {
+   "n": 1206,
+   "median": 7.07,
+   "mean": 14.19,
+   "p90": 29.7
+  },
+  "ratio_units": {
+   "n": 1206,
+   "median": 7.22,
+   "mean": 14.23,
+   "p90": 31.4
+  },
+  "stage_units_no_gain": {
+   "n": 1206,
+   "median": 7.84,
+   "mean": 14.29,
+   "p90": 32.5
+  },
+  "stage_units_gain": {
+   "n": 1206,
+   "median": 7.03,
+   "mean": 13.67,
+   "p90": 27.9
+  },
+  "stage_vs_ratio": {
+   "better": 637,
+   "of": 1128,
+   "share": 0.565,
+   "z": 4.35
+  },
+  "with_vs_without_ratio_term": {
+   "better": 621,
+   "of": 1116,
+   "share": 0.556,
+   "z": 3.77
+  },
+  "vs_practice_per_station": {
+   "better": 634,
+   "of": 1140,
+   "share": 0.556,
+   "z": 3.79
+  },
+  "e_median_vs_practice": {
+   "better": 647,
+   "of": 1138,
+   "share": 0.569,
+   "z": 4.62
+  },
+  "e_wmedian_vs_practice": {
+   "better": 632,
+   "of": 1137,
+   "share": 0.556,
+   "z": 3.77
+  }
+ },
+ "big": {
+  "linear_time": {
+   "n": 554,
+   "median": 16.82,
+   "mean": 31.25,
+   "p90": 63.5
+  },
+  "flood_step": {
+   "n": 554,
+   "median": 13.85,
+   "mean": 29.29,
+   "p90": 63.5
+  },
+  "flood_ramp": {
+   "n": 554,
+   "median": 15.04,
+   "mean": 31.52,
+   "p90": 70.5
+  },
+  "per_rise": {
+   "n": 554,
+   "median": 16.81,
+   "mean": 30.55,
+   "p90": 64.5
+  },
+  "practice_per_station": {
+   "n": 554,
+   "median": 15.17,
+   "mean": 29.76,
+   "p90": 64.0
+  },
+  "fit_median": {
+   "n": 554,
+   "median": 13.04,
+   "mean": 22.55,
+   "p90": 49.1
+  },
+  "fit_weighted_median": {
+   "n": 554,
+   "median": 13.62,
+   "mean": 23.71,
+   "p90": 54.5
+  },
+  "no_ratio_term": {
+   "n": 554,
+   "median": 13.73,
+   "mean": 23.76,
+   "p90": 49.3
+  },
+  "ratio_units": {
+   "n": 554,
+   "median": 14.46,
+   "mean": 23.15,
+   "p90": 50.5
+  },
+  "stage_units_no_gain": {
+   "n": 554,
+   "median": 12.09,
+   "mean": 20.88,
+   "p90": 48.0
+  },
+  "stage_units_gain": {
+   "n": 554,
+   "median": 13.41,
+   "mean": 22.64,
+   "p90": 47.7
+  },
+  "stage_vs_ratio": {
+   "better": 279,
+   "of": 519,
+   "share": 0.538,
+   "z": 1.71
+  },
+  "with_vs_without_ratio_term": {
+   "better": 299,
+   "of": 516,
+   "share": 0.579,
+   "z": 3.61
+  },
+  "vs_practice_per_station": {
+   "better": 337,
+   "of": 532,
+   "share": 0.633,
+   "z": 6.16
+  },
+  "e_median_vs_practice": {
+   "better": 338,
+   "of": 528,
+   "share": 0.64,
+   "z": 6.44
+  },
+  "e_wmedian_vs_practice": {
+   "better": 333,
+   "of": 529,
+   "share": 0.629,
+   "z": 5.96
+  }
+ },
+ "open_water": {
+  "linear_time": {
+   "n": 831,
+   "median": 6.57,
+   "mean": 11.68,
+   "p90": 25.5
+  },
+  "flood_step": {
+   "n": 831,
+   "median": 7.56,
+   "mean": 13.62,
+   "p90": 31.3
+  },
+  "flood_ramp": {
+   "n": 831,
+   "median": 7.29,
+   "mean": 12.88,
+   "p90": 30.2
+  },
+  "per_rise": {
+   "n": 831,
+   "median": 7.26,
+   "mean": 12.42,
+   "p90": 27.2
+  },
+  "practice_per_station": {
+   "n": 831,
+   "median": 6.58,
+   "mean": 11.74,
+   "p90": 24.7
+  },
+  "fit_median": {
+   "n": 831,
+   "median": 6.52,
+   "mean": 10.5,
+   "p90": 23.1
+  },
+  "fit_weighted_median": {
+   "n": 831,
+   "median": 6.78,
+   "mean": 10.82,
+   "p90": 22.8
+  },
+  "no_ratio_term": {
+   "n": 831,
+   "median": 6.53,
+   "mean": 10.69,
+   "p90": 23.0
+  },
+  "ratio_units": {
+   "n": 831,
+   "median": 6.68,
+   "mean": 11.14,
+   "p90": 22.9
+  },
+  "stage_units_no_gain": {
+   "n": 831,
+   "median": 6.99,
+   "mean": 11.23,
+   "p90": 23.8
+  },
+  "stage_units_gain": {
+   "n": 831,
+   "median": 6.49,
+   "mean": 10.62,
+   "p90": 22.5
+  },
+  "stage_vs_ratio": {
+   "better": 440,
+   "of": 775,
+   "share": 0.568,
+   "z": 3.77
+  },
+  "with_vs_without_ratio_term": {
+   "better": 435,
+   "of": 764,
+   "share": 0.569,
+   "z": 3.83
+  },
+  "vs_practice_per_station": {
+   "better": 431,
+   "of": 784,
+   "share": 0.55,
+   "z": 2.79
+  },
+  "e_median_vs_practice": {
+   "better": 442,
+   "of": 786,
+   "share": 0.562,
+   "z": 3.5
+  },
+  "e_wmedian_vs_practice": {
+   "better": 423,
+   "of": 781,
+   "share": 0.542,
+   "z": 2.33
+  }
+ },
+ "practice_picks": {
+  "e_lin": 447,
+  "e_step": 296,
+  "e_ramp": 186,
+  "e_rise": 277
+ },
+ "ratio_leak_m": {
+  "ratio_change_ln": 0.0953,
+  "with_ratio_term": {
+   "n": 1206,
+   "median": 0.0002,
+   "mean": 0.0005,
+   "p90": 0.001
+  },
+  "without_ratio_term": {
+   "n": 1206,
+   "median": 0.0007,
+   "mean": 0.0022,
+   "p90": 0.005
+  }
+ },
+ "ratio_step_m": {
+  "with_ratio_term": {
+   "n": 1206,
+   "median": 0.0005,
+   "mean": 0.006,
+   "p90": 0.018
+  },
+  "without_ratio_term": {
+   "n": 1206,
+   "median": 0.0026,
+   "mean": 0.0071,
+   "p90": 0.02
+  },
+  "share_over_big_with": 0.036,
+  "share_over_big_without": 0.042,
+  "paired": {
+   "better": 590,
+   "of": 887,
+   "share": 0.665,
+   "z": 9.84
+  }
+ },
+ "by_slope_difference": [
+  {
+   "lo": 0.0,
+   "hi": 0.041,
+   "n": 402,
+   "stage_units": {
+    "n": 402,
+    "median": 6.89,
+    "mean": 14.03,
+    "p90": 28.8
+   },
+   "ratio_units": {
+    "n": 402,
+    "median": 6.82,
+    "mean": 14.23,
+    "p90": 31.1
+   },
+   "paired": {
+    "better": 212,
+    "of": 378,
+    "share": 0.561,
+    "z": 2.37
+   }
+  },
+  {
+   "lo": 0.041,
+   "hi": 0.116,
+   "n": 402,
+   "stage_units": {
+    "n": 402,
+    "median": 6.79,
+    "mean": 13.41,
+    "p90": 27.7
+   },
+   "ratio_units": {
+    "n": 402,
+    "median": 7.34,
+    "mean": 14.35,
+    "p90": 34.5
+   },
+   "paired": {
+    "better": 214,
+    "of": 373,
+    "share": 0.574,
+    "z": 2.85
+   }
+  },
+  {
+   "lo": 0.116,
+   "hi": null,
+   "n": 402,
+   "stage_units": {
+    "n": 402,
+    "median": 7.41,
+    "mean": 13.58,
+    "p90": 27.6
+   },
+   "ratio_units": {
+    "n": 402,
+    "median": 7.5,
+    "mean": 14.12,
+    "p90": 30.7
+   },
+   "paired": {
+    "better": 211,
+    "of": 377,
+    "share": 0.56,
+    "z": 2.32
+   }
+  }
+ ]
+}

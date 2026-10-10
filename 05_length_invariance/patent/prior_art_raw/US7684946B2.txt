@@ -1,0 +1,870 @@
+ 
+ US7684946B2 - Weigh-in-motion system with auto-calibration 
+ - Google Patents 
+ US7684946B2 - Weigh-in-motion system with auto-calibration 
+ - Google Patents 
+ Weigh-in-motion system with auto-calibration 
+ Download PDF 
+ Info 
+ Publication number 
+ US7684946B2 
+ US7684946B2 
+ US11/957,801 
+ US95780107A 
+ US7684946B2 
+ US 7684946 B2 
+ US7684946 B2 
+ US 7684946B2 
+ US 95780107 A 
+ US95780107 A 
+ US 95780107A 
+ US 7684946 B2 
+ US7684946 B2 
+ US 7684946B2 
+ Authority 
+ US 
+ United States 
+ Prior art keywords 
+ scale 
+ wim 
+ vehicles 
+ vehicle 
+ static 
+ Prior art date 
+ 2007-12-17 
+ Legal status (The legal status is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the status listed.) 
+ Active , expires 2028-10-28 
+ Application number 
+ US11/957,801 
+ Other versions 
+ US20090151421A1 
+ ( en 
+ Inventor 
+ Robert Susor 
+ Current Assignee (The listed assignees may be inaccurate. Google has not performed a legal analysis and makes no representation or warranty as to the accuracy of the list.) 
+ Mettler Toledo International Inc
+ Original Assignee 
+ Mettler Toledo LLC 
+ Priority date (The priority date is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the date listed.) 
+ 2007-12-17 
+ Filing date 
+ 2007-12-17 
+ Publication date 
+ 2010-03-23 
+ 2007-12-17 
+ Application filed by Mettler Toledo LLC 
+ filed 
+ Critical 
+ Mettler Toledo LLC 
+ 2007-12-17 
+ Priority to US11/957,801 
+ priority 
+ Critical 
+ patent/US7684946B2/en 
+ 2008-01-11 
+ Assigned to METTLER-TOLEDO, INC. 
+ reassignment 
+ METTLER-TOLEDO, INC. 
+ ASSIGNMENT OF ASSIGNORS INTEREST (SEE DOCUMENT FOR DETAILS). 
+ Assignors: SUSOR, ROBERT 
+ 2008-03-11 
+ Priority to CA2625269A 
+ priority 
+ patent/CA2625269C/en 
+ 2009-06-18 
+ Publication of US20090151421A1 
+ publication 
+ Critical 
+ patent/US20090151421A1/en 
+ 2010-03-23 
+ Application granted 
+ granted 
+ Critical 
+ 2010-03-23 
+ Publication of US7684946B2 
+ publication 
+ Critical 
+ patent/US7684946B2/en 
+ 2012-06-21 
+ Assigned to Mettler-Toledo, LLC 
+ reassignment 
+ Mettler-Toledo, LLC 
+ ENTITY CONVERSION AND CHANGE OF NAME 
+ Assignors: METTLER-TOLEDO, INC. 
+ Status 
+ Active 
+ legal-status 
+ Critical 
+ Current 
+ 2028-10-28 
+ Adjusted expiration 
+ legal-status 
+ Critical 
+ Links 
+ USPTO 
+ USPTO PatentCenter 
+ USPTO Assignment 
+ Espacenet 
+ Global Dossier 
+ Discuss 
+ Images 
+ Classifications 
+ G — PHYSICS 
+ G01 — MEASURING; TESTING 
+ G01G — WEIGHING 
+ G01G19/00 — Weighing apparatus or methods adapted for special purposes not provided for in the preceding groups 
+ G01G19/02 — Weighing apparatus or methods adapted for special purposes not provided for in the preceding groups for weighing wheeled or rolling bodies, e.g. vehicles 
+ G01G19/022 — Weighing apparatus or methods adapted for special purposes not provided for in the preceding groups for weighing wheeled or rolling bodies, e.g. vehicles for weighing wheeled or rolling bodies in motion 
+ G — PHYSICS 
+ G01 — MEASURING; TESTING 
+ G01G — WEIGHING 
+ G01G23/00 — Auxiliary devices for weighing apparatus 
+ G01G23/01 — Testing or calibrating of weighing apparatus 
+ G — PHYSICS 
+ G01 — MEASURING; TESTING 
+ G01G — WEIGHING 
+ G01G23/00 — Auxiliary devices for weighing apparatus 
+ G01G23/18 — Indicating devices, e.g. for remote indication; Recording devices; Scales, e.g. graduated 
+ G01G23/36 — Indicating the weight by electrical means, e.g. using photoelectric cells 
+ G01G23/37 — Indicating the weight by electrical means, e.g. using photoelectric cells involving digital counting 
+ G01G23/3728 — Indicating the weight by electrical means, e.g. using photoelectric cells involving digital counting with wireless means 
+ G01G23/3735 — Indicating the weight by electrical means, e.g. using photoelectric cells involving digital counting with wireless means using a digital network 
+ Definitions 
+ the WIM system 50 
+ additionally includes at least one database D for storing vehicle weight data, and a microprocessor-based device 80 in communication with the database(s) and WIM scale(s) 55 . 
+ the database(s) 
+ may also store classification data and speed data. 
+ the microprocessor-based device 80 
+ may include any necessary software, firmware, or hardware required to calculate WIM scale calibration factors based on at least the vehicle weight data, and to communicate said calibration factors to the WIM scale(s) 55 . 
+ the database(s) D and microprocessor-based device 80 
+ may be located at the weighing station 65 as shown, or at virtually any other location where communication with the scales and communication therebetween is possible. In one embodiment of the present invention, the database(s) D may be Internet databases. 
+ Landscapes 
+ Physics & Mathematics 
+ ( AREA )
+ General Physics & Mathematics 
+ ( AREA )
+ Engineering & Computer Science 
+ ( AREA )
+ Computer Networks & Wireless Communication 
+ ( AREA )
+ Traffic Control Systems 
+ ( AREA )
+ Abstract 
+ Weigh-in-motion (WIM) systems for weighing moving vehicles, the systems having the ability to automatically determine and periodically apply calibration factors to WIM scale readings. Auto-calibration may include transferring both WIM and static weight readings for the same vehicle to a database, associating the weight readings, collecting a number of such weight readings, and analyzing the differences between the WIM and static weight readings to calculate WIM scale calibration factors. The calibration factors may be based on vehicle characteristics such as vehicle weight, vehicle class and/or vehicle speed at the WIM scale. 
+ Description 
+ BACKGROUND OF THE INVENTIVE FIELD 
+ The present invention is directed to weigh-in-motion (WIM) systems for weighing moving vehicles. More particularly, the present invention is directed to a WIM system having the ability to automatically determine and periodically apply calibration factors to WIM scale readings. 
+ Weigh-in-motion (WIM) systems permit the weighing of vehicles, such as tractor trailers, while the vehicles are in motion. Thus, WIM systems can minimize the number of vehicles that must be diverted from a roadway to a static scale or static weighing station. 
+ Various types of WIM scales currently exist. Commonly, but without limitation, WIM scales may be of piezoelectric sensor, quartz digital sensor, bending plate or load cell design. Regardless of the particular design of a WIM scale, however, there are certain difficulties associated with the weighing of moving vehicles. Particularly, the various dynamic forces exerted on a WIM scale by a moving vehicle can effect its weight reading and, therefore, the detected weight of an associated vehicle may be inaccurate. Vehicle characteristics such as classification, length, weight, and speed can all influence the output of a WIM scale. Non-vehicle characteristics such as the condition and levelness of the pavement surrounding a WIM scale can also effect weight readings output thereby. 
+ These difficulties generally result in WIM scales having a degree of accuracy that is less than that of static weighing systems. In order to improve the accuracy of a WIM scale, a calibration factor may be applied thereto. The calibration factor is used to counter the undesirable effects that the aforementioned dynamic loading and/or site conditions may have on the weight readings of a WIM scale. 
+ Currently, such calibration factors must be determined and applied by a manual process. Generally, at least certain of the vehicles crossing a WIM scale are identified and directed to a static scale. The weight of a vehicle as determined by the static scale, is compared to the weight of the vehicle as estimated by the WIM scale. Comparisons between the WIM estimates and the static weights for a number of vehicles are made, and a calibration factor is determined. The calibration factor is then applied to the vehicle weight readings output by the WIM scale to ensure that the weight estimates are as close as possible to the true static weights of the associated vehicles. 
+ Unfortunately, current WIM scale calibration processes are manual in nature. That is, the vehicles whose weights will be compared are manually identified at the WIM scale, and again at the static scale to ensure the two weight readings are associated with the same vehicle. Recording of vehicle weight readings and subsequent calibration factor determination is also a manual process. Further, initial application of a calculated calibration factor and/or updating of a calibration factor are also manual processes. Because such manual processes are commonly time consuming and/or costly, WIM scale re-calibration is typically performed on an annual basis at best, if at all. This is problematic because changes in site and/or WIM scale conditions may demand more frequent calibration factor updates. As a result, WIM systems may provide inaccurate vehicle weight estimates. 
+ SUMMARY OF THE GENERAL INVENTIVE CONCEPT 
+ The present invention is directed to a WIM system having an auto-calibration feature and to a method for WIM scale auto-calibration that may be applied to both new and existing WIM systems. A system and method of the present invention automatically identifies vehicles that have passed over a WIM scale and are subsequently directed to a static scale for weighing. A system and method of the present invention automatically associates the WIM scale weight estimate and static weight of each such vehicle, and stores the weight readings for future use. 
+ Once a sufficient sample size of vehicle weight readings has been collected, a WIM scale calibration factor is automatically calculated and applied to the associated WIM scale. New calibration factors may be periodically determined and applied to the WIM scale. Such calibration factor updates may be performed on a calendar basis, or may be performed upon each collection of some predetermined number of comparative vehicle weight readings. 
+ A system and method of the present invention also preferably monitors and collects other data associated with said vehicles, such as, without limitation, vehicle class, and vehicle speed at the WIM scale. This data is preferably also saved. This vehicle data is preferably used to determine class-based and speed-based calibration factors. Thus, different WIM scale calibration factors may be applied depending on the class and/or speed of a vehicle crossing a WIM scale. Because vehicles with different class, speed, etc., characteristics can effect the readings of a WIM scale to a different degree, determining and applying class and/or speed-based calibration factors allows the weight readings of an associated WIM scale to be as accurate as possible. 
+ BRIEF DESCRIPTION OF THE DRAWINGS 
+ In addition to the features mentioned above, other aspects of the present invention will be readily apparent from the following descriptions of the drawings and exemplary embodiments, wherein like reference numerals across the several views refer to identical or equivalent features, and wherein: 
+ FIG. 1 depicts various elements of a typical vehicle weighing system, as such might be commonly arranged along a roadway; 
+ FIG. 2 depicts various elements of an exemplary WIM system of the present invention, as such might be arranged along a roadway; 
+ FIG. 3 schematically illustrates the WIM system of FIG. 2 ; 
+ FIG. 4 depicts various elements of an exemplary WIM system of the present invention that utilizes a loop vehicle tracking network (LVTN) to identify and track vehicles from a WIM scale location to a static scale location; and 
+ FIG. 5 is a flowchart showing a method of operation of the system of FIG. 4 . 
+ DETAILED DESCRIPTION OF EXEMPLARY EMBODIMENT(S) 
+ FIG. 1 depicts one example of a known vehicle weighing system, such as might be commonly found along a roadway. As shown, vehicles to be weighed V, such as, but not limited to, tractor trailers, travel along the roadway R in the direction indicated by the arrow. The roadway R is commonly a highway, but may be any roadway carrying vehicles that must be weighed. 
+ A weigh-in-motion (WIM) scale 5 is shown to reside in each lane of the roadway R, although one skilled in the art would clearly understand that a WIM scale could also be disposed in only one lane of a given roadway. 
+ As shown, this particular each WIM scale 5 includes separate weighing sensors 10 . Such a WIM scale 5 is typically able to determine the speed of a vehicle, to measure individual axle weights of a vehicle, to determine the total weight of a vehicle, to determine the class of a vehicle (such as by the distance between axles), and/or to determine various other vehicle characteristics. The WIM scales 5 are positioned such that vehicles to be weighed V will drive over the WIM scales as the vehicles traverse the roadway R. 
+ In response to being driven over by a vehicle to be weighed V, a WIM scale 5 will output at least an estimate of the weight of the vehicle. A WIM scale 5 may also provide other information about the vehicle to be weighed V, such as but no limited to, the other vehicle characteristics mentioned above. 
+ As can be observed in FIG. 1 , the WIM scales 5 are located upstream from a static weighing station 15 , which includes a pull-off 20 leading from the roadway R to one or more static scales 25 . The static scales are used to obtain accurate weights of at least certain of the vehicles to be weighed V, which vehicles are directed to the weighing station 15 based on any of several criteria. For example, and as is well understood in the art, vehicles to be weighed V may be directed to the weighing station 15 based on random selection, based on vehicle count, or based on a signal (e.g., an overweight signal) from an upstream WIM scale 5 . Other selection criteria may also be employed. 
+ When a vehicle to be weighed V is directed to the weighing station 15 after passing over a WIM scale 5 , the vehicle is typically identified and associated with weight data from the WIM scales 5 that is typically sent to the weighing station 15 . Currently, collection of the weight data and association of the weight data with a particular vehicle is a manual process. 
+ Once at the weighing station 15 , the identified vehicle to be weighed V is directed onto a static scale 25 where an accurate vehicle weight reading is obtained. The vehicle weight reading may be used for various purposes, such as to collect taxes or to levy fines against the vehicle/driver. The vehicle weight reading obtained from the static scale 25 may be recorded and associated with the estimated weight reading for the vehicle provided by an upstream WIM scale 5 . Currently, if performed at all, this task is also performed manually. 
+ As described briefly above, a number of associated weight readings can be saved and subsequently compared to calculate a correction factor for a WIM scale. That is, differences between WIM scale estimated vehicle weight readings and the actual weights of the associated vehicles as determined by a static scale(s), can be used to determine a calibration factor that may be applied to the WIM scale so as to improve the accuracy of the weight readings output therefrom. Again, however, this is currently a manual process that is both time consuming and generally costly. As such, WIM scale calibration factors are infrequently updated. Unfortunately, because site conditions, WIM scale conditions, and/or other conditions may change frequently over time, infrequent updating of calibration factors may render inaccurate the estimated weight readings of associated WIM scales. As would be understood by one skilled in the art, this can be problematic for several reasons—particularly if readings from such WIM scales are being used as the sole basis for determining whether to direct vehicles to a static weighing station. 
+ A system and method of the present invention overcomes these problems. Referring to FIGS. 2-3 , an application of a system and method of the present invention can be seen. For purposes of clarity and similarity of comparison, this particular application is shown to be substantially the same as the arrangement depicted in FIG. 1 . A multitude of arrangements other than that shown in FIG. 2 and described herein for purposes of illustration are also possible. 
+ As can be observed in FIGS. 2-3 , this exemplary embodiment of a WIM system 50 of the present invention again includes one or more WIM scales 55 located in a roadway R′. The WIM scales 55 are located upstream from a static weighing station 65 , which includes a pull-off 70 leading from the roadway R′ to one or more static scales 75 . The static scales 75 are again used to obtain accurate weights of at least certain of the vehicles to be weighed V′, which vehicles are directed to the weighing station 65 based on any of several criteria—such as the criteria mentioned above. 
+ The WIM scales 55 again reside in each lane of the roadway R′, although a WIM scale could also be disposed in only one lane of a given roadway. Any combination of traffic lanes and WIM scale arrangements are within the scope of the present invention. 
+ The WIM scales 55 are shown to include separate weighing sensors 60 that are positioned such that vehicles to be weighed V will drive over the weighing platforms as the vehicles traverse the roadway R′. However, the present invention is not limited to a WIM scale having these enumerated exemplary capabilities, nor is the present invention to be considered limited to the use of any particular type/design of WIM scale. Rather, it is to be understood that a system and method of the present invention may employ a variety of WIM scale designs, and many such designs would be familiar to one skilled in the art. 
+ The WIM system 50 additionally includes at least one database D for storing vehicle weight data, and a microprocessor-based device 80 in communication with the database(s) and WIM scale(s) 55 . The database(s) may also store classification data and speed data. The microprocessor-based device 80 may include any necessary software, firmware, or hardware required to calculate WIM scale calibration factors based on at least the vehicle weight data, and to communicate said calibration factors to the WIM scale(s) 55 . The database(s) D and microprocessor-based device 80 may be located at the weighing station 65 as shown, or at virtually any other location where communication with the scales and communication therebetween is possible. In one embodiment of the present invention, the database(s) D may be Internet databases. 
+ In response to being driven over by a vehicle to be weighed V′, a WIM scale 55 will output at least an estimate of the weight of the vehicle. A WIM scale 55 may also provide other information about the vehicle to be weighed V′, such as but no limited to, the other vehicle characteristics mentioned above. A system of the present invention may also include one or more external means for identifying various characteristics of vehicles to be weighed V′. That is, detection devices 85 that are separate from the WIM scale(s) 55 may also/instead be employed. For example, separate vehicle speed detectors, height detectors, and/or loops and loop queues (see below) may be used, as may radio frequency identification (RFID) transmitters/receivers and other types of vehicle identifying equipment (cameras, etc.). When separate detection devices 85 are used, they may be placed at one or more locations at or near the WIM scale(s) 55 , at or near the static scale(s) 75 , and/or along a path therebetween. Nothing shown or described herein is to be considered as limiting to the number, type, or location of such detection devices that may be used. 
+ In one exemplary embodiment of the present invention, a loop vehicle tracking network (LVTN) is utilized to identify and track vehicles from a WIM scale(s) to a static scale(s). Referring to FIG. 4 , it can be observed that this particular LVTN employs various loops and queues (i.e., the spaces between loops) for this purpose. In this embodiment, a first loop L 1 is positioned before the WIM scales 55 and is considered to be an entry point of the LVTN, as well as the beginning of a first queue Q 0 . The next loop L 2 is downstream of the first loop L 1 , and also serves as the end point of the first queue Q 0 and the starting point of a second queue Q 1 . The second queue Q 1 continues until a third loop L 3 (which is an exit point of the LVTN) or a fourth loop L 4 is reached, each of the third and fourth loops being downstream from the second loop L 2 . The fourth loop L 4 represents the end of the second queue Q 1 and the start of a third queue Q 2 . The third queue Q 2 continues until a fifth loop L 5 is reached. The fifth loop L 5 of this exemplary embodiment resides just prior to the static scale 75 . The fifth loop L 5 also resides at the beginning of a final queue Q 3 that extends between the fifth loop and a sixth loop L 6 that is located at the exit side of the static scale and an exit point of the LVTN. 
+ In the particular configuration shown in FIG. 4 , the final queue functions as the static scale queue, and once a vehicle enters this queue the WIM scale data (e.g., weight, classification, speed) is transmitted to an auto-calibration database (e.g., static scale computer). At this point, and is described in more detail below, the WIM scale data may be merged with the associated static scale weight and stored in the database as a vehicle record. 
+ A system of the present invention manages the queues and tracks vehicles as they enter and exit the queues on a first-in, first-out, basis. More particularly, as illustrated in FIG. 4 , the vehicle designated as T 1 will be the first vehicle to cross loop L 1 and enter the first queue Q 0 , and the vehicle designated as T 2 will be the second vehicle to cross loop L 1 and enter the first queue Q 0 . Because vehicles are prohibited from passing one another in the area of the LVTN, the second vehicle T 2 cannot pass the first vehicle T 1 . As such, the LVTN knows that the first and second vehicles T 1 , T 2 will also pass over and through the remaining loops and queues in the same order. Therefore, it can be understood that all the vehicles are tracked by the LVTN as first-in, first-out through all queues. A system of the present invention may include as many loops and queues as deemed necessary for proper vehicle tracking. In some applications, the LVTN may utilize double loops (i.e., two spaced-apart loops) to confirm vehicle speed and length. 
+ According to the present invention, and as illustrated in FIGS. 3-4 , when a vehicle to be weighed V′ is directed to the weighing station 65 after passing over a WIM scale 55 , the vehicle is automatically identified by any of the devices and techniques described above. In an exemplary embodiment of the present invention, weight data associated with the vehicle is also automatically sent by the WIM scale to the appropriate database D located at the weighing station. In other embodiments, the weight data may be sent to a database at a different location(s). Whatever the location, at least some of the WIM scale weight data is saved in the database for subsequent use, as is described in more detail below. 
+ Once at the weighing station 65 , the identified vehicle to be weighed V′ is directed onto a static scale 75 where an accurate vehicle weight reading is obtained. According to the present invention, static weight data obtained from the static scale(s) 75 for at least some of the vehicles analyzed by the WIM scale(s) 55 is also stored. The stored static scale weight data is automatically associated with the stored WIM scale weight data for the same vehicle. The WIM scale weight data and the static scale weight data may be stored in the same database D, or in separate databases. The database(s) D may be located at the location of the static scale(s) 75 (i.e., the weigh station 65 ), or at a remote location(s). Other weight data storage locations are also possible, some of which are described in more detail below. 
+ Transmission of the static scale weight data and WIM scale weight data to a storage device/location may occur by any data transmission technique currently known or yet to be developed. Such data transmission may be wired or wireless in nature A network, such as a LAN, WLAN, WAN, or the Internet may or may not be associated with such data transmission. Weight data transmission may also occur via electronic mail or through a variety of other mechanisms. In yet another embodiment, weight data may be collected at one or both of the WIM scales and static scales on any of a variety of recordable storage mediums, which can be subsequently manually transferred to another location for data analysis. 
+ Once a sufficient sample size of static scale weight data and WIM scale weight data has been collected, the differences between associated weight readings are analyzed. Particularly, the differences between associated WIM scale weight readings and static weight readings for a number of vehicles are analyzed and used to develop a calibration factor that is applied to the WIM scale of interest in order to optimize its weighing accuracy. 
+ The frequency at which such weight reading data analysis and scale calibration factor calculation is performed may vary. For example, the occurrence of such may be predicated upon the collection of some predetermined sample size of weight reading data, upon the passage of some predetermined time period, or upon some combination thereof. Other triggering events may also be used instead of or in conjunction with those specifically described herein. Preferably, however, such data analysis and calibration factor calculation occurs fairly frequently, so as to ensure that the weight readings produced by an associated WIM scale are, and remain, as accurate as possible. 
+ The above description notwithstanding, it should be understood that the calculation of a new WIM scale calibration factor may or may not result in an updating of the associated WIM scale. For example, if the calibration factor resulting from a particular weight data analysis is deemed to be insignificantly different from the calibration factor already in use, updating of the associated WIM scale may be skipped. 
+ Preferably, but not essentially, a system and method of the present invention allows for even greater WIM scale optimization. More particularly, the present invention preferably allows for the creation and updating of a plurality of WIM scale calibration factors that can be applied to the weight readings of a WIM scale based on one or more characteristics of the weighed vehicle. For example, because it is known that both vehicle speed and vehicle size (class) can effect WIM scale weight readings, calibration factors can be developed to take at least such factors into account. 
+ To that end, one exemplary embodiment of the present invention includes calibration factors for ten (10) vehicle speed ranges and thirteen (13) vehicle classes. For example, the vehicle speed range may extend form 0-100 miles per hour and be divided into ten equal segments of ten miles per hour each (i.e., 0-10, 10-20 . . . 90-100 MPH). The vehicle classes may be based on axle spacing, gross vehicle weight, and/or other factors and combinations thereof. 
+ Such calibration factors may be used independently, or may be combined. For example, if a Class 3 vehicle crosses a WIM scale at 60 miles per hour, a corresponding class or speed range calibration factor may be applied to the WIM scale weight readings to improve their accuracy. Alternatively, a single combined calibration factor that takes into account both the speed and class of the vehicle can be applied to the WIM scale weight readings to optimize their accuracy. A variety of other such advanced WIM scale calibration factors can be developed. Such calibration factors can be periodically re-calculated and updated as described above. 
+ In an alternate embodiment, it is possible to employ at least some degree of user intervention with respect to the tracking, directing, and/or data entry associated with the of the present invention. For example, a weigh in motion system of the present invention may utilize an image tracking network (ITN), which allows vehicles to be visually identified. More specifically, the ITN captures images of vehicles to be weighed and displays the images on a computer monitor or some other graphical display device. A user of the system then identifies incoming vehicles based on the captured images and either directs or escorts the vehicles to a static scale, or weighs the vehicles using portable scales. Upon weighing, the user then manually inputs the static weight, classification, and speed data, which may be subsequently used to determine and apply the WIM scale calibration factors discussed above. 
+ Various other embodiments of the present invention are possible. For example, static weighing of a vehicle is not required to occur subsequent to weighing by a WIM scale. Rather, as long as a vehicle can be identified so as to ensure the proper association of its static scale weight data and WIM scale weight data, weighing can occur in any order and at varying time intervals (so long as a load associated with the vehicle has not been altered). For example, in a variation of the arrangement shown in FIG. 2 , a vehicle may be weighed on a static scale prior to being weighed on a downstream WIM scale. Weight data from each scale may nonetheless be stored, analyzed and used as described above. 
+ Yet other embodiments of the present invention may employ alternative data storage means. For example, instead of storing static scale weight data and WIM scale weight data at a remotely located database, it should be understood that such data may be stored locally at one or both of a WIM scale and/or static scale. In one such embodiment, WIM scale weight data and static scale weight data is stored at a WIM scale (such as at a controller, indicator or load cell thereof). Static scale weight data may be transmitted to the WIM scale in any known manner, such as by the techniques described above. Data analysis and calibration factor(s) calculation may occur in any manner described above, the difference being that such data analysis and calibration factor(s) calculation occurs at the WIM scale. For example, the WIM scale may include an integral microprocessor-based device and any software, firmware, etc., necessary to complete such data analyses and calibration factor calculations. Alternatively, such analyses and calculations may be performed by a microprocessor-based device that is associated with a WIM scale. 
+ While certain exemplary embodiments of the present invention are described in detail above for purposes of illustration, it is understood that multiple variations of such embodiments can exist. Therefore, the scope of the present invention is not to be considered limited by the exemplary disclosures made herein, and modifications are possible without departing from the spirit of the invention as evidenced by the following claims: 
+ Claims ( 25 ) 
+ 1. An auto-calibrating WIM system, comprising:
+ a WIM scale for weighing vehicles of interest while said vehicles are in motion, said WIM scale adapted to automatically transmit weight data for at least some of said vehicles of interest to a database; 
+ a static scale for weighing vehicles of interest while said vehicles are at rest, said static scale adapted to automatically transmit weight data for at least some of said vehicles of interest to a database; 
+ vehicle identification data associated with said vehicles of interest; 
+ a database for receiving weight data from said at least one WIM scale and said at least one static scale, WIM scale weight data and static scale weight data for the same vehicles automatically associated in said database using said identification data; 
+ a microprocessor-based device in communication with said database and said WIM scale, said microprocessor-based device for analyzing a collection of associated WIM scale weight data and static scale weight data and operative to periodically calculate a new WIM scale correction factor and to apply said correction factor to WIM scale weight readings. 
+ 2. The system of claim 1 , wherein said WIM scale is disposed in a roadway and said static scale is located at a downstream weigh station. 
+ 3. The system of claim 2 , wherein said database is located at said weigh station. 
+ 4. The system of claim 1 , wherein said database is located at said WIM scale. 
+ 5. The system of claim 1 , wherein identification of vehicles of interest is performed by said WIM scale. 
+ 6. The system of claim 1 , further comprising one or more detection devices for identifying vehicles of interest. 
+ 7. The system of claim 6 , wherein said one or more detection devices are selected from the group consisting of speed detectors, height detectors, RFID transmitters/receivers, and cameras. 
+ 8. The system of claim 6 , wherein said one or more detection devices includes a loop vehicle tracking network (LVTN). 
+ 9. The system of claim 6 , wherein said one or more detection devices includes a image tracking network (ITN). 
+ 10. The system of claim 1 , wherein said identification data for a vehicle of interest includes the class of said vehicle and its speed at said WIM scale. 
+ 11. The system of claim 10 , wherein said WIM scale correction factor is adjusted to account for said vehicle class, said vehicle speed, or both said vehicle class and said vehicle speed. 
+ 12. The system of claim 1 , further comprising a loop vehicle tracking network comprising a plurality of loops and queues for tracking said vehicles as they move between said WIM scale and said static scale. 
+ 13. A method of auto-calibrating a WIM scale, comprising:
+ automatically transmitting weight data for at least some of a number of vehicles weighed by said WIM scale to a database; 
+ weighing some number of vehicles weighed by said WIM scale on a static scale; 
+ automatically transmitting weight data for at least some of said vehicles weighed by said static scale to a database; 
+ providing vehicle identification data for vehicles weighed by both said WIM scale and said static scale; 
+ using said vehicle identification data to associate WIM scale weight data and static scale weight data for the same vehicles; 
+ placing a microprocessor-based device in communication with said WIM scale and said database(s), said microprocessor-based device for analyzing a collection of associated WIM scale weight data and static scale weight data, said microprocessor-based device operative to periodically calculate a new WIM scale correction factor based on differences between said WIM scale weight data and said static scale weight data and to transmit said correction factor to said WIM scale. 
+ 14. The method of claim 13 , wherein vehicle identification is performed by said WIM scale. 
+ 15. The method of claim 13 , further comprising using one or more detection devices to identify weighed vehicles. 
+ 16. The method of claim 14 , wherein said one or more detection devices are selected from the group consisting of speed detectors, height detectors, RFID transmitters/receivers, and cameras. 
+ 17. The method of claim 13 , wherein said one or more detection devices includes a loop vehicle tracking network (LVTN). 
+ 18. The method of claim 13 , wherein said one or more detection devices includes a image tracking network (ITN). 
+ 19. The method of claim 13 , wherein said vehicle identification data includes the class of said vehicles and their speed at said WIM scale. 
+ 20. The method of claim 19 , wherein said WIM scale correction factor is adjusted to account for said vehicle class, said vehicle speed, or both said vehicle class and said vehicle speed. 
+ 21. The method of claim 13 , further comprising tracking said vehicles via a loop vehicle tracking network comprising a plurality of loops and queues as said vehicles move between said WIM scale and said static scale. 
+ 22. A method of auto-calibrating a WIM scale, comprising:
+ automatically transmitting weight data for at least some of a number of vehicles weighed by said WIM scale to a database; 
+ weighing some number of vehicles weighed by said WIM scale on a static scale; 
+ automatically transmitting weight data for at least some of said vehicles weighed by said static scale to a database; 
+ providing vehicle identification data for vehicles weighed by both said WIM scale and said static scale; 
+ providing vehicle class data for vehicles weighed by both said WIM scale and said static scale; 
+ providing vehicle speed data for vehicles weighed by both said WIM scale and said static scale; 
+ using said vehicle identification data to associate WIM scale weight data, vehicle class data and vehicle speed data with static scale weight data for the same vehicles; 
+ placing a microprocessor-based device in communication with said WIM scale and said database(s), said microprocessor-based device for analyzing a collection of associated WIM scale weight data, static scale weight data, vehicle class data and vehicle speed data, said microprocessor-based device operative to periodically calculate a new class-based and/or speed-based WIM scale correction factor and to transmit said correction factor to said WIM scale. 
+ 23. The method of claim 22 , further comprising using one or more detection devices to identify weighed vehicles, said detection devices are selected from the group consisting of speed detectors, height detectors, RFID transmitters/receivers, and cameras. 
+ 24. The method of claim 22 , further comprising tracking said vehicles via a loop vehicle tracking network (LVTN) comprising a plurality of loops and queues as said vehicles move between said WIM scale and said static scale. 
+ 25. The method of claim 22 , further comprising tracking said vehicles via an image tracking network (ITN) comprising one or more cameras as said vehicles move between said WIM scale and said static scale. 
+ US11/957,801 
+ 2007-12-17 
+ 2007-12-17 
+ Weigh-in-motion system with auto-calibration 
+ Active 
+ 2028-10-28 
+ US7684946B2 
+ ( en )
+ Priority Applications (2) 
+ Application Number 
+ Priority Date 
+ Filing Date 
+ Title 
+ US11/957,801 
+ US7684946B2 
+ ( en )
+ 2007-12-17 
+ 2007-12-17 
+ Weigh-in-motion system with auto-calibration 
+ CA2625269A 
+ CA2625269C 
+ ( en )
+ 2007-12-17 
+ 2008-03-11 
+ Weigh-in-motion system with auto-calibration 
+ Applications Claiming Priority (1) 
+ Application Number 
+ Priority Date 
+ Filing Date 
+ Title 
+ US11/957,801 
+ US7684946B2 
+ ( en )
+ 2007-12-17 
+ 2007-12-17 
+ Weigh-in-motion system with auto-calibration 
+ Publications (2) 
+ Publication Number 
+ Publication Date 
+ US20090151421A1 
+ US20090151421A1
+ ( en )
+ 2009-06-18 
+ US7684946B2 
+ true 
+ US7684946B2
+ ( en )
+ 2010-03-23 
+ Family 
+ ID=40751478 
+ Family Applications (1) 
+ Application Number 
+ Title 
+ Priority Date 
+ Filing Date 
+ US11/957,801 
+ Active 
+ 2028-10-28 
+ US7684946B2 
+ ( en )
+ 2007-12-17 
+ 2007-12-17 
+ Weigh-in-motion system with auto-calibration 
+ Country Status (2) 
+ Country 
+ Link 
+ US 
+ ( 1 )
+ US7684946B2 
+ ( en )
+ CA 
+ ( 1 )
+ CA2625269C 
+ ( en )
+ Cited By (6) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ RU2448332C1 
+ ( en )
+ * 
+ 2011-01-24 
+ 2012-04-20 
+ Владимир Ильич Речицкий 
+ Method and system for weighing motor vehicle directly during movement thereof on track 
+ RU2448331C1 
+ ( en )
+ * 
+ 2011-01-24 
+ 2012-04-20 
+ Владимир Ильич Речицкий 
+ Method and system for increasing accuracy of weighing motor vehicle in motion 
+ RU2494355C1 
+ ( en )
+ * 
+ 2012-04-10 
+ 2013-09-27 
+ Владимир Ильич Речицкий 
+ Method and system for improving accuracy at weighing of mechanical transport vehicle in movement 
+ US8686301B2 
+ ( en )
+ 2011-07-15 
+ 2014-04-01 
+ International Paper Company 
+ System to determine if vehicle correctly positioned during weighting, scale ticket data system and methods for using same 
+ US9518862B2 
+ ( en )
+ 2014-11-04 
+ 2016-12-13 
+ Mettler-Toledo, LLC 
+ Weighing apparatus rezero fault prediction and remote alerting 
+ US10859430B2 
+ ( en )
+ 2013-03-04 
+ 2020-12-08 
+ International Road Dynamics 
+ Sensor including electrical transmission-line parameter that changes responsive to vehicular load 
+ Families Citing this family (21) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ AT11656U1 
+ ( en )
+ * 
+ 2010-03-09 
+ 2011-02-15 
+ Hottinger Messtechnik Baldwin 
+ MEASURING ARRANGEMENT FOR DETECTING STATIC AND / OR DYNAMIC LOADING OF A TRACK
+ CH702963A1 
+ ( en )
+ * 
+ 2010-04-01 
+ 2011-10-14 
+ Kistler Holding Ag 
+ Method for calibration of sensors wim. 
+ US8736458B2 
+ ( en )
+ * 
+ 2010-04-29 
+ 2014-05-27 
+ Signature Research, Inc. 
+ Weigh-in-motion scale 
+ CN101865724B 
+ ( en )
+ * 
+ 2010-06-29 
+ 2011-12-28 
+ 云南大红山管道有限公司 
+ Metering calibration system and calibration method of adhesive tape machine 
+ CN102661777B 
+ ( en )
+ * 
+ 2012-05-30 
+ 2013-08-28 
+ 四川兴达明科机电工程有限公司 
+ Vehicle dynamic weighing system 
+ CN102809413B 
+ ( en )
+ * 
+ 2012-08-06 
+ 2014-08-27 
+ 北京万集科技股份有限公司 
+ Detecting method and detecting device for rigged dynamic weighing of vehicle 
+ CN102809414B 
+ ( en )
+ * 
+ 2012-08-22 
+ 2013-08-28 
+ 四川兴达明科机电工程有限公司 
+ Vehicle dynamic weighing system 
+ ES2529699B1 
+ ( en )
+ * 
+ 2013-08-22 
+ 2015-12-10 
+ Caripsc Andino, Inc 
+ Mobile telematic balance and mobile telematic balance system using said balance
+ BR112016007785B1 
+ ( en )
+ * 
+ 2013-10-08 
+ 2021-06-01 
+ North-West University 
+ VEHICLE OVERLOAD MANAGEMENT SYSTEM
+ US9194737B2 
+ ( en )
+ * 
+ 2013-12-20 
+ 2015-11-24 
+ Mettler-Toledo, LLC 
+ Method of determining vehicle scale health and suitability for use via weight transfer pattern analysis 
+ CN103854323B 
+ ( en )
+ * 
+ 2014-03-26 
+ 2016-08-17 
+ 陕西省计量科学研究院 
+ A kind of highway weight metering charging anti-cheating method, device and monitoring management apparatus 
+ US9846811B2 
+ ( en )
+ * 
+ 2014-04-24 
+ 2017-12-19 
+ Conduent Business Services, Llc 
+ System and method for video-based determination of queue configuration parameters 
+ US10551241B2 
+ ( en )
+ * 
+ 2016-02-17 
+ 2020-02-04 
+ Right Weigh, Inc. 
+ Automatic calibration of on-vehicle weight scales 
+ WO2019216812A1 
+ ( en )
+ * 
+ 2018-05-08 
+ 2019-11-14 
+ Motus Weighing Ab 
+ A communication device and a server for a weighing system for dynamic weighing of vehicles 
+ WO2020120253A1 
+ ( en )
+ * 
+ 2018-12-14 
+ 2020-06-18 
+ Kistler Holding Ag 
+ Calibration of a wim sensor 
+ HUE069283T2 
+ ( en )
+ * 
+ 2019-03-08 
+ 2025-02-28 
+ Kistler Holding Ag 
+ Calibration of and site selection for a wim sensor and wim sensor 
+ DE102021120557B4 
+ ( en )
+ 2021-08-06 
+ 2026-03-26 
+ Wölfel Engineering Gmbh + Co. Kg 
+ Calibration system
+ CN113720428B 
+ ( en )
+ * 
+ 2021-09-15 
+ 2022-03-15 
+ 浙江东鼎电子股份有限公司 
+ Vehicle speed perception dynamic weighing compensation method based on artificial intelligence and computer vision 
+ SE2250593A1 
+ ( en )
+ * 
+ 2022-05-18 
+ 2023-11-19 
+ Volvo Truck Corp 
+ A system for retrospectively weighing a transporting asset 
+ CN115638863B 
+ ( en )
+ * 
+ 2022-09-16 
+ 2026-04-07 
+ 郑州衡量科技股份有限公司 
+ A remote calibration method for a weighing device and a readable storage medium
+ GB2625110A 
+ ( en )
+ * 
+ 2022-12-07 
+ 2024-06-12 
+ Illinois Tool Works 
+ Weighing system and method for refillable containers 
+ Citations (6) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ US4957178A 
+ ( en )
+ 1989-08-22 
+ 1990-09-18 
+ Toledo Scale Corporation 
+ Weigh-in-motion scale 
+ US5002141A 
+ ( en )
+ 1989-12-08 
+ 1991-03-26 
+ Toledo Scale Corporation 
+ Vehicle weighing in motion apparatus and method 
+ US6137066A 
+ ( en )
+ 1996-12-18 
+ 2000-10-24 
+ Vagagenturen Wanelid Ab 
+ Weighing device 
+ US6459050B1 
+ ( en )
+ 1999-09-20 
+ 2002-10-01 
+ Ut-Battelle, Inc. 
+ Method and appartus for converting static in-ground vehicle scales into weigh-in-motion systems 
+ US6980093B2 
+ ( en )
+ 2002-05-07 
+ 2005-12-27 
+ The Johns Hopkins University 
+ Commercial vehicle electronic screening hardware/software system with primary and secondary sensor sets 
+ US7105751B2 
+ ( en )
+ * 
+ 2004-05-18 
+ 2006-09-12 
+ Yazaki Corporation 
+ Calibration assisting method, device and system 
+ 2007 
+ 2007-12-17 
+ US 
+ US11/957,801 
+ patent/US7684946B2/en 
+ active 
+ Active 
+ 2008 
+ 2008-03-11 
+ CA 
+ CA2625269A 
+ patent/CA2625269C/en 
+ active 
+ Active 
+ Patent Citations (6) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ US4957178A 
+ ( en )
+ 1989-08-22 
+ 1990-09-18 
+ Toledo Scale Corporation 
+ Weigh-in-motion scale 
+ US5002141A 
+ ( en )
+ 1989-12-08 
+ 1991-03-26 
+ Toledo Scale Corporation 
+ Vehicle weighing in motion apparatus and method 
+ US6137066A 
+ ( en )
+ 1996-12-18 
+ 2000-10-24 
+ Vagagenturen Wanelid Ab 
+ Weighing device 
+ US6459050B1 
+ ( en )
+ 1999-09-20 
+ 2002-10-01 
+ Ut-Battelle, Inc. 
+ Method and appartus for converting static in-ground vehicle scales into weigh-in-motion systems 
+ US6980093B2 
+ ( en )
+ 2002-05-07 
+ 2005-12-27 
+ The Johns Hopkins University 
+ Commercial vehicle electronic screening hardware/software system with primary and secondary sensor sets 
+ US7105751B2 
+ ( en )
+ * 
+ 2004-05-18 
+ 2006-09-12 
+ Yazaki Corporation 
+ Calibration assisting method, device and system 
+ Cited By (11) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ RU2448332C1 
+ ( en )
+ * 
+ 2011-01-24 
+ 2012-04-20 
+ Владимир Ильич Речицкий 
+ Method and system for weighing motor vehicle directly during movement thereof on track 
+ RU2448331C1 
+ ( en )
+ * 
+ 2011-01-24 
+ 2012-04-20 
+ Владимир Ильич Речицкий 
+ Method and system for increasing accuracy of weighing motor vehicle in motion 
+ WO2012102647A3 
+ ( en )
+ * 
+ 2011-01-24 
+ 2012-10-04 
+ Rechitskiy Vladimir Ilyich 
+ Method and system for increasing the accuracy of weighing a motor vehicle in motion 
+ WO2012102648A3 
+ ( en )
+ * 
+ 2011-01-24 
+ 2012-10-04 
+ Rechitskiy Vladimir Ilyich 
+ Method and system for weighing a motor vehicle as it is moving along a road 
+ EA021322B1 
+ ( en )
+ * 
+ 2011-01-24 
+ 2015-05-29 
+ Владимир Ильич РЕЧИЦКИЙ 
+ Method and system for weighing a motor vehicle as it is moving along a road 
+ US8686301B2 
+ ( en )
+ 2011-07-15 
+ 2014-04-01 
+ International Paper Company 
+ System to determine if vehicle correctly positioned during weighting, scale ticket data system and methods for using same 
+ US9453757B2 
+ ( en )
+ 2011-07-15 
+ 2016-09-27 
+ International Paper Company 
+ System to determine if vehicle correctly positioned during weighing, scale ticket data system and methods for using same 
+ RU2494355C1 
+ ( en )
+ * 
+ 2012-04-10 
+ 2013-09-27 
+ Владимир Ильич Речицкий 
+ Method and system for improving accuracy at weighing of mechanical transport vehicle in movement 
+ WO2013187799A3 
+ ( en )
+ * 
+ 2012-04-10 
+ 2014-03-20 
+ Rechitskiy Vladimir Ilyich 
+ Method and system for increasing the accuracy of weighing a motor vehicle in motion 
+ US10859430B2 
+ ( en )
+ 2013-03-04 
+ 2020-12-08 
+ International Road Dynamics 
+ Sensor including electrical transmission-line parameter that changes responsive to vehicular load 
+ US9518862B2 
+ ( en )
+ 2014-11-04 
+ 2016-12-13 
+ Mettler-Toledo, LLC 
+ Weighing apparatus rezero fault prediction and remote alerting 
+ Also Published As 
+ Publication number 
+ Publication date 
+ CA2625269A1 
+ ( en )
+ 2009-06-17 
+ US20090151421A1 
+ ( en )
+ 2009-06-18 
+ CA2625269C 
+ ( en )
+ 2011-05-24 
+ Similar Documents 
+ Publication 
+ Publication Date 
+ Title 
+ CA2625269C 
+ ( en )
+ 2011-05-24 
+ Weigh-in-motion system with auto-calibration 
+ US6393346B1 
+ ( en )
+ 2002-05-21 
+ Method of monitoring vehicular mileage 
+ JP5885733B2 
+ ( en )
+ 2016-03-15 
+ Method for calibrating a WIM sensor
+ JPWO2018159003A1 
+ ( en )
+ 2019-12-26 
+ Monitoring system
+ US9508257B2 
+ ( en )
+ 2016-11-29 
+ Road detection logic 
+ JP2011064462A 
+ ( en )
+ 2011-03-31 
+ Axle load measuring instrument, and system and method for confirming measurement accuracy of the same 
+ CN105793678B 
+ ( en )
+ 2018-08-24 
+ Overloaded vehicles manage system 
+ WO2014089591A1 
+ ( en )
+ 2014-06-19 
+ Method for measuring a moving vehicle 
+ AU2020102912A4 
+ ( en )
+ 2020-12-24 
+ Device and Method for All-round Precise Recognition of Vehicle Load on the Bridge Deck 
+ AU2011200095A1 
+ ( en )
+ 2011-09-01 
+ System and method for monitoring vehicle mass tamper events 
+ RU2448332C1 
+ ( en )
+ 2012-04-20 
+ Method and system for weighing motor vehicle directly during movement thereof on track 
+ KR101247542B1 
+ ( en )
+ 2013-03-26 
+ Weight measuring system considering changes of speed and lane and method thereof 
+ CN107204118A 
+ ( en )
+ 2017-09-26 
+ Weighing information matching process, device and server 
+ WO2011028092A1 
+ ( en )
+ 2011-03-10 
+ Traffic monitoring and enforcement system and a method thereof 
+ RU2448331C1 
+ ( en )
+ 2012-04-20 
+ Method and system for increasing accuracy of weighing motor vehicle in motion 
+ RU2494355C1 
+ ( en )
+ 2013-09-27 
+ Method and system for improving accuracy at weighing of mechanical transport vehicle in movement 
+ JP2011113362A 
+ ( en )
+ 2011-06-09 
+ Traffic information estimation system, boundary traffic information estimation apparatus, traffic information estimation apparatus for divided regions, computer program, traffic information estimation method, boundary traffic information estimation method, and traffic information estimation method for divided region 
+ Zhao et al. 
+ 2011 
+ Evaluating the accuracy of spot speed data from global positioning systems for estimating truck travel speed 
+ JP3960243B2 
+ ( en )
+ 2007-08-15 
+ Link travel time estimation method and apparatus
+ US11869280B2 
+ ( en )
+ 2024-01-09 
+ Information providing method and information providing system 
+ JP7424945B2 
+ ( en )
+ 2024-01-30 
+ Failure detection device, toll collection system, failure detection method, and program
+ CN117109712B 
+ ( en )
+ 2023-12-29 
+ Automobile scale split balance and use method thereof 
+ CN116416780A 
+ ( en )
+ 2023-07-11 
+ A test method, device, test equipment and medium for a roadside perception system
+ KR101694350B1 
+ ( en )
+ 2017-01-23 
+ Revision method for missing traffic data using axle correction factor 
+ Baker 
+ 2019 
+ Auto-Calibration of WIM Using Traffic Stream Characteristics 
+ Legal Events 
+ Date 
+ Code 
+ Title 
+ Description 
+ 2008-01-11 
+ AS 
+ Assignment 
+ Owner name :
+ METTLER-TOLEDO, INC., OHIO 
+ Free format text :
+ ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:SUSOR, ROBERT;REEL/FRAME:020356/0902 
+ Effective date :
+ 20080109 
+ Owner name :
+ METTLER-TOLEDO, INC.,OHIO 
+ Free format text :
+ ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:SUSOR, ROBERT;REEL/FRAME:020356/0902 
+ Effective date :
+ 20080109 
+ 2010-03-03 
+ STCF 
+ Information on status: patent grant 
+ Free format text :
+ PATENTED CASE 
+ 2012-06-21 
+ AS 
+ Assignment 
+ Owner name :
+ METTLER-TOLEDO, LLC, OHIO 
+ Free format text :
+ ENTITY CONVERSION AND CHANGE OF NAME;ASSIGNOR:METTLER-TOLEDO, INC.;REEL/FRAME:028426/0291 
+ Effective date :
+ 20111207 
+ 2013-08-26 
+ FPAY 
+ Fee payment 
+ Year of fee payment :
+ 4 
+ 2017-08-29 
+ MAFP 
+ Maintenance fee payment 
+ Free format text :
+ PAYMENT OF MAINTENANCE FEE, 8TH YEAR, LARGE ENTITY (ORIGINAL EVENT CODE: M1552) 
+ Year of fee payment :
+ 8 
+ 2021-08-12 
+ MAFP 
+ Maintenance fee payment 
+ Free format text :
+ PAYMENT OF MAINTENANCE FEE, 12TH YEAR, LARGE ENTITY (ORIGINAL EVENT CODE: M1553); ENTITY STATUS OF PATENT OWNER: LARGE ENTITY 
+ Year of fee payment :
+ 12 

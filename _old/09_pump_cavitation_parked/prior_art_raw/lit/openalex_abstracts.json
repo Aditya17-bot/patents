@@ -1,0 +1,113 @@
+{
+ "Novel method for detecting cavitation in centrifugal pump with frequency converter": {
+  "title": "Novel method for detecting cavitation in centrifugal pump with frequency converter",
+  "year": 2011,
+  "doi": "https://doi.org/10.1784/insi.2011.53.8.439",
+  "venue": "Insight - Non-Destructive Testing and Condition Monitoring",
+  "authors": [
+   "Tero Ahonen",
+   "Jussi Tamminen",
+   "Jero Ahola",
+   "Juha Kestilä"
+  ],
+  "abstract": "NO ABSTRACT",
+  "oa": null
+ },
+ "Frequency-converter-based hybrid estimation method for the centrifugal pump operational state": {
+  "title": "Frequency-Converter-Based Hybrid Estimation Method for the Centrifugal Pump Operational State",
+  "year": 2011,
+  "doi": "https://doi.org/10.1109/tie.2011.2176692",
+  "venue": "IEEE Transactions on Industrial Electronics",
+  "authors": [
+   "Tero Ahonen",
+   "Jussi Tamminen",
+   "Jero Ahola",
+   "Juha Kestilä"
+  ],
+  "abstract": "Research on utilization of a frequency converter and sensorless methods in the drive system diagnostics has been mostly limited to the motor and to the frequency converter itself. However, it has been shown that a frequency converter also allows the sensorless estimation of the operational state of a centrifugal pump providing new opportunities for the diagnostics and control of pumping systems. In this paper, a novel hybrid estimation method for the centrifugal pump operational state is proposed. It is based on the identification of the process by using those flow rate and head estimates produced by QP-curve-based method, which are known to be relatively accurate. After the identification phase, the process model can be used together with the estimates of the frequency converter for the sensorless operational state estimation of the pump. The method is evaluated by laboratory measurements, and its applicability to industrial pumping and fan systems is also discussed.",
+  "oa": null
+ },
+ "Cavitation detection in centrifugal pumps using pressure time-domain features": {
+  "title": "Cavitation detection in centrifugal pumps using pressure time-domain features",
+  "year": 2017,
+  "doi": "https://doi.org/10.3906/elk-1701-2",
+  "venue": "TURKISH JOURNAL OF ELECTRICAL ENGINEERING & COMPUTER SCIENCES",
+  "authors": [
+   "Pouya Samanipour",
+   "Javad Poshtan",
+   "Hamed SADEGHI"
+  ],
+  "abstract": "Condition monitoring of centrifugal pumps is vital due to their crucial role in industries. One of the most prevalent faults in pumps is cavitation, which can cause mechanical faults or even failure in the pump. In this paper, an approach is suggested to detect cavitation in a centrifugal pump using time-domain analysis of the pressure signal residual. First, pressure and torque signals are obtained using a model of the electro-pump, and then pressure deviation from the pump performance curve is defined as a residual. The residual time-domain features are extracted and applied as inputs to a self-organizing map (SOM) neural network to classify the system modes. The results indicate that the suggested method is capable of detecting incipient cavitation. Furthermore, the suggested method demonstrates robust performance against disturbance.",
+  "oa": null
+ },
+ "Model-based fault detection in a centrifugal pump application": {
+  "title": "Model based fault detection in a centrifugal pump application",
+  "year": 2006,
+  "doi": "https://doi.org/10.1109/tcst.2005.860524",
+  "venue": "IEEE Transactions on Control Systems Technology",
+  "authors": [
+   "Carsten Skovmose Kallesøe",
+   "Vincent Cocquempot",
+   "Roozbeh Izadi‐Zamanabadi"
+  ],
+  "abstract": "A model based approach for fault detection in a centrifugal pump, driven by an induction motor, is proposed in this paper. The fault detection algorithm is derived using a combination of structural analysis, observer design and Analytical Redundancy Relation (ARR) design. Structural considerations on the system is used to divide it into two cascaded connected subsystems, giving an example on using a general structural approach to divide a complex problem into a set of less complex and solvable problems. The variables connecting the two subsystems are observed using an adaptive observer derived on the basis of the equations describing the first subsystem. No faults are expected to affect the first subsystem, therefore only the second subsystem is considered in the design of the fault detection algorithm. The fault detection algorithm is based on an ARR, which is designed using structural analysis and the Groebner basis algorithm. The polynomial form of the obtained ARR is utilized to achieve robustness w.r.t. parameter variations by using a set-valued approach. The applicability of the algorithm is illustrated by applying it to an industrial benchmark. The benchmark tests have shown that the algorithm is capable of detecting four different faults in the mechanical and hydraulic parts of the pump.",
+  "oa": null
+ },
+ "Experimental analysis of cavitation in a centrifugal pump using acoustic emission vibration measurements and flow visualization": {
+  "title": "Experimental analysis of cavitation in a centrifugal pump using acoustic emission, vibration measurements and flow visualization",
+  "year": 2018,
+  "doi": "https://doi.org/10.1016/j.euromechflu.2018.10.015",
+  "venue": "European Journal of Mechanics - B/Fluids",
+  "authors": [
+   "Georgios Mousmoulis",
+   "Nilla Karlsen-Davies",
+   "George Aggidis",
+   "Ioannis Anagnostopoulos",
+   "Dimitrios E. Papantonis"
+  ],
+  "abstract": "NO ABSTRACT",
+  "oa": "https://eprints.lancs.ac.uk/id/eprint/128611/1/EJMFLU_3383_Updated.pdf"
+ },
+ "Cavitation diagnosis method of centrifugal pump based on characteristic frequency and kurtosis": {
+  "title": "Cavitation diagnosis method of centrifugal pump based on characteristic frequency and kurtosis",
+  "year": 2024,
+  "doi": "https://doi.org/10.1063/5.0194932",
+  "venue": "AIP Advances",
+  "authors": [
+   "Yan Liu",
+   "Denghao Wu",
+   "Minghao Fei",
+   "Jiaqi Deng",
+   "Qi Li",
+   "Zhenhua Wu",
+   "Yunqing Gu",
+   "Jiegang Mou"
+  ],
+  "abstract": "Centrifugal pumps are important equipment in industrial production. At present, vibration signals are often used to diagnose cavitation in centrifugal pumps, but the vibration signals are easy to be disturbed and the fault characteristics are unstable to be detected. In this paper, a single stage centrifugal pump is taken as the study object, and the vibration signals of various parts of the centrifugal pump cavitation state are collected under different flow conditions. The short-time Fourier transform and one-third octave analysis are performed on the filtered signals, and the characteristic frequency of cavitation and the energy near the characteristic frequency with the development of cavitation are obtained. Based on vibration signals, the vibration root mean square (rms) and kurtosis values of different cavitation states are obtained. Flow state, kurtosis, and rms are used as input variables in the double-layer backpropagation neural network model to identify and classify the cavitation states of centrifugal pumps. The results show that the trained neural network model can accurately identify and classify the cavitation state of the centrifugal pump under the conditions of low flow rate, rated flow rate, and large flow rate, and the accuracy is more than 99.5%. This study provides a new technique for diagnosing cavitation in centrifugal pumps.",
+  "oa": "https://pubs.aip.org/aip/adv/article-pdf/doi/10.1063/5.0194932/19700522/025253_1_5.0194932.pdf"
+ },
+ "Pump cavitation various NPSHR criteria NPSH margins and impeller life expectancy": {
+  "title": "Pump Cavitation: Various NPSHR Criteria, NPSHA Margins, Impeller Life Expectancy",
+  "year": 2009,
+  "doi": "https://doi.org/10.21423/r1xm30",
+  "venue": "OakTrust (Texas A&M University Libraries)",
+  "authors": [
+   "Schiavello, Bruno||Visser"
+  ],
+  "abstract": "and previously served in the same",
+  "oa": "https://hdl.handle.net/1969.1/163898"
+ },
+ "application of acoustic emission for detecting incipient cavitation and the best efficiency point of a 60 kW centrifugal pump": {
+  "title": "The application of acoustic emission for detecting incipient cavitation and the best efficiency point of a 60kW centrifugal pump: case study",
+  "year": 2004,
+  "doi": "https://doi.org/10.1016/j.ndteint.2004.10.002",
+  "venue": "NDT & E International",
+  "authors": [
+   "L. Alfayez",
+   "David Mba",
+   "G. Dyson"
+  ],
+  "abstract": "NO ABSTRACT",
+  "oa": null
+ }
+}

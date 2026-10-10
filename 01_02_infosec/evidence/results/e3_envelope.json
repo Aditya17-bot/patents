@@ -1,0 +1,84 @@
+{
+  "config": {
+    "n_trials": 20,
+    "model": "per_station",
+    "rule": "raw_median",
+    "scenario": "D_both",
+    "couple_lag": 2,
+    "n_channels": 8,
+    "base_amp": 0.15,
+    "base_events": 60,
+    "corpus": "SMD group 3, MIT licence"
+  },
+  "amplitude_sweep": {
+    "0.02": {
+      "detection_rate_top_ranked": 0.05,
+      "auroc_over_pairs_mean": 0.5138888888888888,
+      "z_median": 0.3162740705750245,
+      "target_r_median": 0.04199548369315051
+    },
+    "0.04": {
+      "detection_rate_top_ranked": 0.05,
+      "auroc_over_pairs_mean": 0.5740740740740742,
+      "z_median": 0.4133864625061727,
+      "target_r_median": 0.04768486621689351
+    },
+    "0.06": {
+      "detection_rate_top_ranked": 0.1,
+      "auroc_over_pairs_mean": 0.6731481481481482,
+      "z_median": 0.6359039257661813,
+      "target_r_median": 0.05842454761016929
+    },
+    "0.1": {
+      "detection_rate_top_ranked": 0.5,
+      "auroc_over_pairs_mean": 0.8657407407407407,
+      "z_median": 2.5973081711677897,
+      "target_r_median": 0.16542997775512902
+    },
+    "0.15": {
+      "detection_rate_top_ranked": 0.75,
+      "auroc_over_pairs_mean": 0.9527777777777778,
+      "z_median": 6.519410312633537,
+      "target_r_median": 0.3885872765171956
+    },
+    "0.25": {
+      "detection_rate_top_ranked": 0.95,
+      "auroc_over_pairs_mean": 0.999074074074074,
+      "z_median": 10.757082694471265,
+      "target_r_median": 0.6808225605479672
+    }
+  },
+  "event_count_sweep": {
+    "10": {
+      "detection_rate_top_ranked": 0.1,
+      "auroc_over_pairs_mean": 0.7592592592592593,
+      "z_median": 1.0356735114341176,
+      "target_r_median": 0.08094649843795115
+    },
+    "20": {
+      "detection_rate_top_ranked": 0.45,
+      "auroc_over_pairs_mean": 0.8518518518518519,
+      "z_median": 2.2433307961640865,
+      "target_r_median": 0.14729624402515257
+    },
+    "40": {
+      "detection_rate_top_ranked": 0.7,
+      "auroc_over_pairs_mean": 0.9287037037037038,
+      "z_median": 4.470800907626581,
+      "target_r_median": 0.276550126966098
+    },
+    "60": {
+      "detection_rate_top_ranked": 0.75,
+      "auroc_over_pairs_mean": 0.9527777777777778,
+      "z_median": 6.519410312633537,
+      "target_r_median": 0.3885872765171956
+    },
+    "90": {
+      "detection_rate_top_ranked": 0.9,
+      "auroc_over_pairs_mean": 0.9916666666666668,
+      "z_median": 8.323980841058553,
+      "target_r_median": 0.4998329820751677
+    }
+  },
+  "runtime_s": 193.7
+}

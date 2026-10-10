@@ -1,0 +1,2550 @@
+{
+ "tol": 0.05,
+ "max_dist_m": 2000,
+ "roads": {
+  "M25": {
+   "counts": 30,
+   "matched": 12,
+   "rows": [
+    {
+     "count_point": 6178,
+     "date": "2025-06-19",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M25",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 7054,
+     "date": "2025-04-29",
+     "matched": false,
+     "reason": "totals differ by 10.1 %",
+     "site": "4476",
+     "road": "M25",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 7824,
+     "date": "2025-04-25",
+     "matched": false,
+     "reason": "totals differ by 6.4 %",
+     "site": "4525",
+     "road": "M25",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 7903,
+     "date": "2025-06-10",
+     "matched": true,
+     "site": "4027",
+     "dist_m": 373,
+     "direction": "E",
+     "hours": 10,
+     "total_ratio": 1.0132,
+     "proxy": {
+      "short": 0.6632190648824439,
+      "lgv": 0.2332995681612198,
+      "artic": 0.06376286186490376,
+      "bus": 0.0019015123242878214
+     },
+     "raw": [
+      0.8149479924926768,
+      0.8810054200066654,
+      0.9232253424777674
+     ],
+     "corrected": [
+      0.618775324060269,
+      0.8422409710406764,
+      0.9268562207293329
+     ],
+     "bias": [
+      0.196161730787355,
+      0.03877359161955002,
+      -0.0036428798905074333
+     ],
+     "chain_size": 6,
+     "road": "M25",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 17875,
+     "date": "2025-06-18",
+     "matched": true,
+     "site": "4000",
+     "dist_m": 407,
+     "direction": "W",
+     "hours": 11,
+     "total_ratio": 1.0041,
+     "proxy": {
+      "short": 0.7325235498264749,
+      "lgv": 0.16885320925975364,
+      "artic": 0.05882689447389497,
+      "bus": 0.00537736928416155
+     },
+     "raw": [
+      0.7052735524791583,
+      0.8539281034580983,
+      0.9293757952106952
+     ],
+     "corrected": [
+      0.7672382688619229,
+      0.856795609487457,
+      0.9214759110503428
+     ],
+     "bias": [
+      -0.06197679710721138,
+      -0.0028777665256486396,
+      0.007884389440190986
+     ],
+     "chain_size": 4,
+     "road": "M25",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 27085,
+     "date": "2025-06-13",
+     "matched": true,
+     "site": "5143",
+     "dist_m": 34,
+     "direction": "N",
+     "hours": 8,
+     "total_ratio": 1.0227,
+     "proxy": {
+      "short": 0.6583112927787128,
+      "lgv": 0.23956079185701692,
+      "artic": 0.056143303678768935,
+      "bus": 0.0023443135369079107
+     },
+     "raw": [
+      0.4977567053937031,
+      0.8120726474794773,
+      0.9282929409690249
+     ],
+     "corrected": [
+      0.6228914010305441,
+      0.8267863090456692,
+      0.9289198879332301
+     ],
+     "bias": [
+      -0.1251380423368027,
+      -0.014758393400934766,
+      -0.0004884018263358048
+     ],
+     "chain_size": 5,
+     "road": "M25",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 27923,
+     "date": "2025-04-23",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M25",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 37918,
+     "date": "2025-05-02",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M25",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 38022,
+     "date": "2025-06-26",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M25",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 48040,
+     "date": "2025-06-05",
+     "matched": true,
+     "site": "905",
+     "dist_m": 391,
+     "direction": "E",
+     "hours": 11,
+     "total_ratio": 1.0074,
+     "proxy": {
+      "short": 0.7052002000076926,
+      "lgv": 0.19377668371860457,
+      "artic": 0.05994461325435594,
+      "bus": 0.004269394976729874
+     },
+     "raw": [
+      0.8136453879047038,
+      0.8812996334758705,
+      0.9246334758704948
+     ],
+     "corrected": [
+      0.63217776420281,
+      0.8448572083078802,
+      0.9254734270006109
+     ],
+     "bias": [
+      0.1814381536792835,
+      0.036432999539996236,
+      -0.0007410079835699634
+     ],
+     "chain_size": 4,
+     "road": "M25",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 48041,
+     "date": "2025-06-27",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M25",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 48089,
+     "date": "2025-04-25",
+     "matched": true,
+     "site": "4946",
+     "dist_m": 336,
+     "direction": "N",
+     "hours": 12,
+     "total_ratio": 0.9903,
+     "proxy": {
+      "short": 0.7527042291271802,
+      "lgv": 0.15511266823655542,
+      "artic": 0.0514808645875213,
+      "bus": 0.0043650565734305894
+     },
+     "raw": [
+      0.6834412759787337,
+      0.8501304978250362,
+      0.9294151764137264
+     ],
+     "corrected": [
+      0.739197680038666,
+      0.8630256162397293,
+      0.9323344610923151
+     ],
+     "bias": [
+      -0.05578185978657363,
+      -0.012887241665071658,
+      -0.0030144011247396074
+     ],
+     "chain_size": 6,
+     "road": "M25",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 56037,
+     "date": "2025-03-31",
+     "matched": true,
+     "site": "2005",
+     "dist_m": 50,
+     "direction": "W",
+     "hours": 12,
+     "total_ratio": 1.0089,
+     "proxy": {
+      "short": 0.7126006699451215,
+      "lgv": 0.1821146033782339,
+      "artic": 0.06202337680849548,
+      "bus": 0.004490057729313663
+     },
+     "raw": [
+      0.7921869205093337,
+      0.8710241421330555,
+      0.9297458629885382
+     ],
+     "corrected": [
+      0.7818024477685747,
+      0.8651961217173233,
+      0.928898150928068
+     ],
+     "bias": [
+      0.01036921050097972,
+      0.005816334405382539,
+      0.0007655696443363835
+     ],
+     "chain_size": 3,
+     "road": "M25",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 56038,
+     "date": "2025-04-03",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M25",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 57740,
+     "date": "2025-05-20",
+     "matched": true,
+     "site": "2952",
+     "dist_m": 231,
+     "direction": "S",
+     "hours": 10,
+     "total_ratio": 0.9888,
+     "proxy": {
+      "short": 0.7360609508732004,
+      "lgv": 0.17455762792922047,
+      "artic": 0.04630683223667936,
+      "bus": 0.005145203581853263
+     },
+     "raw": [
+      0.7430034357383501,
+      0.8517962573801661,
+      0.9339704459788518
+     ],
+     "corrected": [
+      0.7416691684178925,
+      0.8517962573801661,
+      0.9346375796390807
+     ],
+     "bias": [
+      0.0013112348002572993,
+      0.0,
+      -0.0007843792065405086
+     ],
+     "chain_size": 7,
+     "road": "M25",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 6178,
+     "date": "2025-06-19",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M25",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 7054,
+     "date": "2025-04-29",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M25",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 7824,
+     "date": "2025-04-25",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M25",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 7903,
+     "date": "2025-06-10",
+     "matched": true,
+     "site": "1803",
+     "dist_m": 65,
+     "direction": "W",
+     "hours": 9,
+     "total_ratio": 1.0045,
+     "proxy": {
+      "short": 0.6659304867710704,
+      "lgv": 0.2370276179003257,
+      "artic": 0.0608129210725918,
+      "bus": 0.0016731361263552403
+     },
+     "raw": [
+      0.4034557811042509,
+      0.8093990139030782,
+      0.9246879580686714
+     ],
+     "corrected": [
+      0.6273708523963932,
+      0.8263447785723804,
+      0.9254874961133567
+     ],
+     "bias": [
+      -0.22389938924619818,
+      -0.01697101290671632,
+      -0.0005630402178805061
+     ],
+     "chain_size": 6,
+     "road": "M25",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 17875,
+     "date": "2025-06-18",
+     "matched": true,
+     "site": "6269",
+     "dist_m": 412,
+     "direction": "E",
+     "hours": 9,
+     "total_ratio": 0.996,
+     "proxy": {
+      "short": 0.6938074743056045,
+      "lgv": 0.19751170065147347,
+      "artic": 0.061431360097838617,
+      "bus": 0.0045391472047790395
+     },
+     "raw": [
+      0.8326131614365658,
+      0.8925409081249557,
+      0.9348539585842129
+     ],
+     "corrected": [
+      0.8101815777667588,
+      0.874335907062407,
+      0.9219617010224079
+     ],
+     "bias": [
+      0.022373439171597675,
+      0.018211287022924072,
+      0.012946263268311886
+     ],
+     "chain_size": 6,
+     "road": "M25",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 27085,
+     "date": "2025-06-13",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M25",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 27923,
+     "date": "2025-04-23",
+     "matched": true,
+     "site": "1741",
+     "dist_m": 48,
+     "direction": "S",
+     "hours": 12,
+     "total_ratio": 1.0234,
+     "proxy": {
+      "short": 0.7301452262269938,
+      "lgv": 0.18892590107361965,
+      "artic": 0.04215394938650307,
+      "bus": 0.002887749233128834
+     },
+     "raw": [
+      0.7696531859588319,
+      0.8788258436175445,
+      0.9507528745053041
+     ],
+     "corrected": [
+      0.7714446291829614,
+      0.8788258436175445,
+      0.9507528745053041
+     ],
+     "bias": [
+      -0.0018605768725986627,
+      0.0,
+      0.0
+     ],
+     "chain_size": 3,
+     "road": "M25",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 37918,
+     "date": "2025-05-02",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M25",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 38022,
+     "date": "2025-06-26",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M25",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 48040,
+     "date": "2025-06-05",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M25",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 48041,
+     "date": "2025-06-27",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M25",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 48089,
+     "date": "2025-04-25",
+     "matched": true,
+     "site": "1679",
+     "dist_m": 185,
+     "direction": "S",
+     "hours": 9,
+     "total_ratio": 1.0105,
+     "proxy": {
+      "short": 0.7025248551605751,
+      "lgv": 0.19395369906778245,
+      "artic": 0.059413966573683336,
+      "bus": 0.004076961590730277
+     },
+     "raw": [
+      0.6100651189127972,
+      0.8358578708946772,
+      0.9278737259343148
+     ],
+     "corrected": [
+      0.791407134767837,
+      0.8568091732729332,
+      0.9259154397885995
+     ],
+     "bias": [
+      -0.18120447862335415,
+      -0.020961580945228597,
+      0.002063469455810929
+     ],
+     "chain_size": 10,
+     "road": "M25",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 56037,
+     "date": "2025-03-31",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M25",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 56038,
+     "date": "2025-04-03",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M25",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 57740,
+     "date": "2025-05-20",
+     "matched": true,
+     "site": "3513",
+     "dist_m": 217,
+     "direction": "N",
+     "hours": 5,
+     "total_ratio": 0.9823,
+     "proxy": {
+      "short": 0.7105016094420601,
+      "lgv": 0.1767033261802575,
+      "artic": 0.05780579399141631,
+      "bus": 0.0045600858369098714
+     },
+     "raw": [
+      0.7806451612903226,
+      0.8704557091653866,
+      0.9370882403140468
+     ],
+     "corrected": [
+      0.6837344256699095,
+      0.8475507765830347,
+      0.9331967912613074
+     ],
+     "bias": [
+      0.09695500126651568,
+      0.022858786880908033,
+      0.0038284078775037145
+     ],
+     "chain_size": 8,
+     "road": "M25",
+     "carriageway": "B"
+    }
+   ],
+   "b520": {
+    "n": 12,
+    "fit_raw_deviation_on_bias": {
+     "alpha_pts": 16.11,
+     "beta": 0.846,
+     "beta_se": 0.128,
+     "r": 0.901
+    },
+    "spearman": 0.923,
+    "spearman_p": 1.8621951098680987e-05,
+    "without_largest_bias": {
+     "alpha_pts": 16.62,
+     "beta": 0.763,
+     "beta_se": 0.148,
+     "r": 0.864
+    },
+    "sd_deviation_raw_pts": 12.18,
+    "sd_deviation_corrected_pts": 5.64,
+    "mad_raw_pts": 10.04,
+    "mad_corrected_pts": 3.88,
+    "mean_deviation_corrected_pts": 16.29,
+    "points": [
+     {
+      "road": "M25",
+      "site": "4027",
+      "bias_pts": 19.616,
+      "dev_raw_pts": 33.417,
+      "dev_corrected_pts": 13.8
+     },
+     {
+      "road": "M25",
+      "site": "4000",
+      "bias_pts": -6.198,
+      "dev_raw_pts": 10.479,
+      "dev_corrected_pts": 16.676
+     },
+     {
+      "road": "M25",
+      "site": "5143",
+      "bias_pts": -12.514,
+      "dev_raw_pts": 2.678,
+      "dev_corrected_pts": 15.192
+     },
+     {
+      "road": "M25",
+      "site": "905",
+      "bias_pts": 18.144,
+      "dev_raw_pts": 25.998,
+      "dev_corrected_pts": 7.851
+     },
+     {
+      "road": "M25",
+      "site": "4946",
+      "bias_pts": -5.578,
+      "dev_raw_pts": 5.204,
+      "dev_corrected_pts": 10.779
+     },
+     {
+      "road": "M25",
+      "site": "2005",
+      "bias_pts": 1.037,
+      "dev_raw_pts": 22.2,
+      "dev_corrected_pts": 21.162
+     },
+     {
+      "road": "M25",
+      "site": "2952",
+      "bias_pts": 0.131,
+      "dev_raw_pts": 14.345,
+      "dev_corrected_pts": 14.211
+     },
+     {
+      "road": "M25",
+      "site": "1803",
+      "bias_pts": -22.39,
+      "dev_raw_pts": -7.712,
+      "dev_corrected_pts": 14.68
+     },
+     {
+      "road": "M25",
+      "site": "6269",
+      "bias_pts": 2.237,
+      "dev_raw_pts": 29.326,
+      "dev_corrected_pts": 27.083
+     },
+     {
+      "road": "M25",
+      "site": "1741",
+      "bias_pts": -0.186,
+      "dev_raw_pts": 18.725,
+      "dev_corrected_pts": 18.904
+     },
+     {
+      "road": "M25",
+      "site": "1679",
+      "bias_pts": -18.12,
+      "dev_raw_pts": 5.921,
+      "dev_corrected_pts": 24.056
+     },
+     {
+      "road": "M25",
+      "site": "3513",
+      "bias_pts": 9.696,
+      "dev_raw_pts": 20.833,
+      "dev_corrected_pts": 11.142
+     }
+    ],
+    "closer_after_correction": 10
+   },
+   "b660": {
+    "n": 12,
+    "fit_raw_deviation_on_bias": {
+     "alpha_pts": -4.85,
+     "beta": 1.211,
+     "beta_se": 0.249,
+     "r": 0.838
+    },
+    "spearman": 0.9,
+    "spearman_p": 6.58802100058725e-05,
+    "without_largest_bias": {
+     "alpha_pts": -4.74,
+     "beta": 1.369,
+     "beta_se": 0.293,
+     "r": 0.841
+    },
+    "sd_deviation_raw_pts": 2.96,
+    "sd_deviation_corrected_pts": 1.67,
+    "mad_raw_pts": 2.32,
+    "mad_corrected_pts": 0.95,
+    "mean_deviation_corrected_pts": -4.75,
+    "points": [
+     {
+      "road": "M25",
+      "site": "4027",
+      "bias_pts": 3.877,
+      "dev_raw_pts": -1.551,
+      "dev_corrected_pts": -5.428
+     },
+     {
+      "road": "M25",
+      "site": "4000",
+      "bias_pts": -0.288,
+      "dev_raw_pts": -4.745,
+      "dev_corrected_pts": -4.458
+     },
+     {
+      "road": "M25",
+      "site": "5143",
+      "bias_pts": -1.476,
+      "dev_raw_pts": -8.58,
+      "dev_corrected_pts": -7.109
+     },
+     {
+      "road": "M25",
+      "site": "905",
+      "bias_pts": 3.643,
+      "dev_raw_pts": -1.768,
+      "dev_corrected_pts": -5.412
+     },
+     {
+      "road": "M25",
+      "site": "4946",
+      "bias_pts": -1.289,
+      "dev_raw_pts": -5.769,
+      "dev_corrected_pts": -4.479
+     },
+     {
+      "road": "M25",
+      "site": "2005",
+      "bias_pts": 0.582,
+      "dev_raw_pts": -2.369,
+      "dev_corrected_pts": -2.952
+     },
+     {
+      "road": "M25",
+      "site": "2952",
+      "bias_pts": 0.0,
+      "dev_raw_pts": -5.882,
+      "dev_corrected_pts": -5.882
+     },
+     {
+      "road": "M25",
+      "site": "1803",
+      "bias_pts": -1.697,
+      "dev_raw_pts": -9.356,
+      "dev_corrected_pts": -7.661
+     },
+     {
+      "road": "M25",
+      "site": "6269",
+      "bias_pts": 1.821,
+      "dev_raw_pts": 0.122,
+      "dev_corrected_pts": -1.698
+     },
+     {
+      "road": "M25",
+      "site": "1741",
+      "bias_pts": 0.0,
+      "dev_raw_pts": -4.025,
+      "dev_corrected_pts": -4.025
+     },
+     {
+      "road": "M25",
+      "site": "1679",
+      "bias_pts": -2.096,
+      "dev_raw_pts": -6.062,
+      "dev_corrected_pts": -3.967
+     },
+     {
+      "road": "M25",
+      "site": "3513",
+      "bias_pts": 2.286,
+      "dev_raw_pts": -1.675,
+      "dev_corrected_pts": -3.965
+     }
+    ],
+    "closer_after_correction": 11
+   }
+  },
+  "M1": {
+   "counts": 50,
+   "matched": 16,
+   "rows": [
+    {
+     "count_point": 6000,
+     "date": "2025-06-23",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 6004,
+     "date": "2025-04-24",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 6005,
+     "date": "2025-05-15",
+     "matched": true,
+     "site": "3657",
+     "dist_m": 701,
+     "direction": "N",
+     "hours": 11,
+     "total_ratio": 1.0238,
+     "proxy": {
+      "short": 0.6230476048127943,
+      "lgv": 0.21734798096803926,
+      "artic": 0.11593553047853922,
+      "bus": 0.0014448347158906908
+     },
+     "raw": [
+      0.7213489707528347,
+      0.8047106915178354,
+      0.881186432429802
+     ],
+     "corrected": [
+      0.6178402841987445,
+      0.7842230765487371,
+      0.8770986422696968
+     ],
+     "bias": [
+      0.10353014144407868,
+      0.020441864892255968,
+      0.004197873508941963
+     ],
+     "chain_size": 3,
+     "road": "M1",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 6007,
+     "date": "2025-05-07",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 16008,
+     "date": "2025-03-31",
+     "matched": true,
+     "site": "10183",
+     "dist_m": 999,
+     "direction": "N",
+     "hours": 12,
+     "total_ratio": 0.9503,
+     "proxy": {
+      "short": 0.6855860222985647,
+      "lgv": 0.20934937930743777,
+      "artic": 0.06727506480915547,
+      "bus": 0.0018125487385925348
+     },
+     "raw": [
+      0.6326901752051453,
+      0.80909292526059,
+      0.914193834553116
+     ],
+     "corrected": [
+      0.623020625415835,
+      0.8041916167664671,
+      0.9134397870924817
+     ],
+     "bias": [
+      0.009616233271022512,
+      0.004925704529773811,
+      0.0006046904684475773
+     ],
+     "chain_size": 4,
+     "road": "M1",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 26004,
+     "date": "2025-04-28",
+     "matched": true,
+     "site": "6173",
+     "dist_m": 99,
+     "direction": "S",
+     "hours": 12,
+     "total_ratio": 1.0031,
+     "proxy": {
+      "short": 0.6326486571322072,
+      "lgv": 0.21729150726855395,
+      "artic": 0.11194161614972632,
+      "bus": 0.0020991505306731015
+     },
+     "raw": [
+      0.602421184385512,
+      0.7827779081592741,
+      0.878647422357819
+     ],
+     "corrected": [
+      0.612786513338027,
+      0.7862982085582414,
+      0.879586169130877
+     ],
+     "bias": [
+      -0.010314980101392923,
+      -0.0035958850449647195,
+      -0.000827264725608734
+     ],
+     "chain_size": 10,
+     "road": "M1",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 26007,
+     "date": "2025-04-02",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 36002,
+     "date": "2025-06-13",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 36004,
+     "date": "2025-05-08",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 36005,
+     "date": "2025-06-03",
+     "matched": true,
+     "site": "3816",
+     "dist_m": 65,
+     "direction": "N",
+     "hours": 12,
+     "total_ratio": 1.035,
+     "proxy": {
+      "short": 0.6412273618641136,
+      "lgv": 0.20392202099434767,
+      "artic": 0.11429230591763756,
+      "bus": 0.0016610912446648979
+     },
+     "raw": [
+      0.7301604993312528,
+      0.8120597414177441,
+      0.8795586268390548
+     ],
+     "corrected": [
+      0.6809852875613018,
+      0.8009362460989746,
+      0.8784886312973696
+     ],
+     "bias": [
+      0.04909136808546943,
+      0.011086598446038542,
+      0.0009038842647011713
+     ],
+     "chain_size": 12,
+     "road": "M1",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 36006,
+     "date": "2025-04-25",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 38674,
+     "date": "2025-04-30",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 46001,
+     "date": "2025-06-13",
+     "matched": true,
+     "site": "3407",
+     "dist_m": 238,
+     "direction": "N",
+     "hours": 6,
+     "total_ratio": 1.0307,
+     "proxy": {
+      "short": 0.6455435645602376,
+      "lgv": 0.21186814479371893,
+      "artic": 0.0983326962096039,
+      "bus": 0.004352045167171465
+     },
+     "raw": [
+      0.5447075606276748,
+      0.7761483594864479,
+      0.8859914407988587
+     ],
+     "corrected": [
+      0.5436519258202568,
+      0.7761483594864479,
+      0.8859914407988587
+     ],
+     "bias": [
+      0.0010550812952836441,
+      -8.863214345361525e-05,
+      0.0002736447230889949
+     ],
+     "chain_size": 4,
+     "road": "M1",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 46006,
+     "date": "2025-05-08",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 46008,
+     "date": "2025-03-31",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 56001,
+     "date": "2025-06-04",
+     "matched": true,
+     "site": "18903",
+     "dist_m": 52,
+     "direction": "W",
+     "hours": 12,
+     "total_ratio": 1.0016,
+     "proxy": {
+      "short": 0.6456487162008634,
+      "lgv": 0.18379913655987276,
+      "artic": 0.13571915473755963,
+      "bus": 0.0035446489434219496
+     },
+     "raw": [
+      0.5441119756811325,
+      0.7188130940768132,
+      0.8358249585989429
+     ],
+     "corrected": [
+      0.5248973480637916,
+      0.7070846850116831,
+      0.8294503300741817
+     ],
+     "bias": [
+      0.019231372360510424,
+      0.011687901434731418,
+      0.006383668367729967
+     ],
+     "chain_size": 3,
+     "road": "M1",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 56002,
+     "date": "2025-06-03",
+     "matched": true,
+     "site": "717",
+     "dist_m": 169,
+     "direction": "N",
+     "hours": 7,
+     "total_ratio": 1.0122,
+     "proxy": {
+      "short": 0.6536442472229473,
+      "lgv": 0.1954813074625134,
+      "artic": 0.10499144406740335,
+      "bus": 0.0035963920067287334
+     },
+     "raw": [
+      0.7335606429615197,
+      0.8205495544540271,
+      0.8855620182802785
+     ],
+     "corrected": [
+      0.6837339904300737,
+      0.8058794876937624,
+      0.8828686857110112
+     ],
+     "bias": [
+      0.04987154802214727,
+      0.014715349822951529,
+      0.0027829272522795767
+     ],
+     "chain_size": 12,
+     "road": "M1",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 70337,
+     "date": "2025-05-12",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 73380,
+     "date": "2025-05-21",
+     "matched": true,
+     "site": "3541",
+     "dist_m": 162,
+     "direction": "N",
+     "hours": 11,
+     "total_ratio": 1.0182,
+     "proxy": {
+      "short": 0.6182112318003236,
+      "lgv": 0.2250141815660651,
+      "artic": 0.11351555770321659,
+      "bus": 0.0019539046578565876
+     },
+     "raw": [
+      0.5635935952459558,
+      0.7759574116870254,
+      0.8739889402443051
+     ],
+     "corrected": [
+      0.6383707494222516,
+      0.7874092109607131,
+      0.8748968306371739
+     ],
+     "bias": [
+      -0.07471817109700046,
+      -0.011452660043510754,
+      -0.0006428869956961458
+     ],
+     "chain_size": 6,
+     "road": "M1",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 74227,
+     "date": "2025-06-02",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 81548,
+     "date": "2025-04-28",
+     "matched": false,
+     "reason": "totals differ by 20.4 %",
+     "site": "18847",
+     "road": "M1",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 88068,
+     "date": "2025-03-31",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 88070,
+     "date": "2025-04-28",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 89173,
+     "date": "2025-05-09",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 99548,
+     "date": "2025-04-22",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "A"
+    },
+    {
+     "count_point": 6000,
+     "date": "2025-06-23",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 6004,
+     "date": "2025-04-24",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 6005,
+     "date": "2025-05-15",
+     "matched": true,
+     "site": "6019",
+     "dist_m": 272,
+     "direction": "S",
+     "hours": 12,
+     "total_ratio": 1.0126,
+     "proxy": {
+      "short": 0.6451598338450425,
+      "lgv": 0.20661007765938233,
+      "artic": 0.11258352898681596,
+      "bus": 0.002009210763951598
+     },
+     "raw": [
+      0.7475977080685796,
+      0.8189418767975386,
+      0.8820814661226674
+     ],
+     "corrected": [
+      0.748779345863153,
+      0.820012039328473,
+      0.8820814661226674
+     ],
+     "bias": [
+      -0.00128621647407956,
+      -0.0011156654297894142,
+      -0.0003209769397480855
+     ],
+     "chain_size": 4,
+     "road": "M1",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 6007,
+     "date": "2025-05-07",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 16008,
+     "date": "2025-03-31",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 26004,
+     "date": "2025-04-28",
+     "matched": true,
+     "site": "5347",
+     "dist_m": 111,
+     "direction": "N",
+     "hours": 12,
+     "total_ratio": 1.0185,
+     "proxy": {
+      "short": 0.6418815483409213,
+      "lgv": 0.21443766277659596,
+      "artic": 0.10479333585160738,
+      "bus": 0.002167041094256347
+     },
+     "raw": [
+      0.6903497813866334,
+      0.796182073703935,
+      0.8751951905059338
+     ],
+     "corrected": [
+      0.6866021236727046,
+      0.7963187070580887,
+      0.8742582760774515
+     ],
+     "bias": [
+      0.003736954302349771,
+      -0.0003707737032285219,
+      0.0008056314790967911
+     ],
+     "chain_size": 18,
+     "road": "M1",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 26007,
+     "date": "2025-04-02",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 36002,
+     "date": "2025-06-13",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 36004,
+     "date": "2025-05-08",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 36005,
+     "date": "2025-06-03",
+     "matched": true,
+     "site": "4234",
+     "dist_m": 166,
+     "direction": "S",
+     "hours": 12,
+     "total_ratio": 1.0184,
+     "proxy": {
+      "short": 0.6181381437957751,
+      "lgv": 0.22871676518380707,
+      "artic": 0.08946612344864942,
+      "bus": 0.002001742693639168
+     },
+     "raw": [
+      0.5746594824595889,
+      0.7809818930231482,
+      0.8695973914853271
+     ],
+     "corrected": [
+      0.6406354785745669,
+      0.7915732025992647,
+      0.8720255301436071
+     ],
+     "bias": [
+      -0.06588807345781522,
+      -0.010577720155458381,
+      -0.0023602818610060083
+     ],
+     "chain_size": 6,
+     "road": "M1",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 36006,
+     "date": "2025-04-25",
+     "matched": false,
+     "reason": "totals differ by -6.0 %",
+     "site": "14205",
+     "road": "M1",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 38674,
+     "date": "2025-04-30",
+     "matched": true,
+     "site": "1383",
+     "dist_m": 1307,
+     "direction": "N",
+     "hours": 11,
+     "total_ratio": 0.9783,
+     "proxy": {
+      "short": 0.6691366821042631,
+      "lgv": 0.21743260895380595,
+      "artic": 0.06699916874480466,
+      "bus": 0.0020662629141432135
+     },
+     "raw": [
+      0.8075597203340454,
+      0.8808749271703243,
+      0.9218780345698194
+     ],
+     "corrected": [
+      0.8075597203340454,
+      0.8808749271703243,
+      0.9218780345698194
+     ],
+     "bias": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "chain_size": 3,
+     "road": "M1",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 46001,
+     "date": "2025-06-13",
+     "matched": false,
+     "reason": "totals differ by -11.2 %",
+     "site": "3331",
+     "road": "M1",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 46006,
+     "date": "2025-05-08",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 46008,
+     "date": "2025-03-31",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 56001,
+     "date": "2025-06-04",
+     "matched": true,
+     "site": "18884",
+     "dist_m": 571,
+     "direction": "E",
+     "hours": 12,
+     "total_ratio": 0.9883,
+     "proxy": {
+      "short": 0.6232640842692836,
+      "lgv": 0.19613315627180444,
+      "artic": 0.14155168921200117,
+      "bus": 0.0032411262913862567
+     },
+     "raw": [
+      0.5833390266675776,
+      0.736876864566965,
+      0.844549201794539
+     ],
+     "corrected": [
+      0.612944364737765,
+      0.7374461979913917,
+      0.83949352098563
+     ],
+     "bias": [
+      -0.029578680486639475,
+      -0.0005706184268842174,
+      0.005098282356914785
+     ],
+     "chain_size": 5,
+     "road": "M1",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 56002,
+     "date": "2025-06-03",
+     "matched": true,
+     "site": "4317",
+     "dist_m": 765,
+     "direction": "S",
+     "hours": 8,
+     "total_ratio": 1.0223,
+     "proxy": {
+      "short": 0.6931683592470327,
+      "lgv": 0.17400398155381397,
+      "artic": 0.09870725499584204,
+      "bus": 0.0036287579064082855
+     },
+     "raw": [
+      0.602790376651548,
+      0.817319069217117,
+      0.8884342338789194
+     ],
+     "corrected": [
+      0.6747682902780516,
+      0.8208933149280221,
+      0.8918852297377243
+     ],
+     "bias": [
+      -0.07199041321915889,
+      -0.003580936575922511,
+      -0.003514862789924744
+     ],
+     "chain_size": 7,
+     "road": "M1",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 70337,
+     "date": "2025-05-12",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 73380,
+     "date": "2025-05-21",
+     "matched": true,
+     "site": "5956",
+     "dist_m": 52,
+     "direction": "S",
+     "hours": 11,
+     "total_ratio": 1.0214,
+     "proxy": {
+      "short": 0.6382311977715878,
+      "lgv": 0.20732503481894152,
+      "artic": 0.117775069637883,
+      "bus": 0.002480849582172702
+     },
+     "raw": [
+      0.635708959198892,
+      0.7827847022477895,
+      0.8684350697773516
+     ],
+     "corrected": [
+      0.6802386278896346,
+      0.7892830510280174,
+      0.8694577607329285
+     ],
+     "bias": [
+      -0.04458566982320722,
+      -0.0063821874808298595,
+      -0.0010478805604174912
+     ],
+     "chain_size": 9,
+     "road": "M1",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 74227,
+     "date": "2025-06-02",
+     "matched": true,
+     "site": "17449",
+     "dist_m": 672,
+     "direction": "S",
+     "hours": 10,
+     "total_ratio": 1.0336,
+     "proxy": {
+      "short": 0.6428731385063263,
+      "lgv": 0.19488299182622326,
+      "artic": 0.12588176016123614,
+      "bus": 0.0031351472399507333
+     },
+     "raw": [
+      0.5385657025241035,
+      0.7316379590510237,
+      0.8538078214711299
+     ],
+     "corrected": [
+      0.5385657025241035,
+      0.7316379590510237,
+      0.8538078214711299
+     ],
+     "bias": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "chain_size": 3,
+     "road": "M1",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 81548,
+     "date": "2025-04-28",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 88068,
+     "date": "2025-03-31",
+     "matched": false,
+     "reason": "totals differ by -5.2 %",
+     "site": "14135",
+     "road": "M1",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 88070,
+     "date": "2025-04-28",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 89173,
+     "date": "2025-05-09",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "B"
+    },
+    {
+     "count_point": 99548,
+     "date": "2025-04-22",
+     "matched": false,
+     "reason": "no fitted detector within 2 km with data",
+     "road": "M1",
+     "carriageway": "B"
+    }
+   ],
+   "b520": {
+    "n": 16,
+    "fit_raw_deviation_on_bias": {
+     "alpha_pts": -38.31,
+     "beta": 0.923,
+     "beta_se": 0.374,
+     "r": 0.551
+    },
+    "spearman": 0.368,
+    "spearman_p": 0.16090051784229997,
+    "without_largest_bias": {
+     "alpha_pts": -38.1,
+     "beta": 1.014,
+     "beta_se": 0.484,
+     "r": 0.502
+    },
+    "sd_deviation_raw_pts": 7.97,
+    "sd_deviation_corrected_pts": 6.66,
+    "mad_raw_pts": 5.92,
+    "mad_corrected_pts": 4.58,
+    "mean_deviation_corrected_pts": -38.28,
+    "points": [
+     {
+      "road": "M1",
+      "site": "3657",
+      "bias_pts": 10.353,
+      "dev_raw_pts": -30.452,
+      "dev_corrected_pts": -40.803
+     },
+     {
+      "road": "M1",
+      "site": "10183",
+      "bias_pts": 0.962,
+      "dev_raw_pts": -44.089,
+      "dev_corrected_pts": -45.056
+     },
+     {
+      "road": "M1",
+      "site": "6173",
+      "bias_pts": -1.031,
+      "dev_raw_pts": -43.294,
+      "dev_corrected_pts": -42.258
+     },
+     {
+      "road": "M1",
+      "site": "3816",
+      "bias_pts": 4.909,
+      "dev_raw_pts": -28.9,
+      "dev_corrected_pts": -33.818
+     },
+     {
+      "road": "M1",
+      "site": "3407",
+      "bias_pts": 0.106,
+      "dev_raw_pts": -49.35,
+      "dev_corrected_pts": -49.456
+     },
+     {
+      "road": "M1",
+      "site": "18903",
+      "bias_pts": 1.923,
+      "dev_raw_pts": -44.218,
+      "dev_corrected_pts": -46.139
+     },
+     {
+      "road": "M1",
+      "site": "717",
+      "bias_pts": 4.987,
+      "dev_raw_pts": -28.238,
+      "dev_corrected_pts": -33.22
+     },
+     {
+      "road": "M1",
+      "site": "3541",
+      "bias_pts": -7.472,
+      "dev_raw_pts": -47.165,
+      "dev_corrected_pts": -39.687
+     },
+     {
+      "road": "M1",
+      "site": "6019",
+      "bias_pts": -0.129,
+      "dev_raw_pts": -28.048,
+      "dev_corrected_pts": -27.93
+     },
+     {
+      "road": "M1",
+      "site": "5347",
+      "bias_pts": 0.374,
+      "dev_raw_pts": -34.896,
+      "dev_corrected_pts": -35.271
+     },
+     {
+      "road": "M1",
+      "site": "4234",
+      "bias_pts": -6.589,
+      "dev_raw_pts": -46.737,
+      "dev_corrected_pts": -40.139
+     },
+     {
+      "road": "M1",
+      "site": "1383",
+      "bias_pts": 0.0,
+      "dev_raw_pts": -26.455,
+      "dev_corrected_pts": -26.455
+     },
+     {
+      "road": "M1",
+      "site": "18884",
+      "bias_pts": -2.958,
+      "dev_raw_pts": -40.343,
+      "dev_corrected_pts": -37.382
+     },
+     {
+      "road": "M1",
+      "site": "4317",
+      "bias_pts": -7.199,
+      "dev_raw_pts": -41.287,
+      "dev_corrected_pts": -34.089
+     },
+     {
+      "road": "M1",
+      "site": "5956",
+      "bias_pts": -4.459,
+      "dev_raw_pts": -38.677,
+      "dev_corrected_pts": -34.224
+     },
+     {
+      "road": "M1",
+      "site": "17449",
+      "bias_pts": 0.0,
+      "dev_raw_pts": -46.549,
+      "dev_corrected_pts": -46.549
+     }
+    ],
+    "closer_after_correction": 8
+   },
+   "b660": {
+    "n": 16,
+    "fit_raw_deviation_on_bias": {
+     "alpha_pts": -6.19,
+     "beta": 0.588,
+     "beta_se": 0.853,
+     "r": 0.181
+    },
+    "spearman": 0.112,
+    "spearman_p": 0.680049966308792,
+    "without_largest_bias": {
+     "alpha_pts": -6.27,
+     "beta": 0.236,
+     "beta_se": 1.059,
+     "r": 0.062
+    },
+    "sd_deviation_raw_pts": 2.89,
+    "sd_deviation_corrected_pts": 2.87,
+    "mad_raw_pts": 1.99,
+    "mad_corrected_pts": 1.25,
+    "mean_deviation_corrected_pts": -6.26,
+    "points": [
+     {
+      "road": "M1",
+      "site": "3657",
+      "bias_pts": 2.044,
+      "dev_raw_pts": -3.568,
+      "dev_corrected_pts": -5.617
+     },
+     {
+      "road": "M1",
+      "site": "10183",
+      "bias_pts": 0.493,
+      "dev_raw_pts": -8.584,
+      "dev_corrected_pts": -9.074
+     },
+     {
+      "road": "M1",
+      "site": "6173",
+      "bias_pts": -0.36,
+      "dev_raw_pts": -6.716,
+      "dev_corrected_pts": -6.364
+     },
+     {
+      "road": "M1",
+      "site": "3816",
+      "bias_pts": 1.109,
+      "dev_raw_pts": -3.309,
+      "dev_corrected_pts": -4.421
+     },
+     {
+      "road": "M1",
+      "site": "3407",
+      "bias_pts": -0.009,
+      "dev_raw_pts": -8.126,
+      "dev_corrected_pts": -8.126
+     },
+     {
+      "road": "M1",
+      "site": "18903",
+      "bias_pts": 1.169,
+      "dev_raw_pts": -11.063,
+      "dev_corrected_pts": -12.236
+     },
+     {
+      "road": "M1",
+      "site": "717",
+      "bias_pts": 1.472,
+      "dev_raw_pts": -2.858,
+      "dev_corrected_pts": -4.325
+     },
+     {
+      "road": "M1",
+      "site": "3541",
+      "bias_pts": -1.145,
+      "dev_raw_pts": -6.727,
+      "dev_corrected_pts": -5.582
+     },
+     {
+      "road": "M1",
+      "site": "6019",
+      "bias_pts": -0.112,
+      "dev_raw_pts": -3.283,
+      "dev_corrected_pts": -3.176
+     },
+     {
+      "road": "M1",
+      "site": "5347",
+      "bias_pts": -0.037,
+      "dev_raw_pts": -6.014,
+      "dev_corrected_pts": -6.0
+     },
+     {
+      "road": "M1",
+      "site": "4234",
+      "bias_pts": -1.058,
+      "dev_raw_pts": -6.587,
+      "dev_corrected_pts": -5.528
+     },
+     {
+      "road": "M1",
+      "site": "1383",
+      "bias_pts": 0.0,
+      "dev_raw_pts": -0.569,
+      "dev_corrected_pts": -0.569
+     },
+     {
+      "road": "M1",
+      "site": "18884",
+      "bias_pts": -0.057,
+      "dev_raw_pts": -8.252,
+      "dev_corrected_pts": -8.195
+     },
+     {
+      "road": "M1",
+      "site": "4317",
+      "bias_pts": -0.358,
+      "dev_raw_pts": -4.985,
+      "dev_corrected_pts": -4.628
+     },
+     {
+      "road": "M1",
+      "site": "5956",
+      "bias_pts": -0.638,
+      "dev_raw_pts": -6.277,
+      "dev_corrected_pts": -5.627
+     },
+     {
+      "road": "M1",
+      "site": "17449",
+      "bias_pts": 0.0,
+      "dev_raw_pts": -10.612,
+      "dev_corrected_pts": -10.612
+     }
+    ],
+    "closer_after_correction": 10
+   }
+  }
+ },
+ "pooled": {
+  "matched": 28,
+  "b660": {
+   "n": 28,
+   "fit_raw_deviation_on_bias": {
+    "alpha_pts": -5.65,
+    "beta": 1.133,
+    "beta_se": 0.333,
+    "r": 0.555
+   },
+   "spearman": 0.549,
+   "spearman_p": 0.002457292204726128,
+   "without_largest_bias": {
+    "alpha_pts": -5.64,
+    "beta": 1.158,
+    "beta_se": 0.387,
+    "r": 0.514
+   },
+   "sd_deviation_raw_pts": 3.0,
+   "sd_deviation_corrected_pts": 2.51,
+   "mad_raw_pts": 2.47,
+   "mad_corrected_pts": 1.3,
+   "mean_deviation_corrected_pts": -5.61,
+   "points": [
+    {
+     "road": "M25",
+     "site": "4027",
+     "bias_pts": 3.877,
+     "dev_raw_pts": -1.551,
+     "dev_corrected_pts": -5.428
+    },
+    {
+     "road": "M25",
+     "site": "4000",
+     "bias_pts": -0.288,
+     "dev_raw_pts": -4.745,
+     "dev_corrected_pts": -4.458
+    },
+    {
+     "road": "M25",
+     "site": "5143",
+     "bias_pts": -1.476,
+     "dev_raw_pts": -8.58,
+     "dev_corrected_pts": -7.109
+    },
+    {
+     "road": "M25",
+     "site": "905",
+     "bias_pts": 3.643,
+     "dev_raw_pts": -1.768,
+     "dev_corrected_pts": -5.412
+    },
+    {
+     "road": "M25",
+     "site": "4946",
+     "bias_pts": -1.289,
+     "dev_raw_pts": -5.769,
+     "dev_corrected_pts": -4.479
+    },
+    {
+     "road": "M25",
+     "site": "2005",
+     "bias_pts": 0.582,
+     "dev_raw_pts": -2.369,
+     "dev_corrected_pts": -2.952
+    },
+    {
+     "road": "M25",
+     "site": "2952",
+     "bias_pts": 0.0,
+     "dev_raw_pts": -5.882,
+     "dev_corrected_pts": -5.882
+    },
+    {
+     "road": "M25",
+     "site": "1803",
+     "bias_pts": -1.697,
+     "dev_raw_pts": -9.356,
+     "dev_corrected_pts": -7.661
+    },
+    {
+     "road": "M25",
+     "site": "6269",
+     "bias_pts": 1.821,
+     "dev_raw_pts": 0.122,
+     "dev_corrected_pts": -1.698
+    },
+    {
+     "road": "M25",
+     "site": "1741",
+     "bias_pts": 0.0,
+     "dev_raw_pts": -4.025,
+     "dev_corrected_pts": -4.025
+    },
+    {
+     "road": "M25",
+     "site": "1679",
+     "bias_pts": -2.096,
+     "dev_raw_pts": -6.062,
+     "dev_corrected_pts": -3.967
+    },
+    {
+     "road": "M25",
+     "site": "3513",
+     "bias_pts": 2.286,
+     "dev_raw_pts": -1.675,
+     "dev_corrected_pts": -3.965
+    },
+    {
+     "road": "M1",
+     "site": "3657",
+     "bias_pts": 2.044,
+     "dev_raw_pts": -3.568,
+     "dev_corrected_pts": -5.617
+    },
+    {
+     "road": "M1",
+     "site": "10183",
+     "bias_pts": 0.493,
+     "dev_raw_pts": -8.584,
+     "dev_corrected_pts": -9.074
+    },
+    {
+     "road": "M1",
+     "site": "6173",
+     "bias_pts": -0.36,
+     "dev_raw_pts": -6.716,
+     "dev_corrected_pts": -6.364
+    },
+    {
+     "road": "M1",
+     "site": "3816",
+     "bias_pts": 1.109,
+     "dev_raw_pts": -3.309,
+     "dev_corrected_pts": -4.421
+    },
+    {
+     "road": "M1",
+     "site": "3407",
+     "bias_pts": -0.009,
+     "dev_raw_pts": -8.126,
+     "dev_corrected_pts": -8.126
+    },
+    {
+     "road": "M1",
+     "site": "18903",
+     "bias_pts": 1.169,
+     "dev_raw_pts": -11.063,
+     "dev_corrected_pts": -12.236
+    },
+    {
+     "road": "M1",
+     "site": "717",
+     "bias_pts": 1.472,
+     "dev_raw_pts": -2.858,
+     "dev_corrected_pts": -4.325
+    },
+    {
+     "road": "M1",
+     "site": "3541",
+     "bias_pts": -1.145,
+     "dev_raw_pts": -6.727,
+     "dev_corrected_pts": -5.582
+    },
+    {
+     "road": "M1",
+     "site": "6019",
+     "bias_pts": -0.112,
+     "dev_raw_pts": -3.283,
+     "dev_corrected_pts": -3.176
+    },
+    {
+     "road": "M1",
+     "site": "5347",
+     "bias_pts": -0.037,
+     "dev_raw_pts": -6.014,
+     "dev_corrected_pts": -6.0
+    },
+    {
+     "road": "M1",
+     "site": "4234",
+     "bias_pts": -1.058,
+     "dev_raw_pts": -6.587,
+     "dev_corrected_pts": -5.528
+    },
+    {
+     "road": "M1",
+     "site": "1383",
+     "bias_pts": 0.0,
+     "dev_raw_pts": -0.569,
+     "dev_corrected_pts": -0.569
+    },
+    {
+     "road": "M1",
+     "site": "18884",
+     "bias_pts": -0.057,
+     "dev_raw_pts": -8.252,
+     "dev_corrected_pts": -8.195
+    },
+    {
+     "road": "M1",
+     "site": "4317",
+     "bias_pts": -0.358,
+     "dev_raw_pts": -4.985,
+     "dev_corrected_pts": -4.628
+    },
+    {
+     "road": "M1",
+     "site": "5956",
+     "bias_pts": -0.638,
+     "dev_raw_pts": -6.277,
+     "dev_corrected_pts": -5.627
+    },
+    {
+     "road": "M1",
+     "site": "17449",
+     "bias_pts": 0.0,
+     "dev_raw_pts": -10.612,
+     "dev_corrected_pts": -10.612
+    }
+   ],
+   "closer_after_correction": 18
+  },
+  "b1160": {
+   "n": 28,
+   "fit_raw_deviation_on_bias": {
+    "alpha_pts": -1.45,
+    "beta": 0.631,
+    "beta_se": 0.409,
+    "r": 0.289
+   },
+   "spearman": 0.337,
+   "spearman_p": 0.07916045248161661,
+   "without_largest_bias": {
+    "alpha_pts": -1.45,
+    "beta": 0.475,
+    "beta_se": 0.542,
+    "r": 0.173
+   },
+   "sd_deviation_raw_pts": 0.79,
+   "sd_deviation_corrected_pts": 0.77,
+   "mad_raw_pts": 0.41,
+   "mad_corrected_pts": 0.49,
+   "mean_deviation_corrected_pts": -1.49,
+   "points": [
+    {
+     "road": "M25",
+     "site": "4027",
+     "bias_pts": -0.364,
+     "dev_raw_pts": -1.301,
+     "dev_corrected_pts": -0.938
+    },
+    {
+     "road": "M25",
+     "site": "4000",
+     "bias_pts": 0.788,
+     "dev_raw_pts": -1.18,
+     "dev_corrected_pts": -1.97
+    },
+    {
+     "road": "M25",
+     "site": "5143",
+     "bias_pts": -0.049,
+     "dev_raw_pts": -1.556,
+     "dev_corrected_pts": -1.494
+    },
+    {
+     "road": "M25",
+     "site": "905",
+     "bias_pts": -0.074,
+     "dev_raw_pts": -1.542,
+     "dev_corrected_pts": -1.458
+    },
+    {
+     "road": "M25",
+     "site": "4946",
+     "bias_pts": -0.301,
+     "dev_raw_pts": -1.91,
+     "dev_corrected_pts": -1.618
+    },
+    {
+     "road": "M25",
+     "site": "2005",
+     "bias_pts": 0.077,
+     "dev_raw_pts": -0.823,
+     "dev_corrected_pts": -0.908
+    },
+    {
+     "road": "M25",
+     "site": "2952",
+     "bias_pts": -0.078,
+     "dev_raw_pts": -1.972,
+     "dev_corrected_pts": -1.906
+    },
+    {
+     "road": "M25",
+     "site": "1803",
+     "bias_pts": -0.056,
+     "dev_raw_pts": -1.45,
+     "dev_corrected_pts": -1.37
+    },
+    {
+     "road": "M25",
+     "site": "6269",
+     "bias_pts": 1.295,
+     "dev_raw_pts": -0.371,
+     "dev_corrected_pts": -1.661
+    },
+    {
+     "road": "M25",
+     "site": "1741",
+     "bias_pts": 0.0,
+     "dev_raw_pts": -0.709,
+     "dev_corrected_pts": -0.709
+    },
+    {
+     "road": "M25",
+     "site": "1679",
+     "bias_pts": 0.206,
+     "dev_raw_pts": -1.271,
+     "dev_corrected_pts": -1.467
+    },
+    {
+     "road": "M25",
+     "site": "3513",
+     "bias_pts": 0.383,
+     "dev_raw_pts": -0.511,
+     "dev_corrected_pts": -0.9
+    },
+    {
+     "road": "M1",
+     "site": "3657",
+     "bias_pts": 0.42,
+     "dev_raw_pts": -0.288,
+     "dev_corrected_pts": -0.697
+    },
+    {
+     "road": "M1",
+     "site": "10183",
+     "bias_pts": 0.06,
+     "dev_raw_pts": -1.853,
+     "dev_corrected_pts": -1.929
+    },
+    {
+     "road": "M1",
+     "site": "6173",
+     "bias_pts": -0.083,
+     "dev_raw_pts": -0.941,
+     "dev_corrected_pts": -0.847
+    },
+    {
+     "road": "M1",
+     "site": "3816",
+     "bias_pts": 0.09,
+     "dev_raw_pts": -0.615,
+     "dev_corrected_pts": -0.722
+    },
+    {
+     "road": "M1",
+     "site": "3407",
+     "bias_pts": 0.027,
+     "dev_raw_pts": -1.568,
+     "dev_corrected_pts": -1.568
+    },
+    {
+     "road": "M1",
+     "site": "18903",
+     "bias_pts": 0.638,
+     "dev_raw_pts": -2.846,
+     "dev_corrected_pts": -3.483
+    },
+    {
+     "road": "M1",
+     "site": "717",
+     "bias_pts": 0.278,
+     "dev_raw_pts": -0.945,
+     "dev_corrected_pts": -1.214
+    },
+    {
+     "road": "M1",
+     "site": "3541",
+     "bias_pts": -0.064,
+     "dev_raw_pts": -1.25,
+     "dev_corrected_pts": -1.159
+    },
+    {
+     "road": "M1",
+     "site": "6019",
+     "bias_pts": -0.032,
+     "dev_raw_pts": -0.534,
+     "dev_corrected_pts": -0.534
+    },
+    {
+     "road": "M1",
+     "site": "5347",
+     "bias_pts": 0.081,
+     "dev_raw_pts": -2.001,
+     "dev_corrected_pts": -2.095
+    },
+    {
+     "road": "M1",
+     "site": "4234",
+     "bias_pts": -0.236,
+     "dev_raw_pts": -4.094,
+     "dev_corrected_pts": -3.851
+    },
+    {
+     "road": "M1",
+     "site": "1383",
+     "bias_pts": 0.0,
+     "dev_raw_pts": -1.112,
+     "dev_corrected_pts": -1.112
+    },
+    {
+     "road": "M1",
+     "site": "18884",
+     "bias_pts": 0.51,
+     "dev_raw_pts": -1.39,
+     "dev_corrected_pts": -1.895
+    },
+    {
+     "road": "M1",
+     "site": "4317",
+     "bias_pts": -0.351,
+     "dev_raw_pts": -1.286,
+     "dev_corrected_pts": -0.941
+    },
+    {
+     "road": "M1",
+     "site": "5956",
+     "bias_pts": -0.105,
+     "dev_raw_pts": -1.379,
+     "dev_corrected_pts": -1.277
+    },
+    {
+     "road": "M1",
+     "site": "17449",
+     "bias_pts": 0.0,
+     "dev_raw_pts": -2.031,
+     "dev_corrected_pts": -2.031
+    }
+   ],
+   "closer_after_correction": 14
+  },
+  "b520": {
+   "n": 28,
+   "fit_raw_deviation_on_bias": {
+    "alpha_pts": 2.33,
+    "beta": 0.871,
+    "beta_se": 0.141,
+    "r": 0.771
+   },
+   "spearman": 0.683,
+   "spearman_p": 6.161737373061978e-05,
+   "without_largest_bias": {
+    "alpha_pts": 2.59,
+    "beta": 0.782,
+    "beta_se": 0.159,
+    "r": 0.702
+   },
+   "sd_deviation_raw_pts": 10.19,
+   "sd_deviation_corrected_pts": 6.59,
+   "mad_raw_pts": 8.38,
+   "mad_corrected_pts": 4.04,
+   "mean_deviation_corrected_pts": 2.42,
+   "points": [
+    {
+     "road": "M25",
+     "site": "4027",
+     "bias_pts": 19.616,
+     "dev_raw_pts": 17.473,
+     "dev_corrected_pts": -2.144
+    },
+    {
+     "road": "M25",
+     "site": "4000",
+     "bias_pts": -6.198,
+     "dev_raw_pts": -1.06,
+     "dev_corrected_pts": 5.136
+    },
+    {
+     "road": "M25",
+     "site": "5143",
+     "bias_pts": -12.514,
+     "dev_raw_pts": -13.693,
+     "dev_corrected_pts": -1.18
+    },
+    {
+     "road": "M25",
+     "site": "905",
+     "bias_pts": 18.144,
+     "dev_raw_pts": 12.755,
+     "dev_corrected_pts": -5.391
+    },
+    {
+     "road": "M25",
+     "site": "4946",
+     "bias_pts": -5.578,
+     "dev_raw_pts": -5.397,
+     "dev_corrected_pts": 0.179
+    },
+    {
+     "road": "M25",
+     "site": "2005",
+     "bias_pts": 1.037,
+     "dev_raw_pts": 9.754,
+     "dev_corrected_pts": 8.716
+    },
+    {
+     "road": "M25",
+     "site": "2952",
+     "bias_pts": 0.131,
+     "dev_raw_pts": 2.416,
+     "dev_corrected_pts": 2.282
+    },
+    {
+     "road": "M25",
+     "site": "1803",
+     "bias_pts": -22.39,
+     "dev_raw_pts": -23.91,
+     "dev_corrected_pts": -1.519
+    },
+    {
+     "road": "M25",
+     "site": "6269",
+     "bias_pts": 2.237,
+     "dev_raw_pts": 15.828,
+     "dev_corrected_pts": 13.585
+    },
+    {
+     "road": "M25",
+     "site": "1741",
+     "bias_pts": -0.186,
+     "dev_raw_pts": 5.814,
+     "dev_corrected_pts": 5.993
+    },
+    {
+     "road": "M25",
+     "site": "1679",
+     "bias_pts": -18.12,
+     "dev_raw_pts": -7.333,
+     "dev_corrected_pts": 10.801
+    },
+    {
+     "road": "M25",
+     "site": "3513",
+     "bias_pts": 9.696,
+     "dev_raw_pts": 8.757,
+     "dev_corrected_pts": -0.934
+    },
+    {
+     "road": "M1",
+     "site": "3657",
+     "bias_pts": 10.353,
+     "dev_raw_pts": 11.973,
+     "dev_corrected_pts": 1.622
+    },
+    {
+     "road": "M1",
+     "site": "10183",
+     "bias_pts": 0.962,
+     "dev_raw_pts": -3.225,
+     "dev_corrected_pts": -4.192
+    },
+    {
+     "road": "M1",
+     "site": "6173",
+     "bias_pts": -1.031,
+     "dev_raw_pts": -0.88,
+     "dev_corrected_pts": 0.156
+    },
+    {
+     "road": "M1",
+     "site": "3816",
+     "bias_pts": 4.909,
+     "dev_raw_pts": 10.904,
+     "dev_corrected_pts": 5.987
+    },
+    {
+     "road": "M1",
+     "site": "3407",
+     "bias_pts": 0.106,
+     "dev_raw_pts": -7.994,
+     "dev_corrected_pts": -8.1
+    },
+    {
+     "road": "M1",
+     "site": "18903",
+     "bias_pts": 1.923,
+     "dev_raw_pts": -8.341,
+     "dev_corrected_pts": -10.263
+    },
+    {
+     "road": "M1",
+     "site": "717",
+     "bias_pts": 4.987,
+     "dev_raw_pts": 9.919,
+     "dev_corrected_pts": 4.937
+    },
+    {
+     "road": "M1",
+     "site": "3541",
+     "bias_pts": -7.472,
+     "dev_raw_pts": -3.243,
+     "dev_corrected_pts": 4.235
+    },
+    {
+     "road": "M1",
+     "site": "6019",
+     "bias_pts": -0.129,
+     "dev_raw_pts": 12.281,
+     "dev_corrected_pts": 12.399
+    },
+    {
+     "road": "M1",
+     "site": "5347",
+     "bias_pts": 0.374,
+     "dev_raw_pts": 6.961,
+     "dev_corrected_pts": 6.587
+    },
+    {
+     "road": "M1",
+     "site": "4234",
+     "bias_pts": -6.589,
+     "dev_raw_pts": -2.093,
+     "dev_corrected_pts": 4.505
+    },
+    {
+     "road": "M1",
+     "site": "1383",
+     "bias_pts": 0.0,
+     "dev_raw_pts": 15.986,
+     "dev_corrected_pts": 15.986
+    },
+    {
+     "road": "M1",
+     "site": "18884",
+     "bias_pts": -2.958,
+     "dev_raw_pts": -2.058,
+     "dev_corrected_pts": 0.902
+    },
+    {
+     "road": "M1",
+     "site": "4317",
+     "bias_pts": -7.199,
+     "dev_raw_pts": -7.322,
+     "dev_corrected_pts": -0.124
+    },
+    {
+     "road": "M1",
+     "site": "5956",
+     "bias_pts": -4.459,
+     "dev_raw_pts": 1.792,
+     "dev_corrected_pts": 6.245
+    },
+    {
+     "road": "M1",
+     "site": "17449",
+     "bias_pts": 0.0,
+     "dev_raw_pts": -8.509,
+     "dev_corrected_pts": -8.509
+    }
+   ],
+   "closer_after_correction": 19
+  }
+ }
+}

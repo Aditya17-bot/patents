@@ -1,0 +1,54 @@
+{
+ "missingness": {
+  "0.05": {
+   "prior_MAE": 21.67,
+   "ours_MAE": 19.94,
+   "gain_pct": 7.98,
+   "outside_band_pct": 1.78,
+   "cells_hidden": 6649
+  },
+  "0.10": {
+   "prior_MAE": 22.03,
+   "ours_MAE": 21.05,
+   "gain_pct": 4.45,
+   "outside_band_pct": 1.17,
+   "cells_hidden": 13297
+  },
+  "0.20": {
+   "prior_MAE": 21.7,
+   "ours_MAE": 20.96,
+   "gain_pct": 3.41,
+   "outside_band_pct": 1.14,
+   "cells_hidden": 26595
+  },
+  "0.40": {
+   "prior_MAE": 24.67,
+   "ours_MAE": 24.62,
+   "gain_pct": 0.2,
+   "outside_band_pct": 0.7,
+   "cells_hidden": 53192
+  }
+ },
+ "band_sensitivity": {
+  "0.0": {
+   "MAE": 22.09,
+   "outside_band_pct": 4.26,
+   "mean_band_vehicles": 0.0
+  },
+  "0.5": {
+   "MAE": 20.68,
+   "outside_band_pct": 1.93,
+   "mean_band_vehicles": 23.27
+  },
+  "1.0": {
+   "MAE": 21.05,
+   "outside_band_pct": 1.17,
+   "mean_band_vehicles": 46.54
+  },
+  "2.0": {
+   "MAE": 21.3,
+   "outside_band_pct": 13.25,
+   "mean_band_vehicles": 93.09
+  }
+ }
+}

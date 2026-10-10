@@ -1,0 +1,1034 @@
+ 
+ GB2377027A - Assessing the accuracy of roadside traffic measurement systems 
+ - Google Patents 
+ GB2377027A - Assessing the accuracy of roadside traffic measurement systems 
+ - Google Patents 
+ Assessing the accuracy of roadside traffic measurement systems 
+ Download PDF 
+ Info 
+ Publication number 
+ GB2377027A 
+ GB2377027A 
+ GB0201168A 
+ GB0201168A 
+ GB2377027A 
+ GB 2377027 A 
+ GB2377027 A 
+ GB 2377027A 
+ GB 0201168 A 
+ GB0201168 A 
+ GB 0201168A 
+ GB 0201168 A 
+ GB0201168 A 
+ GB 0201168A 
+ GB 2377027 A 
+ GB2377027 A 
+ GB 2377027A 
+ Authority 
+ GB 
+ United Kingdom 
+ Prior art keywords 
+ ipv 
+ tms 
+ location 
+ measured 
+ time 
+ Prior art date 
+ 2002-01-18 
+ Legal status (The legal status is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the status listed.) 
+ Granted 
+ Application number 
+ GB0201168A 
+ Other versions 
+ GB2377027B 
+ ( en 
+ GB0201168D0 
+ ( en 
+ Inventor 
+ Michael John Dalgleish 
+ Current Assignee (The listed assignees may be inaccurate. Google has not performed a legal analysis and makes no representation or warranty as to the accuracy of the list.) 
+ Clearview Intelligence Ltd
+ Original Assignee 
+ Golden River Traffic Ltd 
+ Priority date (The priority date is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the date listed.) 
+ 2002-01-18 
+ Filing date 
+ 2002-01-18 
+ Publication date 
+ 2002-12-31 
+ 2002-01-18 
+ Application filed by Golden River Traffic Ltd 
+ filed 
+ Critical 
+ Golden River Traffic Ltd 
+ 2002-01-18 
+ Priority to GB0201168A 
+ priority 
+ Critical 
+ patent/GB2377027B/en 
+ 2002-03-06 
+ Publication of GB0201168D0 
+ publication 
+ Critical 
+ patent/GB0201168D0/en 
+ 2002-11-28 
+ Priority to AU2002367462A 
+ priority 
+ patent/AU2002367462B2/en 
+ 2002-11-28 
+ Priority to AT02806564T 
+ priority 
+ patent/ATE306109T1/en 
+ 2002-11-28 
+ Priority to PCT/GB2002/005384 
+ priority 
+ patent/WO2003063109A1/en 
+ 2002-11-28 
+ Priority to EP02806564A 
+ priority 
+ patent/EP1466310B1/en 
+ 2002-11-28 
+ Priority to DE60206527T 
+ priority 
+ patent/DE60206527T2/en 
+ 2002-11-28 
+ Priority to CA002452754A 
+ priority 
+ patent/CA2452754A1/en 
+ 2002-11-28 
+ Priority to ES02806564T 
+ priority 
+ patent/ES2249644T3/en 
+ 2002-11-28 
+ Priority to US10/490,069 
+ priority 
+ patent/US7187302B2/en 
+ 2002-12-31 
+ Publication of GB2377027A 
+ publication 
+ Critical 
+ patent/GB2377027A/en 
+ 2003-06-11 
+ Application granted 
+ granted 
+ Critical 
+ 2003-06-11 
+ Publication of GB2377027B 
+ publication 
+ Critical 
+ patent/GB2377027B/en 
+ 2022-01-18 
+ Anticipated expiration 
+ legal-status 
+ Critical 
+ Status 
+ Expired - Fee Related 
+ legal-status 
+ Critical 
+ Current 
+ Links 
+ Espacenet 
+ Global Dossier 
+ Discuss 
+ Classifications 
+ G — PHYSICS 
+ G08 — SIGNALLING 
+ G08G — TRAFFIC CONTROL SYSTEMS 
+ G08G1/00 — Traffic control systems for road vehicles 
+ G08G1/09 — Arrangements for giving variable traffic instructions 
+ G08G1/0962 — Arrangements for giving variable traffic instructions having an indicator mounted inside the vehicle, e.g. giving voice messages 
+ G08G1/0967 — Systems involving transmission of highway information, e.g. weather, speed limits 
+ G08G1/096708 — Systems involving transmission of highway information, e.g. weather, speed limits where the received information might be used to generate an automatic action on the vehicle control 
+ G08G1/096716 — Systems involving transmission of highway information, e.g. weather, speed limits where the received information might be used to generate an automatic action on the vehicle control where the received information does not generate an automatic action on the vehicle control 
+ G — PHYSICS 
+ G08 — SIGNALLING 
+ G08G — TRAFFIC CONTROL SYSTEMS 
+ G08G1/00 — Traffic control systems for road vehicles 
+ G08G1/01 — Detecting movement of traffic to be counted or controlled 
+ G08G1/042 — Detecting movement of traffic to be counted or controlled using inductive or magnetic detectors 
+ G — PHYSICS 
+ G08 — SIGNALLING 
+ G08G — TRAFFIC CONTROL SYSTEMS 
+ G08G1/00 — Traffic control systems for road vehicles 
+ G08G1/01 — Detecting movement of traffic to be counted or controlled 
+ G08G1/052 — Detecting movement of traffic to be counted or controlled with provision for determining speed or overspeed 
+ G — PHYSICS 
+ G08 — SIGNALLING 
+ G08G — TRAFFIC CONTROL SYSTEMS 
+ G08G1/00 — Traffic control systems for road vehicles 
+ G08G1/09 — Arrangements for giving variable traffic instructions 
+ G08G1/0962 — Arrangements for giving variable traffic instructions having an indicator mounted inside the vehicle, e.g. giving voice messages 
+ G08G1/0967 — Systems involving transmission of highway information, e.g. weather, speed limits 
+ G08G1/096733 — Systems involving transmission of highway information, e.g. weather, speed limits where a selection of the information might take place 
+ G08G1/096758 — Systems involving transmission of highway information, e.g. weather, speed limits where a selection of the information might take place where no selection takes place on the transmitted or the received information 
+ G — PHYSICS 
+ G08 — SIGNALLING 
+ G08G — TRAFFIC CONTROL SYSTEMS 
+ G08G1/00 — Traffic control systems for road vehicles 
+ G08G1/09 — Arrangements for giving variable traffic instructions 
+ G08G1/0962 — Arrangements for giving variable traffic instructions having an indicator mounted inside the vehicle, e.g. giving voice messages 
+ G08G1/0967 — Systems involving transmission of highway information, e.g. weather, speed limits 
+ G08G1/096766 — Systems involving transmission of highway information, e.g. weather, speed limits where the system is characterised by the origin of the information transmission 
+ G08G1/096783 — Systems involving transmission of highway information, e.g. weather, speed limits where the system is characterised by the origin of the information transmission where the origin of the information is a roadside individual element 
+ Landscapes 
+ Physics & Mathematics 
+ ( AREA )
+ General Physics & Mathematics 
+ ( AREA )
+ Life Sciences & Earth Sciences 
+ ( AREA )
+ Atmospheric Sciences 
+ ( AREA )
+ Traffic Control Systems 
+ ( AREA )
+ Dental Tools And Instruments Or Auxiliary Dental Instruments 
+ ( AREA )
+ Radar Systems Or Details Thereof 
+ ( AREA )
+ Steering Control In Accordance With Driving Conditions 
+ ( AREA )
+ Road Repair 
+ ( AREA )
+ Body Structure For Vehicles 
+ ( AREA )
+ Abstract 
+ Apparatus and method of assessing the accuracy of a roadside traffic monitoring station (TMS) 121 arranged to measure specific parameters of vehicles passing a predetermined point 132 adjacent the TMS. The method comprises measuring the parameter of each vehicle passing the measurement point 132 using the TMS, measuring the moment in time that each vehicle passes the measurement point using the TMS, and recording the measured parameters and times as data pairs. An Instrumented Probe Vehicle (IPV) 141 having an onboard system for measuring the parameter, is driven past the measurement point, the location of the IPV determined, a calibration time at which the determined location of the IPV corresponds to the location fo the measurement point is determined, and a calibration parameter of the IPV measured using the onboard system when the determined location of the IPV corresponds to the location of the measurement point. The calibration time and parameter are then sent to the TMS, and the recorded data pair corresponding to the calibration time is identified, enabling the parameter of the IPV, as measured by the TMS, to be determined from said identified pair; and compared with the calibration parameter of the IPV, as measured by the onboard measuring system. The comparison allows the accuracy of the TMS to be found. The calibration parameter may be known and so onboard measurement unnecessary. GPS 146 may be used for location and time data. Examples of parameters that may be measured are speed and weight. 
+ Description 
+ <Desc/Clms Page number 1> 
+ CALIBRATION OF ROAD-SIDE SYSTEMS The present invention generally relates to calibration of road-side systems, and more particularly but not exclusively to the calibration of road-side Traffic Monitoring Stations (TMS). 
+ A highway operator often wishes to gather information about vehicles using the highway. The speeds and journey times of vehicles are particularly of interest. For example, the operator of a motorway from London to Bristol may wish to know the speed of individual vehicles at one or a number of locations. The instantaneous speeds of vehicles at predefined locations are known as"spot speeds". The operator may also wish to know the average travel time between London and Bristol, for example, or for sections of the route. This travel time can be estimated from the spot speeds measured at the measurement points. The methods to integrate the journey time from the spot speeds are well known and will not be described herein. 
+ There are two roadside systems in general use for measuring the speed of vehicles at a particular location. One of these uses two sensors a fixed distance apart. Sensors can for example take the form of light beams arranged to be broken by passing vehicles, or electromagnetic coils or pressure sensors buried in the roadway. The time taken for a vehicle to pass from one sensor to the other is measured, and the speed of the vehicle can be calculated from this"time of flight". Roadside systems that use such a system have the problem that over time they may drift out of calibration. 
+ Another roadside system in general use takes advantage of the Doppler effect. A radar source is directed towards oncoming traffic, and radio waves reflected back towards the source from the moving traffic are detected. The speed of a vehicle travelling towards such a radar source can be calculated from the change in frequency of the radio waves reflected from that vehicle. Such systems are unlikely to drift out of calibration over time. However, systems with Doppler radar are subject to installation and orientation errors that introduce the"cosine effect"whereby all speeds of vehicles are under-read by a certain proportion, determined by the angle of the radar beam relative to the vehicle direction. 
+ <Desc/Clms Page number 2> 
+ Before the results of spot speed measurement can be used for analysis of the traffic stream, the accuracy of each measurement station needs to be assessed. Final results are not useful unless a confidence limit can be determined for the spot speed of all vehicles at each site and the average speeds for all vehicles at a selection of sites constituting a journey. Furthermore, measurement stations need to be assessed for accuracy at regular time intervals following their initial installation, to confirm that they have not drifted away from calibration. Typically, measurement stations need to be assessed approximately every three months. 
+ The equipment and method for assessing measurement stations needs to be suitable for fast and efficient verification of speed monitoring equipment. This means that the system must be portable and suitable for quick deployment or assessment. 
+ At present, systems for speed measurement assessment include the following methods:
+Radar (Doppler) or LIDAR (Laser Diode Ranging). 
+ Two light beams horizontally or vertically across the carriageway. 
+ Two pressure sensors on the road surface. 
+ Radar devices use the Doppler effect as described above. When portable devices are used, the radio source and receiver are located in a hand held device (a"speed gun"). 
+ Such devices are very accurate when used in suitable conditions, but can still give rise to a number of drawbacks. Firstly, when a motorist sees a speed gun in use, they will often apply the brakes, or at least take their foot off the accelerator. This means that the vehicle will be slowing as it passes the sensor and this will introduce a measurement error. Furthermore, the method is very labour-intensive and difficult to use in heavy traffic. There are errors introduced by the"cosine"effect, the effect of the angle between the gun beam and the vehicle direction. 
+ Two horizontal light beams or pressure sensors on the road surface may be used successfully in low volume single lane carriageways. However, many modem roads are dense dual carriageways, and these methods are impractical in practice. Installing sensors on the road is hazardous and can easily lead to an accident. 
+ <Desc/Clms Page number 3> 
+ Thus the present methods for assessing the accuracy of road-side measurement are relatively inefficient, inaccurate and can be unsafe to use. 
+ In accordance with a first aspect of the present invention there is provided apparatus for assessing the accuracy of a roadside traffic monitoring station (TMS) having parameter measurement means for measuring a parameter of vehicles passing a predetermined measurement point and the moment in time at which each vehicle passes the measurement point, the apparatus comprising: data recording means for recording the parameter of each vehicle as measured by the parameter measurement means and moment in time that vehicle passes the measurement point; an Instrumented Probe Vehicle (IPV) arranged so that the parameter of the IPV is known or is measurable using an onboard measuring system; locating means for determining the location of the IPV; and timing means for determining the moment in time at which the location of the IPV corresponds to the location of the measurement point; so that the parameter of the IPV as measured by the parameter measurement means can be identified from the moment in time at which the IPV passes the measurement point. 
+ This means that the TMS can be assessed for accuracy by comparing the parameter of the IPV as measured by the TMS with the parameter of the IPV as known beforehand or determined by the IPV onboard measurement system. The measured parameter may be one or more of speed, vehicle length, width, height, gross weight, axle weight, and wheel configuration. This allows the accuracy of the TMS to be assessed easily by driving an IPV connected to suitable locating means past the TMS, requiring very little operator skill. Since no road-side operations are required, the safety of personnel carrying out the assessment is increased. There is little or no disruption or disturbance of the vehicle stream. 
+ The locating and/or timing means may conveniently include a Global Positioning System (GPS). 
+ <Desc/Clms Page number 4> 
+ The apparatus preferably comprises data processing means and a communication system so that data can pass from the IPV to the data processing means, the data processing means being arranged to receive data from the IPV corresponding to the time at which the location of the IPV corresponds to the location of the measurement point, and to identify the record in the data recording means corresponding to that time, said record including the parameter of the IPV as measured by the TMS. The IPV may include means for recording the parameter at the moment in time at which the IPV is located at the measurement point and transmitting this information to the data processing system. 
+ The communication means preferably includes a mobile phone system, enabling the IPV to send data to the data processing means as a Short Message Service (SMS) message. 
+ The parameter may be speed, and the IPV preferably includes onboard speed measurement and recording means for measuring and recording the speed at the moment in time at which the IPV is located at the measurement point. 
+ In accordance with a second aspect of the present invention there is provided apparatus for assessing the accuracy of a roadside traffic monitoring station (TMS) having speed determination means for determining the measured speed of vehicles passing a measurement location and the measured moment in time at which each vehicle passes the measurement location, the apparatus comprising: an Instrumented Probe Vehicle (IPV) having on board speed measuring means for measuring the speed of the IPV; locating means for locating the IPV; and recording means for recording a calibration speed of the IPV as measured by the on board speed measuring means at the moment in time the IPV is located at the measurement location, together with a calibration time at which the IPV is located at the measurement location. 
+ The apparatus preferably comprises communication means for communicating the calibration speed and calibration time of the IPV to the TMS, and may include data 
+ <Desc/Clms Page number 5> 
+ processing means for comparing the calibration time received from the IPV with the measured times of vehicles passing the measurement location so as identify the measured speed of the IPV and compare it with the calibration speed. 
+ Similar apparatus may be used to assess the accuracy of a TMS arranged to measure the weight of passing vehicles instead of or in addition to their speed. The IPV may include a dynamic weight determination means enabling a calibration weight to be determined when the IPV is located at the measurement point. 
+ In accordance with a third aspect of the present invention there is provided a method of assessing the accuracy of a roadside traffic monitoring station (TMS) arranged to measure a parameter of vehicles passing a predetermined measurement point, the method comprising: measuring the parameter of each vehicle passing the measurement point using the TMS; measuring the moment in time that each vehicle passes the measurement point using the TMS; recording the measured parameters and times as data pairs; driving an Instrumented Probe Vehicle (IPV) past the measurement point, the IPV arranged so that the parameter thereof is known or is measurable using an onboard measuring system; determining the location of the IPV using location means; determining the time at which the determined location of the IPV corresponds to the location of the measurement point; sending the determined time, and the parameter of the IPV as known or measured using the on board system, to the TMS; identifying the recorded data pair corresponding to the determined time; identifying the parameter of the IPV, as measured by the TMS, from said identified data pair; and comparing the parameter of the IPV, as measured by the TMS, with the parameter of the IPV, as known or measured by the onboard measuring system. 
+ <Desc/Clms Page number 6> 
+ The parameter may be vehicle speed, and the speed of the IPV is preferably measured using an onboard system and recorded at the moment the location of the IPV, as determined by the location means, corresponds to the measurement point. 
+ The method preferably further comprises driving the IPV past a plurality of measurement points and comparing the parameter of the IPV, as known or measured by an onboard measuring system, with the parameter of the IPV as measured at each measurement point. 
+ In accordance with a fourth aspect of the present invention there is provided a method of assessing the accuracy of a roadside traffic monitoring station (TMS) arranged to measure the speed of vehicles passing a predetermined measurement point, the method comprising : measuring the speed of each vehicle passing the measurement point using the TMS; measuring the moment in time that each vehicle passes the measurement point using the TMS; recording the measured speeds and times as data pairs; driving an Instrumented Probe Vehicle (IPV) past the measurement point, the IPV having an onboard system for measuring speed; determining the location of the IPV using location means; determining a calibration time at which the determined location of the IPV corresponds to the location of the measurement point; measuring a calibration speed of the IPV using the onboard system when the determined location of the IPV corresponds to the location of the measurement point; sending the calibration time and calibration speed to the TMS; identifying the recorded data pair corresponding to the calibration time; identifying the speed of the IPV, as measured by the TMS, from said identified data pair; and 
+ comparing the speed of the IPV, as measured by the TMS, with the calibration speed of the IPV, as measured by the onboard measuring system. 
+ <Desc/Clms Page number 7> 
+ A similar method may be used to assess the accuracy of a"weigh-in-motion"system, although in such a case the IPV may not need onboard weight measuring means. The weight of the IPV can be determined before it is driven past the measurement point. 
+ However, for more accurate assessment the IPV may be fitted with an onboard dynamic weighing system (well known in prior art) which reports the instantaneous wheel loads continuously. As with the speed measurement, these wheel loads may be captured at the appropriate moment as the IPV passes the measurement point and sent to the TMS with the calibration time at which the IPV passes the measurement point. In that way the dynamic effect of undulations in the road surface which lead to vehicle bounce and thus a dynamic element in the vehicle load on the road can be isolated. 
+ The IPV may be a maintenance or operations vehicle. Such vehicles may be used on the section of highway on which the traffic monitoring stations are located to monitor the condition of the highway. This has the advantage of reducing costs, as roadside systems can be calibrated using vehicles which would be passing the stations in any case. 
+ In accordance with a fifth aspect of the present invention there is provided a computer storage medium having stored thereon a program arranged when executed to enable a processor to: receive data containing matched record pairs corresponding to a parameter of a vehicle passing a TMS together with the time at which said vehicle passes said TMS, each as measured by the TMS; receive data from an IPV containing information about the parameter of the IPV, together with the time at which the IPV passes the TMS, each as determined by an onboard measurement system of the IPV; identify which matched record pair corresponds to the passage of the IPV by comparing the time at which the IPV passes the TMS as determined by the on board measurement system with the time at which vehicles pass the TMS as measured by the TMS; and determine the parameter of the IPV as measured by the TMS from the identified matched record pair. 
+ <Desc/Clms Page number 8> 
+ The program is preferably further arranged to enable the processor to compare the parameter of the IPV as measured by the TMS with the parameter of the IPV as measured by the onboard measurement system so as to determined the measurement accuracy of the TMS. 
+ Some preferred embodiments of the invention will now be described by way of example only and with reference to the accompanying drawings, in which: Figure 1 is a schematic diagram showing the general layout of a section of highway; Figure 2 shows the components of a traffic monitoring station (TMS); Figure 3 is a perspective view of part of a TMS; and Figure 4 shows the components used to match Instrumented Probe Vehicle (IPV) measurements with TMS measurements. 
+ Figure 1 is a schematic diagram showing the general layout of a section of highway 100 having four traffic measurement stations 101,102, 103 and 104. In this example, the stations are installed at 500 metre intervals. Each measurement station is arranged to measure the speed of vehicles passing the measurement station and transmit this information to a central location, or instation, 111. The time of journey for vehicles travelling along the highway can be estimated from the speeds of vehicles passing the four measuring stations. 
+ Figure 2 shows the components of an individual measurement station 101, arranged to measure the speeds of vehicles in both carriageways of a motorway 122, i. e. six lanes of traffic 123,124, 125,126, 127,128. The measurement station comprises wire loops 129 located under the surface of the roadway 122, two loops being located under each lane of traffic a fixed distance D apart. The following discussion will consider the two loops 130,131 located in the first lane of traffic 123, but it will be appreciated that the same considerations will apply for all of the other lanes. 
+ <Desc/Clms Page number 9> 
+ Each loop 130,131 is about two metres square and consists of 3 turns of wire. As a vehicle passes over the loop it causes a change in the inductance of the loop, and this can be detected by"loop detectors" (not shown) attached to the loop. The loop detectors are connected to a measurement and control unit 121 which includes processing means for analysing information passed to the measurement and control unit by the loop detectors. The loop detectors can be arranged to provide an analogue representation of the passing of each vehicle, or alternatively can be set to be switched "on"or"off'by the passage of a vehicle. Every time a vehicle is detected by a loop detector this information is passed to the measurement and control unit 121. The speed of a vehicle passing the loops 130,131 is determined by the measurement and control unit 121 from the time it takes between detection by the two loops. This gives the time for the vehicle to travel the fixed distance D, and thus its speed over that distance. 
+ The point in the lane half way between the two loops is known as the"measurement location"132 for that measurement station. Each lane will have its own measurement location, so that the measurement station 101 has associated with it six measurement locations. Figure 3 shows a perspective view of one carriageway of the motorway 122 at the measurement station 101, at the moment that a car 133 crosses the measurement point 132 for the first lane 122. The measurement and control unit 121 passes information about the speed of each vehicle which passes each measurement point, and the moment in time when this takes place, back to the central instation 111 (see Figure 1) which is arranged to correlate information from all of the measurement stations. In practice, loop sensors and other sensors and/or detectors may have a number of further distinct detection points at which a passing vehicle can be detected and its speed measured whilst the vehicle is in a sensing area or at a sensing point. The entire system of detectors involved in the roadside processing is known as a traffic monitoring system (TMS). 
+ Figure 4 shows a general overview of the system used to check the accuracy of the TMS. An instrumented probe vehicle (IPV) 141 is fitted with a custom speed monitoring and control system that enables its speed to be measured to 0. 3 mph (at a 95% confidence level). The IPV is also fitted with a transmitter and receiver device 145 which allows it to connect to an accurate locating system such as the Global Positioning 
+ <Desc/Clms Page number 10> 
+ System (GPS) 146. The IPV 141 is also fitted with an on-board computer, into which is programmed the exact position of the measurement point of each lane of each TMS. 
+ The IPV is driven past each of the measurement stations. As the vehicle is in motion, it continually calculates the position of the nearest TMS 101 and lane locations. As the IPV approaches a TMS location 101, once it is within a certain minimum distance, it monitors its position and at the very point where the change in the distance to the nearest measurement point 132 is zero, it calculates it own precise speed and direction. 
+ This value is transferred to a temporary storage position together with the exact time (HH: MM: SS. TTTT) also derived from the GPS signal and an indication of the measurement point 132 passed, and the location of the TMS 101. 
+ This data is then assembled as a Short Message Service (SMS) data message and sent via a transmitter 144 to the address of the central instation 111. The instation 111 interrogates the control and measurement unit 121 of the specified TMS 101 and from the time and location information the IPV is identified from the record of the passage of individual vehicles held at the TMS 101. 
+ In other words, as the IPV 141 is driven past the measurement station 101, its speed is measured both by the onboard system of the IPV itself and by the measurement station 101. By using GPS to determine the exact time at which the IPV passes the station, the two records can be matched. In practice, the process gathers matched records over one or more days of operations, and an average result is obtained. Typically, for statistical significance, when a normal distribution is known, about 6 minimum samples are required. 
+ This accuracy assessment is conducted at periodic intervals, typically every three months (i. e. four times per year) for all of the TMS measurement points maintained by a highway operator. Starting at the first measurement station, an IPV passes all the TMS sites on a circuit. The driver proceeds with the traffic stream, but not above the speed limit. For each site, the speed as measured by the IPV is sent to the central instation 111 and matched with a corresponding record from the TMS, as described above. The round trip might take from 20 minutes to a few hours including rest breaks. In the 
+ <Desc/Clms Page number 11> 
+ survey period, the vehicle should make a minimum of six passes through each lane measurement point. The IPV thus obtains a minimum of 6 samples for each lane at each site. The IPV and TMS records are then analysed at the instation 111 for mean error and standard deviation. 
+ The following example illustrates analysis applied to data derived from six vehicle passes at a single measurement point on a test track. 
+ Vehicle IPV Speed TMS Speed Absolute Error pass Report Report Error (km/hr) (km/hr) (km/hr) 1 147.2 147.5 +0.3 0.20% 2 95. 7 95. 5 -0. 2 -0. 21 % 3 101. 0 101. 5 +0. 5 0. 50% 4 97. 3 97. 5 +0. 2 0. 21% 5 147. 9 147. 5 -0. 4 -0. 27% 6 95. 5 95. 5 +0. 0 0. 00% Average Mean 0.13 0.20% SD 0. 39 0. 60% The TMS output in this case is shown to 0. 1 km/hr during verification. This enables minimum error due to rounding when performing the error survey. 
+ The statistics for the percentage error column are calculated: the mean speed error for the survey was 0.20% while the standard deviation (SD) was 0.60%. 
+ From this the average error for all vehicles can be calculated using Student's t from the standard statistical tables for six samples: 
+ SD 0. 60% CI (Average) 95% = + x = 2. 57 x = +o. 63% M 0 
+ Thus the true mean speed for all vehicles will be between +0. 20%-0. 63% and +0. 20% +0. 63%, i. e. between-0. 43% and +0. 83%, of the mean speed, calculated from the equipment reports with a confidence level of 95%. Since these values are within 1%, the station is verified to meet the performance requirement. 
+ <Desc/Clms Page number 12> 
+ To calculate the individual vehicle speed variation : 
+ CI (Individual) = , x D = 2. 57x 0. 602% = 1. 57% 
+ This means that individual speed reports will lie between +0. 20%-1. 57% and +0. 20% +1. 57%, i. e.-1. 37% and +1. 77% at a confidence level of 95%. Since these values are within +2%, the station is verified to meet the performance requirement. 
+ Thus a reliable estimate of the performance of the TMS has been gained giving data on the measurement of individual vehicles, the way this extrapolates to the mean speed of all vehicles, and systematic bias. This information has been gathered in a safer and more accurate method and at lower cost than the existing methods. 
+ The above description refers to the calibration of speed measurement systems designed to be used in lanes of traffic. Sometimes such speed measurement systems also have measurement points in the"hard shoulder"of a motorway. For safety reasons, hard shoulder verification is not normally performed. If hard shoulder verification is required, the hard shoulder passes should be at"hard shoulder speeds", i. e. around half normal flow speed. The test would be abandoned if any abnormality in traffic flow is observed or if the hard shoulder is occupied within a kilometre of the TMS. If the hard shoulder were being used as a running lane at the time of verification, it would be verified at that time, although the closed lane would not be verified on that occasion. 
+ The calibration systems and methods described above provide higher levels of accuracy than were possible with previous apparatus and methods. Since no road-side operations are required, the safety of personnel carrying out the assessment is increased. There is little or no disruption or disturbance of the vehicle stream, and the performance of the TMSs can be checked at any time. When a high density of stations is involved, the time per test can be as little at 10-30 seconds with little or no operator experience. The audit records created are impossible for the test operator to influence or corrupt in any way. 
+ <Desc/Clms Page number 13> 
+ It may be possible to reduce costs even further if the IPV is a dual purpose vehicle used normally for maintenance on the section of road along which the TMS devices are located. It is usual for maintenance vehicles to make three or four runs along the highway each day to check for debris and broken down vehicles, check the condition of signposts and the surface of the road, etc. In such a case the necessary components for recording and forwarding times and speeds can be installed in the maintenance vehicle and left running permanently, enabling almost continuous assessments of the performance of the TMS devices. 
+ It will be appreciated that the invention is not limited to the embodiment described above, and may also be used for calibration of other equipment. For example, an IPV of known weight could be used to assess the accuracy of"weigh-in-motion"systems which determine the weight of vehicles crossing them. Such systems require frequent recalibration to remain inside specified limits. Weight sensors for such systems are also sometimes attached to TMS devices. By determining the exact position of the IPV at all times using GPS or similar, and knowing the exact position of the weight sensor, the exact moment in time at which it crosses (and is weighed by) a weigh-in-motion sensor point can be determined. This information can be sent to the weigh-in-motion system together with the known weight of the IPV, enabling the record corresponding to the IPV to be extracted from the weigh-in-motion system records and compared with this known weight. A similar system may be used to calibrate measurement systems for vehicle length, width, height, gross weight, axle weight, or wheel configuration, for example. 
+ It will be appreciated that other departures from the embodiments described above may stall fall within the scope of the invention. 
+ Claims ( 27 ) 
+ CLAIMS: 
+ 1. Apparatus for assessing the accuracy of a roadside traffic monitoring station (TMS) having parameter measurement means for measuring a parameter of vehicles passing a predetermined measurement point and the moment in time at which each vehicle passes the measurement point, the apparatus comprising: data recording means for recording the parameter of each vehicle as measured by the parameter measurement means and moment in time that vehicle passes the measurement point; an Instrumented Probe Vehicle (IPV) arranged so that the parameter of the IPV is known or is measurable using an onboard measuring system; locating means for determining the location of the IPV; and timing means arranged to determine the moment in time at which the location of the IPV corresponds to the location of the measurement point; the apparatus being arranged so that the parameter of the IPV as measured by the parameter measurement means can be identified from the moment in time at which the IPV passes the measurement point. 
+ 2. Apparatus as claimed in claim 1, wherein the locating means includes a Global Positioning System (GPS). 
+ 3. Apparatus as claimed in claim 1 or 2, wherein the timing means includes a GPS. 
+ 4. Apparatus as claimed in claim 1, 2 or 3 and comprising data processing means and a communication system arranged so that data can pass from the IPV to the data processing means, the data processing means arranged to receive data from the IPV corresponding to the time at which the location of the IPV corresponds to the location of the measurement point, and to identify the record in the data recording means corresponding to that time, said record including the parameter of the IPV as measured by the TMS. 
+ <Desc/Clms Page number 15> 
+ 5. Apparatus as claimed in claim 4, wherein the IPV includes means for recording the parameter at the moment in time at which the IPV is located at the measurement point and transmitting this information to the data processing system. 
+ 6. Apparatus as claimed claim 5, wherein the communication means includes a mobile phone system. 
+ 7. Apparatus as claimed in claim 6, wherein the IPV is arranged to send data to the data processing means as a Short Message Service (SMS) message. 
+ 8. Apparatus as claimed in any preceding claim, wherein the parameter is speed and the IPV includes onboard speed measurement and recording means arranged to measure and record the speed at the moment in time at which the IPV is located at the measurement point. 
+ 9. Apparatus as claimed in any preceding claim, wherein the parameter includes one or more of vehicle length, width, height, gross weight, axle weight, and wheel configuration. 
+ 10. Apparatus for assessing the accuracy of a roadside traffic monitoring station (TMS) having speed determination means for determining the measured speed of vehicles passing a measurement location and the measured moment in time at which each vehicle passes the measurement location, the apparatus comprising : an Instrumented Probe Vehicle (IPV) having on board speed measuring means for measuring the speed of the IPV; locating means for locating the IPV; and recording means arranged to record a calibration speed of the IPV as measured by the on board speed measuring means at the moment in time the IPV is located at the measurement location, together with a calibration time at which the IPV is located at the measurement location. 
+ 11. Apparatus as claimed in claim 10, further comprising communication means for communicating the calibration speed and calibration time of the IPV to the TMS. 
+ <Desc/Clms Page number 16> 
+ 12. Apparatus as claimed in claim 11, further comprising data processing means for comparing the calibration time received from the IPV with the measured times of vehicles passing the measurement location so as identify the measured speed of the IPV and compare it with the calibration speed. 
+ 13. Apparatus for assessing the accuracy of a roadside traffic monitoring station (TMS) having weight determination means for determining the measured weight of vehicles passing a measurement location and the measured moment in time at which each vehicle passes the measurement location, the apparatus comprising: an Instrumented Probe Vehicle (IPV) having a known weight; locating means for locating the IPV; and recording means arranged to record a calibration time at which the IPV is located at the measurement location. 
+ 14. Apparatus as claimed in claim 13, wherein the IPV is fitted with an onboard dynamic weighing system which reports instantaneous wheel loads so as to determine the weight of the vehicle, and wherein the recording means is arranged to record a calibration weight of the IPV as determined by the on board weighing system at the moment in time the IPV is located at the measurement location, together with the calibration time at which the IPV is located at the measurement location. 
+ 15. Apparatus as claimed in any preceding claim, wherein the IPV is a maintenance or operations vehicle. 
+ 16. A method of assessing the accuracy of a roadside traffic monitoring station (TMS) arranged to measure a parameter of vehicles passing a predetermined measurement point, the method comprising: measuring the parameter of each vehicle passing the measurement point using the TMS; measuring the moment in time that each vehicle passes the measurement point using the TMS; recording the measured parameters and times as data pairs; 
+ <Desc/Clms Page number 17> 
+ driving an Instrumented Probe Vehicle (IPV) past the measurement point, the IPV arranged so that the parameter thereof is known or is measurable using an onboard measuring system; determining the location of the IPV using location means; determining the time at which the determined location of the IPV corresponds to the location of the measurement point; sending the determined time, and the parameter of the IPV as known or measured using the on board system, to the TMS; identifying the recorded data pair corresponding to the determined time; identifying the parameter of the IPV, as measured by the TMS, from said identified data pair; and comparing the parameter of the IPV, as measured by the TMS, with the parameter of the IPV, as known or measured by the onboard measuring system. 
+ 17. A method as claimed in claim 16, wherein the location means includes a Global Positioning System (GPS). 
+ 18. A method as claimed in claim 16 or 17, wherein the parameter is vehicle speed, and wherein the speed of the IPV is measured using an onboard system and recorded at the moment the location of the IPV, as determined by the location means, corresponds to the measurement point. 
+ 19. A method as claimed in claim 16,17 or 18, further comprising driving the IPV past a plurality of measurement points and comparing the parameter of the IPV, as known or measured by an onboard measuring system, with the parameter of the IPV as measured at each measurement point. 
+ 20. A method of assessing the accuracy of a roadside traffic monitoring station (TMS) arranged to measure the speed of vehicles passing a predetermined measurement point, the method comprising: measuring the speed of each vehicle passing the measurement point using the TMS; 
+ <Desc/Clms Page number 18> 
+ measuring the moment in time that each vehicle passes the measurement point using the TMS; recording the measured speeds and times as data pairs; driving an Instrumented Probe Vehicle (IPV) past the measurement point, the IPV having an onboard system for measuring speed; determining the location of the IPV using location means; determining a calibration time at which the determined location of the IPV corresponds to the location of the measurement point; measuring a calibration speed of the IPV using the onboard system when the determined location of the IPV corresponds to the location of the measurement point; sending the calibration time and calibration speed to the TMS; identifying the recorded data pair corresponding to the calibration time; identifying the speed of the IPV, as measured by the TMS, from said identified data pair; and comparing the speed of the IPV, as measured by the TMS, with the calibration speed of the IPV, as measured by the onboard measuring system. 
+ 21. A method of assessing the accuracy of a roadside traffic monitoring station (TMS) arranged to measure the weight of vehicles passing a predetermined measurement point, the method comprising: measuring the weight of each vehicle passing the measurement point using the TMS; measuring the moment in time that each vehicle passes the measurement point using the TMS; recording the measured weights and times as data pairs; determining a calibration weight of an Instrumented Probe Vehicle using an accurate weight determination means; driving the Instrumented Probe Vehicle (IPV) past the measurement point; determining the location of the IPV using location means ; determining a calibration time at which the determined location of the IPV corresponds to the location of the measurement point; sending the calibration time and calibration weight to the TMS; identifying the recorded data pair corresponding to the calibration time; 
+ <Desc/Clms Page number 19> 
+ identifying the weight of the IPV, as measured by the TMS, from said identified data pair; and comparing the weight of the IPV, as measured by the TMS, with the calibration weight of the IPV, as determined by the accurate weight determination means. 
+ 22. A method as claimed in claim 21, wherein the accurate weight determination means is an onboard dynamic weighing system which reports instantaneous wheel loads 
+ so as to determine the weight of the vehicle, and wherein the calibration weight is zn determined when the IPV is located at the measurement point. 
+ 23. A method as claimed in any of claims 16 to 22, wherein the IPV is a maintenance or operations vehicle. 
+ 24. A computer storage medium having stored thereon a program arranged when executed to enable a processor to: receive data containing matched record pairs corresponding to a parameter of a vehicle passing a TMS together with the time at which said vehicle passes said TMS, each as measured by the TMS; receive data from an IPV containing information about the parameter of the IPV, together with the time at which the IPV passes the TMS, each as determined by an onboard measurement system of the IPV; identify which matched record pair corresponds to the passage of the IPV by comparing the time at which the IPV passes the TMS as determined by the on board measurement system with the time at which vehicles pass the TMS as measured by the TMS; and determine the parameter of the IPV as measured by the TMS from the identified matched record pair. 
+ 25. A computer storage medium as claimed in claim 24, wherein the program is further arranged to enable the processor to compare the parameter of the IPV as measured by the TMS with the parameter of the IPV as measured by the onboard measurement system so as to determined the measurement accuracy of the TMS. 
+ <Desc/Clms Page number 20> 
+ 26. Apparatus for assessing the accuracy of a TMS as described herein with reference to Figures 1 to 4. 
+ 27. A method for assessing the accuracy of a TMS as described herein with reference to Figures 1 to 4. 
+ 27. A method for assessing the accuracy of a TMS as described herein with reference to Figures 1 to 4. 
+ <Desc/Clms Page number 21> 
+ Amendments to the claims have been filed as follows CLAIMS: 
+ 1. Apparatus for assessing the accuracy of a roadside traffic monitoring station (TMS) having data measurement means for measuring a parameter of vehicles passing a predetermined measurement point and the moment in time at which each vehicle passes the measurement point, the apparatus comprising: data recording means for recording the parameter of each vehicle and moment in time that vehicle passes the measurement point as measured by the data measurement means; an Instrumented Probe Vehicle (IPV) having an onboard measuring system for measuring the parameter of the IPV; locating means associated with the IPV for determining the location of the IPV independently of the TMS; timing means for determining the moment in time at which the location of the IPV as measured by the locating means corresponds to the location of the measurement point; and data processing means for identifying the parameter of the IPV as measured by the data measurement means from the moment in time at which the IPV passes the measurement point. 
+ 2. Apparatus as claimed in claim 1, wherein the locating means includes a Global 
+ Positioning System (GPS). 
+ - - 3. Apparatus as claimed in claim 1 or 2, wherein the timing means includes a GPS. 
+ 4. Apparatus as claimed in claim 1,2 or 3 and comprising a communication system for passing data from the IPV to the data processing means, so that the data processing means can receive data from the IPV corresponding to the time at which the location of the IPV as measured by the locating means corresponds to the location of the measurement point, and can identify a data pair in the data recording means corresponding to that time, said data pair including the parameter of the IPV as measured by the TMS. 
+ <Desc/Clms Page number 22> 
+5. Apparatus as claimed in claim 4, wherein the IPV includes means for recording ZD the parameter as measured by the onboard measuring system at the moment in time at which the IPV is located at the measurement point as determined by the locating means, and transmitting this information to the data processing means. 
+ 6. Apparatus as claimed claim 5, wherein the communication system includes a mobile phone system. 
+ 7. Apparatus as claimed in claim 6, wherein the IPV is arranged to send data to the data processing means as a Short Message Service (SMS) message. 
+ 8. Apparatus as claimed in any preceding claim, wherein the parameter is speed and the IPV includes onboard speed measurement and recording means for measuring and recording the speed at the moment in time at which the IPV is located at the measurement point. 
+ 9. Apparatus as claimed in any preceding claim, wherein the parameter is vehicle length, width, height, gross weight, axle weight, or wheel configuration. 
+ 10. Apparatus for assessing the accuracy of a roadside traffic monitoring station (TMS) having data determination means for determining the measured speed of vehicles passing a measurement location and the measured moment in time at which each vehicle passes the measurement location, the apparatus comprising: an Instrumented Probe Vehicle (IPV) having on board speed measuring means for measuring the speed of the IPV; locating means associated with the IPV for determining the location of the IPV independently of the TMS; and recording means for recording a calibration speed of the IPV as measured by the on board speed measuring means when the location of the IPV as determined by the locating means ""1S corresponds to the measurement location, together with a calibration time at which the IPV is located at the measurement location as determined by the locating means. 
+ <Desc/Clms Page number 23> 
+ 11. Apparatus as claimed in claim 10, further comprising communication means for communicating the calibration speed and calibration time of the IPV to the TMS. 
+ 12. Apparatus as claimed in claim 11, further comprising data processing means for comparing the calibration time received from the IPV with the measured times of vehicles passing the measurement location so as identify the measured speed of the IPV and compare it with the calibration speed. 
+ 13. Apparatus for assessing the accuracy of a roadside traffic monitoring station (TMS) having data determination means for determining the measured weight of vehicles passing a measurement location and the measured moment in time at which each vehicle passes the measurement location, the apparatus comprising: an Instrumented Probe Vehicle (IPV) having a known weight; locating means associated with the IPV for determining the location of IPV independently of the TMS; and recording means arranged to record a calibration time at which the location of the IPV as determined by the locating means corresponds to the measurement location. 
+ 14. Apparatus as claimed in claim 13, wherein the IPV is fitted with an onboard dynamic weighing system which reports instantaneous wheel loads so as to determine the weight of the vehicle, and wherein the recording means is arranged to record a calibration weight of the IPV as determined by the on board weighing system at the moment in time the IPV is located at the measurement location, together with the calibration time at which the IPV is located at the measurement location. 
+ 15. Apparatus as claimed in any preceding claim, wherein the IPV is a maintenance or operations vehicle. 
+ 16. A method of assessing the accuracy of a roadside traffic monitoring station 
+ (TMS) arranged to measure a parameter of vehicles passing a predetermined =Ti measurement point, the method comprising : measuring the parameter of each vehicle passing the measurement point using the TMS; 
+ <Desc/Clms Page number 24> 
+ measuring the moment in time that each vehicle passes the measurement point using the TMS ; recording the measured parameters and times as data pairs; driving an Instrumented Probe Vehicle (IPV) past the measurement point, the
+IPV arranged so that the parameter thereof is known or is measurable using an onboard measuring system; determining the location of the IPV using location means ; determining the time at which the determined location of the IPV corresponds to the location of the measurement point; sending the determined time, and the parameter of the IPV as known or measured using the on board system, to the TMS; identifying the recorded data pair corresponding to the determined time; identifying the parameter of the IPV, as measured by the TMS, from said identified data pair; and comparing the parameter of the IPV, as measured by the TMS, with the parameter of the IPV, as known or measured by the onboard measuring system. 
+ 17. A method as claimed in claim 16, wherein the location means includes a Global
+Positioning System (GPS). 
+ 18. A method as claimed in claim 16 or 17, wherein the parameter is vehicle speed, and wherein the speed of the IPV is measured using an onboard system and recorded at the moment the location of the IPV, as determined by the location means, corresponds to the measurement point. 
+ 19. A method as claimed in claim 16,17 or 18, further comprising driving the IPV past a plurality of measurement points and comparing the parameter of the IPV, as known or measured by an onboard measuring system, at each measurement point, with the parameter of the IPV as measured using the TMS at that measurement point. 
+ 20. A method of assessing the accuracy of a roadside traffic monitoring station (TMS) arranged to measure the speed of vehicles passing a predetermined measurement point, the method comprising : 
+ <Desc/Clms Page number 25> 
+ measuring the speed of each vehicle passing the measurement point using the
+TMS ; measuring the moment in time that each vehicle passes the measurement point using the TMS; recording the measured speeds and times as data pairs; driving an Instrumented Probe Vehicle (IPV) past the measurement point, the
+IPV having an onboard system for measuring speed ; determining the location of the IPV using location means; determining a calibration time at which the determined location of the IPV corresponds to the location of the measurement point; measuring a calibration speed of the IPV using the onboard system when the determined location of the IPV corresponds to the location of the measurement point; sending the calibration time and calibration speed to the TMS; identifying the recorded data pair corresponding to the calibration time; identifying the speed of the IPV, as measured by the TMS, from said identified data pair; and comparing the speed of the IPV, as measured by the TMS, with the calibration speed of the IPV, as measured by the onboard measuring system. 
+ 21. A method of assessing the accuracy of a roadside traffic monitoring station (TMS) arranged to measure the weight of vehicles passing a predetermined measurement point, the method comprising: measuring the weight of each vehicle passing the measurement point using the TMS; measuring the moment in time that each vehicle passes the measurement point using the TMS; recording the measured weights and times as data pairs; determining a calibration weight of an Instrumented Probe Vehicle using a weight determination means associated with the IPV ; driving the Instrumented Probe Vehicle (IPV) past the measurement point ; determining the location of the IPV using location means; determining a calibration time at which the determined location of the IPV corresponds to the location of the measurement point; 
+ <Desc/Clms Page number 26> 
+ sending the calibration time and calibration weight to the TMS; identifying the recorded data pair corresponding to the calibration time; identifying the weight of the IPV, as measured by the TMS, from said identified data pair ; and comparing the weight of the IPV, as measured by the TMS, with the calibration weight of the IPV, as determined by the weight determination means. 
+ 22. A method as claimed in claim 21, wherein the weight determination means is an onboard dynamic weighing system which reports instantaneous wheel loads so as to determine the weight of the vehicle, and wherein the calibration weight is determined when the IPV is located at the measurement point. 
+ 23. A method as claimed in any of claims 16 to 22, wherein the IPV is a maintenance or operations vehicle. 
+ 24. A computer storage medium having stored thereon a program arranged when executed to enable a processor to: receive data containing matched record pairs corresponding to a parameter of a vehicle passing a TMS together with the time at which said vehicle passes said TMS, each as measured by the TMS; receive data from an IPV containing information about the parameter of the IPV, together with the time at which the IPV passes the TMS, each as determined by an onboard measurement system of the IPV; identify which matched record pair corresponds to the passage of the IPV by comparing the time at which the IPV passes the TMS as determined by the on board measurement system with the time at which vehicles pass the TMS as measured by the TMS; and determine the parameter of the IPV as measured by the TMS from the identified matched record pair. 
+ 25. A computer storage medium as claimed in claim 24, wherein the program is further arranged to enable the processor to compare the parameter of the IPV as 
+ <Desc/Clms Page number 27> 
+ measured by the TMS with the parameter of the IPV as measured by the onboard measurement system so as to determined the measurement accuracy of the TMS. 
+ 26. Apparatus for assessing the accuracy of a TMS as described herein with reference to Figures 1 to 4. 
+ GB0201168A 
+ 2002-01-18 
+ 2002-01-18 
+ Assessing the accuracy of road-side systems 
+ Expired - Fee Related 
+ GB2377027B 
+ ( en )
+ Priority Applications (9) 
+ Application Number 
+ Priority Date 
+ Filing Date 
+ Title 
+ GB0201168A 
+ GB2377027B 
+ ( en )
+ 2002-01-18 
+ 2002-01-18 
+ Assessing the accuracy of road-side systems 
+ CA002452754A 
+ CA2452754A1 
+ ( en )
+ 2002-01-18 
+ 2002-11-28 
+ Assessing the accuracy of road-side systems 
+ AT02806564T 
+ ATE306109T1 
+ ( en )
+ 2002-01-18 
+ 2002-11-28 
+ EVALUATE THE ACCURACY OF ROADSIDE SYSTEMS
+ PCT/GB2002/005384 
+ WO2003063109A1 
+ ( en )
+ 2002-01-18 
+ 2002-11-28 
+ Assessing the accuracy of road-side systems 
+ EP02806564A 
+ EP1466310B1 
+ ( en )
+ 2002-01-18 
+ 2002-11-28 
+ Assessing the accuracy of road-side systems 
+ DE60206527T 
+ DE60206527T2 
+ ( en )
+ 2002-01-18 
+ 2002-11-28 
+ EVALUATE THE ACCURACY OF ROAD-SIDED SYSTEMS
+ AU2002367462A 
+ AU2002367462B2 
+ ( en )
+ 2002-01-18 
+ 2002-11-28 
+ Assessing the accuracy of road-side systems 
+ ES02806564T 
+ ES2249644T3 
+ ( en )
+ 2002-01-18 
+ 2002-11-28 
+ EVALUATION OF THE ACCURACY OF ROAD EDGE SYSTEMS.
+ US10/490,069 
+ US7187302B2 
+ ( en )
+ 2002-01-18 
+ 2002-11-28 
+ Assessing the accuracy of road-side systems 
+ Applications Claiming Priority (1) 
+ Application Number 
+ Priority Date 
+ Filing Date 
+ Title 
+ GB0201168A 
+ GB2377027B 
+ ( en )
+ 2002-01-18 
+ 2002-01-18 
+ Assessing the accuracy of road-side systems 
+ Publications (3) 
+ Publication Number 
+ Publication Date 
+ GB0201168D0 
+ GB0201168D0
+ ( en )
+ 2002-03-06 
+ GB2377027A 
+ true 
+ GB2377027A
+ ( en )
+ 2002-12-31 
+ GB2377027B 
+ GB2377027B
+ ( en )
+ 2003-06-11 
+ Family 
+ ID=9929346 
+ Family Applications (1) 
+ Application Number 
+ Title 
+ Priority Date 
+ Filing Date 
+ GB0201168A 
+ Expired - Fee Related 
+ GB2377027B 
+ ( en )
+ 2002-01-18 
+ 2002-01-18 
+ Assessing the accuracy of road-side systems 
+ Country Status (9) 
+ Country 
+ Link 
+ US 
+ ( 1 )
+ US7187302B2 
+ ( en )
+ EP 
+ ( 1 )
+ EP1466310B1 
+ ( en )
+ AT 
+ ( 1 )
+ ATE306109T1 
+ ( en )
+ AU 
+ ( 1 )
+ AU2002367462B2 
+ ( en )
+ CA 
+ ( 1 )
+ CA2452754A1 
+ ( en )
+ DE 
+ ( 1 )
+ DE60206527T2 
+ ( en )
+ ES 
+ ( 1 )
+ ES2249644T3 
+ ( en )
+ GB 
+ ( 1 )
+ GB2377027B 
+ ( en )
+ WO 
+ ( 1 )
+ WO2003063109A1 
+ ( en )
+ Cited By (4) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ WO2006138749A1 
+ ( en )
+ * 
+ 2005-06-22 
+ 2006-12-28 
+ Gebert Ruediger Heinz 
+ Method and system for speed measurement 
+ EP2081165A1 
+ ( en )
+ * 
+ 2007-12-25 
+ 2009-07-22 
+ Fujitsu Limited 
+ Sensor diagnostic apparatus and method thereof 
+ WO2010029502A1 
+ ( en )
+ * 
+ 2008-09-09 
+ 2010-03-18 
+ Abraham Gert Willem Du Plooy 
+ A radio frequency system 
+ US9429463B2 
+ ( en )
+ 2013-03-04 
+ 2016-08-30 
+ International Road Dynamics, Inc. 
+ System and method for measuring moving vehicle information using electrical time domain reflectometry 
+ Families Citing this family (15) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ GB2377027B 
+ ( en )
+ * 
+ 2002-01-18 
+ 2003-06-11 
+ Golden River Traffic Ltd 
+ Assessing the accuracy of road-side systems 
+ US20060149652A1 
+ ( en )
+ * 
+ 2005-01-06 
+ 2006-07-06 
+ Fellenstein Craig W 
+ Receiving bid requests and pricing bid responses for potential grid job submissions within a grid environment 
+ US20070168202A1 
+ ( en )
+ * 
+ 2006-01-10 
+ 2007-07-19 
+ Xpient Solutions, Llc 
+ Restaurant drive-through monitoring system 
+ KR100849988B1 
+ ( en )
+ * 
+ 2006-05-11 
+ 2008-08-04 
+ 이정준 
+ Traffic information detection system and loop detection device used in the system
+ US20110112720A1 
+ ( en )
+ * 
+ 2009-11-09 
+ 2011-05-12 
+ Dale Keep 
+ Road Conditions Reporting 
+ JP6492295B2 
+ ( en )
+ * 
+ 2016-11-21 
+ 2019-04-03 
+ パナソニックＩｐマネジメント株式会社 
+ Speed control system and speed control method
+ US10137900B2 
+ ( en )
+ * 
+ 2017-02-15 
+ 2018-11-27 
+ Ford Global Technologies, Llc 
+ Methods for vehicle speed accuracy compensation 
+ CN108877211A 
+ ( en )
+ * 
+ 2017-05-15 
+ 2018-11-23 
+ 杭州远眺科技有限公司 
+ A kind of link travel speed calculation method based on sparse GPS data 
+ BR102017017613B1 
+ ( en )
+ * 
+ 2017-08-16 
+ 2023-12-26 
+ Velsis Sistemas E Tecnologia Viaria S/A 
+ DYNAMIC WEIGHING AND VEHICLE SPEED MONITORING SYSTEM ON TRACK
+ CN109696232B 
+ ( en )
+ * 
+ 2017-10-20 
+ 2021-02-19 
+ 山东省交通科学研究院 
+ Automatic calibration method of road axle load spectrum detection system 
+ US11367351B2 
+ ( en )
+ * 
+ 2020-08-17 
+ 2022-06-21 
+ Dish Wireless L.L.C. 
+ Devices, systems and processes for determining and communicating hazards road conditions to users 
+ CN112153574B 
+ ( en )
+ * 
+ 2020-09-18 
+ 2022-09-20 
+ 南京感动科技有限公司 
+ Method and system for checking accuracy of roadside device clock based on floating vehicle 
+ CN116129631B 
+ ( en )
+ * 
+ 2021-11-15 
+ 2025-08-19 
+ 中移(上海)信息通信科技有限公司 
+ Vehicle-road cooperative data processing method and related equipment 
+ CN115900904B 
+ ( en )
+ * 
+ 2022-12-27 
+ 2023-10-10 
+ 南京力加传感技术有限公司 
+ A vehicle overload and over-limit detection method based on quartz piezoelectric axle recognition
+ CN116456303A 
+ ( en )
+ * 
+ 2023-05-06 
+ 2023-07-18 
+ 合肥工业大学 
+ Cloud evaluation method for failure state of vehicle-to-network side unit by instantaneous disturbance separation 
+ Citations (4) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ DE3501033A1 
+ ( en )
+ * 
+ 1985-01-15 
+ 1986-07-17 
+ ANT Nachrichtentechnik GmbH, 7150 Backnang 
+ Measurement of road traffic 
+ EP0502803A1 
+ ( en )
+ * 
+ 1991-03-04 
+ 1992-09-09 
+ Electronique Controle Mesure 
+ Method and apparatus for measuring dynamic loads produced by vehicles on a road 
+ WO1995014292A1 
+ ( en )
+ * 
+ 1993-11-19 
+ 1995-05-26 
+ Philips Electronics N.V. 
+ Traffic monitoring system with reduced communications requirements 
+ US5455768A 
+ ( en )
+ * 
+ 1992-11-06 
+ 1995-10-03 
+ Safetran Traffic Systems, Inc. 
+ System for determining vehicle speed and presence 
+ Family Cites Families (9) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ DE3855467T2 
+ ( en )
+ * 
+ 1987-04-02 
+ 1997-02-06 
+ Gebert Ralf D H 
+ Traffic measurement system
+ US6208268B1 
+ ( en )
+ * 
+ 1993-04-30 
+ 2001-03-27 
+ The United States Of America As Represented By The Secretary Of The Navy 
+ Vehicle presence, speed and length detecting system and roadway installed detector therefor 
+ US6011515A 
+ ( en )
+ * 
+ 1996-10-08 
+ 2000-01-04 
+ The Johns Hopkins University 
+ System for measuring average speed and traffic volume on a roadway 
+ US5959259A 
+ ( en )
+ * 
+ 1997-03-11 
+ 1999-09-28 
+ Lockheed Martin Energy Research Corporation 
+ System and method for accurately weighing and characterizing moving vehicles 
+ US5877705A 
+ ( en )
+ * 
+ 1997-04-22 
+ 1999-03-02 
+ Nu-Metrics, Inc. 
+ Method and apparatus for analyzing traffic and a sensor therefor 
+ US5815092A 
+ ( en )
+ * 
+ 1997-04-22 
+ 1998-09-29 
+ Gregg, Iii; Eugene Stuart 
+ Combined speed measuring device detector, speed measuring device and printer for verifying vehicle speed 
+ US7183942B2 
+ ( en )
+ * 
+ 2000-01-26 
+ 2007-02-27 
+ Origin Technologies Limited 
+ Speed trap detection and warning system 
+ US6828920B2 
+ ( en )
+ * 
+ 2001-06-04 
+ 2004-12-07 
+ Lockheed Martin Orincon Corporation 
+ System and method for classifying vehicles 
+ GB2377027B 
+ ( en )
+ * 
+ 2002-01-18 
+ 2003-06-11 
+ Golden River Traffic Ltd 
+ Assessing the accuracy of road-side systems 
+ 2002 
+ 2002-01-18 
+ GB 
+ GB0201168A 
+ patent/GB2377027B/en 
+ not_active 
+ Expired - Fee Related 
+ 2002-11-28 
+ AU 
+ AU2002367462A 
+ patent/AU2002367462B2/en 
+ not_active 
+ Ceased 
+ 2002-11-28 
+ WO 
+ PCT/GB2002/005384 
+ patent/WO2003063109A1/en 
+ not_active 
+ Ceased 
+ 2002-11-28 
+ US 
+ US10/490,069 
+ patent/US7187302B2/en 
+ not_active 
+ Expired - Fee Related 
+ 2002-11-28 
+ ES 
+ ES02806564T 
+ patent/ES2249644T3/en 
+ not_active 
+ Expired - Lifetime 
+ 2002-11-28 
+ AT 
+ AT02806564T 
+ patent/ATE306109T1/en 
+ not_active 
+ IP Right Cessation 
+ 2002-11-28 
+ CA 
+ CA002452754A 
+ patent/CA2452754A1/en 
+ not_active 
+ Abandoned 
+ 2002-11-28 
+ EP 
+ EP02806564A 
+ patent/EP1466310B1/en 
+ not_active 
+ Expired - Lifetime 
+ 2002-11-28 
+ DE 
+ DE60206527T 
+ patent/DE60206527T2/en 
+ not_active 
+ Expired - Fee Related 
+ Patent Citations (4) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ DE3501033A1 
+ ( en )
+ * 
+ 1985-01-15 
+ 1986-07-17 
+ ANT Nachrichtentechnik GmbH, 7150 Backnang 
+ Measurement of road traffic 
+ EP0502803A1 
+ ( en )
+ * 
+ 1991-03-04 
+ 1992-09-09 
+ Electronique Controle Mesure 
+ Method and apparatus for measuring dynamic loads produced by vehicles on a road 
+ US5455768A 
+ ( en )
+ * 
+ 1992-11-06 
+ 1995-10-03 
+ Safetran Traffic Systems, Inc. 
+ System for determining vehicle speed and presence 
+ WO1995014292A1 
+ ( en )
+ * 
+ 1993-11-19 
+ 1995-05-26 
+ Philips Electronics N.V. 
+ Traffic monitoring system with reduced communications requirements 
+ Cited By (6) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ WO2006138749A1 
+ ( en )
+ * 
+ 2005-06-22 
+ 2006-12-28 
+ Gebert Ruediger Heinz 
+ Method and system for speed measurement 
+ EP2081165A1 
+ ( en )
+ * 
+ 2007-12-25 
+ 2009-07-22 
+ Fujitsu Limited 
+ Sensor diagnostic apparatus and method thereof 
+ US8620613B2 
+ ( en )
+ 2007-12-25 
+ 2013-12-31 
+ Fujitsu Limited 
+ Sensor diagnostic apparatus and method thereof 
+ WO2010029502A1 
+ ( en )
+ * 
+ 2008-09-09 
+ 2010-03-18 
+ Abraham Gert Willem Du Plooy 
+ A radio frequency system 
+ US9429463B2 
+ ( en )
+ 2013-03-04 
+ 2016-08-30 
+ International Road Dynamics, Inc. 
+ System and method for measuring moving vehicle information using electrical time domain reflectometry 
+ US10006799B2 
+ ( en )
+ 2013-03-04 
+ 2018-06-26 
+ International Road Dynamics Inc. 
+ System and method for measuring moving vehicle information using electrical time domain reflectometry 
+ Also Published As 
+ Publication number 
+ Publication date 
+ ATE306109T1 
+ ( en )
+ 2005-10-15 
+ GB2377027B 
+ ( en )
+ 2003-06-11 
+ EP1466310B1 
+ ( en )
+ 2005-10-05 
+ CA2452754A1 
+ ( en )
+ 2003-07-31 
+ DE60206527T2 
+ ( en )
+ 2006-07-13 
+ US20050062617A1 
+ ( en )
+ 2005-03-24 
+ EP1466310A1 
+ ( en )
+ 2004-10-13 
+ US7187302B2 
+ ( en )
+ 2007-03-06 
+ AU2002367462B2 
+ ( en )
+ 2008-02-14 
+ ES2249644T3 
+ ( en )
+ 2006-04-01 
+ DE60206527D1 
+ ( en )
+ 2006-02-16 
+ GB0201168D0 
+ ( en )
+ 2002-03-06 
+ WO2003063109A1 
+ ( en )
+ 2003-07-31 
+ Similar Documents 
+ Publication 
+ Publication Date 
+ Title 
+ AU2002367462B2 
+ ( en )
+ 2008-02-14 
+ Assessing the accuracy of road-side systems 
+ AU2003232361B2 
+ ( en )
+ 2008-10-16 
+ Automatic verification of sensing devices 
+ AU2002367462A1 
+ ( en )
+ 2003-09-18 
+ Assessing the accuracy of road-side systems 
+ Peng et al. 
+ 2017 
+ Assessing the impact of reduced visibility on traffic crash risk using microscopic data and surrogate safety measures 
+ Martin et al. 
+ 2003 
+ Detector technology evaluation 
+ US6999886B2 
+ ( en )
+ 2006-02-14 
+ Vehicle speed estimation using inductive vehicle detection systems 
+ JP3434429B2 
+ ( en )
+ 2003-08-11 
+ Railway navigation system and method for determining railroad track identifiers
+ JPH08505974A 
+ ( en )
+ 1996-06-25 
+ Traffic monitoring system that requires less communication
+ EP0899581A2 
+ ( en )
+ 1999-03-03 
+ Automatic alignment of forward looking sensor in a vehicle 
+ US20230260393A1 
+ ( en )
+ 2023-08-17 
+ Traffic management device, traffic management system, traffic information system, starting module that can be retrofitted and method for managing traffic 
+ CN107331191A 
+ ( en )
+ 2017-11-07 
+ Abnormal driving vehicle localization method, Cloud Server and system 
+ US9847025B2 
+ ( en )
+ 2017-12-19 
+ Method and apparatus for bridge height measurement and truck hit accident prevention 
+ KR101544854B1 
+ ( en )
+ 2015-08-19 
+ Method for providing real time traffic information around vehicle and traffic information system using the same 
+ EP4437525A1 
+ ( en )
+ 2024-10-02 
+ Monitoring traffic 
+ Zhao et al. 
+ 2011 
+ Evaluating the accuracy of spot speed data from global positioning systems for estimating truck travel speed 
+ JP3430001B2 
+ ( en )
+ 2003-07-28 
+ Vehicle position measuring device
+ Müller et al. 
+ 2012 
+ Comparing traffic speed deflectometer and noise-modulated ground penetrating radar data for rapid road pavement investigations 
+ JP6661563B2 
+ ( en )
+ 2020-03-11 
+ Analysis apparatus and analysis method
+ RU2681451C1 
+ ( en )
+ 2019-03-06 
+ Safety in the railway crossing ensuring method 
+ Basnayake 
+ 2004 
+ Automated traffic incident detection with GPS equipped probe vehicles 
+ Belliss et al. 
+ 2004 
+ Detailed speed and travel time surveys using low-cost GPS equipment 
+ Grone 
+ 2012 
+ An evaluation of non-intrusive traffic detectors at the NTC/NDOR detector test bed 
+ Antkowiak 
+ 2018 
+ Collision risk mitigating system for light rail vehicles (LRV) 
+ Sroka 
+ 2002 
+ Multisensing in road traffic measurements 
+ Chachich 
+ 2017 
+ Highway-based vehicle sensors 
+ Legal Events 
+ Date 
+ Code 
+ Title 
+ Description 
+ 2010-09-29 
+ PCNP 
+ Patent ceased through non-payment of renewal fee 
+ Effective date :
+ 20100118 

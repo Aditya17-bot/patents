@@ -1,0 +1,724 @@
+<!DOCTYPE html> 
+<HTML lang="en">
+<HEAD>
+<TITLE>Sensor-based irrigation management of soilless basil using a new smart irrigation system: Effects of set-point on plant physiological responses and crop performance</TITLE>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" integrity="sha256-pdY4ejLKO67E0CM2tbPtq1DJ3VGDVVdqAR6j3ZwdiE4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awes
+ome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">-->
+<!--    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css" />-->
+    <link href="/css/normalnew.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/pushy.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" type="image.jpg" href="/favicon.ico">
+<!--[if lte IE 9]>
+  <script src="/css/html5shiv.min.js"></script>
+  <script src="/css/respond.min.js"></script>
+<![endif]-->
+  <script type='text/javascript'>
+    var captchaContainer = null;
+    var loadCaptcha = function() {
+      captchaContainer = grecaptcha.render('captcha_container', {
+        'sitekey' : '6LdQebIaAAAAACSKxvbloyrkQ_q-MqhOAGgD5PQV',
+        'callback' : function(response) {
+          console.log(response);
+        }
+      });
+    };
+  </script>
+
+<META NAME="handle" CONTENT="RePEc:eee:agiwat:v:203:y:2018:i:c:p:20-29"><META NAME="DOI" CONTENT="10.1016/j.agwat.2018.02.019"><META NAME="description" CONTENT="Downloadable (with restrictions)! Dielectric moisture sensors are particularly suitable for irrigation management in greenhouse soilless production. Identifying the practical effects of substrate water content set-points on crop performance is crucial for successful sensor-based irrigation. We designed and constructed a prototype cloud-connected system for wireless, sensor-based irrigation management, and tested it on basil, grown in a perlite-coco (1:1 v:v) soilless substrate under greenhouse conditions. Dielectric moisture/salinity sensors (GS3, Decagon Devices, Pullman – WA, USA) were used. The study, with two subsequent experiments, assessed i) the effects of a progressive decline in substrate water availability, corresponding to moisture levels from water holding capacity to ≈0.10 m3 m−3, on the gas exchange parameters and leaf water status of basil plants; ii) the short-term recovery response of plants when re-watered after substrate water content has decreased to different levels; iii) the effects of different irrigation set-points (0.40, 0.30 and 0.20 m3 m−3) and leaching rates (≈8% or ≈18%) on the basil crop performance over a complete growing cycle. No physiological stress responses were observed on basil plants when moisture level was higher than approximately 0.20 m3 m−3, while plants showed drought symptoms at approximately 0.17 m3 m−3, corresponding to a substrate matric potential and hydraulic conductivity of −300 hPa and 0.0005 cm day−1, respectively. Photosynthesis and leaf water potential recovered to values similar to non- stress conditions following a short drought (with moisture level as low as ≈0.10 m3 m−3). Basil growth was similar when plants were grown with irrigation set-points of 0.40, 0.30 or 0.20 m3 m−3 for the complete growing cycle. Fresh weight tended to increase when a higher leaching rate was used, probably because leaching lowered substrate EC. Water use efficiency (basil fresh weight/unit water used) was similar at different irrigation set-points and leaching rates. Our results indicate that the use of a wireless sensor network for real-time sensing of substrate water status, combined with precise information on the effects of water availability levels on plants, is an effective tool for precision irrigation management of greenhouse soilless basil.">
+<META NAME="robots" content="NOARCHIVE"><META NAME="keywords" CONTENT="Ocimum basilicum L.; Wireless; GS3 sensors; Drought stress; Available water; Greenhouse">
+<META NAME="jel_code" CONTENT="GS3; sensors">
+<META NAME="author" CONTENT="Montesano, Francesco Fabiano & van Iersel, Marc W. & Boari, Francesca & Cantore, Vito & D’Amato, Giulio & Parente, Angelo">
+<META NAME="author_shortid" CONTENT="">
+<META NAME="title" CONTENT="Sensor-based irrigation management of soilless basil using a new smart irrigation system: Effects of set-point on plant physiological responses and crop performance">
+<META NAME="download" CONTENT="1">
+<META NAME="freedownload" CONTENT="0">
+<META NAME="date" CONTENT="2018-02-02">
+<META NAME="citation_publication_date" CONTENT="2018">
+<META NAME="citation_authors" content="Montesano, Francesco Fabiano; van Iersel, Marc W.; Boari, Francesca; Cantore, Vito; D’Amato, Giulio; Parente, Angelo">
+<META NAME="citation_title" content="Sensor-based irrigation management of soilless basil using a new smart irrigation system: Effects of set-point on plant physiological responses and crop performance">
+<META NAME="citation_abstract" content="Dielectric moisture sensors are particularly suitable for irrigation management in greenhouse soilless production. Identifying the practical effects of substrate water content set-points on crop performance is crucial for successful sensor-based irrigation. We designed and constructed a prototype cloud-connected system for wireless, sensor-based irrigation management, and tested it on basil, grown in a perlite-coco (1:1 v:v) soilless substrate under greenhouse conditions. Dielectric moisture/salinity sensors (GS3, Decagon Devices, Pullman – WA, USA) were used. The study, with two subsequent experiments, assessed i) the effects of a progressive decline in substrate water availability, corresponding to moisture levels from water holding capacity to ≈0.10 m3 m−3, on the gas exchange parameters and leaf water status of basil plants; ii) the short-term recovery response of plants when re-watered after substrate water content has decreased to different levels; iii) the effects of different irrigation set-points (0.40, 0.30 and 0.20 m3 m−3) and leaching rates (≈8% or ≈18%) on the basil crop performance over a complete growing cycle. No physiological stress responses were observed on basil plants when moisture level was higher than approximately 0.20 m3 m−3, while plants showed drought symptoms at approximately 0.17 m3 m−3, corresponding to a substrate matric potential and hydraulic conductivity of −300 hPa and 0.0005 cm day−1, respectively. Photosynthesis and leaf water potential recovered to values similar to non- stress conditions following a short drought (with moisture level as low as ≈0.10 m3 m−3). Basil growth was similar when plants were grown with irrigation set-points of 0.40, 0.30 or 0.20 m3 m−3 for the complete growing cycle. Fresh weight tended to increase when a higher leaching rate was used, probably because leaching lowered substrate EC. Water use efficiency (basil fresh weight/unit water used) was similar at different irrigation set-points and leaching rates. Our results indicate that the use of a wireless sensor network for real-time sensing of substrate water status, combined with precise information on the effects of water availability levels on plants, is an effective tool for precision irrigation management of greenhouse soilless basil.">
+<META NAME="citation_publisher" content="Elsevier">
+<META NAME="citation_journal_title" content="Agricultural Water Management">
+<META NAME="citation_keywords" content="Ocimum basilicum L.; Wireless; GS3 sensors; Drought stress; Available water; Greenhouse">
+<META NAME="citation_abstract_html_url" content="https://ideas.repec.org/a/eee/agiwat/v203y2018icp20-29.html">
+<META NAME="citation_abstract_pdf_url" content="https://ideas.repec.org/a/eee/agiwat/v203y2018icp20-29.html">
+<META NAME="redif-type" content="article">
+<META NAME="citation_type" content="redif-article">
+<META NAME="citation_year" content="2018">
+<META NAME="citation_volume" content="203">
+<META NAME="citation_issue" content="C">
+
+<META NAME="citation_firstpage" content="20">
+<META NAME="citation_lastpage" content="29">
+<META NAME="twitter:card" content="summary_large_image">
+<META NAME="twitter:site" content="@repec_org">
+<META NAME="twitter:title" content="Sensor-based irrigation management of soilless basil using a new smart">
+<META NAME="twitter:description" content="Dielectric moisture sensors are particularly suitable for irrigation management in greenhouse soilless production. Identifying the practical effects of substrate water content set-points on crop perfo">
+<META NAME="twitter:image" content="https://ideas.repec.org/cgi-bin/twimage.cgi?a&eee:agiwat:v:203:y:2018:i:c:p:20-29">
+<META PROPERTY="og:type" content="article">
+<META PROPERTY="og:title" content="Sensor-based irrigation management of soilless basil using a">
+<META PROPERTY="og:description" content="Dielectric moisture sensors are particularly suitable for irrigation management in greenhouse soilless production. Identifying the practical effects of substrate water content set-points on crop perfo">
+<META PROPERTY="og:url" content="https://ideas.repec.org//a/eee/agiwat/v203y2018icp20-29.html">
+<META PROPERTY="og:image" content="https://ideas.repec.org/cgi-bin/twimage.cgi?a&eee:agiwat:v:203:y:2018:i:c:p:20-29">
+<script type="application/ld+json">
+    {
+	"@context": "http://schema.org",
+	"@graph": [
+	  {
+	    "@id": "#periodical",
+	    "@type": "Periodical",
+	    "name": "Agricultural Water Management",
+	    "publisher": "Elsevier",
+	    "url": "https://ideas.repec.org/s/eee/agiwat.html",
+	    "requiresSubscription": "false"
+          },
+	  {
+	    "@id": "#number",
+	    "@type": "PublicationIssue",
+	    "datePublished": "2018",
+	    "issueNumber": "C"
+          },
+	    {		
+	      "@id": "#volume",
+	      "@type": "PublicationVolume",
+	      "volumeNumber": "203"
+            },
+	  {
+	    "@id": "#article",
+	    "@type": "ScholarlyArticle",
+ 	    "name": "Sensor-based irrigation management of soilless basil using a new smart irrigation system: Effects of set-point on plant physiological responses and crop performance",
+	    "url": "https://ideas.repec.org//a/eee/agiwat/v203y2018icp20-29.html",
+	    "description": "Dielectric moisture sensors are particularly suitable for irrigation management in greenhouse soilless production. Identifying the practical effects of substrate water content set-points on crop performance is crucial for successful sensor-based irrigation. We designed and constructed a prototype cloud-connected system for wireless, sensor-based irrigation management, and tested it on basil, grown in a perlite-coco (1:1 v:v) soilless substrate under greenhouse conditions. Dielectric moisture/salinity sensors (GS3, Decagon Devices, Pullman – WA, USA) were used. The study, with two subsequent experiments, assessed i) the effects of a progressive decline in substrate water availability, corresponding to moisture levels from water holding capacity to ≈0.10 m3 m−3, on the gas exchange parameters and leaf water status of basil plants; ii) the short-term recovery response of plants when re-watered after substrate water content has decreased to different levels; iii) the effects of different irrigation set-points (0.40, 0.30 and 0.20 m3 m−3) and leaching rates (≈8% or ≈18%) on the basil crop performance over a complete growing cycle. No physiological stress responses were observed on basil plants when moisture level was higher than approximately 0.20 m3 m−3, while plants showed drought symptoms at approximately 0.17 m3 m−3, corresponding to a substrate matric potential and hydraulic conductivity of −300 hPa and 0.0005 cm day−1, respectively. Photosynthesis and leaf water potential recovered to values similar to non- stress conditions following a short drought (with moisture level as low as ≈0.10 m3 m−3). Basil growth was similar when plants were grown with irrigation set-points of 0.40, 0.30 or 0.20 m3 m−3 for the complete growing cycle. Fresh weight tended to increase when a higher leaching rate was used, probably because leaching lowered substrate EC. Water use efficiency (basil fresh weight/unit water used) was similar at different irrigation set-points and leaching rates. Our results indicate that the use of a wireless sensor network for real-time sensing of substrate water status, combined with precise information on the effects of water availability levels on plants, is an effective tool for precision irrigation management of greenhouse soilless basil.",
+	    "keywords": "Ocimum basilicum L.; Wireless; GS3 sensors; Drought stress; Available water; Greenhouse",
+	    "pageEnd": "29",
+	    "pageStart": "20",
+	    "pagination": "20-29",
+          
+	    "author": "Montesano, Francesco Fabiano & van Iersel, Marc W. & Boari, Francesca & Cantore, Vito & D’Amato, Giulio & Parente, Angelo",
+	    "isPartOf": [
+	      {
+	        "@id": "#volume"
+	      },
+	      {	
+	        "@id": "#periodical"
+	      },
+	      {
+	        "@id": "#number"
+	      }
+	    ]
+	 }
+      ]
+    }
+    </script>
+    </HEAD><BODY>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G63YGSJVZ7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G63YGSJVZ7');
+</script>
+
+<div class="container">
+    <div id="header" class="row">
+      <nav class="navbar navbar-collapse navbar-expand-md" role="navigation">
+          <a class="navbar-brand" href="/">
+            <img width="125" src="/ideas4.jpg" border="0" alt="IDEAS home">
+          </a>
+	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-toggle="collapse" data-target="#mobilesearch" aria-controls="mobilesearch" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"><i class="bi-search"></i></span>
+	</button>
+	<div class="collapse" id="mobilesearch">
+	  <div class="form-inline">
+	  <form method="POST" action="/cgi-bin/htsearch2" id="mobilesearch" role="search" class="card card-body">
+            <div class="input-group">
+              <input class="form-control" type="text" name="q" value="" placeholder="Search econ literature">
+              <span class="input-group-btn">
+		<button type="submit" class="btn" style="background-color: #2d4e8b; color: white;" aria-label="Search">
+                <i class="bi-search"></i>
+              </button>
+		<!--<input class="btn btn-default btn-lg fa" type="submit" value="&#xf002;" style="color:white;background-color:#2d4e8b;">-->
+              </span>
+            </div>
+            <a href="/search.html" class="advanced-search">Advanced search</a>
+	  </form>
+	  </div>
+	  </div>
+	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-toggle="collapse" data-target="#mobilemenu" aria-controls="mobilemenu" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+	</button>
+	<div class="collapse" id="mobilemenu">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+	      <a class="nav-link" href="/">Economic literature:</a> <a href="/i/p.html">papers</A>, <a href="/i/a.html">articles</A>, <a href="/i/c.html">software</A>, <a href="/i/h.html">chapters</A>, <a href="/i/b.html">books</A>.
+	    </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/i/e.html">Authors</a>
+	    </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://edirc.repec.org/">Institutions</a>
+	    </li>
+            <li class="nav-item">
+	      <a class="nav-link" href="/top/">Rankings</a>
+	    </li>
+            <li class="nav-item">
+	      <a class="nav-link" href="/help.html" target="_blank">Help/FAQ  <i class="bi bi-box-arrow-up-right"></i></a>
+	    </li>
+            <li class="nav-item">
+	      <a class="nav-link" href="/cgi-bin/myideas.cgi">MyIDEAS <I class="bi bi-lightbulb"></I></a>
+	    </li>
+	    <li class="nav-item">
+	      <span class="nav-text">More options at page bottom</span>
+	    </li>
+          </ul>
+	</div>
+	<div class="d-none d-md-inline">
+          <ul class="nav nav-fill" id="topnav">
+            <li class="nav-item">
+	      <a class="nav-link" href="/">Economic literature</a>
+	    </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/i/e.html">Authors</a>
+	    </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://edirc.repec.org/">Institutions</a>
+	    </li>
+            <li class="nav-item">
+	      <a class="nav-link" href="/top/">Rankings</a>
+	    </li>
+            <li class="nav-item">
+	      <a class="nav-link" href="/help.html" target="_blank">Help/FAQ  <i class="bi bi-box-arrow-up-right"></i></a>
+	    </li>
+            <li class="nav-item">
+	      <a class="nav-link" href="/cgi-bin/myideas.cgi" style="color:blue;">MyIDEAS <I class="bi bi-lightbulb"></I> <small>(now improved)</small></a>
+	    </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    
+    
+    <div class="row">
+      <div class="col-12" style="margin-top: -10px;">
+	
+	
+	<div id="sidebar" class="sidebar-nav-fixed pull-right d-none d-print-none d-md-inline col-md-3">
+	  <div class="inline-form">
+	  <form method="POST" action="/cgi-bin/htsearch2" id="topsearch" role="search" class="navbar-form navbar-right">
+            <div class="input-group">
+              <input class="form-control" type="text" name="q" value="" placeholder="Search econ literature">
+              <button type="submit" class="btn" style="background-color: #2d4e8b; color: white;" aria-label="Search">
+                <i class="bi-search"></i>
+              </button>
+	      <!--<input class="btn fa" type="submit" value="&#xf002;" style="color:white;background-color:#2d4e8b;">-->
+            </div>
+            <a href="/search.html" class="advanced-search">Advanced search</a>
+	  </form>
+	  </div>
+	  <div id="menu">
+            <h3>Browse Econ Literature</h3>
+            <ul>
+              <li><a href="/i/p.html">Working papers</a></li>
+              <li><a href="/i/a.html">Journals</a></li>
+              <li><a href="/i/c.html">Software components</a></li>
+              <li><a href="/i/b.html">Books</a></li>
+              <li><a href="/i/h.html">Book chapters</a></li>
+              <li><a href="/j/">JEL classification</a></li>
+            </ul>
+	    
+            <h3>More features</h3>
+            <ul>
+	      <li><a href="http://nep.repec.org/">Subscribe to new research</a></li>
+	      <li><a href="https://biblio.repec.org/">RePEc Biblio</a></li>
+	      <li><a href="https://authors.repec.org/">Author registration</a></li>
+	      <li><a href="/v/">Economics Virtual Seminar Calendar</a></li>
+	      <li><a href="https://confwatcher.b2ideas.eu/"><font color="red">ConfWatcher</font></a> NEW!</li>
+            </ul>
+	  </div>
+	</div>
+	<div class="d-none d-print-block">
+	  <img width="145" src="/ideas4.jpg" border="0" alt="IDEAS home"> Printed from https://ideas.repec.org/a/eee/agiwat/v203y2018icp20-29.html 
+	</div>
+	
+	<div id="main" class="col-12 col-md-9">
+	  <div class="site-overlay"></div>
+	  <div class="d-print-none">
+	    
+<div id="messages" class="col-xs-12">
+<span class="share-block">
+            &nbsp;<a href="https://bsky.app/intent/compose?text=Found%20on%20RePEc/IDEAS:%20https://ideas.repec.org//a/eee/agiwat/v203y2018icp20-29.html%20&#128161;" target="_NEW"><i class="bi bi-bluesky"></i></a>&nbsp;
+            <share-to-mastodon message="Found on RePEc/IDEAS:" url='https://ideas.repec.org//a/eee/agiwat/v203y2018icp20-29.html'><font color="#2d4e8b"><i class="bi bi-mastodon"></i></font></share-to-mastodon>
+            <a class="share-twitter bi bi-twitter-x" href="#" title="Share on Twitter"></a>
+            <a class="share-facebook bi bi-facebook" href="#" title="Share on Facebook"></a>
+            <a class="share-reddit bi bi-reddit" href="#" title="Share on Reddit"></a>
+            <a class="share-linkedin bi bi-linkedin" href="#"  title="Share on LinkedIn"></a>
+            <a class="share-email bi bi-envelope" href="#"  title="Share by Email"></a>
+            <a class="share-print bi bi-printer" href="#" title="Print this page"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span id="myideas">
+
+<a href="/cgi-bin/myideas.cgi" data-bs-toggle="tooltip" data-toggle="tooltip" title="MyIDEAS: not logged in">
+<i class="bi bi-lightbulb"></i>
+<i class="bi bi-lock"></i>&nbsp;</a>
+
+
+ <A HREF="/cgi-bin/myideas.cgi#myibiblio1unassigned"><I class="bi bi-archive-fill"></I>&nbsp;My&nbsp;bibliography</A> 
+ <i class="bi bi-bookmark"></i>&nbsp;<span onclick="loadDoc('https://ideas.repec.org/cgi-bin/myiadd2.cgi',myFunction);return true;">Save this article</span>
+
+
+
+
+</span>
+<script>
+function loadDoc(url,cfunc) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      cfunc(xhttp);
+    }
+  };
+  xhttp.open("GET", url, true);
+  xhttp.send();
+}
+function myFunction(xhttp) {
+  document.getElementById("response").innerHTML = xhttp.responseText;
+}
+</script><span id="response"></span>
+</div>
+
+
+	  </div>
+	  <div id="content-block">
+	    
+	    
+
+<div id="title">
+<h1>Sensor-based irrigation management of soilless basil using a new smart irrigation system: Effects of set-point on plant physiological responses and crop performance</h1></div>
+<div>
+<ul class="nav nav-pills" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="author-abstract-tab" data-bs-toggle="tab" data-toggle="tab" href="#author-abstract" role="tab" aria-controls="author-abstract" aria-selected="true">Author & abstract</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link download-tab" id="download-tab" data-bs-toggle="tab" data-toggle="tab" href="#download" role="tab" aria-controls="download" aria-selected="false">Download</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="refs-tab" data-bs-toggle="tab" data-toggle="tab" href="#refs" role="tab" aria-controls="refs" aria-selected="false">5 References</a>
+  </li>
+      <li class="nav-item">
+    <a class="nav-link" id="cites-tab" data-bs-toggle="tab" data-toggle="tab" href="#cites" role="tab" aria-controls="cites" aria-selected="false">7 Citations</a>
+  </li>
+          <li class="nav-item">
+    <a class="nav-link" id="mrel-tab" data-bs-toggle="tab" data-toggle="tab" href="#mrel" role="tab" aria-controls="mrel" aria-selected="false">Most related</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="more-tab" data-bs-toggle="tab" data-toggle="tab" href="#more" role="tab" aria-controls="more" aria-selected="false">Related works & more</a>
+  </li>
+  <!-- Placeholder usernotes pill-->
+  <li class="nav-item">
+    <a class="nav-link" id="correct-tab" data-bs-toggle="tab" data-toggle="tab" href="#correct" role="tab" aria-controls="correct" aria-selected="false">Corrections</a>
+  </li>
+</ul>
+    
+
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="author-abstract" role="tabpanel" aria-labelledby="author-abstract-tab">
+
+<h2>Author</h2>
+    <div id="author-body">
+      <div id="authortable">
+        <div id="listed-authors">Listed:
+          <ul id="authorlist"><li class="authorname">Montesano, Francesco Fabiano</li>
+<li class="authorname">van Iersel, Marc W.</li>
+<li class="authorname">Boari, Francesca</li>
+<li class="authorname">Cantore, Vito</li>
+<li class="authorname">D’Amato, Giulio</li>
+<li class="authorname">Parente, Angelo</li>
+</ul></div><div id="registered-authors"> <a href="https://authors.repec.org/">Registered:</a> <ul id="authorregistered"></ul>
+</div>
+</div>
+</div>
+
+
+<h2 style="clear:left">Abstract</h2><div id="abstract-body">Dielectric moisture sensors are particularly suitable for irrigation management in greenhouse soilless production. Identifying the practical effects of substrate water content set-points on crop performance is crucial for successful sensor-based irrigation. We designed and constructed a prototype cloud-connected system for wireless, sensor-based irrigation management, and tested it on basil, grown in a perlite-coco (1:1 v:v) soilless substrate under greenhouse conditions. Dielectric moisture/salinity sensors (GS3, Decagon Devices, Pullman – WA, USA) were used. The study, with two subsequent experiments, assessed i) the effects of a progressive decline in substrate water availability, corresponding to moisture levels from water holding capacity to ≈0.10 m3 m−3, on the gas exchange parameters and leaf water status of basil plants; ii) the short-term recovery response of plants when re-watered after substrate water content has decreased to different levels; iii) the effects of different irrigation set-points (0.40, 0.30 and 0.20 m3 m−3) and leaching rates (≈8% or ≈18%) on the basil crop performance over a complete growing cycle. No physiological stress responses were observed on basil plants when moisture level was higher than approximately 0.20 m3 m−3, while plants showed drought symptoms at approximately 0.17 m3 m−3, corresponding to a substrate matric potential and hydraulic conductivity of −300 hPa and 0.0005 cm day−1, respectively. Photosynthesis and leaf water potential recovered to values similar to non- stress conditions following a short drought (with moisture level as low as ≈0.10 m3 m−3). Basil growth was similar when plants were grown with irrigation set-points of 0.40, 0.30 or 0.20 m3 m−3 for the complete growing cycle. Fresh weight tended to increase when a higher leaching rate was used, probably because leaching lowered substrate EC. Water use efficiency (basil fresh weight/unit water used) was similar at different irrigation set-points and leaching rates. Our results indicate that the use of a wireless sensor network for real-time sensing of substrate water status, combined with precise information on the effects of water availability levels on plants, is an effective tool for precision irrigation management of greenhouse soilless basil.</div>
+<h2>Suggested Citation</h2>
+<div id="biblio-body">
+<LI class="list-group-item downgate">  Montesano, Francesco Fabiano & van Iersel, Marc W. & Boari, Francesca & Cantore, Vito & D’Amato, Giulio & Parente, Angelo, 2018.
+"<B><A HREF="/a/eee/agiwat/v203y2018icp20-29.html">Sensor-based irrigation management of soilless basil using a new smart irrigation system: Effects of set-point on plant physiological responses and crop performance</A></B>,"
+<A HREF="/s/eee/agiwat.html">Agricultural Water Management</A>, Elsevier, vol. 203(C), pages 20-29.
+</li>
+Handle: <i style="word-break:break-all">RePEc:eee:agiwat:v:203:y:2018:i:c:p:20-29</i>
+<br>DOI: 10.1016/j.agwat.2018.02.019
+<form method="post" action="/cgi-bin/refs.cgi" target="refs" class="form-inline" role="form" style="margin-bottom: 10px;">
+<input type="hidden" name="handle" value="RePEc:eee:agiwat:v:203:y:2018:i:c:p:20-29">
+<div class="pull-left" style="padding-right: 2px;">
+<span class="input-group-btn">
+<input class="btn btn-default btn-lg fa" type="submit" value="Export reference" style="background-color:lightgrey;"><i class="bi bi-box-arrow-up-right"></i> as
+<select name="output" size="1">
+<option value="0">HTML</option>
+<option value="0.5">HTML with abstract</option>
+<option value="1">plain text</option>
+<option value="1.5">plain text with abstract</option>
+<option value="2">BibTeX</option>
+<option value="3">RIS (EndNote, RefMan, ProCite)</option>
+<option value="4">ReDIF</option>
+<option value="6">JSON</option>
+</select> 
+</span>
+</div>
+</form></div>
+   </div>
+  <div class="tab-pane fade" id="download" role="tabpanel" aria-labelledby="download-tab">
+    <h2>Download full text from publisher</h2><p></p>
+       <FORM METHOD=GET ACTION="/cgi-bin/get_doc.cgi" target="_blank">
+       <INPUT TYPE=HIDDEN NAME="urn" VALUE="RePEc:eee:agiwat:v:203:y:2018:i:c:p:20-29"><INPUT TYPE="radio" NAME="url" VALUE="http://www.sciencedirect.com/science/article/pii/S0378377418301057" checked><B>File URL:</B> <span style="word-break:break-all">http://www.sciencedirect.com/science/article/pii/S0378377418301057</span><BR><B>Download Restriction:</B> Full text for ScienceDirect subscribers only<BR>
+<HR><INPUT TYPE="radio" NAME="url" VALUE="https://libkey.io/10.1016/j.agwat.2018.02.019?utm_source=ideas">
+		<B>File URL:</B> <span style="word-break:break-all">https://libkey.io/10.1016/j.agwat.2018.02.019?utm_source=ideas</span><BR>
+                <B>LibKey link</B>: if access is restricted and if your library uses this service, LibKey will redirect you to where you can use your library subscription to access this item<BR>
+<font size="+2" color="red">---><INPUT TYPE="SUBMIT" class="btn fa" VALUE="Download the selected file &#xf08e;" style="color:white;background-color:#2d4e8b;"><---</font></FORM><P>As the access to this document is restricted, you may want to <form action="/cgi-bin/htsearch2" method="post" class="inline"><input type="hidden" name="q" value="Sensor+based+irrigation+management+of+soilless+basil+using+a+new+smart+irrigation+system++Effects+of+set+point+on+plant+physiological+responses+and+crop+performance"><button type="submit" value="submit" class="link-button">search</button></form> for a different version of it.
+
+</div>
+
+  <div class="tab-pane fade" id="refs" role="tabpanel" aria-labelledby="refs-tab"><h2>References listed on IDEAS</h2><form method="post" action="/cgi-bin/refs.cgi" target="refs" class="form-inline" role="form" style="margin-bottom: 10px;">
+<input type="hidden" name="handle" value="repec:caa:jnlhor:v:43:y:2016:i:2:id:312-2014-hortsci#repec:eee:agiwat:v:146:y:2014:i:c:p:84-94#repec:eee:agiwat:v:149:y:2015:i:c:p:123-130#repec:eee:agiwat:v:151:y:2015:i:c:p:64-74#repec:eee:agiwat:v:80:y:2006:i:1-3:p:100-116">
+<div class="pull-left" style="padding-right: 2px;">
+<span class="input-group-btn">
+<input class="btn btn-default btn-lg fa" type="submit" value="Export references" style="background-color:lightgrey;"><i class="bi bi-box-arrow-up-right"></i> as
+<select name="output" size="1">
+<option value="0">HTML</option>
+<option value="0.5">HTML with abstract</option>
+<option value="1">plain text</option>
+<option value="1.5">plain text with abstract</option>
+<option value="2">BibTeX</option>
+<option value="3">RIS (EndNote, RefMan, ProCite)</option>
+<option value="4">ReDIF</option>
+<option value="6">JSON</option>
+</select> 
+</span>
+</div>
+</form>
+<ol class="list-group"><LI class="list-group-item downgate">  F.F. Montesano & M.W. van Iersel & A. Parente, 2016.
+"<B><A HREF="/a/caa/jnlhor/v43y2016i2id312-2014-hortsci.html">Timer versus moisture sensor-based irrigation control of soilless lettuce: Effects on yield, quality and water use efficiency</A></B>,"
+<A HREF="/s/caa/jnlhor.html">Horticultural Science</A>, Czech Academy of Agricultural Sciences, vol. 43(2), pages 67-75.
+<LI class="list-group-item downgate">  Valdés, R. & Ochoa, J. & Franco, J.A. & Sánchez-Blanco, M.J. & Bañón, S., 2015.
+"<B><A HREF="/a/eee/agiwat/v149y2015icp123-130.html">Saline irrigation scheduling for potted geranium based on soil electrical conductivity and moisture sensors</A></B>,"
+<A HREF="/s/eee/agiwat.html">Agricultural Water Management</A>, Elsevier, vol. 149(C), pages 123-130.
+<LI class="list-group-item downgate">  Playan, Enrique & Mateos, Luciano, 2006.
+"<B><A HREF="/a/eee/agiwat/v80y2006i1-3p100-116.html">Modernization and optimization of irrigation systems to increase water productivity</A></B>,"
+<A HREF="/s/eee/agiwat.html">Agricultural Water Management</A>, Elsevier, vol. 80(1-3), pages 100-116, February.
+<LI class="list-group-item downgate">  Navarro-Hellín, H. & Torres-Sánchez, R. & Soto-Valles, F. & Albaladejo-Pérez, C. & López-Riquelme, J.A. & Domingo-Miguel, R., 2015.
+"<B><A HREF="/a/eee/agiwat/v151y2015icp64-74.html">A wireless sensors architecture for efficient irrigation water management</A></B>,"
+<A HREF="/s/eee/agiwat.html">Agricultural Water Management</A>, Elsevier, vol. 151(C), pages 64-74.
+<LI class="list-group-item downgate">  Levidow, Les & Zaccaria, Daniele & Maia, Rodrigo & Vivas, Eduardo & Todorovic, Mladen & Scardigno, Alessandra, 2014.
+"<B><A HREF="/a/eee/agiwat/v146y2014icp84-94.html">Improving water-efficient irrigation: Prospects and difficulties of innovative practices</A></B>,"
+<A HREF="/s/eee/agiwat.html">Agricultural Water Management</A>, Elsevier, vol. 146(C), pages 84-94.
+</ol>
+<A TARGET="_blank" HREF="http://citec.repec.org/cgi-bin/get_data.pl?h=RePEc:eee:agiwat:v:203:y:2018:i:c:p:20-29&o=all"><B>Full references</B> <i class="bi bi-box-arrow-up-right"></i></A> (including those not matched with items on IDEAS)<P>
+</div>
+
+    <div class="tab-pane fade" id="cites" role="tabpanel" aria-labelledby="cites-tab">
+<H2>Citations</H2>
+
+Citations are extracted by the <A HREF="http://citec.repec.org/">CitEc Project</A>, subscribe to its <A HREF="http://citec.repec.org/cgi-bin/rss.pl?h=RePEc:eee:agiwat:v:203:y:2018:i:c:p:20-29">RSS feed</A> for this item.
+<form method="post" action="/cgi-bin/refs.cgi" target="refs" class="form-inline" role="form" style="margin-bottom: 10px;">
+<input type="hidden" name="handle" value="repec:eee:agiwat:v:241:y:2020:i:c:s0378377420303589#repec:eee:agiwat:v:251:y:2021:i:c:s0378377421001189#repec:eee:agiwat:v:238:y:2020:i:c:s0378377420302651#repec:gam:jsusta:v:14:y:2022:i:21:p:13883-:d:953341#repec:gam:jagris:v:13:y:2023:i:10:p:2021-:d:1262176#repec:spr:envsyd:v:42:y:2022:i:4:d:10.1007_s10669-022-09862-2#repec:gam:jagris:v:12:y:2022:i:5:p:646-:d:805954">
+<div class="pull-left" style="padding-right: 2px;">
+<span class="input-group-btn">
+<input class="btn btn-default btn-lg fa" type="submit" value="Export citations" style="background-color:lightgrey;"><i class="bi bi-box-arrow-up-right"></i> as
+<select name="output" size="1">
+<option value="0">HTML</option>
+<option value="0.5">HTML with abstract</option>
+<option value="1">plain text</option>
+<option value="1.5">plain text with abstract</option>
+<option value="2">BibTeX</option>
+<option value="3">RIS (EndNote, RefMan, ProCite)</option>
+<option value="4">ReDIF</option>
+<option value="6">JSON</option>
+</select> 
+</span>
+</div>
+</form><P>
+
+<BR><B>Cited by:</B><ol class="list-group"><LI class="list-group-item downgate">  Massa, Daniele & Magán, Juan José & Montesano, Francesco Fabiano & Tzortzakis, Nikolaos, 2020.
+"<B><A HREF="/a/eee/agiwat/v241y2020ics0378377420303589.html">Minimizing water and nutrient losses from soilless cropping in southern Europe</A></B>,"
+<A HREF="/s/eee/agiwat.html">Agricultural Water Management</A>, Elsevier, vol. 241(C).
+<LI class="list-group-item downgate">  Nam, Suyun & Kang, Seonghwan & Kim, Jongyun, 2020.
+"<B><A HREF="/a/eee/agiwat/v238y2020ics0378377420302651.html">Maintaining a constant soil moisture level can enhance the growth and phenolic content of sweet basil better than fluctuating irrigation</A></B>,"
+<A HREF="/s/eee/agiwat.html">Agricultural Water Management</A>, Elsevier, vol. 238(C).
+<LI class="list-group-item downfree">  Yi-Xuan Lu & Si-Ting Wang & Guan-Xin Yao & Jing Xu, 2023.
+"<B><A HREF="/a/gam/jagris/v13y2023i10p2021-d1262176.html">Green Total Factor Efficiency in Vegetable Production: A Comprehensive Ecological Analysis of China’s Practices</A></B>,"
+<A HREF="/s/gam/jagris.html">Agriculture</A>, MDPI, vol. 13(10), pages 1-25, October.
+<LI class="list-group-item downgate">  Theodora Karanisa & Yasmine Achour & Ahmed Ouammi & Sami Sayadi, 2022.
+"<B><A HREF="/a/spr/envsyd/v42y2022i4d10.1007_s10669-022-09862-2.html">Smart greenhouses as the path towards precision agriculture in the food-energy and water nexus: case study of Qatar</A></B>,"
+<A HREF="/s/spr/envsyd.html">Environment Systems and Decisions</A>, Springer, vol. 42(4), pages 521-546, December.
+<LI class="list-group-item downgate">  Li, Shengping & Tan, Deshui & Wu, Xueping & Degré, Aurore & Long, Huaiyu & Zhang, Shuxiang & Lu, Jinjing & Gao, Lili & Zheng, Fengjun & Liu, Xiaotong & Liang, Guopeng, 2021.
+"<B><A HREF="/a/eee/agiwat/v251y2021ics0378377421001189.html">Negative pressure irrigation increases vegetable water productivity and nitrogen use efficiency by improving soil water and NO3–-N distributions</A></B>,"
+<A HREF="/s/eee/agiwat.html">Agricultural Water Management</A>, Elsevier, vol. 251(C).
+<LI class="list-group-item downfree">  M. A. Abdelzaher & Mohamed M. Awad, 2022.
+"<B><A HREF="/a/gam/jsusta/v14y2022i21p13883-d953341.html">Sustainable Development Goals for the Circular Economy and the Water-Food Nexus: Full Implementation of New Drip Irrigation Technologies in Upper Egypt</A></B>,"
+<A HREF="/s/gam/jsusta.html">Sustainability</A>, MDPI, vol. 14(21), pages 1-14, October.
+<LI class="list-group-item downfree">  Roberto S. Velazquez-Gonzalez & Adrian L. Garcia-Garcia & Elsa Ventura-Zapata & Jose Dolores Oscar Barceinas-Sanchez & Julio C. Sosa-Savedra, 2022.
+"<B><A HREF="/a/gam/jagris/v12y2022i5p646-d805954.html">A Review on Hydroponics and the Technologies Associated for Medium- and Small-Scale Operations</A></B>,"
+<A HREF="/s/gam/jagris.html">Agriculture</A>, MDPI, vol. 12(5), pages 1-21, April.
+</ol>
+</ol>
+</div>
+
+ <div class="tab-pane fade" id="mrel" role="tabpanel" aria-labelledby="mrel-tab">
+    <h2>Most related items</H2>
+These are the items that most often cite the same works as this one and are cited by the same works as this one.
+<ol class="list-group"><LI class="list-group-item downgate">  Mondol, Md Anarul Haque & Zhu, Xuan & Dunkerley, David & Henley, Benjamin J., 2022.
+"<B><A HREF="/a/eee/agiwat/v269y2022ics0378377422002426.html">Changing occurrence of crop water surplus or deficit and the impact of irrigation: An analysis highlighting consequences for rice production in Bangladesh</A></B>,"
+<A HREF="/s/eee/agiwat.html">Agricultural Water Management</A>, Elsevier, vol. 269(C).
+<LI class="list-group-item downgate">  Jiang, Yao & Xu, Xu & Huang, Quanzhong & Huo, Zailin & Huang, Guanhua, 2016.
+"<B><A HREF="/a/eee/agiwat/v178y2016icp76-88.html">Optimizing regional irrigation water use by integrating a two-level optimization model and an agro-hydrological model</A></B>,"
+<A HREF="/s/eee/agiwat.html">Agricultural Water Management</A>, Elsevier, vol. 178(C), pages 76-88.
+<LI class="list-group-item downgate">  Molle, François & Tanouti, Oumaima, 2017.
+"<B><A HREF="/a/eee/agiwat/v192y2017icp170-179.html">Squaring the circle: Agricultural intensification vs. water conservation in Morocco</A></B>,"
+<A HREF="/s/eee/agiwat.html">Agricultural Water Management</A>, Elsevier, vol. 192(C), pages 170-179.
+<LI class="list-group-item downgate">  Pei, Dongjie & Wen, Yue & Li, Wenhao & Ma, Zhanli & Guo, Li & Zhang, Jinzhu & Liu, Mengjie & Mu, Xiaoguo & Wang, Zhenhua, 2024.
+"<B><A HREF="/a/eee/agiwat/v304y2024ics0378377424004220.html">Agricultural water rebound effect and its driving factors in Xinjiang, China</A></B>,"
+<A HREF="/s/eee/agiwat.html">Agricultural Water Management</A>, Elsevier, vol. 304(C).
+<LI class="list-group-item downgate">  Huang, Lei & Zheng, Shuke & Elshobary, Mostafa & Li, Teng & Liu, Wei & Xu, Xiangru & Hu, Xinjuan & Zhu, Feifei & El-Sheekh, Mostafa & Huo, Shuhao, 2026.
+"<B><A HREF="/a/eee/agiwat/v325y2026ics0378377426000685.html">Advances and prospects of closed-loop precision irrigation for synergistic water-salt-phosphorus regulation in saline-alkali soils</A></B>,"
+<A HREF="/s/eee/agiwat.html">Agricultural Water Management</A>, Elsevier, vol. 325(C).
+<LI class="list-group-item downgate">  Li, Hao & Junejo, Abdul Rahim & Midmore, David J. & Soomro, Shakeel Ahmed, 2025.
+"<B><A HREF="/a/eee/agiwat/v321y2025ics0378377425006006.html">Significance of aerated drip irrigation: A comprehensive review</A></B>,"
+<A HREF="/s/eee/agiwat.html">Agricultural Water Management</A>, Elsevier, vol. 321(C).
+<LI class="list-group-item downgate">  Veisi, Hadi & Deihimfard, Reza & Shahmohammadi, Alireza & Hydarzadeh, Yasoub, 2022.
+"<B><A HREF="/a/eee/agiwat/v267y2022ics0378377422001664.html">Application of the analytic hierarchy process (AHP) in a multi-criteria selection of agricultural irrigation systems</A></B>,"
+<A HREF="/s/eee/agiwat.html">Agricultural Water Management</A>, Elsevier, vol. 267(C).
+<LI class="list-group-item downgate">  Ren, Dongyang & Xu, Xu & Engel, Bernard & Huang, Quanzhong & Xiong, Yunwu & Huo, Zailin & Huang, Guanhua, 2021.
+"<B><A HREF="/a/eee/agiwat/v243y2021ics0378377420309604.html">A comprehensive analysis of water productivity in natural vegetation and various crops coexistent agro-ecosystems</A></B>,"
+<A HREF="/s/eee/agiwat.html">Agricultural Water Management</A>, Elsevier, vol. 243(C).
+<LI class="list-group-item downgate">  Tapsuwan, Sorada & Peña-Arancibia, Jorge L. & Lazarow, Neil & Albisetti, Melisa & Zheng, Hongxing & Rojas, Rodrigo & Torres-Alferez, Vianney & Chiew, Francis H.S. & Hopkins, Richard & Penton, David J., 2022.
+"<B><A HREF="/a/eee/agiwat/v265y2022ics0378377422000658.html">A benefit cost analysis of strategic and operational management options for water management in hyper-arid southern Peru</A></B>,"
+<A HREF="/s/eee/agiwat.html">Agricultural Water Management</A>, Elsevier, vol. 265(C).
+<LI class="list-group-item downfree">  Ehsan Qasemipour & Ali Abbasi & Farhad Tarahomi, 2020.
+"<B><A HREF="/a/gam/jsusta/v12y2020i3p818-d311888.html">Water-Saving Scenarios Based on Input–Output Analysis and Virtual Water Concept: A Case in Iran</A></B>,"
+<A HREF="/s/gam/jsusta.html">Sustainability</A>, MDPI, vol. 12(3), pages 1-16, January.
+<LI class="list-group-item downgate">  T. Fowe & I. Nouiri & B. Ibrahim & H. Karambiri & J. Paturel, 2015.
+"<B><A HREF="/a/spr/waterr/v29y2015i10p3841-3861.html">OPTIWAM: An Intelligent Tool for Optimizing Irrigation Water Management in Coupled Reservoir–Groundwater Systems</A></B>,"
+<A HREF="/s/spr/waterr.html">Water Resources Management: An International Journal, Published for the European Water Resources Association (EWRA)</A>, Springer;European Water Resources Association (EWRA), vol. 29(10), pages 3841-3861, August.
+<LI class="list-group-item downfree"> Lankford, B. & Makin, Ian & Matthews, N. & McCornick, Peter G. & Noble, A. & Shah, Tushaar, "undated".
+ "<B><A HREF="/p/iwt/jounls/h047459.html">A compact to revitalise large-scale irrigation systems using a leadership-partnership-ownership 'Theory of Change'</A></B>,"
+<A HREF="/s/iwt/jounls.html">Papers published in Journals (Open Access)</A> 
+H047459, International Water Management Institute.
+<LI class="list-group-item downgate">  Bopp, Carlos & Jara-Rojas, Roberto & Bravo-Ureta, Boris & Engler, Alejandra, 2022.
+"<B><A HREF="/a/eee/agiwat/v271y2022ics0378377422003134.html">Irrigation water use, shadow values and productivity: Evidence from stochastic production frontiers in vineyards</A></B>,"
+<A HREF="/s/eee/agiwat.html">Agricultural Water Management</A>, Elsevier, vol. 271(C).
+<LI class="list-group-item downgate">  Jackson, T.M. & Hanjra, Munir A. & Khan, S. & Hafeez, M.M., 2011.
+"<B><A HREF="/a/eee/agisys/v104y2011i9p729-745.html">Building a climate resilient farm: A risk based approach for understanding water, energy and emissions in irrigated agriculture</A></B>,"
+<A HREF="/s/eee/agisys.html">Agricultural Systems</A>, Elsevier, vol. 104(9), pages 729-745.
+<LI class="list-group-item downgate">  Li, Xiaolin & Tong, Ling & Niu, Jun & Kang, Shaozhong & Du, Taisheng & Li, Sien & Ding, Risheng, 2017.
+"<B><A HREF="/a/eee/agiwat/v179y2017icp55-63.html">Spatio-temporal distribution of irrigation water productivity and its driving factors for cereal crops in Hexi Corridor, Northwest China</A></B>,"
+<A HREF="/s/eee/agiwat.html">Agricultural Water Management</A>, Elsevier, vol. 179(C), pages 55-63.
+<LI class="list-group-item downgate">  Kundu, M. & Sarkar, S., 2009.
+"<B><A HREF="/a/eee/agiwat/v96y2009i8p1268-1274.html">Growth and evapotranspiration pattern of rajmash (Phaseolus vulgaris L.) under varying irrigation schedules and phosphate levels in a hot sub-humid climate</A></B>,"
+<A HREF="/s/eee/agiwat.html">Agricultural Water Management</A>, Elsevier, vol. 96(8), pages 1268-1274, August.
+<LI class="list-group-item downfree">  Marjan Aziz & Madeeha Khan & Naveeda Anjum & Muhammad Sultan & Redmond R. Shamshiri & Sobhy M. Ibrahim & Siva K. Balasundram & Muhammad Aleem, 2022.
+"<B><A HREF="/a/gam/jagris/v12y2022i4p564-d794770.html">Scientific Irrigation Scheduling for Sustainable Production in Olive Groves</A></B>,"
+<A HREF="/s/gam/jagris.html">Agriculture</A>, MDPI, vol. 12(4), pages 1-14, April.
+<LI class="list-group-item downgate">  Chen, Dan & Webber, Michael & Chen, Jing & Luo, Zhaohui, 2011.
+"<B><A HREF="/a/eee/ecolec/v70y2011i11p2154-2162.html">Emergy evaluation perspectives of an irrigation improvement project proposal in China</A></B>,"
+<A HREF="/s/eee/ecolec.html">Ecological Economics</A>, Elsevier, vol. 70(11), pages 2154-2162, September.
+<LI class="list-group-item downfree">  Imran Ali Lakhiar & Haofang Yan & Chuan Zhang & Guoqing Wang & Bin He & Beibei Hao & Yujing Han & Biyu Wang & Rongxuan Bao & Tabinda Naz Syed & Junaid Nawaz Chauhdary & Md. Rakibuzzaman, 2024.
+"<B><A HREF="/a/gam/jagris/v14y2024i7p1141-d1435032.html">A Review of Precision Irrigation Water-Saving Technology under Changing Climate for Enhancing Water Use Efficiency, Crop Yield, and Environmental Footprints</A></B>,"
+<A HREF="/s/gam/jagris.html">Agriculture</A>, MDPI, vol. 14(7), pages 1-40, July.
+<LI class="list-group-item downgate">  Incrocci, Luca & Marzialetti, Paolo & Incrocci, Giorgio & Di Vita, Andrea & Balendonck, Jos & Bibbiani, Carlo & Spagnol, Serafino & Pardossi, Alberto, 2019.
+"<B><A HREF="/a/eee/agiwat/v213y2019icp49-61.html">Sensor-based management of container nursery crops irrigated with fresh or saline water</A></B>,"
+<A HREF="/s/eee/agiwat.html">Agricultural Water Management</A>, Elsevier, vol. 213(C), pages 49-61.
+</ol>
+</div>
+
+  <div class="tab-pane fade" id="more" role="tabpanel" aria-labelledby="more-tab">
+    <H2> More about this item</H2>  <h3>Keywords</h3><form action="/cgi-bin/htsearch2" method="post" class="inline"><input type="hidden" name="q" value="Ocimum basilicum L."><button type="submit" value="submit" class="link-button">Ocimum basilicum L.</button></form>; <form action="/cgi-bin/htsearch2" method="post" class="inline"><input type="hidden" name="q" value="Wireless"><button type="submit" value="submit" class="link-button">Wireless</button></form>; <form action="/cgi-bin/htsearch2" method="post" class="inline"><input type="hidden" name="q" value="GS3 sensors"><button type="submit" value="submit" class="link-button">GS3 sensors</button></form>; <form action="/cgi-bin/htsearch2" method="post" class="inline"><input type="hidden" name="q" value="Drought stress"><button type="submit" value="submit" class="link-button">Drought stress</button></form>; <form action="/cgi-bin/htsearch2" method="post" class="inline"><input type="hidden" name="q" value="Available water"><button type="submit" value="submit" class="link-button">Available water</button></form>; <form action="/cgi-bin/htsearch2" method="post" class="inline"><input type="hidden" name="q" value="Greenhouse"><button type="submit" value="submit" class="link-button">Greenhouse</button></form>; <form action="/cgi-bin/htsearch2" method="post" class="inline"><input type="hidden" name="q" value="Ocimum basilicum L. Wireless GS3 sensors Drought stress Available water Greenhouse "><button type="submit" value="submit" class="link-button">All these keywords</button></form><H3><A HREF="/j/">JEL</A> classification:</h3>
+ <UL> </UL><P>
+<h3>Statistics</h3>
+ <A      HREF="http://logec.repec.org/scripts/paperstat.pl?h=RePEc:eee:agiwat:v:203:y:2018:i:c:p:20-29">Access and download statistics</A>
+</div>
+
+<!-- placeholder usernotes tab-->
+ <div class="tab-pane fade" id="correct" role="tabpanel" aria-labelledby="correct-tab">
+    <h2>Corrections</H2>
+    <P>All material on this site has been provided by the respective publishers and authors. You can help correct errors and omissions. When requesting a correction, please mention this item's handle: <I style="word-break:break-all;">RePEc:eee:agiwat:v:203:y:2018:i:c:p:20-29</I>. See <A HREF="/corrections.html">general information</A> about how to correct material in RePEc.
+      </P><P>
+      If you have authored this item and are not yet registered with RePEc, we encourage you to do it <A HREF="https://authors.repec.org/new-user">here</A>. This allows to link your profile to this item. It also allows you to accept potential citations to this item that we are uncertain about.
+      </P><p>If <A HREF="http://citec.repec.org/" target ="_blank">CitEc <i class="bi bi-box-arrow-up-right"></i></a> recognized a bibliographic reference but did not link an item in RePEc to it, you can help with <A HREF="http://citec.repec.org/cgi-bin/get_data.pl?h=RePEc:eee:agiwat:v:203:y:2018:i:c:p:20-29&o=all" target="_blank">this form <I class="bi bi-box-arrow-up-right"></I></A>.</p><P>
+      If you know of missing items citing this one, you can help us creating those links by adding the relevant references in the same way as above, for each refering item. If you are a registered author of this item, you may also want to check the "citations" tab in your <a href="https://authors.repec.org/">RePEc Author Service</A> profile, as there may be some citations waiting for confirmation.
+      </P><P>
+        For technical questions regarding this item, or to correct its authors, title, abstract, bibliographic or download information, contact: Catherine Liu (email available below). General contact details of provider: <A HREF="http://www.elsevier.com/locate/agwat" target="_blank" style="word-break:break-all;">http://www.elsevier.com/locate/agwat <i class="bi bi-box-arrow-up-right"></i></A>.
+
+<div id="viewemail">
+<form id="emailForm" action="/cgi-bin/getemail.cgi" method="POST">
+<input type="hidden" name="handle" value="repec:eee:agiwat:m">
+<div id="captcha_container"></div>
+          <input type="submit" value="View email address">
+      </form>
+      <script src="https://www.google.com/recaptcha/api.js?onload=loadCaptcha&render=explicit" async defer></script>
+<div id="emailResponse"></div>
+</div>
+</p><p>
+      Please note that corrections may take a couple of weeks to filter through
+      the various RePEc services.</p>
+</div>
+</div>
+</div>
+<div id="footer" class="row d-print-none">
+  <div class="col-sm-6 more-services">
+    <h3 style="border-bottom: 1px solid #111; position: relative; right:0.9em;">More services and features</h3>
+    <div class="row">
+      <div class="list-group col">
+        <a href="/cgi-bin/myideas.cgi" class="list-group-item">
+          <h4 class="list-group-item-heading">MyIDEAS</h4>
+          <p class="list-group-item-text">Follow serials, authors, keywords &amp; more</p>
+        </a>
+        <a href="http://authors.repec.org/" class="list-group-item">
+          <h4 class="list-group-item-heading">Author registration</h4>
+          <p class="list-group-item-text">Public profiles for Economics researchers</p>
+        </a>
+        <a href="http://ideas.repec.org/top/" class="list-group-item">
+          <h4 class="list-group-item-heading">Rankings</h4>
+          <p class="list-group-item-text">Various research rankings in Economics</p>
+        </a>
+        <a href="http://genealogy.repec.org/" class="list-group-item">
+          <h4 class="list-group-item-heading">RePEc Genealogy</h4>
+          <p class="list-group-item-text">Who was a student of whom, using RePEc</p>
+        </a>
+        <a href="http://biblio.repec.org/" class="list-group-item">
+          <h4 class="list-group-item-heading">RePEc Biblio</h4>
+          <p class="list-group-item-text">Curated articles &amp; papers on economics topics</p>
+        </a>
+      </div>
+      <div class="list-group col">
+        <a href="http://mpra.ub.uni-muenchen.de/" class="list-group-item" target="_blank">
+          <h4 class="list-group-item-heading">MPRA  <i class="bi bi-box-arrow-up-right"></i></h4>
+          <p class="list-group-item-text">Upload your paper to be listed on RePEc and IDEAS</p>
+        </a>
+        <a href="http://nep.repec.org/" class="list-group-item" target="_blank">
+          <h4 class="list-group-item-heading">New papers by email <i class="bi bi-box-arrow-up-right"></i></h4>
+          <p class="list-group-item-text">Subscribe to new additions to RePEc</p>
+        </a>
+        <a href="http://www.econacademics.org/" class="list-group-item">
+          <h4 class="list-group-item-heading">EconAcademics</h4>
+          <p class="list-group-item-text">Blog aggregator for economics research</p>
+        </a>
+        <a href="http://plagiarism.repec.org/" class="list-group-item">
+          <h4 class="list-group-item-heading">Plagiarism</h4>
+          <p class="list-group-item-text">Cases of plagiarism in Economics</p>
+        </a>
+      </div>
+      </div>
+    </div>
+    <div class="col-sm more-services">
+      <h3 style="border-bottom: 1px solid #111;">About RePEc</h3>
+      <div class="list-group col">
+        <a href="http://repec.org/" class="list-group-item" target="_blank">
+	  <h4 class="list-group-item-heading">RePEc home <i class="bi bi-box-arrow-up-right"></i></h4>
+	  <p class="list-group-item-text">Initiative for open bibliographies in Economics</p>
+	</a>
+        <a href="http://blog.repec.org/" class="list-group-item" target="_blank">
+          <h4 class="list-group-item-heading">Blog <i class="bi bi-box-arrow-up-right"></i></h4>
+          <p class="list-group-item-text">News about RePEc</p>
+	</a>
+        <a href="/help.html" class="list-group-item" target="_blank">
+          <h4 class="list-group-item-heading">Help/FAQ <i class="bi bi-box-arrow-up-right"></i></h4>
+          <p class="list-group-item-text">Questions about IDEAS and RePEc</p>
+	</a>
+        <a href="/team.html" class="list-group-item">
+          <h4 class="list-group-item-heading">RePEc team</h4>
+          <p class="list-group-item-text">RePEc volunteers</p>
+	</a>
+        <a href="/archives.html" class="list-group-item">
+          <h4 class="list-group-item-heading">Participating archives</h4>
+          <p class="list-group-item-text">Publishers indexing in RePEc</p>
+	</a>
+        <a href="https://ideas.repec.org/privacy.html" class="list-group-item" target="_blank">
+          <h4 class="list-group-item-heading">Privacy statement <i class="bi bi-box-arrow-up-right"></i></h4>
+	</a>
+      </div>
+    </div>
+    <div class="col-sm more-services">
+      <h3 style="border-bottom: 1px solid #111;">Help us</h3>
+      <div class="list-group col">
+        <a href="/corrections.html" class="list-group-item">
+          <h4 class="list-group-item-heading">Corrections</h4>
+          <p class="list-group-item-text">Found an error or omission?</p>
+	</a>
+        <a href="/volunteers.html" class="list-group-item">
+          <h4 class="list-group-item-heading">Volunteers</h4>
+          <p class="list-group-item-text">Opportunities to help RePEc</p>
+	</a>
+        <a href="/participate.html" class="list-group-item">
+          <h4 class="list-group-item-heading">Get papers listed</h4>
+          <p class="list-group-item-text">Have your research listed on RePEc</p>
+	</a>
+        <a href="/stepbystep.html" class="list-group-item">
+          <h4 class="list-group-item-heading">Open a RePEc archive</h4>
+          <p class="list-group-item-text">Have your institution's/publisher's output listed on RePEc</p>
+	</a>
+	<a href="/getdata.html" class="list-group-item">
+          <h4 class="list-group-item-heading">Get RePEc data</h4>
+          <p class="list-group-item-text">Use data assembled by RePEc</p>
+	</a>
+      </div>
+    </div>
+</div>
+<div class="row">
+  <div class="col-12" style="text-align: center; padding-top: 10px;">
+    <div id="sidelogos">
+      <a href="https://ideas.repec.org/">IDEAS</a> is a <a href="http://repec.org/" target="_blank">RePEc <i class="bi bi-box-arrow-up-right"></i></a> service. RePEc uses bibliographic data supplied by the respective publishers.
+    </div>
+  </div>
+  
+  
+</div>
+</div>
+
+</div>
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/share-to-mastodon@0.2.0/dist/share-to-mastodon.js"></script>
+<script src="/css/ideas.js"></script>
+<script src="/css/pushy.js"></script>
+<script>
+$(document).ready(function() {
+    // show active tab on reload
+    if (location.hash !== '') $('a[href="' + location.hash + '"]').tab('show');
+
+    // remember the hash in the URL without jumping
+//    $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+//       if(history.pushState) {
+//            history.pushState(null, null, '#'+$(e.target).attr('href').substr(1));
+//       } else {
+//            location.hash = '#'+$(e.target).attr('href').substr(1);
+//       }
+//    });
+});
+</script>
+
+</BODY>
+</HTML>

@@ -1,0 +1,43 @@
+Read in Chrome (patents.google.com, same-origin fetch of the patent pages), 2026-10-06. Abstract and
+claim text checked; quotes transcribed from the page text.
+
+US 6,655,922 B1 - System and method for detecting and diagnosing pump cavitation (Rockwell Automation;
+priority 2001-08-10). Claim 1: "A system for detecting cavitation in a motorized pumping system,
+comprising: a measuring system adapted to measure pump flow and pressure data associated with the
+pumping system; and an adaptive classifier system adapted to detect pump cavitation existence and extent
+according to the flow and pressure data." Claim 2: classifier comprises a neural network. Abstract:
+parameters such as flow, pressure and motor speed measured/estimated, classifier (Bayesian, fuzzy,
+nonlinear regression, neural network) gives existence and extent of cavitation.
+=> Generic "AI cavitation detection from hydraulic data" is anticipated.
+
+EP 2 196 678 A1 - Method and system for detecting cavitation of pump and frequency converter (ABB Oy;
+priority 2008-12-09). Abstract: pump controlled with a frequency converter; torque estimate and/or speed
+estimate of the motor from the converter; features indicating cavitation or likelihood of cavitation
+and/or reverse flow formed from the estimates. Keywords present: NPSH, speed, torque, head.
+
+US 11,994,150 B2 - Centrifugal pump operation (Schneider Toshiba Inverter Europe; priority 2020-11-13).
+Abstract: method for controlling a hydraulic pumping system with a centrifugal pump at a functional point;
+uses parameters at the functional point and end-of-line characteristics to determine an updated NPSHr.
+=> online NPSHr update is in the art.
+
+US 11,965,513 B2 - Protecting centrifugal pumps from cavitation through applied mathematical technique
+(Saudi Arabian Oil Co; priority 2021-09-14). Abstract: group of pumps, equation correlating NPSHr with
+flowrate from manufacturer data; NPSH margin specified for NPSHa above NPSHr.
+
+US 8,303,260 B2 - Method and apparatus for pump protection without the use of traditional sensors (ITT;
+priority 2006-03-08). Calculated flow from a calibrated closed-valve power versus speed curve plus
+published data (best efficiency power, closed valve power, best efficiency flow); protects against dry
+running, minimum flow, runout.
+
+US 9,777,748 B2 (Eaton; priority 2010-04-05) - cavitation from motor current spectrum signature bands.
+US 7,099,852 B2 (Reliance Electric; priority 1999-09-28) - cavitation/blockage/seal failure via current
+signature analysis (adaptive).
+US 20140010669 A1 (Holset; priority 2003) - electric motor speed/torque/current (not reviewed further).
+US 12,729,519 - not found on Google Patents (404); recheck number.
+
+Data search (2026-10-06): no open dataset with flow, head (or suction/discharge pressure), power and
+cavitation truth found. Zenodo 15301820 (CIRA pumps): vibration and outlet pressure only, no labels.
+Kaggle: vibration-only or simulated sets. Grundfos dataset (DTU 2024 paper): proprietary, vibration.
+MDPI Sensors 2026 (Celtek et al., submersible pumps, Q/S/pressure with noise-based labels): "available
+from the corresponding author upon reasonable request". MDPI Proceedings 2018 (Oviedo): figures only,
+three points per NPSH curve.

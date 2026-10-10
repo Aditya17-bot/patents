@@ -1,0 +1,6 @@
+corridor                      sites  nodes    prior     ours    gain%  outside0  outside1
+M25 clockwise, March 2025       367    199    15.73    14.36    8.73%    10.90%     5.79%
+M25 clockwise, June 2025        373    209    17.63    15.87    9.97%    11.29%     5.97%
+M1 northbound, March 2025       186     88    13.66    12.80    6.26%    11.50%     6.11%
+
+wrote results/generalisation.json

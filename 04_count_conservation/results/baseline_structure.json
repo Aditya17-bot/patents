@@ -1,0 +1,165 @@
+{
+ "min_rows_complete_case": 300,
+ "omp_max_members": 4,
+ "corridors": {
+  "M25": {
+   "ipca": {
+    "detectors_total": 367,
+    "detectors_retained": 321,
+    "complete_intervals": 338,
+    "surveyed_relations_total": 199,
+    "surveyed_relations_among_retained": 167,
+    "constraints_requested": 167,
+    "in_recovered_span": 0,
+    "rows_readable_as_signed_relations": 0,
+    "surveyed_relations_read_off_exactly": 0,
+    "slip_relations_among_retained": 39,
+    "slip_relations_read_off_exactly": 0,
+    "seconds": 41.3
+   },
+   "omp": {
+    "limit_pct_given": 1.804,
+    "found": 153,
+    "categories": {
+     "exact": 115,
+     "unmapped_site": 18,
+     "outside_map": 14,
+     "implied": 6
+    },
+    "judged_precision": 0.896,
+    "recall_by_size": {
+     "2": {
+      "recovered": 111,
+      "of": 156
+     },
+     "3": {
+      "recovered": 4,
+      "of": 28
+     },
+     "4": {
+      "recovered": 0,
+      "of": 15
+     }
+    },
+    "slip_recovered": 4,
+    "slip_total": 43,
+    "seconds": 189.0
+   },
+   "ipca_favourable_subsets": [
+    {
+     "detectors_total": 367,
+     "detectors_retained": 313,
+     "complete_intervals": 1018,
+     "surveyed_relations_total": 199,
+     "surveyed_relations_among_retained": 159,
+     "constraints_requested": 159,
+     "in_recovered_span": 0,
+     "rows_readable_as_signed_relations": 0,
+     "surveyed_relations_read_off_exactly": 0,
+     "slip_relations_among_retained": 38,
+     "slip_relations_read_off_exactly": 0,
+     "min_rows": 1000
+    },
+    {
+     "detectors_total": 367,
+     "detectors_retained": 307,
+     "complete_intervals": 2094,
+     "surveyed_relations_total": 199,
+     "surveyed_relations_among_retained": 152,
+     "constraints_requested": 152,
+     "in_recovered_span": 0,
+     "rows_readable_as_signed_relations": 0,
+     "surveyed_relations_read_off_exactly": 0,
+     "slip_relations_among_retained": 37,
+     "slip_relations_read_off_exactly": 0,
+     "min_rows": 2000
+    }
+   ],
+   "ipca_diagnosis_2000rows": {
+    "detectors": 307,
+    "variance_share_first_component": 0.908,
+    "dims_for_99pct_variance": 10,
+    "dims_for_99_9pct_variance": 59,
+    "true_relation_residual_std_per_unit_norm_median": 9.7,
+    "smallest_direction_std": 1.9,
+    "std_of_direction_ranked_152": 11.1,
+    "true_relation_distance_from_ipca_space_median": 0.39,
+    "true_relation_distance_from_ipca_space_min": 0.14,
+    "synthetic_check": "IPCA implementation recovers 10 of 10 relations on a synthetic chain network with exact conservation"
+   }
+  },
+  "M1": {
+   "ipca": {
+    "detectors_total": 186,
+    "detectors_retained": 170,
+    "complete_intervals": 509,
+    "surveyed_relations_total": 88,
+    "surveyed_relations_among_retained": 82,
+    "constraints_requested": 82,
+    "in_recovered_span": 0,
+    "rows_readable_as_signed_relations": 0,
+    "surveyed_relations_read_off_exactly": 0,
+    "slip_relations_among_retained": 12,
+    "slip_relations_read_off_exactly": 0,
+    "seconds": 7.1
+   },
+   "omp": {
+    "limit_pct_given": 2.363,
+    "found": 77,
+    "categories": {
+     "exact": 57,
+     "implied": 3,
+     "unmapped_site": 17
+    },
+    "judged_precision": 1.0,
+    "recall_by_size": {
+     "2": {
+      "recovered": 57,
+      "of": 75
+     },
+     "3": {
+      "recovered": 0,
+      "of": 11
+     },
+     "4": {
+      "recovered": 0,
+      "of": 2
+     }
+    },
+    "slip_recovered": 0,
+    "slip_total": 13,
+    "seconds": 45.4
+   },
+   "ipca_favourable_subsets": [
+    {
+     "detectors_total": 186,
+     "detectors_retained": 163,
+     "complete_intervals": 1462,
+     "surveyed_relations_total": 88,
+     "surveyed_relations_among_retained": 76,
+     "constraints_requested": 76,
+     "in_recovered_span": 0,
+     "rows_readable_as_signed_relations": 0,
+     "surveyed_relations_read_off_exactly": 0,
+     "slip_relations_among_retained": 12,
+     "slip_relations_read_off_exactly": 0,
+     "min_rows": 1000
+    },
+    {
+     "detectors_total": 186,
+     "detectors_retained": 160,
+     "complete_intervals": 2075,
+     "surveyed_relations_total": 88,
+     "surveyed_relations_among_retained": 73,
+     "constraints_requested": 73,
+     "in_recovered_span": 0,
+     "rows_readable_as_signed_relations": 0,
+     "surveyed_relations_read_off_exactly": 0,
+     "slip_relations_among_retained": 12,
+     "slip_relations_read_off_exactly": 0,
+     "min_rows": 2000
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,95 @@
+{
+ "per_compartment": {
+  "Reference": {
+   "days": 167,
+   "samples": 47809,
+   "samples_with_both_wc": 45503,
+   "pulses": 3100,
+   "pulse_over_meter": 0.999,
+   "corr_daily": 0.999,
+   "irr_mean_l_m2_day": 4.75,
+   "drain_mean_l_m2_day": 2.11,
+   "pulse_volume_median_l_m2": 0.3,
+   "wc_median_1": 85.4,
+   "wc_median_2": 82.9
+  },
+  "AICU": {
+   "days": 167,
+   "samples": 47809,
+   "samples_with_both_wc": 45504,
+   "pulses": 2431,
+   "pulse_over_meter": 1.005,
+   "corr_daily": 0.995,
+   "irr_mean_l_m2_day": 3.33,
+   "drain_mean_l_m2_day": 1.27,
+   "pulse_volume_median_l_m2": 0.2,
+   "wc_median_1": 78.0,
+   "wc_median_2": 63.9
+  },
+  "Automatoes": {
+   "days": 167,
+   "samples": 47809,
+   "samples_with_both_wc": 45483,
+   "pulses": 3760,
+   "pulse_over_meter": 1.003,
+   "corr_daily": 0.997,
+   "irr_mean_l_m2_day": 4.75,
+   "drain_mean_l_m2_day": 1.95,
+   "pulse_volume_median_l_m2": 0.2,
+   "wc_median_1": 71.0,
+   "wc_median_2": 75.2
+  },
+  "Digilog": {
+   "days": 167,
+   "samples": 47809,
+   "samples_with_both_wc": 45488,
+   "pulses": 3727,
+   "pulse_over_meter": 1.006,
+   "corr_daily": 0.999,
+   "irr_mean_l_m2_day": 4.46,
+   "drain_mean_l_m2_day": 1.1,
+   "pulse_volume_median_l_m2": 0.2,
+   "wc_median_1": 77.5,
+   "wc_median_2": 65.4
+  },
+  "IUACAAS": {
+   "days": 167,
+   "samples": 47809,
+   "samples_with_both_wc": 45488,
+   "pulses": 3352,
+   "pulse_over_meter": 1.001,
+   "corr_daily": 0.999,
+   "irr_mean_l_m2_day": 5.22,
+   "drain_mean_l_m2_day": 1.78,
+   "pulse_volume_median_l_m2": 0.3,
+   "wc_median_1": 83.0,
+   "wc_median_2": 74.5
+  },
+  "TheAutomators": {
+   "days": 167,
+   "samples": 47809,
+   "samples_with_both_wc": 45499,
+   "pulses": 3429,
+   "pulse_over_meter": 1.01,
+   "corr_daily": 0.999,
+   "irr_mean_l_m2_day": 4.36,
+   "drain_mean_l_m2_day": 1.61,
+   "pulse_volume_median_l_m2": 0.2,
+   "wc_median_1": 75.8,
+   "wc_median_2": 76.3
+  }
+ },
+ "compartments": 6,
+ "sensors": 12,
+ "period": [
+  "2019-12-16",
+  "2020-05-30"
+ ],
+ "samples_both_wc": 272965,
+ "pulses": 19799,
+ "pulse_over_meter_range": [
+  0.999,
+  1.01
+ ],
+ "corr_daily_min": 0.995
+}

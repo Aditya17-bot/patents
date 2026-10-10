@@ -1,0 +1,7 @@
+full_M25_A: 367 sites, 199 map relations, 726 recovered relations
+control: 20 of 199 map relations flagged (false flags)
+  sign_flip     trials  60  detected  30.0%  repaired exactly   1.7%
+  drop_member   trials  60  detected  81.7%  repaired exactly   5.0%
+  wrong_site    trials  60  detected  66.7%  repaired exactly  25.0%
+  extra_member  trials  60  detected  76.7%  repaired exactly  75.0%
+wrote results/map_audit_full_M25_A.json

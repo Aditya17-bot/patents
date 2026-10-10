@@ -1,0 +1,1070 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- inj yui3-seed: --><script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/yui/3.6.0/yui/yui-min.js'></script><script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script><!-- Adobe Analytics --><script type='text/javascript' src='https://assets.adobedtm.com/4a848ae9611a/d0e96722185b/launch-d525bb0064d8.min.js'></script><script type='text/javascript' src=/assets/nr_browser_production.js></script>
+
+<!-- def.1 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>
+"Cavitation detection in centrifugal pumps using pressure time-domain " by POUYA SAMANIPOUR, JAVAD POSHTAN et al.
+</title>
+
+
+<!-- FILE article_meta-tags.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/article_meta-tags.inc -->
+<meta itemprop="name" content="Cavitation detection in centrifugal pumps using pressure time-domain  features">
+<meta property="og:title" content="Cavitation detection in centrifugal pumps using pressure time-domain  features">
+<meta name="twitter:title" content="Cavitation detection in centrifugal pumps using pressure time-domain  features">
+<meta property="article:author" content="POUYA SAMANIPOUR">
+<meta name="author" content="POUYA SAMANIPOUR">
+<meta property="article:author" content="JAVAD POSHTAN">
+<meta name="author" content="JAVAD POSHTAN">
+<meta property="article:author" content="HAMED SADEGHI">
+<meta name="author" content="HAMED SADEGHI">
+<meta name="robots" content="noodp, noydir">
+<meta name="description" content="Condition monitoring of centrifugal pumps is vital due to their crucial role in industries. One of the most prevalent faults in pumps is cavitation, which can cause mechanical faults or even failure in the pump. In this paper, an approach is suggested to detect cavitation in a centrifugal pump using time-domain analysis of the pressure signal residual. First, pressure and torque signals are obtained using a model of the electro-pump, and then pressure deviation from the pump performance curve is defined as a residual. The residual time-domain features are extracted and applied as inputs to a self-organizing map (SOM) neural network to classify the system modes. The results indicate that the suggested method is capable of detecting incipient cavitation. Furthermore, the suggested method demonstrates robust performance against disturbance.">
+<meta itemprop="description" content="Condition monitoring of centrifugal pumps is vital due to their crucial role in industries. One of the most prevalent faults in pumps is cavitation, which can cause mechanical faults or even failure in the pump. In this paper, an approach is suggested to detect cavitation in a centrifugal pump using time-domain analysis of the pressure signal residual. First, pressure and torque signals are obtained using a model of the electro-pump, and then pressure deviation from the pump performance curve is defined as a residual. The residual time-domain features are extracted and applied as inputs to a self-organizing map (SOM) neural network to classify the system modes. The results indicate that the suggested method is capable of detecting incipient cavitation. Furthermore, the suggested method demonstrates robust performance against disturbance.">
+<meta name="twitter:description" content="Condition monitoring of centrifugal pumps is vital due to their crucial role in industries. One of the most prevalent faults in pumps is cavitation, which can cause mechanical faults or even failure in the pump. In this paper, an approach is suggested to detect cavitation in a centrifugal pump using time-domain analysis of the pressure signal residual. First, pressure and torque signals are obtained using a model of the electro-pump, and then pressure deviation from the pump performance curve is defined as a residual. The residual time-domain features are extracted and applied as inputs to a self-organizing map (SOM) neural network to classify the system modes. The results indicate that the suggested method is capable of detecting incipient cavitation. Furthermore, the suggested method demonstrates robust performance against disturbance.">
+<meta property="og:description" content="Condition monitoring of centrifugal pumps is vital due to their crucial role in industries. One of the most prevalent faults in pumps is cavitation, which can cause mechanical faults or even failure in the pump. In this paper, an approach is suggested to detect cavitation in a centrifugal pump using time-domain analysis of the pressure signal residual. First, pressure and torque signals are obtained using a model of the electro-pump, and then pressure deviation from the pump performance curve is defined as a residual. The residual time-domain features are extracted and applied as inputs to a self-organizing map (SOM) neural network to classify the system modes. The results indicate that the suggested method is capable of detecting incipient cavitation. Furthermore, the suggested method demonstrates robust performance against disturbance.">
+<meta name="keywords" content="Electro-pump, cavitation, fault detection, self-organizing map, time-domain analysis">
+<meta name="bepress_citation_journal_title" content="Turkish Journal of Electrical Engineering and Computer Sciences">
+<meta name="bepress_citation_firstpage" content="4287">
+<meta name="bepress_citation_lastpage" content="4298">
+<meta name="bepress_citation_author" content="SAMANIPOUR, POUYA">
+<meta name="bepress_citation_author" content="POSHTAN, JAVAD">
+<meta name="bepress_citation_author" content="SADEGHI, HAMED">
+<meta name="bepress_citation_title" content="Cavitation detection in centrifugal pumps using pressure time-domain  features">
+<meta name="bepress_citation_date" content="2017">
+<meta name="bepress_citation_volume" content="25">
+<meta name="bepress_citation_issue" content="5">
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_download_link.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/article_meta-tags.inc (cont) -->
+<meta name="bepress_citation_pdf_url" content="https://journals.tubitak.gov.tr/cgi/viewcontent.cgi?article=2159&amp;context=elektrik">
+<meta name="bepress_citation_abstract_html_url" content="https://journals.tubitak.gov.tr/elektrik/vol25/iss5/64">
+<meta name="bepress_citation_doi" content="10.3906/elk-1701-2">
+<meta name="bepress_citation_issn" content="1300-0632">
+<meta name="bepress_citation_online_date" content="2022/1/27">
+<meta name="viewport" content="width=device-width">
+<!-- Additional Twitter data -->
+<meta name="twitter:card" content="summary">
+<!-- Additional Open Graph data -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://journals.tubitak.gov.tr/elektrik/vol25/iss5/64">
+<meta property="og:site_name" content="TÜBİTAK Academic Journals">
+
+
+
+
+<!-- FILE: article_meta-tags.inc (cont) -->
+<meta name="bepress_is_article_cover_page" content="1">
+
+
+<!-- sh.1 -->
+<link rel="stylesheet" href="/elektrik/ir-journal-style.css" type="text/css" media="screen">
+<link rel="alternate" type="application/rss+xml" title="Turkish Journal of Electrical Engineering and Computer Sciences Newsfeed" href="/elektrik/recent.rss">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link type="text/css" rel="stylesheet" href="/assets/floatbox/floatbox.css">
+<link rel="stylesheet" href="/ir-print.css" type="text/css" media="print">
+<!--[if IE]>
+<link rel="stylesheet" href="/ir-ie.css" type="text/css" media="screen">
+<![endif]-->
+
+<!-- JS -->
+<script type="text/javascript" src="/assets/jsUtilities.js"></script>
+<script type="text/javascript" src="/assets/footnoteLinks.js"></script>
+
+<!-- end sh.1 -->
+
+
+
+
+<script type="text/javascript">var pageData = {"page":{"environment":"prod","productName":"bpdg","language":"en","name":"ir_journal:volume:issue:article","businessUnit":"els:rp:st"},"visitor":{}};</script>
+
+</head>
+<body >
+<!-- FILE /srv/sequoia/main/data/assets/site/ir_journal/header.pregen -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/header_inherit.inc --><div id="elektrik">
+	
+    		<!-- FILE: /srv/sequoia/main/data/journals.tubitak.gov.tr/assets/header.pregen --><!-- FILE: /srv/sequoia/main/data/assets/site/mobile_nav.inc --><!--[if !IE]>-->
+<script src="/assets/scripts/dc-mobile/dc-responsive-nav.js"></script>
+
+<header id="mobile-nav" class="nav-down device-fixed-height" style="visibility: hidden;">
+  
+  
+  <nav class="nav-collapse">
+    <ul>
+      <li class="menu-item active device-fixed-width"><a href="https://journals.tubitak.gov.tr" title="Home" data-scroll >Home</a></li>
+      <li class="menu-item device-fixed-width"><a href="https://journals.tubitak.gov.tr/do/search/advanced/" title="Search" data-scroll ><i class="icon-search"></i> Search</a></li>
+      <li class="menu-item device-fixed-width"><a href="https://journals.tubitak.gov.tr/communities.html" title="Browse" data-scroll >Browse Journals</a></li>
+      <li class="menu-item device-fixed-width"><a href="/cgi/myaccount.cgi?context=" title="My Account" data-scroll >My Account</a></li>
+      <li class="menu-item device-fixed-width"><a href="https://journals.tubitak.gov.tr/about.html" title="About" data-scroll >About</a></li>
+      <li class="menu-item device-fixed-width"><a href="https://network.bepress.com" title="Digital Commons Network" data-scroll ><img width="16" height="16" alt="DC Network" style="vertical-align:top;" src="/assets/md5images/8e240588cf8cd3a028768d4294acd7d3.png"> Digital Commons Network™</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script src="/assets/scripts/dc-mobile/dc-mobile-nav.js"></script>
+<!--<![endif]-->
+<!-- FILE: /srv/sequoia/main/data/journals.tubitak.gov.tr/assets/header.pregen (cont) -->
+
+
+
+<div id="tubitak">
+	<div id="container">
+		<a href="#main" class="skiplink" accesskey="2" >Skip to main content</a>
+
+					
+			<div id="header" role="banner">
+				<a href="https://journals.tubitak.gov.tr" id="banner_link" title="TÜBİTAK Academic Journals" >
+					<img id="banner_image" alt="TÜBİTAK Academic Journals" width='980' height='115' src="/assets/md5images/d7f7a3c13dc4963acab0d4a43e64fb07.png">
+				</a>	
+				
+					<a href="https://www.tubitak.gov.tr/en" id="logo_link" title="TÜBİTAK" >
+						<img id="logo_image" alt="TÜBİTAK" width='86' height='115' src="/assets/md5images/bddccdf66b6d7a600b7894cab1fbbb43.png">
+					</a>	
+				
+			</div>
+					
+			<div id="navigation">
+				<!-- FILE: /srv/sequoia/main/data/assets/site/ir_navigation.inc --><div id="tabs" role="navigation" aria-label="Main"><ul><li id="tabone"><a href="https://journals.tubitak.gov.tr" title="Home" ><span>Home</span></a></li><li id="tabtwo"><a href="https://journals.tubitak.gov.tr/about.html" title="About" ><span>About</span></a></li><li id="tabthree"><a href="https://journals.tubitak.gov.tr/faq.html" title="FAQ" ><span>FAQ</span></a></li><li id="tabfour"><a href="https://journals.tubitak.gov.tr/cgi/myaccount.cgi?context=" title="My Account" ><span>My Account</span></a></li></ul></div>
+
+
+<!-- FILE: /srv/sequoia/main/data/journals.tubitak.gov.tr/assets/header.pregen (cont) -->
+			</div>
+		
+
+		<div id="wrapper">
+			<div id="content">
+				<div id="main" class="text" role="main">
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/header_inherit.inc (cont) -->
+    
+
+<!-- FILE: /srv/sequoia/main/data/journals.tubitak.gov.tr/assets/ir_journal/ir_breadcrumb.inc -->
+	<ul id="pager">
+		<li>&nbsp;</li>
+		 
+		<li>&nbsp;</li> 
+		
+	</ul>
+
+<div class="crumbs" role="navigation" aria-label="Breadcrumb">
+	<p>
+		
+
+		
+		
+		
+			<a href="https://journals.tubitak.gov.tr" class="ignore" >Home</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		 <span aria-hidden="true">&gt;</span> 
+			<a href="https://journals.tubitak.gov.tr/elektrik" class="ignore" >Turkish Journal of Electrical Engineering and Computer Sciences</a>
+		
+		
+		
+		 <span aria-hidden="true">&gt;</span> 
+			<a href="https://journals.tubitak.gov.tr/elektrik/vol25" class="ignore" >Vol. 25 (2017)</a>
+		
+		
+		
+		
+		
+		
+		
+			
+			 <span aria-hidden="true">&gt;</span> 
+			<a href="https://journals.tubitak.gov.tr/elektrik/vol25/iss5" class="ignore" >No. 5</a>
+			
+			
+		
+		
+		
+		
+	</p>
+</div>
+
+<div class="clear">&nbsp;</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/header_inherit.inc (cont) -->
+
+
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/journal_title_inherit.inc -->
+<h1 class="inherit-title">
+	<a href="https://journals.tubitak.gov.tr/elektrik" title="Turkish Journal of Electrical Engineering and Computer Sciences" >
+			Turkish Journal of Electrical Engineering and Computer Sciences
+	</a>
+</h1>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/header_inherit.inc (cont) -->
+
+
+
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/volume/issue/ir_journal_logo.inc -->
+
+
+
+
+
+ 
+
+
+
+
+
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/header_inherit.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/header.pregen (cont) -->
+
+
+<script type="text/javascript" src="/assets/floatbox/floatbox.js"></script>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/article_info.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/openurl.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/article_info.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_download_link.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/article_info.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_article_header.inc --><div id="sub">
+<div id="alpha"><!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/article_info.inc (cont) --><div id='title' class='element'>
+<h1><a href='https://journals.tubitak.gov.tr/cgi/viewcontent.cgi?article=2159&amp;context=elektrik'>Cavitation detection in centrifugal pumps using pressure time-domain  features</a></h1>
+</div>
+<div class='clear'></div>
+<div id='authors' class='element'>
+<h2 class='visually-hidden'>Authors</h2>
+<ul class="author"><li><a href='https://journals.tubitak.gov.tr/do/search/?q=author%3A%22POUYA%20SAMANIPOUR%22&start=0&context=26838904'><strong>POUYA SAMANIPOUR</strong></a></li>
+<li><a href='https://journals.tubitak.gov.tr/do/search/?q=author%3A%22JAVAD%20POSHTAN%22&start=0&context=26838904'><strong>JAVAD POSHTAN</strong></a></li>
+<li><a href='https://journals.tubitak.gov.tr/do/search/?q=author%3A%22HAMED%20SADEGHI%22&start=0&context=26838904'><strong>HAMED SADEGHI</strong></a></li>
+</ul></div>
+<div class='clear'></div>
+<div id='abstract' class='element'>
+<h2 class='field-heading'>Abstract</h2>
+<p>Condition monitoring of centrifugal pumps is vital due to their crucial role in industries. One of the most prevalent faults in pumps is cavitation, which can cause mechanical faults or even failure in the pump. In this paper, an approach is suggested to detect cavitation in a centrifugal pump using time-domain analysis of the pressure signal residual. First, pressure and torque signals are obtained using a model of the electro-pump, and then pressure deviation from the pump performance curve is defined as a residual. The residual time-domain features are extracted and applied as inputs to a self-organizing map (SOM) neural network to classify the system modes. The results indicate that the suggested method is capable of detecting incipient cavitation. Furthermore, the suggested method demonstrates robust performance against disturbance.</p>
+</div>
+<div class='clear'></div>
+<div id='doi' class='element'>
+<h2 class='field-heading'>DOI</h2>
+<p>10.3906/elk-1701-2</p>
+</div>
+<div class='clear'></div>
+<div id='keywords' class='element'>
+<h2 class='field-heading'>Keywords</h2>
+<p>Electro-pump, cavitation, fault detection, self-organizing map, time-domain analysis</p>
+</div>
+<div class='clear'></div>
+<div id='fpage' class='element'>
+<h2 class='field-heading'>First Page</h2>
+<p>4287</p>
+</div>
+<div class='clear'></div>
+<div id='lpage' class='element'>
+<h2 class='field-heading'>Last Page</h2>
+<p>4298</p>
+</div>
+<div class='clear'></div>
+<div id='recommended_citation' class='element'>
+<h2 class='field-heading'>Recommended Citation</h2>
+<!-- FILE: /srv/sequoia/main/data/journals.tubitak.gov.tr/assets/ir_journal/ir_citation.inc -->
+<p>
+    SAMANIPOUR, P, 
+    POSHTAN, J, 
+      & 
+    SADEGHI, H
+  (2017).
+  Cavitation detection in centrifugal pumps using pressure time-domain  features.
+  <em>Turkish Journal of Electrical Engineering and Computer Sciences 25 </em>(5):  4287-4298. 
+    <a href="https://doi.org/10.3906/elk-1701-2" >https://doi.org/10.3906/elk-1701-2</a>
+</p><!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/article_info.inc (cont) --></div>
+<div class='clear'></div>
+</div>
+    </div>
+    <div id='beta_7-3'>
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/openurl.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_download_link.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_download_button.inc --><div class="aside download-button">
+      <a id="pdf" class="btn" href="https://journals.tubitak.gov.tr/cgi/viewcontent.cgi?article=2159&amp;context=elektrik" title="PDF (565&nbsp;KB) opens in new window" target="_blank" > 
+    	<i class="icon-download-alt" aria-hidden="true"></i>
+        Download
+      </a>
+</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_embargo.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_custom_upper.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_openurl.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_article_metrics.inc -->
+<div id="article-stats" class="aside hidden">
+    <p class="article-downloads-wrapper hidden"><span id="article-downloads"></span> DOWNLOADS</p>
+    <p class="article-stats-date hidden">Since January 27, 2022</p>
+<script type="text/javascript">
+// magic has trouble rendering macros embedded directly in the the plumx-widget tag
+// so we have to emit the macro value into some js and let js
+// render and append the plumx-widget tag at view time
+const widget = document.createElement('plumx-widget');
+widget.setAttribute('type', 'artifact');
+widget.setAttribute('identifier-type', 'repo_url');
+widget.setAttribute('identifier', 'https://journals.tubitak.gov.tr/elektrik/vol25/iss5/64');
+widget.setAttribute('display', 'badge');
+widget.setAttribute('theme', 'bigben');
+widget.setAttribute('config', '{"hideWhenEmpty":true}');
+document.querySelector('#article-stats').appendChild(widget);
+</script>
+</div>
+<script src="https://plumx.elsevier.com/widget/plumx-widget.js" defer></script>
+<!-- Article Download Counts -->
+<script type="text/javascript" src="/assets/scripts/article-downloads.pack.js"></script>
+<script type="text/javascript">
+    insertDownloads(27763519);
+</script>
+<!-- Add border to Plum badge & download counts when visible -->
+<script>
+// bind to event when PlumX widget loads
+widget.addEventListener('plumx:load', (event) => {
+  jQuery('#article-stats').removeClass('hidden');
+  jQuery('.article-stats-date').addClass('plum-border');
+});
+// bind to event when page loads
+jQuery(window).on('load',function(e){
+// if DC downloads are visible
+  if (jQuery('#article-downloads').text().length > 0) {
+// add border to aside
+  jQuery('#article-stats').removeClass('hidden');
+  }
+});
+</script>
+<!-- Adobe Analytics: Download Click Tracker -->
+<script>
+$(function() {
+  // Download button click event tracker for PDFs
+  $(".aside.download-button").on("click", "a#pdf", function(event) {
+    pageDataTracker.trackEvent('navigationClick', {
+      link: {
+          location: 'aside download-button',
+          name: 'pdf'
+      }
+    });
+  });
+  // Download button click event tracker for native files
+  $(".aside.download-button").on("click", "a#native", function(event) {
+    pageDataTracker.trackEvent('navigationClick', {
+        link: {
+            location: 'aside download-button',
+            name: 'native'
+        }
+     });
+  });
+});
+</script>
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_disciplines.inc -->
+	<div id="beta-disciplines" class="aside">
+		<h3>Included in</h3>
+	<p>
+					<a href="https://network.bepress.com/hgg/discipline/258" title="Computer Engineering Commons" >Computer Engineering Commons</a>, 
+					<a href="https://network.bepress.com/hgg/discipline/142" title="Computer Sciences Commons" >Computer Sciences Commons</a>, 
+					<a href="https://network.bepress.com/hgg/discipline/266" title="Electrical and Computer Engineering Commons" >Electrical and Computer Engineering Commons</a>
+	</p>
+	</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/bookmark_widget.inc -->
+<div id="share" class="aside">
+<h2>Share</h2>
+	<div class="a2a_kit a2a_kit_size_24 a2a_default_style">
+    	<a class="a2a_button_facebook"></a>
+    	<a class="a2a_button_linkedin"></a>
+		<a class="a2a_button_whatsapp"></a>
+		<a class="a2a_button_email"></a>
+    	<a class="a2a_dd"></a>
+    	<script async src="https://static.addtoany.com/menu/page.js"></script>
+	</div>
+</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_geolocate.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/ir_geolocate_enabled_and_displayed.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_geolocate.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/zotero_coins.inc -->
+<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft_id=https%3A%2F%2Fjournals.tubitak.gov.tr%2Felektrik%2Fvol25%2Fiss5%2F64&amp;rft.atitle=Cavitation%20detection%20in%20centrifugal%20pumps%20using%20pressure%20time-domain%20%20features&amp;rft.aufirst=POUYA&amp;rft.aulast=SAMANIPOUR&amp;rft.au=JAVAD%20POSHTAN&amp;rft.au=HAMED%20SADEGHI&amp;rft.jtitle=Turkish%20Journal%20of%20Electrical%20Engineering%20and%20Computer%20Sciences&amp;rft.volume=25&amp;rft.issue=5&amp;rft.issn=1300-0632&amp;rft.spage=4287&amp;rft.epage=4298&amp;rft.date=2017-01-01&amp;rft_id=info:doi/10.3906%2Felk-1701-2">COinS</span>
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_custom_lower.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/article_info.inc (cont) --></div>
+<div class='clear'>&nbsp;</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_article_custom_fields.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/article_info.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/volume/issue/article/index.html (cont) --> 
+
+<!-- FILE /srv/sequoia/main/data/assets/site/ir_journal/footer.pregen -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/footer_inherit_7_8.inc -->					</div>
+
+	<div class="verticalalign">&nbsp;</div>
+	<div class="clear">&nbsp;</div>
+
+				</div>
+
+					<div id="sidebar">
+						<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc -->
+
+	<!-- FILE: /srv/sequoia/main/data/journals/journals.tubitak.gov.tr/elektrik/assets/ir_journal_sidebar_links_7_8.inc --><ul class="sb-custom-journal">
+    <li class="sb-home">
+        <a href="https://journals.tubitak.gov.tr/elektrik" title="Turkish Journal of Electrical Engineering and Computer Sciences" accesskey="1" >
+                Journal Home
+        </a>
+    </li>
+        <li class="sb-about">
+            <a href="https://journals.tubitak.gov.tr/elektrik/about.html" >
+                About This Journal
+            </a>
+        </li>
+        <li class="sb-aims">
+            <a href="https://journals.tubitak.gov.tr/elektrik/aimsandscope.html" >
+                Aims & Scope
+            </a>
+        </li>
+    <li class="sb-oa">
+        <a href="https://journals.tubitak.gov.tr/elektrik/openaccess.html" >
+            Open Access Statement
+        </a>
+    </li>
+    <li class="sb-oa">
+        <a href="https://journals.tubitak.gov.tr/elektrik/copyright-statement.html" >
+            Copyright Statement
+        </a>
+    </li>
+    <li class="sb-peer-review">
+        <a href="https://journals.tubitak.gov.tr/elektrik/peerreview.html" >
+            Peer Review
+        </a>
+    </li>
+        <li class="sb-ed-board">
+            <a href="https://journals.tubitak.gov.tr/elektrik/editorialboard.html" >
+                Editorial Board
+            </a>
+        </li>
+    <li class="sb-styleguide">
+            <a href="https://journals.tubitak.gov.tr/elektrik/styleguide.html" >
+                Information For Authors
+            </a>
+        </li>
+    <li class="sb-abstracting">
+        <a href="https://journals.tubitak.gov.tr/elektrik/abstracting_indexing.html" >
+            Abstracting and Indexing
+        </a>
+    </li>
+        <li class="sb-policies">
+            <a href="https://journals.tubitak.gov.tr/elektrik/policies.html" >
+                Publishing Policy & Ethics
+            </a>
+        </li>
+    <li class="special_issue_policies">
+        <a href="https://journals.tubitak.gov.tr/elektrik/special_issue_policies.html" >
+            Special Issue Policy
+        </a>
+    </li>
+		<li class="sb-contact">
+			<a href="https://journals.tubitak.gov.tr/elektrik/contact.html" >
+				Contact
+			</a>
+		</li>
+</ul><!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+		<!-- FILE: /srv/sequoia/main/data/assets/site/urc_badge.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/journals/journals.tubitak.gov.tr/elektrik/assets/ir_journal_navcontainer_7_8.inc --><div id="navcontainer">
+	<ul id="navlist">
+			<li class="sb-submit">
+				<a href="https://www2.cloud.editorialmanager.com/turkjelecengcompsci/default2.aspx" >
+					Submit Article
+				</a>
+			</li>
+			<li class="sb-submit">
+				<a href="https://journals.tubitak.gov.tr/elektrik/manuscript-template.zip" >NEW--Manuscript Template</a>
+			</li>
+			<li class="sb-popular">
+				<a href="https://journals.tubitak.gov.tr/elektrik/topdownloads.html" title="View the top downloaded papers" >
+						Most Popular Papers
+				</a>
+			</li>
+			<li class="sb-rss">
+				<a href="https://journals.tubitak.gov.tr/elektrik/announcements.html" title="Receive notifications of new content" >
+					Receive Email Notices or RSS
+				</a>
+			</li>
+	</ul>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_special_issue_7_8.inc -->
+<!-- FILE: /srv/sequoia/main/data/journals/journals.tubitak.gov.tr/elektrik/assets/ir_journal_navcontainer_7_8.inc (cont) -->
+</div><!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_search_7_8.inc --><div class="sidebar-search">
+	<form method="post" action="https://journals.tubitak.gov.tr/cgi/redirect.cgi" id="browse">
+		<label for="url">
+			Select an issue:
+		</label>
+			<br>
+		<!-- FILE: /srv/sequoia/main/data/journals.tubitak.gov.tr/assets/ir_journal/ir_journal_volume_issue_popup_7_8.inc --><div>
+	<span class="border">
+								<select name="url" id="url">
+							<option value="https://journals.tubitak.gov.tr/elektrik/all_issues.html">
+								All Issues
+							</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol34/iss5">
+											Vol. 34, No. 5
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol34/iss4">
+											Vol. 34, No. 4
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol34/iss3">
+											Vol. 34, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol34/iss2">
+											Vol. 34, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol34/iss1">
+											Vol. 34, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol33/iss6">
+											Vol. 33, No. 6
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol33/iss5">
+											Vol. 33, No. 5
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol33/iss4">
+											Vol. 33, No. 4
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol33/iss3">
+											Vol. 33, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol33/iss2">
+											Vol. 33, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol33/iss1">
+											Vol. 33, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol32/iss6">
+											Vol. 32, No. 6
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol32/iss5">
+											Vol. 32, No. 5
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol32/iss4">
+											Vol. 32, No. 4
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol32/iss3">
+											Vol. 32, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol32/iss2">
+											Vol. 32, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol32/iss1">
+											Vol. 32, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol31/iss7">
+											Vol. 31, No. 7
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol31/iss6">
+											Vol. 31, No. SI-1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol31/iss5">
+											Vol. 31, No. 5
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol31/iss4">
+											Vol. 31, No. 4
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol31/iss3">
+											Vol. 31, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol31/iss2">
+											Vol. 31, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol31/iss1">
+											Vol. 31, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol30/iss7">
+											Vol. 30, No. 7
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol30/iss6">
+											Vol. 30, No. 6
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol30/iss5">
+											Vol. 30, No. 5
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol30/iss4">
+											Vol. 30, No. 4
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol30/iss3">
+											Vol. 30, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol30/iss2">
+											Vol. 30, No. SI-1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol30/iss1">
+											Vol. 30, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol29/iss8">
+											Vol. 29, No. SI-1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol29/iss7">
+											Vol. 29, No. 7
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol29/iss5">
+											Vol. 29, No. 5
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol29/iss4">
+											Vol. 29, No. 4
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol29/iss3">
+											Vol. 29, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol29/iss2">
+											Vol. 29, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol29/iss1">
+											Vol. 29, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol28/iss6">
+											Vol. 28, No. 6
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol28/iss5">
+											Vol. 28, No. 5
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol28/iss4">
+											Vol. 28, No. 4
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol28/iss3">
+											Vol. 28, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol28/iss2">
+											Vol. 28, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol28/iss1">
+											Vol. 28, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol27/iss6">
+											Vol. 27, No. 6
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol27/iss5">
+											Vol. 27, No. 5
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol27/iss4">
+											Vol. 27, No. 4
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol27/iss3">
+											Vol. 27, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol27/iss2">
+											Vol. 27, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol27/iss1">
+											Vol. 27, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol26/iss6">
+											Vol. 26, No. 6
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol26/iss5">
+											Vol. 26, No. 5
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol26/iss4">
+											Vol. 26, No. 4
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol26/iss3">
+											Vol. 26, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol26/iss2">
+											Vol. 26, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol26/iss1">
+											Vol. 26, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol25/iss6">
+											Vol. 25, No. 6
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol25/iss5">
+											Vol. 25, No. 5
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol25/iss4">
+											Vol. 25, No. 4
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol25/iss3">
+											Vol. 25, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol25/iss2">
+											Vol. 25, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol25/iss1">
+											Vol. 25, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol24/iss6">
+											Vol. 24, No. 6
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol24/iss5">
+											Vol. 24, No. 5
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol24/iss4">
+											Vol. 24, No. 4
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol24/iss3">
+											Vol. 24, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol24/iss2">
+											Vol. 24, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol24/iss1">
+											Vol. 24, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol23/iss7">
+											Vol. 23, No. Sup. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol23/iss6">
+											Vol. 23, No. 6
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol23/iss5">
+											Vol. 23, No. 5
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol23/iss4">
+											Vol. 23, No. 4
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol23/iss3">
+											Vol. 23, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol23/iss2">
+											Vol. 23, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol23/iss1">
+											Vol. 23, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol22/iss6">
+											Vol. 22, No. 6
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol22/iss5">
+											Vol. 22, No. 5
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol22/iss4">
+											Vol. 22, No. 4
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol22/iss3">
+											Vol. 22, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol22/iss2">
+											Vol. 22, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol22/iss1">
+											Vol. 22, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol21/iss8">
+											Vol. 21, No. Sup. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol21/iss7">
+											Vol. 21, No. Sup. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol21/iss6">
+											Vol. 21, No. 6
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol21/iss5">
+											Vol. 21, No. 5
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol21/iss4">
+											Vol. 21, No. 4
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol21/iss3">
+											Vol. 21, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol21/iss2">
+											Vol. 21, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol21/iss1">
+											Vol. 21, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol20/iss8">
+											Vol. 20, No. Sup. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol20/iss7">
+											Vol. 20, No. Sup. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol20/iss6">
+											Vol. 20, No. 6
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol20/iss5">
+											Vol. 20, No. 5
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol20/iss4">
+											Vol. 20, No. 4
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol20/iss3">
+											Vol. 20, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol20/iss2">
+											Vol. 20, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol20/iss1">
+											Vol. 20, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol19/iss6">
+											Vol. 19, No. 6
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol19/iss5">
+											Vol. 19, No. 5
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol19/iss4">
+											Vol. 19, No. 4
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol19/iss3">
+											Vol. 19, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol19/iss2">
+											Vol. 19, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol19/iss1">
+											Vol. 19, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol18/iss6">
+											Vol. 18, No. 6
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol18/iss5">
+											Vol. 18, No. 5
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol18/iss4">
+											Vol. 18, No. 4
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol18/iss3">
+											Vol. 18, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol18/iss2">
+											Vol. 18, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol18/iss1">
+											Vol. 18, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol17/iss3">
+											Vol. 17, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol17/iss2">
+											Vol. 17, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol17/iss1">
+											Vol. 17, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol16/iss3">
+											Vol. 16, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol16/iss2">
+											Vol. 16, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol16/iss1">
+											Vol. 16, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol15/iss3">
+											Vol. 15, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol15/iss2">
+											Vol. 15, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol15/iss1">
+											Vol. 15, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol14/iss3">
+											Vol. 14, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol14/iss2">
+											Vol. 14, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol14/iss1">
+											Vol. 14, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol13/iss3">
+											Vol. 13, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol13/iss2">
+											Vol. 13, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol13/iss1">
+											Vol. 13, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol12/iss3">
+											Vol. 12, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol12/iss2">
+											Vol. 12, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol12/iss1">
+											Vol. 12, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol11/iss3">
+											Vol. 11, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol11/iss2">
+											Vol. 11, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol11/iss1">
+											Vol. 11, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol10/iss3">
+											Vol. 10, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol10/iss2">
+											Vol. 10, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol10/iss1">
+											Vol. 10, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol9/iss2">
+											Vol. 9, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol9/iss1">
+											Vol. 9, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol8/iss2">
+											Vol. 8, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol8/iss1">
+											Vol. 8, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol7/iss1">
+											Vol. 7, No. 1-3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol6/iss3">
+											Vol. 6, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol6/iss2">
+											Vol. 6, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol6/iss1">
+											Vol. 6, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol5/iss3">
+											Vol. 5, No. 3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol5/iss2">
+											Vol. 5, No. 2
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol5/iss1">
+											Vol. 5, No. 1
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol4/iss1">
+											Vol. 4, No. 1-2-3
+										</option>
+										<option value="https://journals.tubitak.gov.tr/elektrik/vol3/iss2">
+											Vol. 3, No. 2-3
+										</option>
+						</select>
+		<input type="submit" value="Browse" class="searchbutton" style="font-size:11px;">
+	</span>
+</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_search_7_8.inc (cont) -->
+			<div style="clear:left;">&nbsp;</div>
+	</form>
+	<!-- FILE: /srv/sequoia/main/data/journals.tubitak.gov.tr/assets/ir_journal/ir_sidebar_search_7_8.inc -->
+	<div id="search-issue">
+		<h2><a href="https://journals.tubitak.gov.tr/elektrik/all_issues.html" >Issues by Year</a></h2>
+	</div>
+<h2>Search</h2>
+<form method='get' action='https://journals.tubitak.gov.tr/do/search/' id="sidebar-search">
+	<label for="search" accesskey="4">
+		Enter search terms:
+	</label>
+		<div>
+			<span class="border">
+				<input type="text" name='q' class="search" id="search">
+			</span> 
+			<input type="submit" value="Search" class="searchbutton" style="font-size:11px;">
+		</div>
+	<label for="context" style="display:none;">
+		Select context to search:
+	</label> 
+		<div>
+			<span class="border">
+				<select name="fq" id="context">
+						<option value='virtual_ancestor_link:"https://journals.tubitak.gov.tr/elektrik"'>in this journal</option>
+					<option value='virtual_ancestor_link:"https://journals.tubitak.gov.tr"'>in this repository</option>
+					<option value='virtual_ancestor_link:"http:/"'>across all repositories</option>
+				</select>
+			</span>
+		</div>
+</form>
+<p class="advanced">
+		<a href="https://journals.tubitak.gov.tr/do/search/advanced/?fq=virtual_ancestor_link:%22https://journals.tubitak.gov.tr/elektrik%22" >
+			Advanced Search
+		</a>
+</p>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_search_7_8.inc (cont) -->
+</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/journals/journals.tubitak.gov.tr/elektrik/assets/ir_journal_issn_7_8.inc -->
+	<div id="issn">
+		<p class="sb-issn">ISSN: 1300-0632</p>
+		<p class="sb-extra-issn">eISSN: 1303-6203</p>
+	</div>
+	<div class="clear">&nbsp;</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/journals.tubitak.gov.tr/assets/ir_journal/ir_journal_custom_lower_7_8.inc -->
+<div id="cc-license">
+    <img width='100' height='35' src="/assets/md5images/ba94ad36c6052946bdc9efbef795465c.png" alt="">
+</div>
+<div id="sb-custom" class="social">
+        <a href="https://twitter.com/AcademicTubitak" target="_blank" ><img alt="TUBITAK Academic Journals Twitter" width='40' height='40' src="/assets/md5images/0a27b0ab29e0e0458660816a9a5f99df.gif"></a>
+        <a href="https://www.instagram.com/academictubitak/" target="_blank" ><img alt="TUBITAK Academic Journals Instagram" width='40' height='39' src="/assets/md5images/e994fec978b798572ecc79436ca02f6a.png"></a>
+        <a href="https://www.linkedin.com/in/tubitak-academic-journals-2341a1234/" target="_blank" ><img alt="TUBITAK Academic Journals LinkedIn" width='40' height='40' src="/assets/md5images/ef8ef2beed3ca828b6d5287e68d35d66.png"></a>
+</div>
+<div id="tulogo">
+    <img width='200' height='82' src="/assets/md5images/0fc703048fd2e1025a05e27482d4aa60.jpg" alt="">
+</div><!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_custom_sidebar_images.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_sidebar_geolocate.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/ir_geolocate_enabled_and_displayed.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_sidebar_geolocate.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_custom_lowest_7_8.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/footer_inherit_7_8.inc (cont) -->
+							<div class="verticalalign">&nbsp;</div>
+					</div>
+
+			</div>
+
+			
+				<!-- FILE: /srv/sequoia/main/data/assets/site/ir_footer_content.inc --><div id="footer" role="contentinfo">
+	
+	
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_bepress_logo.inc --><div id="bepress">
+
+<a href="https://www.elsevier.com/solutions/digital-commons" title="Elsevier - Digital Commons" >
+	<em>Elsevier - Digital Commons</em>
+</a>
+
+</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_footer_content.inc (cont) -->
+	<p>
+		<a href="https://journals.tubitak.gov.tr" title="Home page" accesskey="1" >Home</a> | 
+		<a href="https://journals.tubitak.gov.tr/about.html" title="About" >About</a> | 
+		<a href="https://journals.tubitak.gov.tr/faq.html" title="FAQ" >FAQ</a> | 
+		<a href="/cgi/myaccount.cgi?context=" title="My Account Page" accesskey="3" >My Account</a> | 
+		<a href="https://journals.tubitak.gov.tr/accessibility.html" title="Accessibility Statement" accesskey="0" >Accessibility Statement</a>
+	</p>
+	<p>
+	
+	
+		<a class="secondary-link" href="https://www.elsevier.com/legal/privacy-policy" title="Privacy Policy" >Privacy</a>
+	
+		<a class="secondary-link" href="https://www.elsevier.com/legal/elsevier-website-terms-and-conditions" title="Copyright Policy" >Copyright</a>	
+	</p> 
+	
+</div>
+
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/footer_inherit_7_8.inc (cont) -->
+					
+
+		</div>
+	</div>
+</div>
+
+<!-- FILE: /srv/sequoia/main/data/journals.tubitak.gov.tr/assets/ir_analytics.inc --><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-229958314-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-229958314-1');
+</script><!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/footer_inherit_7_8.inc (cont) -->
+
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/footer.pregen (cont) -->
+
+<script type='text/javascript' src='/assets/scripts/bpbootstrap-20160726.pack.js'></script><script type='text/javascript'>BPBootstrap.init({appendCookie:''})</script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4644bab6ddaff9e',t:'MTc5MTI4NTgyMw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>

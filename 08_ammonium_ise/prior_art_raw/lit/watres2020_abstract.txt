@@ -1,0 +1,52 @@
+1. Water Res. 2020 Oct 15;185:116227. doi: 10.1016/j.watres.2020.116227. Epub
+2020  Jul 24.
+
+Reconstruction of corrupted datasets from ammonium-ISE sensors at WRRFs through 
+merging with daily composite samples.
+
+Pedersen JW(1), Larsen LH(2), Thirsing C(3), Vezzaro L(4).
+
+Author information:
+(1)DTU Environment, Technical University of Denmark, Bygningstorvet, Building 
+115, 2800 Kgs, Lyngby, Denmark. Electronic address: jowi@env.dtu.dk.
+(2)DTU Environment, Technical University of Denmark, Bygningstorvet, Building 
+115, 2800 Kgs, Lyngby, Denmark.
+(3)BIOFOS A/S, Refshalevej 250, 1432 København K, Denmark.
+(4)DTU Environment, Technical University of Denmark, Bygningstorvet, Building 
+115, 2800 Kgs, Lyngby, Denmark; Krüger A/S, Veolia Water Technologies, 
+Gladsaxevej 363, 2860 Søborg, Denmark.
+
+Long-term, continuous datasets of high quality are important for 
+instrumentation, control, and automation efforts of wastewater resources 
+recovery facility (WRRFs). This study presents a methodology to increase the 
+reliability of measurements from ammonium ion-selective electrodes (ISEs). This 
+is done by correcting corrupted ISE data with a data source that often is 
+available at WRRFs (volume-proportional composite samples). A yearlong 
+measurement campaign showed that the existing standard protocols for sensor 
+maintenance might still create corrupted dataset, with poor sensor 
+recalibrations responsible for abrupt and unrealistic jumps in the measurements. 
+The proposed automatic correction methodology removes both recalibration jumps 
+and signal drift by using information from composite samples that already are 
+taken for reporting to legal authorities. Results showed that the developed 
+methodology provided a continuous, high-quality time series without the major 
+data quality issues of the original signal. In fact, the signal was improved for 
+87% of days when a reference sample was available. The effect of correcting the 
+data before use in a data-driven software sensor was also investigated. The 
+corrected dataset led to noticeably smaller day-to-day variations in estimated 
+NH4+ loads, and to large improvements on both median estimates and prediction 
+bounds. The long time series allowed for an investigation of how much training 
+data that is required to fit a software sensor, which provides estimates that 
+are representative for the entire study period. The results showed that 8 weeks 
+of data allowed for a good median estimate, while 16 weeks are required for 
+obtaining good 80% prediction bounds. Overall, the proposed method can increase 
+the applicability of relatively cheaper ISE sensors for ICA application within 
+WRRFs.
+
+Copyright © 2020. Published by Elsevier Ltd.
+
+DOI: 10.1016/j.watres.2020.116227
+PMID: 32736284 [Indexed for MEDLINE]
+
+Conflict of interest statement: Declaration of Competing Interest We declare 
+that we do not have any commercial or associative interest that represents a 
+conflict of interest in connection with the work submitted.

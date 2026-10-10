@@ -1,0 +1,287 @@
+=== page 1
+Ratings are not static—you must learn how to 
+apply “shifts” to them
+1
+10
+100
+1 10 100 1000 10000
+Discharge (cfs)
+Stage  (ft)
+=== page 2
+It is common for controls to change…
+Photographer standing on 
+debris jam before flood
+Photographer in 
+approximately same location 
+after flood
+=== page 3
+Increasing Sediment Size Increasing Slope
+Degradation Aggradation
+Most natural channels are dynamic--channel shape  
+changes to carry the imposed load
+Modified from Lane, 1955
+Degradation AggradationDegradation Aggradation
+=== page 4
+Shift Development Concepts
+1. Shifting controls occur due to changes in the 
+control such as scour or fill, growth/removal of 
+vegetation, or debris accumulation. 
+2. Shifts are  used until evidence of a permanent
+change in the rating is documented.
+3. In this method, a correction, called a shift 
+adjustment, is applied to the g.h. record to adjust 
+the temporary relation between g.h. and discharge 
+to the base rating.
+=== page 5
+Shift Development Concepts (cont.)
+4. The shift adjustment is the difference between the 
+measurement GH and the rating GH for a given 
+discharge. A shift is plus
+if the measurement gage 
+height is less than the rating GH, and minus if the 
+measurement GH is more than the rating gage 
+height.
+5. All shift adjustments should be specified by means 
+of a variable-shift diagram (V-shift diagram).
+=== page 6
+0
+1
+2
+3
+4
+5
+6
+0 2 4 6 8 10
+ADAPS uses V-diagrams to apply shifts to 
+ratings
+Shift Adjustment
+0
+1
+2
+3
+4
+5
+-0.8 -0.7 -0.6 -0.5 -0.4 -0.3 -0.2 -0.1 0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8
+Gage HeightGage Height
+Discharge
+d
+d
+c
+c
+b
+a
+a
+b
+=== page 7
+Discharge
+Stage
+•Positive shift
+•Plus shift
+•Shift to the right
+•Scouring shift
+•Negative shift
+•Minus shift
+•Shift to the left
+•Filling shift
+Base 
+Rating
+Often will prorate to positive 
+shift as velocities increase 
+on a rise to sometime soon 
+after the peak.
+Often will prorate to negative shift 
+on a recession as sediment falls 
+out.
+Shifts are referred to in many ways:
+=== page 8
+0
+0.5
+1
+1.5
+2
+2.5
+3
+3.5
+4
+-0.3 -0.25 -0.2 -0.15 -0.1 -0.05 0
+Shift, in feet
+Gage Height
+0
+0.5
+1
+1.5
+2
+2.5
+3
+3.5
+4
+-0.3 -0.25 -0.2 -0.15 -0.1 -0.05 0
+Shift, in feet
+Gage Height
+Measurements
+and error bars
+V-Diagram 
+Input Points
+The three points used to represent variable-shift 
+diagrams must be carefully chosen
+=== page 9
++0.17
++0.16
++0.17
++0.17
+Rating
+Shift 
+Curve
+Shifts, in feet
+• When working with rating shifts you must understand how 
+shifts associated with measurements are computed
+• You must be able to compute shifts in the field so you 
+know if a check measurement is needed
+=== page 10
+Here are the steps used to compute shifts 
+• Determine percent difference that a
+measurement plots from the rating as:
+% diff.  = ((MeasQ – RatingQ) / RatingQ) x 100
+• Determine shift associated with a 
+measurement as:
+Shift = Rating GH – Q
+meas GH
+=== page 11
+Shifts are often 
+not needed if 
+measurements 
+plot within 
+indicated 
+accuracy limits 
+with respect to 
+the rating
+Output from ADAPS “Shift Bar” program
+
+=== page 12
+You should use measurement ratings to help 
+you to decided whether or not to shift
+Uncertainty amounts used by ADAPS
+– Excellent = 2%
+– Good = 5%
+– Fair = 8%
+– Poor = >8%
+Error bars on measurement in V-diagram 
+plot show uncertainty
+=== page 13
+Even if the Qm’s plot within the error limits, you may 
+want to shift to measurements if they show a trend
+Variable shift diagram
+0
+1
+2
+3
+4
+5
+6
+7
+-0.2 0 0.2
+Shift, in feet
+Gage Height
+=== page 14
+Shifts should be tied back to the rating at an 
+appropriate point
+Section Control
+Channel
+Control
+Overbank
+Gh - e
+
+=== page 15
+Shifting patterns associated with artificial controls 
+MAY differ from those associated with natural 
+controls. 
+• Proper installation/maintenance of weir or flume 
+extremely important for rating-curve validity
+• Proper analysis depends on detailed observations and 
+notes during field visits!
+
+=== page 16
+Weirs
+
+=== page 17
+Scour/fill of weir pool will create a shift curve that 
+parallels a section rating except at very low flows
+
+=== page 18
+Fill in the weir pool causes:
+• Shallower pool, higher velocities
+• More discharge for given stage
+• Shift to the right [plus shift] (usually FILL is associated 
+with a shift to the left, but that is a fill on the control 
+versus behind it as shown here)
+
+=== page 19
+Scour in the weir pool causes:
+• Deepened pool, slower velocity
+• Smaller discharge for given stage
+• Shift to the left [minus shift] (usually SCOUR is 
+associated with a shift to the right, but that is scour on/at 
+the control versus behind it as shown here)
+
+=== page 20
+Vegetation growth 
+in weir pool causes:
+• Slower velocities, but gradual over time
+• Seasonal shifting patterns, parallel and to 
+the left of rating
+
+=== page 21
+Moss or algal growth
+ on
+ weir crest results in:
+• Reduced head on the weir (increases scale 
+offset -‘e’)
+• Shift to the left (minus shift), concave up and 
+asymptotic to rating at higher stages
+• So keep the weir crest cleaned!
+
+=== page 22
+Flumes
+
+=== page 23
+At sites with flumes shifts are most 
+commonly caused by changes in the 
+approach section or in contracting section 
+of flume. 
+
+=== page 24
+Deposition of debris upstream from flume may:
+• Divert flow to gage-side of flume; build-up of water at the 
+gage results in shift to the left (neg shift req’d)
+• Divert flow to opposite side of flume; build-up of water 
+opposite the gage results in shift to the right (pos shift req’d)
+• Draw shift parallel to section rating (as for weir)
+
+=== page 25
+Deposition of debris (or algae growth) 
+at entrance to flume throat causes a 
+shift to the left: 
+• Stage at the gage will be raised higher 
+than normal for any given discharge
+• Deposition or algae increases the scale 
+offset ‘e’; the result is:
+– A shift to the left that is concave up and runs 
+asymptotic to rating at higher stages (similar 
+to the effect of algae growth on a weir crest)
+See: WSP 2175, pp. 348-352 (Rantz, 1982) for more details on 
+shifts and artificial controls
+
+=== page 26
+How many shifts do you see?
+
+=== page 27
+Additional 
+resources are 
+available to help 
+you understand 
+how to compute 
+and apply shifts
+See also: TWRI on computation of continuous  
+records of  streamflow
+See additional 
+notes

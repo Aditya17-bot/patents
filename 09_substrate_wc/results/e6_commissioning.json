@@ -1,0 +1,33 @@
+{
+ "per_compartment": {
+  "Reference": {
+   "commissioning": 3.73,
+   "rolling": 1.1
+  },
+  "AICU": {
+   "commissioning": 7.85,
+   "rolling": 1.8
+  },
+  "Automatoes": {
+   "commissioning": 0.8,
+   "rolling": 0.8
+  },
+  "Digilog": {
+   "commissioning": 1.2,
+   "rolling": 2.4
+  },
+  "IUACAAS": {
+   "commissioning": 6.42,
+   "rolling": 1.77
+  },
+  "TheAutomators": {
+   "commissioning": 1.0,
+   "rolling": 0.92
+  }
+ },
+ "commissioning_days": 14,
+ "median_commissioning": 2.46,
+ "median_rolling": 1.44,
+ "rolling_lower_in": 4,
+ "decision_mismatch_commissioning_vs_rolling_median": 0.494
+}

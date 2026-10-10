@@ -1,0 +1,10 @@
+june_M25_A: 373 sites, 209 surveyed relations
+  pairs 1105, adjacent after ordering 247, self floor 0.987%
+  junction candidates 955
+  categories {'unmapped_site': 123, 'outside_map': 133, 'exact': 152, 'implied': 101}, judged precision 0.655
+  recall by size {'2': {'recovered': 122, 'of': 163}, '3': {'recovered': 26, 'of': 32}, '4': {'recovered': 4, 'of': 14}}
+  prior_only   MAE   17.75  outside  11.63%
+  surveyed     MAE   15.44  outside   5.27%  constraints 209
+  recovered    MAE   15.59  outside   7.22%  constraints 496
+  both         MAE   15.27  outside   5.85%  constraints 705
+wrote results/discovery_v2_june_M25_A.json

@@ -1,0 +1,87 @@
+Page 1 of 4
+Water quality (DP1.20288.001)
+Measurement
+Water quality measurements include specific conductance, dissolved oxygen, pH, chlorophyll a (at lake and 
+river sites only), turbidity and fluorescent dissolved organic matter (fDOM).
+Collection methodology
+Measured using YSI EXO2 Multisondes located at both the S1 (upstream) and S2 (downstream) locations of 
+wadeable streams and on the buoy at lakes and river sites. At wadeable stream sites measurements are 
+collected every minute. At lakes and river sites measurements are collected at 0.5 m below the surface every 
+5 minutes, and a vertical profile of the water column is collected every 4 hours.
+fDOM is corrected for effects of temperature and absorbance on measured fluorescence. Absorbance data 
+are obtained from a co-located SUNA. For this reason, fDOM in wadeable stream sites is only reported for 
+the S2 (downstream) location.
+For information about disturbances, land management activities, and other incidents that may impact data at 
+NEON sites, see the  data product.Site management and event reporting (DP1.10111.001)
+Maintenance and calibration
+The multisonde has an antifouling copper guard and an automated wiper which cleans the optical lens before 
+every fifth measurement. Manual cleaning is performed bi-weekly and field calibration is performed monthly. 
+Sensors are returned to the NEON CALVAL lab annually for refresh.
+Page 2 of 4
+Multisonde inside protective PVC housing.
+Data package contents
+ais_maintenance: Information related to aquatic sensor and infrastructure maintenance
+ais_multisondeCleanCal: Information related to multisonde cleaning and calibration activities
+waq_instantaneous: Instantaneous water quality measurements
+variables: Description and units for each column of data in data tables
+readme: Data product description, issue log, and other metadata about the data product
+sensor_positions: Geospatial locations of individual sensors
+Data quality
+Each measurement is accompanied by a final quality flag ("...FinalQF"). Data with a final quality flag of 1 are 
+potentially inaccurate and should only be used with caution. The final quality flag is based on automated QA
+/QC tests, including range, gap, and spike tests, as well as a manually set science review flag if applicable ("...
+Page 3 of 4
+FinalQFSciRvw"). This data product also has automated flags for sensor lamp temperature and internal 
+humidity. Each measurement is accompanied by an estimate of measurement uncertainty, expressed at the 
+95% confidence level ("...ExpUncert"), which comprises known and quantifiable uncertainties.
+Please note that quality checks are comprehensive but not exhaustive; therefore, unknown data quality 
+issues may exist. Also note that, conversely, some quality-flagged data are still usable depending on the 
+scientific use case. Additionally, these  are not currently gap-filled or corrected for sensor drift or Level 1 data
+shifts, such as those introduced by sensor swaps or field calibrations. Users are advised to evaluate quality 
+of the data as relevant to the scientific research question being addressed, perform data review and post-
+processing prior to analysis, and use the data quality flags, issue logs, and maintenance records included in 
+download packages to aid interpretation. A tutorial with examples of how to do this can be found .here
+Standard calculations
+For wrapper functions to download data from the API, and functions to merge tabular data files across sites 
+and months, NEON provides the neonUtilities package in R and the neonutilities package in Python. See the 
+ tutorial for introductory instructions in both programming languages.Download and Explore NEON Data
+High frequency (1-min) data collected at wadeable stream sites can be averaged to reduce sensor noise and 
+match the temporal resolution of other NEON data products. Pay careful attention to missing and quality 
+flagged measurements and omit from the average as appropriate. Sensor height (zOffset; m), the latitude, 
+longitude (referenceLatitude, referenceLongitude; °), and elevation (m) of the in stream infrastructure base 
+are in the sensor positions file (...sensor_positions...csv). Use the HOR.VER component of the time series file 
+name (horizontalPosition and verticalPosition if stacked using neonUtilities) to link to the corresponding row 
+in the HOR.VER column of the sensor positions file. An HOR of 101 or 111 correspond to Sensor Set 1 
+(upstream) and HOR of 102 or 112 correspond to Sensor Set 2 (downstream). An HOR of 103 correspond to 
+buoys.
+Documentation
+ 
+NEON Aquatic Sampling Strategy
+NEON.DOC.001152vD | 846.5 KiB | PDF
+ 
+NEON Sensor Command, Control and Configuration (C3) Document: Multisonde, Stream
+NEON.DOC.001166vJ | 462 KiB | PDF
+ 
+NEON Preventive Maintenance Procedure: AIS Surface Water Quality Multisonde
+NEON.DOC.001569vE | 12.8 MiB | PDF
+ 
+NEON Sensor Command, Control and Configuration (C3) Document: Buoy Meteorological 
+Station and Submerged Sensor Assembly
+NEON.DOC.003808vP | 1.8 MiB | PDF
+Page 4 of 4
+ 
+NEON Algorithm Theoretical Basis Document (ATBD): Water Quality
+NEON.DOC.004931vC | 1.6 MiB | PDF
+ 
+NEON User Guide to AIS Maintenance Data
+NEON_ISmaintenance_vB | 217.8 KiB | PDF
+For more information on data product documentation, see:
+https://data.neonscience.org/data-products/DP1.20288.001
+Citation
+To cite data from value: "Water quality"  see citation here:(DP1.20288.001),
+https://data.neonscience.org/data-products/DP1.20288.001
+For general guidance in citing NEON data and documentation, see the citation guidelines page:
+https://www.neonscience.org/data-samples/guidelines-policies/citing
+Contact Us
+NEON welcomes discussion with data users! Reach out with any questions or concerns about NEON data: 
+Contact Us

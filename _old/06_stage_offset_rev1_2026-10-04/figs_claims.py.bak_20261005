@@ -1,0 +1,69 @@
+"""Figure 7: claim tree (independent system claim 1 and method claim 3, nine dependents)."""
+import importlib.util
+import os
+
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+
+_spec = importlib.util.spec_from_file_location(
+    "p4_make_figs", os.path.join(os.path.dirname(os.path.abspath(__file__)), "make_figs.py"))
+M = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(M)
+
+
+def fig07():
+    fig, ax = plt.subplots(figsize=(23.5, 12.4))
+    ax.set_xlim(0, 47)
+    ax.set_ylim(0.4, 25.2)
+    ax.axis("off")
+    # independent claims
+    M.zone(ax, 0.4, 15.4, 22.6, 9.4, M.Z_IN, "Claim 1", "INDEPENDENT - SYSTEM")
+    sys_lines = [
+        "gauging station 100: stage sensor 110, data logger 115",
+        "applying R(h + s); telemetry link 130; archive 200;",
+        "data-processing system 900 (units 310-350, 400) configured to:",
+        "(a) receive stage and offsets measured at two field visits",
+        "(b) receive neighbour 120 record finalised with its own visits;",
+        "     lag; admit if coupling >= threshold",
+        "(c) steady intervals: y = ln Q_Y - ln R(h),  x = d ln R/dh",
+        "(d) FLOW RATIO c FIXED AT EACH VISIT from its measured offset",
+        "(e) WINDOW OFFSET: stage offset fitted to y - c against x (metres)",
+        "(f) s = interpolated offset + gain x (s_raw - interpolated), gain from visits",
+        "(g) Q = R(h + s) replaces the logger's record in archive 200",
+    ]
+    for i, t in enumerate(sys_lines):
+        ax.text(1.0, 22.9 - i * 0.68, t, fontsize=10.2, va="center", ha="left", zorder=6,
+                fontweight="bold" if t[:3] in ("(d)", "(e)") else "normal")
+    M.zone(ax, 23.8, 15.4, 22.4, 9.4, M.Z_PROC, "Claim 3", "INDEPENDENT - METHOD")
+    ax.text(35.0, 19.6, "method of correcting the discharge record of\nthe same gauging station "
+            "between two field visits,\ncarried out by data-processing system 900:\n\n"
+            "steps (a) to (g) as in claim 1, written as method steps,\n"
+            "ending in the record of the station replaced\nin archive 200",
+            ha="center", va="center", fontsize=10.4, zorder=6, linespacing=1.45)
+    # real-time dependents
+    M.zone(ax, 4.1, 8.6, 15.2, 5.0, M.Z_RED, "Claim 2", "SYSTEM - OFFSET TO THE LOGGER")
+    ax.text(11.7, 10.75, "after the last visit: flow ratio fixed at that visit;\n"
+            "s = s(P) + gain x (s_raw - s(P)) sent over link 130;\n"
+            "logger 115 stores it and applies R(h + s) to every stage", ha="center",
+            va="center", fontsize=10.2, zorder=6, linespacing=1.45)
+    M.zone(ax, 27.4, 8.6, 15.2, 5.0, M.Z_RED, "Claim 4", "METHOD - OFFSET TO THE LOGGER")
+    ax.text(35.0, 10.75, "after the second visit: same steps as claim 2;\n"
+            "offset transmitted to logger 115, which\ncomputes the discharge it reports with it",
+            ha="center", va="center", fontsize=10.2, zorder=6, linespacing=1.45)
+    M.arr(ax, (11.7, 15.4), (11.7, 13.6), color=M.Z_IN[0])
+    M.arr(ax, (35.0, 15.4), (35.0, 13.6), color=M.Z_PROC[0])
+    # common dependents
+    deps = [(0.5, "Claim 5", "admission:\narea increment\n<= 20 %,\nlag -2..+2 d,\ncoupling >= 0.95", "1-4"),
+            (7.15, "Claim 6", "daily intervals;\nsteady <= 0.076 m;\n21-day windows,\n>= 8 steady days", "1-4"),
+            (13.8, "Claim 7", "least squares:\nsum x (y - c) / sum x^2;\ngain = regression\nthrough origin", "1-4"),
+            (20.45, "Claim 8", "gain prior 0.5\nuntil 5 visits,\nbounded 0..1.2", "7"),
+            (27.1, "Claim 9", "linear in time;\nwindows before\nand after t", "1 or 3"),
+            (33.75, "Claim 10", "neighbour record\nrebuilt with offsets\ninterpolated between\nits own visits", "1 or 3"),
+            (40.4, "Claim 11", "sensor: transducer,\nbubbler or radar;\nsatellite or cellular\nlink; 15-minute\nsamples", "1 or 2")]
+    for x, head, t, par in deps:
+        M.depbox(ax, x, 1.0, 5.8, 5.6, "#566573", head + "  (of " + par + ")", t)
+    ax.plot([0.5, 46.2], [7.6, 7.6], color="#566573", lw=1.2, ls="--")
+    ax.text(23.3, 8.0, "dependent claims 5 to 11 refine claims 1 to 4 as marked", ha="center",
+            fontsize=10, color="#566573", style="italic")
+    M.save(fig, "fig07.png", 200, "claim tree")

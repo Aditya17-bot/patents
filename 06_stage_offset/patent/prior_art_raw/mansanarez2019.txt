@@ -1,0 +1,1422 @@
+HAL Id: hal-02609391
+https://hal.inrae.fr/hal-02609391v1
+Submitted on 16 May 2020
+HAL is a multi-disciplinary open access archive
+for the deposit and dissemination of scientific re-
+search documents, whether they are published or not.
+The documents may come from teaching and research
+institutions in France or abroad, or from public or pri-
+vate research centers.
+L’archive ouverte pluridisciplinaire HAL, est des-
+tinée au dépôt et à la diffusion de documents scien-
+tifiques de niveau recherche, publiés ou non, émanant
+des établissements d’enseignement et de recherche
+français ou étrangers, des laboratoires publics ou
+privés.
+HAL Authorization
+Shift happens! Adjusting stage-discharge rating curves to
+morphological changes at known times
+Valentin Mansanarez, Benjamin Renard, Jérôme Le Coz, M. Lang, M. Darienzo
+To cite this version:
+Valentin Mansanarez, Benjamin Renard, Jérôme Le Coz, M. Lang, M. Darienzo. Shift happens! Adjusting
+stage-discharge rating curves to morphological changes at known times. Water Resources Research, 2019, 55,
+pp.2876-2899. ⟨10.1029/2018WR023389⟩. ⟨hal-02609391⟩
+Shift Happens! Adjusting Stage-Discharge Rating Curves
+to Morphological Changes at Known Times
+V . Mansanarez1,2
+ , B. Renard1
+ ,J .L eC o z1
+ , M. Lang1
+ , and M. Darienzo 1
+1Irstea, UR RiverLy, Villeurbanne, France, 2Department of Physical Geography, Stockholm University, Stockholm,
+Sweden
+Abstract Establishing streamflow time series in unstable rivers is challenged by changes in the
+stage-discharge relation after floods. Then, the field hydrologist must develop a new stage-discharge rating
+curve using new calibration data but also using some information from previous calibration data and
+previous rating curves. The process includes a large amount of informal expert knowledge and hydraulic
+assumptions seldom made explicit. This paper develops a stage-period-discharge (SPD) model based on the
+physical interpretation of changes in the stage-discharge relation across a series of stability periods defined
+by known dates and times. Using simple hydraulic equations, the user provides prior knowledge on the
+controls, their static and varying parameters, and their possible changes. As a single model is used for all
+the periods, the estimation of all rating curves can be performed in one go: All gaugings hence provide
+information to estimate the static parameters and the varying parameters for the relevant periods. Bayesian
+inference is used, providing a natural way to include prior knowledge and to quantify uncertainty. The
+generality and some key properties of the method are demonstrated through application to two
+hydrometric stations, differing in hydraulic configuration and in number and type of changes. Specific
+experiments demonstrate the ability of the SPD model to transfer information across periods.
+Consequently, rating curves are more precisely estimated than by separately estimating them for each
+period. The SPD model provides a hydraulically based, transparent, and user-friendly approach to
+replace manual shift corrections traditionally applied in operational practice, with a quantification
+of uncertainties.
+1. Introduction
+1.1. Changes in the Hydrometric Rating Curves
+Among the most important variables in hydrology, river discharge cannot be measured continuously. Most
+often, the discharge time series used by hydrologists result from the transformation of quasi-continuous
+measurements of water level, also known as stage, via a stage-discharge relation, known as the rating curve
+(e.g., World Meteorological Organization WMO, 2010). The rating curve must be estimated at each hydro-
+metric station from occasional stage-discharge measurements (called gaugings) and some considerations
+on the hydraulic controls which physically determine the stage-discharge relation (e.g., Réméniéras, 1949).
+The process of building a rating curve is affected by many sources of uncertainty, including the imperfec-
+tion of the specified rating curve equation, the measurement uncertainty of calibration gaugings, and the
+uncertainty in estimated parameters. Rating curve uncertainty impacts any analysis that makes use of dis-
+charge time series: flood frequency analysis (e.g., Steinbakk et al., 2016), hydrological model calibration (e.g.,
+Sikorska & Renard, 2017), real-time flood forecasting (e.g., Ocio et al., 2017), hydrological change detection
+(e.g., Juston et al., 2014; Lang et al., 2010), hydrological signatures (e.g., Westerberg & McMillan, 2015),
+among many others. Consequently, quantifying rating curve uncertainty and using it in decision making
+may lead to better decisions, as illustrated by McMillan et al. (2017). Nevertheless, discharge time series are
+usually provided without quantitative uncertainties (Hamilton & Moore, 2012).
+A major challenge to streamflow data accuracy comes from rating changes. Ibbitt and Pearson (1987) com-
+puted how the streamflow uncertainty varied with the frequency of rating changes and the frequency of
+gaugings at seven hydrometric stations with unstable river channels. They concluded that ignoring rat-
+ing changes was the dominant source of uncertainty of streamflow data. Rating changes are caused by the
+modification of the physical features controlling the stage-discharge relation: for instance, modification of
+the geometry or the roughness of the main channel and destruction or reshaping of a gravel riffle after a
+RESEARCH ARTICLE
+10.1029/2018WR023389
+Key Points:
+• A general and hydraulically based
+method replaces manual shift
+corrections for sudden rating
+changes
+• Gaugings are never repeatedly used
+across periods, but information does
+transfer between periods
+• The generality of the method is
+illustrated with two contrasting
+study cases
+Supporting Information:
+• Supporting Information S1
+Correspondence to:
+J. Le Coz,
+jerome.lecoz@irstea.fr
+Citation:
+Mansanarez, V ., Renard, B., Le Coz, J.,
+Lang, M., & Darienzo, M. (2019).
+Shift happens
+! Adjusting
+stage-discharge rating curves to
+morphological changes at known
+times. Water Resources Research, 55,
+2876–2899. https://doi.org/10.1029/
+2018WR023389
+Received 28 MAY 2018
+Accepted 11 MAR 2019
+Accepted article online 19 MAR 2019
+Published online 8 APR 2019
+©2019. American Geophysical Union.
+All Rights Reserved.
+MANSANAREZ ET AL. 2876
+Water Resources Research 10.1029/2018WR023389
+flood. Such modifications induce changes in the rating curve parameters and possibly in the structure of
+its equation. The processes leading to these modifications are numerous and complex (Herschy, 1995): bed
+evolution, vegetation growth, debris/ice jams, dike break, etc. In this study, we focus on the widespread rat-
+ing changes due to morphological evolution induced by floods. The associated physical mechanisms are not
+detailed here, but comprehensive reviews can be found in textbooks (e.g., Ferreira da Silva & Yalin, 2017;
+Schumm, 1977).
+Recently, several methods for quantifying rating curve uncertainty have been introduced in the scientific
+literature, solving some of the limitations of the standardized method (WMO, 2010). Typically, among the
+seven methods compared by Kiang et al. (2018), only a few had some ability to account for rating changes.
+McMillan and Westerberg (2015) considered that the existence of unknown rating changes induces epis-
+temic rating curve errors. They proposed a method to quantify the resulting uncertainty and add it to other
+sources of rating curve uncertainty. Dynamic approaches proposed by Reitan and Petersen-Øverleir (2011),
+Westerberg et al. (2011), Guerrero et al. (2012), or Morlot et al. (2014) attempt to derive rating curves vary-
+ing with time in a continuous way, based on the premise that the stage-discharge relation is itself evolving
+continuously.
+As rating changes often happen during episodic floods, models assuming sudden rating changes between
+stability periods of time are more widespread than dynamic models in the operational practice. This
+approach requires solving two main issues: detecting the dates and times of changes and estimating the
+successive static rating curves with their associated uncertainties.
+Several methods exist for sudden change detection. The most common approach in operational practice
+is to detect changes when gaugings depart from the current rating curve by more than some predefined
+threshold, or when successive gauged discharges are systematically above or below the current rating curve
+(Puechberty et al., 2017; Rainville et al., 2016; Rantz, 1982). In a similar vein, Morlot et al. (2014) defined
+stability periods by applying a segmentation procedure (Hubert et al., 1989) to the residuals between gaug-
+ings and a time-invariant mean rating curve. An alternative, and perhaps overlooked, approach is to use
+information beyond the gaugings to define stability periods. For instance, McMillan et al. (2010) started a
+new period after every occurrence of a flood larger than the 0.5-year flood.
+1.2. Methods for Adjusting Rating Curves to Shifts
+Once the times of the rating changes have been identified, the shape and parameters of the rating curve have
+to be adjusted for each stability period. Several alternative methods can be found in operational procedures
+and in the scientific literature, based on differing assumptions.
+Developing each rating curve independently from scratch (e.g., Coxon et al., 2015; Watson et al., 2016) is
+only feasible at stations where gaugings are produced frequently compared to the occurrence of changes.
+Consequently, the estimation of a new rating curve is often constrained by reusing selected gaugings from
+other stability periods: high-flow gaugings (e.g., McMillan et al., 2010; Puechberty et al., 2017), recent gaug-
+ings (e.g., Guerrero et al., 2012; Westerberg et al., 2011), hydraulically similar gaugings (e.g., Morlot, 2014),
+or fictitious gaugings used as a high-flow convergence point (e.g., Morlot et al., 2014). The reuse of gaug-
+ings across several periods implicitly assumes that the corresponding controls are not varying substantially,
+while other controls, low-flow controls typically, are varying. The validity of this assumption depends on the
+site-specific hydraulic configuration.
+Another approach is to derive the shifted rating curve by modifying only some selected properties of a base
+rating curve, as done in the “shift corrections” method commonly used by operational services in North
+America (Kennedy, 1984; Rantz, 1982; WMO, 2010). In a segment of the base rating curve, discharge Q is
+usually computed as a power function of flow depth, which is the difference between water stage h and
+an offset b: Q
+(h)= a(h − b)c with a and c being the coefficient and the exponent of the power function,
+respectively. Then, the flow depth is corrected by a stage variable shift s(h) as
+Q(h)= a[h− b+ s(h)]c
+(1)
+Similar to the U.S. Geological Survey procedures (T. A. Kenney, personal communication, April 2017), the
+Water Survey of Canada (Rainville et al., 2016) considers three empirical types of stage variable shifts: “con-
+stant,” “knee bend,” and “truss” shifts (Figure 1). Based on expert knowledge on the controls at a site and
+MANSANAREZ ET AL. 2877
+Water Resources Research 10.1029/2018WR023389
+Figure 1. Shift correction methods used by the Water Survey of Canada: (a) shift (offset correction) as a function of
+flow depth h − b; (b) base (blue) and shifted (red) rating curves (modified from Rainville et al., 2016).
+their modification, and based on the departures of gaugings from the base rating curve, the field hydrol-
+ogist has to select a type of stage variable shift s(h) and estimate its parameters. Typically, constant shifts
+are applied after simple aggradation or degradation of the whole channel, whereas knee bend shifts are
+used to adjust the low-flow section control when the overall geometry of the channel control is assumed to
+be unchanged. Less common, truss shifts are used to reflect a disturbance at a specific range of stage, for
+example, a tree falling across a channel or the slumping of a river bank.
+The shift corrections discussed above correspond to assuming that only some selected parameters of the
+base rating curve are changing. In order to avoid the manual estimation of the shift corrections, some
+research methods (e.g., Guerrero et al., 2012; Juston et al., 2014; Reitan & Petersen-Øverleir, 2011) auto-
+matically estimated the varying parameters of the rating curve equation, including parameters other than
+offsets. Not all parameters are necessarily varying in time: Some of them may remain static, and Reitan
+and Petersen-Øverleir (2011) highlight the hydraulic hypotheses associated with this choice. Unfortunately,
+these specific hydraulic hypotheses on the nature of the control changes are not always stated explicitly. The
+same issue applies to defining the type of stage variable shift in the aforementioned operational procedures.
+A last approach is to compute the new rating curve using topography monitoring data and a hydraulic model
+(e.g., Balasch et al., 2010; Di Baldassarre & Claps, 2011; Leonard et al., 2000; Naulet et al., 2005). The main
+advantage of such methods is that direct measurements of the changes in the river geometry are used to com-
+pute the corresponding rating changes using an explicit andobjective hydraulic interpretation. However, the
+routine application of numerical modeling to manage rating changes in operational practice is challenged
+by the costs of field topography surveys and of the expertise required by computational techniques.
+1.3. Objectives
+While the temporal dynamics of rating changes and parameter estimation methods have received much
+attention from research groups, there have been few advances on hydraulically consistent methods for updat-
+ing the shape and parameters of new rating curves after a series of shift episodes. Operational methods
+MANSANAREZ ET AL. 2878
+Water Resources Research 10.1029/2018WR023389
+such as the reuse of high-flow gaugings, high-flow convergence points, and shift corrections are based on
+hydraulic assumptions that are rarely made explicit. Moreover, they usually require some manual fitting
+which makes results operator-sensitive and uncertainty quantification challenging.
+This paper focuses on sudden rating curve changes, typically induced by a morphogenic flood. We further
+make the restrictive assumption (discussed in more depth in section 5.1) that the dates of change, or equiv-
+alently the stability periods, are known. Under this set of hypotheses, the main objectives of this paper are
+the following:
+1. To formulate a rating curve model describing the evolution of the stage-discharge relation across stability
+periods. The hydraulic hypotheses behind this model are exposed and discussed. Since the stability periods
+are assumed to be known, they are considered as an additional input to the model, which is therefore
+named a stage-period-discharge (SPD) model.
+2. To derive a Bayesian framework to estimate the SPD model based on uncertain gaugings and available
+hydraulic knowledge. Special emphasis is given to uncertainty quantification and the ability to transfer
+information between periods.
+3. To illustrate some key properties of the SPD model through two contrasting case studies, differing in their
+hydraulic configuration and in the number and type of changes.
+The remainder of the paper is organized as follows. Section 2 describes the formulation of the SPD model and
+the underlying hydraulic hypotheses. Section 3 derives the Bayesian estimation framework, including the
+likelihood function carrying the information brought by uncertain gaugings and the prior distribution used
+to integrate existing hydraulic knowledge into the estimation process. Case studies based on two contrasting
+hydrometric stations are proposed in section 4. The discussion in section 5 discusses current limitations
+and avenues for improvement, and the concluding section 6 summarizes the main findings arising from
+this paper.
+2. Formulation of the SPD Model
+The aim of this section is to derive the SPD model used to describe the evolution of the stage-discharge
+relation across several stability periods, that is, periods of time separated by sudden change times. We start
+by formulating the rating curve equation for one given period (section 2.1) before proposing an SPD model
+describing how this rating curve changes across periods (section 2.2).
+2.1. Hydraulic Configuration and Rating Curve Formulation
+Depending on the flow and site complexity, the stage-discharge relation at a given hydrometric station often
+results from the succession and addition of several hydraulic controls, which requires the development of
+segmented rating curves (Le Coz et al., 2014; Petersen-Øverleir & Reitan, 2005).
+For each control, the relation between stage h and discharge Q can often be approximated as a power func-
+tion of the form
+Q(h)= a(h− b)c. Parameters a, b, and c (coefficient, offset, and exponent) are related
+to the type of control and its physical characteristics. Typically, low-flow section controls can often be
+approximated by a rectangular weir formula:
+Q(h)= Cr Bw
+√
+2g
+⏟⏞⏞⏟⏞⏞⏟
+a
+(h− b)3∕2 (2)
+where Cr[−] is a discharge coefficient ( ≈ 0.4), Bw (m) is the weir perpendicular-to-flow width, g (m/s2)i s
+the gravity acceleration (≈ 9.81 m/s2), b (m) is the weir crest elevation, and c = 3∕2 (–) is the exponent for
+a rectangular weir. Similarly, for wide rectangular channels, the following form of the Manning-Strickler
+equation holds:
+Q(h)= KSBc
+√
+S0
+⏟⏞⏞⏟⏞⏞⏟
+a
+(h− b)5∕3 (3)
+where KS (m1/3/s) is the Strickler flow resistance coefficient, Bc (m) is the channel width, S0 (m/m) is the
+bed slope, b (m) is the mean bed elevation along the controlling reach, and c = 5∕3 (–) is the exponent for
+a wide rectangular channel.
+MANSANAREZ ET AL. 2879
+Water Resources Research 10.1029/2018WR023389
+Figure 2. Schematic illustration of a hydraulic configuration subject to changes. In each panel, the right part shows the longitudinal profile (riverbed and w ater
+surface corresponding to several stages) and the left part shows the cross section at the staff gauge.
+The rating curve equation can then be derived by describing how hydraulic controls succeed or add up to
+each other. As an illustration, consider the frequent configuration comprising three successive controls (see
+left panel in Figure 2): (i) a low-flow section control (typically a natural riffle or a weir); (ii) the main channel
+control; and (iii) a floodway control that adds up to the main channel control. Neglecting the head losses due
+to the interaction of the compound channel flows, we follow a divided-channel approach, and discharges in
+the main channel and in the floodway are simply added. The full rating curve equation for the three-control
+configuration considered here can be written as
+Q(h)=
+⎧
+⎪
+⎨
+⎪⎩
+a1
+(h− b1
+)c1, if𝜅1 ≤ h <𝜅 2 (low flow section control)
+a2
+(h− b2
+)c2, if𝜅2 ≤ h <𝜅 3 (main channel)
+a2
+(h− b2
+)c2 + a3
+(h− b3
+)c3, if h ≥ 𝜅3 (main channel + floodway)
+(4)
+where𝜅1 <𝜅 2 <𝜅 3 are the activation stages for each control. This three-control equation is a particular
+case of the more general equation involvingNc controls (see Le Coz et al., 2014, for an in-depth presentation):
+Q(h)=
+Nc∑
+i=1
+(
+1[𝜅i;𝜅i+1](h)×
+Nc∑
+𝑗=1
+M(i,𝑗)× a𝑗(h− b𝑗)c𝑗
+)
+(5)
+where 1A(h) is the indicator function of a set A and M(i, j) is the control matrix, equal to 1 if controlj is active
+in the ith stage range [𝜅i;𝜅i +1] and 0 otherwise. In the three-control example above, M =
+⎛
+⎜
+⎜⎝
+100
+010
+011
+⎞
+⎟
+⎟⎠
+.
+Finally, note that the unknown parameters of the rating curve are (b𝑗, a𝑗, c𝑗
+)
+𝑗=1… Nc
+but that the activation
+stages 𝜅j are deduced by continuity of the rating curve. When a control is added to active control(s) (e.g.,
+floodway added to the main channel), the continuity condition necessarily leads to 𝜅j = bj. When a control
+replaces an active control, 𝜅j is a solution of the following equation:
+a𝑗(𝜅𝑗 − b𝑗)c𝑗 = a𝑗−1(𝜅𝑗 − b𝑗−1)c𝑗−1 (6)
+This equation has no explicit solution and has to be solved numerically using, for example, the
+Newton-Raphson method. Depending on parameter values, there can be zero, one or two solutions. If two
+solutions exist, the highest one is selected because the smallest solution creates a discontinuity that does not
+make physical sense (cf. Appendix A for mathematical details).
+2.2. Rating Changes
+The generic rating curve equation (5) can be modified to reflect the changes occurring between P stability
+periods. Without loss of generality, periods are numbered from the most recent to the oldest one. A SPD
+model can be formulated as a model with two input variables: the stage h and the period index k. This
+corresponds to the hypothesis that the stability periods are known and can therefore be considered as an
+input to the model. An SPD version of equation (5) can for instance be obtained by simply assuming that all
+rating curve parameters
+(
+a(k)
+𝑗 , b(k)
+𝑗 , c(k)
+𝑗
+)
+are period specific:
+Q(h, k)=
+Nc∑
+i=1
+(
+1[𝜅(k)
+i ;𝜅(k)
+i+1](h)×
+Nc∑
+𝑗=1
+M(i,𝑗)× a(k)
+𝑗 (h− b(k)
+𝑗 )c(k)
+𝑗
+)
+(7)
+MANSANAREZ ET AL. 2880
+Water Resources Research 10.1029/2018WR023389
+Since all the parameters are changing between periods, this SPD model is equivalent to establishing a new
+rating curve from scratch for each period. This can be further constrained by assuming that some parameters
+are static, that is, they do not depend on the period. In turn, this corresponds to the physical assumption that
+some properties of the hydraulic controls do not change between periods. To further illustrate this, consider
+the three-control rating curve of equation (4) and its SPD version given below:
+Q(h, k)=
+⎧
+⎪
+⎪
+⎨
+⎪
+⎪⎩
+a
+1
+(
+h− b(k)
+1
+)c1
+, if𝜅(k)
+1 ≤ h <𝜅 (k)
+2 (low flow section control)
+a2
+(
+h− b(k)
+2
+)c2
+, if𝜅(k)
+2 ≤ h <𝜅 3 (main channel)
+a2
+(
+h− b(k)
+2
+)c2
++ a3
+(h− b3
+)c3, if h ≥ 𝜅3 (main channel + floodway)
+(8)
+Offsets parameters b(k)
+1 , b(k)
+2 are here assumed period specific , while all other parameters (coefficients
+a1, a2, a3, exponents c1, c2, c3, and floodway offset b3) are assumed static. The underlying hydraulic assump-
+tions are the following:
+1. Static exponents (c1, c2, c3) imply that the type of control does not change (e.g., a rectangular cross-section
+control cannot become triangular).
+2. Static coefficients ( a1, a2, a3) imply that the width and discharge coefficient of the low-flow controlling
+riffle, and the widths, slopes, and resistance coefficients of the channels do not vary.
+3. The static floodway offset ( b3) implies that the floodway remains unchanged across periods.
+4. In addition, the structure of the rating curve does not change across periods; that is, controls cannot be
+created or deleted.
+The example SPD model of equation (8) should be modified whenever this set of assumptions is deemed
+unrealistic. For instance, if one suspects that the width of the low-flow controlling riffle may change, then
+the coefficient a(k)
+1 should be made period specific. The key point is that the specification of the SPD model
+in terms of static/period-specific parameters should be based on the hydraulic analysis of the station—just
+as the formulation of the rating curve equation.
+3. Bayesian Inference
+3.1. Inference Setup and Assumptions
+Let 𝛃 denote the unknown parameters of the SPD model, comprising static and period-specific parameters
+𝛃static and 𝛃period. For the example SPD model of equation (8), 𝛃static = (a1, c1, a2, c2, b3, a3, c3
+) and 𝛃period =(
+b(k)
+1 , b(k)
+2
+)
+k=1… P
+. The discharge computed by the SPD model can then be written as follows:
+̂Q = 𝑓 (h, k|𝛃) (9)
+Inference on the parameters is performed using a set of gaugings (̃hi, ̃ki, ̃Qi
+)
+i∈[[1;N]]. Note that since the SPD
+model uses the period as an input variable, a gauging is a triplet comprising the period ̃ki with which it
+is associated, in addition to the usual stage-discharge pair (̃hi, ̃Qi
+). The tilde symbol is used to denote the
+fact that a gauging is made up of imperfect measurements and is therefore an estimate of the real values(hi, ki, Qi
+). In this paper, it is assumed that all periods are correctly assigned ( ̃ki = ki) and that stage errors
+are negligible (̃hi = hi). The following error model is used for the gauged discharges:
+̃Qi = Qi +𝜖Q,i with 𝜖Q,i ∼ 
+(
+0, uQ,i
+)
+(10)
+where the measurement errors (𝜖Q,1, …,𝜖 Q,N
+) are assumed mutually independent and the standard devia-
+tions (uQ,1, …, uQ,N
+) (uncertainty of each gauged discharge) are assumed to be known from an uncertainty
+analysis of the discharge measurement process (for more details, see Le Coz et al., 2014, and references
+therein).
+The true discharge is then written as the discharge predicted by the SPD model plus a structural error:
+Qi = 𝑓
+(
+hi, ki|𝛃
+)
+⏟⏞⏞⏞⏟⏞⏞⏞⏟
+̂Qi
++𝜖𝑓, i with 𝜖𝑓, i ∼ 
+(
+0,𝛾 1 +𝛾2 ̂Qi
+)
+(11)
+MANSANAREZ ET AL. 2881
+Water Resources Research 10.1029/2018WR023389
+where the structural errors (𝜖𝑓, 1, …,𝜖𝑓, N
+) are assumed mutually independent and also independent of
+the discharge errors (𝜖Q,1, …,𝜖 Q,N
+). The standard deviation of the structural error is modeled as a linear
+function of the predicted discharge, with parameters 𝛄 = (𝛾1,𝛾 2
+) being unknown and therefore added to
+the inference list. For more discussion on these assumptions, we refer the reader to Le Coz et al. (2014).
+Note that parameters 𝛄 do not depend on the period: this corresponds to assuming that while the rating
+curve changes between periods, the properties of the structural errors remain static. This assumption will
+be discussed in section 5.2.
+3.2. Likelihood Computation
+Combining equations (10) and (11) yields the following equation:
+̃Qi = 𝑓 (hi, ki|𝛃)+𝜖Q,i +𝜖𝑓, i with 𝜖Q,i +𝜖𝑓, i ∼ 
+(
+0,
+√(
+𝛾1 +𝛾2 ̂Qi
+)2
++ u2
+Q,i
+)
+(12)
+The distribution of an observed gauged discharge ̃Qi, conditional on the unknown parameters 𝜽 =( 𝛃, 𝛄)
+and on the gauged stage hi and period ki, is therefore Gaussian with mean the SPD-predicted discharge
+𝑓 (hi, ki|𝛃) and a standard deviation combining measurement and structural uncertainties as shown in
+equation (12). The following likelihood is obtained:
+p (̃Q|𝜽, h, k) =
+N∏
+i=1
+𝜙
+(
+̃Qi
+||
+|
+|
+||
+𝑓 (h
+i, ki|𝛃),
+√(
+𝛾1 +𝛾2 ̂Qi
+)2
++ u2
+Q,i
+)
+(13)
+where𝜙(z|m, s) denotes the probability density function (pdf) of a Gaussian distribution with mean m and
+standard deviation s, evaluated at some value z.
+The likelihood in equation (13) provides a built-in mechanism to associate the rating curve parameters with
+the relevant gaugings. Indeed, the static rating curve parameters 𝛃static appear in all N terms of the product
+in equation (13). Consequently, the information contained in all the gaugings is used to infer these static
+parameters. By contrast, parameters 𝛃(k)
+period specific to the kth period only appear in the terms of the product
+involving gaugings from the kth period. Consequently, only the gaugings made during the kth period are
+informative for the period-specific parameters 𝛃(k)
+period. This is to be contrasted with the standard operational
+practice of reusing some high-flow gaugings across several periods, arguing that they remain representative
+of the stage-discharge relation at high flows (see section 1). In the SPD model, gaugings are always assigned
+to a unique period and are not repeatedly used across periods: instead, the static parameters are used
+across periods.
+3.3. Prior Specifications
+Bayesian inference requires specifying a joint prior distribution for the vector of inferred parameters
+𝜽. The
+joint prior pdf is factorized as follows:
+p(𝜽) = p (𝛾1
+) p (𝛾2
+) p (𝛃static
+) p (𝛃period
+) (14)
+Since little is known about structural uncertainty before having estimated the model, only
+order-of-magnitude considerations can generally be used for parameters 𝛾1 and 𝛾2. Parameter 𝛾1 can be
+interpreted as the structural standard deviation for near-zero flows: its prior distribution should span
+between near-zero values and values that are of the same order of magnitude as typical low flows in the
+studied river. Parameter𝛾2 can be interpreted as the relative structural standard deviation at high flows: its
+prior distribution should therefore have its mass mostly comprised between 0% and 100%; typical values
+encountered in our experience are around 5–30%.
+Prior distributions for other parameters are case specific: they depend on the physical properties of the con-
+trols (geometry, slope, friction, etc.) and the precision with which these properties are measured or estimated
+by expert opinion. The prior specification process for these parameters will be illustrated in more detail in the
+case studies (section 4); moreover, we refer the reader to Le Coz et al. (2014) for a more in-depth discussion
+of general principles.
+In the context of changing rating curves, the specification of a joint prior distribution for period-specific
+parameters is not straightforward because prior information will typically not be directly available in terms of
+inferred parameters
+𝛃period. To illustrate this issue, consider the example SPD model of equation (8), schema-
+tized in Figure 2. In this example, we consider two types of change. The first type corresponds to the scouring
+MANSANAREZ ET AL. 2882
+Water Resources Research 10.1029/2018WR023389
+(or the filling) of the main channel over the controlling reach (with no change in the channel width). Such
+a change would induce a modification of the offset of the main channel control ( b2). Moreover, because the
+riffle lies on the riverbed, the offset of the first low flow control ( b1) should also be affected by the same
+change (middle panel in Figure 2). Such a change is therefore referred to as an overall change, noted 𝛿g.I n
+addition to this overall scouring/filling of the main channel, the controlling riffle may also move longitu-
+dinally and its crest elevation with respect to the riverbed may also change. Consequently, the offset of the
+first low flow control (b
+1) may also be affected by a local change (noted𝛿l), which adds to the overall change
+(right panel in Figure 2). However, this local change does not affect the channel controls (main channel and
+floodway). This configuration can be formalized as follows:
+{
+b(k)
+1 = b(k−1)
+1 − (𝛿g(k) +𝛿l(k)) (incremental change in low flow control)
+b(k)
+2 = b(k−1)
+2 −𝛿g(k) (incremental change in channel control) (15)
+or equivalently, by developing this recursive relation up to period 1, used as the reference period:
+⎧
+⎪
+⎪
+⎨
+⎪
+⎪⎩
+b(k)
+1 = b(1)
+1 −
+( k∑
+i=2
+𝛿g(i) +
+k∑
+i=2
+𝛿l(i)
+)
+(cumulative change in low flow control)
+b(k)
+2 = b(1)
+2 −
+k∑
+i=2
+𝛿g(i) (cumulative change in channel control)
+(16)
+An expert of the hydrometric station may be able to provide some information on the possible changes after
+a morphogenic flood (overall scouring/filling of the main channel and local change on the low-flow control).
+This information is expressed in terms of incremental changes
+𝛿g and𝛿l, which are actually equivalent to the
+constant and knee bend shift corrections discussed in section 1.2 (Figure 1). As they are not parameters of
+the SPD model, it is necessary to transfer the prior information from incremental changes (𝛿g(k),𝛿 l(k))
+k=2… P
+to inferred parameters. A Monte Carlo approach can be used to achieve this, by propagating samples from
+the independent prior distributions of
+(
+b(1)
+1 , b(1)
+2 ,𝛿 g(2),𝛿 l(2), …,𝛿 g(P),𝛿 l(P)
+)
+through equation (16), yielding
+samples from the joint prior distribution of offset parameters
+(
+b(k)
+1 , b(k)
+2
+)
+k=1… P
+. A multivariate distribution
+can then be fitted to these samples and used as the joint prior. A multivariate Gaussian distribution may typ-
+ically be used if all marginal samples of
+(
+b(k)
+1 , b(k)
+2
+)
+k=1… P
+are approximately Gaussian. In case non-Gaussian
+marginal priors are deemed more appropriate, a Gaussian copula (e.g., Renard & Lang, 2007) may be used
+to combine them into a joint multivariate distribution.
+3.4. Posterior Distribution and Markov Chain Monte Carlo Sampling
+The posterior pdf can be computed up to a constant of proportionality by combining the likelihood
+(equation (13)) and the prior pdf (equation (14)) using Bayes' rule:
+p (𝜽|̃Q, h, k) ∝ p (̃Q|𝜽, h, k) p(𝜽) (17)
+The posterior distribution is explored by applying a Markov chain Monte Carlo (MCMC) sampler to the
+unnormalized posterior (equation (17)). The MCMC sampler used in this paper is an adaptive block
+Metropolis sampler described in Renard et al. (2006). In short, this Metropolis sampler updates the param-
+eter vector one component at a time and modifies the variance of the (one-dimensional) Gaussian jump
+distributions to maintain acceptance rates within user-specified bounds (here, 10% and 50%). In this paper,
+100,000 iterations are performed, with the first half being discarded as a burn-in period. The remaining
+50,000 iterations are further thinned by only keeping one iteration every 10: this allows restricting comput-
+ing time and storage issues, while not resulting in a noticeable loss of information because the raw MCMC
+samples are strongly autocorrelated. Convergence is checked visually.
+The MCMC sampler hence generates N
+sim vectors of inferred parameters (𝜽(i))
+i∈[[1;Nsim]]. This set can be used
+to describe the marginal and joint properties of the parameter vector 𝜽 (e.g., posterior mean, median, stan-
+dard deviation, credibility interval, and parameter correlations). The properties of any quantity derived from
+𝜽, such as the incremental changes or the rating curves for each period, can also readily be described. In addi-
+tion, the parameter̂𝜽 corresponding to the largest posterior pdf is extracted from the simulated(𝜽(i))
+i∈[[1;Nsim]].
+This parameter and any derived quantity are referred to as the “maximum a posteriori” estimates.
+MANSANAREZ ET AL. 2883
+Water Resources Research 10.1029/2018WR023389
+Figure 3. Presentation of the hydrometric stations used in the case studies and interpretation in terms of hydraulic
+controls: (a) Ardèche at Meyras, picture taken by Irstea in October 2016; (b) Wairau at Barnett's Bank, Imagery ©2019
+DigitalGlobe, Map data ©2019 Google.
+4. Case Studies
+4.1. The Ardèche River at Meyras, France
+4.1.1. Site Description
+The case study focuses on the Ardèche River at Meyras hydrometric station (V5004030), Mediterranean
+France, which monitors a catchment area of 98 km 2. This station has been used by Adamovic et al. (2015)
+and Sikorska and Renard (2017) for hydrological modeling purposes, and we therefore refer the reader to
+these papers for additional general information on the station and the associated catchment. The gauge is
+located just under a bridge (
+4◦16
+′
+11
+′′
+E, 44◦40
+′
+12
+′′
+N, Figure 3a). Located approximately 50 m downstream
+from the bridge, a natural gravel riffle controls the lowest flows. A main channel replaces this riffle as the
+flow increases and then two floodways (one on each side) are added to the main channel for very high flows.
+The two floodways can be combined into an equivalent single channel control because they are activated at
+approximately the same stage. This corresponds to the three-control configuration described in section 2,
+and the SPD model of equation (8) can therefore be applied.
+The riverbed around the station changes regularly due to the intensity of flash floods. Over the period
+October 2001 to September 2014, the hydrometric service in charge of managing the station developed five
+distinct rating curves, and the associated dates of change correspond to major flood events. A total of 104
+gaugings is available (mostly performed with Acoustic Doppler Current Profiler and currentmeters), lead-
+ing to about 21 gaugings per period on average (minimum: 8, maximum: 33). Note that only three gaugings
+have been performed with water flowing in the floodway.
+4.1.2. Prior Specification
+Prior specification is performed as outlined in section 3.3, and the resulting priors are given in Table 1. Priors
+are first expressed in terms of physical parameters (first three columns), that is, parameters having a direct
+hydraulic interpretation (see Le Coz et al., 2014, for a more detailed description on this prior elicitation
+process). All marginal priors are assumed independent at this stage. Priors on inferred parameters are then
+MANSANAREZ ET AL. 2884
+Water Resources Research 10.1029/2018WR023389
+Table 1
+Prior Distributions Used in the Ardèche at Meyras Case Study
+Physical parameter Meaning Prior Inferred parameter Prior
+Control 1: low-flow riffle
+b(1)
+1 (m) Offset (period 1) (−0.6; 0.5) b(1)
+1 (m) (−0.6; 0.5)
+Bw (m) Riffle width (ln(8); 0.25) a1 (m
+3
+2 /s) (2.65; 0.35)
+Cr (–) Discharge coefficient (ln(0.4); 0.25)
+g (m/s2) Gravity (ln(9.81); 0.005)
+c1 (–) Exponent (1.5; 0.025) c1 (–) (1.5; 0.025)
+Control 2: main channel
+b(1)
+2 (m) Offset (period 1) (−0.6; 0.5) b(1)
+2 (m) (−0.6; 0.5)
+Bc2 (m) Channel width (ln(15); 0.2) a2 (m
+4
+3 /s) (3.28; 0.33)
+KS2 (m
+1
+3 /s) Strickler coefficient (ln(25); 0.1)
+S02 (–) Bed slope (ln(0.005); 0.5)
+c2 (–) Exponent (1.67; 0.025) c2 (–) (1.67; 0.025)
+Control 3: floodway
+b3 (m) Offset (1.2; 0.2) b3 (m) (1.2; 0.2)
+Bc3 (m) Channel width (ln(30); 0.2) a3 (m
+4
+3 /s) (3.46; 0.38)
+KS3 (m
+1
+3 /s) Strickler coefficient (ln(15); 0.2)
+S03 (–) Bed slope (ln(0.005); 0.5)
+c3 (–) Exponent (1.67; 0.025) c3 (–) (1.67; 0.025)
+Incremental changes (2 ≤ k ≤ 5)
+𝛿l(k) (m) Local change (0; 0.5) b(k)
+1 (m) See text
+𝛿g(k)(m) Overall change (0; 0.5) b(k)
+2 (m) See text
+Structural uncertainty parameters
+𝛾1 (m3/s) Intercept (ln(1); 1) 𝛾1 (m3/s) (ln(1); 1)
+𝛾2 (–) Slope (ln(0.5); 1) 𝛾2 (–) (ln(0.5); 1)
+Note. (𝜇,𝜎) and (𝜇log,𝜎 log) stand for, respectively, the Gaussian distribution of mean 𝜇 and standard deviation
+𝜎, and the lognormal distribution whose logarithm has mean equal to 𝜇log and standard deviation equal to 𝜎log.
+obtained using Monte Carlo propagation (last two columns). For instance, the prior for parameter a1 is
+derived by propagating 100,000 samples of physical parameters (Bw, Cr, g) through equation (2).
+The following general comments can be made on the specified priors:
+1. Lognormal priors are used for positive quantities (widths, slopes, coefficients, and resulting
+(a1, a2, a3
+)
+parameters).
+2. Very precise priors are used for exponents (c1, c2, c3
+) because they only depend on the type of control
+(here, a rectangular riffle and two large rectangular channels).
+3. Informative but not overly precise priors are used for describing the various properties of each control. As
+an illustration, the priors used for the main channel correspond to the following 95% uncertainty intervals:
+[10; 22] m for the width, [20;30] m
+1
+3 /s for the Strickler coefficient, and [0.2; 1.3]% for the slope.
+4. Structural uncertainty parameters (𝛾1,𝛾 2
+) are weakly constrained by order-of-magnitude priors.
+As explained in section 3.3, priors for the possible changes affecting offsets (b1, b2
+) are expressed in terms
+of incremental local and overall changes. Riverbed changes during floods are very unlikely to exceed 1m
+at that site, and even though the river has constantly degr aded in recent years, it seems more conservative
+not to constrain the sign of the elevation changes and therefore set the prior mean to 0. This leads to the
+priors expressed in terms of incremental changes 𝛿l(k) and 𝛿g(k) shown in Table 1. These priors need to be
+transformed into the joint prior of inferred parameters
+(
+b(k)
+1 , b(k)
+2
+)
+, which is achieved using Monte Carlo
+propagation through equation (16).
+MANSANAREZ ET AL. 2885
+Water Resources Research 10.1029/2018WR023389
+Figure 4. Ardèche case study: illustration of the transformation from a prior expressed in terms of local/overall
+incremental changes to the final prior for inferred parameters
+(
+b(k)
+1 , b(k)
+2
+)
+. The upper triangular part of the matrix
+shows the correlations between parameters, while the lower triangular part shows scatterplots of Monte Carlo sampled
+values.
+Figure 5. Ardèche case study: stage-discharge representation of the estimated stage-period-discharge model with
+discharge in (a) linear scale and (b) logarithmic scale.
+MANSANAREZ ET AL. 2886
+Water Resources Research 10.1029/2018WR023389
+Figure 6. Ardèche case study. Prior and posterior boxplots of (a) static parameters and offsets of the first two controls for period 1; (b) offsets of the first tw o
+controls for all periods; (c) overall incremental changes; and (d) local incremental changes.
+Figure 4 illustrates this prior transformation and shows that it induces strong correlations in the final joint
+prior distribution. For a given control, interperiod correlations are particularly strong: for instance, b(5)
+2 is
+highly correlated with b(4)
+2 , which is logical since the former is equal to the latter plus the overall change
+𝛿g(5). For a given period, moderate intercontrol correlations also exist: For instance, b(5)
+1 and b(5)
+2 have a
+correlation of 0.6, induced by the fact that they are both affected by the same overall change. These prior
+correlations may play an important role in transferring information between periods (as explored in section
+4.3) or between controls and are therefore important to account for. In practice this is achieved by using a
+multivariate Gaussian distribution as prior, fitted to the Monte Carlo sample of
+(
+b(k)
+1 , b(k)
+2
+)
+.
+4.1.3. Results
+Figure 5 shows the estimated rating curves as stage-discharge representations with 95% uncertainty
+envelopes, for the five periods. The rating curves agreewell with gaugings and are estimated precisely, due to
+the high number of gaugings for all the periods. They are also in close agreement with official rating curves
+(not shown). The largest rating change occurs between periods 3 and 4 (around 0.4 m), while rating changes
+between other periods are much smaller. Note that the hydraulic assumptions made in this case study, and
+more precisely the fact that the main channel control is changing, lead to nonconvergent rating curves at
+high flows (Figure 5a; beware of the visual artifact induced by the log scale in Figure 5b).
+Figures 6a and 6b show the estimated parameters behind these rating curves. They are in general precisely
+estimated, especially for the first two contr ols. However, the parameters a3 and b3 of the third control are
+much less precisely estimated (the posterior is similar to the vague prior) due to the scarcity of high-flow
+gaugings in this range. Figure 6b focuses on the evolution of offsets across the five periods. All offsets are
+very precisely estimated (due to the availability of many gaugings), and an upward tendency is discernible
+(corresponding to a tendency to scouring as time advances, since periods are numbered from the most recent
+to the oldest). This figure also confirms that the largest change occurs between periods 3 and 4.
+Figures 6c and 6d show the changes expressed in terms of local and overall incremental changes (which
+can be computed by inverting equation (15)). The rating changes are almost entirely explained by overall
+changes (Figure 6c), with the local changes being always precisely identified close to 0 (Figure 6d). In other
+MANSANAREZ ET AL. 2887
+Water Resources Research 10.1029/2018WR023389
+words, the rating changes are mostly explained by changes affecting the whole main channel, while the
+changes affecting the low flow riffle appear to play a negligible role. This matches with the knowledge we
+have of this station: Scouring of the whole channel has indeed been observed. However, we stress that the
+SPD model inferred this from the gaugings only, since the prior distribution we specified is the same for
+local and overall changes and hence does not favor any of them.
+4.2. The Wairau River at Barnett's Bank, New Zealand
+4.2.1. Site Description
+The Wairau River at Barnett's Bank station (60109) in the northern South Island of New Zealand moni-
+tors almost the entire Wairau catchment area of 3,825 km 2. It is one of the case studies of McMillan and
+Westerberg (2015). The gauge ( 173◦57
+′
+35
+′′
+E, 41◦26
+′
+13
+′′
+S) is located 500 m upstream from a road bridge
+(cf. Figure 3b). The Wairau River is a braided/wandering river with highly mobile bed. A low-flow chan-
+nel meanders between scarcely vegetated gravel bars; during floods, the bars are inundated and a wider
+high-flow channel confined by stopbanks takes over. Both channel controls are assumed to have wide,
+rectangular cross-sectional shapes. Overbank flows in the floodplain are not considered here.
+This hydraulic approximation of this site is convenient and parsimonious; however, it is questionable
+because the actual hydraulic conditions for intermediate flows when the bars begin to be inundated are
+much more complex than the transition from a rectangular channel control to another one. A three-control
+approximation (cf. equation (4)) as applied to the Meyras case was applied to the Wairau case by Mansanarez
+(2016), but there was no empirical evidence that a low-flow section control is really active. Also, the divided
+channel approach is questionable for such a wandering channel with alternate gravel bars.
+The low-flow channel is a highly mobile gravel bed and frequently changes with floods. Changes in both the
+bed elevation and the width of the low-flow channel have been observed: consequently, both parametersb(k)
+1
+and a(k)
+1 of the first control are assumed period specific. By contrast, the high-flow channel is more stable,
+and we therefore make the assumption that parameters (b2, a2, c2
+) are static. As an aside, we also tested
+the assumption that the high-flow channel offset b(k)
+2 is period specific; however, the results came with very
+large uncertainties and were not convincing. They are hence not reported here.
+The hydraulic assumptions discussed above lead to the following SPD rating curve equation. Given the com-
+plexity of the site, we acknowledge that this formulation has scope for improvement; however, we consider
+that it is a reasonable first approximation in order to demonstrate the properties of the proposed approach.
+Q(h, k)=
+{
+a(k)
+1
+(
+h− b(k)
+1
+)c1
+, if𝜅(k)
+1 ≤ h <𝜅 (k)
+2 (low-flow channel)
+a2
+(h− b2
+)c2, if h ≥ 𝜅(k)
+2 (high-flow channel)
+(18)
+Barnett's Bank is a frequently gauged station: 270 gaugings are available between 11 August 1999 and 7 April
+2015, corresponding to more than 17 gaugings per year on average. However, the low-flow control changes
+frequently: the station managers defined 60 stability periods, corresponding to only 4.4 gaugings per period.
+Thus, stable periods are seldom gauged on average despite the large number of gaugings.
+4.2.2. Prior Specification
+Prior specification is based on the same process as that described for the Meyras case study (section 4.1.2),
+and the resulting priors are given in Table 2. The only difference is the definition of incremental changes.
+Indeed, only the first control is assumed to change, but it can change it terms of both channel elevation and
+width. Incremental changes for channel elevation (𝛿b(k)) and width
+(
+𝛿B(k)
+c
+)
+are therefore introduced, and
+their relation with inferred parameters b(k)
+1 and a(k)
+1 are given by the following equation:
+⎧
+⎪
+⎪
+⎪
+⎨
+⎪
+⎪
+⎪⎩
+b
+(k)
+1 = b(1)
+1 −
+k∑
+i=2
+𝛿b(i)
+B(k)
+c1 =
+B(1)
+c1
+k∏
+i=2
+𝛿B(i)
+c
+⇒ a(k)
+1 =
+a(1)
+1
+k∏
+i=2
+𝛿B(i)
+c
+(19)
+Note that a multiplicative formulation is used for parameter a(k)
+1 in order to ensure its positivity. As in the
+Meyras case study, a Monte Carlo propagation through equation (19) is used to transfer the independent
+MANSANAREZ ET AL. 2888
+Water Resources Research 10.1029/2018WR023389
+Table 2
+Prior Distributions Used in the Wairau at Barnett's Bank Case Study
+Physical parameter Meaning Prior Inferred parameter Prior
+Control 1: low-flow channel
+b(1)
+1 (m) Offset (period 1) (2; 0.5) b(1)
+1 (m) (2; 0.5)
+B(1)
+c1 (m) Width (period 1) (ln(50); 0.1) a(1)
+1 (m
+4
+3 /s) (3.86; 0.26)
+KS1 (m
+1
+3 /s) Strickler coefficient (ln(25); 0.2)
+S01 (–) Bed slope (ln(0.00143); 0.25)
+c1 (–) Exponent (1.67; 0.025) c1 (–) (1.67; 0.025)
+Control 2: high-flow channel
+b2 (m) Offset (2.5; 0.5) b2 (m) (2.5; 0.5)
+Bc2 (m) Width (ln(200); 0.1) a2 (m
+4
+3 /s) (5.24; 0.26)
+KS2 (m
+1
+3 /s) Strickler coefficient (ln(25); 0.2)
+S02 (–) Bed slope (ln(0.00143); 0.25)
+c2 (–) Exponent (1.67; 0.025) c2 (–) (1.67; 0.025)
+Incremental changes (2 ≤ k ≤ 60)
+𝛿b(k) (m) Offset change (0; 0.2) b(k)
+1 (m) See text
+𝛿B(k)
+c (m) Width change (ln(1); 0.25) a(k)
+1 (m
+4
+3 .s−1)S e e t e x t
+Structural uncertainty parameters
+𝛾1 (m3/s) Intercept (ln(1); 1) 𝛾1 (m3/s) (ln(1); 1)
+𝛾2 (–) Slope (ln(0.5); 1) 𝛾2 (–) (ln(0.5); 1)
+Note. (𝜇,𝜎) and (𝜇log,𝜎 log) stand for, respectively, the Gaussian distribution of mean 𝜇 and standard deviation
+𝜎, and the lognormal distribution whose logarithm has mean equal to 𝜇log and standard deviation equal to 𝜎log.
+priors expressed in terms of incremental changes to a correlated joint prior on inferred parameters(
+b(k)
+1 , a(k)
+1
+)
+.
+4.2.3. Results
+Figure 7 shows the estimated rating curves for a few selected periods. A video available as supporting infor-
+mation shows the evolution of the rating curve across all 60 periods. Unlike in the Meyras case study, all
+curves converge to a common high-flow rating curve, due to the hydraulic assumption that the high-flow
+channel does not change across periods. The curves agree well with gaugings for all periods. They are also
+in close agreement with the official ratings established by station managers (not shown): as an illustration,
+for the periods shown in Figure 7, the stages corresponding to discharge values of 10, 100, and 1,000 m
+3/s
+differ by less than 4% between official and SPD ratings.
+This high-flow rating curve is precisely estimated because its parameters are assumed static: Gaugings from
+all periods hence directly contribute to their estimation. By contrast, the lower part of the rating curve is
+affected by numerous and sometimes large changes. The precision of its estimation strongly depends on the
+number of available gaugings. Well-gauged periods such as periods 25 or 29 yield a precise estimate; during
+poorly gauged periods such as periods 51 or 52, the low-flow rating curve is mostly constrained by the prior
+distribution and is hence much more uncertain.
+Figure 8 shows the evolution of period-specific parametersa
+1 and b1 across all the 60 periods, and the result-
+ing activation stages for the high-flow control 𝜅2. It confirms that the number of available gaugings plays a
+key role in controlling the precision of the estimated parameters. Although there is no clear long-term trend
+in the evolution of parameters across periods, successive phases of continuous aggradation or degradation
+are discernible. In addition, periods of narrowing channel (decreasing a
+1) tend to correspond to channel
+deepening (decreasing b1). The figure also shows that parameters remain fairly stable during, for example,
+periods 3 to 8 or 41 to 48. This suggests that the number of periods might be too large and that merging some
+of them would be sensible according to the gaugings. However, one has to keep in mind that the station
+manager's decision to start a new period might be based on information beyond the gaugings (e.g., a visual
+observation that the low-flow channel has changed).
+MANSANAREZ ET AL. 2889
+Water Resources Research 10.1029/2018WR023389
+Figure 7. Wairau case study: stage-discharge representation of the estimated stage-period-discharge model for a few
+selected periods with discharge in (a) linear scale and (b) logarithmic scale.
+4.3. Ability of the Method to Transfer Information Between Periods
+In this section, we evaluate whether the SPD model is able to transfer information from well-gauged periods
+to poorly gauged ones. To this aim, data from the Meyras case study are used, and the SPD model is estimated
+using only the gaugings of the first period. This mimics a situation in which a period is well gauged but
+other periods are not gauged at all. We then evaluate whether the information gained from these gaugings
+transfers to the subsequent periods. In order to illustrate more clearly this transfer of information across
+periods, we slightly modify the prior distributions by setting the prior standard deviation of incremental
+change parameters (overall and local) to 0.25 (instead of 0.5 in section 4.1.2).
+Figure 9a compares the prior and posterior rating curves for all the periods. For the first period, the rating
+curve is estimated very precisely as the posterior interval is much smaller than the prior one. This is not
+surprising given the high number of gaugings used for estimation in this period. The information identified
+on the first period propagates to subsequent periods: Posterior intervals remain smaller than prior ones for
+periods 2 to 5. This can be explained at least partly by the fact that some parameters are assumed static across
+periods: Once such parameters have been precisely identified using the gaugings of the first period, they
+remain precisely identified for all subsequent periods. However, Figure 9a also suggests that the propagation
+of information tends to fade away as the period k is further away from the first period: For the fifth period
+the posterior interval is much closer to the prior one than for the second period.
+This can be further explained by analyzing posterior densities of the offset
+b(k)
+1 (Figure 9b). For the second
+period, the posterior density is still more precise than the prior one. When the period is further away from
+the first well-gauged period, information propagates less efficiently: The posterior distribution of the offset
+parameter tends to become similar to its prior distribution (see the fifth period in Figure 9b). This behavior
+might appear surprising at first sight: Since no gaugings from the second period were used to estimate the
+MANSANAREZ ET AL. 2890
+Water Resources Research 10.1029/2018WR023389
+Figure 8. Wairau case study: posterior boxplots for period-specific parameters a1 and b1, and resulting activation
+stages 𝜅2.
+SPD model, how can the period-specific parameter b(2)
+1 gain information beyond that contained in the prior?
+This is simply due to the fact that offsets of the first and the second periods are linked through the overall
++ local incremental change between periods 1 and 2: b(2)
+1 = b(1)
+1 − (𝛿g(2) +𝛿l(2)). Since b(1)
+1 is precisely esti-
+mated thanks to the many gaugings of period 1, its posterior variance is much smaller than its prior one.
+Consequently, the posterior variance of
+b(2)
+1 is also smaller than its prior variance. The same reasoning holds
+for subsequent periods, since b(k)
+1 = b(1)
+1 − (𝛿g(2) +𝛿l(2))−…− (𝛿g(k) +𝛿l(k)). However, as more terms rep-
+resenting incremental changes are added, the relative importance of the precisely estimated parameter b(1)
+1
+tends to fade away. Note that for the same reason, prior uncertainty intervals also widen as the period is
+away from the first period, as can be seen in Figures 9a and 9b.
+4.4. Comparison With a Stage-Discharge Model Separately Applied to Each Stability Period
+In this section, a comparison is made between the SPD model and a stage-discharge (SD) model separately
+applied to each stability period. Data from the Meyras case study are used for this purpose. In order to
+simulate poorly gauged situations, both SPD and SD models are applied considering only four gaugings per
+period (scarcely gauged), eight gaugings per period (reasonably gauged), or all available gaugings (very well
+gauged). The four and eight gaugings are evenly split between the first two controls (e.g., two gaugings for
+the riffle control and two gaugings for the main channel control). For the SPD model we use the same priors
+as in section 4.1.2. For the SD model, prior specification is made as to ensure the equivalence with the prior
+information used by the SPD model.
+Figure 10 shows the results for the static parameters a
+i ci, i ∈ ⟦1; 3⟧, and b3. Irrespective of the number of
+gaugings, both SPD and SD models yield similar results for exponent parameters c1, c2, and c3 because their
+respective prior distributions are precise. Similar results are also found for parameters a3 and b3 of the third
+MANSANAREZ ET AL. 2891
+Water Resources Research 10.1029/2018WR023389
+Figure 9. Ardèche case study: prior and posterior results from the SPD model using only gaugings of the first period
+(red) for estimation: (a) rating curves for the five periods; (b) densities of the first control offset for periods 2 to 5 with
+the same axis scales for all the plots. Gaugings in periods 2 to 5 (colored in black) are shown for verification but have
+not been used for estimation. SPD = stage-period-discharge.
+control: both posterior distributions are similar to the priors. There is indeed not enough high-flow gaugings
+to precisely identify these parameters (see section 4.1.1).
+When the station is scarcely gauged (four gaugings per period), important differences between SPD and
+SD models can be seen for coefficients a1 and a2. Estimations made by the SPD model are much more
+precise (Figure 10) as these parameters are assumed constant across periods. Their estimation is therefore
+informed by all the gaugings of the five periods (20 gaugings) instead of only four gaugings for the SD model.
+Similar differences between SPD and SD models are observed as the number of gaugings increases. As an
+aside, Figure 10 also supports the assumption made by the SPD model that these parameters are constant
+across periods. Indeed, for all static parameters, posterior distributions obtained with the SD model are
+consistent across periods. This is the case for rating curve parameters ( a
+i , ci, i ∈ ⟦1; 3⟧ and b3) as well
+as for parameters of the structural error model ( 𝛾1 and 𝛾2). Moreover, the SPD model yields more precise
+MANSANAREZ ET AL. 2892
+Water Resources Research 10.1029/2018WR023389
+Figure 10. Ardèche case study: comparison between SPD and SD models for static parameters, using only four gaugings per period, eight gaugings per period,
+and all available gaugings. SPD = stage-period-discharge; SD = stage-discharge.
+estimations of the structural error model as its parameters are estimated with more gaugings (5 times as
+many for this comparison) than for the five separate applications of the SD model.
+5. Discussion
+5.1. Estimating the Times of Rating Changes
+The SPD model presented in this paper assumes that the stability periods are known. This is admittedly a
+strong assumption that requires some preliminary analyses to define these periods. We stress however that
+methods do exist for this purpose (see the literature review in section 1). They are mostly based on some
+statistical analysis of the available gaugings. While this is indisputably a valuable source of information,
+gaugings do not directly relate to the hydraulic processes that caused the change—instead, gaugings expose
+the consequences of these processes. We claim that the stage record may be another valuable source of
+information (see also the discussion in Reitan & Petersen-Øverleir, 2011) and has the advantage of being
+more directly related to the hydraulic processes causing the changes. More precisely, the stage record could
+be used in two distinct ways: (i) A marked change affecting the low flow control is often clearly visible in
+the lowest part of the stage record, and (ii) an analysis of the cumulative sediment transport capacity of the
+river (e.g., Meyer-Peter & Müller, 1948) may provide a threshold above which bed evolution may be initiated.
+Interestingly, such approaches could be used not only to detect changes but also to provide a prior estimate
+of their magnitudes.
+In addition, we stress that assuming known stability periods does not exempt from exerting a critical eval-
+uation of their definition and does not prevent from modifying them if empirical evidence suggests it.
+For instance, in the Meyras case study of section 4.1, the differences between periods 4 and 5 are very
+small, with barely distinguishable rating curves and near-zero change parameters: It would be sensible
+to merge these two periods into a single one. A similar observation was made for the Wairau case study
+of section 4.2.
+An interesting avenue would be to develop a probabilistic treatment of the periods, that is, assuming that a
+change occurs with some probability, to be estimated. Such approach would be particularly relevant to the
+context of real-time estimation of rating curves and streamflows.
+MANSANAREZ ET AL. 2893
+Water Resources Research 10.1029/2018WR023389
+5.2. Extensions of the SPD Model
+The SPD model proposed in this paper makes a few restrictive hypotheses that could be generalized. For
+instance, the rating curve equation is based on the basic power law control equation Q(h)= a(h − b)c:
+This could be extended to consider different functions of stage h, for example, the Manning-Strickler
+equation derived for a narrow rectangular channel or a trapezoidal channel. Moreover, complex rat-
+ing curves taking other inputs in addition to stage could be made period dependent, so as to develop
+stage-fall-period-discharge models from stage-fall-discharge models for sites influenced by variable back-
+water (Mansanarez et al., 2016; Petersen-Øverleir & Reitan, 2009) or stage-gradient-period-discharge
+models from stage-gradient-discharge models for hysteresis during unsteady flows (Mansanarez, 2016;
+Petersen-Øverleir, 2006). Thus, complex hydraulic controls and their potential shifts across successive
+periods of time could be estimated through a unique model.
+Other hypotheses of the SPD model are more challenging to generalize. In particular, the creation or deletion
+of controls is difficult to consider within a fully general framework because it modifies the structure of the
+rating curve equation. Moreover, we also made the assumption that the properties of structural errors do
+not change across periods. In principle, this could be avoided by defining period-specific parameters for the
+structural errors. However, in the absence of precise prior information on these parameters, a relatively high
+number of gaugings in all periods would be necessary to identify them, as illustrated in section 4.4. This may
+be problematic in cases where some periods are poorly gauged or even not gauged at all, which is a typical
+case in gravel bed rivers such as the Wairau River (see section 4.2).
+5.3. Using Alternative Sources of Prior Information for Rating Changes
+In this paper, expert's knowledge was used to specify prior distributions on the parameters controlling
+incremental changes between two successive periods. Several alternative sources of prior information could
+be used for this purpose. For instance, channel bathymetry profiles provide direct prior information on
+period-specific parameters of the rating curve. Ideally, such profiles would result from topographic cam-
+paigns; however, the gaugings themselves contain bathymetry information that could be useful, although
+it should be used with caution since the gauging cross section is not necessarily representative of the aver-
+age channel geometry. Alternatively, the stage record also contains useful information. Indeed, large rating
+shifts are often visible in the stage record, and materialize as a step change in the lowest stage values. In the
+Meyras case study of section 4.1, for instance, the large shift between periods 3 and 4 is clearly visible as a
+step change in the stage record (not shown); moreover, the amplitude of this step change corresponds quite
+closely to the change estimated by the SPD model from the gaugings (
+≈− 0.4 m). This suggests that the stage
+record might be a valuable source of information to specify more informative priors on the change magni-
+tude. Finally, an analysis of the sediment transport capacity may provide some information on the possible
+change in the main channel after a morphogenic flood.
+5.4. Comparison With Existing Approaches
+The SPD model introduced in this paper may be seen as a more general and more hydraulically based expres-
+sion of the shift corrections (cf. section 1.2) manually implemented by several hydrometric agencies around
+the world. The typical constant, knee bend, and truss shift curves can be reproduced through this model,
+as well as other types of corrections such as changes in the coefficients. Usefully, the assumed rating cor-
+rections are directly related to physical parameters of the controls, and their estimation using limited prior
+knowledge and uncertain gaugings can be done in a formal, automated, and reproducible way, as opposed to
+manually. As a consequence, the resulting rating curves and streamflow data (and their uncertainty bounds)
+are easier to defend and to review.
+The SPD model shares the notion of static versus varying parameters with several existing methods
+(Guerrero et al., 2012; Juston et al., 2014; Reitan & Petersen-Øverleir, 2011). In the SPD model, the choice of
+static parameters is linked with specific hypotheses about which properties of hydraulic controls are subject
+to change (see also the discussion in Reitan & Petersen-Øverleir, 2011), whereas this choice was rather based
+on goodness-of-fit considerations in the above mentioned papers. While both approaches are perfectly legit-
+imate in our opinion, we stress that the expertise of a station manager may be sufficient to make this choice
+without even looking at the gaugings. For instance, a station manager is in general able to tell whether or
+not the width of the main channel has changed after a morphogenic flood, and this information can be used
+to build the adequate SPD model.
+MANSANAREZ ET AL. 2894
+Water Resources Research 10.1029/2018WR023389
+The use of static versus varying parameters has several decisive advantages compared to other approaches in
+our opinion. First of all, it simplifies the use of gaugings: all gaugings are always assigned to a unique period,
+and no gauging is repeatedly used across periods. High-flow gaugings remain informative for high-flow
+controls of all periods as long as these controls comprise static parameters, but this is a built-in property
+and it does not require making any assumption beyond the hydraulic assumptions made to build the SPD
+model. Likewise, the high-flow convergence (or lack thereof) of rating curves from all periods is a direct
+consequence of these hydraulic assumptions. As illustrated in the cases studies, an SPD model assuming
+that only the low-flow control is subject to change will naturally lead to convergent rating curves; however,
+an SPD model assuming that a main channel is also varying will not.
+Finally, the SPD model is specific to sudden changes and cannot be generalized to continuous changes
+for which dynamic approaches are probably more appropriate. As already mentionned by Reitan and
+Petersen-Øverleir (2011), combining dynamic and SPD-like models may lead to a more realistic description
+of rating changes. In particular, such a combination could be of interest to describe the transient change
+occurring during a morphogenic flood, thus making the transition between two stability periods. This would
+circumvent the difficulty related to the definition of the precise beginning of a stability period (during the
+rising limb, the falling limb, or at the flood peak?).
+6. Conclusion
+The main objectives of this paper were to derive, estimate, and evaluate a SPD model adapted to unstable
+rivers (see section 1.3). The SPD model assumes that the dates of change have been preliminarily identified
+and therefore uses the period index as input variable (in addition to stage). Based on the prior knowl-
+edge a field hydrologist usually has on her/his hydrometric station, the model can be built from simple
+hydraulic equations. The user also specifies which parameters are static and which parameters may vary
+across periods, and what might be the magnitude of their changes. This results in a single model that is
+valid over all periods: Estimation can therefore be performed in one go, instead of period after period.
+Bayesian inference is used for this purpose, which allows incorporating existing prior knowledge on the
+properties of the hydraulic controls and their changes; it also yields a natural and built-in quantification
+of uncertainties.
+The generality of the method was demonstrated through two contrasting case studies. They were selected
+because the corresponding hydrometric stations differ in several key aspects: (i) distinct hydraulic configu-
+rations (riffle then main channel + floodway vs. succession of two channels); (ii) distinct types of changes
+(change in offsets only vs. change in both offset and channel width); (iii) distinct rating curve properties
+(nonconvergent vs. convergent rating curves); and (iv) different numbers of stability periods (5 vs. 60). In
+addition, specific experiments demonstrated the ability of the SPD model to transfer information across peri-
+ods. Consequently, rating curves are more precisely estimated than by separately estimating SD models for
+each period.
+We claim that the proposed method brings a practical solution for developing hydrometric rating curves in
+unstable rivers. The underlying approach, based on simple hydraulics equations, is more transparent and
+actually easier to specify than the empirical and graphical approaches traditionally followed (see section
+1). It does not require going beyond a few explicit hydraulic assumptions on the elementary controls of
+the rating curve. In particular, the convergent/nonconvergent nature of rating curves is just a consequence
+of these assumptions; the management of gaugings is straightforward since a gauging is always assigned
+to a single period and is used only once. Finally, Bayesian parameter estimation is also easier and more
+transparent than manual fits constrained by informal expert knowledge. It also provides a simple way to
+compute uncertainty intervals from the large number of parameter sets simulated through MCMC sampling
+of the posterior distribution.
+The SPD model provides a firm basis for building a more complete approach in which the times of changes
+would be inferred in addition to their magnitude. This would be particularly useful for long-term retrospec-
+tive analysis of streamflow records at unstable sites, as well as real-time applications such as flood forecasting
+or hydraulic structure operation.
+MANSANAREZ ET AL. 2895
+Water Resources Research 10.1029/2018WR023389
+Appendix A: Analysis of multiple solutions for the continuity equation
+When a control j replaces an existing control j − 1, the continuity equation has no explicit solution. In order
+to simplify notations, and without loss of generality, we may assume that j = 2. The continuity condition
+between the two segments of the rating curve can be written as follows:
+a1
+(𝜅2 − b1
+)c1 = a2
+(𝜅2 − b2
+)c2 (A1)
+Taking the logarithm of each side of equation (A1) for computational convenience, activation stage 𝜅2 is
+therefore solution of the following equation:
+𝑓(𝜅2)= 0 with 𝑓(x)= c2 log(x− b2)− c1 log(x− b1)− log(a1∕a2) (A2)
+Equation (A2) is only defined for x > max(b1; b2) and therefore has to be solved on the interval
+] max(b1; b2);+∞[ . In practice, since a numerical method (e.g., Newton-Raphson) is used to solve the
+equation, an upper bound needs to be specified as well. For the highest control, this is taken as hmax, the
+upper bound of the range of validity of the rating curve; otherwise, this is taken as the activation stage of the
+next control.
+When c
+1 = c2 (case I), the continuity equation has a unique, explicit solution:
+𝜅2 =
+b2a1∕c1
+2 − b1a1∕c1
+1
+a1∕c1
+2 − a1∕c1
+1
+(A3)
+Likewise, when b1 = b2 (case II), the unique, explicit solution is
+𝜅2 = b1 +
+( a1
+a2
+) 1
+c2−c1
+(A4)
+In other cases, the variation of function f(x) depends on the sign of its derivative 𝑓
+′
+(x):
+𝑓′(x) ≥ 0 ⇐⇒ c2
+x− b2
+− c1
+x− b1
+≥ 0 ⇐⇒
+{
+x ≥ c2 b1−c1 b2
+c2−c1
+= x0 if c2 > c1
+x ≤ x0 if c2 < c1
+(A5)
+If x0 ≤ max(b1; b2) (case III), f(x) is monotonic and equation (A2) has a single solution in] max(b1; b2);+∞[ ,
+as shown in the following variation table (obtained with c2 > c1, the case c2 < c1 being symetric):
+If x0 > max(b1; b2), the variation table of f(x) is as follows (with c2 > c1, the case c2 < c1 being symetric):
+MANSANAREZ ET AL. 2896
+Water Resources Research 10.1029/2018WR023389
+Figure A1. Continuity functions f(x) for different values of b2 and realistic values of other rating curve parameters for
+the Ardèche River at Meyras (cf. equations (2) and (3)): a1 = 21.26 (Bw = 12 m; Cr = 0.4; g = 9.81 m/s2); b1 =− 0.6;
+c1 = 1.5; a2 = 25.15 (Bc = 15 m; S0 = 0.0045 m/m; KS = 25 m1/3/s); c2 = 1.67; b3 = 1.2. The box in the lower right
+corner zooms in on the transition between one-solution case III and two-solution case IV , illustrating the continuity of
+the largest case-IV solution with respect to b
+2.
+If f(x0) < 0 (case IV), equation (A2) has two solutions, one in ] max(b1; b2); x0[ and the other in ]x0;+∞ [.
+If f(x0)= 0 (case V), equation (A2) has a single solution 𝜅2 = x0.
+If f(x0) > 0 (case VI), equation (A2) has no solution.
+Figure A1 shows continuity functions f(x) computed using realistic values of rating curve parameters for the
+Ardèche river at Meyras. Increasing values of b2 make the resulting functions go through cases VI, V , IV ,
+II, and III with 0, 1, 2, 1, 1 solutions, respectively. Case IV is the only problematic case with two solutions.
+However, the smallest solution can be rejected using the following continuity argument. The transition
+between case III (single solution) and case IV (two solutions) occurs when b2 becomes smaller than b1.
+When b2 = b1 − 𝜀 for some small positive 𝜀, the largest of the two case IV solutions is very close to the
+unique case II solution obtained for b2 = b1 (see zoomed-in box in Figure A1). By contrast, the smallest
+solution suddenly appears much farther away, creating a discontinuity that makes no physical sense. In
+hydraulics terms, a tiny lowering of the channel should not drastically modify its activation stage, as the
+smallest solution does. Hence, as a general rule for case IV , the smallest solution is rejected and the greatest
+solution is retained as the correct solution. The same rule holds for the case c
+2 < c1, which is symmetric to
+the case c2 > c1 illustrated above.
+It is important to account for potential multiple solutions for the activation stage from the discharge conti-
+nuity equation (equation (A1)) and to establish the general selection rule to ensure the physical consistency
+of the results. In practical cases, however, the occurrence of multiple solutions may be negligible: For
+the Meyras case study, cases with two solutions occur in 0.4% of the MCMC samples from the posterior
+distribution.
+References
+Adamovic, M., Braud, I., Branger, F., & Kirchner, J. W . (2015). Assessing the simple dynamical systems approach in a Mediterranean
+context: Application to the Ardèche catchment (France). Hydrology and Earth System Sciences , 19, 2427–2449. https://doi.org/10.5194/
+hess-19-2427-2015
+Balasch, J. C., Ruiz-Bellet, J. L., Tuset, J., & Martín de Oliva, J. (2010). Reconstruction of the 1874 Santa Tecla's rainstorm in western
+Catalonia (NE Spain) from flood marks and historical accounts. Natural Hazards and Earth System , 10, 2317–2325. https://doi.org/10.
+5194/nhess-10-2317-2010
+Coxon, G., Freer, J., Westerberg, I. K., Wagener, T., Woods, R., & Smith, P. (2015). A novel framework for discharge uncertainty
+quantification applied to 500 U.K. gauging stations. Water Resources Research, 51, 5531–5546. https://doi.org/10.1002/2014wr016532
+Di Baldassarre, G., & Claps, P. (2011). A hydraulic study on the applicability of flood rating curves.Hydrology Research, 42(1), 10–19. https://
+doi.org/10.2166/nh.2010.098
+Acknowledgments
+The PhD fellowship of V . Mansanarez
+was funded by Irstea and the
+Compagnie Nationale du Rhône, with
+the support of the French National
+Hydrological Services (SCHAPI). The
+postdoctoral fellowship of V .
+Mansanarez is funded by the Swedish
+Research Council for Environment,
+Agricultural Sciences and Spatial
+Planning (FORMAS, grant
+942-2015-321). The FloodScale project
+w a sf u n d e db yt h eF r e n c hN a t i o n a l
+Research Agency (ANR) under
+contract ANR 2011 BS56 027, which
+contributes to the HyMeX program.
+We also wish to acknowledge the
+research funding provided by the
+Région Rhône-Alpes (Explora'doc).
+Data and expert knowledge on the
+Ardèche at Meyras station (V5004030)
+were provided by the French National
+Hydrological Services (Service de
+Prévision des Crues Grand Delta,
+Guillaume Fourquet). Data and expert
+knowledge on the Wairau at Barnett's
+Bank station (60109) were provided by
+the Marlborough District Council
+(Mike Ede) and the National Institute
+of Water and Atmospheric Research of
+New Zealand (NIW A, Kathy Walter).
+The data and codes used in this paper
+can be downloaded from Irstea's forge
+platform (https://forge.irstea.fr/
+projects/bam/files). The codes use the
+DMSL Fortran library developed by
+Dmitri Kavetski (University of
+Adelaide, Australia). We finally
+acknowledge the constructive and
+insightful comments of the three
+anonymous reviewers of this version of
+the paper, as well as the feedback from
+the reviewers of previous versions.
+MANSANAREZ ET AL. 2897
+Water Resources Research 10.1029/2018WR023389
+Di Baldassarre, G., Laio, F., & Montanari, A. (2012). Effect of observation errors on the uncertainty of design floods. Physics and Chemistry
+of the Earth, Parts A/B/C, 42-44, 85–90. https://doi.org/10.1016/j.pce.2011.05.001
+Ferreira da Silva, A. M., & Yalin, M. S. (2017). Fluvial processes, Series: IAHR Monographs (2nd ed., pp. 266). London: CRC Press.
+ISBN 9781138001381.
+Guerrero, J.-L., Westerberg, I. K., Halldin, S., Xu, C.-Y., & Lundin L.-C. (2012). Temporal variability in stage-discharge relationships.Journal
+of Hydrology, 446-447, 90–102. https://doi.org/10.1016/j.jhydrol.2012.04.031
+Hamilton, A. S., & Moore, R. D. (2012). Quantifying uncertainty in streamflow records. Canadian Water Resources Journal, 37(1), 3–21.
+Herschy, R. W . (1995).Streamflow measurement. London: E & FN Spon.
+Hubert, P., Carbonnel, J.-P., & Chaouche, A. (1989). Segmentation des séries hydrométéorologiques—Application à des séries de
+précipitations et de débits de l'Afrique de l'Ouest. Journal of Hydrology, 110, 349–367. https://doi.org/10.1016/0022-1694(89)90197-2
+Ibbitt, R. P., & Pearson, C. P. (1987). Gauging frequency and detection of rating changes. Hydrological Sciences Journal , 32(1), 85–103.
+https://doi.org/10.1080/02626668709491164
+Juston, J., Jansson, P.-E., & Gustafsson, D. (2014). Rating curve uncertainty and change detection in discharge time series: Case study with
+44-year historic data from the Nyangores River, Kenya. Hydrological Processes, 28(4), 2509–2523. https://doi.org/10.1002/hyp.9786
+Kennedy, E. J. (1984). Discharge ratings at gaging stations , (p. 59): U.S. Geological Survey Techniques of Water-Resources Investigations,
+book 3, Alexandria. Also available at https://pubs.usgs.gov/twri/twri3-a10/
+Kiang, J. E., Gazoorian, C., McMillan, H., Coxon, G., Le Coz, J., Westerberg, I. K., et al. (2018). A comparison of methods for streamflow
+uncertainty estimation. Water Resources Research, 54, 7149–7176. https://doi.org/10.1029/2018WR022708
+Lang, M., Pobanz, K., Renard, B., Renouf, E., & Sauquet, E. (2010). Extrapolation of rating curves by hydraulic modelling, with application
+to flood frequency analysis. Hydrological sciences Journal, 55(6), 883–898. https://doi.org/10.1080/02626667.2010.504186
+Le Coz, J., Renard, B., Bonnifait, L., Branger, F., & Le Boursicaud, R. (2014). Combining hydraulic knowledge and uncertain
+gaugings in the estimation of hydrometric rating curves: A Bayesian approach. J o u r n a lo fH y d r o l o g y, 509, 573–587. https://doi.org/ 10.
+1016/j.jhydrol.2013.11.016
+Leonard, J., Mietton, M., Najib, H., & Gourbesville, P. (2000). Rating curve modelling with Manning's equation to manage instability and
+improve extrapolation. Hydrological Sciences Journal, 45(5), 739–750. https://doi.org/10.1080/02626660009492374
+Mansanarez, V . (2016). Non-unique stage-discharge relations: Bayesian analysis of complex rating curves and their uncertainties (PhD
+dissertation), Irstea, Grenoble Alpes University, 282 p. https://tel.archives-ouvertes.fr/tel-01495985
+Mansanarez, V ., Le Coz, J., Renard, B., Vauchel, P., Pierrefeu, G., & Lang, M. (2016). Bayesian analysis of stage-fall-discharge rating curves
+and their uncertainties. Water Resources Research, 52, 7424–7443.
+McMillan, H., Freer, J., Pappenberger, F., Krueger, T., & Clark, M. (2010). Impacts of uncertain river flow data on rainfall-runoff model
+calibration and discharge predictions. Hydrological Processes, 24(10), 1270–1284. https://doi.org/10.1002/hyp.7587
+McMillan, H., Seibert, J., Petersen-Øverleir, A., Lang, M., White, P., Snelder, T., et al. (2017). How uncertainty analysis of streamflow data
+can reduce costs and promote robust decisions in water management applications. Water Resources Research 53, 5220–5228. https://doi.
+org/10.1002/2016WR020328
+McMillan, H. K., & Westerberg, I. K. (2015). Rating curve estimation under epistemic uncertainty.Hydrological Processes, 29(7), 1873–1882.
+https://doi.org/10.1002/hyp.10419
+Meyer-Peter, E, & Müller, R. (1948). Formulas for bed-load transport, (pp. 39–64). Stockholm, Sweden: Proceedings of the 2nd Meeting of
+the International Association for Hydraulic Structures Research.
+Morlot, T. (2014). La gestion dynamique des relations hauteur-débit des stations d'hydrométrie et le calcul des incertitudes associées. Un
+indicateur de gestion, de qualité et de suivi des points de mesure (PhD dissertation), Dynamic rating curve assessment for hydrometric
+stations and computation of the associated uncertainties: Quality and station management indicators, in French. Grenoble University,
+293p.
+Morlot, T., Perret, C., Favre, A.-C., & Jalbert, J. (2014). Dynamic rating curve assessment for hydrometric stations and computation
+of the associated uncertainties: Quality and station management indicators.J o u r n a lo fH y d r o l o g y, 517, 173–186. https://doi.org/10.1016/
+j.jhydrol.2014.05.007
+Naulet, R., Lang, M., Ouarda, T. B. M. J., Coeur, D., Bobée, B., Recking, A., & Moussay, D. (2005). Flood frequency analysis on the Ardèche
+river using French documentary sources from the last two centuries. J o u r n a lo fH y d r o l o g y, 313(1-2), 58–78. https://doi.org/10.1016/j.
+jhydrol.2005.02.011
+Ocio, D., Le Vine, N., Westerberg, I., Pappenberger, F., & Buytaert, W . (2017). The role of rating curve uncertainty in real-time flood
+forecasting. Water Resources Research, 53, 4197–4213. https://doi.org/10.1002/2016WR020225
+Petersen-Øverleir, A. (2006). Modelling stage-discharge relationships affected by hysteresis using the Jones formula and nonlinear
+regression. Hydrological Sciences Journal, 51, 365–388. https://doi.org/10.1623/hysj.51.3.365
+Petersen-Øverleir, A., & Reitan, T. (2005). Objective segmentation in compound rating curves. Journal of Hydrology, 311(1-4), 188–201.
+Petersen-Øverleir, A., & Reitan, T. (2009). Bayesian analysis of stage-fall-discharge models for gauging stations affected by variable
+backwater. Hydrological Processes, 23(21), 3057–3074. https://doi.org/10.1002/hyp.7417
+Puechberty, R., Perret, C., & Poligot-Pitsch, S. (2017). Charte Qualité de l'Hydrométrie—Guide de bonnes pratiques. Ministère de
+l'Environnement, de l'Énergie et de la Mer, 83 p.
+Rainville, F., Hutchinson, D., Stead, A., Moncur, D., & Elliott, D. (2016). qSOP-NA049-01-2016, hydrometric manual—Data computations,
+stage-discharge model development and maintenance . Canada: Water Survey of Canada, Environment and Climate Change Canada.
+Rantz, S. E. (1982). Measurement and computation of streamflow. Volume 2: Computation of discharge. Water-Supply Paper, 2175, 631.
+Reitan, T., & Petersen-Øverleir, A. (2011). Dynamic rating curve assessment in unstable rivers using Ornstein-Uhlenbeck processes. Water
+Resources Research, 47, W02524. https://doi.org/10.1029/2010WR009504
+Réméniéras, G. (1949). Annuaire hydrologique de la France, année 1949: L'Hydraulique des stations limnimétriques pour la mesure du
+débit des cours d'eau. [Hydrological annual report of France, year 1949: The Hydraulics of gauging stations for streamflow measurements
+(in French)], Société hydrotechnique de France.
+Renard, B., Garreta, V ., & Lang, M. (2006). An application of Bayesian analysis and MCMC methods to the estimation of a regional trend
+in annual maxima. Water Resources Research, 42, W12422. https://doi.org/10.1029/2005WR004591
+Renard, B., & Lang, M. (2007). Use of a Gaussian copula for multivariate extreme value analysis: Some case studies in hydrology. Advances
+in Water Resources, 30, 897–912. https://doi.org/10.1016/j.advwatres.2006.08.001
+Schumm, S. A. (1977). The fluvial system. New-York: Wiley. https://doi.org/10.1017/CBO9781139165440
+Sikorska, A. E., & Renard, B. (2017). Calibrating a hydrological model in stage space to account for rating curve uncertainties: General
+framework and key challenges. Advances in Water Resources, 105, 51–66. https://doi.org/10.1016/j.advwatres.2017.04.011
+MANSANAREZ ET AL. 2898
+Water Resources Research 10.1029/2018WR023389
+Steinbakk, G. H., Thorarinsdottir, T. L., Reitan, T., Schlichting, L., Hølleland, S., & Engeland, K. (2016). Propagation of rating curve
+uncertainty in design flood estimation. Water Resources Research, 52, 6897–6915. https://doi.org/10.1002/2015WR018516
+Watson, M., Horrell, G., & Doyle, M. (2016). National environmental monitoring standard: Rating curves. Construction of stage-discharge
+and velocity-index ratings. Version: 1.0, 154 p.
+Westerberg, I., Guerrero, J.-L., Seibert, J., Beven, K. J., & Halldin, S. (2011). Stage-discharge uncertainty derived with a non-stationary
+rating curve in the Choluteca River, Honduras. Hydrological Processes, 25(4), 603–613. https://doi.org/10.1002/hyp.7848
+Westerberg, I. K., & McMillan, H. K. (2015). Uncertainty in hydrological signatures.Hydrology and Earth System Sciences, 19(9), 3951–3968.
+World Meteorological Organization (2010). Manual on stream gauging. Computation of discharge WMO-No. 1044, II, 195.
+MANSANAREZ ET AL. 2899

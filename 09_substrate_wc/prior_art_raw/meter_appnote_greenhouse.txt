@@ -1,0 +1,187 @@
+support@decagon.com509-332-2756 www.decagon.com
+ 
+Application Note
+Manual irrigation is labor-intensive and 
+repetitive, so it is one of the first greenhouse 
+tasks that should be automated. Although 
+automating irrigation is easy, automated 
+systems are not necessarily water efficient. 
+Many growers use timers to control irrigation, 
+but timers do not account for day-to-day changes 
+in plant water use caused by natural fluctuations 
+in temperature, light and humidity levels. In 
+addition, plant water use increases as plants 
+grow. This makes it difficult to obtain efficient 
+irrigation using a timer. Given the increasing 
+strain on water resources in many parts of North 
+America, the greenhouse industry needs to 
+move towards more efficient irrigation systems.
+Soil water sensors provide promising new 
+opportunities for automating greenhouse 
+irrigation according to plant need. We have 
+worked extensively with EC-5 probes, which 
+are small enough to fit into a 4” pot, and have 
+found that these probes accurately measure 
+the volumetric water content of soilless 
+substrates. We have integrated EC-5 probes into 
+an automated irrigation system that makes it 
+possible to irrigate plants based on actual plant 
+water use.
+The basic idea behind using soil water sensors 
+to control irrigation is simple: when plants use 
+water, they take it up from the substrate, so the 
+water content of the substrate decreases. Soil 
+water sensors detect these changes and can 
+be used to open an irrigation valve when the 
+substrate water content drops below a user-
+determined set-point. This results in frequent 
+applications of small amounts of water, and the 
+frequency of irrigation is adjusted automatically 
+based on the rate of substrate water depletion. 
+This irrigation approach automatically replaces 
+water that is used by plants or lost through 
+evaporation and assures that plants are never 
+exposed to drought stress. By irrigating with the 
+amount of water actually needed by the plants, 
+water use and leaching can be reduced greatly. 
+This minimizes pollution without using expensive 
+recycling irrigation systems or large ponds to 
+capture runoff.
+Does it really work?
+To test this irrigation approach and to determine 
+how much water petunias need for good growth, 
+we grew them at substrate water levels ranging 
+from 5 to 40%. Irrigation was controlled with 
+EC-5 probes in the substrate, which were 
+connected to a datalogger. For the first nine 
+days after transplanting seedlings, all substrates 
+were kept well-watered to allow the plants to 
+establish. Afterwards, our irrigation system 
+maintained substrate water content (treatments 
+ranging from 5-40%) for 20 days and then plants 
+were harvested.
+Our irrigation system performed very well 
+throughout the entire study (Fig. 1). As soon 
+as the substrate water content in a particular 
+container had dried out to the irrigation set 
+point, our automated irrigation system started 
+irrigating that tray. The water content of the 
+substrate generally was kept slightly above the 
+set point.
+A higher substrate water set point for irrigation 
+resulted in more frequent waterings. Although 
+the irrigation quantity increased with increasing 
+substrate water levels, there was no leaching 
+in any of the treatments. Even the largest plant 
+received only 650 mL (about 21 fl. oz.) of water 
+during the last 20 days of the experiment. Daily 
+water use in the treatment with the highest 
+Using Soil Water Sensors for Efficient Irrigation in Greenhouses
+Marc van Iersel and Stephanie Burnett
+University of Georgia
+Date: June 14, 2012
+support@decagon.com509-332-2756 www.decagon.com
+ 
+Application Note
+water use ranged from only 15-20 mL/plant/day 
+(just over one tablespoon!) when the plants were 
+small to 45 mL/plant/day (3 tablespoons) at the 
+end of the experiment.
+Plant growth increased with increasing substrate 
+water content, but there was little difference 
+between the 25, 30, 35, and 40% treatments 
+(Figure 2 left, 3). Since plant growth was highly 
+correlated with the amount of water the plants 
+received (Fig. 2 right), controlling irrigation 
+based on substrate water content may be a 
+feasible method for controlling growth of rapidly 
+elongating plants.
+Figure 1. The water content of the substrate 
+over the course of the experiment. Irrigation was 
+controlled using EC-5 probes, and a small amount 
+of water was added to the substrate automatically 
+whenever the substrate water content dropped 
+below the irrigation set point. There were eight 
+different treatments with set points ranging from 
+5 to 40%.
+Figure 2. The effect of the substrate water 
+content (left) and the total irrigation volume 
+(right) on the dry weight of petunias. Controlling 
+irrigation by controlling the substrate water 
+content proved to be an effective way to control 
+plant growth.
+Figure 3. The effect of substrate water content 
+on the growth of petunias. The picture was taken 
+after a one-month growing period. Irrigation was 
+controlled using EC-5 probes during the last 20 
+days of the trial.
+support@decagon.com509-332-2756 www.decagon.com
+ 
+Application Note
+How can growers use this?
+Several brands of greenhouse control systems 
+can measure EC-5 probes, and could be 
+used to automate irrigation based on these 
+measurements. Growers should check with 
+the manufacturer of their control system 
+to see if it can measure these probes. For 
+growers who prefer a stand-alone controller, 
+we have collaborated with Brower Electronics 
+Laboratories (Pittsboro, NC) to develop a 
+controller that can irrigate plants when the 
+substrate water content drops below a grower-
+determined set point (Figure 4). This controller 
+also allows growers to set irrigation duration and 
+a minimum time period between subsequent 
+irrigations.
+Growers who are not ready to turn over irrigation 
+to soil water probes, could get valuable 
+information about plant water needs by using 
+EC-5 probes with a handheld meter or datalogger 
+from Decagon. The handheld meter allows 
+growers to place sensors in some of their pots, 
+and to periodically measure the water content 
+of the substrate. A datalogger can send data 
+wirelessly to your computer which allows you to 
+monitor changes in substrate water content in 
+real-time through graphical displays. Using this 
+technology would give growers a much better 
+idea of how much water plants need, and will 
+help in making better irrigation decisions.
+Figure 4. We developed an automated irrigation 
+controller in cooperation with Brower Electronics 
+Laboratories. This controller uses 1 to 4 ECH2O 
+probes to control irrigation based on grower-
+determined set points.
+Conclusion
+It appears that in the near future growers may 
+automate irrigation using sensors to water 
+plants efficiently and improve plant quality. The 
+technology is currently available, and guidelines 
+for its use are being developed. But, what’s 
+next? In the future, we wish to gain a better 
+grasp of how water use changes depending on 
+the location of a crop in the greenhouse (for 
+example, proximity to cooling pads or fans), 
+the number of plants grown, and environmental 
+factors. An exciting new development is that 
+the newer ECH2O-TE probes can measure both 
+substrate EC and water content. This may allow 
+growers to control both irrigation and fertilization 
+simultaneously.
+Marc van Iersel is a professor in floriculture at 
+the University of Georgia; mvanier@uga.edu; for 
+more information, please visit Marc van Iersel’s 
+support@decagon.com509-332-2756 www.decagon.com
+ 
+Application Note
+irrigation automation website: www.hortphys.
+uga.edu/irrigationcontrol.html
+Stephanie Burnett is an assistant professor in 
+floriculture at the University of Maine; stephanie.
+burnett@umit.maine.edu
+We gratefully acknowledge the Fred C. Gloeckner 
+Foundation for funding our research.
+Printed in USA
+©2015 Decagon Devices, Inc.
+05-27-15

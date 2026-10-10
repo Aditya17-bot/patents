@@ -1,0 +1,222 @@
+{
+ "step_dS_m": 0.15,
+ "lag_min": 15,
+ "P_star": 80.88,
+ "label_check": {
+  "Reference": {
+   "after_pulse": 0.134,
+   "after_pulse_metered_drain_zero": 0.006,
+   "quiet": 0.0048,
+   "pulses_metered_drain_zero": 176
+  },
+  "AICU": {
+   "after_pulse": 0.5,
+   "after_pulse_metered_drain_zero": 0.063,
+   "quiet": 0.0006,
+   "pulses_metered_drain_zero": 127
+  },
+  "Automatoes": {
+   "after_pulse": 0.175,
+   "after_pulse_metered_drain_zero": 0.0,
+   "quiet": 0.0128,
+   "pulses_metered_drain_zero": 111
+  },
+  "Digilog": {
+   "after_pulse": 0.133,
+   "after_pulse_metered_drain_zero": 0.04,
+   "quiet": 0.0006,
+   "pulses_metered_drain_zero": 126
+  },
+  "IUACAAS": {
+   "after_pulse": 0.369,
+   "after_pulse_metered_drain_zero": 0.0,
+   "quiet": 0.0006,
+   "pulses_metered_drain_zero": 59
+  },
+  "TheAutomators": {
+   "after_pulse": 0.107,
+   "after_pulse_metered_drain_zero": 0.0,
+   "quiet": 0.0009,
+   "pulses_metered_drain_zero": 8
+  }
+ },
+ "onset_cup_vs_collapse": {
+  "Reference": {
+   "1": {
+    "n_days": 61,
+    "median_diff": -0.25,
+    "median_abs_diff": 0.35,
+    "time_cup_minus_collapse_min_median": -60.0,
+    "time_abs_le_60min": 0.36
+   },
+   "2": {
+    "n_days": 51,
+    "median_diff": -0.1,
+    "median_abs_diff": 0.3,
+    "time_cup_minus_collapse_min_median": -140.0,
+    "time_abs_le_60min": 0.16
+   }
+  },
+  "AICU": {
+   "1": {
+    "n_days": 13,
+    "median_diff": -0.2,
+    "median_abs_diff": 0.4,
+    "time_cup_minus_collapse_min_median": -275.0,
+    "time_abs_le_60min": 0.15
+   },
+   "2": {
+    "n_days": 9,
+    "median_diff": -0.2,
+    "median_abs_diff": 0.2,
+    "time_cup_minus_collapse_min_median": -270.0,
+    "time_abs_le_60min": 0.11
+   }
+  },
+  "Automatoes": {
+   "1": {
+    "n_days": 62,
+    "median_diff": 0.0,
+    "median_abs_diff": 0.2,
+    "time_cup_minus_collapse_min_median": -43.0,
+    "time_abs_le_60min": 0.65
+   },
+   "2": {
+    "n_days": 67,
+    "median_diff": -0.05,
+    "median_abs_diff": 0.1,
+    "time_cup_minus_collapse_min_median": 0.0,
+    "time_abs_le_60min": 0.79
+   }
+  },
+  "Digilog": {
+   "1": {
+    "n_days": 22,
+    "median_diff": 0.0,
+    "median_abs_diff": 0.3,
+    "time_cup_minus_collapse_min_median": -80.0,
+    "time_abs_le_60min": 0.32
+   },
+   "2": {
+    "n_days": 15,
+    "median_diff": -0.2,
+    "median_abs_diff": 0.4,
+    "time_cup_minus_collapse_min_median": -100.0,
+    "time_abs_le_60min": 0.27
+   }
+  },
+  "IUACAAS": {
+   "1": {
+    "n_days": 61,
+    "median_diff": -0.3,
+    "median_abs_diff": 0.4,
+    "time_cup_minus_collapse_min_median": -80.0,
+    "time_abs_le_60min": 0.31
+   },
+   "2": {
+    "n_days": 61,
+    "median_diff": -0.7,
+    "median_abs_diff": 0.7,
+    "time_cup_minus_collapse_min_median": -90.0,
+    "time_abs_le_60min": 0.31
+   }
+  },
+  "TheAutomators": {
+   "1": {
+    "n_days": 58,
+    "median_diff": -0.2,
+    "median_abs_diff": 0.2,
+    "time_cup_minus_collapse_min_median": -15.0,
+    "time_abs_le_60min": 0.71
+   },
+   "2": {
+    "n_days": 59,
+    "median_diff": -0.1,
+    "median_abs_diff": 0.2,
+    "time_cup_minus_collapse_min_median": -5.0,
+    "time_abs_le_60min": 0.75
+   }
+  }
+ },
+ "onset_median_abs_diff_over_sensors": 0.3,
+ "onset_time_within_60min_median_share": 0.32,
+ "level_at_cup_onset_n": 737,
+ "level_at_cup_onset": {
+  "raw": {
+   "pooled_median_abs": 4.88,
+   "pooled_p90_abs": 16.98,
+   "sensor_medians_range": [
+    -19.48,
+    5.55
+   ],
+   "sensors_within_1": 0,
+   "per_sensor": {
+    "AICU_1": -3.73,
+    "AICU_2": -19.48,
+    "Automatoes_1": -6.2,
+    "Automatoes_2": -1.58,
+    "Digilog_1": -5.58,
+    "Digilog_2": -15.73,
+    "IUACAAS_1": 1.22,
+    "IUACAAS_2": -10.48,
+    "Reference_1": 5.55,
+    "Reference_2": 2.3,
+    "TheAutomators_1": -4.08,
+    "TheAutomators_2": -4.78
+   }
+  },
+  "comm": {
+   "pooled_median_abs": 4.77,
+   "pooled_p90_abs": 11.92,
+   "sensor_medians_range": [
+    -13.8,
+    1.2
+   ],
+   "sensors_within_1": 1,
+   "per_sensor": {
+    "AICU_1": -9.45,
+    "AICU_2": -2.15,
+    "Automatoes_1": 1.18,
+    "Automatoes_2": 1.2,
+    "Digilog_1": -8.95,
+    "Digilog_2": -10.1,
+    "IUACAAS_1": -6.38,
+    "IUACAAS_2": -13.8,
+    "Reference_1": 0.78,
+    "Reference_2": -3.0,
+    "TheAutomators_1": -5.1,
+    "TheAutomators_2": -5.5
+   }
+  },
+  "roll": {
+   "pooled_median_abs": 1.1,
+   "pooled_p90_abs": 4.0,
+   "sensor_medians_range": [
+    -1.28,
+    2.25
+   ],
+   "sensors_within_1": 10,
+   "per_sensor": {
+    "AICU_1": -0.9,
+    "AICU_2": -0.5,
+    "Automatoes_1": 0.3,
+    "Automatoes_2": 0.19,
+    "Digilog_1": 2.25,
+    "Digilog_2": 0.4,
+    "IUACAAS_1": -0.9,
+    "IUACAAS_2": -1.28,
+    "Reference_1": 0.91,
+    "Reference_2": 0.4,
+    "TheAutomators_1": -0.15,
+    "TheAutomators_2": 0.35
+   }
+  }
+ },
+ "n_pulses": 24760,
+ "n_drained": 5148,
+ "pre_pulse_auc_not_used": {
+  "raw": 0.529,
+  "commissioning": 0.551,
+  "rolling": 0.539
+ }
+}

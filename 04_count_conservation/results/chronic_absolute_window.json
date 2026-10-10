@@ -1,0 +1,115 @@
+{
+ "manifest": "window.json",
+ "seed": 0,
+ "threshold_k": 3.5,
+ "nodes": 18,
+ "detectors": 51,
+ "pool": 16,
+ "flagged_without_injection": 0,
+ "flagged_without_injection_pct": 0.0,
+ "robust_scale_offset_veh": 0.672,
+ "robust_scale_gain_veh": 1.302,
+ "detectors_tested": 16,
+ "cases": [
+  {
+   "mode": "offset",
+   "magnitude": -30.0,
+   "trials": 16,
+   "detected": 0.8125,
+   "identified_rank1": 0.8125,
+   "type_named_correctly": 0.8125,
+   "extra_detectors_flagged_per_trial": 2.25,
+   "median_recovered_absolute": -28.6433
+  },
+  {
+   "mode": "offset",
+   "magnitude": -15.0,
+   "trials": 16,
+   "detected": 0.8125,
+   "identified_rank1": 0.8125,
+   "type_named_correctly": 0.8125,
+   "extra_detectors_flagged_per_trial": 2.25,
+   "median_recovered_absolute": -13.7362
+  },
+  {
+   "mode": "offset",
+   "magnitude": -8.0,
+   "trials": 16,
+   "detected": 0.8125,
+   "identified_rank1": 0.8125,
+   "type_named_correctly": 0.8125,
+   "extra_detectors_flagged_per_trial": 2.625,
+   "median_recovered_absolute": -6.8369
+  },
+  {
+   "mode": "offset",
+   "magnitude": 8.0,
+   "trials": 16,
+   "detected": 0.8125,
+   "identified_rank1": 0.8125,
+   "type_named_correctly": 0.8125,
+   "extra_detectors_flagged_per_trial": 1.125,
+   "median_recovered_absolute": 7.5045
+  },
+  {
+   "mode": "offset",
+   "magnitude": 15.0,
+   "trials": 16,
+   "detected": 0.875,
+   "identified_rank1": 0.875,
+   "type_named_correctly": 0.875,
+   "extra_detectors_flagged_per_trial": 1.562,
+   "median_recovered_absolute": 14.3637
+  },
+  {
+   "mode": "offset",
+   "magnitude": 30.0,
+   "trials": 16,
+   "detected": 0.875,
+   "identified_rank1": 0.875,
+   "type_named_correctly": 0.875,
+   "extra_detectors_flagged_per_trial": 1.562,
+   "median_recovered_absolute": 29.558
+  },
+  {
+   "mode": "scale",
+   "magnitude": 0.95,
+   "trials": 16,
+   "detected": 0.6875,
+   "identified_rank1": 0.625,
+   "type_named_correctly": 0.5625,
+   "extra_detectors_flagged_per_trial": 2.188,
+   "median_recovered_absolute": -0.0469
+  },
+  {
+   "mode": "scale",
+   "magnitude": 0.98,
+   "trials": 16,
+   "detected": 0.4375,
+   "identified_rank1": 0.5625,
+   "type_named_correctly": 0.25,
+   "extra_detectors_flagged_per_trial": 2.25,
+   "median_recovered_absolute": -0.0131
+  },
+  {
+   "mode": "scale",
+   "magnitude": 1.02,
+   "trials": 16,
+   "detected": 0.625,
+   "identified_rank1": 0.4375,
+   "type_named_correctly": 0.5,
+   "extra_detectors_flagged_per_trial": 1.25,
+   "median_recovered_absolute": 0.0174
+  },
+  {
+   "mode": "scale",
+   "magnitude": 1.05,
+   "trials": 16,
+   "detected": 0.6875,
+   "identified_rank1": 0.75,
+   "type_named_correctly": 0.5,
+   "extra_detectors_flagged_per_trial": 1.562,
+   "median_recovered_absolute": 0.047
+  }
+ ]
+}

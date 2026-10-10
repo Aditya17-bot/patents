@@ -1,0 +1,448 @@
+{
+ "B": 2000,
+ "min_visits": 5,
+ "e1_all": {
+  "n": 1206,
+  "stations": 56,
+  "baseline_mean": 17.01,
+  "method_mean": 13.67,
+  "reduction_pts": 3.34,
+  "ci95": [
+   1.62,
+   5.21
+  ],
+  "stations_with_5plus": 50,
+  "stations_better": 32
+ },
+ "e1_open_water": {
+  "n": 831,
+  "stations": 56,
+  "baseline_mean": 11.68,
+  "method_mean": 10.62,
+  "reduction_pts": 1.06,
+  "ci95": [
+   0.42,
+   1.74
+  ],
+  "stations_with_5plus": 46,
+  "stations_better": 27
+ },
+ "e1_big": {
+  "n": 554,
+  "stations": 55,
+  "baseline_mean": 31.25,
+  "method_mean": 22.64,
+  "reduction_pts": 8.62,
+  "ci95": [
+   5.35,
+   12.19
+  ],
+  "stations_with_5plus": 37,
+  "stations_better": 32
+ },
+ "e1_big_vs_flood_step": {
+  "n": 554,
+  "stations": 55,
+  "baseline_mean": 29.29,
+  "method_mean": 22.64,
+  "reduction_pts": 6.65,
+  "ci95": [
+   1.95,
+   11.48
+  ],
+  "stations_with_5plus": 37,
+  "stations_better": 22
+ },
+ "e1_open_water_big": {
+  "n": 382,
+  "stations": 53,
+  "baseline_mean": 20.03,
+  "method_mean": 16.38,
+  "reduction_pts": 3.65,
+  "ci95": [
+   2.55,
+   4.97
+  ],
+  "stations_with_5plus": 32,
+  "stations_better": 27
+ },
+ "e1_vs_practice": {
+  "n": 1206,
+  "stations": 56,
+  "baseline_mean": 17.02,
+  "method_mean": 13.67,
+  "reduction_pts": 3.35,
+  "ci95": [
+   1.62,
+   5.37
+  ],
+  "stations_with_5plus": 50,
+  "stations_better": 35
+ },
+ "e1_open_water_vs_practice": {
+  "n": 831,
+  "stations": 56,
+  "baseline_mean": 11.74,
+  "method_mean": 10.62,
+  "reduction_pts": 1.12,
+  "ci95": [
+   0.38,
+   2.0
+  ],
+  "stations_with_5plus": 46,
+  "stations_better": 32
+ },
+ "e1_rt_all": {
+  "n": 547,
+  "stations": 34,
+  "baseline_mean": 14.87,
+  "method_mean": 13.42,
+  "reduction_pts": 1.45,
+  "ci95": [
+   -0.44,
+   3.45
+  ],
+  "stations_with_5plus": 27,
+  "stations_better": 12
+ },
+ "e1_rt_big": {
+  "n": 280,
+  "stations": 33,
+  "baseline_mean": 24.78,
+  "method_mean": 20.64,
+  "reduction_pts": 4.14,
+  "ci95": [
+   0.75,
+   7.21
+  ],
+  "stations_with_5plus": 18,
+  "stations_better": 13
+ },
+ "e2_rt_all": {
+  "n": 793,
+  "stations": 37,
+  "baseline_mean": 15.61,
+  "method_mean": 14.01,
+  "reduction_pts": 1.6,
+  "ci95": [
+   0.14,
+   3.15
+  ],
+  "stations_with_5plus": 34,
+  "stations_better": 18
+ },
+ "e2_rt_big": {
+  "n": 423,
+  "stations": 37,
+  "baseline_mean": 25.34,
+  "method_mean": 20.63,
+  "reduction_pts": 4.71,
+  "ci95": [
+   2.24,
+   6.89
+  ],
+  "stations_with_5plus": 31,
+  "stations_better": 20
+ },
+ "e1_ip_all": {
+  "n": 815,
+  "stations": 43,
+  "baseline_mean": 19.88,
+  "method_mean": 15.84,
+  "reduction_pts": 4.05,
+  "ci95": [
+   1.73,
+   6.69
+  ],
+  "stations_with_5plus": 37,
+  "stations_better": 25
+ },
+ "e1_ip_vs_practice": {
+  "n": 815,
+  "stations": 43,
+  "baseline_mean": 19.86,
+  "method_mean": 15.84,
+  "reduction_pts": 4.02,
+  "ci95": [
+   1.43,
+   7.2
+  ],
+  "stations_with_5plus": 37,
+  "stations_better": 25
+ },
+ "e1_ip_open_water": {
+  "n": 571,
+  "stations": 43,
+  "baseline_mean": 11.57,
+  "method_mean": 10.58,
+  "reduction_pts": 0.99,
+  "ci95": [
+   0.11,
+   2.05
+  ],
+  "stations_with_5plus": 35,
+  "stations_better": 21
+ },
+ "holdout": {
+  "first": {
+   "n": 604,
+   "stations": 28,
+   "all": [
+    16.99,
+    13.54
+   ],
+   "all_paired": {
+    "better": 316,
+    "of": 574,
+    "share": 0.551,
+    "z": 2.42
+   },
+   "big": [
+    32.53,
+    23.13
+   ]
+  },
+  "second": {
+   "n": 602,
+   "stations": 28,
+   "all": [
+    17.03,
+    13.8
+   ],
+   "all_paired": {
+    "better": 300,
+    "of": 525,
+    "share": 0.571,
+    "z": 3.27
+   },
+   "big": [
+    30.1,
+    22.19
+   ]
+  }
+ },
+ "sensitivity": [
+  {
+   "prior": 0.0,
+   "min_past": 3,
+   "all_mean": 14.05,
+   "big_mean": 23.6
+  },
+  {
+   "prior": 0.0,
+   "min_past": 5,
+   "all_mean": 14.11,
+   "big_mean": 23.89
+  },
+  {
+   "prior": 0.0,
+   "min_past": 8,
+   "all_mean": 15.11,
+   "big_mean": 26.2
+  },
+  {
+   "prior": 0.25,
+   "min_past": 3,
+   "all_mean": 13.84,
+   "big_mean": 23.12
+  },
+  {
+   "prior": 0.25,
+   "min_past": 5,
+   "all_mean": 13.8,
+   "big_mean": 23.23
+  },
+  {
+   "prior": 0.25,
+   "min_past": 8,
+   "all_mean": 14.34,
+   "big_mean": 24.52
+  },
+  {
+   "prior": 0.5,
+   "min_past": 3,
+   "all_mean": 13.74,
+   "big_mean": 22.69
+  },
+  {
+   "prior": 0.5,
+   "min_past": 5,
+   "all_mean": 13.67,
+   "big_mean": 22.64
+  },
+  {
+   "prior": 0.5,
+   "min_past": 8,
+   "all_mean": 13.79,
+   "big_mean": 22.93
+  },
+  {
+   "prior": 0.75,
+   "min_past": 3,
+   "all_mean": 13.84,
+   "big_mean": 22.65
+  },
+  {
+   "prior": 0.75,
+   "min_past": 5,
+   "all_mean": 13.77,
+   "big_mean": 22.48
+  },
+  {
+   "prior": 0.75,
+   "min_past": 8,
+   "all_mean": 13.67,
+   "big_mean": 22.16
+  }
+ ],
+ "sensitivity_range_all": [
+  13.67,
+  15.11
+ ],
+ "sensitivity_range_big": [
+  22.16,
+  26.2
+ ],
+ "variants": [
+  {
+   "n": 1900,
+   "stations": 74,
+   "all": [
+    18.75,
+    16.27
+   ],
+   "all_paired": {
+    "better": 890,
+    "of": 1650,
+    "share": 0.539,
+    "z": 3.2
+   },
+   "big": [
+    36.83,
+    28.9
+   ],
+   "what": "coupling",
+   "value": 0.9
+  },
+  {
+   "n": 1206,
+   "stations": 56,
+   "all": [
+    17.01,
+    13.67
+   ],
+   "all_paired": {
+    "better": 616,
+    "of": 1099,
+    "share": 0.561,
+    "z": 4.01
+   },
+   "big": [
+    31.25,
+    22.64
+   ],
+   "what": "coupling",
+   "value": 0.95
+  },
+  {
+   "n": 881,
+   "stations": 46,
+   "all": [
+    18.52,
+    13.96
+   ],
+   "all_paired": {
+    "better": 468,
+    "of": 802,
+    "share": 0.584,
+    "z": 4.73
+   },
+   "big": [
+    31.97,
+    22.03
+   ],
+   "what": "coupling",
+   "value": 0.97
+  },
+  {
+   "n": 789,
+   "stations": 51,
+   "all": [
+    16.11,
+    12.92
+   ],
+   "all_paired": {
+    "better": 422,
+    "of": 735,
+    "share": 0.574,
+    "z": 4.02
+   },
+   "big": [
+    30.81,
+    20.27
+   ],
+   "what": "window_days",
+   "value": 14
+  },
+  {
+   "n": 1489,
+   "stations": 61,
+   "all": [
+    17.15,
+    14.49
+   ],
+   "all_paired": {
+    "better": 687,
+    "of": 1237,
+    "share": 0.555,
+    "z": 3.9
+   },
+   "big": [
+    30.69,
+    24.16
+   ],
+   "what": "window_days",
+   "value": 28
+  },
+  {
+   "n": 859,
+   "stations": 51,
+   "all": [
+    17.98,
+    14.17
+   ],
+   "all_paired": {
+    "better": 462,
+    "of": 817,
+    "share": 0.565,
+    "z": 3.74
+   },
+   "big": [
+    36.52,
+    25.53
+   ],
+   "what": "steady_ft",
+   "value": 0.15
+  },
+  {
+   "n": 1414,
+   "stations": 59,
+   "all": [
+    16.41,
+    13.54
+   ],
+   "all_paired": {
+    "better": 679,
+    "of": 1258,
+    "share": 0.54,
+    "z": 2.82
+   },
+   "big": [
+    29.46,
+    21.52
+   ],
+   "what": "steady_ft",
+   "value": 0.35
+  }
+ ]
+}

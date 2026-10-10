@@ -1,0 +1,116 @@
+{
+ "manifest": "window_full_M25_A.json",
+ "seed": 0,
+ "nodes": 199,
+ "detectors": 367,
+ "detectors_multinode": 162,
+ "detectors_tested": 25,
+ "baseline": {
+  "nonzero_offsets": 199,
+  "median_abs_offset": 1.193,
+  "max_abs_offset": 43.734,
+  "median_abs_residual": 0.0
+ },
+ "cases": [
+  {
+   "mode": "offset",
+   "magnitude": -30.0,
+   "trials": 25,
+   "identified_top1": 0.92,
+   "identified_top3": 0.92,
+   "median_recovered_shift": -30.027,
+   "true_shift": -30.0,
+   "magnitude_within_35pct": 0.92
+  },
+  {
+   "mode": "offset",
+   "magnitude": -15.0,
+   "trials": 25,
+   "identified_top1": 0.92,
+   "identified_top3": 0.92,
+   "median_recovered_shift": -15.0139,
+   "true_shift": -15.0,
+   "magnitude_within_35pct": 0.92
+  },
+  {
+   "mode": "offset",
+   "magnitude": -8.0,
+   "trials": 25,
+   "identified_top1": 0.88,
+   "identified_top3": 0.88,
+   "median_recovered_shift": -8.0072,
+   "true_shift": -8.0,
+   "magnitude_within_35pct": 0.88
+  },
+  {
+   "mode": "offset",
+   "magnitude": 8.0,
+   "trials": 25,
+   "identified_top1": 0.92,
+   "identified_top3": 0.92,
+   "median_recovered_shift": 7.99,
+   "true_shift": 8.0,
+   "magnitude_within_35pct": 0.92
+  },
+  {
+   "mode": "offset",
+   "magnitude": 15.0,
+   "trials": 25,
+   "identified_top1": 0.92,
+   "identified_top3": 0.92,
+   "median_recovered_shift": 14.9812,
+   "true_shift": 15.0,
+   "magnitude_within_35pct": 0.92
+  },
+  {
+   "mode": "offset",
+   "magnitude": 30.0,
+   "trials": 25,
+   "identified_top1": 0.92,
+   "identified_top3": 0.92,
+   "median_recovered_shift": 30.0282,
+   "true_shift": 30.0,
+   "magnitude_within_35pct": 0.92
+  },
+  {
+   "mode": "scale",
+   "magnitude": 0.95,
+   "trials": 25,
+   "identified_top1": 0.88,
+   "identified_top3": 0.92,
+   "median_recovered_shift": -0.056,
+   "true_shift": -0.05,
+   "magnitude_within_35pct": 0.88
+  },
+  {
+   "mode": "scale",
+   "magnitude": 0.98,
+   "trials": 25,
+   "identified_top1": 0.8,
+   "identified_top3": 0.88,
+   "median_recovered_shift": -0.022,
+   "true_shift": -0.02,
+   "magnitude_within_35pct": 0.84
+  },
+  {
+   "mode": "scale",
+   "magnitude": 1.02,
+   "trials": 25,
+   "identified_top1": 0.84,
+   "identified_top3": 0.92,
+   "median_recovered_shift": 0.0209,
+   "true_shift": 0.02,
+   "magnitude_within_35pct": 0.84
+  },
+  {
+   "mode": "scale",
+   "magnitude": 1.05,
+   "trials": 25,
+   "identified_top1": 0.84,
+   "identified_top3": 0.88,
+   "median_recovered_shift": 0.0518,
+   "true_shift": 0.05,
+   "magnitude_within_35pct": 0.88
+  }
+ ]
+}

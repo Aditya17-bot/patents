@@ -1,0 +1,31 @@
+{
+ "manifest": "window_apr_M1_A.json",
+ "span_intervals": 192,
+ "relations": 203,
+ "detectors_in_two_or_more": 123,
+ "eligible": 121,
+ "test_spans": 7,
+ "reference_spans": 7,
+ "reports_test": 0,
+ "reports_reference_chance": 0,
+ "detectors_reported": 0,
+ "binsum": {
+  "reports_with_rate_over_2x_own_reference": 0,
+  "reports_with_rate_above_others_median": 0,
+  "of": 0,
+  "overall_bad_rate_all_detectors": 0.0005
+ },
+ "status_not_active_today": {
+  "reported": null,
+  "others": 0.0,
+  "n_reported": 0,
+  "n_others": 123
+ },
+ "in_map_audit_flagged_relation": {
+  "reported": null,
+  "others": null
+ },
+ "persistence_june": null,
+ "reports": [],
+ "reference_reports": []
+}

@@ -1,0 +1,38 @@
+corridor 367 sites, 199 nodes fitted
+calibrated on 1486 intervals, faults injected into the other 1486
+span 192 intervals (2.0 days); 197 of 199 nodes carry a usable threshold
+per-node threshold at 1% false positives, vehicles per interval: median 2.33  min 0.43  max 116.88
+detectors under test: 40 of 162 that belong to >=2 nodes
+
+mode         size  trials    detect  attrib@1  attrib@3 total-blind   type ok
+none        0.000      80      1.2%      1.2%      3.8%           -        -
+scale       0.800      80     97.5%     82.5%     91.2%           -     100%
+scale       0.900      80     97.5%     78.8%     88.8%           -     100%
+scale       0.950      80     96.2%     81.2%     90.0%           -      99%
+scale       0.980      80     90.0%     73.8%     85.0%           -      97%
+scale       0.990      80     80.0%     62.5%     73.8%           -      92%
+scale       0.995      80     70.0%     58.8%     62.5%           -      83%
+scale       1.005      80     63.7%     53.8%     57.5%           -      85%
+scale       1.010      80     78.8%     62.5%     72.5%           -      97%
+scale       1.020      80     92.5%     80.0%     88.8%           -     100%
+scale       1.050      80     93.8%     86.2%     88.8%           -      99%
+scale       1.100      80     97.5%     87.5%     91.2%           -     100%
+offset    -30.000      80     97.5%     83.8%     90.0%           -     100%
+offset    -15.000      80     93.8%     78.8%     91.2%           -     100%
+offset     -8.000      80     87.5%     77.5%     85.0%           -      97%
+offset     -4.000      80     85.0%     71.2%     77.5%           -      90%
+offset     -2.000      80     71.2%     51.2%     63.7%           -      82%
+offset      2.000      80     68.8%     53.8%     65.0%           -      70%
+offset      4.000      80     81.2%     71.2%     78.8%           -      90%
+offset      8.000      80     87.5%     75.0%     81.2%           -      97%
+offset     15.000      80     91.2%     80.0%     87.5%           -     100%
+offset     30.000      80     95.0%     85.0%     90.0%           -     100%
+stuck       0.000      80     96.2%     78.8%     87.5%           -        -
+classify    0.010      80     46.2%     26.2%     30.0%        2.5%        -
+classify    0.020      80     61.3%     41.2%     46.2%        2.5%        -
+classify    0.050      80     86.2%     70.0%     73.8%        0.0%        -
+classify    0.100      80     91.2%     70.0%     76.2%        3.8%        -
+classify    0.200      80     93.8%     75.0%     83.8%        3.8%        -
+classify    0.400      80     97.5%     85.0%     90.0%        2.5%        -
+
+wrote results/faults_full_M25_A.json

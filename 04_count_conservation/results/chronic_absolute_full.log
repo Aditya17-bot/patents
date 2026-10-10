@@ -1,0 +1,20 @@
+corridor 367 detectors, 199 nodes, 162 in the multi-node pool
+no fault injected, threshold k=3.5 on the robust z of the recovered bias:
+  flagged: 40 of 162 detectors (24.7%)
+  robust scale of the recovered population: offset 0.69 veh, gain 1.47 veh
+  these are not necessarily false alarms - some may be genuinely miscounting;
+  they bound the alarm rate from above and are excluded from the test pool.
+
+injected chronic fault                       trials  detected  rank1all  rank1new      type     extra
+constant loss of 30 veh/interval, all month      25     92.0%      0.0%     92.0%     92.0%      0.64
+constant loss of 15 veh/interval, all month      25     92.0%      0.0%     92.0%     92.0%      0.64
+constant loss of 8 veh/interval, all month       25     88.0%      0.0%     88.0%     88.0%      0.56
+constant gain of 8 veh/interval, all month       25     88.0%      0.0%     88.0%     88.0%      0.40
+constant gain of 15 veh/interval, all month      25     92.0%      0.0%     92.0%     92.0%      0.40
+constant gain of 30 veh/interval, all month      25     92.0%      0.0%     92.0%     92.0%      0.40
+under-count by 5%, all month                     25     88.0%      0.0%     88.0%     88.0%      0.44
+under-count by 2%, all month                     25     84.0%      0.0%     80.0%     80.0%      0.48
+over-count by 2%, all month                      25     84.0%      0.0%     84.0%     84.0%      0.36
+over-count by 5%, all month                      25     88.0%      0.0%     88.0%     88.0%      0.64
+
+wrote results/chronic_absolute_full_M25_A.json

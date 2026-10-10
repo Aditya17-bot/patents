@@ -1,0 +1,1612 @@
+ 
+ US8751052B1 - Automatic efficient irrigation threshold setting 
+ - Google Patents 
+ US8751052B1 - Automatic efficient irrigation threshold setting 
+ - Google Patents 
+ Automatic efficient irrigation threshold setting 
+ Download PDF 
+ Info 
+ Publication number 
+ US8751052B1 
+ US8751052B1 
+ US13/017,538 
+ US201113017538A 
+ US8751052B1 
+ US 8751052 B1 
+ US8751052 B1 
+ US 8751052B1 
+ US 201113017538 A 
+ US201113017538 A 
+ US 201113017538A 
+ US 8751052 B1 
+ US8751052 B1 
+ US 8751052B1 
+ Authority 
+ US 
+ United States 
+ Prior art keywords 
+ soil 
+ irrigation 
+ wireless 
+ interrupter 
+ sensor 
+ Prior art date 
+ 2010-02-01 
+ Legal status (The legal status is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the status listed.) 
+ Active , expires 2032-10-26 
+ Application number 
+ US13/017,538 
+ Inventor 
+ Jeffrey Campbell 
+ Kathy Sohrabi 
+ Clayton R. Karmel 
+ Carmen Magro 
+ Current Assignee (The listed assignees may be inaccurate. Google has not performed a legal analysis and makes no representation or warranty as to the accuracy of the list.) 
+ Green Badge LLC
+ Original Assignee 
+ Green Badge LLC 
+ Priority date (The priority date is an assumption and is not a legal conclusion. Google has not performed a legal analysis and makes no representation as to the accuracy of the date listed.) 
+ 2010-02-01 
+ Filing date 
+ 2011-01-31 
+ Publication date 
+ 2014-06-10 
+ 2011-01-31 
+ Application filed by Green Badge LLC 
+ filed 
+ Critical 
+ Green Badge LLC 
+ 2011-01-31 
+ Priority to US13/017,538 
+ priority 
+ Critical 
+ patent/US8751052B1/en 
+ 2012-10-29 
+ Priority to US13/662,909 
+ priority 
+ patent/US8862277B1/en 
+ 2014-06-10 
+ Application granted 
+ granted 
+ Critical 
+ 2014-06-10 
+ Publication of US8751052B1 
+ publication 
+ Critical 
+ patent/US8751052B1/en 
+ 2021-03-16 
+ Assigned to Green Badge, LLC 
+ reassignment 
+ Green Badge, LLC 
+ ASSIGNMENT OF ASSIGNORS INTEREST (SEE DOCUMENT FOR DETAILS). 
+ Assignors: SOHRABI, KATHY, KARMEL, CLAYTON R., CAMPBELL, JEFFREY 
+ 2021-04-20 
+ Assigned to Green Badge, LLC 
+ reassignment 
+ Green Badge, LLC 
+ ASSIGNMENT OF ASSIGNORS INTEREST (SEE DOCUMENT FOR DETAILS). 
+ Assignors: MAGRO, CARMEN 
+ Status 
+ Active 
+ legal-status 
+ Critical 
+ Current 
+ 2032-10-26 
+ Adjusted expiration 
+ legal-status 
+ Critical 
+ Links 
+ USPTO 
+ USPTO PatentCenter 
+ USPTO Assignment 
+ Espacenet 
+ Global Dossier 
+ Discuss 
+ Images 
+ Classifications 
+ A — HUMAN NECESSITIES 
+ A01 — AGRICULTURE; FORESTRY; ANIMAL HUSBANDRY; HUNTING; TRAPPING; FISHING 
+ A01G — HORTICULTURE; CULTIVATION OF VEGETABLES, FLOWERS, RICE, FRUIT, VINES, HOPS OR SEAWEED; FORESTRY; WATERING 
+ A01G25/00 — Watering gardens, fields, sports grounds or the like 
+ A01G25/16 — Control of watering 
+ A01G25/167 — Control by humidity of the soil itself or of devices simulating soil or of the atmosphere; Soil humidity sensors 
+ Definitions 
+ the present invention 
+ is relates to an irrigation system. More specifically, the present invention relates to an irrigation system designed to reduce water usage. 
+ a critical problem 
+ is setting watering thresholds to an appropriate level that achieves two goals-minimizing water usage, and maintaining plant health. 
+ these two goals 
+ can be met by setting the water target to a percentage of the field capacity (generally 70% to 80%). 
+ the field capacity 
+ moisture content of a particular soil at which water freely drains under gravity 
+ the Present Invention 
+ seeks to resolve the problems of the prior art. 
+ the present invention 
+ provides a solution to the problems of the prior art. 
+ the system 
+ would continuously be monitoring the dynamic response of soil moisture and determining, based on either irrigation events or rainfall, the field capacity. This would be allowed to change over time (with some characteristic time constant—probably on the order of ten days) to reflect changes in root mass, organic content, and soil compaction. 
+ One aspect of the present invention 
+ is or more soil moisture sensors in communication (wireless, wired, or otherwise) with a uC based “decision element. 
+ Another aspect of the present invention 
+ is decision element with, or without, the capability to control/schedule irrigation over areas in which the communicating sensors are installed. 
+ Yet another aspect of the present invention 
+ is uC based algorithms that interpret soil moisture data and automatically produce measurements of field capacity or other appropriate measures of a soils response to irrigation. 
+ Yet another aspect of the present invention 
+ is in systems that allow the decision element to control irrigation, the irrigation would be automatically set based on the determined field capacity. 
+ FIG. 1 
+ is a top perspective view of a wireless soil sensor of the present invention with a sleeve attached over a portion of the wireless soil sensor. 
+ FIG. 2 
+ is a first side view of the wireless soil sensor of FIG. 1 . 
+ FIG. 3 
+ is an opposing side view of the wireless soil sensor of FIG. 1 . 
+ FIG. 4 
+ is top plan view of the wireless soil sensor of FIG. 1 . 
+ FIG. 5 
+ is a top perspective view of a wireless soil sensor of the present invention without a sleeve attached over a portion of the wireless soil sensor. 
+ FIG. 6 
+ is a first side view of the wireless soil sensor of FIG. 5 . 
+ FIG. 7 
+ is top plan view of the wireless soil sensor of FIG. 5 . 
+ FIG. 8 
+ is a rear plan view of the wireless soil sensor of FIG. 5 . 
+ FIG. 9 
+ is a front view of an interrupter with a front panel open. 
+ FIG. 10 
+ is a front view of an interrupter with a door closed. 
+ FIG. 11 
+ is a top perspective view of an interrupter with a front panel open to illustrate an interface. 
+ FIG. 12 
+ is a top perspective view of an interrupter with a front panel closed. 
+ FIG. 13 
+ is an isolated view of an interface of an interrupter. 
+ FIG. 14 
+ is a flow chart of a general method of an end-to-end system of the present invention. 
+ FIG. 15 
+ is a schematic diagram of a prior art irrigation control system. 
+ FIG. 16 
+ is a schematic diagram of an irrigation control system with an irrigation interrupt. 
+ FIG. 17 
+ is a schematic diagram of an irrigation control system with a wireless irrigation controller. 
+ FIG. 18 
+ is a schematic diagram of a prior art irrigation control system. 
+ FIG. 19 
+ is a schematic diagram of an irrigation control system with a tethered sensor. 
+ FIG. 21 
+ is a schematic diagram of an irrigation control system with a wireless controller. 
+ FIG. 22 
+ is a block diagram of a preferred embodiment of an irrigation interrupter. 
+ FIG. 24 
+ a schematic diagram of an irrigation system employing an interrupter of the present invention. 
+ FIG. 25 
+ is a block diagram of a preferred embodiment of a wireless sub-surface soil sensor. 
+ the present invention 
+ may be used with a system and method such as disclosed in Glancy, et al., U.S. Patent Publication Number 2006/0178847 for an Apparatus And Method For Wireless Real Time Measurement And Control Of Soil And Turf Conditions, which is hereby incorporated by reference in its entirety. 
+ the present invention 
+ may be used with a system, sensor and method such as disclosed in Campbell, U.S. Pat. No. 7,482,820 for a Sensor For Measuring Moisture And Salinity, which is hereby incorporated by reference in its entirety. 
+ the present invention 
+ may use a chemical sensor probe such as disclose in U.S. Pat. No. 4,059,499 which is hereby incorporated by reference in its entirety. 
+ the present invention 
+ may use a chemical sensor probe such as disclose in U.S. Pat. No. 5,033,397 which is hereby incorporated by reference in its entirety. 
+ the present invention 
+ may utilize the systems and methods disclosed in Magro et al., U.S. patent application Ser. No. 12/697,226, filed on Jan. 
+ the present invention 
+ may also utilize the systems and methods disclosed in Magro et al., U.S. Provisional Patent Application No. 61/255,073, filed on Oct. 23, 2009, for a Method For Soil Analysis, which is hereby incorporated by reference in its entirety. 
+ Systems, methods, sensors, controllers and interrupters for optimizing irrigation 
+ are disclosed in Campbell et al., U.S. patent application Ser. No. 12/697,258, filed on Jan. 31, 2010, for a Method And System For Improving A Communication Range And Reliability Of A Soil Sensor Antenna, which is hereby incorporated by reference in its entirety. 
+ a wireless soil sensor 21 
+ is shown in FIGS. 1-8 . 
+ the wireless soil sensor 
+ is placed in the soil below the surface to monitor various parameters of the soil such as moisture. Other parameters include salinity and temperature. 
+ a wireless interrupter 12 
+ is shown in FIGS. 9-12 and an interface 12 for the wireless interrupter 12 is shown in FIG. 13 . 
+ the wireless interrupter 12 
+ has a main body 12 a and a front panel 12 b which allows for viewing of the interface 12 c. 
+ FIG. 25 
+ illustrates a wireless sub-surface sensor 21 alternatively utilized in the system 20 . 
+ the wireless sub-surface sensor 21 
+ preferably has a housing 30 , a processor 31 with an integrated sensor 33 , a configuration switchable antenna 32 , and a power supply 34 . 
+ FIG. 15 
+ A schematic diagram of a prior art irrigation control system is shown in FIG. 15 . 
+ a wireless device 
+ typically goes through a network entry process, in which it searches for and locks onto the signals of other members of the wireless network it is entering. After the signal lock, a handshake takes place, where the entering node transmits and expects to receive a sequence of well defined messages over the air. At the conclusion of this handshake, the entering node is considered a member of the network. It will be able to transmit and receive over the air messages using a well defined protocol. It will be considered a “Joined” member. 
+ a “joined” member 
+ may maintain a connection oriented or a connection less link with its radio neighbors. (Example of a connection oriented link is a time synchronized CDMA channel between a station and a cell tower. Example of a connection-less link is the Carrier Sense Medium Access (CSMA) link between a WiFi station and its Access Point). 
+ CSMA 
+ Carrier Sense Medium Access 
+ the wireless soil sensor 21 
+ is required to transmit messages for all of the above transactions. If the cause of loss of “joined” status is dues to surrounding soil that is too moist or too saline then the rejoin attempts will also fail. If this condition is not detected, the wireless soil sensor 21 will continue wasting scarce battery reserves for transmissions. 
+ the adaptive transmission scheduling mechanism discussed here 
+ takes into account the moisture and conductivity of the soil that surrounds the wireless soil sensor 21 . It will stop transmissions until the moisture levels of the soil surrounding the node have dropped to manageable levels that will allow successful transmissions. 
+ the present invention 
+ is preferably a complete package of advanced software, agronomic services and wireless sensor system that helps take the guesswork out of turf management. 
+ a flow chart of an overall method 
+ is shown in FIG. 14 . 
+ On aspect of the present invention 
+ turns raw data into useful operating thresholds which help maintain and optimize plant health and performance. 
+ One aspect of the present invention 
+ provides the necessary formula that automatically alerts when and where a facility might be experiencing stress and what the treatment options are. 
+ One aspect of the present invention 
+ optimizes turf and crop health and playability by measuring root zone moisture, salinity and temperature and applying best practices to your turf management. 
+ an optimal zone 
+ is devised by analyzing accumulated sensor data, putting decades of agronomic experience to use and applying tested scientific principles. 
+ the Zone 
+ defines the upper and lower operating thresholds to ensure plant health. This helps with: course evaluation; soil and water analyses; review of existing practices including irrigation, nutritional inputs and maintenance; threshold determinations; sensor placement and more. 
+ On a real-time basis 
+ one can manage greens, tees, fairways and rough to keep a facility in prime condition. 
+ the wireless soil sensor 21 
+ provides wireless interface between the sensing elements and the Communication Control Nodes (CCNs) that preferably form a mesh network. 
+ CCNs 
+ Communication Control Nodes 
+ the key features 
+ include the shape: 8 ⁇ 4 inches. Buried with a Standard Cup Cutter. Supports sensors: analog or digital. 3 “D” Cell batteries: 4+ years life, field replaceable. 1 Watt FHSS radio board supports approximately 400 ft. range 4 in. in ground. Sensor interface and antenna for over air programming for product upgrades. 
+ the key functionalities of the wireless soil sensor 21 
+ are as follows: provide accurate, real-time data on soil moisture, temperature and salinity. Key Features: Pre calibrated for sand, silt and clay. Moisture measurement. Accuracy: +/ ⁇ 0.02WFV from 0 to saturation at ⁇ 2.5 dS/m conductivity. +/ ⁇ 0.04WFV from 0 to saturation at 2.5-5 dS/m conductivity. Repeatability: +/ ⁇ 0.001WFV. WFV is the fraction of soil occupied by water, a soil at 10% soil moisture has a WFV of 0.10. Conductivity measurement: Accuracy: +/ ⁇ 2% or 0.02 dS/m, whichever is greater, 0-2.5 dS/m. 
+ the software package 
+ utilized feeds off data provided by the wireless soil sensors 21 and wireless communications system. It displays real time conditions and provides comprehensive intelligence and predictive actions. 
+ the system 
+ helps establish health- and performance-optimizing operating threshold ranges, evaluate your data and current practices, and refine existing programs. The results, optimal turf conditions and real savings, will generate a strong and lasting return on investment. 
+ the agronomic benefits 
+ include more efficient salinity management, uniform irrigation, deeper rooting, predictive disease control and healthier, more stable conditions. 
+ There are environmental benefits 
+ as well like water conservation, reduced use of phosphates, nitrates and pesticides, a reduced carbon/water footprint and regulatory compliance. 
+ Real time sensor measurements 
+ can include soil oxygen, pH, concentrations of specific ion species—(Na+ has a very detrimental effect compared to the same concentration of Ca+2). 
+ Pollutant measurements 
+ include both hydrocarbons (oils, gasoline, etc.) and metals (chromium, lead, etc.). 
+ an alternative process of an adaptive model 
+ may be utilized with the present invention. 
+ An antenna 
+ designed for efficient RF communication in air is relatively straightforward because the key electrical properties of the transmission medium (air) are well known and essentially constant. In below ground RF transmission, the key properties of the soils will very greatly with moisture content and salinity hence it is a much more difficult problem to design an efficient antenna. In addition, the best antenna design is influenced by how deeply buried the antenna is. 
+ the present invention 
+ includes elements to the antenna circuit that, under control of microcontroller, allow for varying the properties of the antenna to more closely match the conditions and improve range and reliability of communication. 
+ the sensor of the present invention 
+ measures both the dielectric constant of the soil (moisture) and conductivity (salinity) directly. Hence, the sensor measures precisely the two most important factors affecting antenna efficiency. 
+ the method 
+ includes activating a sensor and measuring soil electrical properties. 
+ the method 
+ also includes, based on the soil properties, activating antenna elements to give an effective transmission. 
+ the method 
+ also includes transmitting sensor data. 
+ the method 
+ includes activating a sensor and measuring soil electrical properties. 
+ the method 
+ also includes transmitting data repeatedly until all switchable antenna configurations have been attempted. 
+ the method 
+ also includes monitoring signal strength for each transmission. 
+ the method 
+ also includes repeat this process possibly every 60 sensor transmissions. 
+ the advantage of this adaptive process 
+ is that it can make an allowance for the actual depth of burial as well as the relative antenna locations and orientations. This is important because different antenna configurations have different radiation patterns. Hence, it is possible that a less than ideal antenna configuration works best in that it has the highest radiated power in the particular direction and polarization that the receiver antenna lies in. 
+ an irrigation system 10 ′ 
+ includes a 24VAC power supply, a controller 11 , and a valve box 13 with valves 123 a and 13 b . 
+ These irrigation systems 10 ′ 
+ work by using a 24 volt alternating current source to open valves 13 a and 13 b . 
+ a controller/timer 11 
+ is used to turn on the current to the separate valves 13 a and 13 b . 
+ the irrigation controller 11 
+ controls the valve box 13 through wires 17 a and 17 b to provide water form source pipe 16 b to sprinkler pipe 16 a for dispersion on a soil 15 through sprinkler 14 . 
+ the prior art 
+ is improved upon by a system 10 with a tethered sensor 21 ′ in which is a sensor coupled to an interrupter 12 wired into the wiring 17 a , 17 b , 17 c and 17 d of the valve box 13 . 
+ the interrupter 12 
+ acts to turn off a scheduled irrigation if the moisture exceeds a predetermined threshold established by a user. 
+ the interrupter 12 
+ acts as an in-line switch that closes (allowing current to flow and the valve 13 to open) only if the controller 11 starts a scheduled irrigation and the soil moisture is below a predetermined threshold established by a user). 
+ the interrupter 12 
+ can only interrupt a scheduled irrigation, not initiate an irrigation. 
+ the system 10 
+ has a sensor 21 which is cabled (no wireless communication). 
+ the system 10 of FIG. 19 
+ has the advantage of being very simple, it is capable of being easily installed into virtually all existing irrigation systems, and it requires no independent power (the system 10 draws power off the 24VAC irrigation line). 
+ a wireless interrupt approach 
+ is similar to the “Tethered Sensor” system 10 of FIG. 19 , except that wireless communication is used between a wireless soil sensor 21 and an interrupter 12 . 
+ the wireless soil sensor 21 
+ requires battery power and the interrupter 12 requires a battery to accommodate flexible wireless reporting. 
+ the principle advantage of the system 10 of FIG. 20 
+ is that no cabling is needed, and installation is simpler than the tethered system 10 of FIG. 19 . 
+ the wireless soil sensor 21 
+ transmits a wireless signal 18 a to the interrupter 12 pertaining to the moisture levels of the soil in a particular soil area. 
+ a wireless controller system 10 
+ is shown in FIG. 21 . 
+ the wireless controller system 10 
+ uses a wireless link back to a wireless irrigation controller 11 (there is no “interrupter”) 
+ the principle advantage of the wireless controller system 10 of FIG. 21 
+ is that the wireless soil sensors 21 preferably initiate irrigation if needed (allowing for the user to set scheduled irrigation times as well if desired). 
+ a user 
+ also may allow the wireless controller 11 to look at more than one wireless soil sensor 21 for each irrigation zone (area irrigated by one valve 13 ) taking an average, use the lowest value, etc. 
+ the goal of one aspect of the present invention 
+ is to develop an inexpensive and easy to install system compatible with existing irrigation systems that can be quickly configured by homeowners/landscapers of limited technical sophistication. 
+ An objective of the present invention 
+ is an overall lower cost, a system that is easy to install in existing and new irrigation systems, setup that is as easy to use as a traditional irrigation controller, and careful design of setup features, default modes, user input device and display to give a superior customer interface. 
+ FIG. 15 
+ a typical irrigation controller system 10 ′ is shown in FIG. 15 . 
+ the system 10 ′ 
+ includes a 24VAC power supply connected to 120VAC and an irrigation controller 11 . 
+ Wiring 52 a and 52 b 
+ leads from the controller 11 to one or more valve boxes 13 . When the current loop is closed, the valves 13 a and 13 b open and a zone is watered. 
+ the controller 11 
+ is set to turn on and off valves at predetermined times for a set time. 
+ the interrupter 12 
+ is positioned between the standard irrigation controller 11 and the valves 13 a and 13 b . 
+ a wireless soil sensor 21 
+ is placed in each irrigation zone and the wireless soil sensor 21 is in periodic communication with the irrigation controller 12 . 
+ the interrupter 12 
+ opens switch 54 a and 54 b to terminate the current flow through lines 52 a ′ and 52 b ′ and close the valves 13 a and 13 b . 
+ Line 55 
+ provides power to the interrupter 12 , especially when the switch 51 of the controller 11 is open. 
+ the same interrupter hardware 
+ is used but the inputs to the irrigation interrupter 12 are always on, i.e. the irrigation interrupt 12 is now in control and irrigation will occur under the direct control of the wireless interrupter 12 based on soil moisture data. 
+ Different firmware 
+ is necessary, but the hardware is identical with only minimal changes in the wiring. 
+ the system 10 
+ is capable of operating with soil moisture only wireless soil sensors 21 with integrated two-way wireless telemetry, sensor firmware, an irrigation interrupter/controller (Controller) and controller firmware. 
+ the wireless soil sensors 
+ consist of a soil moisture only sensor, wireless two-way telemetry, microcontroller, and at least some non-volatile memory, and are preferably battery powered. These components are integrated into one physical package (no cabling) and the wireless soil sensor 21 is buried in strategic locations to monitor soil moisture conditions. 
+ the sensor firmware 
+ manages making sensor measurements, transmitting them to the controller, receiving controller commands, and power-management (putting system to sleep). 
+ the controller 11 
+ preferably consists of two-way wireless telemetry compatible with the wireless soil sensors 21 , a microcontroller, non-volatile memory, a user input (preferably a four or five way wheel), display (preferably 36 character two line LCD), and circuitry for opening or closing switches for irrigation zones (switch in an open position is over-riding irrigation). 
+ the wireless controller 11 
+ is spliced into existing wiring close to an existing irrigation controller. 
+ the wireless controller 11 
+ is directly connected to irrigation zone wiring. 
+ the controller firmware 
+ allows collection of wireless telemetry of soil moisture data, “commissioning” of new wireless soil sensors 21 , i.e. associating a wireless soil sensor 21 with an irrigation zone and an installation, setting irrigation thresholds, etc. 
+ All of the components 
+ preferably operate over a temperature range of ⁇ 20 to 70° C. (with the exception of the display which is operable over 0 to 50° C.) and are capable of storage over ⁇ 20 to 70° C. All components preferably are Human Body Model ESD resistant but not lightning resistant. Wireless soil sensors 21 are preferably fully waterproof while the interrupters 12 preferably only have a low level of “splashproofing”. For the purposes of determining battery shelf life in the wireless soil sensors 21 , a temperature under 40 C is assumed (temperature, depending on battery technology, can greatly impact self discharge rates). 
+ Wireless telemetry range of approximately 100-200 feet 
+ is preferred. The range is achieved at depths of up to 12 inches and in moderate clutter (vegetation, slight topography, through garage wall, etc.). 
+ a wireless soil sensor 21 
+ is preferably installed at least as close as 3 inches from soil surface for monitoring soil moisture in shallow rooting turf. 
+ the package of the wireless soil sensor 
+ is preferably no larger than 2′′ ⁇ 2′′ ⁇ 8′′ (ideally 1.5′′ ⁇ 1.5′′ ⁇ 6′′). 
+ a bulky package 
+ is difficult to install (particularly at shallow depths), disrupt soil environment, and a turn-off to consumers. 
+ a non-volatile memory 
+ is preferred. Timekeeping is accurate to within +/ ⁇ 2% which allows the wireless soil sensors 21 to wakeup at on a regular schedule, timing for I2C commands, as well as scheduling sensor “listen” windows for wireless receive modes. 
+ the sensor firmware 
+ is capable of executing and reading I2C commands. 
+ Analog sensor 
+ requires I2C commands to control oscillator and make A/D measurements. I2C commands need to be executed sequentially according to a sloppy timing of about +/ ⁇ 3 mS over 100 mS. I2C can operate anywhere from 20 to 200 KHz. 
+ the sensor firmware 
+ is able to perform simple calculations like conversion of raw A/D values into soil moisture which requires simple functions-addition, subtraction, division, polynomials but no log, trig, etc. functions. 
+ the sensor firmware 
+ is capable of going into a very low power mode between set measurement interval with routines to wake up at end of interval which may range from 1-100 min. which is set in a non-volatile configuration file which can be modified by interrupt controller. After measurement is complete, soil moisture data needs to be sent to interrupt controller 11 . 
+ the sensor firmware 
+ preferably has a static soil moisture mode. 
+ An operational mode 
+ that allows the wireless soil sensor 21 to wake up, measure soil moisture, and if a change in soil moisture from the last wirelessly reported measurement does not exceed a settable threshold, return to a sleep mode without sending data. 
+ This threshold value 
+ as well as whether this feature is enabled, preferably resides in a non-volatile configuration file which can be modified by the interrupt controller 11 . 
+ the wireless soil sensor 21 
+ preferably transmits a new reading once every six hours regardless of soil moisture changes to confirm operation. 
+ the wireless soil sensor 21 
+ preferably has a default mode firmware upon power restart for the sensor firmware, which allows a wireless soil sensor 21 to be commissioned, i.e. assigned to a specific irrigation interrupter to allow for resolving sensors from a close neighbors residence. 
+ commissioning 
+ must be flexible to allow for a change in assigned interrupt controller 11 in the future or if commissioning is lost. 
+ a wireless soil sensor 21 
+ is preferably capable of a listening mode in a power efficient manner for receiving changes to the configuration file wirelessly from the interrupt controller 11 with a maximum file size of 100 bytes at least once a month without degrading three year sensor battery life. 
+ the wireless soil sensor 21 
+ preferably has the ability to download full operating firmware. 
+ the wireless soil sensor 21 
+ preferably provides in addition to the soil moisture value, diagnostics such as battery voltage, and raw measured values not to exceed an additional 25 bytes. This data is used to assess performance and for diagnosis of bugs or sensor failure. 
+ the wireless soil sensor 21 
+ preferably sends a “Bad Data” even if the computed soil moisture value appears reasonable. This helps detect failed wireless soil sensors 21 and prevent bad control actions. 
+ the irrigation interrupter 12 
+ is capable of turning on and off AC current up to 700 mA continuously at 70 C for each irrigation zone from an AC voltage range of 16 to 34 volts with no more that 1V in drop across switching circuitry. Switching circuitry is not damaged by inductive transients generated by the turn off of valve solenoids. 
+ the interrupt controller 11 
+ draws power directly from nominal 24VAC transformer to avoid having to use a separate power supply with a maximum current draw of 100 mA. 
+ the interrupt controller 11 
+ operates correctly with an AC input varying from 16 to 34 VAC to account for AC mains voltage of 84 to 130 VAC (typical specified level of AC power seen in a household) and variation in transformer output with load. 
+ Ample code space 
+ is preferably reserved to allow for extensive additional features in the future. All user settable configurations are preferably stored in non-volatile memory so as to allow for seamless recovery from lockup or loss of power. 
+ a real time clock 
+ has the ability to keep time after power loss for up to 1 month. 
+ the interrupter firmware 
+ is capable of generating a user water savings report for the last day, week, and month (i.e. percent of scheduled irrigation that was interrupted) by zone and as a whole for all eight zones as well as total run time per zone. 
+ a process 
+ is developed to allow sensors upon installation or system expansion to be assigned to a particular irrigation zone for a particular irrigation interrupter. 
+ the process 
+ needs to be flexible enough to allow for replacement of failed wireless soil sensors 21 as well. This allows the system 10 to be used with neighboring installations without confusion as well as assigning the right sensor to the right zone. 
+ a show current status mode for the interrupt controller 11 
+ defaults to when no keypad entry has occurred for a minute or so and shows zone by zone-threshold, last soil moisture data, irrigation is being attempted, and if irrigation is being interrupted. 
+ the save configuration 
+ allows up to six configurations to be saved, named, and recalled (for all zones thresholds, hysteresis, adaptive algorithms on or off, etc.). This allows for summer and winter settings, etc. 
+ a bump feature 
+ allows a user to “bump” up or down all thresholds equally at an approximately 0.5% water by volume increment (allows for quick adjustment for hot weather or other reasons), which revert to previous settings after 1 days unless user selects to apply them permanently. 
+ the firmware 
+ is preferably capable of detecting missing or out of range soil moisture and low battery conditions and display warning. 
+ a wireless irrigation controller mode 
+ allows the irrigation interrupter 12 to function as full soil moisture data driven irrigation controller 11 without the use of a standard irrigation controller 11 . 
+ Essentially all of the features of a standard irrigation controller 11 
+ are implemented such as scheduling irrigation times, valve run-times, etc. These scheduled events are subjected to the same “interrupt” schemes as the irrigation interrupter 12 based on soil moisture data. 
+ the wireless soil sensors 21 
+ When water is applied to the soil the wireless soil sensors 21 report the increase in moisture content but also look at the tail off in moisture levels when irrigation ceases. In cases of significant overwatering, there is a sharp spike in moisture levels followed by a sharp fall after irrigation ceases. This is due to the soil essentially being so wet it “free drains” below the root zone (thus wasting the water). The present invention implements algorithms to monitor this and adjust irrigation events to eliminate this wasteful practice allowing the system to essentially configure itself over time. 
+ the wireless soil sensor 21 
+ is preferably directly integrated with a radio and microcontroller. It also preferably has a sleeve that fits over the sensor that the user removes to turn it on. 
+ Landscapes 
+ Life Sciences & Earth Sciences 
+ ( AREA )
+ Soil Sciences 
+ ( AREA )
+ Engineering & Computer Science 
+ ( AREA )
+ Water Supply & Treatment 
+ ( AREA )
+ Environmental Sciences 
+ ( AREA )
+ Investigating Or Analyzing Materials By The Use Of Electric Means 
+ ( AREA )
+ Abstract 
+ A method and system for monitoring the dynamic response of soil moisture and setting a threshold in relation to the field capacity of a soil area is disclosed herein. By measuring the dynamic response of soil moisture under wet soil conditions, one can determine a practical field capacity for the soil, in-situ, based solely on the soil moisture sensor output. Essentially, by looking at how the soil moisture level varies with time one can determine the field capacity. 
+ Description 
+ CROSS REFERENCE TO RELATED APPLICATION 
+ The present application claims priority to United states Provisional patent Application No. 61/300,028, filed on Feb. 1, 2010, which is hereby incorporated by reference in its entirety. 
+ STATEMENT REGARDING FEDERALLY SPONSORED RESEARCH OR DEVELOPMENT 
+ Not Applicable 
+ BACKGROUND OF THE INVENTION 
+ 1. Field of the Invention 
+ The present invention is relates to an irrigation system. More specifically, the present invention relates to an irrigation system designed to reduce water usage. 
+ 2. Description of the Related Art 
+ The prior art discusses other irrigation systems and methods. 
+ In attempting to efficiently apply irrigation water, a critical problem is setting watering thresholds to an appropriate level that achieves two goals-minimizing water usage, and maintaining plant health. In general, it has been found that these two goals can be met by setting the water target to a percentage of the field capacity (generally 70% to 80%). In order to determine the field capacity (moisture content of a particular soil at which water freely drains under gravity) one can take a soil sample for every type of soil where a soil moisture sensor is installed. This process is time consuming, expensive, and in practice, not particularly accurate. 
+ The Present Invention seeks to resolve the problems of the prior art. 
+ BRIEF SUMMARY OF THE INVENTION 
+ The present invention provides a solution to the problems of the prior art. 
+ By measuring the dynamic response of soil moisture under wet soil conditions, one can determine a practical field capacity for the soil, in-situ, based solely on the soil moisture sensor output. Essentially, by looking at how the soil moisture level varies with time one can determine the field capacity. When the soil is wetted above field capacity, its moisture content will fall fairly quickly initially to a point where field capacity is reached. After this point, moisture levels will continue to decrease but at a much slower rate reflecting evapotranspiration from the soil. By using sensor data, an uC, and appropriate algorithms, one can develop procedures for automatically setting determining field capacity and setting thresholds. In residential, agriculture, or in sports/turf markets the present invention sets this as either a “set threshold” mode or a continuously adapting mode adaptive. 
+ In a set threshold mode, shortly after installing the sensors, we would put our central irrigation controller into a set threshold mode. We would then fully saturate the soil around the sensors either manually or through turning on irrigation. We would then monitor the dynamic response of soil moisture over some period of time (probably around a few hours to a few days) and determine field capacity. These values would then be used to set the thresholds. 
+ In an adaptive mode, the system would continuously be monitoring the dynamic response of soil moisture and determining, based on either irrigation events or rainfall, the field capacity. This would be allowed to change over time (with some characteristic time constant—probably on the order of ten days) to reflect changes in root mass, organic content, and soil compaction. 
+ One aspect of the present invention is or more soil moisture sensors in communication (wireless, wired, or otherwise) with a uC based “decision element. 
+ Another aspect of the present invention is decision element with, or without, the capability to control/schedule irrigation over areas in which the communicating sensors are installed. 
+ Yet another aspect of the present invention is uC based algorithms that interpret soil moisture data and automatically produce measurements of field capacity or other appropriate measures of a soils response to irrigation. 
+ Yet another aspect of the present invention is in systems that allow the decision element to control irrigation, the irrigation would be automatically set based on the determined field capacity. 
+ Having briefly described the present invention, the above and further objects, features and advantages thereof will be recognized by those skilled in the pertinent art from the following detailed description of the invention when taken in conjunction with the accompanying drawings. 
+ BRIEF DESCRIPTION OF THE SEVERAL VIEWS OF THE DRAWINGS 
+ FIG. 1 is a top perspective view of a wireless soil sensor of the present invention with a sleeve attached over a portion of the wireless soil sensor. 
+ FIG. 2 is a first side view of the wireless soil sensor of FIG. 1 . 
+ FIG. 3 is an opposing side view of the wireless soil sensor of FIG. 1 . 
+ FIG. 4 is top plan view of the wireless soil sensor of FIG. 1 . 
+ FIG. 5 is a top perspective view of a wireless soil sensor of the present invention without a sleeve attached over a portion of the wireless soil sensor. 
+ FIG. 6 is a first side view of the wireless soil sensor of FIG. 5 . 
+ FIG. 7 is top plan view of the wireless soil sensor of FIG. 5 . 
+ FIG. 8 is a rear plan view of the wireless soil sensor of FIG. 5 . 
+ FIG. 9 is a front view of an interrupter with a front panel open. 
+ FIG. 10 is a front view of an interrupter with a door closed. 
+ FIG. 11 is a top perspective view of an interrupter with a front panel open to illustrate an interface. 
+ FIG. 12 is a top perspective view of an interrupter with a front panel closed. 
+ FIG. 13 is an isolated view of an interface of an interrupter. 
+ FIG. 14 is a flow chart of a general method of an end-to-end system of the present invention. 
+ FIG. 15 is a schematic diagram of a prior art irrigation control system. 
+ FIG. 16 is a schematic diagram of an irrigation control system with an irrigation interrupt. 
+ FIG. 17 is a schematic diagram of an irrigation control system with a wireless irrigation controller. 
+ FIG. 18 is a schematic diagram of a prior art irrigation control system. 
+ FIG. 19 is a schematic diagram of an irrigation control system with a tethered sensor. 
+ FIG. 20 is a schematic diagram of an irrigation control system with a wireless interrupt. 
+ FIG. 21 is a schematic diagram of an irrigation control system with a wireless controller. 
+ FIG. 22 is a block diagram of a preferred embodiment of an irrigation interrupter. 
+ FIG. 23 a schematic diagram of an irrigation system employing an interrupter of the present invention. 
+ FIG. 24 a schematic diagram of an irrigation system employing an interrupter of the present invention. 
+ FIG. 25 is a block diagram of a preferred embodiment of a wireless sub-surface soil sensor. 
+ DETAILED DESCRIPTION OF THE INVENTION 
+ The present invention may be used with a system and method such as disclosed in Glancy, et al., U.S. Patent Publication Number 2006/0178847 for an Apparatus And Method For Wireless Real Time Measurement And Control Of Soil And Turf Conditions, which is hereby incorporated by reference in its entirety. 
+ The present invention may be used with a system, sensor and method such as disclosed in Campbell, U.S. Pat. No. 7,482,820 for a Sensor For Measuring Moisture And Salinity, which is hereby incorporated by reference in its entirety. The present invention may use a chemical sensor probe such as disclose in U.S. Pat. No. 4,059,499 which is hereby incorporated by reference in its entirety. The present invention may use a chemical sensor probe such as disclose in U.S. Pat. No. 5,033,397 which is hereby incorporated by reference in its entirety. The present invention may utilize the systems and methods disclosed in Magro et al., U.S. patent application Ser. No. 12/697,226, filed on Jan. 30, 2010, for a Method And System For Monitoring Soil And Water Resources, which is hereby incorporated by reference in its entirety. The present invention may also utilize the systems and methods disclosed in Magro et al., U.S. Provisional Patent Application No. 61/255,073, filed on Oct. 23, 2009, for a Method For Soil Analysis, which is hereby incorporated by reference in its entirety. Systems, methods, sensors, controllers and interrupters for optimizing irrigation are disclosed in Campbell et al., U.S. patent application Ser. No. 12/697,258, filed on Jan. 31, 2010, for a Method And System For Improving A Communication Range And Reliability Of A Soil Sensor Antenna, which is hereby incorporated by reference in its entirety. Likewise, systems, methods, sensors, controllers and interrupters for optimizing irrigation are disclosed in Campbell et al., U.S. patent application Ser. No. 12/697,254, filed on Jan. 31, 2010, for a Method And System For Soil And Water Resources, which is hereby incorporated by reference in its entirety. 
+ A wireless soil sensor 21 is shown in FIGS. 1-8 . The wireless soil sensor is placed in the soil below the surface to monitor various parameters of the soil such as moisture. Other parameters include salinity and temperature. 
+ A wireless interrupter 12 is shown in FIGS. 9-12 and an interface 12 for the wireless interrupter 12 is shown in FIG. 13 . The wireless interrupter 12 has a main body 12 a and a front panel 12 b which allows for viewing of the interface 12 c. 
+ As shown in FIGS. 23 and 24 , an irrigation system employing an interrupter 12 is generally designated 20 . The system 20 preferably includes a plurality of wireless sub-surface sensors 21 ( upper soil 21 a and lower soil 21 b ), a plurality of above- ground receivers 22 , an interrupter 12 located at an operations center, and a plurality of above- ground sensors 24 . The above ground sensors 24 preferably measures air temperature, wind speed, and relative humidity. 
+ FIG. 22 illustrates a block diagram of the preferred components of an interrupter 12 . The interrupter 12 preferably has a housing 70 , a microcontroller 71 , a radiofrequency antenna 72 , a memory 79 , a display 73 and a power supply 74 . 
+ FIG. 25 illustrates a wireless sub-surface sensor 21 alternatively utilized in the system 20 . The wireless sub-surface sensor 21 preferably has a housing 30 , a processor 31 with an integrated sensor 33 , a configuration switchable antenna 32 , and a power supply 34 . 
+ A schematic diagram of a prior art irrigation control system is shown in FIG. 15 . 
+ A wireless device ( soil sensor 21 , interrupter 12 or controller 11 ) typically goes through a network entry process, in which it searches for and locks onto the signals of other members of the wireless network it is entering. After the signal lock, a handshake takes place, where the entering node transmits and expects to receive a sequence of well defined messages over the air. At the conclusion of this handshake, the entering node is considered a member of the network. It will be able to transmit and receive over the air messages using a well defined protocol. It will be considered a “Joined” member. A “joined” member may maintain a connection oriented or a connection less link with its radio neighbors. (Example of a connection oriented link is a time synchronized CDMA channel between a station and a cell tower. Example of a connection-less link is the Carrier Sense Medium Access (CSMA) link between a WiFi station and its Access Point). 
+ Typically, if the “joined” member is not able to communicate with the other end of the link within a predefined window, it loses its “joined” status, and has to go through a network entry process again. At the least, it may have to perform a less complex re-synchronization task to re-establish its time synch with the network (if is uses a connection oriented link). The link establishment, re-synch, or network entry process will continue (typically with less and less frequency, upon failed attempts) until a) the node rejoins the network, b) the time interval between reentry attempts becomes so large that the node effectively becomes dormant, or c) until the node runs out of battery. 
+ The wireless soil sensor 21 is required to transmit messages for all of the above transactions. If the cause of loss of “joined” status is dues to surrounding soil that is too moist or too saline then the rejoin attempts will also fail. If this condition is not detected, the wireless soil sensor 21 will continue wasting scarce battery reserves for transmissions. The adaptive transmission scheduling mechanism discussed here takes into account the moisture and conductivity of the soil that surrounds the wireless soil sensor 21 . It will stop transmissions until the moisture levels of the soil surrounding the node have dropped to manageable levels that will allow successful transmissions. 
+ An example of a preferred method of adaptive transmission for wireless soil sensor 21 is as follows. A preferred method for an adaptive transmission aspect of the present invention begins with determining if (x) number of consecutive connection attempts (or transmission) have failed. Next, the method includes determining if the measured moisture level (or a composite metric that includes moisture and conductivity levels) is at some threshold (y) or above. Next, the method includes assuming the surrounding soil is too wet. Next, the method includes suspending the timers that control the transmission activity of the node. Next, the method includes, continuing to sample the moisture levels, and as long as the moisture levels are above threshold (z), attempting to connect once every predetermined time period, T (T time units only, where T is larger than typical inter-transmission intervals). Next, the method includes determining when the moisture levels have dropped below a threshold (w), then un-suspending the timers and a state machine that controls transmissions. Next, the method includes, allowing the normal protocol to resume for the system. 
+ One can manage what one can measure. And, one can do it all on a real time basis. Soil intelligence equals savings and health. The present invention is preferably a complete package of advanced software, agronomic services and wireless sensor system that helps take the guesswork out of turf management. A flow chart of an overall method is shown in FIG. 14 . On aspect of the present invention turns raw data into useful operating thresholds which help maintain and optimize plant health and performance. One aspect of the present invention provides the necessary formula that automatically alerts when and where a facility might be experiencing stress and what the treatment options are. 
+ One aspect of the present invention has a data collection component of the software, which allows for monitoring in real time, from an office or from on-site or remote locations, the key variables of moisture, salinity and temperature from each sensor site. The graphic displays are user-friendly and the present invention helps set high-low threshold ranges for each sensor location so that one instantly knows whether the soil is in or out of the optimal range for growth conditions and playability. By continuously analyzing the recorded data and thresholds for each location, this component visually alerts one to conditions at each sensor location and suggests what actions are needed to be more efficient and effective. 
+ One aspect of the present invention optimizes turf and crop health and playability by measuring root zone moisture, salinity and temperature and applying best practices to your turf management. Once the wireless soil sensors 21 are in the ground sending raw data, an optimal zone is devised by analyzing accumulated sensor data, putting decades of agronomic experience to use and applying tested scientific principles. The Zone defines the upper and lower operating thresholds to ensure plant health. This helps with: course evaluation; soil and water analyses; review of existing practices including irrigation, nutritional inputs and maintenance; threshold determinations; sensor placement and more. On a real-time basis, one can manage greens, tees, fairways and rough to keep a facility in prime condition. 
+ The wireless soil sensor 21 provides wireless interface between the sensing elements and the Communication Control Nodes (CCNs) that preferably form a mesh network. The key features include the shape: 8×4 inches. Buried with a Standard Cup Cutter. Supports sensors: analog or digital. 3 “D” Cell batteries: 4+ years life, field replaceable. 1 Watt FHSS radio board supports approximately 400 ft. range 4 in. in ground. Sensor interface and antenna for over air programming for product upgrades. 
+ The key functionalities of the wireless soil sensor 21 are as follows: provide accurate, real-time data on soil moisture, temperature and salinity. Key Features: Pre calibrated for sand, silt and clay. Moisture measurement. Accuracy: +/−0.02WFV from 0 to saturation at <2.5 dS/m conductivity. +/−0.04WFV from 0 to saturation at 2.5-5 dS/m conductivity. Repeatability: +/−0.001WFV. WFV is the fraction of soil occupied by water, a soil at 10% soil moisture has a WFV of 0.10. Conductivity measurement: Accuracy: +/−2% or 0.02 dS/m, whichever is greater, 0-2.5 dS/m. +/−5%, 2.5-5 dS/m. Repeatability: +/−1% or 0.01 dS/m whichever is greater, 0-2.5 dS/m. +/−4%, 2.5-5 dS/m. Temperature measurement: Accuracy: +/−0.5° C. from −10 to +50° C., +/−1° F. from 14 to 122° F. Repeatability: 0.05° C., 0.1° F. Benefits: Dual sensors allow gradients of soil moisture, conductivity, and temperature to be monitored. High accuracy and repeatability. No individual sensor calibration required. 
+ Above-Ground Wireless Mesh Network: Communication Control Nodes. Key Functionality: CCNs are the interface to the Sensor Nodes. Each is a radio node that automatically joins and forms the mesh network on power up. Key Features: Range of ˜1 mile above ground unobstructed. Requires 1 Amp while transmitting. 12-24 Volt AC or DC power. Can be attached via 110/220 Volt power adapter. Weather proof enclosure. Benefits: Self forming, self healing, multihop mesh network; No special wiring required; Two way communications with link quality statistics; Control of buried nodes; The multihop mesh allows extension of the wireless coverage area far beyond the nominal range of the radios. 
+ Agronomy. Soil health impacts everything grown above. What is agronomy? It is the study of plant and soil sciences and how they impact crop and plant production, performance and yield. Every plant has specific tolerances to environmental variables like moisture, temperature and salinity which impact the ability to grow, flourish, proliferate and perform to expectations. Just as a doctor can help monitor and advise to keep you in peak physical condition, agronomists can help keep your facility in peak condition. Agronomists using the present invention help define those optimal threshold levels as well as their impacts on root, leaf and lateral growth, responses to man-made or natural environmental stress, and resistance to disease and insect pressure. As a result, in this case water usage was reduced by nearly 30% while playability was enhanced uniformly. The indicator of the present invention predicts the likelihood for disease outbreaks before they happen. 
+ The software package utilized feeds off data provided by the wireless soil sensors 21 and wireless communications system. It displays real time conditions and provides comprehensive intelligence and predictive actions. The system helps establish health- and performance-optimizing operating threshold ranges, evaluate your data and current practices, and refine existing programs. The results, optimal turf conditions and real savings, will generate a strong and lasting return on investment. The agronomic benefits include more efficient salinity management, uniform irrigation, deeper rooting, predictive disease control and healthier, more stable conditions. There are environmental benefits as well like water conservation, reduced use of phosphates, nitrates and pesticides, a reduced carbon/water footprint and regulatory compliance. 
+ Real time sensor measurements can include soil oxygen, pH, concentrations of specific ion species—(Na+ has a very detrimental effect compared to the same concentration of Ca+2). Pollutant measurements include both hydrocarbons (oils, gasoline, etc.) and metals (chromium, lead, etc.). 
+ As to the wireless transmission network, an alternative process of an adaptive model may be utilized with the present invention. An antenna, designed for efficient RF communication in air is relatively straightforward because the key electrical properties of the transmission medium (air) are well known and essentially constant. In below ground RF transmission, the key properties of the soils will very greatly with moisture content and salinity hence it is a much more difficult problem to design an efficient antenna. In addition, the best antenna design is influenced by how deeply buried the antenna is. The present invention includes elements to the antenna circuit that, under control of microcontroller, allow for varying the properties of the antenna to more closely match the conditions and improve range and reliability of communication. The sensor of the present invention measures both the dielectric constant of the soil (moisture) and conductivity (salinity) directly. Hence, the sensor measures precisely the two most important factors affecting antenna efficiency. 
+ In a predictive model, the method includes activating a sensor and measuring soil electrical properties. The method also includes, based on the soil properties, activating antenna elements to give an effective transmission. The method also includes transmitting sensor data. 
+ In an adaptive model, the method includes activating a sensor and measuring soil electrical properties. The method also includes transmitting data repeatedly until all switchable antenna configurations have been attempted. The method also includes monitoring signal strength for each transmission. The method also includes repeat this process possibly every 60 sensor transmissions. 
+ As time progress, a receiver can put together a two dimensional map (soil dielectric constant on one axis, soil conductivity on the other) with received power for all antenna configurations. The map is downloaded on some regular schedule to the buried sensor node. When the sensor makes a measurement, the sensor reviews the map for the antenna configuration that gives the highest receive power at the receiver for the current conditions. A node configures an antenna and sends a packet of data. Even after the map is downloaded, every 60 sensor readings will have all the different antenna configurations attempted which will allow the map evolve. 
+ The advantage of this adaptive process is that it can make an allowance for the actual depth of burial as well as the relative antenna locations and orientations. This is important because different antenna configurations have different radiation patterns. Hence, it is possible that a less than ideal antenna configuration works best in that it has the highest radiated power in the particular direction and polarization that the receiver antenna lies in. 
+ As shown in FIG. 15 , an irrigation system 10 ′ includes a 24VAC power supply, a controller 11 , and a valve box 13 with valves 123 a and 13 b . These irrigation systems 10 ′ work by using a 24 volt alternating current source to open valves 13 a and 13 b . When no current flows (open switch 51 ), the valves 13 a and 13 b are closed and no water flows. A controller/ timer 11 is used to turn on the current to the separate valves 13 a and 13 b . Usually there is a “common” wire 53 that returns the current from all valves 13 a and 13 b . Separate “hot” wires 52 a and 52 b are used for each of the valves 13 a and 13 b . As shown in FIG. 18 , the irrigation controller 11 controls the valve box 13 through wires 17 a and 17 b to provide water form source pipe 16 b to sprinkler pipe 16 a for dispersion on a soil 15 through sprinkler 14 . 
+ As shown in FIG. 19 , the prior art is improved upon by a system 10 with a tethered sensor 21 ′ in which is a sensor coupled to an interrupter 12 wired into the wiring 17 a , 17 b , 17 c and 17 d of the valve box 13 . The interrupter 12 acts to turn off a scheduled irrigation if the moisture exceeds a predetermined threshold established by a user. The interrupter 12 acts as an in-line switch that closes (allowing current to flow and the valve 13 to open) only if the controller 11 starts a scheduled irrigation and the soil moisture is below a predetermined threshold established by a user). In the system 10 of FIG. 19 , the interrupter 12 can only interrupt a scheduled irrigation, not initiate an irrigation. The system 10 has a sensor 21 which is cabled (no wireless communication). The system 10 of FIG. 19 has the advantage of being very simple, it is capable of being easily installed into virtually all existing irrigation systems, and it requires no independent power (the system 10 draws power off the 24VAC irrigation line). 
+ As shown in FIG. 20 , a wireless interrupt approach is similar to the “Tethered Sensor” system 10 of FIG. 19 , except that wireless communication is used between a wireless soil sensor 21 and an interrupter 12 . The wireless soil sensor 21 requires battery power and the interrupter 12 requires a battery to accommodate flexible wireless reporting. The principle advantage of the system 10 of FIG. 20 is that no cabling is needed, and installation is simpler than the tethered system 10 of FIG. 19 . As shown in FIG. 20 , the wireless soil sensor 21 transmits a wireless signal 18 a to the interrupter 12 pertaining to the moisture levels of the soil in a particular soil area. 
+ A wireless controller system 10 is shown in FIG. 21 . The wireless controller system 10 uses a wireless link back to a wireless irrigation controller 11 (there is no “interrupter”) The principle advantage of the wireless controller system 10 of FIG. 21 is that the wireless soil sensors 21 preferably initiate irrigation if needed (allowing for the user to set scheduled irrigation times as well if desired). A user also may allow the wireless controller 11 to look at more than one wireless soil sensor 21 for each irrigation zone (area irrigated by one valve 13 ) taking an average, use the lowest value, etc. One can also allow for simpler level adjusting, including such features as a “hot day” button nudging the target water levels up a notch and many others. 
+ The goal of one aspect of the present invention is to develop an inexpensive and easy to install system compatible with existing irrigation systems that can be quickly configured by homeowners/landscapers of limited technical sophistication. An objective of the present invention is an overall lower cost, a system that is easy to install in existing and new irrigation systems, setup that is as easy to use as a traditional irrigation controller, and careful design of setup features, default modes, user input device and display to give a superior customer interface. 
+ Irrigation interrupt of the system interfaces simply with existing irrigation control systems to over-ride scheduled irrigation when moisture levels hit user settable thresholds. When operating in this manner, the system is incapable of initiating an irrigation event and needs to be used with a conventional irrigation controller. An irrigation controller 11 of the system 10 can initiate and stop irrigation events and replaces existing installation irrigation controllers or is suitable for complete control of new installations through both timing of irrigation to certain times of the day as well as based on near real-time soil moisture data. 
+ As mentioned above, a typical irrigation controller system 10 ′ is shown in FIG. 15 . The system 10 ′ includes a 24VAC power supply connected to 120VAC and an irrigation controller 11 . Wiring 52 a and 52 b leads from the controller 11 to one or more valve boxes 13 . When the current loop is closed, the valves 13 a and 13 b open and a zone is watered. Typically, the controller 11 is set to turn on and off valves at predetermined times for a set time. 
+ In the irrigation interrupt system 10 , as shown in FIG. 16 , the interrupter 12 is positioned between the standard irrigation controller 11 and the valves 13 a and 13 b . A wireless soil sensor 21 is placed in each irrigation zone and the wireless soil sensor 21 is in periodic communication with the irrigation controller 12 . In this system, watering only occurs when both the standard irrigation controller 11 indicates that it is time to water and the irrigation interrupter 12 indicates that soil moisture is below a predetermined threshold. The interrupter 12 opens switch 54 a and 54 b to terminate the current flow through lines 52 a ′ and 52 b ′ and close the valves 13 a and 13 b . Line 55 provides power to the interrupter 12 , especially when the switch 51 of the controller 11 is open. 
+ In the wireless irrigation controller system 10 of FIG. 17 , the same interrupter hardware is used but the inputs to the irrigation interrupter 12 are always on, i.e. the irrigation interrupt 12 is now in control and irrigation will occur under the direct control of the wireless interrupter 12 based on soil moisture data. Different firmware is necessary, but the hardware is identical with only minimal changes in the wiring. 
+ In both systems, power for the irrigation interrupter 12 is drawn directly off the 24VAC eliminating the need for a separate power supply. 
+ The system 10 is capable of operating with soil moisture only wireless soil sensors 21 with integrated two-way wireless telemetry, sensor firmware, an irrigation interrupter/controller (Controller) and controller firmware. The wireless soil sensors consist of a soil moisture only sensor, wireless two-way telemetry, microcontroller, and at least some non-volatile memory, and are preferably battery powered. These components are integrated into one physical package (no cabling) and the wireless soil sensor 21 is buried in strategic locations to monitor soil moisture conditions. The sensor firmware manages making sensor measurements, transmitting them to the controller, receiving controller commands, and power-management (putting system to sleep). The controller 11 preferably consists of two-way wireless telemetry compatible with the wireless soil sensors 21 , a microcontroller, non-volatile memory, a user input (preferably a four or five way wheel), display (preferably 36 character two line LCD), and circuitry for opening or closing switches for irrigation zones (switch in an open position is over-riding irrigation). In existing irrigation systems and for use with an already installed controller, the wireless controller 11 is spliced into existing wiring close to an existing irrigation controller. In replacing an existing irrigation controller or in new installations, the wireless controller 11 is directly connected to irrigation zone wiring. The controller firmware allows collection of wireless telemetry of soil moisture data, “commissioning” of new wireless soil sensors 21 , i.e. associating a wireless soil sensor 21 with an irrigation zone and an installation, setting irrigation thresholds, etc. 
+ All of the components preferably operate over a temperature range of −20 to 70° C. (with the exception of the display which is operable over 0 to 50° C.) and are capable of storage over −20 to 70° C. All components preferably are Human Body Model ESD resistant but not lightning resistant. Wireless soil sensors 21 are preferably fully waterproof while the interrupters 12 preferably only have a low level of “splashproofing”. For the purposes of determining battery shelf life in the wireless soil sensors 21 , a temperature under 40 C is assumed (temperature, depending on battery technology, can greatly impact self discharge rates). 
+ Wireless telemetry range of approximately 100-200 feet is preferred. The range is achieved at depths of up to 12 inches and in moderate clutter (vegetation, slight topography, through garage wall, etc.). A wireless soil sensor 21 is preferably installed at least as close as 3 inches from soil surface for monitoring soil moisture in shallow rooting turf. The package of the wireless soil sensor is preferably no larger than 2″×2″×8″ (ideally 1.5″×1.5″×6″). A bulky package is difficult to install (particularly at shallow depths), disrupt soil environment, and a turn-off to consumers. A non-volatile memory is preferred. Timekeeping is accurate to within +/−2% which allows the wireless soil sensors 21 to wakeup at on a regular schedule, timing for I2C commands, as well as scheduling sensor “listen” windows for wireless receive modes. 
+ The wireless soil sensor 21 is capable of receiving simple operational parameters wirelessly from a controller 11 or an interrupter 12 , which allows the controller 11 or the interrupter 12 to set reporting interval, selection of adaptive algorithms, etc. 
+ A procedure for re-programming the wireless soil sensors 21 after production is included in order to allow for changes encountered in debugging or upgrades. Alternatively, it can be through a programming header in the battery or by some other wireless programming option. 
+ The wireless soil sensor 21 is preferably able to detect imminent battery, to prevent the wireless soil sensors 21 from failing suddenly with no warning or begin to operate intermittently reflecting battery temperature and other variable as well as possibly giving corrupted data that may result in incorrect irrigation decisions. 
+ The sensor firmware is capable of executing and reading I2C commands. Analog sensor requires I2C commands to control oscillator and make A/D measurements. I2C commands need to be executed sequentially according to a sloppy timing of about +/−3 mS over 100 mS. I2C can operate anywhere from 20 to 200 KHz. The sensor firmware is able to perform simple calculations like conversion of raw A/D values into soil moisture which requires simple functions-addition, subtraction, division, polynomials but no log, trig, etc. functions. The sensor firmware is capable of going into a very low power mode between set measurement interval with routines to wake up at end of interval which may range from 1-100 min. which is set in a non-volatile configuration file which can be modified by interrupt controller. After measurement is complete, soil moisture data needs to be sent to interrupt controller 11 . 
+ The sensor firmware preferably has a static soil moisture mode. An operational mode that allows the wireless soil sensor 21 to wake up, measure soil moisture, and if a change in soil moisture from the last wirelessly reported measurement does not exceed a settable threshold, return to a sleep mode without sending data. This threshold value, as well as whether this feature is enabled, preferably resides in a non-volatile configuration file which can be modified by the interrupt controller 11 . The wireless soil sensor 21 preferably transmits a new reading once every six hours regardless of soil moisture changes to confirm operation. 
+ The wireless soil sensor 21 preferably has a default mode firmware upon power restart for the sensor firmware, which allows a wireless soil sensor 21 to be commissioned, i.e. assigned to a specific irrigation interrupter to allow for resolving sensors from a close neighbors residence. In addition, commissioning must be flexible to allow for a change in assigned interrupt controller 11 in the future or if commissioning is lost. 
+ A wireless soil sensor 21 is preferably capable of a listening mode in a power efficient manner for receiving changes to the configuration file wirelessly from the interrupt controller 11 with a maximum file size of 100 bytes at least once a month without degrading three year sensor battery life. The wireless soil sensor 21 preferably has the ability to download full operating firmware. 
+ On a regular schedule (about once every six hours) the wireless soil sensor 21 preferably provides in addition to the soil moisture value, diagnostics such as battery voltage, and raw measured values not to exceed an additional 25 bytes. This data is used to assess performance and for diagnosis of bugs or sensor failure. 
+ If the raw A/D values used to determine soil moisture data are out of normal ranges, the wireless soil sensor 21 preferably sends a “Bad Data” even if the computed soil moisture value appears reasonable. This helps detect failed wireless soil sensors 21 and prevent bad control actions. 
+ The irrigation interrupter 12 is capable of turning on and off AC current up to 700 mA continuously at 70 C for each irrigation zone from an AC voltage range of 16 to 34 volts with no more that 1V in drop across switching circuitry. Switching circuitry is not damaged by inductive transients generated by the turn off of valve solenoids. 
+ Regardless of whether the interrupt controller 11 is allowing or blocking irrigation, the interrupt controller 11 can detect the presence of an AC voltage (generated by irrigation controller 11 to initiate an irrigation). This feature allows for calculations of savings such as % of scheduled irrigation events that were canceled by system. 
+ The hardware for the irrigation interrupter 12 is preferably resistant to moderate ESD and transients that may enter system through 24 VAC transformer in order to be reliable. 
+ The interrupt controller 11 draws power directly from nominal 24VAC transformer to avoid having to use a separate power supply with a maximum current draw of 100 mA. The interrupt controller 11 operates correctly with an AC input varying from 16 to 34 VAC to account for AC mains voltage of 84 to 130 VAC (typical specified level of AC power seen in a household) and variation in transformer output with load. 
+ The interrupt controller 11 is capable of operating in typical residential systems which have between four and eight zones. More sophisticated systems could be addressed by using multiple units. 
+ The interrupt controller 11 is preferably capable of a log for the last 30 days of soil moisture readings for eight zones at 10 minute interval as well as whether an irrigation event is occurring, and whether it has been interrupted at 1 minute intervals in non-volatile memory. The log is preferably structured so accurate date and time is available for data record. This feature is good for both debugging purposes but also in allowing the system to display to the user the amount of water saved thus justifying the product. 
+ Firmware responds as gracefully as possible to problems. For instance, if soil moisture data is out of range or uC lockup (possibly detected by watchdog circuit) irrigation proceeds according to the irrigation controller 11 (i.e. no interrupt). If an irrigation interrupter 12 is operating as a wireless irrigation controller (no standard irrigation controller), the system 10 should default to no irrigation. Failure modes give obvious indication of problems. 
+ Ample code space is preferably reserved to allow for extensive additional features in the future. All user settable configurations are preferably stored in non-volatile memory so as to allow for seamless recovery from lockup or loss of power. Preferably, a real time clock has the ability to keep time after power loss for up to 1 month. 
+ The interrupter firmware is capable of generating a user water savings report for the last day, week, and month (i.e. percent of scheduled irrigation that was interrupted) by zone and as a whole for all eight zones as well as total run time per zone. 
+ A process is developed to allow sensors upon installation or system expansion to be assigned to a particular irrigation zone for a particular irrigation interrupter. The process needs to be flexible enough to allow for replacement of failed wireless soil sensors 21 as well. This allows the system 10 to be used with neighboring installations without confusion as well as assigning the right sensor to the right zone. 
+ A user sets, for each zone, the maximum soil moisture level that will terminate an irrigation event. There is also a settable hysteresis, Y, i.e. if during a single scheduled irrigation event the soil moisture rises about the threshold X and irrigation is stopped, it would not begin again until level fell to X-Y. This prevents valves from turning on and off rapidly when approaching the threshold. When new irrigation event occurs, the threshold defaults back to X. 
+ A hold feature allows a user to hold current conditions going forward (i.e. take last soil moisture readings and apply as thresholds). 
+ A show current status mode for the interrupt controller 11 defaults to when no keypad entry has occurred for a minute or so and shows zone by zone-threshold, last soil moisture data, irrigation is being attempted, and if irrigation is being interrupted. 
+ The save configuration allows up to six configurations to be saved, named, and recalled (for all zones thresholds, hysteresis, adaptive algorithms on or off, etc.). This allows for summer and winter settings, etc. 
+ A disable setting is where all zones are enabled and the system is under control of the irrigation controller 11 solely, i.e. the interrupter 12 allows valves 13 a and 13 b to be on at all times when the standard irrigation controller 11 schedules irrigation regardless of the soil moisture data. This is a “safety mode” so that if there are critical problems, the user is not forced to reconfigure things to keep the grass from dying. 
+ A bump feature allows a user to “bump” up or down all thresholds equally at an approximately 0.5% water by volume increment (allows for quick adjustment for hot weather or other reasons), which revert to previous settings after 1 days unless user selects to apply them permanently. 
+ The firmware is preferably capable of detecting missing or out of range soil moisture and low battery conditions and display warning. 
+ A wireless irrigation controller mode allows the irrigation interrupter 12 to function as full soil moisture data driven irrigation controller 11 without the use of a standard irrigation controller 11 . Essentially all of the features of a standard irrigation controller 11 are implemented such as scheduling irrigation times, valve run-times, etc. These scheduled events are subjected to the same “interrupt” schemes as the irrigation interrupter 12 based on soil moisture data. 
+ When water is applied to the soil the wireless soil sensors 21 report the increase in moisture content but also look at the tail off in moisture levels when irrigation ceases. In cases of significant overwatering, there is a sharp spike in moisture levels followed by a sharp fall after irrigation ceases. This is due to the soil essentially being so wet it “free drains” below the root zone (thus wasting the water). The present invention implements algorithms to monitor this and adjust irrigation events to eliminate this wasteful practice allowing the system to essentially configure itself over time. The wireless soil sensor 21 is preferably directly integrated with a radio and microcontroller. It also preferably has a sleeve that fits over the sensor that the user removes to turn it on. It also preferably has an optional microcontroller generated clock signal to avoid having to use a separate oscillator for the conductivity measurement. It also preferably has the same RF frequency the radio uses to eliminate having to use a separate oscillator for the soil moisture measurement. It also preferably uses “spread spectrum oscillators” to achieve FCC compliance. It also preferably has sensor components that are currently PCB may be made out of conducting plastic formulations simplifying assembly, improving aesthetics, and reducing costs. 
+ From the foregoing it is believed that those skilled in the pertinent art will recognize the meritorious advancement of this invention and will readily understand that while the present invention has been described in association with a preferred embodiment thereof, and other embodiments illustrated in the accompanying drawings, numerous changes modification and substitutions of equivalents may be made therein without departing from the spirit and scope of this invention which is intended to be unlimited by the foregoing except as may appear in the following appended claim. Therefore, the embodiments of the invention in which an exclusive property or privilege is claimed are defined in the following appended claims. 
+ Claims ( 7 ) 
+ We claim as our invention: 
+ 1. A method for automatic irrigation threshold setting, the method comprising:
+ measuring a dynamic response of soil moisture of a soil area under a fully saturated environment; 
+ setting a threshold for the soil area based on the measurements of the dynamic response; 
+ monitoring the dynamic response of soil moisture over a predetermined time period; 
+ wherein measuring the dynamic response is performed by a system comprising a plurality of wireless sub-soil sensors, an interrupter in communication with each of the plurality of wireless sub-soil sensors, wherein the interrupter comprises a housing, a microcontroller, a radiofrequency antenna, a memory, a display and a power supply; 
+ wherein the interrupter suspends scheduled watering if the soil moisture is above the threshold; 
+ wherein the interrupter continues monitoring the soil moisture level to determine if the soil moisture level has dropped below the threshold; 
+ wherein the interrupter returns to scheduled watering once the soil moisture level is below the threshold; 
+ wherein the interrupter can only interrupt a scheduled watering and not commence a scheduled watering. 
+ 2. The method according to claim 1 wherein the threshold is 70% to 80% of the field capacity of the soil area. 
+ 3. The method according to claim 1 wherein the soil area is a residential lawn. 
+ 4. The method according to claim 1 wherein the threshold is set to optimize water efficiency and plant growth. 
+ 5. The method according to claim 1 wherein the soil area is a golf course. 
+ 6. The method according to claim 1 wherein the soil area is a farm. 
+ 7. The method according to claim 1 wherein the soil area is a football field. 
+ US13/017,538 
+ 2010-02-01 
+ 2011-01-31 
+ Automatic efficient irrigation threshold setting 
+ Active 
+ 2032-10-26 
+ US8751052B1 
+ ( en )
+ Priority Applications (2) 
+ Application Number 
+ Priority Date 
+ Filing Date 
+ Title 
+ US13/017,538 
+ US8751052B1 
+ ( en )
+ 2010-02-01 
+ 2011-01-31 
+ Automatic efficient irrigation threshold setting 
+ US13/662,909 
+ US8862277B1 
+ ( en )
+ 2010-02-01 
+ 2012-10-29 
+ Automatic efficient irrigation threshold setting 
+ Applications Claiming Priority (2) 
+ Application Number 
+ Priority Date 
+ Filing Date 
+ Title 
+ US30002810P 
+ 2010-02-01 
+ 2010-02-01 
+ US13/017,538 
+ US8751052B1 
+ ( en )
+ 2010-02-01 
+ 2011-01-31 
+ Automatic efficient irrigation threshold setting 
+ Related Child Applications (1) 
+ Application Number 
+ Title 
+ Priority Date 
+ Filing Date 
+ US13/662,909 
+ Continuation-In-Part 
+ US8862277B1 
+ ( en )
+ 2010-02-01 
+ 2012-10-29 
+ Automatic efficient irrigation threshold setting 
+ Publications (1) 
+ Publication Number 
+ Publication Date 
+ US8751052B1 
+ true 
+ US8751052B1
+ ( en )
+ 2014-06-10 
+ Family 
+ ID=50845517 
+ Family Applications (1) 
+ Application Number 
+ Title 
+ Priority Date 
+ Filing Date 
+ US13/017,538 
+ Active 
+ 2032-10-26 
+ US8751052B1 
+ ( en )
+ 2010-02-01 
+ 2011-01-31 
+ Automatic efficient irrigation threshold setting 
+ Country Status (1) 
+ Country 
+ Link 
+ US 
+ ( 1 )
+ US8751052B1 
+ ( en )
+ Cited By (23) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ US20130073097A1 
+ ( en )
+ * 
+ 2011-09-19 
+ 2013-03-21 
+ Dennis Vidovich 
+ Area soil moisture and fertilization sensor 
+ US20150105921A1 
+ ( en )
+ * 
+ 2011-11-22 
+ 2015-04-16 
+ Zbs Technology, Llc 
+ System and method for wireless irrigation control with a remote application 
+ US20160050859A1 
+ ( en )
+ * 
+ 2012-05-21 
+ 2016-02-25 
+ Smart Rain Systems, Inc. 
+ Irrigation management 
+ US20180160636A1 
+ ( en )
+ * 
+ 2015-05-18 
+ 2018-06-14 
+ Hozelock Limited 
+ Garden watering controllers 
+ US10076089B2 
+ ( en )
+ 2016-03-11 
+ 2018-09-18 
+ International Business Machines Corporation 
+ Method of controlling soil moisture, water accumulation and fertilizer distribution in land 
+ US10362739B2 
+ ( en )
+ 2008-08-12 
+ 2019-07-30 
+ Rain Bird Corporation 
+ Methods and systems for irrigation control 
+ US10716269B2 
+ ( en )
+ 2008-08-12 
+ 2020-07-21 
+ Rain Bird Corporation 
+ Methods and systems for irrigation control 
+ US10871242B2 
+ ( en )
+ 2016-06-23 
+ 2020-12-22 
+ Rain Bird Corporation 
+ Solenoid and method of manufacture 
+ US10980120B2 
+ ( en )
+ 2017-06-15 
+ 2021-04-13 
+ Rain Bird Corporation 
+ Compact printed circuit board 
+ US11089746B2 
+ ( en )
+ 2016-07-15 
+ 2021-08-17 
+ Rain Bird Corporation 
+ Wireless remote irrigation control 
+ US11109546B2 
+ ( en )
+ 2012-08-01 
+ 2021-09-07 
+ Walmart Apollo, Llc 
+ Irrigation controller wireless network adapter and networked remote service 
+ US11163274B2 
+ ( en )
+ 2011-06-23 
+ 2021-11-02 
+ Rain Bird Corporation 
+ Methods and systems for irrigation and climate control 
+ US11185024B2 
+ ( en )
+ 2019-04-26 
+ 2021-11-30 
+ Smart Rain Systems, LLC 
+ Irrigation system map integration 
+ US11240976B2 
+ ( en )
+ 2018-01-03 
+ 2022-02-08 
+ Smart Rain Systems, LLC 
+ Remote irrigation control system 
+ US11342956B2 
+ ( en )
+ * 
+ 2019-12-12 
+ 2022-05-24 
+ GroGuru, Inc. 
+ Wireless two-way communication in complex media 
+ US11503782B2 
+ ( en )
+ 2018-04-11 
+ 2022-11-22 
+ Rain Bird Corporation 
+ Smart drip irrigation emitter 
+ US11570956B2 
+ ( en )
+ 2012-11-07 
+ 2023-02-07 
+ Rain Bird Corporation 
+ Irrigation control systems and methods 
+ US11690309B2 
+ ( en )
+ 2015-07-23 
+ 2023-07-04 
+ Zito Jr Arthur J 
+ Responsive dispersion from compartment in aqueous solution 
+ US11721465B2 
+ ( en )
+ 2020-04-24 
+ 2023-08-08 
+ Rain Bird Corporation 
+ Solenoid apparatus and methods of assembly 
+ US12029174B2 
+ ( en )
+ 2020-12-10 
+ 2024-07-09 
+ Semiosbio Technologies Inc. 
+ Method for managing crop irrigation, and system using same 
+ US12295298B2 
+ ( en )
+ 2022-11-30 
+ 2025-05-13 
+ Smart Rain Systems, Lcc 
+ Devices, systems, and methods for cloud-based irrigation control 
+ US12408638B2 
+ ( en )
+ 2018-01-19 
+ 2025-09-09 
+ Arthur J. Zito, Jr. 
+ Responsive dispersion from compartment in aqueous solution 
+ US12622370B2 
+ ( en )
+ 2024-08-27 
+ 2026-05-12 
+ Textron Inc. 
+ Smart sprinkler system 
+ Citations (29) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ US4194691A 
+ ( en )
+ * 
+ 1976-11-11 
+ 1980-03-25 
+ Birnbach Curtis A 
+ Automatic control of the moisture content of the soil 
+ US4256133A 
+ ( en )
+ 1977-08-22 
+ 1981-03-17 
+ Coward Noel D 
+ Watering valve device 
+ US4298901A 
+ ( en )
+ * 
+ 1979-04-30 
+ 1981-11-03 
+ Weintraub Marvin H 
+ Resistive controller 
+ US4396149A 
+ ( en )
+ 1980-12-30 
+ 1983-08-02 
+ Energy Management Corporation 
+ Irrigation control system 
+ US4684920A 
+ ( en )
+ 1986-01-30 
+ 1987-08-04 
+ United Water Resources, Inc. 
+ Remotely controlled bypass for automatic watering system 
+ US4785843A 
+ ( en )
+ 1988-02-29 
+ 1988-11-22 
+ Nicholson Laurence R 
+ Multiplexed automatic control system 
+ US4892113A 
+ ( en )
+ * 
+ 1986-02-03 
+ 1990-01-09 
+ Spectrum 2000, Inc. 
+ Moisture monitor and control system 
+ US4918375A 
+ ( en )
+ * 
+ 1987-07-03 
+ 1990-04-17 
+ Polska Akademia Nauk Instytut Agrofizyki 
+ Reflectometric moisture meter for capillary-porous materials, especially for the soil 
+ US4992667A 
+ ( en )
+ * 
+ 1988-07-27 
+ 1991-02-12 
+ Abelentsev Vladimir V 
+ Device for measuring moisture content of soil and snow water storage 
+ US5350251A 
+ ( en )
+ * 
+ 1992-04-08 
+ 1994-09-27 
+ Purdue Research Foundation 
+ Planted surface moisture control system 
+ US5839660A 
+ ( en )
+ 1997-06-11 
+ 1998-11-24 
+ Morgenstern; Paul 
+ Auxiliary sprinkler system controller to maintain healthy turf with minimum water usage 
+ US6016971A 
+ ( en )
+ * 
+ 1996-02-16 
+ 2000-01-25 
+ Albert B. Welch 
+ Lawn watering system 
+ US20020176638A1 
+ ( en )
+ * 
+ 2001-03-30 
+ 2002-11-28 
+ Nec Research Institute, Inc. 
+ Method for blind cross-spectral image registration 
+ US6530160B1 
+ ( en )
+ * 
+ 2000-05-17 
+ 2003-03-11 
+ William L. Gookins 
+ Method and means for grain drying optimization 
+ US6937939B1 
+ ( en )
+ 1999-07-08 
+ 2005-08-30 
+ Tokyo University Of Agriculture And Technology Tlo Co., Ltd. 
+ Soil measuring instrument, soil measurement assisting device and method, recorded medium on which a program is recorded, recorded medium on which data is recorded, application amount controller, application amount determining device, method for them, and farm working determination assisting system 
+ US6947810B2 
+ ( en )
+ 2001-05-31 
+ 2005-09-20 
+ Terra Spase, Inc 
+ System for automated monitoring and maintenance of crops including sensors and emitters associated with plants 
+ US6963205B2 
+ ( en )
+ 2002-08-21 
+ 2005-11-08 
+ Lundstrom John W 
+ Electrically measuring soil dry density 
+ US7063270B2 
+ ( en )
+ 2003-10-27 
+ 2006-06-20 
+ Bowers John R 
+ Moisture sensor sprinkler control systems 
+ US20060144438A1 
+ ( en )
+ * 
+ 2004-12-29 
+ 2006-07-06 
+ Rain Bird Corporation 
+ Capacitance-based moisture sensor and controller 
+ US7184892B1 
+ ( en )
+ 2003-01-31 
+ 2007-02-27 
+ Deere & Company 
+ Method and system of evaluating performance of a crop 
+ US7203576B1 
+ ( en )
+ * 
+ 2004-02-09 
+ 2007-04-10 
+ Orbit Irrigation Products, Inc. 
+ Moisture sensor timer 
+ US20070157512A1 
+ ( en )
+ * 
+ 2004-01-16 
+ 2007-07-12 
+ Florasys Ag 
+ Electronic measuring or control device used for watering plants 
+ US7264177B2 
+ ( en )
+ 2004-08-03 
+ 2007-09-04 
+ Intelligent Lawn Systems, L.P. 
+ Methods, systems and apparatuses for automated irrigation and chemical treatment 
+ US20070208510A1 
+ ( en )
+ * 
+ 2006-03-02 
+ 2007-09-06 
+ Deere & Company, A Delaware Corporation 
+ Method of identifying and localizing drainage tile problems 
+ US20070237583A1 
+ ( en )
+ 2006-04-10 
+ 2007-10-11 
+ Corwon Michael E 
+ Golf course turf conditioning control system and method 
+ US7318010B2 
+ ( en )
+ 2006-02-07 
+ 2008-01-08 
+ Deere & Company 
+ Method of regulating wireless sensor network energy use 
+ US20090099701A1 
+ ( en )
+ 2007-10-12 
+ 2009-04-16 
+ Rain Bird Corporation 
+ Remote Access to Irrigation Control Systems 
+ US20090276102A1 
+ ( en )
+ 2008-05-01 
+ 2009-11-05 
+ Signature Control Systems, Inc. 
+ Intelligent sensor for irrigation management 
+ US20100194411A1 
+ ( en )
+ 2006-11-03 
+ 2010-08-05 
+ Jean Caron 
+ Porous medium electrical conductivity sensor 
+ 2011 
+ 2011-01-31 
+ US 
+ US13/017,538 
+ patent/US8751052B1/en 
+ active 
+ Active 
+ Patent Citations (30) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ US4194691A 
+ ( en )
+ * 
+ 1976-11-11 
+ 1980-03-25 
+ Birnbach Curtis A 
+ Automatic control of the moisture content of the soil 
+ US4256133A 
+ ( en )
+ 1977-08-22 
+ 1981-03-17 
+ Coward Noel D 
+ Watering valve device 
+ US4298901A 
+ ( en )
+ * 
+ 1979-04-30 
+ 1981-11-03 
+ Weintraub Marvin H 
+ Resistive controller 
+ US4396149A 
+ ( en )
+ 1980-12-30 
+ 1983-08-02 
+ Energy Management Corporation 
+ Irrigation control system 
+ US4684920A 
+ ( en )
+ 1986-01-30 
+ 1987-08-04 
+ United Water Resources, Inc. 
+ Remotely controlled bypass for automatic watering system 
+ US4892113A 
+ ( en )
+ * 
+ 1986-02-03 
+ 1990-01-09 
+ Spectrum 2000, Inc. 
+ Moisture monitor and control system 
+ US4918375A 
+ ( en )
+ * 
+ 1987-07-03 
+ 1990-04-17 
+ Polska Akademia Nauk Instytut Agrofizyki 
+ Reflectometric moisture meter for capillary-porous materials, especially for the soil 
+ US4785843A 
+ ( en )
+ 1988-02-29 
+ 1988-11-22 
+ Nicholson Laurence R 
+ Multiplexed automatic control system 
+ US4992667A 
+ ( en )
+ * 
+ 1988-07-27 
+ 1991-02-12 
+ Abelentsev Vladimir V 
+ Device for measuring moisture content of soil and snow water storage 
+ US5350251A 
+ ( en )
+ * 
+ 1992-04-08 
+ 1994-09-27 
+ Purdue Research Foundation 
+ Planted surface moisture control system 
+ US6016971A 
+ ( en )
+ * 
+ 1996-02-16 
+ 2000-01-25 
+ Albert B. Welch 
+ Lawn watering system 
+ US5839660A 
+ ( en )
+ 1997-06-11 
+ 1998-11-24 
+ Morgenstern; Paul 
+ Auxiliary sprinkler system controller to maintain healthy turf with minimum water usage 
+ US6937939B1 
+ ( en )
+ 1999-07-08 
+ 2005-08-30 
+ Tokyo University Of Agriculture And Technology Tlo Co., Ltd. 
+ Soil measuring instrument, soil measurement assisting device and method, recorded medium on which a program is recorded, recorded medium on which data is recorded, application amount controller, application amount determining device, method for them, and farm working determination assisting system 
+ US6530160B1 
+ ( en )
+ * 
+ 2000-05-17 
+ 2003-03-11 
+ William L. Gookins 
+ Method and means for grain drying optimization 
+ US20020176638A1 
+ ( en )
+ * 
+ 2001-03-30 
+ 2002-11-28 
+ Nec Research Institute, Inc. 
+ Method for blind cross-spectral image registration 
+ US6947810B2 
+ ( en )
+ 2001-05-31 
+ 2005-09-20 
+ Terra Spase, Inc 
+ System for automated monitoring and maintenance of crops including sensors and emitters associated with plants 
+ US6963205B2 
+ ( en )
+ 2002-08-21 
+ 2005-11-08 
+ Lundstrom John W 
+ Electrically measuring soil dry density 
+ US7184892B1 
+ ( en )
+ 2003-01-31 
+ 2007-02-27 
+ Deere & Company 
+ Method and system of evaluating performance of a crop 
+ US7063270B2 
+ ( en )
+ 2003-10-27 
+ 2006-06-20 
+ Bowers John R 
+ Moisture sensor sprinkler control systems 
+ US20070157512A1 
+ ( en )
+ * 
+ 2004-01-16 
+ 2007-07-12 
+ Florasys Ag 
+ Electronic measuring or control device used for watering plants 
+ US7203576B1 
+ ( en )
+ * 
+ 2004-02-09 
+ 2007-04-10 
+ Orbit Irrigation Products, Inc. 
+ Moisture sensor timer 
+ US7264177B2 
+ ( en )
+ 2004-08-03 
+ 2007-09-04 
+ Intelligent Lawn Systems, L.P. 
+ Methods, systems and apparatuses for automated irrigation and chemical treatment 
+ US20060144438A1 
+ ( en )
+ * 
+ 2004-12-29 
+ 2006-07-06 
+ Rain Bird Corporation 
+ Capacitance-based moisture sensor and controller 
+ US7318010B2 
+ ( en )
+ 2006-02-07 
+ 2008-01-08 
+ Deere & Company 
+ Method of regulating wireless sensor network energy use 
+ US20070208510A1 
+ ( en )
+ * 
+ 2006-03-02 
+ 2007-09-06 
+ Deere & Company, A Delaware Corporation 
+ Method of identifying and localizing drainage tile problems 
+ US20070237583A1 
+ ( en )
+ 2006-04-10 
+ 2007-10-11 
+ Corwon Michael E 
+ Golf course turf conditioning control system and method 
+ US7413380B2 
+ ( en )
+ 2006-04-10 
+ 2008-08-19 
+ Subair Systems, Llc 
+ Golf course turf conditioning control system and method 
+ US20100194411A1 
+ ( en )
+ 2006-11-03 
+ 2010-08-05 
+ Jean Caron 
+ Porous medium electrical conductivity sensor 
+ US20090099701A1 
+ ( en )
+ 2007-10-12 
+ 2009-04-16 
+ Rain Bird Corporation 
+ Remote Access to Irrigation Control Systems 
+ US20090276102A1 
+ ( en )
+ 2008-05-01 
+ 2009-11-05 
+ Signature Control Systems, Inc. 
+ Intelligent sensor for irrigation management 
+ Cited By (40) 
+ * Cited by examiner, † Cited by third party 
+ Publication number 
+ Priority date 
+ Publication date 
+ Assignee 
+ Title 
+ US11064664B2 
+ ( en )
+ 2008-08-12 
+ 2021-07-20 
+ Rain Bird Corporation 
+ Methods and systems for irrigation control 
+ US10362739B2 
+ ( en )
+ 2008-08-12 
+ 2019-07-30 
+ Rain Bird Corporation 
+ Methods and systems for irrigation control 
+ US10716269B2 
+ ( en )
+ 2008-08-12 
+ 2020-07-21 
+ Rain Bird Corporation 
+ Methods and systems for irrigation control 
+ US11768472B2 
+ ( en )
+ 2011-06-23 
+ 2023-09-26 
+ Rain Bird Corporation 
+ Methods and systems for irrigation and climate control 
+ US12461496B2 
+ ( en )
+ 2011-06-23 
+ 2025-11-04 
+ Rain Bird Corporation 
+ Methods and systems for irrigation and climate control 
+ US11163274B2 
+ ( en )
+ 2011-06-23 
+ 2021-11-02 
+ Rain Bird Corporation 
+ Methods and systems for irrigation and climate control 
+ US20130073097A1 
+ ( en )
+ * 
+ 2011-09-19 
+ 2013-03-21 
+ Dennis Vidovich 
+ Area soil moisture and fertilization sensor 
+ US20150105921A1 
+ ( en )
+ * 
+ 2011-11-22 
+ 2015-04-16 
+ Zbs Technology, Llc 
+ System and method for wireless irrigation control with a remote application 
+ US20160050859A1 
+ ( en )
+ * 
+ 2012-05-21 
+ 2016-02-25 
+ Smart Rain Systems, Inc. 
+ Irrigation management 
+ US11553655B2 
+ ( en )
+ 2012-05-21 
+ 2023-01-17 
+ Smart Rain Systems, LLC 
+ Irrigation management 
+ US10660279B2 
+ ( en )
+ * 
+ 2012-05-21 
+ 2020-05-26 
+ Smart Rain Systems, LLC 
+ Irrigation management 
+ US12171172B2 
+ ( en )
+ 2012-08-01 
+ 2024-12-24 
+ Rain Bird Corporation 
+ Irrigation controller wireless network adapter and networked remote service 
+ US11109546B2 
+ ( en )
+ 2012-08-01 
+ 2021-09-07 
+ Walmart Apollo, Llc 
+ Irrigation controller wireless network adapter and networked remote service 
+ US11744195B2 
+ ( en )
+ 2012-08-01 
+ 2023-09-05 
+ Rain Bird Corporation 
+ Irrigation controller wireless network adapter and networked remote service 
+ US12568895B2 
+ ( en )
+ 2012-11-07 
+ 2026-03-10 
+ Rain Bird Corporation 
+ Irrigation control systems and methods 
+ US11937557B2 
+ ( en )
+ 2012-11-07 
+ 2024-03-26 
+ Rain Bird Corporation 
+ Irrigation control systems and methods 
+ US11570956B2 
+ ( en )
+ 2012-11-07 
+ 2023-02-07 
+ Rain Bird Corporation 
+ Irrigation control systems and methods 
+ US20180160636A1 
+ ( en )
+ * 
+ 2015-05-18 
+ 2018-06-14 
+ Hozelock Limited 
+ Garden watering controllers 
+ US11690309B2 
+ ( en )
+ 2015-07-23 
+ 2023-07-04 
+ Zito Jr Arthur J 
+ Responsive dispersion from compartment in aqueous solution 
+ US10980197B2 
+ ( en )
+ 2016-03-11 
+ 2021-04-20 
+ International Business Machines Corporation 
+ Method of controlling soil moisture, water accumulation and fertilizer distribution in land 
+ US10537074B2 
+ ( en )
+ 2016-03-11 
+ 2020-01-21 
+ International Business Machines Corporation 
+ Method of controlling soil moisture, water accumulation and fertilizer distribution in land 
+ US10076089B2 
+ ( en )
+ 2016-03-11 
+ 2018-09-18 
+ International Business Machines Corporation 
+ Method of controlling soil moisture, water accumulation and fertilizer distribution in land 
+ US10871242B2 
+ ( en )
+ 2016-06-23 
+ 2020-12-22 
+ Rain Bird Corporation 
+ Solenoid and method of manufacture 
+ US11089746B2 
+ ( en )
+ 2016-07-15 
+ 2021-08-17 
+ Rain Bird Corporation 
+ Wireless remote irrigation control 
+ US10980120B2 
+ ( en )
+ 2017-06-15 
+ 2021-04-13 
+ Rain Bird Corporation 
+ Compact printed circuit board 
+ US11684029B2 
+ ( en )
+ 2018-01-03 
+ 2023-06-27 
+ Smart Rain Systems, LLC 
+ Landscaper integration 
+ US12464992B2 
+ ( en )
+ 2018-01-03 
+ 2025-11-11 
+ Smart Rain Systems, LLC 
+ Landscaper integration 
+ US11240976B2 
+ ( en )
+ 2018-01-03 
+ 2022-02-08 
+ Smart Rain Systems, LLC 
+ Remote irrigation control system 
+ US12408638B2 
+ ( en )
+ 2018-01-19 
+ 2025-09-09 
+ Arthur J. Zito, Jr. 
+ Responsive dispersion from compartment in aqueous solution 
+ US11917956B2 
+ ( en )
+ 2018-04-11 
+ 2024-03-05 
+ Rain Bird Corporation 
+ Smart drip irrigation emitter 
+ US11503782B2 
+ ( en )
+ 2018-04-11 
+ 2022-11-22 
+ Rain Bird Corporation 
+ Smart drip irrigation emitter 
+ US11684030B2 
+ ( en )
+ 2019-04-26 
+ 2023-06-27 
+ Smart Rain Systems, LLC 
+ Irrigation system map integration 
+ US11185024B2 
+ ( en )
+ 2019-04-26 
+ 2021-11-30 
+ Smart Rain Systems, LLC 
+ Irrigation system map integration 
+ US12324381B2 
+ ( en )
+ 2019-04-26 
+ 2025-06-10 
+ Smart Rain Systems, LLC 
+ Irrigation system map integration 
+ US11342956B2 
+ ( en )
+ * 
+ 2019-12-12 
+ 2022-05-24 
+ GroGuru, Inc. 
+ Wireless two-way communication in complex media 
+ US11721465B2 
+ ( en )
+ 2020-04-24 
+ 2023-08-08 
+ Rain Bird Corporation 
+ Solenoid apparatus and methods of assembly 
+ US12402580B2 
+ ( en )
+ 2020-12-10 
+ 2025-09-02 
+ Semiosbio Technologies Inc. 
+ Method for managing crop irrigation, and system using same 
+ US12029174B2 
+ ( en )
+ 2020-12-10 
+ 2024-07-09 
+ Semiosbio Technologies Inc. 
+ Method for managing crop irrigation, and system using same 
+ US12295298B2 
+ ( en )
+ 2022-11-30 
+ 2025-05-13 
+ Smart Rain Systems, Lcc 
+ Devices, systems, and methods for cloud-based irrigation control 
+ US12622370B2 
+ ( en )
+ 2024-08-27 
+ 2026-05-12 
+ Textron Inc. 
+ Smart sprinkler system 
+ Similar Documents 
+ Publication 
+ Publication Date 
+ Title 
+ US8862277B1 
+ ( en )
+ 2014-10-14 
+ Automatic efficient irrigation threshold setting 
+ US8682493B1 
+ ( en )
+ 2014-03-25 
+ Adaptive irrigation control 
+ US8308077B1 
+ ( en )
+ 2012-11-13 
+ Method and system for soil and water resources 
+ US8682494B1 
+ ( en )
+ 2014-03-25 
+ Methods for performing soil measurements including defining antenna configuration based on sensor burial depth 
+ US9046461B1 
+ ( en )
+ 2015-06-02 
+ RF amplifier tuning method for coping with expected variations in local dielectric 
+ KR102054182B1 
+ ( en )
+ 2020-01-22 
+ Integrated smart crop management module 
+ RU2735555C2 
+ ( en )
+ 2020-11-03 
+ Plant growth control system 
+ US20120175425A1 
+ ( en )
+ 2012-07-12 
+ Systems and methods for controlling a sprinkler system based on sensor information 
+ US20150164009A1 
+ ( en )
+ 2015-06-18 
+ System and method for garden monitoring and management 
+ JP2022508999A 
+ ( en )
+ 2022-01-20 
+ A system that controls plant growth
+ Pusatkar et al. 
+ 2016 
+ Implementation of wireless sensor network for real time monitoring of agriculture 
+ WO2017133625A1 
+ ( en )
+ 2017-08-10 
+ Intelligent courtyard maintenance system and maintenance method thereof 
+ CN101663991A 
+ ( en )
+ 2010-03-10 
+ Vegetative detection and nutrient solution control system and control method thereof 
+ US20220187474A1 
+ ( en )
+ 2022-06-16 
+ Location determination for subsurface communication device 
+ JP2005117999A 
+ ( en )
+ 2005-05-12 
+ Full automatic apparatus for controlling plant culture 
+ Kumar et al. 
+ 2020 
+ Review on IoT based precision irrigation system in agriculture 
+ CN104335882A 
+ ( en )
+ 2015-02-11 
+ Wireless accurate irrigation control system 
+ Atta et al. 
+ 2011 
+ Smart irrigation system for wheat in Saudi Arabia using wireless sensors network technology 
+ Moussa et al. 
+ 2021 
+ IoT based smart irrigation system 
+ CN206523801U 
+ ( en )
+ 2017-09-26 
+ A kind of greenhouse gardening intelligent control device 
+ CN110089252A 
+ ( en )
+ 2019-08-06 
+ A kind of intelligent irrigation control system and method 
+ CN106841566A 
+ ( en )
+ 2017-06-13 
+ A kind of online soil testing assemblies and method 
+ Zhang et al. 
+ 2021 
+ Internet of things (iot)-based precision irrigation with lorawan technology applied to vegetable production 
+ Revathi et al. 
+ 2015 
+ Energy efficient wireless monitoring system for Agarian areas in Indian agricultural system using GPRS module 
+ CN205756149U 
+ ( en )
+ 2016-12-07 
+ A kind of Intelligent water valve controller 
+ Legal Events 
+ Date 
+ Code 
+ Title 
+ Description 
+ 2014-05-21 
+ STCF 
+ Information on status: patent grant 
+ Free format text :
+ PATENTED CASE 
+ 2017-11-26 
+ MAFP 
+ Maintenance fee payment 
+ Free format text :
+ PAYMENT OF MAINTENANCE FEE, 4TH YR, SMALL ENTITY (ORIGINAL EVENT CODE: M2551) 
+ Year of fee payment :
+ 4 
+ 2021-03-16 
+ AS 
+ Assignment 
+ Owner name :
+ GREEN BADGE, LLC, PENNSYLVANIA 
+ Free format text :
+ ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:KARMEL, CLAYTON R.;CAMPBELL, JEFFREY;SOHRABI, KATHY;SIGNING DATES FROM 20141126 TO 20210314;REEL/FRAME:055612/0720 
+ 2021-04-20 
+ AS 
+ Assignment 
+ Owner name :
+ GREEN BADGE, LLC, PENNSYLVANIA 
+ Free format text :
+ ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:MAGRO, CARMEN;REEL/FRAME:055976/0906 
+ Effective date :
+ 20210420 
+ 2021-12-06 
+ FEPP 
+ Fee payment procedure 
+ Free format text :
+ 7.5 YR SURCHARGE - LATE PMT W/IN 6 MO, SMALL ENTITY (ORIGINAL EVENT CODE: M2555); ENTITY STATUS OF PATENT OWNER: SMALL ENTITY 
+ 2021-12-06 
+ MAFP 
+ Maintenance fee payment 
+ Free format text :
+ PAYMENT OF MAINTENANCE FEE, 8TH YR, SMALL ENTITY (ORIGINAL EVENT CODE: M2552); ENTITY STATUS OF PATENT OWNER: SMALL ENTITY 
+ Year of fee payment :
+ 8 
+ 2022-01-31 
+ FEPP 
+ Fee payment procedure 
+ Free format text :
+ MAINTENANCE FEE REMINDER MAILED (ORIGINAL EVENT CODE: REM.); ENTITY STATUS OF PATENT OWNER: SMALL ENTITY 
+ 2026-01-26 
+ FEPP 
+ Fee payment procedure 
+ Free format text :
+ MAINTENANCE FEE REMINDER MAILED (ORIGINAL EVENT CODE: REM.); ENTITY STATUS OF PATENT OWNER: SMALL ENTITY 

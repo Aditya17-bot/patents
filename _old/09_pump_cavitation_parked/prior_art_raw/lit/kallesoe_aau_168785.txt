@@ -1,0 +1,756 @@
+Aalborg Universitet
+Model Based Fault Diagnosis in a Centrifugal Pump Application using Structural
+Analysis
+Kallesøe, C. S.; Izadi-Zamanabadi, Roozbeh; Rasmussen, Henrik; Cocquempot, V.
+Publication date:
+2004
+Document Version
+Også kaldet Forlagets PDF
+Link to publication from Aalborg University
+Citation for published version (APA):
+Kallesøe, C. S., Izadi-Zamanabadi, R., Rasmussen, H., & Cocquempot, V. (2004). Model Based Fault Diagnosis
+in a Centrifugal Pump Application using Structural Analysis.
+General rights
+Copyright and moral rights for the publications made accessible in the public portal are retained by the authors and/or other copyright owners
+and it is a condition of accessing publications that users recognise and abide by the legal requirements associated with these rights.
+            - Users may download and print one copy of any publication from the public portal for the purpose of private study or research.
+            - You may not further distribute the material or use it for any profit-making activity or commercial gain
+            - You may freely distribute the URL identifying the publication in the public portal -
+Take down policy
+If you believe that this document breaches copyright please contact us at vbn@aub.aau.dk providing details, and we will remove access to
+the work immediately and investigate your claim.
+Downloaded from vbn.aau.dk on: 10 06, 2026
+Model Based Fault Diagnosis in a Centrifugal Pump Application
+using Structural Analysis
+Carsten Skovmose Kallesøe
+Grundfos Management A/S
+Poul Due Jensens Vej 7
+DK-8850 Bjerringbro
+Denmark
+ckallesoe@grundfos.com
+Roozbeh Izadi-Zamanabadi & Henrik Rasmussen
+Dept. of Control Engineering, Aalborg University
+Fredriks Bajers Vej 7
+DK-9200 Aalborg Ø
+Denmark
+{hr,riz}@control.auc.dk
+Vincent Cocquempot
+USTL - LAIL
+Bat P2 Cité Scientiﬁque
+59655 Villeneuve d’Ascq Cedex
+France
+cocquempot@univ-lille1.fr
+Abstract— A model based approach for fault detection and
+isolation in a centrifugal pump is proposed in this paper.
+The fault detection algorithm is derived using a combination
+of structural analysis, Analytical Redundant Relations (ARR)
+and observer designs. Structural considerations on the system
+are used to indentify four subsystems each sensitive to a subset
+of the faults under consideration. Either an ARR or a residual
+observer is designed for each of the four subsystems. The
+four obtained residuals are then used for fault isolation. The
+applicability of the algorithm is illustrated by applying it to
+an industrial benchmark. The benchmark tests have shown
+that the algorithm is capable of detection and isolation of ﬁve
+different faults in the mechanical and hydraulic parts of the
+pump.
+I. INTRODUCTION
+Centrifugal pumps are used in a variety of different
+applications. This could for example be in a water supply
+application where submersible pumps are used in water
+wells to lift water to the surface. Some of these installations
+are crucial for a larger system to work. Failures can lead to
+substantial economic losses and can affect the life comfort
+of many people when they occur. Therefore detection of
+faults, if possible in an early stage, and isolation of their
+causes are of great interest. Especially fault detection, which
+can be used for predictive maintenance, could save money
+and increase reliability of the application in which the pump
+is placed.
+Different approaches have been used for fault detection
+in centrifugal pumps. In [7], [8] current spectrum signatures
+are used for detection of different faults like blockage,
+cavitation, and damaged impeller. In [9], [4] model based
+approaches are used. In [9] the nonlinear system is modelled
+by a set of fuzzy functions and in [4] a linearized version
+of the system model is used. Both of these consider both
+detection and isolation of faults in systems containing
+centrifugal pumps.
+In this work a model-based approach is used for residual
+generation. The presented approach utilizes a nonlinear
+model of the submersible application. This makes the
+obtained algorithm independent of the operating point in
+which the pump is running. The algorithm utilizes torque,
+speed, pressure and ﬂow signals to generate the residuals.
+The algorithm is derived by ﬁrst identifying four subsys-
+tem using structural analysis [3], [6]. From the structural
+model of the system it is seen that all of these subsystems
+includes different subsets of the faults considered in this
+work. Therefore they can be used for fault isolation. Three
+of these sets contain differential constraints [3] meaning
+that derivatives of the output are necessary if an Analytical
+Redundancy Relation (ARR) is derived. To overcome this
+problem residual observers are designed in these three
+cases. An overview of the contribution to observer design
+for residual generation can be found in [5]. In the single
+case where the subsystem does not contain differential
+constraints an ARR is used for residual generation.
+As a model-based approach is used in this work, this
+paper starts by presenting the model of a submersible pump
+application in section III. The fault detection algorithm is
+considered in section IV. This includes identifying sub-
+systems using structural analysis, designing the residual
+observers, and the ARR. Section V presents test results
+obtained on an industrial benchmark, which has been par-
+ticularly developed for this purpose. Finally concluding
+remarks end the paper.
+II. NOMENCLATURE
+The parameters in the model presented in section III are
+decribed in the following.
+J Moment of inertia of the rotor and the impeller.
+B Linear friction.
+Kj Derived moment of inertia of the water in the
+system.
+Kp Pressure losses inside the pipeline.
+Kv Pressure losses inside the valve.
+ahi Parameters in the pressure model of the pump,
+i ∈ {1, 2, 3}.
+ati Parameters in the torque model of the pump, i ∈
+{1, 2, 3}.
+g Gravity constant.
+ρ The density of the liquid in the system.
+III. THE SUBMERSIBLE PUMP APPLICATION
+This section presents the mathematical model of a sub-
+mersible pump application including faults and distur-
+bances. The submersible pump application is depicted in
+ﬁgure 1.
+pin
+pout
+zin
+zout
+Hp
+V1
+Q
+Fig. 1. A sketch of a submersible pump application including a well, a
+pipe, a valve, and a centrifugal pump.
+This ﬁgure illustrates a pump placed at the bottom of a
+well pumping water to the surface. The variables assumed
+known in the system are the shaft torque, the shaft speed,
+the pressure produced by the pump, and the volume ﬂow
+through the pump. In ﬁgure 1 the pressure is labeled Hp
+and the volume ﬂow is labeled Q. Moreover the water in
+the well is lifted from level zin to zout and the volume ﬂow
+Q can be controlled by a valve V1 at the top of the well.
+The inlet and outlet pressure of the pipe system are labeled
+respectively pin and pout.
+A. Model Without Faults
+The equations describing the submersible pump system
+under no fault conditions are given by the following set of
+relations,
+c1 : J dωr
+dt = Te − Bωr − Tp
+c2 : KJ
+dQ
+dt = Hp − pl
+c3 : Hp = −ah2Q2 + ah1Qωr + ah0ω2
+r
+c4 : Tp = −at2Q2 + at1Qωr + at0ω2
+r
+c5 : y1 = Hp
+c6 : y2 = ωr
+c7 : y3 = Q
+(1)
+Relation c1 and c2 respectively describe the dynamics of
+the mechanical and the hydraulic system. In these ωr is the
+shaft speed of the pump and Q is the volume ﬂow through
+the pump. The relation c4 models the pressure delivered by
+the pump Hp and the relation c5 models the load torque on
+the shaft generated by the pump Tp. Finally the relations
+c5 to c7 model the sensor system of the application. Here
+y1 is the differential pressure measurement, y2 is the speed
+measurement and y3 is the ﬂow measurement. Beside the
+measurements the input torque Te of the system is assumed
+known.
+In the model presented in (1) the pressure pl is the load
+pressure of the well and is given by,
+pl = (pout − pin + ρg(zout − zin)) − (Kv + Kp)Q2
+This pressure is derived from the depth of the well denoted
+by zout − zin, the inlet and outlet pressure of the pipeline
+system, and the ﬂow dependent pressure loss in the pipe and
+valve. All of these are assumed unknown in the following,
+meaning that the pressure pl must be assumed unknown in
+the development of the detection algorithm.
+The model presented in (1) is only valid for positive speed
+and positive ﬂow, since the valve model and the relations
+c4 and c5 are only valid for positive ﬂow and speed i.e.
+ωr, Q ∈ R+.
+B. Model Including Disturbances and Faults
+Five faults are considered in this work, these are,
+1) clogging inside the pump,
+2) increased friction due to either rub impact or bearing
+faults,
+3) increased leakage ﬂow,
+4) performance degradation due to cavitation,
+5) dry running.
+The ﬁrst three faults are internal faults caused by respec-
+tively impurities in the liquid and wear. The 4th fault,
+cavitation, is caused by too low inlet pressure, meaning
+that the fault is external. However, in this work it is treated
+as an internal fault. Finally, the last fault, dry running, is
+a phenomenon caused by faults in the surrounding system,
+hence it is an external fault and is treated as so. Even though
+it is not a fault in the pump, this fault is important to detect
+as sealing rings and bearings will be destroyed when the
+pump is running without water for only a few seconds.
+The mentioned faults all affect the hydraulic part of the
+pump. The performance of the hydraulic part of the pump
+is in this model described by relation c4, c5 and c7 in (1).
+These relations respectively describe the pressure and the
+torque produced by the pump and the ﬂow measurement.
+Introducing the faults, these relations become,
+c3 : Hp = fH (Q, ωr) − Kf Q2 − Cchfc − Cdhfd
+c4 : Tp = fT (Q, ωr) + ∆Bωr − Cctfc − Cdtfd
+c7 : y3 = Q − Kl
+√
+Hp
+where fH (Q, ωr) and fT (Q, ωr) are given by,
+fH (Q, ωr) = −ah2Q2 + ah1Qωr + ah0ω2
+r
+fT (Q, ωr) = −at2Q2 + at1Qωr + at0ω2
+r
+(2)
+In this fault model Kf ∈ R+ represents clogging, ∆B ∈
+R+ represents rub impact, Kl ∈ R+ represents increased
+leakage ﬂow, fc ∈ R+ represents cavitation and fd ∈
+R+ represents dry runnning. The ﬁrst three signals model
+the faults accurately, while the last two terms are linear
+approximations.
+IV. FAULT DETECTION AND ISOLATION
+In this section the model presented in the previous
+section is used to develop a fault detection and isolation
+algorithm. To do so structural analysis is used to identify
+over-determined subsystems containing information about
+different subsets of the faults. When the subsystems are
+identiﬁed the residuals are obtained using respectively an
+ARR and three simple observers. The simplicity of these
+observers is due to the utilization of structural analysis to
+obtain simple submodels for use in the observer design.
+A. Structure Analysis
+The system is described by the relations shown in (1).
+These relations can be represented by the graph shown in
+table I, where the constraints c1, · · · , c7 are given by (1)
+and the constraints d1 and d2 are differential constraints, as
+deﬁned in [3], meaning that dx
+dt = ˙x in this context.
+Using the deﬁnitions and procedures described in [6] and
+[3] four over-determined subsystems are identiﬁed. These
+are,
+F1 = {c1, c4, d1, c5, c7}
+F2 = {c3, c5, c6, c7}
+F3 = {c1, c3, c4, d1, c5, c6}
+F4 = {c1, c3, c4, d1, c6, c7}
+From these four over-determined subsystems, or matchings,
+it is seen that the constraint c2 is not used in any of
+the matchings. This constraint describes the application in
+which the pump is placed. When this constraint is not used
+in a matching it means that the matching is independent of
+the application model. Therefore the four above matchings
+can be used for fault detection and isolation in centrifugal
+pumps placed in any possible application.
+Looking at the column to the right in table I the faults
+affecting each of the over-determined subsystems Fi can
+be identiﬁed. The connection between the faults and the
+over-determined subsystems is shown below,
+F1 : {Kl, ∆B, fc, fd}
+F2 : {Kf , Kl, fc, fd}
+F3 : {Kf , ∆B, fc, fd}
+F4 : {Kf , Kl, ∆B, fc, fd}
+(3)
+This connection is a necessary, but not sufﬁcient, condition
+for a given Fi to be sensitive to a given fault. These con-
+nections show that the faults fc and fd are indistinguishable
+from a structural point of view, meaning that isolation of
+these faults is impossible for almost all set of parameters
+in (1).
+From the connection between faults and relations pre-
+sented in (3) it is seen that no additional information is
+added using F4. Therefore the set,
+{F1, F2, F3}
+contains the obtainable information about the faults in the
+system. The last relation F4 could be used for validation in
+a robust fault detection scheme.
+B. The Residual Generators
+Looking at the relations forming the matching F2 it is
+seen that no differential constraints are included in this.
+Therefore an ARR obtained from this matching does not
+include derivatives. The ARR is given by,
+r2 = −ah2y2
+3 + ah1y1y3 + ah0y2
+1 − y2 (4)
+It is also possible to obtain ARR’s from the sets F1,
+F3 and F4, but as differential constraint is used in each
+of these matchings it is necessary to use derivatives of the
+output in these cases. To avoid this, three residual observers
+are developed in the following.
+The three matchings F1, F3 and F4 are all on a form
+given by deﬁnition 1,
+Deﬁnition 1 A system on the form,
+˙x = ax + f (x, z, u) + e1(x, z)f1
+y1 = h1(x, z) + e2(x, z)f2
+y2 = h2(x, z) + e3(x, z)f3
+(5)
+is said to be on over-measured form. In (5) x, y1, y2, u, z ∈
+R1 and e1 e2 and e3 are nonlinear functions of x and z.
+Assumption 1 It is assumed that in the case where no
+sensor faults have occurred, i.e. f2 = f3 = 0 , the output
+maps h1 and h2 in deﬁnition 1 can by solved for x and z
+locally. The solutions are given by the following expressions,
+x = g1(y1, y2)
+z = g2(y1, y2) (6)
+The implicit function theorem [1] can for example be used
+to show that a solution exist locally. Using the above as-
+sumption the following lemma describes a residual observer
+for the system deﬁned in deﬁnition 1.
+Lemma 1 Under assumption 1 the following observer is a
+residual observer for systems described by deﬁnition 1,
+˙ˆx = aˆx + f (g1(y1, y2), g2(y1, y2), u) + k(g1(y1, y2) − ˆx)
+r = q(g1(y1, y2) − ˆx)
+(7)
+The residual observer is asymptotical stable if a − k < 0.
+The fault input to this observer is given by,
+ff = (f (x, z) − f (x − δxf , z − δzf ))
++ e1(x, z)f1 − kδx f
+where ff is a derived fault signal, which is strongly
+detectable. In the expression of ff the signals δxf and δzf
+are given by,
+δxf = g1(y1 − e2(x, z)f2, y2 − e3(x, z)f3) − g1(y1, y2)
+δzf = g2(y1 − e2(x, z)f2, y2 − e3(x, z)f3) − g2(y1, y2)
+The proof of the lemma is given in appendix I.
+Remark 1 The derived fault ff is strongly detectable using
+this observer. This is not the case for the faults f1, f2 and
+f3, as the nonlinear expression of ff can equal zero even
+though one of the faults f1, f2 or f3 is different from zero.
+TABLE I
+THE STRUCTURAL MODEL OF THE CENTRIFUGAL PUMP . x DENOTES UNI -DIRECTIONAL RELATIONS AND 1 DENOTES BI -DIRECTIONAL RELATIONS .
+UNI-DIRECTIONAL MEANS THAT THE GIVEN VARIABLE IS NOT CALCULABLE FROM THE RELATION , SEE DEFINITIONS IN [6].
+Known Unknown Fault signals
+y1 y2 y3 Te pl ˙Q ˙ωr Tp ωr Hp Q Kf Kl ∆B f c fd
+c2 1 1 1 1
+d2 1 x
+d1 1 x
+c1 1 1 1 1
+c4 1 1 1 1 1 1
+c3 1 1 1 1 1 1
+c5 1 1
+c6 1 1
+c7 1 1 1
+Remark 2 The observer described by lemma 1 is designed
+under the assumption that a perfect model exists, and that
+the measurements are not affected by noise. This is of cause
+not fulﬁlled in a real life applications. To overcome this the
+gain k of the observer is chosen such that errors due to
+small model mismatchs and noise will be suppressed.
+The matchings F1, F3 and F4 are all on the form
+deﬁned in deﬁnition 1 and fulﬁll assumption 1. Therefore
+lemma 1 can be utilized for observer design for these three
+matchings. The dynamics of the matchings are in all three
+cases govern by the following differential equation,
+J dω
+dt = Te − Bω + at2Q2 − at1ωQ − at0ω2 (8)
+This equation is formed by using the constrains c1 and c4
+in (1). Each of the matchings utilizes different subsets of
+the following set of output maps,
+y1 = ω
+y2 = −ah2Q2 + ah1ωQ + ah0ω2
+y3 = Q
+(9)
+The output maps are formed by using respectively constraint
+c5 to obtain the expression for y1, the constraints c3 and c6
+to obtain the expression for y2, and ﬁnally the constraint
+c7 to obtain the expression for y3. The constraints are all
+given in (1).
+From (9) it is seen that each subset of the output maps,
+containing two elements, fulﬁlls assumption 1. Therefore
+lemma 1 can be used to obtain residual observers for the
+matchings. The obtained observers are given by,
+O1 :
+
+
+
+J dˆω
+dt = −B ˆω − fT (y3, y1) + Te+
+k1 (y1 − ˆω)
+r1 = q1 (y1 − ˆω)
+(10)
+O3 :
+
+
+
+J dˆω
+dt = −B ˆω − fT (g3(y1, y2), y1) + Te+
+k3 (y1 − ˆω)
+r3 = q3 (y1 − ˆω)
+(11)
+O4 :
+
+
+
+J dˆω
+dt = −B ˆω − fT (y3, g4(y2, y3)) + Te+
+k4 (g4(y2, y3) − ˆω)
+r4 = q4 (g4(y2, y3) − ˆω)
+(12)
+where ki is designed according to lemma 1 and qi is chosen
+such that the residuals have a reasonable value in the case
+of faults. The function fT is given in (2) and the functions
+g3 and g4 are derived from the output maps in (9), and are
+given by,
+g3(y1, y2) = ah1y1 +
+√
+a2
+h1y2
+1 − 4ah2(y2 − ah0y2
+1)
+2ah2
+g4(y2, y3) = −ah1y3 +
+√
+a2
+h1y2
+3 + 4ah0(y2 + ah2y2
+3)
+2ah0
+These expressions are valid for y1, y3 ∈ R+ when using
+the parameters of the pump used in the test described in
+the following section. Therefore the expressions are valid
+in the state space ωr, Q ∈ R+, which is exactly the state
+space in which the model is valid, see section III-A.
+V. TEST RESULTS
+The detection algorithm, derived in the previous sections,
+is in this section tested on a Grundfos 1.5 (KW ) CR5-10
+pump. This pump placed in a tank system as depicted in
+ﬁgure 2. The measurements used in the detection algorithm
+V1 V2
+Vc
+pipe
+pump
+M
+motor
+shaft
+Te
+Hp
+tank
+V3
+Vl
+Q
+Fig. 2. Sketch of the test setup. The measurements are the shaft torque
+Te, the differential pressure Hp delivered by the pump and the volume
+ﬂow through the pump Q.
+are the torque on the shaft Te, the differential pressure Hp
+delivered by the pump and the volume ﬂow through the
+pump Q. The valve V1 is used to model disturbances in
+the system. Clogging inside the pump is modelled by the
+valve Vc and dry running is modelled by closing V2 and
+opening V3. Rub impact is modelled adding an extra force
+to the shaft and cavitation is modelled by closing valve V2
+gradually. Leakage ﬂow is modelled by opening Vl.
+Test results have shown that the sensitivity to the faults
+fc and fd of the observer O4 is very low. Infact it is so low
+that changes due to the faults are smaller than changes due
+to noise and parameter variations. Moreover in section IV-A
+it is shown that the obtainable fault information is included
+in the residual r1, r2, and r3. Therefore only these residuals
+are considered in the test presented in this section.
+Since the tests are performed on a real system, noise
+is expected on the residuals. To overcome this problem
+a CUSUM algorithm [2] is used to detect changes in the
+mean of the residuals and thereby detect the faults. In the
+following, outputs of the CUSUM algorithms are denoted
+D1 to D3, where D1 is the decision signal of r1 and so
+forth.
+All test results are shown in ﬁgure 3. First robustness
+with respect to the operating point is tested. In this test
+both the position of the valve V1 and the speed of the pump
+are changed during operation. During the test the valve is
+changed in three steps from medium to maximum opened.
+The speed of the pump is changed between 2380 and 2910
+(rpm) each 2 (sec) during the test. The result of this test
+is shown in ﬁgure 3(a), where r1 to r3 is shown in the
+top ﬁgure and the decision signals D1 to D3 in the bottom
+ﬁgure. The test shows that the three residual generatores are
+robust with respect to the tested operating points, but also
+that there are some dependency to the operating point, see
+top ﬁgure of ﬁgure 3(a), This is partly due to problems with
+the ﬂow sensor at zero ﬂow and partly due to dependency
+between the parameters and the operating point.
+Figure 3(b) to 3(f) shows test results concerning isolabil-
+ity of the ﬁve faults of interest in this work. All these tests
+are performed with V1 half opened and an angular speed
+of approximately 2650 (rpm). Comparing the ﬁve ﬁgures
+3(e) and 3(f) it is seen that the faults are distinguishable
+except for cavitation and dry running. This was expected as
+the structural analysis in section IV-A already had foreseen
+this.
+VI. CONCLUSION
+The topic of this work is fault detection and isolation in
+a centrifugal pump placed in a submersible application. An
+algorithm is developed, which is capable of detection and
+isolation of the faults in a centrifugal pump. The proposed
+alogrithm is independent of the application in which the
+pump is placed. This makes the algorithm robust and usable
+in a wide range of applications including the submersible
+application under consideration in this work.
+Tests have shown that it is possible to distinguish between
+the four of the ﬁve faults under consideration with the three
+chosen residuals. But it is also shown that the algorithm
+is sensitive to the operating point. This is partly due to
+dependency between the operating point and the parameters
+in the model and partly due to ﬂow sensor problems. Even
+though there are some dependencies between the operating
+point and the performance of the algorithm, the algorithm
+still performs considerable better than algorithms build on
+a linearized model.
+REFERENCES
+[1] Apostol, Tom M. Mathematical Analysis, second edition . Addison-
+Wesley Publishing Company, Inc., 1974.
+[2] Basseville, Michele and Nikiforov, Igor V . Detection of Abrupt
+Changes - Theory and Application . www.irisa.fr/sigma2/kniga/, 1998.
+[3] Blanke, Mogens, Kinnaert, Michel, Lunze, Jan, and Starowiecki,
+Marcel. Diagnosis and Fault-Tolerant Control. Springer Verlag, 2003.
+[4] Dalton, Tracy, Patton, Ron J., and Chen, J. An application of
+eigenstructure assignment to robust residual design for fdi. UKACC,
+CONTROL ’96, September 1996.
+[5] Frank, P. M. Garcia, E. Alcorta. Deterministic nonlinear observer-
+based approaches to fault diagnosis: A survey. Control Eng. practice
+Vol. 5 No. 5 , 1997.
+[6] Izadi-Zamanabadi, Roozbeh. Structural analysis approach for fault
+diagnosis and disturbance decoupling. Priprint, Elsevier Science ,
+2001.
+[7] Kenull, T., Kosyna, G., and Thamsen, P. U. Diagnostics of submersible
+motor pumps by non-stationary signals in motorcurrent. The 1997
+ASME Fluids Engineering Division Summer Meeting, FEDSM’97 ,
+1997.
+[8] Perovic, S., Unsworth, P. J., and Higham, E. H. Fuzzy logic system
+to detect pump faults from motor current spectra. IEEE, Thirty-Sixth
+IAS Annual Meeting, 2001 , 2001.
+[9] Wolfram, Armin, Fussel, Dominik, Brune, Torsten, and Isermann,
+Rolf. Component-based multi-model aproach for fault detection and
+diagnosis of a centrifugal pump. IEEE, ACC-2001, 2001.
+APPENDIX I
+PROOF OF LEMMA 1
+From assumption 1 the inverse of the output maps of the
+system in deﬁnition 1 exists, meaning the following function
+can be obtained,
+x = g1(y1, y2)
+z = g2(y1, y2) (13)
+where it is assumed that the faults f2 = f3 = 0.
+Choosing the observer dynamics as a copy of the dynam-
+ics of the system deﬁned by deﬁnition 1, and using the the
+inverse of the output maps the observer becomes,
+˙ˆx = aˆx + f (g1(y1, y2), g2(y1, y2), u) + k(g1(y1, y2) − ˆx)
+(14)
+when it is assumed that the fault f1 = 0 . Using the
+expression for the system the error equation of the observer
+becomes,
+˙e = (ax + f (x, z, u)) − (aˆx + f (x, z, u) + k(x − ˆx))
+˙e = (a − k)e (15)
+where (13) is used in the observer expression (14), meaning
+that g1(y1, y2) = x and g2(y1, y2) = z. Equation (15) shows
+that the error dynamic of the observer is asymptotical stable
+if a − k < 0.
+0 2 4 6 8 10
+−1.5
+−1
+−0.5
+0
+0.5
+1
+1.5
+Robustness
+time [sec]
+residuals
+r1
+r2
+r3
+0 2 4 6 8 10
+0
+0.5
+1
+1.5
+2
+2.5
+3
+time [sec]
+Decisions
+D1
+D2
+D3
+Valve opening step 1 Valve opening step 2 
+(a) Robustness test.
+0 2 4 6 8 10 12 14 16 18
+−1.5
+−1
+−0.5
+0
+0.5
+1
+1.5
+Clogging
+time [sec]
+residuals
+r1
+r2
+r3
+0 2 4 6 8 10 12 14 16 18
+0
+0.5
+1
+1.5
+2
+2.5
+3
+time [sec]
+Decisions
+D1
+D2
+D3 (b) Detection of the fault Kf clogging.
+0 2 4 6 8 10
+−2
+−1
+0
+1
+2
+Leakage Flow
+time [sec]
+residuals
+r1
+r2
+r3
+0 2 4 6 8 10
+0
+0.5
+1
+1.5
+2
+2.5
+3
+time [sec]
+Decisions
+D1
+D2
+D3
+(c) Detection of the fault Kl leakage ﬂow.
+0 2 4 6 8 10 12 14 16
+−2
+−1
+0
+1
+2
+Rub Impact
+time [sec]
+residuals
+r1
+r2
+r3
+0 2 4 6 8 10 12 14 16
+0
+0.5
+1
+1.5
+2
+2.5
+3
+time [sec]
+Decisions
+D1
+D2
+D3 (d) Detection of the fault ∆B rub impact.
+0 2 4 6 8 10 12 14 16 18
+−5
+0
+5
+Cavitation
+time [sec]
+residuals
+r1
+r2
+r3
+0 2 4 6 8 10 12 14 16 18
+0
+0.5
+1
+1.5
+2
+2.5
+3
+time [sec]
+Decisions
+D1
+D2
+D3
+End of cavitation 
+(e) Detection of the fault fc cavitation.
+0 2 4 6 8 10 12 14 16 18
+−15
+−10
+−5
+0
+5
+10
+15
+Dry Running
+time [sec]
+residuals
+r1
+r2
+r3
+0 2 4 6 8 10 12 14 16 18
+0
+0.5
+1
+1.5
+2
+2.5
+3
+time [sec]
+Decisions
+D1
+D2
+D3
+Air valve opened Air valve closed (f) Detection of the fault fd dry running.
+Fig. 3. Test results from test of the developed algorithms on the test setup. The top ﬁgures shows the obtained residuals and the bottom ﬁgures shows
+decision signals obtained from CUSUM algorithms.
+The expression of the derived fault signal ff is obtained
+in the following by introducing the fault signals in the
+error equation of the observer. Before this can be done, an
+expression of the fault when mapped through the g1 and g2
+must be obtained. First the signals y1f and y2f are deﬁned
+as,
+y1f = y1 − e2(x, z)f2 = h1(x, z)
+y2f = y2 − e3(x, z)f3 = h2(x, z)
+From these expression it is seen that the signals y1f and y3f
+must be used in the maps g1 and g2 to obtain the correct
+value of x and z, e.i.
+x = g1(y1f , y2f )
+z = g2(y1f , y2f )
+Then δxf and xf is deﬁned as,
+δxf = x − xf
+δxf = g1(y1f , y2f ) − g1(y1, y2)
+and δzf and zf is deﬁned likewise. Using these signals the
+error equation, including the faults, becomes,
+˙e =ae + f (x, z, u) − f (xf , zf , u) + e1(x, z)f1
+− k(xf − ˆx)
+˙e =(a − k)e + (f (x, z, u) − f (x − δxf , z − δzf , u))
++ e1(x, z)f1 − kδx f (16)
+From this expression the following nonlinear expression of
+the fault can be identiﬁed,
+ff = (f (x, z, u) − f (x + δxf , z + δzf , u))
++ e1(x, z)f1 − kδx f
+Including this derived fault signal into the error equation in
+(16) it becomes,
+˙e = (a − k)e + ff
+r = qe
+From this expression it is seen that the derived fault signal
+ff is strongly detectable. This is not the case for the faults
+f1, f2 or f3 due to the nonlinearities of the expression ff
+making it possible that ff = 0 even though one of the faults
+f1, f2 or f3 is different from zero.

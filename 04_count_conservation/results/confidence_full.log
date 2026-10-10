@@ -1,0 +1,9 @@
+manifest window_full_M25_A.json, 7571 values checked over 400 intervals
+bounded by the physics: 98.16%  (the rest are not pinned down by any node)
+true value inside the certified interval: 96.61%
+median certified width: 43.17 vehicles per interval
+width by number of unknowns sharing the node:
+   1 unknown(s): n=6678   median width   40.5
+   2 unknown(s): n=725    median width  136.9
+   3 unknown(s): n=29     median width  223.4
+wrote results/confidence_full_M25_A.json in 328s

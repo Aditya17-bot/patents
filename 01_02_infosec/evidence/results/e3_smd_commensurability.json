@@ -1,0 +1,1258 @@
+{
+  "config": {
+    "seed": 0,
+    "window": 20,
+    "hidden": 128,
+    "epochs": 5,
+    "batch": 512,
+    "lr": 0.001,
+    "calib_frac": 0.7,
+    "nominal_fpr": 0.01,
+    "train_entities": [
+      "machine-1-1",
+      "machine-1-2",
+      "machine-1-3",
+      "machine-1-4",
+      "machine-1-5",
+      "machine-1-6",
+      "machine-1-7",
+      "machine-1-8",
+      "machine-2-1",
+      "machine-2-2",
+      "machine-2-3",
+      "machine-2-4",
+      "machine-2-5",
+      "machine-2-6",
+      "machine-2-7",
+      "machine-2-8",
+      "machine-2-9"
+    ],
+    "holdout_entities": [
+      "machine-3-1",
+      "machine-3-10",
+      "machine-3-11",
+      "machine-3-2",
+      "machine-3-3",
+      "machine-3-4",
+      "machine-3-5",
+      "machine-3-6",
+      "machine-3-7",
+      "machine-3-8",
+      "machine-3-9"
+    ],
+    "corpus": "SMD (Server Machine Dataset), MIT licence",
+    "note": "SMD ships per-entity min-max normalised to [0,1]; identical in both conditions."
+  },
+  "conditions": {
+    "shared": {
+      "thresholds": {
+        "machine-3-1": 0.061747341379523334,
+        "machine-3-10": 0.05073142237961285,
+        "machine-3-11": 0.05913706906139847,
+        "machine-3-2": 0.11101856380701051,
+        "machine-3-3": 0.0854564825445414,
+        "machine-3-4": 0.06253763787448405,
+        "machine-3-5": 0.06922207295894629,
+        "machine-3-6": 0.02521426502615217,
+        "machine-3-7": 0.07031233459711068,
+        "machine-3-8": 0.024551019165664913,
+        "machine-3-9": 0.06362642198801044
+      },
+      "transfer_summary": {
+        "n_pairs": 110,
+        "fpr_median": 0.009534050981199468,
+        "fpr_p25": 0.00011630611770179111,
+        "fpr_p75": 0.054726280040644094,
+        "fpr_p95": 0.7948830243509196,
+        "fpr_max": 1.0,
+        "frac_within_2x": 0.17272727272727273,
+        "frac_within_10x": 0.45454545454545453,
+        "log10_spread_p5_p95": 3.85093489840042,
+        "frac_zero_fpr": 0.24545454545454545,
+        "self_fpr_median": 0.010588782871771002
+      },
+      "transfer_pairs": [
+        {
+          "calib": "machine-3-1",
+          "eval": "machine-3-10",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-1",
+          "eval": "machine-3-11",
+          "fpr": 0.009896379089533124
+        },
+        {
+          "calib": "machine-3-1",
+          "eval": "machine-3-2",
+          "fpr": 0.035114934423917644
+        },
+        {
+          "calib": "machine-3-1",
+          "eval": "machine-3-3",
+          "fpr": 0.04597376956705683
+        },
+        {
+          "calib": "machine-3-1",
+          "eval": "machine-3-4",
+          "fpr": 0.019048962889798224
+        },
+        {
+          "calib": "machine-3-1",
+          "eval": "machine-3-5",
+          "fpr": 0.005361930294906166
+        },
+        {
+          "calib": "machine-3-1",
+          "eval": "machine-3-6",
+          "fpr": 0.00011630611770179111
+        },
+        {
+          "calib": "machine-3-1",
+          "eval": "machine-3-7",
+          "fpr": 0.1101024208566108
+        },
+        {
+          "calib": "machine-3-1",
+          "eval": "machine-3-8",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-1",
+          "eval": "machine-3-9",
+          "fpr": 0.013614149406562718
+        },
+        {
+          "calib": "machine-3-10",
+          "eval": "machine-3-1",
+          "fpr": 0.032479627473806755
+        },
+        {
+          "calib": "machine-3-10",
+          "eval": "machine-3-11",
+          "fpr": 0.09838165094888811
+        },
+        {
+          "calib": "machine-3-10",
+          "eval": "machine-3-2",
+          "fpr": 0.06980679734875193
+        },
+        {
+          "calib": "machine-3-10",
+          "eval": "machine-3-3",
+          "fpr": 0.15879283598928218
+        },
+        {
+          "calib": "machine-3-10",
+          "eval": "machine-3-4",
+          "fpr": 0.05644137152532806
+        },
+        {
+          "calib": "machine-3-10",
+          "eval": "machine-3-5",
+          "fpr": 0.02652744461690419
+        },
+        {
+          "calib": "machine-3-10",
+          "eval": "machine-3-6",
+          "fpr": 0.00023261223540358222
+        },
+        {
+          "calib": "machine-3-10",
+          "eval": "machine-3-7",
+          "fpr": 0.21450186219739292
+        },
+        {
+          "calib": "machine-3-10",
+          "eval": "machine-3-8",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-10",
+          "eval": "machine-3-9",
+          "fpr": 0.043169653246451015
+        },
+        {
+          "calib": "machine-3-11",
+          "eval": "machine-3-1",
+          "fpr": 0.0169965075669383
+        },
+        {
+          "calib": "machine-3-11",
+          "eval": "machine-3-10",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-11",
+          "eval": "machine-3-2",
+          "fpr": 0.041319983077140035
+        },
+        {
+          "calib": "machine-3-11",
+          "eval": "machine-3-3",
+          "fpr": 0.05951205753772387
+        },
+        {
+          "calib": "machine-3-11",
+          "eval": "machine-3-4",
+          "fpr": 0.02638634118809087
+        },
+        {
+          "calib": "machine-3-11",
+          "eval": "machine-3-5",
+          "fpr": 0.007196274869479329
+        },
+        {
+          "calib": "machine-3-11",
+          "eval": "machine-3-6",
+          "fpr": 0.00011630611770179111
+        },
+        {
+          "calib": "machine-3-11",
+          "eval": "machine-3-7",
+          "fpr": 0.13128491620111732
+        },
+        {
+          "calib": "machine-3-11",
+          "eval": "machine-3-8",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-11",
+          "eval": "machine-3-9",
+          "fpr": 0.02059576448685129
+        },
+        {
+          "calib": "machine-3-2",
+          "eval": "machine-3-1",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-2",
+          "eval": "machine-3-10",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-2",
+          "eval": "machine-3-11",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-2",
+          "eval": "machine-3-3",
+          "fpr": 0.0011281906642222536
+        },
+        {
+          "calib": "machine-3-2",
+          "eval": "machine-3-4",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-2",
+          "eval": "machine-3-5",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-2",
+          "eval": "machine-3-6",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-2",
+          "eval": "machine-3-7",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-2",
+          "eval": "machine-3-8",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-2",
+          "eval": "machine-3-9",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-3",
+          "eval": "machine-3-1",
+          "fpr": 0.00011641443538998836
+        },
+        {
+          "calib": "machine-3-3",
+          "eval": "machine-3-10",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-3",
+          "eval": "machine-3-11",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-3",
+          "eval": "machine-3-2",
+          "fpr": 0.01565364546608377
+        },
+        {
+          "calib": "machine-3-3",
+          "eval": "machine-3-4",
+          "fpr": 0.0011288274305065614
+        },
+        {
+          "calib": "machine-3-3",
+          "eval": "machine-3-5",
+          "fpr": 0.00014110342881332017
+        },
+        {
+          "calib": "machine-3-3",
+          "eval": "machine-3-6",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-3",
+          "eval": "machine-3-7",
+          "fpr": 0.00011638733705772812
+        },
+        {
+          "calib": "machine-3-3",
+          "eval": "machine-3-8",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-3",
+          "eval": "machine-3-9",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-4",
+          "eval": "machine-3-1",
+          "fpr": 0.010244470314318976
+        },
+        {
+          "calib": "machine-3-4",
+          "eval": "machine-3-10",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-4",
+          "eval": "machine-3-11",
+          "fpr": 0.008499243218069623
+        },
+        {
+          "calib": "machine-3-4",
+          "eval": "machine-3-2",
+          "fpr": 0.033704696093639824
+        },
+        {
+          "calib": "machine-3-4",
+          "eval": "machine-3-3",
+          "fpr": 0.04230714990833451
+        },
+        {
+          "calib": "machine-3-4",
+          "eval": "machine-3-5",
+          "fpr": 0.004233102864399605
+        },
+        {
+          "calib": "machine-3-4",
+          "eval": "machine-3-6",
+          "fpr": 0.00011630611770179111
+        },
+        {
+          "calib": "machine-3-4",
+          "eval": "machine-3-7",
+          "fpr": 0.10544692737430168
+        },
+        {
+          "calib": "machine-3-4",
+          "eval": "machine-3-8",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-4",
+          "eval": "machine-3-9",
+          "fpr": 0.012566907144519432
+        },
+        {
+          "calib": "machine-3-5",
+          "eval": "machine-3-1",
+          "fpr": 0.001979045401629802
+        },
+        {
+          "calib": "machine-3-5",
+          "eval": "machine-3-10",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-5",
+          "eval": "machine-3-11",
+          "fpr": 0.0006985679357317499
+        },
+        {
+          "calib": "machine-3-5",
+          "eval": "machine-3-2",
+          "fpr": 0.02594838527711183
+        },
+        {
+          "calib": "machine-3-5",
+          "eval": "machine-3-3",
+          "fpr": 0.01678183613030602
+        },
+        {
+          "calib": "machine-3-5",
+          "eval": "machine-3-4",
+          "fpr": 0.010300550303372373
+        },
+        {
+          "calib": "machine-3-5",
+          "eval": "machine-3-6",
+          "fpr": 0.00011630611770179111
+        },
+        {
+          "calib": "machine-3-5",
+          "eval": "machine-3-7",
+          "fpr": 0.04958100558659218
+        },
+        {
+          "calib": "machine-3-5",
+          "eval": "machine-3-8",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-5",
+          "eval": "machine-3-9",
+          "fpr": 0.003258087037468001
+        },
+        {
+          "calib": "machine-3-6",
+          "eval": "machine-3-1",
+          "fpr": 0.3481955762514552
+        },
+        {
+          "calib": "machine-3-6",
+          "eval": "machine-3-10",
+          "fpr": 0.05798532731376975
+        },
+        {
+          "calib": "machine-3-6",
+          "eval": "machine-3-11",
+          "fpr": 0.7612061939690301
+        },
+        {
+          "calib": "machine-3-6",
+          "eval": "machine-3-2",
+          "fpr": 0.8127203497391059
+        },
+        {
+          "calib": "machine-3-6",
+          "eval": "machine-3-3",
+          "fpr": 0.9835002115357495
+        },
+        {
+          "calib": "machine-3-6",
+          "eval": "machine-3-4",
+          "fpr": 0.43064766473825317
+        },
+        {
+          "calib": "machine-3-6",
+          "eval": "machine-3-5",
+          "fpr": 1.0
+        },
+        {
+          "calib": "machine-3-6",
+          "eval": "machine-3-7",
+          "fpr": 0.678072625698324
+        },
+        {
+          "calib": "machine-3-6",
+          "eval": "machine-3-8",
+          "fpr": 0.007449656617390292
+        },
+        {
+          "calib": "machine-3-6",
+          "eval": "machine-3-9",
+          "fpr": 0.26704677682103795
+        },
+        {
+          "calib": "machine-3-7",
+          "eval": "machine-3-1",
+          "fpr": 0.001629802095459837
+        },
+        {
+          "calib": "machine-3-7",
+          "eval": "machine-3-10",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-7",
+          "eval": "machine-3-11",
+          "fpr": 0.0004657119571544999
+        },
+        {
+          "calib": "machine-3-7",
+          "eval": "machine-3-2",
+          "fpr": 0.025243266111972924
+        },
+        {
+          "calib": "machine-3-7",
+          "eval": "machine-3-3",
+          "fpr": 0.014666478634889296
+        },
+        {
+          "calib": "machine-3-7",
+          "eval": "machine-3-4",
+          "fpr": 0.009171722872865811
+        },
+        {
+          "calib": "machine-3-7",
+          "eval": "machine-3-5",
+          "fpr": 0.0012699308593198814
+        },
+        {
+          "calib": "machine-3-7",
+          "eval": "machine-3-6",
+          "fpr": 0.00011630611770179111
+        },
+        {
+          "calib": "machine-3-7",
+          "eval": "machine-3-8",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-7",
+          "eval": "machine-3-9",
+          "fpr": 0.002094484524086572
+        },
+        {
+          "calib": "machine-3-8",
+          "eval": "machine-3-1",
+          "fpr": 0.38684516880093134
+        },
+        {
+          "calib": "machine-3-8",
+          "eval": "machine-3-10",
+          "fpr": 0.09001128668171557
+        },
+        {
+          "calib": "machine-3-8",
+          "eval": "machine-3-11",
+          "fpr": 0.7730818488764699
+        },
+        {
+          "calib": "machine-3-8",
+          "eval": "machine-3-2",
+          "fpr": 0.8265406853758285
+        },
+        {
+          "calib": "machine-3-8",
+          "eval": "machine-3-3",
+          "fpr": 0.9888591171908052
+        },
+        {
+          "calib": "machine-3-8",
+          "eval": "machine-3-4",
+          "fpr": 0.45435304077889094
+        },
+        {
+          "calib": "machine-3-8",
+          "eval": "machine-3-5",
+          "fpr": 1.0
+        },
+        {
+          "calib": "machine-3-8",
+          "eval": "machine-3-6",
+          "fpr": 0.014421958595022098
+        },
+        {
+          "calib": "machine-3-8",
+          "eval": "machine-3-7",
+          "fpr": 0.6868016759776536
+        },
+        {
+          "calib": "machine-3-8",
+          "eval": "machine-3-9",
+          "fpr": 0.30672562252734464
+        },
+        {
+          "calib": "machine-3-9",
+          "eval": "machine-3-1",
+          "fpr": 0.008265424912689173
+        },
+        {
+          "calib": "machine-3-9",
+          "eval": "machine-3-10",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-9",
+          "eval": "machine-3-11",
+          "fpr": 0.005821399464431249
+        },
+        {
+          "calib": "machine-3-9",
+          "eval": "machine-3-2",
+          "fpr": 0.03187138626427866
+        },
+        {
+          "calib": "machine-3-9",
+          "eval": "machine-3-3",
+          "fpr": 0.03666619658722324
+        },
+        {
+          "calib": "machine-3-9",
+          "eval": "machine-3-4",
+          "fpr": 0.01636799774234514
+        },
+        {
+          "calib": "machine-3-9",
+          "eval": "machine-3-5",
+          "fpr": 0.003245378862706364
+        },
+        {
+          "calib": "machine-3-9",
+          "eval": "machine-3-6",
+          "fpr": 0.00011630611770179111
+        },
+        {
+          "calib": "machine-3-9",
+          "eval": "machine-3-7",
+          "fpr": 0.09555400372439479
+        },
+        {
+          "calib": "machine-3-9",
+          "eval": "machine-3-8",
+          "fpr": 0.0
+        }
+      ],
+      "ks_median": 0.59930507463925,
+      "ks_p90": 0.9118946272760592,
+      "auroc_per_entity": {
+        "machine-3-1": 0.7853646292027442,
+        "machine-3-10": 0.9492014621547119,
+        "machine-3-11": 0.7329840294936159,
+        "machine-3-2": 0.49787943198216417,
+        "machine-3-3": 0.6564691926927029,
+        "machine-3-4": 0.6732629003889818,
+        "machine-3-5": 0.7137008110179685,
+        "machine-3-6": 0.7868992175425933,
+        "machine-3-7": 0.7152305036467858,
+        "machine-3-8": 0.8159436692551589,
+        "machine-3-9": 0.8016925961705011
+      },
+      "auroc_mean": 0.7389662221407207,
+      "auroc_median": 0.7329840294936159
+    },
+    "per_station": {
+      "thresholds": {
+        "machine-3-1": 0.031651119366288186,
+        "machine-3-10": 0.034373913034796436,
+        "machine-3-11": 0.029765136167406978,
+        "machine-3-2": 0.10053360164165484,
+        "machine-3-3": 0.07314616560935981,
+        "machine-3-4": 0.060765716247260564,
+        "machine-3-5": 0.04472496151924146,
+        "machine-3-6": 0.031713727153837704,
+        "machine-3-7": 0.029858935475349315,
+        "machine-3-8": 0.021539242174476426,
+        "machine-3-9": 0.034545665383339
+      },
+      "transfer_summary": {
+        "n_pairs": 110,
+        "fpr_median": 0.006772009029345372,
+        "fpr_p25": 0.00046286536195720923,
+        "fpr_p75": 0.0562385010006332,
+        "fpr_p95": 0.2823680420771977,
+        "fpr_max": 0.5618738535346409,
+        "frac_within_2x": 0.22727272727272727,
+        "frac_within_10x": 0.5363636363636364,
+        "log10_spread_p5_p95": 2.9569678449969983,
+        "frac_zero_fpr": 0.18181818181818182,
+        "self_fpr_median": 0.010245663057398999
+      },
+      "transfer_pairs": [
+        {
+          "calib": "machine-3-1",
+          "eval": "machine-3-10",
+          "fpr": 0.00536117381489842
+        },
+        {
+          "calib": "machine-3-1",
+          "eval": "machine-3-11",
+          "fpr": 0.005006403539410874
+        },
+        {
+          "calib": "machine-3-1",
+          "eval": "machine-3-2",
+          "fpr": 0.25609928077845157
+        },
+        {
+          "calib": "machine-3-1",
+          "eval": "machine-3-3",
+          "fpr": 0.1332675222112537
+        },
+        {
+          "calib": "machine-3-1",
+          "eval": "machine-3-4",
+          "fpr": 0.24058134612671087
+        },
+        {
+          "calib": "machine-3-1",
+          "eval": "machine-3-5",
+          "fpr": 0.014251446310145336
+        },
+        {
+          "calib": "machine-3-1",
+          "eval": "machine-3-6",
+          "fpr": 0.010932775063968364
+        },
+        {
+          "calib": "machine-3-1",
+          "eval": "machine-3-7",
+          "fpr": 0.004422718808193668
+        },
+        {
+          "calib": "machine-3-1",
+          "eval": "machine-3-8",
+          "fpr": 0.0017460132697008498
+        },
+        {
+          "calib": "machine-3-1",
+          "eval": "machine-3-9",
+          "fpr": 0.028275541075168723
+        },
+        {
+          "calib": "machine-3-10",
+          "eval": "machine-3-1",
+          "fpr": 0.009429569266589057
+        },
+        {
+          "calib": "machine-3-10",
+          "eval": "machine-3-11",
+          "fpr": 0.0019792758179066248
+        },
+        {
+          "calib": "machine-3-10",
+          "eval": "machine-3-2",
+          "fpr": 0.21915103652517276
+        },
+        {
+          "calib": "machine-3-10",
+          "eval": "machine-3-3",
+          "fpr": 0.09787054012128049
+        },
+        {
+          "calib": "machine-3-10",
+          "eval": "machine-3-4",
+          "fpr": 0.19077183575560885
+        },
+        {
+          "calib": "machine-3-10",
+          "eval": "machine-3-5",
+          "fpr": 0.00874841258642585
+        },
+        {
+          "calib": "machine-3-10",
+          "eval": "machine-3-6",
+          "fpr": 0.005582693649685973
+        },
+        {
+          "calib": "machine-3-10",
+          "eval": "machine-3-7",
+          "fpr": 0.004189944134078212
+        },
+        {
+          "calib": "machine-3-10",
+          "eval": "machine-3-8",
+          "fpr": 0.0006984053078803399
+        },
+        {
+          "calib": "machine-3-10",
+          "eval": "machine-3-9",
+          "fpr": 0.013963230160577147
+        },
+        {
+          "calib": "machine-3-11",
+          "eval": "machine-3-1",
+          "fpr": 0.021885913853317812
+        },
+        {
+          "calib": "machine-3-11",
+          "eval": "machine-3-10",
+          "fpr": 0.006772009029345372
+        },
+        {
+          "calib": "machine-3-11",
+          "eval": "machine-3-2",
+          "fpr": 0.28303483288675785
+        },
+        {
+          "calib": "machine-3-11",
+          "eval": "machine-3-3",
+          "fpr": 0.1610492173177267
+        },
+        {
+          "calib": "machine-3-11",
+          "eval": "machine-3-4",
+          "fpr": 0.2850289262029067
+        },
+        {
+          "calib": "machine-3-11",
+          "eval": "machine-3-5",
+          "fpr": 0.019613376605051504
+        },
+        {
+          "calib": "machine-3-11",
+          "eval": "machine-3-6",
+          "fpr": 0.016166550360548964
+        },
+        {
+          "calib": "machine-3-11",
+          "eval": "machine-3-7",
+          "fpr": 0.004539106145251397
+        },
+        {
+          "calib": "machine-3-11",
+          "eval": "machine-3-8",
+          "fpr": 0.0024444185775811898
+        },
+        {
+          "calib": "machine-3-11",
+          "eval": "machine-3-9",
+          "fpr": 0.03863160344426344
+        },
+        {
+          "calib": "machine-3-2",
+          "eval": "machine-3-1",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-2",
+          "eval": "machine-3-10",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-2",
+          "eval": "machine-3-11",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-2",
+          "eval": "machine-3-3",
+          "fpr": 0.0011281906642222536
+        },
+        {
+          "calib": "machine-3-2",
+          "eval": "machine-3-4",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-2",
+          "eval": "machine-3-5",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-2",
+          "eval": "machine-3-6",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-2",
+          "eval": "machine-3-7",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-2",
+          "eval": "machine-3-8",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-2",
+          "eval": "machine-3-9",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-3",
+          "eval": "machine-3-1",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-3",
+          "eval": "machine-3-10",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-3",
+          "eval": "machine-3-11",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-3",
+          "eval": "machine-3-2",
+          "fpr": 0.021858694119306164
+        },
+        {
+          "calib": "machine-3-3",
+          "eval": "machine-3-4",
+          "fpr": 0.0050797234372795255
+        },
+        {
+          "calib": "machine-3-3",
+          "eval": "machine-3-5",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-3",
+          "eval": "machine-3-6",
+          "fpr": 0.00011630611770179111
+        },
+        {
+          "calib": "machine-3-3",
+          "eval": "machine-3-7",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-3",
+          "eval": "machine-3-8",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-3",
+          "eval": "machine-3-9",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-4",
+          "eval": "machine-3-1",
+          "fpr": 0.00023282887077997672
+        },
+        {
+          "calib": "machine-3-4",
+          "eval": "machine-3-10",
+          "fpr": 0.0002821670428893905
+        },
+        {
+          "calib": "machine-3-4",
+          "eval": "machine-3-11",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-4",
+          "eval": "machine-3-2",
+          "fpr": 0.036102101255112116
+        },
+        {
+          "calib": "machine-3-4",
+          "eval": "machine-3-3",
+          "fpr": 0.013538287970667043
+        },
+        {
+          "calib": "machine-3-4",
+          "eval": "machine-3-5",
+          "fpr": 0.0004233102864399605
+        },
+        {
+          "calib": "machine-3-4",
+          "eval": "machine-3-6",
+          "fpr": 0.00011630611770179111
+        },
+        {
+          "calib": "machine-3-4",
+          "eval": "machine-3-7",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-4",
+          "eval": "machine-3-8",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-4",
+          "eval": "machine-3-9",
+          "fpr": 0.00011636025133814289
+        },
+        {
+          "calib": "machine-3-5",
+          "eval": "machine-3-1",
+          "fpr": 0.0018626309662398137
+        },
+        {
+          "calib": "machine-3-5",
+          "eval": "machine-3-10",
+          "fpr": 0.001128668171557562
+        },
+        {
+          "calib": "machine-3-5",
+          "eval": "machine-3-11",
+          "fpr": 0.0
+        },
+        {
+          "calib": "machine-3-5",
+          "eval": "machine-3-2",
+          "fpr": 0.09462699196164152
+        },
+        {
+          "calib": "machine-3-5",
+          "eval": "machine-3-3",
+          "fpr": 0.036384148921167675
+        },
+        {
+          "calib": "machine-3-5",
+          "eval": "machine-3-4",
+          "fpr": 0.08014674756596585
+        },
+        {
+          "calib": "machine-3-5",
+          "eval": "machine-3-6",
+          "fpr": 0.0005815305885089556
+        },
+        {
+          "calib": "machine-3-5",
+          "eval": "machine-3-7",
+          "fpr": 0.00034916201117318437
+        },
+        {
+          "calib": "machine-3-5",
+          "eval": "machine-3-8",
+          "fpr": 0.0003492026539401699
+        },
+        {
+          "calib": "machine-3-5",
+          "eval": "machine-3-9",
+          "fpr": 0.0015126832673958575
+        },
+        {
+          "calib": "machine-3-6",
+          "eval": "machine-3-1",
+          "fpr": 0.01490104772991851
+        },
+        {
+          "calib": "machine-3-6",
+          "eval": "machine-3-10",
+          "fpr": 0.005220090293453725
+        },
+        {
+          "calib": "machine-3-6",
+          "eval": "machine-3-11",
+          "fpr": 0.004773547560833625
+        },
+        {
+          "calib": "machine-3-6",
+          "eval": "machine-3-2",
+          "fpr": 0.25539416161331263
+        },
+        {
+          "calib": "machine-3-6",
+          "eval": "machine-3-3",
+          "fpr": 0.1325624030461148
+        },
+        {
+          "calib": "machine-3-6",
+          "eval": "machine-3-4",
+          "fpr": 0.23987582898264428
+        },
+        {
+          "calib": "machine-3-6",
+          "eval": "machine-3-5",
+          "fpr": 0.014251446310145336
+        },
+        {
+          "calib": "machine-3-6",
+          "eval": "machine-3-7",
+          "fpr": 0.004422718808193668
+        },
+        {
+          "calib": "machine-3-6",
+          "eval": "machine-3-8",
+          "fpr": 0.0017460132697008498
+        },
+        {
+          "calib": "machine-3-6",
+          "eval": "machine-3-9",
+          "fpr": 0.02769373981847801
+        },
+        {
+          "calib": "machine-3-7",
+          "eval": "machine-3-1",
+          "fpr": 0.02130384167636787
+        },
+        {
+          "calib": "machine-3-7",
+          "eval": "machine-3-10",
+          "fpr": 0.006772009029345372
+        },
+        {
+          "calib": "machine-3-7",
+          "eval": "machine-3-11",
+          "fpr": 0.010245663057398999
+        },
+        {
+          "calib": "machine-3-7",
+          "eval": "machine-3-2",
+          "fpr": 0.2820476660555634
+        },
+        {
+          "calib": "machine-3-7",
+          "eval": "machine-3-3",
+          "fpr": 0.1593569313213933
+        },
+        {
+          "calib": "machine-3-7",
+          "eval": "machine-3-4",
+          "fpr": 0.28263016791308027
+        },
+        {
+          "calib": "machine-3-7",
+          "eval": "machine-3-5",
+          "fpr": 0.019331169747424864
+        },
+        {
+          "calib": "machine-3-7",
+          "eval": "machine-3-6",
+          "fpr": 0.015817632007443592
+        },
+        {
+          "calib": "machine-3-7",
+          "eval": "machine-3-8",
+          "fpr": 0.0024444185775811898
+        },
+        {
+          "calib": "machine-3-7",
+          "eval": "machine-3-9",
+          "fpr": 0.03804980218757272
+        },
+        {
+          "calib": "machine-3-8",
+          "eval": "machine-3-1",
+          "fpr": 0.08591385331781141
+        },
+        {
+          "calib": "machine-3-8",
+          "eval": "machine-3-10",
+          "fpr": 0.011992099322799097
+        },
+        {
+          "calib": "machine-3-8",
+          "eval": "machine-3-11",
+          "fpr": 0.10082663872394924
+        },
+        {
+          "calib": "machine-3-8",
+          "eval": "machine-3-2",
+          "fpr": 0.4846989141164857
+        },
+        {
+          "calib": "machine-3-8",
+          "eval": "machine-3-3",
+          "fpr": 0.39543082780989985
+        },
+        {
+          "calib": "machine-3-8",
+          "eval": "machine-3-4",
+          "fpr": 0.5618738535346409
+        },
+        {
+          "calib": "machine-3-8",
+          "eval": "machine-3-5",
+          "fpr": 0.0853675744320587
+        },
+        {
+          "calib": "machine-3-8",
+          "eval": "machine-3-6",
+          "fpr": 0.062107466852756456
+        },
+        {
+          "calib": "machine-3-8",
+          "eval": "machine-3-7",
+          "fpr": 0.01547951582867784
+        },
+        {
+          "calib": "machine-3-8",
+          "eval": "machine-3-9",
+          "fpr": 0.0973935303700256
+        },
+        {
+          "calib": "machine-3-9",
+          "eval": "machine-3-1",
+          "fpr": 0.00919674039580908
+        },
+        {
+          "calib": "machine-3-9",
+          "eval": "machine-3-10",
+          "fpr": 0.003244920993227991
+        },
+        {
+          "calib": "machine-3-9",
+          "eval": "machine-3-11",
+          "fpr": 0.0019792758179066248
+        },
+        {
+          "calib": "machine-3-9",
+          "eval": "machine-3-2",
+          "fpr": 0.2164715836976449
+        },
+        {
+          "calib": "machine-3-9",
+          "eval": "machine-3-3",
+          "fpr": 0.09646030179100268
+        },
+        {
+          "calib": "machine-3-9",
+          "eval": "machine-3-4",
+          "fpr": 0.18794976717934245
+        },
+        {
+          "calib": "machine-3-9",
+          "eval": "machine-3-5",
+          "fpr": 0.00846620572879921
+        },
+        {
+          "calib": "machine-3-9",
+          "eval": "machine-3-6",
+          "fpr": 0.005466387531984182
+        },
+        {
+          "calib": "machine-3-9",
+          "eval": "machine-3-7",
+          "fpr": 0.004073556797020484
+        },
+        {
+          "calib": "machine-3-9",
+          "eval": "machine-3-8",
+          "fpr": 0.0006984053078803399
+        }
+      ],
+      "ks_median": 0.3891504974854198,
+      "ks_p90": 0.7209407134377376,
+      "auroc_per_entity": {
+        "machine-3-1": 0.8289825481863407,
+        "machine-3-10": 0.8665895267516447,
+        "machine-3-11": 0.9404738089512301,
+        "machine-3-2": 0.5203310694501355,
+        "machine-3-3": 0.8648321223879466,
+        "machine-3-4": 0.6683602766674501,
+        "machine-3-5": 0.6759958979517025,
+        "machine-3-6": 0.9363305849057247,
+        "machine-3-7": 0.780000773187426,
+        "machine-3-8": 0.8149855460336975,
+        "machine-3-9": 0.8743841960807563
+      },
+      "auroc_mean": 0.7973878500503687,
+      "auroc_median": 0.8289825481863407
+    }
+  },
+  "headline": {
+    "nominal_fpr": 0.01,
+    "shared_fpr_median": 0.009534050981199468,
+    "per_station_fpr_median": 0.006772009029345372,
+    "shared_frac_within_2x": 0.17272727272727273,
+    "per_station_frac_within_2x": 0.22727272727272727,
+    "shared_frac_within_10x": 0.45454545454545453,
+    "per_station_frac_within_10x": 0.5363636363636364,
+    "shared_fpr_p95": 0.7948830243509196,
+    "per_station_fpr_p95": 0.2823680420771977,
+    "shared_ks_median": 0.59930507463925,
+    "per_station_ks_median": 0.3891504974854198,
+    "shared_auroc_mean": 0.7389662221407207,
+    "per_station_auroc_mean": 0.7973878500503687,
+    "runtime_s": 178.0
+  }
+}
